@@ -1502,7 +1502,6 @@ SAX = {
 			"gfx/leaders/Europe/Portrait_Europe_generic_military_general_8.png"
 			"gfx/leaders/Europe/Portrait_Europe_generic_military_general_9.png"
 			"gfx/leaders/Europe/Portrait_Europe_generic_military_general_10.png"
-			"gfx/leaders/RUS/Portrait_Russia_Generic_land_2.dds"
 		}
 	}
 }
@@ -1746,13 +1745,13 @@ DEN = {
 ENG = {
 	army = {
 		male = {
-			"gfx/leaders/ENG/Portrait_Britain_Generic_land_1.png"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_land_2.png"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_land_3.png"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_land_4.png"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_land_5.png"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_land_6.png"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_land_7.png"
+			"gfx/leaders/ENG/Portrait_ENG_Generic_land_1.png"
+			"gfx/leaders/ENG/Portrait_ENG_Generic_land_2.png"
+			"gfx/leaders/ENG/Portrait_ENG_Generic_land_3.png"
+			"gfx/leaders/ENG/Portrait_ENG_Generic_land_4.png"
+			"gfx/leaders/ENG/Portrait_ENG_Generic_land_5.png"
+			"gfx/leaders/ENG/Portrait_ENG_Generic_land_6.png"
+			"gfx/leaders/ENG/Portrait_ENG_Generic_land_7.png"
 		}
 	}
 }

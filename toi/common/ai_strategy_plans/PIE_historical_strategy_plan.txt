@@ -1,6 +1,9 @@
 PIE_historical_strategy_plan = {
-    enable = {
+	allowed = {
 		original_tag = PIE
+	}
+	enable = {
+		date < 1862.1.1
 		OR = {
 			is_historical_focus_on = yes
 			has_completed_Focus = PIE_Military_Plan_FT
@@ -19,17 +22,19 @@ PIE_historical_strategy_plan = {
 		PIE_Plombieres_Meeting
 		PIE_Political_Structure_Planning_FT
 		PIE_Casus_Belli_ft
+		PIE_Start_Border_Operations
 		PIE_Domestic_Development
 		PIE_Infrastructural_Developments
 		PIE_Authorize_Culoz_Modane_Railway
 		PIE_Military_Code
 		PIE_Review_Armed_Forces
 		PIE_Commence_Construction_Frejus_Rail_Tunnel
-		PIE_Encourage_Resistance_Italy
+		#PIE_Encourage_Resistance_Italy
 		PIE_Influence_Central_States
 		PIE_Military_Plan_FT
 		PIE_Maintain_Control
 		PIE_Plan_for_Plombieres
+		PIE_Accept_Confederation
 		PIE_Support_Democracy_in_Tuscany
 		PIE_War_Preperations_Second_War
 		PIE_Institute_National_Guard
@@ -38,7 +43,7 @@ PIE_historical_strategy_plan = {
 		PIE_post_war_organization
 		PIE_integrate_new_lands_2IP
 		PIE_Sign_Turin_Treaty
-		PIE_Abandon_the_Confederation_Idea
+		#PIE_Abandon_the_Confederation_Idea
 		PIE_Formation_of_the_Central_States
 		PIE_Annex_Central_Italian_States
 		PIE_Extend_Conscription
@@ -61,24 +66,11 @@ PIE_historical_strategy_plan = {
 		PIE_Telegraph_Network
 		PIE_Form_Italy
 	}
-
-	ai_strategy = {
-		type = conquer
-		id = "LVN"
-		value = 20
-	}
-	ai_strategy = {
-		type = invade
-		id = "LVN"
-		value = 20
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "LVN"
-		value = 20
-	}
 	ai_strategy = {
 		type = pp_spend_priority
-		value = 10
+		id = decision
+		value = 100
 	}
 }
+
+

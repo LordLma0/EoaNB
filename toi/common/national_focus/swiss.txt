@@ -220,7 +220,9 @@ focus_tree = {
 			}
 			add_stability = -0.1
 			hidden_effect = {
-				country_event = swiss.3
+				FRA = {
+					country_event = swiss.5
+				}
 			}
 		}
 	}
@@ -243,7 +245,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			SWI {
+			SWI = {
 				set_state_owner = 3
 				add_state_core = 3
 			}
@@ -364,7 +366,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_expand_posistion
-		icon = GFX_Focus_Government_Reform_4
+		icon = GFX_Focus_Electorate_rally_people
 		x = 20
 		y = 3
 		cost = 35
@@ -395,7 +397,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			country_event = swiss.6
 		}
 	}
 
@@ -572,7 +574,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWI_Establish_Militärdepartement
+		id = SWI_Establish_Militardepartement
 		icon = GFX_Focus_Rifle_Production
 		x = 28
 		y = 3
@@ -599,7 +601,7 @@ focus_tree = {
 		ai_will_do = { base = 80 }
 
 		prerequisite = {
-			focus = SWI_Establish_Militärdepartement
+			focus = SWI_Establish_Militardepartement
 		}
 		
 		completion_reward = {
@@ -702,7 +704,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWI_Eidgenössische 
+		id = SWI_Eidgenossische 
 		icon = GFX_Focus_Army_Defence_1
 		x = 28
 		y = 8
@@ -741,6 +743,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ALTHISTORY }
 
 		completion_reward = {
+			add_ideas = SWI_centralised_army1
+			if = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = limited_conscription
+				}
+			}
 			add_political_power = -100
 		}
 	}
@@ -759,7 +771,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_ideas = SWI_national_mil_industry
+			swap_ideas = {
+				remove_idea = SWI_centralised_army1
+				add_idea = SWI_centralised_army2
+			}
 		}
 	}
 
@@ -777,7 +793,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_ideas = SWI_cream_crop1
 		}
 	}
 
@@ -795,7 +811,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			army_experience = 15
 		}
 	}
 
@@ -813,7 +829,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = SWI_centralised_army2
+				add_idea = SWI_centralised_army3
+			}
 		}
 	}
 
@@ -832,6 +851,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
+			swap_ideas = {
+				remove_idea = SWI_cream_crop1
+				add_idea = SWI_cream_crop2
+			}
 		}
 	}
 
@@ -852,6 +875,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = -300
+			add_ideas = SWI_Milizsystem1
 		}
 	}
 
@@ -869,7 +893,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_ideas = SWI_ind_mil_industry
 		}
 	}
 
@@ -928,7 +952,10 @@ focus_tree = {
 		mutually_exclusive = { focus = SWI_restrict }
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = SWI_Milizsystem1 
+				add_idea = SWI_Milizsystem2
+			}
 		}
 	}
 
@@ -983,7 +1010,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = SWI_Milizsystem2
+				add_idea = SWI_Milizsystem3
+			}
 		}
 	}
 }

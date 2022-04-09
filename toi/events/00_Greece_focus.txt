@@ -1465,7 +1465,7 @@ country_event = { #Question of Phalanx
 
 add_namespace = GRE_Navy
 
-country_event = { #Question of Navy
+country_event = { #History of Navy
 	id = GRE_Navy.1
 	title = GRE_Navy.1.t
 	desc = GRE_Navy.1.d
@@ -1473,24 +1473,8 @@ country_event = { #Question of Navy
 
 	is_triggered_only = yes 	
 
-	option = { #Focus on large ships #Towards a large navy
+	option = { 
 		name = GRE_Navy.1.a  
-
-		GRE = {
-			add_ideas = {
-				idea = GRE_idea_Navy_focus_large
-			}
-		}
-	}
-
-	option = { #Focus on small ships #Towards a small but efficient navy
-		name = GRE_Navy.1.b 
-
-		GRE = {
-			add_ideas = {
-				idea = GRE_idea_Navy_focus_small
-			}
-		}
 	}
 }
 
@@ -1560,6 +1544,45 @@ country_event = { #School Ship Loudovikos
 	option = { 
 		name = GRE_Navy.5.a  
 		add_political_power = 5
+	}
+}
+
+#Foreign Ships
+country_event = {
+	id = GRE_Navy.6
+	title = GRE_Navy.6.t
+	desc = GRE_Navy.6.d
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {
+		name = GRE_Navy.6.a
+		custom_effect_tooltip = GRE_event_order_armored_schooners_abroad_tt
+		navy_experience = 5
+		hidden_effect = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_equipment_variant = {
+					name = "Armored Schooner"
+					type = ship_hull_gunboat_2
+					name_group = GER_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_gunboat
+						fixed_ship_secondaries_slot = empty
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_0
+						mid_1_custom_slot = empty
+						mid_2_custom_slot = empty
+						rear_1_custom_slot = empty
+					}
+					#obsolete = no
+				}
+				load_oob = GRE_armored_schooners_foreign
+			}
+		}
 	}
 }
 
@@ -2047,13 +2070,14 @@ country_event = {
 	
 	is_triggered_only = yes 	
 
-	option = { #Construction begins     
-		name = GREeconomy.1.a  
+	#Construction begins    
+	option = {  
+		name = GREeconomy.1.a
 		GRE = {
 			country_event = { 
 				id = GREeconomy.2 
-				days = 365 
-			} 
+				days = 365
+			}
 			add_ideas = GRE_idea_Athens_Piraeus_rail
 		}
 		add_political_power = 5 
@@ -2070,14 +2094,15 @@ country_event = {
 	
 	is_triggered_only = yes 	
 
-	option = { #Construction Completed      
+	#Construction Completed
+	option = {       
 		name = GREeconomy.2.a 
-		1251 = { 
-			add_building_construction = { 
-				type = infrastructure 
-				level = 1 
-				instant_build = yes 
-			} 
+		1251 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
 		}
 		GRE = {
 			remove_ideas = GRE_idea_Athens_Piraeus_rail
@@ -2133,7 +2158,67 @@ country_event = {
 	}
 }
 
+country_event = {      
+	id = GREeconomy.5
+	title = GREeconomy.5.t
+	desc = GREeconomy.5.d
+	picture = GFX_report_event_gre_lake_kopais
+	
+	is_triggered_only = yes 	
 
+	option = {      
+		name = GREeconomy.5.a  
+		GRE_karl_johann_fix = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = GRE_karl_johann_fix
+						allowed = {
+							original_tag = GRE
+						}
+						available = {
+						}
+						research_bonus = {
+							farming_tech = 0.10
+						}
+						traits = {
+							GRE_trait_karl_johann_fix
+						}
+						ai_will_do = {
+							factor = 0
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {      
+	id = GREeconomy.6
+	title = GREeconomy.6.t
+	desc = GREeconomy.6.d
+	picture = GFX_report_event_gre_lake_kopais
+	
+	is_triggered_only = yes 	
+
+	option = { #Maximum Effort    
+		name = GREeconomy.6.a  
+		ai_chance = { factor = 50 }
+		add_timed_idea = { idea = GRE_idea_increase_industrial_capacity1  days = 360 }
+	}
+	
+	option = { #Medium Effort      
+		name = GREeconomy.6.b  
+		ai_chance = { factor = 25 }
+		add_timed_idea = { idea = GRE_idea_increase_industrial_capacity2  days = 360 }
+	}
+	
+	option = { #Minimal Effort      
+		name = GREeconomy.6.c  
+		ai_chance = { factor = 25 }
+		add_timed_idea = { idea = GRE_idea_increase_industrial_capacity3  days = 360 }
+	}
+}
 
 add_namespace = GRENavy
 country_event = {      #Ask Britain for ship models

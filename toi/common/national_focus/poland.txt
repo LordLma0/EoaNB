@@ -2548,7 +2548,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_vic_Administrative_Issues
-		icon = GFX_Focus_Government_Reform_2
+		icon = GFX_Focus_Law_revision
 		cost = 28
 
 		available = {}
@@ -4062,7 +4062,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_vic_PRS_Weapons
-		icon = GFX_focus_prussian_guns
+		icon = GFX_goal_focus_prussian_guns
 		cost = 28
 
 		x = 29
@@ -4884,7 +4884,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_vic_Improve_Relations_With_Britian
+		id = POL_vic_Improve_Relations_With_Britain
 		icon = GFX_goal_focus_british_isolationism
 		cost = 70
 

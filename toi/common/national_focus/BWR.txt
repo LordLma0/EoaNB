@@ -178,7 +178,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_timed_idea = {
-				idea = BWR_offensive
+				idea = BWR_offensive2
 				days = 15
 			}
 		}
@@ -187,7 +187,7 @@ focus_tree = {
 	focus = {
 		id = BWR_fighter_factories
 		ai_will_do = { factor = 100 }
-		icon = GFX_focus_socio_industrial_revolution
+		icon = GFX_Focus_Worker
 		x = 2
 		y = 6
 
@@ -230,7 +230,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_timed_idea = {
-				idea = BWR_offensive
+				idea = BWR_offensive2
 				days = 15
 			}
 		}
@@ -308,7 +308,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BWR_improving_infastructure
+		id = BWR_improving_infrastructure
 		ai_will_do = { factor = 100 }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 13
@@ -323,7 +323,7 @@ focus_tree = {
 				remove_idea = BWR_shattared_economy_2
 				add_idea = BWR_shattared_economy_3
 			}
-		unlock_decision_tooltip = eoanb_decision_BWR_improving_infastructure
+		unlock_decision_tooltip = eoanb_decision_BWR_improving_infrastructure
 		}
 	}
 	
@@ -356,7 +356,7 @@ focus_tree = {
 		cost = 35
 		available_if_capitulated = no  
 	
-		prerequisite = { focus = BWR_improving_infastructure}
+		prerequisite = { focus = BWR_improving_infrastructure}
 		prerequisite = { focus = BWR_replacing_factories }
 		
 		completion_reward = {
@@ -490,7 +490,7 @@ focus_tree = {
 				remove_idea = BWR_shattared_military_3
 				add_idea = BWR_shattared_military_4
 			}
-			add_ideas = BWR_offensive
+			add_ideas = BWR_offensive2
 		}
 	}
 	

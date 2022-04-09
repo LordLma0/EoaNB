@@ -224,22 +224,17 @@ focus_tree = {
 		y = 4
 		available={
 			EGY = { is_subject_of = ROOT }
-			USA = {
-				has_resources_amount = {
-					resource = cotton
-					amount < 50
-				}
+			OR = {
+				date > 1868.1.1
+				has_global_flag = ACW_American_Civil_War_Happened
+				USA={exists = no}
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 		}
 		bypass = {
-			OR = {
-				date > 1868.1.1
-				has_global_flag = ACW_American_Civil_War_Happened
-				has_global_flag = ACW_American_Civil_War_Avoided
-			}
+			NOT={EGY = { is_subject_of = ROOT }}
 		}
 		completion_reward = {
 			debt_level_decrease_by_2 = yes
@@ -1550,6 +1545,7 @@ focus_tree = {
 		available={
 			USA={
 				has_tech = rifle_equipment2
+				exists = yes
 			}
 		}
 		ai_will_do={
@@ -1623,7 +1619,7 @@ focus_tree = {
 	}
 	focus = {
 		id = OTO_vic_PRS_artillery
-		icon = GFX_focus_prussian_guns
+		icon = GFX_goal_focus_prussian_guns
 		cost = 70.00
 		x = 28
 		y = 2

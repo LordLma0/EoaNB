@@ -568,6 +568,20 @@ focus_tree = {
 
 			set_temp_variable = { EOANBSYS_innovative_change = 0.05 }
 			EOANBSYS_institutions_innovative_change = yes
+
+			NOR_nicolai_andresen = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = NOR_advisor_nicolai_andresen
+						cost = 50
+						allowed = {
+							original_tag = NOR
+						}
+						traits = { NOR_trait_banker }
+					}
+				}
+			}
 		}
 	}
 
@@ -643,6 +657,20 @@ focus_tree = {
 			unlock_decision_category_tooltip = NOR_decision_category_worker_unrest
 			
 			set_variable = { NOR_var_worker_unrest = 0.25 }
+
+			NOR_jacob_wegner = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = NOR_advisor_jacob_wegner
+						cost = 50
+						allowed = {
+							original_tag = NOR
+						}
+						traits = { NOR_trait_business_magnate }
+					}
+				}
+			}
 		}
 	}
 
@@ -758,6 +786,20 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_tooltip = NOR_decision_timber_for_export
+
+			NOR_julius_jacobsen = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = NOR_advisor_julius_jacobsen
+						cost = 50
+						allowed = {
+							original_tag = NOR
+						}
+						traits = { NOR_trait_forestry_businessman }
+					}
+				}
+			}
 		}
 	}
 
@@ -945,6 +987,13 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = { EOANBSYS_innovative_change = 0.025 }
 			EOANBSYS_institutions_innovative_change = yes
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = trains_tech
+				technology = train_1855
+				technology = train_1865
+			}
 		}
 	}
 
@@ -975,7 +1024,9 @@ focus_tree = {
 		cost = 35
 		icon = GFX_goal_generic_construct_infrastructure
 
-		completion_reward = { }
+		completion_reward = { 
+			unlock_decision_tooltip = NOR_decision_Norwegian_Swedish_Railroad
+		}
 	}
 
 	focus = {
@@ -1920,6 +1971,9 @@ focus_tree = {
 		icon = GFX_focus_swedish_navy
 
 		completion_reward = {
+			add_command_power = 25
+			army_experience = 40
+
 			set_temp_variable = { NOR_loyalty_change = 2.5 }
 			NOR_scripted_effect_loyalty_change = yes
 		}
@@ -1981,6 +2035,9 @@ focus_tree = {
 		icon = GFX_goal_focus_french_empire
 
 		completion_reward = {
+			add_command_power = 15
+			army_experience = 30
+
 			set_temp_variable = { NOR_loyalty_change = -2.5 }
 			NOR_scripted_effect_loyalty_change = yes
 		}
@@ -2424,7 +2481,23 @@ focus_tree = {
 		cost = 70
 		icon = GFX_focus_NOR_john_ericsson
 
-		completion_reward = { }
+		completion_reward = { 
+			add_advisor_role = {
+				character = NOR_John_Ericson
+				advisor = {
+					slot = theorist
+					cost = 50
+					idea_token = NOR_John_Ericson_HC
+					traits = {
+						NOR_trait_monitor_specialist
+					}
+					allowed = {
+						original_tag = SER
+					}
+				}
+				activate = yes
+			}
+		}
 	}
 
 	focus = {
