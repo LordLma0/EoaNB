@@ -811,13 +811,13 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.25.a
 				EOANBSYS_institutions_innovative_add_five = yes
 				EOANBSYS_institutions_humanitive_add_ten = yes
-				EOANBSYS_national_crisis_progress_add_one = yes
+				EOANBSYS_national_crisis_progress_minus_one = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.25.b
 				EOANBSYS_institutions_innovative_add_five = yes
 				EOANBSYS_institutions_humanitive_add_ten = yes
-				EOANBSYS_national_crisis_progress_add_one = yes
+				EOANBSYS_national_crisis_progress_minus_one = yes
 			}
 		}
 	# Sickness of Iesada
@@ -856,7 +856,7 @@ add_namespace = feudal_tokugawa_daimyos
 				ai_chance = { base = 0 }
 				activate_mission = TSH_mission_pick_heir
 				complete_national_focus = JAP_vic_illness_of_shogun_iesada
-				EOANBSYS_national_crisis_progress_add_two = yes
+				EOANBSYS_national_crisis_progress_minus_two = yes
 				hidden_effect = {
 					set_country_flag = TSH_IESADA_SUCESSION_PLAYER_CHOICE
 					country_event = { id = feudal_tokugawa_shogunate.27 days = 30 random_days = 15 }
@@ -870,7 +870,7 @@ add_namespace = feudal_tokugawa_daimyos
 				ai_chance = { base = 1 }
 				activate_mission = TSH_mission_pick_heir
 				complete_national_focus = JAP_vic_illness_of_shogun_iesada
-				EOANBSYS_national_crisis_progress_add_two = yes
+				EOANBSYS_national_crisis_progress_minus_two = yes
 				hidden_effect = {
 					country_event = { id = feudal_tokugawa_shogunate.27 days = 30 random_days = 15 }
 					country_event = { id = feudal_tokugawa_shogunate.28 days = 270 random_days = 50 }
@@ -910,7 +910,7 @@ add_namespace = feudal_tokugawa_daimyos
 				trigger = { tag = TSH has_country_flag = TSH_IESADA_SUCESSION_PLAYER_CHOICE }
 				ai_chance = { base = 1 modifier = { factor = 0 is_historical_focus_on = yes } }
 				complete_national_focus = JAP_vic_feud_of_the_shinpan
-				EOANBSYS_national_crisis_progress_add_two = yes
+				EOANBSYS_national_crisis_progress_minus_two = yes
 				add_to_variable = { 
 					hitosubashi_faction = faction_change_percentage
 					tooltip = TSH_decision_tokugawa_iesada_succession_crisis_hitosubashi_tt
@@ -929,7 +929,7 @@ add_namespace = feudal_tokugawa_daimyos
 				trigger = { tag = TSH has_country_flag = TSH_IESADA_SUCESSION_PLAYER_CHOICE }
 				ai_chance = { base = 1 }
 				complete_national_focus = JAP_vic_feud_of_the_shinpan
-				EOANBSYS_national_crisis_progress_add_two = yes
+				EOANBSYS_national_crisis_progress_minus_two = yes
 				subtract_from_variable = { 
 					hitosubashi_faction = faction_change_percentage
 					#tooltip = TSH_decision_tokugawa_iesada_succession_crisis_hitosubashi_tt
@@ -949,7 +949,7 @@ add_namespace = feudal_tokugawa_daimyos
 				ai_chance = { base = 1 }
 				add_stability = 0.15
 				complete_national_focus = JAP_vic_feud_of_the_shinpan
-				EOANBSYS_national_crisis_progress_add_one = yes
+				EOANBSYS_national_crisis_progress_minus_three = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.27.e
@@ -1855,7 +1855,7 @@ add_namespace = feudal_tokugawa_daimyos
 			option = {
 				name = feudal_tokugawa_shogunate.55.a
 				ai_chance = { base = 0 modifier = { is_tozama_daimyo = yes add = 1 } }
-				EOANBSYS_national_crisis_progress_add_five = yes
+				EOANBSYS_national_crisis_progress_add_two = yes
 				add_popularity = {
 					ideology = autocracy
 					popularity = 0.04
@@ -2371,7 +2371,7 @@ add_namespace = feudal_tokugawa_daimyos
 				complete_national_focus = JAP_vic_great_gold_exodus
 				add_political_power = -100
 				add_command_power = -50
-				EOANBSYS_national_crisis_progress_add_ten = yes
+				EOANBSYS_national_crisis_progress_add_five = yes
 				decrease_ps_by_three = yes
 			}
 			option = {
@@ -2509,7 +2509,7 @@ add_namespace = feudal_tokugawa_daimyos
 				trigger = { tag = TSH }
 				ai_chance = { base = 1 }
 				add_political_power = 50
-				EOANBSYS_national_crisis_progress_minus_ten = yes
+				EOANBSYS_national_crisis_progress_minus_twenty = yes
 				increase_ps_by_one = yes
 				remove_ideas = TSH_spirit_vic_fiscal_crisis_3
 				add_timed_idea = { idea = TSH_spirit_vic_fiscal_crisis_4 days = 500 }
@@ -2652,7 +2652,7 @@ add_namespace = feudal_tokugawa_daimyos
 						limit = {
 							check_variable = {
 								var = EOANBSYS_national_crisis_progress_var
-								value > 50
+								value < 50
 							}
 						}
 						EOANBSYS_national_crisis_progress_add_two = yes
@@ -2814,7 +2814,7 @@ add_namespace = feudal_tokugawa_daimyos
 			option = {
 				name = feudal_tokugawa_shogunate.83.a
 				trigger = { tag = TSH }
-				EOANBSYS_national_crisis_progress_add_three = yes
+				EOANBSYS_national_crisis_progress_add_two = yes
 				var:FROM.bullying_country = {
 					FROM = { state_event = { id = afr_rrp_racial_tension_increase.1 } }
 				}
@@ -2855,7 +2855,7 @@ add_namespace = feudal_tokugawa_daimyos
 				}
 				add_stability = -0.01
 				add_political_power = -5
-				EOANBSYS_national_crisis_progress_add_three = yes
+				EOANBSYS_national_crisis_progress_add_two = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.84.b
@@ -2865,7 +2865,7 @@ add_namespace = feudal_tokugawa_daimyos
 					popularity = 0.02
 				}
 				add_political_power = -7
-				EOANBSYS_national_crisis_progress_add_two = yes
+				EOANBSYS_national_crisis_progress_add_one = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.80.c
@@ -2900,7 +2900,7 @@ add_namespace = feudal_tokugawa_daimyos
 				}
 				add_stability = -0.02
 				add_political_power = -5
-				EOANBSYS_national_crisis_progress_add_five = yes
+				EOANBSYS_national_crisis_progress_add_two = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.84.b
@@ -2910,7 +2910,7 @@ add_namespace = feudal_tokugawa_daimyos
 					popularity = 0.04
 				}
 				add_political_power = -7
-				EOANBSYS_national_crisis_progress_add_two = yes
+				EOANBSYS_national_crisis_progress_add_one = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.84.c
@@ -2945,13 +2945,13 @@ add_namespace = feudal_tokugawa_daimyos
 				}
 				add_political_power = -15
 				add_command_power = -2
-				EOANBSYS_national_crisis_progress_add_five = yes
+				EOANBSYS_national_crisis_progress_add_two = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.84.b
 				trigger = { tag = TSH has_completed_focus = JAP_vic_security_against_harassment }
 				add_command_power = -2
-				EOANBSYS_national_crisis_progress_add_two = yes
+				EOANBSYS_national_crisis_progress_add_one = yes
 				add_popularity = {
 					ideology = radical_democracy
 					popularity = 0.05
@@ -2990,12 +2990,12 @@ add_namespace = feudal_tokugawa_daimyos
 					ideology = autocracy
 					popularity = 0.02
 				}
-				EOANBSYS_national_crisis_progress_add_five = yes
+				EOANBSYS_national_crisis_progress_add_two = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.87.b
 				trigger = { tag = TSH has_completed_focus = JAP_vic_security_against_harassment }
-				EOANBSYS_national_crisis_progress_add_three = yes
+				EOANBSYS_national_crisis_progress_add_one = yes
 				add_political_power = -10
 			}
 			option = {
@@ -3236,15 +3236,6 @@ add_namespace = feudal_tokugawa_daimyos
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
 							value < 30
 						}
 					}
@@ -3339,15 +3330,6 @@ add_namespace = feudal_tokugawa_daimyos
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
 							value < 30
 						}
 					}
@@ -3432,15 +3414,6 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
 				}
 				else_if = {
 					limit = {
@@ -3535,15 +3508,6 @@ add_namespace = feudal_tokugawa_daimyos
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
 							value < 30
 						}
 					}
@@ -3628,15 +3592,6 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
 				}
 				else_if = {
 					limit = {
@@ -3729,15 +3684,6 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
 				}
 				else_if = {
 					limit = {
@@ -4322,15 +4268,6 @@ add_namespace = feudal_tokugawa_daimyos
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
 							value < 30
 						}
 					}
@@ -4360,7 +4297,7 @@ add_namespace = feudal_tokugawa_daimyos
 				if = {
 					limit = { tag = CHO }
 					hidden_effect = {
-						country_event = { id = feudal_tokugawa_shogunate.114 days = 20 random_days = 50 }
+						country_event = { id = feudal_tokugawa_shogunate.113 days = 20 random_days = 50 }
 					}
 				}
 			}
@@ -4429,24 +4366,6 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
 				}
 				else_if = {
 					limit = {
@@ -4531,24 +4450,6 @@ add_namespace = feudal_tokugawa_daimyos
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
 							value < 40
 						}
 					}
@@ -4586,11 +4487,17 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.113.a
 				add_political_power = -5
 				TSH = { country_event = feudal_tokugawa_shogunate.114 }
+				hidden_effect = {
+					country_event = { id = feudal_tokugawa_shogunate.115 days = 5 }
+				}
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.113.b
 				trigger = { is_ai = no }
 				add_war_support = -0.10
+				hidden_effect = {
+					country_event = { id = feudal_tokugawa_shogunate.115 days = 5 }
+				}
 			}
 		}
 
@@ -4650,24 +4557,6 @@ add_namespace = feudal_tokugawa_daimyos
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
 							value < 40
 						}
 					}
@@ -4718,14 +4607,19 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.113.a
 				add_political_power = -5
 				TSH = { news_event = feudal_tokugawa_shogunate.116 }
+				hidden_effect = {
+					country_event = { id = feudal_tokugawa_shogunate.117 days = 5 }
+				}
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.113.b
 				trigger = { is_ai = no }
 				add_war_support = -0.10
+				hidden_effect = {
+					country_event = { id = feudal_tokugawa_shogunate.117 days = 5 }
+				}
 			}
 		}
-
 
 	# Kien Chen Incident
 		news_event = {
@@ -4778,24 +4672,6 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
 				}
 				else_if = {
 					limit = {
@@ -4860,7 +4736,6 @@ add_namespace = feudal_tokugawa_daimyos
 			}
 		}
 
-
 	# Medusa Incident
 		news_event = {
 			id = feudal_tokugawa_shogunate.118
@@ -4912,24 +4787,6 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
 				}
 				else_if = {
 					limit = {
@@ -5010,23 +4867,23 @@ add_namespace = feudal_tokugawa_daimyos
 			id = feudal_tokugawa_shogunate.120
 			title = feudal_tokugawa_shogunate.120.t
 			desc = {
+				text = feudal_tokugawa_shogunate.120.d_both
 				trigger = {
 					has_global_flag = TSH_shimonoseki_usa_intervenes_flag
 					has_global_flag = TSH_shimonoseki_fra_intervenes_flag
 				}
-				text = feudal_tokugawa_shogunate.120.d_both
 			}
 			desc = {
-					trigger = {
+				text = feudal_tokugawa_shogunate.120.d_usa
+				trigger = {
 					has_global_flag = TSH_shimonoseki_usa_intervenes_flag
 				}
-				text = feudal_tokugawa_shogunate.120.d_usa
 			}
 			desc = {
-					trigger = {
+				text = feudal_tokugawa_shogunate.120.d_fra
+				trigger = {
 					has_global_flag = TSH_shimonoseki_fra_intervenes_flag
 				}
-				text = feudal_tokugawa_shogunate.120.d_fra
 			}
 			picture = GFX_report_event_jap_battle_of_shimonoseki_straits
 
@@ -5059,23 +4916,23 @@ add_namespace = feudal_tokugawa_daimyos
 			id = feudal_tokugawa_shogunate.121
 			title = feudal_tokugawa_shogunate.121.t
 			desc = {
+				text = feudal_tokugawa_shogunate.121.d_both
 				trigger = {
 					has_global_flag = TSH_shimonoseki_usa_intervenes_flag
 					has_global_flag = TSH_shimonoseki_fra_intervenes_flag
 				}
-				text = feudal_tokugawa_shogunate.121.d_both
 			}
 			desc = {
-					trigger = {
+				text = feudal_tokugawa_shogunate.121.d_usa
+				trigger = {
 					has_global_flag = TSH_shimonoseki_usa_intervenes_flag
 				}
-				text = feudal_tokugawa_shogunate.121.d_usa
 			}
 			desc = {
-					trigger = {
+				text = feudal_tokugawa_shogunate.121.d_fra
+				trigger = {
 					has_global_flag = TSH_shimonoseki_fra_intervenes_flag
 				}
-				text = feudal_tokugawa_shogunate.121.d_fra
 			}
 			picture = GFX_news_event_jap_battle_of_shimonoseki_straits
 
@@ -5124,24 +4981,6 @@ add_namespace = feudal_tokugawa_daimyos
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
 							value < 40
 						}
 					}
@@ -5178,6 +5017,10 @@ add_namespace = feudal_tokugawa_daimyos
 
 			is_triggered_only = yes
 
+			trigger  ={
+				TSH = { has_national_crisis = yes }
+			}
+
 			immediate = {
 				if = {
 					limit = { tag = MIT }
@@ -5200,8 +5043,8 @@ add_namespace = feudal_tokugawa_daimyos
 			option = {
 				name = feudal_tokugawa_shogunate.122.b
 				trigger = { tag = TSH }
-				add_manpower = -4500
 				add_war_support = -0.10
+				add_manpower = -350
 				if = {
 					limit = {
 						check_variable = {
@@ -5238,26 +5081,8 @@ add_namespace = feudal_tokugawa_daimyos
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
-				}
 				else = {
-					EOANBSYS_national_crisis_progress_add_three = yes
+					EOANBSYS_national_crisis_progress_add_two = yes
 				}
 				decrease_ps_by_two = yes
 				hidden_effect = {
@@ -5280,6 +5105,10 @@ add_namespace = feudal_tokugawa_daimyos
 
 			is_triggered_only = yes
 
+			trigger = {
+				has_war = no
+			}
+
 			immediate = {
 				if = {
 					limit = { tag = TSH }
@@ -5296,6 +5125,7 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.123.b
 				trigger = { tag = TSH }
 				increase_ps_by_one = yes
+				add_manpower = -4500
 				hidden_effect = {
 					country_event = feudal_tokugawa_shogunate.123
 				}
@@ -5309,7 +5139,7 @@ add_namespace = feudal_tokugawa_daimyos
 			is_triggered_only = yes
 
 			trigger = {
-				has_character = {
+				has_country_leader = {
 					character = TSH_character_tokugawa_iemochi
 					ruling_only = yes
 				}
@@ -5329,17 +5159,37 @@ add_namespace = feudal_tokugawa_daimyos
 
 			immediate = {
 				if = {
-					limit ={ tag = TSH }
+					limit = { tag = TSH }
 					for_each_scope_loop = {
 						array = subjects
 						news_event = feudal_tokugawa_shogunate.125
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								check_variable = {
+									var = EOANBSYS_national_crisis_progress_var
+									value < 50
+								}
+							}
+							EOANBSYS_national_crisis_progress_add_five = yes
+						}
+						if = {
+							limit = {
+								check_variable = {
+									var = EOANBSYS_national_crisis_progress_var
+									value < 50
+								}
+							}
+							EOANBSYS_national_crisis_progress_add_three = yes
+						}
 					}
 				}
 			}
 
 			option = {
 				name = feudal_tokugawa_shogunate.125.a
-				trigger  = { tag = TSH }
+				trigger = { tag = TSH }
 				TSH_character_tokugawa_yoshinobu = {
 					add_country_leader_role = {
 						country_leader = {
@@ -5351,6 +5201,42 @@ add_namespace = feudal_tokugawa_daimyos
 					}
 				}
 				retire_character = TSH_character_tokugawa_iemochi
+
+				if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 85
+						}
+					} 
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 75
+						}
+					}
+					EOANBSYS_national_crisis_progress_add_five = yes
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 65
+						}
+					}
+					EOANBSYS_national_crisis_progress_add_ten = yes
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 45
+						}
+					}
+					EOANBSYS_national_crisis_progress_add_twenty = yes
+				}
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.125.b
@@ -5431,7 +5317,18 @@ add_namespace = feudal_tokugawa_daimyos
 				}
 				for_each_scope_loop = {
 					array = subjects
-					country_event = feudal_tokugawa_shogunate.116
+					country_event = feudal_tokugawa_shogunate.126
+				}
+				add_manpower = -80
+				1106 = {
+					damage_building = {
+						type = infrastructure
+						damage = 4
+					}
+					add_manpower = -550
+				}
+				hidden_effect = {
+					country_event = { id = feudal_tokugawa_shogunate.127 days = 30 random_days = 15 }
 				}
 			}
 			option = {
@@ -5553,7 +5450,27 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.128.b
 				trigger = { is_ai = no }
 				decrease_ps_by_one = yes
-				EOANBSYS_national_crisis_progress_add_five = yes
+				if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 80
+						}
+					}
+					EOANBSYS_national_crisis_progress_minus_five = yes
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 65
+						}
+					}
+					EOANBSYS_national_crisis_progress_minus_three = yes
+				}
+				else = {
+					EOANBSYS_national_crisis_progress_minus_one = yes
+				}
 			}
 		}
 	# First Choshu Expedition (CHO)
@@ -5588,7 +5505,7 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.130.a
 				CHO = {
 					every_owned_state = {
-						add_state_core = TSH
+						add_core_of = TSH
 					}
 				}
 				declare_war_on = {
@@ -5631,17 +5548,293 @@ add_namespace = feudal_tokugawa_daimyos
 				add_stability = 0.05
 				set_temp_variable = { eoanb_prestige_change = 0.10 }
 				eoanb_change_prestige_score = yes
+				if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 80
+						}
+					}
+					EOANBSYS_national_crisis_progress_minus_five = yes
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value > 65
+						}
+					}
+					EOANBSYS_national_crisis_progress_minus_three = yes
+				}
+				else = {
+					EOANBSYS_national_crisis_progress_minus_one = yes
+				}
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.132.b
 				trigger = { NOT = { OR = { tag = TSH tag = CHO } } }
 			}
 			option = {
-				name = feudal_tokugawa_shogunate.133.c
+				name = feudal_tokugawa_shogunate.132.c
 				trigger = { tag = CHO }
 				
 			}
 		}
+	# Death of Emperor Komei
+		country_event = {
+			id = feudal_tokugawa_shogunate.133
+			hidden = yes
+
+			trigger = {
+				TSH = {
+					has_national_crisis = yes
+					has_character = JAP_character_emperor_komei
+				}
+			}
+
+			is_triggered_only = yes
+
+			immediate = {
+				news_event = feudal_tokugawa_shogunate.134
+				hidden_effect = {
+					if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value < 50
+							}
+						}
+						EOANBSYS_national_crisis_progress_add_five = yes
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value < 50
+							}
+						}
+						EOANBSYS_national_crisis_progress_add_three = yes
+					}
+				}
+			}
+		}
+		news_event = {
+			id = feudal_tokugawa_shogunate.134
+			title = feudal_tokugawa_shogunate.134.t
+			desc = feudal_tokugawa_shogunate.134.d
+			picture = GFX_news_event_flavor_funeral
+
+			is_triggered_only = yes
+
+			immediate = {
+				if = {
+					limit = { tag = TSH }
+					retire_character = JAP_character_emperor_komei
+					hidden_effect = {
+						every_other_country = {
+							limit = {
+								OR = {
+									has_idea = TSH_spirit_vic_external_amity_treaty_west
+									is_japanese_country = yes
+								}
+							}
+							news_event = feudal_tokugawa_shogunate.134
+						}
+					}
+				}
+			}
+
+			option = {
+				name = feudal_tokugawa_shogunate.134.a
+				trigger = { is_japanese_country = yes }
+				if = {
+					limit = {
+						check_variable = {
+							var = EOANBSYS_national_crisis_progress_var
+							value < 60
+						}
+					}
+					EOANBSYS_national_crisis_progress_add_five = yes
+					else_if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value < 70
+							}
+						}
+						EOANBSYS_national_crisis_progress_add_three = yes
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value < 80
+							}
+						}
+						EOANBSYS_national_crisis_progress_minus_one = yes
+					}
+					else = {
+						EOANBSYS_national_crisis_progress_minus_three = yes
+					}
+				}
+			}
+			option = {
+				name = feudal_tokugawa_shogunate.134.b
+				trigger = { is_japanese_country = no }
+			}
+		}
+	# Icarus Affair
+		country_event = {
+			id = feudal_tokugawa_shogunate.135
+			hidden = yes
+
+			trigger = {
+				TSH = {
+					has_national_crisis = yes
+				}
+			}
+
+			is_triggered_only = yes
+
+			immediate = {
+				news_event = feudal_tokugawa_shogunate.136
+				hidden_effect = {
+					if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value < 50
+							}
+						}
+						EOANBSYS_national_crisis_progress_add_five = yes
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value < 50
+							}
+						}
+						EOANBSYS_national_crisis_progress_add_three = yes
+					}
+				}
+			}
+		}
+		news_event = {
+			id = feudal_tokugawa_shogunate.136
+			title = feudal_tokugawa_shogunate.136.t
+			desc = feudal_tokugawa_shogunate.136.d
+			picture = GFX_news_event_jap_bakumatsu_europeans
+
+			is_triggered_only = yes
+
+			immediate = {
+				if = {
+					limit = { tag = TSH }
+					hidden_effect = {
+						every_other_country = {
+							limit = {
+								OR = {
+									has_idea = TSH_spirit_vic_external_amity_treaty_west
+									is_japanese_country = yes
+								}
+							}
+							news_event = feudal_tokugawa_shogunate.136
+						}
+					}
+				}
+			}
+
+			option = {
+				name = feudal_tokugawa_shogunate.136.a
+				trigger = { is_japanese_country = yes }
+				if = {
+					limit = { tag = TSH }
+					if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value > 80
+							}
+						}
+						EOANBSYS_national_crisis_progress_minus_five = yes
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value > 65
+							}
+						}
+						EOANBSYS_national_crisis_progress_minus_three = yes
+					}
+					else = {
+						EOANBSYS_national_crisis_progress_minus_one = yes
+					}
+				}
+			}
+			option = {
+				name = feudal_tokugawa_shogunate.136.b
+				trigger = { is_japanese_country = no }
+			}
+		}
+	# (ENG) What should we do?
+		country_event = {
+			id = feudal_tokugawa_shogunate.137
+			title = feudal_tokugawa_shogunate.137.t
+			desc = feudal_tokugawa_shogunate.137.d
+			picture = GFX_report_event_jap_bakumatsu_europeans
+
+			is_triggered_only = yes
+
+			option = {
+				name = feudal_tokugawa_shogunate.137.a
+				add_political_power = -25
+				TSH = { country_event = feudal_tokugawa_shogunate.138 }
+			}
+			option = {
+				name = feudal_tokugawa_shogunate.137.b
+				trigger = { is_ai = no }
+				add_political_power = 5
+			}
+		}
+	# (TSH) Britain Demands Investigation
+		country_event = {
+			id = feudal_tokugawa_shogunate.138
+			title = feudal_tokugawa_shogunate.138.t
+			desc = feudal_tokugawa_shogunate.138.d
+			picture = GFX_report_event_jap_bakumatsu_europeans
+
+			is_triggered_only = yes
+
+			option = {
+				name = feudal_tokugawa_shogunate.138.a
+				EOANBSYS_national_crisis_progress_minus_five = yes
+				hidden_effect = {
+					country_event = { id = feudal_tokugawa_shogunate.139 days = 40 }
+				}
+			}
+			option = {
+				name = feudal_tokugawa_shogunate.138.b
+				trigger = { is_ai = no }
+				EOANBSYS_national_crisis_progress_minus_ten = yes
+			}
+		}
+	# Found Murderers in Fukoka
+		country_event = {
+			id = feudal_tokugawa_shogunate.139
+			title = feudal_tokugawa_shogunate.139.t
+			desc = feudal_tokugawa_shogunate.139.d
+			picture = GFX_report_event_jap_bakumatsu_europeans
+
+			is_triggered_only = yes
+			
+			option = {
+				name = feudal_tokugawa_shogunate.139.a
+				EOANBSYS_national_crisis_progress_add_ten = yes
+			}
+		}
+
 
 # Anglo-Satsuma War (150)
 	# Namamugi Incident (ENG)
@@ -5689,6 +5882,27 @@ add_namespace = feudal_tokugawa_daimyos
 						popularity = 0.2
 					}
 				}
+				if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value > 80
+							}
+						}
+						EOANBSYS_national_crisis_progress_minus_five = yes
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value > 65
+							}
+						}
+						EOANBSYS_national_crisis_progress_minus_three = yes
+					}
+					else = {
+						EOANBSYS_national_crisis_progress_minus_one = yes
+					}
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.151.b
@@ -5746,6 +5960,27 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.153.a
 				trigger = { tag = TSH }
 				add_political_power = -5
+				if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value > 80
+							}
+						}
+						EOANBSYS_national_crisis_progress_minus_five = yes
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								var = EOANBSYS_national_crisis_progress_var
+								value > 65
+							}
+						}
+						EOANBSYS_national_crisis_progress_minus_three = yes
+					}
+					else = {
+						EOANBSYS_national_crisis_progress_minus_one = yes
+					}
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.153.b
@@ -5774,64 +6009,19 @@ add_namespace = feudal_tokugawa_daimyos
 							value > 80
 						}
 					}
-					EOANBSYS_national_crisis_progress_minus_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value > 70
-						}
-					}
 					EOANBSYS_national_crisis_progress_minus_five = yes
 				}
 				else_if = {
 					limit = {
 						check_variable = {
 							var = EOANBSYS_national_crisis_progress_var
-							value > 60
+							value > 65
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_three = yes
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value > 50
-						}
-					}
-					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 30
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_five = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 40
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_three = yes
-				}
 				else = {
-					EOANBSYS_national_crisis_progress_add_two = yes
+					EOANBSYS_national_crisis_progress_minus_one = yes
 				}
 			}
 			option = {
@@ -5898,15 +6088,6 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 					EOANBSYS_national_crisis_progress_minus_two = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							var = EOANBSYS_national_crisis_progress_var
-							value < 20
-						}
-					}
-					EOANBSYS_national_crisis_progress_add_ten = yes
 				}
 				else_if = {
 					limit = {
@@ -6043,15 +6224,6 @@ add_namespace = feudal_tokugawa_daimyos
 						limit = {
 							check_variable = {
 								var = EOANBSYS_national_crisis_progress_var
-								value < 20
-							}
-						}
-						EOANBSYS_national_crisis_progress_add_ten = yes
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								var = EOANBSYS_national_crisis_progress_var
 								value < 30
 							}
 						}
@@ -6133,9 +6305,16 @@ add_namespace = feudal_tokugawa_daimyos
 				trigger = { NOT = { tag = SAT tag = ENG } }
 			}
 		}
-		
 	
-# Choshu Punitive War (160)
+	country_event = {
+		id = feudal_tokugawa_shogunate.197
+		hidden = yes
+
+		is_triggered_only  = yes
+		immediate = {
+			EOANBSYS_national_crisis_progress_minus_three = yes
+		}
+	}
 
 # Boshin War
 	# Debug 1
@@ -6503,10 +6682,38 @@ add_namespace = feudal_tokugawa_daimyos
 						}
 					}
 				}
+				else_if = {
+					limit = { tag = TSH  JAP = { is_ai = yes } }
+					country_event = { id = feudal_tokugawa_shogunate.206 days = 2 }
+				}
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.205.b
 				trigger = { is_japanese_country = no }
+			}
+		}
+	# Tag switch
+		country_event = {
+			id = feudal_tokugawa_shogunate.206
+			title = feudal_tokugawa_shogunate.206.t
+			desc = feudal_tokugawa_shogunate.206.d
+
+			is_triggered_only = yes
+
+			immediate = {
+				add_manpower = -5000
+			}
+
+			option = {
+				name = feudal_tokugawa_shogunate.206.a
+				add_command_power = 25
+
+			}
+			option = {
+				name = feudal_tokugawa_shogunate.206.b
+				trigger = { is_ai = no }
+
+				JAP = { change_tag_from = TSH }
 			}
 		}
 
@@ -6528,7 +6735,6 @@ add_namespace = feudal_tokugawa_daimyos
 			option = {
 				name = feudal_tokugawa_shogunate.209.a
 				trigger = { is_ai = no JAP = { is_ai = yes } }
-				custom_effect_tooltip = feudal_tokugawa_shogunate.209.a_tt
 
 				# Switch Tag
 				hidden_effect = {
@@ -6542,7 +6748,6 @@ add_namespace = feudal_tokugawa_daimyos
 					air_ratio = 0.0
 					keep_unit_leaders_trigger = { always = no }
 				}
-				JAP = { change_tag_from = ROOT }
 
 				hidden_effect = {
 					TSH = {
@@ -6554,6 +6759,7 @@ add_namespace = feudal_tokugawa_daimyos
 					}
 					country_event = { id = feudal_tokugawa_shogunate days = 7 }
 				}
+				JAP = { change_tag_from = ROOT }
 			}
 			# Side the Meiji Rebellion
 			option = {
