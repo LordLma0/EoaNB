@@ -151,7 +151,7 @@ country_event = {
 	id = sevenweekswar.6
 	title = sevenweekswar.6.t
 	desc = sevenweekswar.6.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -805,7 +805,7 @@ country_event = {
 	id = sevenweekswar.29
 	title = sevenweekswar.29.t
 	desc = sevenweekswar.29.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -838,7 +838,7 @@ country_event = {
 	id = sevenweekswar.30
 	title = sevenweekswar.30.t
 	desc = sevenweekswar.30.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1094,7 +1094,7 @@ country_event = {
 	id = sevenweekswar.40
 	title = sevenweekswar.40.t
 	desc = sevenweekswar.40.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1104,8 +1104,8 @@ country_event = {
 		ai_chance = { base = 90 }
 		custom_effect_tooltip = AUS_FRA_convention_1866_2
 		add_political_power = 25
-		add_opinion_modifier = { target = FRA modifier = AUS_FRA_ARRANGEMENTS_REL }
-		reverse_add_opinion_modifier = { target = FRA modifier = AUS_FRA_ARRANGEMENTS_REL }
+		add_opinion_modifier = { target = FRA modifier = AUS_POL_ARRANGEMENTS_REL }
+		reverse_add_opinion_modifier = { target = FRA modifier = AUS_POL_ARRANGEMENTS_REL }
 		FRA = { country_event = { days = 1 id = sevenweekswar.42 } }
 		hidden_effect = {
 			AUS = { set_country_flag = AUS_FRA_convention_1866_signed }
@@ -1131,7 +1131,7 @@ country_event = {
 	id = sevenweekswar.41
 	title = sevenweekswar.41.t
 	desc = sevenweekswar.41.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1149,7 +1149,7 @@ country_event = {
 	id = sevenweekswar.42
 	title = sevenweekswar.42.t
 	desc = sevenweekswar.42.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1169,7 +1169,7 @@ country_event = {
 	id = sevenweekswar.43
 	title = sevenweekswar.43.t
 	desc = sevenweekswar.43.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1761,6 +1761,8 @@ country_event = {
 		add_stability = -0.15
 		add_war_support = -0.5
 		custom_effect_tooltip = AUS_german_war_sue_for_peace
+		custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_two_tt
+		custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_one_tt
 		hidden_effect = {
 			white_peace = PRS
 			white_peace = ITA
@@ -1772,12 +1774,22 @@ country_event = {
 				remove_ideas = PRS_idea_weakened_sww
                 add_to_variable = {
                     var = HUN_REVOLT_RISK
-                    value = 2  
+                    value = 0.02
                 }
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
                 add_to_variable = {
-                    var = SLA_REVOLT_RISK
-                    value = 1 
+                    var = CZE_REVOLT_RISK
+                    value = 0.01
                 }
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
 			}
 			PRS = { country_event = { id = sevenweekswar.60 } }
 			every_other_country = {
@@ -2297,12 +2309,47 @@ country_event = {
 			}
 			if = {
 				limit = {
-					950 = { is_claimed_by = SAX }
-					SAX = { has_country_flag = eoanb_flag_AUS_ally_sww }
+					OR = {
+						950 = { is_claimed_by = SAX }
+						SAX = { has_country_flag = eoanb_flag_AUS_ally_sww }
+					}
 				}
 				SAX = { 
 					transfer_state = 950
 					add_state_core = 950
+				}
+			}
+			if = {
+				limit = {
+					SCH = { exists = no }
+					PRS = {
+						owns_state = 58
+						owns_state = 949
+						owns_state = 1032
+					}
+				}
+				SCH = {
+					transfer_state = 58
+					transfer_state = 949
+					transfer_state = 1032
+					give_military_access = AUS
+					load_oob = "SCH_free_GC_member"
+					set_politics = { ruling_party = autocracy }
+					set_party_name = { ideology = autocracy name = SCH_autocracy_party_augustenburg }
+					SCH_friedrich_von_augustenburg = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								expire = "1950.1.1"
+								desc = "POLITICS_GENERIC_EOANB_DESC"
+								ideology = constit_monarch
+								traits = {
+									#
+								}
+							}
+						}
+					}
+					country_event = { days = 14 id = secschwar.54 }
 				}
 			}
 			AUS = { set_country_flag = AUS_flag_won_sww }
@@ -2772,7 +2819,7 @@ country_event = {
 	id = sevenweekswar.89
 	title = sevenweekswar.89.t
 	desc = sevenweekswar.89.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2878,7 +2925,7 @@ country_event = {
 	id = sevenweekswar.94
 	title = sevenweekswar.94.t
 	desc = sevenweekswar.94.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2926,7 +2973,7 @@ country_event = {
 	id = sevenweekswar.96
 	title = sevenweekswar.96.t
 	desc = sevenweekswar.96.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3436,7 +3483,7 @@ country_event = {
 		trigger = { has_global_flag = PRS_propose_greater_Germany_flag }
 		text = sevenweekswar.115.d_greater_Germany
 	}
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes

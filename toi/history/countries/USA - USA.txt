@@ -337,7 +337,6 @@
 		give_guarantee = COL
 		give_guarantee = ECU
 		give_guarantee = PRU
-		give_guarantee = PRR
 		give_guarantee = BRA
 		give_guarantee = BOL
 		give_guarantee = CHL
@@ -345,8 +344,6 @@
 		give_guarantee = ARG
 		give_guarantee = URG
 		give_guarantee = BUE
-		give_guarantee = WLL
-		give_guarantee = PUE
 		diplomatic_relation = {
 			country = PIE
 			relation = docking_rights

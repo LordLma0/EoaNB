@@ -23,9 +23,11 @@ AUS_decision_category_italian_unrest = {
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = AUS_decision_uproar_in_italy_countdown_trigger_tt
-				OR = {
-					NOT = { has_variable = ITA_UPROAR_RISK }
-					NOT = { LVN = { is_puppet_of = AUS } }
+				hidden_trigger = {
+					OR = {
+						NOT = { has_variable = ITA_UPROAR_RISK }
+						NOT = { LVN = { is_puppet_of = AUS } }
+					}
 				}
 			}
 		}
@@ -64,6 +66,26 @@ AUS_decision_category_italian_unrest = {
 				}
 				if = {
 					limit = {
+						LVN = {
+							has_idea = human_rights
+						}
+					}
+					add_to_variable = {
+						ITA_UPROAR_RISK = -0.005
+					}
+				}
+				if = {
+					limit = {
+						LVN = {
+							has_idea = free_press
+						}
+					}
+					add_to_variable = {
+						ITA_UPROAR_RISK = -0.005
+					}
+				}
+				if = {
+					limit = {
 						is_ai = yes
 					}
 					add_to_variable = {
@@ -78,7 +100,7 @@ AUS_decision_category_italian_unrest = {
 					min = 0
 					max = 1
 				}
-				country_event = { id = austriaexternal.11 }
+				country_event = { id = austria.201 }
 			}
         }
 
@@ -86,6 +108,270 @@ AUS_decision_category_italian_unrest = {
 			base = 100
 		}
     }
+	
+	#Calm the Unrest in Italy
+	AUS_mission_calm_the_unrest_in_italy = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_calm_the_unrest_in_italy_trigger_tt
+				hidden_trigger = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = AUS_Italian_Unrest_Modifier
+						}
+					}
+				}
+			}
+		}
+		
+		activation = {
+			always = no
+		}
+		
+		highlight_states = {
+			state = 159
+			state = 160
+		}
+
+		fire_only_once = yes
+		
+		is_good = no
+		
+		days_mission_timeout = 365
+		
+		cancel_trigger = {
+			NOT = {
+				LVN = { 
+					is_puppet_of = AUS 
+					owns_state = 159
+				}
+			}
+		}
+
+        timeout_effect = {
+            if = {
+				limit = {
+					is_ai = no
+				}
+				decrease_ps_by_one = yes
+				add_stability = -0.05
+				add_war_support = -0.1
+				LVN = {
+					decrease_ps_by_one = yes
+					add_stability = -0.1
+					add_war_support = -0.15
+				}
+			}
+			hidden_effect = {
+				set_country_flag = AUS_mission_calm_the_unrest_in_italy_fail_flag
+				clr_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag
+			}
+        }
+
+        complete_effect = {
+            add_political_power = 50
+			add_stability = 0.05
+			LVN = {
+				add_political_power = 50
+				add_stability = 0.05
+			}
+			hidden_effect = {
+				set_country_flag = AUS_mission_calm_the_unrest_in_italy_success_flag
+				clr_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag
+			}
+        }
+
+        ai_will_do = {
+			base = 100
+		}
+    }
+	
+	#Make Promises of Liberalization in Italy
+	AUS_decision_make_promises_of_liberalization_in_italy = {
+
+		icon = eng_puppet_usa
+
+		available = {
+			has_completed_focus = AUS_focus_token_liberalization
+			has_war = no
+		}
+
+		visible = {
+			LVN = {
+				is_puppet_of = AUS
+				OR = {
+					NOT = { has_idea = human_rights }
+					NOT = {	has_idea = free_press }
+				}
+			}
+			NOT = { has_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag }
+			has_active_mission = AUS_mission_calm_the_unrest_in_italy
+		}
+
+		cost = 10
+		
+		days_remove = 90
+		
+		modifier = {
+            political_power_gain = -0.05
+        }
+		
+		cancel_trigger = {
+			LVN = {
+				NOT = { is_puppet_of = AUS }
+			}
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_unrest_in_italy_minus_two_effect_tt
+			if = {
+				limit = {
+					LVN = {
+						NOT = { has_idea = human_rights }
+					}
+				}
+				unlock_decision_tooltip = AUS_decision_grant_human_rights_in_lvn
+			}
+			if = {
+				limit = {
+					LVN = {
+						NOT = { has_idea = free_press }
+					}
+				}
+				unlock_decision_tooltip = AUS_decision_grant_free_press_in_lvn
+			}
+			add_stability = 0.01
+			LVN = {
+				add_stability = 0.02
+				add_political_power = 10
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ITA_UPROAR_RISK = -0.02
+				}
+				clamp_variable = {
+					var = ITA_UPROAR_RISK
+					min = 0
+					max = 1
+				}
+				set_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = AUS_decision_make_promises_of_liberalization_in_italy_effect_tt
+			hidden_effect = {
+				set_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag
+				clr_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
+				country_event = { days = 60 id = austria.204 }
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Grant Human Rights to the Citizens of Lombardy-Venetia
+	AUS_decision_grant_human_rights_in_lvn = {
+
+		icon = generic_independence
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			LVN = {
+				is_puppet_of = AUS
+				NOT = { has_idea = human_rights }
+			}
+			has_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
+			has_active_mission = AUS_mission_calm_the_unrest_in_italy
+		}
+
+		cost = 50
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_unrest_in_italy_minus_ten_effect_tt
+			LVN = {
+				add_ideas = human_rights
+				add_stability = 0.03
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ITA_UPROAR_RISK = -0.1
+				}
+				clamp_variable = {
+					var = ITA_UPROAR_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 250
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	#Grant Freedom of the Press in Lombardy-Venetia
+	AUS_decision_grant_free_press_in_lvn = {
+
+		icon = ger_mefo_bills
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			LVN = {
+				is_puppet_of = AUS
+				NOT = { has_idea = free_press }
+			}
+			has_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
+			has_active_mission = AUS_mission_calm_the_unrest_in_italy
+		}
+
+		cost = 25
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_unrest_in_italy_minus_five_effect_tt
+			LVN = {
+				add_ideas = free_press
+				add_stability = 0.01
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ITA_UPROAR_RISK = -0.05
+				}
+				clamp_variable = {
+					var = ITA_UPROAR_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 250
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
 }
 
 AUS_decision_category_external_threats = {
@@ -100,8 +386,31 @@ AUS_decision_category_external_threats = {
 		available = {
 			has_completed_focus = AUS_focus_aftermath_of_the_crimean_war
 			has_war = no
-			ENG = { has_war = no }
-			FRA = { has_war = no }
+			AUS = {
+				if = {
+					limit = {
+						is_ai = no
+					}
+					has_navy_size = {
+						size > 29
+					}
+				}
+				else = {
+					has_navy_size = {
+						size > 25
+					}
+				}
+			}
+			ENG = {
+				has_navy_size = {
+					size > 149
+				}
+			}
+			FRA = {
+				has_navy_size = {
+					size > 69
+				}
+			}
 			OTO = { has_war = no }
 		}
 
@@ -131,8 +440,8 @@ AUS_decision_category_external_threats = {
         }
 		
 		complete_effect = {
-			ENG = { country_event = { days = 7 id = austriaexternal.3 } }
-			FRA = { country_event = { days = 7 id = austriaexternal.3 } }
+			ENG = { country_event = { days = 7 id = austria.102 } }
+			FRA = { country_event = { days = 7 id = austria.102 } }
 		}
        
         remove_effect = {
@@ -142,10 +451,10 @@ AUS_decision_category_external_threats = {
 					has_country_flag = AUS_decision_stabilize_the_mediterranean_ENG_flag
 					has_country_flag = AUS_decision_stabilize_the_mediterranean_FRA_flag
 				}
-				country_event = { id = austriaexternal.6 }
+				country_event = { id = austria.105 }
 			}
 			else = {
-				country_event = { id = austriaexternal.7 }
+				country_event = { id = austria.106 }
 			}
 	    }
        
@@ -255,7 +564,7 @@ AUS_decision_category_external_threats = {
 				}
 			}
 			hidden_effect = {
-				RUS = { country_event = { days = 60 id = austriaexternal.8 } }
+				RUS = { country_event = { days = 60 id = austria.107 } }
 			}
 	    }
        
@@ -313,7 +622,7 @@ AUS_decision_category_external_threats = {
 			add_opinion_modifier = { target = ENG modifier = AUS_CRIMEAN_WAR_AFTERMATH_VERY_GOOD }
 			reverse_add_opinion_modifier = { target = ENG modifier = AUS_CRIMEAN_WAR_AFTERMATH_VERY_GOOD }
 			hidden_effect = {
-				ENG = { country_event = { days = 60 id = austriaexternal.9 } }
+				ENG = { country_event = { days = 60 id = austria.108 } }
 			}
 	    }
        
@@ -418,10 +727,6 @@ AUS_decision_category_external_threats = {
 	AUS_decision_refit_fort_peschiera = {
 
 		icon = fort_flag
-		
-		allowed = {
-			tag = AUS
-		}
 
 		available = {
 			has_completed_focus = AUS_focus_refit_the_forts
@@ -440,7 +745,7 @@ AUS_decision_category_external_threats = {
 		custom_cost_trigger = {
 			if = {
 				limit = { has_idea = egy_vic_debt }
-				check_variable = { debt_level > 20 }
+				check_variable = { debt_level > 0 }
 				check_variable = { debt_level < 50 }
 			}
 			else = { has_political_power > 24.9 }
@@ -484,10 +789,6 @@ AUS_decision_category_external_threats = {
 	AUS_decision_refit_fort_legnago = {
 
 		icon = fort_flag
-		
-		allowed = {
-			tag = AUS
-		}
 
 		available = {
 			has_completed_focus = AUS_focus_refit_the_forts
@@ -506,7 +807,7 @@ AUS_decision_category_external_threats = {
 		custom_cost_trigger = {
 			if = {
 				limit = { has_idea = egy_vic_debt }
-				check_variable = { debt_level > 20 }
+				check_variable = { debt_level > 0 }
 				check_variable = { debt_level < 50 }
 			}
 			else = { has_political_power > 24.9 }
@@ -550,10 +851,6 @@ AUS_decision_category_external_threats = {
 	AUS_decision_refit_fort_verona = {
 
 		icon = fort_flag
-		
-		allowed = {
-			tag = AUS
-		}
 
 		available = {
 			has_completed_focus = AUS_focus_refit_the_forts
@@ -572,7 +869,7 @@ AUS_decision_category_external_threats = {
 		custom_cost_trigger = {
 			if = {
 				limit = { has_idea = egy_vic_debt }
-				check_variable = { debt_level > 20 }
+				check_variable = { debt_level > 0 }
 				check_variable = { debt_level < 50 }
 			}
 			else = { has_political_power > 24.9 }
@@ -616,10 +913,6 @@ AUS_decision_category_external_threats = {
 	AUS_decision_refit_fort_mantua = {
 
 		icon = fort_flag
-		
-		allowed = {
-			tag = AUS
-		}
 
 		available = {
 			has_completed_focus = AUS_focus_refit_the_forts
@@ -638,7 +931,7 @@ AUS_decision_category_external_threats = {
 		custom_cost_trigger = {
 			if = {
 				limit = { has_idea = egy_vic_debt }
-				check_variable = { debt_level > 20 }
+				check_variable = { debt_level > 0 }
 				check_variable = { debt_level < 50 }
 			}
 			else = { has_political_power > 24.9 }
@@ -678,296 +971,29 @@ AUS_decision_category_external_threats = {
 		}
 	}
 	
-	#Calm the Unrest in Italy
-	AUS_mission_calm_the_unrest_in_italy = {
-
-		icon = generic_nationalism
-
-		allowed = {
-			always = no
-		}
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = AUS_mission_calm_the_unrest_in_italy_trigger_tt
-				hidden_trigger = {
-					NOT = {
-						has_dynamic_modifier = {
-							modifier = AUS_Italian_Unrest_Modifier
-						}
-					}
-				}
-			}
-		}
-		
-		activation = {
-			always = no
-		}
-		
-		highlight_states = {
-			state = 159
-			state = 160
-		}
-
-		fire_only_once = yes
-		
-		is_good = no
-		
-		days_mission_timeout = 365
-		
-		cancel_trigger = {
-			NOT = {
-				LVN = { 
-					is_puppet_of = AUS 
-					owns_state = 159
-				}
-			}
-		}
-
-        timeout_effect = {
-            if = {
-				limit = {
-					is_ai = no
-				}
-				decrease_ps_by_one = yes
-				add_stability = -0.05
-				add_war_support = -0.1
-				LVN = {
-					decrease_ps_by_one = yes
-					add_stability = -0.1
-					add_war_support = -0.15
-				}
-			}
-			hidden_effect = {
-				set_country_flag = AUS_mission_calm_the_unrest_in_italy_fail_flag
-				clr_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag
-			}
-        }
-
-        complete_effect = {
-            add_political_power = 50
-			add_stability = 0.05
-			LVN = {
-				add_political_power = 50
-				add_stability = 0.05
-			}
-			hidden_effect = {
-				set_country_flag = AUS_mission_calm_the_unrest_in_italy_success_flag
-				clr_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag
-			}
-        }
-
-        ai_will_do = {
-			base = 100
-		}
-    }
-	
-	#Make Promises of Liberalization in Italy
-	AUS_decision_make_promises_of_liberalization_in_italy = {
-
-		icon = eng_puppet_usa
-		
-		allowed = {
-			tag = AUS
-		}
-
-		available = {
-			has_completed_focus = AUS_focus_token_liberalization
-			has_war = no
-		}
-
-		visible = {
-			LVN = {
-				is_puppet_of = AUS
-				OR = {
-					NOT = { has_idea = human_rights }
-					NOT = {	has_idea = free_press }
-				}
-			}
-			NOT = { has_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag }
-			has_active_mission = AUS_mission_calm_the_unrest_in_italy
-		}
-
-		cost = 10
-		
-		days_remove = 90
-		
-		modifier = {
-            political_power_gain = -0.05
-        }
-		
-		cancel_trigger = {
-			LVN = {
-				NOT = { is_puppet_of = AUS }
-			}
-		}
-		
-		complete_effect = {
-			custom_effect_tooltip = AUS_unrest_in_italy_minus_two_effect_tt
-			if = {
-				limit = {
-					LVN = {
-						NOT = { has_idea = human_rights }
-					}
-				}
-				unlock_decision_tooltip = AUS_decision_grant_human_rights_in_lvn
-			}
-			if = {
-				limit = {
-					LVN = {
-						NOT = { has_idea = free_press }
-					}
-				}
-				unlock_decision_tooltip = AUS_decision_grant_free_press_in_lvn
-			}
-			add_stability = 0.01
-			LVN = {
-				add_stability = 0.02
-				add_political_power = 10
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ITA_UPROAR_RISK = -0.02
-				}
-				clamp_variable = {
-					var = ITA_UPROAR_RISK
-					min = 0
-					max = 1
-				}
-				set_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
-			}
-		}
-		
-		remove_effect = {
-			custom_effect_tooltip = AUS_decision_make_promises_of_liberalization_in_italy_effect_tt
-			hidden_effect = {
-				set_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_remove_effect_flag
-				clr_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
-				country_event = { days = 60 id = austriaexternal.14 }
-			}
-		}
-
-		ai_will_do = {
-			base = 100
-		}
-	}
-	
-	#Grant Human Rights to the Citizens of Lombardy-Venetia
-	AUS_decision_grant_human_rights_in_lvn = {
-
-		icon = generic_independence
-		
-		allowed = {
-			tag = AUS
-		}
-
-		available = {
-			has_war = no
-		}
-
-		visible = {
-			LVN = {
-				is_puppet_of = AUS
-				NOT = { has_idea = human_rights }
-			}
-			has_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
-			has_active_mission = AUS_mission_calm_the_unrest_in_italy
-		}
-
-		cost = 50
-		
-		complete_effect = {
-			custom_effect_tooltip = AUS_unrest_in_italy_minus_ten_effect_tt
-			LVN = {
-				add_ideas = human_rights
-				add_stability = 0.03
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ITA_UPROAR_RISK = -0.1
-				}
-				clamp_variable = {
-					var = ITA_UPROAR_RISK
-					min = 0
-					max = 1
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 250
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-	}
-	
-	#Grant Freedom of the Press in Lombardy-Venetia
-	AUS_decision_grant_free_press_in_lvn = {
-
-		icon = ger_mefo_bills
-		
-		allowed = {
-			tag = AUS
-		}
-
-		available = {
-			has_war = no
-		}
-
-		visible = {
-			LVN = {
-				is_puppet_of = AUS
-				NOT = { has_idea = free_press }
-			}
-			has_country_flag = AUS_decision_make_promises_of_liberalization_in_italy_complete_effect_flag
-			has_active_mission = AUS_mission_calm_the_unrest_in_italy
-		}
-
-		cost = 25
-		
-		complete_effect = {
-			custom_effect_tooltip = AUS_unrest_in_italy_minus_five_effect_tt
-			LVN = {
-				add_ideas = free_press
-				add_stability = 0.01
-			}
-			hidden_effect = {
-				add_to_variable = {
-					ITA_UPROAR_RISK = -0.05
-				}
-				clamp_variable = {
-					var = ITA_UPROAR_RISK
-					min = 0
-					max = 1
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 250
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-	}
+	#Russian Troops at the Galician Border
 	AUS_decision_russian_troops_galicia = {
-		###Russian Troops on the Border
+		
 		allowed = {
 			always = no
 		}
+		
 		activation = {
 			always = no
 		}
+		
 		is_good = no
+		
 		ai_will_do = {
 			base = 100
 		}
+		
 		priority = 10
+		
 		war_with_on_timeout = RUS
+		
 		days_mission_timeout = 50
+		
 		available = {
 			OR = {
 				AND = {
@@ -995,9 +1021,11 @@ AUS_decision_category_external_threats = {
 			}
 				
 		}
+		
 		complete_effect = {
 			## event about Russians leaving 
 		}
+		
 		timeout_effect = {
 			activate_mission = AUS_decision_russian_troops_galicia
 			#custom_effect_tooltip = AUS_decision_russian_troops_TT
@@ -1118,22 +1146,31 @@ AUS_decision_category_external_threats = {
 			}
 		}
 	}
+	
+	#Romanian Troops at the Border
 	ITA_decision_ROM_troops_2IP = {
-		###RNSC puts troops North
+	
 		allowed = {
 			always = no
 		}
+		
 		activation = {
 			always = no
 		}
+		
 		is_good = no
+		
 		ai_will_do = {
 			base = 100
 		}
+		
 		priority = 10
+		
 		war_with_on_timeout = ROM
 		war_with_on_timeout = MOL
+		
 		days_mission_timeout = 200
+		
 		available = {
 			OR = {
 				AND = {
@@ -1162,9 +1199,11 @@ AUS_decision_category_external_threats = {
 			}
 				
 		}
+		
 		complete_effect = {
 			## none, decision is canceled when Piedmont unironically does invade
 		}
+		
 		timeout_effect = {
 			activate_mission = ITA_decision_ROM_troops_2IP
 			#custom_effect_tooltip = ITA_decision_NSC_troops_marche_TT
@@ -1198,8 +1237,3039 @@ AUS_decision_category_external_threats = {
 	}
 }
 
-AUS_decision_category_internal_threats = {
+AUS_decision_category_multinational_empire = {
+	
+	#Nationalist Agitation
+	AUS_decision_nationalist_agitation_countdown = {
 
+        icon = generic_nationalism
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+		
+		visible = {
+			#
+		}
+
+		days_remove = 90
+		
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_decision_nationalist_agitation_countdown_trigger_tt
+				hidden_trigger = {
+					has_country_flag = AUS_no_more_nationalist_agitation_flag
+				}
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = AUS_decision_nationalist_agitation_countdown_effect_tt
+			hidden_effect = {
+				country_event = { id = austria.305 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Promote the German Language
+	AUS_decision_promote_the_german_language = {
+
+		icon = eng_propaganda_campaigns
+
+		available = {
+			has_stability > 0.5
+			has_completed_focus = AUS_focus_the_challenges_of_a_multinational_empire
+		}
+
+		visible = {
+			#
+		}
+		
+		cost = 100
+		
+		days_remove = 365
+		
+		modifier = {
+			political_power_gain = 0.05
+			drift_defence_factor = 0.25
+			stability_weekly = 0.001
+			resistance_growth = 0.25
+			autocracy_drift = 0.04
+			traditional_conservatism_drift = 0.02
+		}
+
+		complete_effect = {
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_decision_promote_the_german_language_effect_tt
+			unlock_decision_tooltip = AUS_decision_stop_promoting_the_german_language
+			unlock_decision_tooltip = AUS_decision_adapt_the_curriculum
+			unlock_decision_tooltip = AUS_decision_enforce_german_as_administrative_language
+			hidden_effect = {
+				country_event = { days = 1 id = austria.312 }
+				set_country_flag = AUS_promote_german_language_flag
+			}
+		}
+       
+        remove_effect = {
+			country_event = { id = austria.311 }
+		}
+       
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Stop Promoting the German Language
+	AUS_decision_stop_promoting_the_german_language = {
+
+		icon = generic_break_treaty
+
+		available = {
+			has_stability > 0.2
+		}
+
+		visible = {
+			has_decision = AUS_decision_promote_the_german_language
+		}
+		
+		cost = 25
+
+		complete_effect = {
+			add_stability = -0.03
+			remove_decision = AUS_decision_promote_the_german_language
+			hidden_effect = {
+				clr_country_flag = AUS_promote_german_language_flag
+			}
+		}
+       
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 500
+				OR = {
+					check_variable = {
+						var = HUN_REVOLT_RISK
+						value = 0.6
+						compare = greater_than
+					}
+					check_variable = {
+						var = CZE_REVOLT_RISK
+						value = 0.6
+						compare = greater_than
+					}
+					check_variable = {
+						var = CRO_REVOLT_RISK
+						value = 0.6
+						compare = greater_than
+					}
+					check_variable = {
+						var = POL_REVOLT_RISK
+						value = 0.6
+						compare = greater_than
+					}
+				}
+			}
+		}
+	}
+	
+	#Adapt the Curriculum
+	AUS_decision_adapt_the_curriculum = {
+
+		icon = university
+
+		available = {
+			has_stability > 0.4
+		}
+
+		visible = {
+			has_decision = AUS_decision_promote_the_german_language
+			NOT = {
+				has_country_flag = {
+					flag = AUS_promote_german_language_flag
+					days > 243
+				}
+			}
+		}
+		
+		cost = 25
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.05
+			resistance_growth = 0.1
+			research_speed_factor = 0.01
+		}
+		
+		cancel_trigger = {
+			NOT = { has_decision = AUS_decision_promote_the_german_language }
+		}
+
+		complete_effect = {
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_increase_all_nationalisms_by_one_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				add_to_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				add_to_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				add_to_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = AUS_decrease_all_nationalisms_by_two_tt
+			hidden_effect = {
+				subtract_from_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+       
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Enforce German as Administrative Language
+	AUS_decision_enforce_german_as_administrative_language = {
+
+		icon = eng_trade_unions_demand
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_decision = AUS_decision_promote_the_german_language
+			NOT = {
+				has_country_flag = {
+					flag = AUS_promote_german_language_flag
+					days > 243
+				}
+			}
+		}
+		
+		cost = 75
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = 0.05
+			resistance_growth = 0.15
+		}
+		
+		cancel_trigger = {
+			NOT = { has_decision = AUS_decision_promote_the_german_language }
+		}
+
+		complete_effect = {
+			add_stability = -0.02
+			custom_effect_tooltip = AUS_increase_all_nationalisms_by_two_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				add_to_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				add_to_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				add_to_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = AUS_decrease_all_nationalisms_by_three_tt
+			hidden_effect = {
+				subtract_from_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+       
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Restore Order in the Empire
+	AUS_decision_restore_order = {
+
+		icon = franz_joseph
+
+		available = {
+			has_stability > 0.4
+			has_completed_focus = AUS_focus_aftermath_of_the_revolutions_of_1848
+		}
+
+		visible = {
+			#
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+		
+		days_remove = 180
+		
+		modifier = {
+			political_power_gain = -0.25
+			autocracy_drift = 0.05
+		}
+
+		complete_effect = {
+			add_stability = -0.02
+			decrease_ps_by_two = yes
+		}
+       
+        remove_effect = {
+			custom_effect_tooltip = AUS_decision_restore_order_effect_tt
+			hidden_effect = {
+				set_country_flag = AUS_restore_order_flag
+			}
+		}
+       
+		ai_will_do = {
+			base = 200
+		}
+	}
+	
+	#Grant Amnesty to the Insurgents of 1848/49
+	AUS_decision_grant_insurgents_amnesty = {
+
+		icon = generic_independence
+
+		available = {
+			has_stability > 0.4
+		}
+
+		visible = {
+			has_country_flag = AUS_rudolf_born_flag
+		}
+		
+		cost = 25
+
+		complete_effect = {
+			add_stability = 0.02
+			custom_effect_tooltip = AUS_decrease_all_nationalisms_by_two_tt
+			hidden_effect = {
+				clr_country_flag = AUS_rudolf_born_flag
+				subtract_from_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				subtract_from_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+       
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				check_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.4
+					compare = greater_than
+				}
+			}
+		}
+	}
+	
+	#Suppress Hungarian Nationalism
+	AUS_decision_suppress_hungarian_nationalism = {
+
+		icon = oppression_hun_autocracy
+
+		available = {
+			has_stability > 0.4
+			has_completed_focus = AUS_focus_hungarian_situation
+		}
+
+		visible = {
+			check_variable = {
+				var = HUN_REVOLT_RISK
+				value = 0
+				compare = greater_than
+			}
+		}
+		
+		cost = 25
+		
+        days_remove = 180
+         
+        modifier = {
+            political_power_gain = -0.05
+			drift_defence_factor = 0.25
+			resistance_growth = -0.5
+			resistance_decay = 0.5
+			stability_weekly = -0.001
+        }
+
+		complete_effect = {
+			if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_two_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = HUN_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = HUN_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_three_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = HUN_REVOLT_RISK
+						value = 0.03
+					}
+					clamp_variable = {
+						var = HUN_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_one_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = HUN_REVOLT_RISK
+						value = 0.01
+					}
+					clamp_variable = {
+						var = HUN_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+        remove_effect = {
+			if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				add_stability = 0.02
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_hungarian_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = HUN_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = HUN_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_hungarian_nationalism_by_three_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = HUN_REVOLT_RISK
+							value = 0.03
+						}
+						clamp_variable = {
+							var = HUN_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				add_stability = 0.01
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_hungarian_nationalism_by_five_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = HUN_REVOLT_RISK
+							value = 0.05
+						}
+						clamp_variable = {
+							var = HUN_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_hungarian_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = HUN_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = HUN_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else = {
+				add_stability = 0.03
+				custom_effect_tooltip = AUS_decrease_hungarian_nationalism_by_two_tt
+				hidden_effect = {
+					subtract_from_variable = {
+						var = HUN_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = HUN_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				check_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.3
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.2
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.1
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.05
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 3
+				has_country_flag = AUS_restore_order_flag
+			}
+		}
+	}
+	
+	#Suppress West Slavic Nationalism
+	AUS_decision_suppress_west_slavic_nationalism = {
+
+		icon = oppression_cze_autocracy
+
+		available = {
+			has_stability > 0.4
+		}
+
+		visible = {
+			check_variable = {
+				var = CZE_REVOLT_RISK
+				value = 0
+				compare = greater_than
+			}
+		}
+		
+		cost = 25
+		
+        days_remove = 180
+         
+        modifier = {
+            political_power_gain = -0.05
+			drift_defence_factor = 0.25
+			resistance_growth = -0.5
+			resistance_decay = 0.5
+			stability_weekly = -0.001
+        }
+
+		complete_effect = {
+			if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_two_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = CZE_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = CZE_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_three_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = CZE_REVOLT_RISK
+						value = 0.03
+					}
+					clamp_variable = {
+						var = CZE_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_one_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = CZE_REVOLT_RISK
+						value = 0.01
+					}
+					clamp_variable = {
+						var = CZE_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+        remove_effect = {
+		   if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				add_stability = 0.02
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_west_slavic_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CZE_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = CZE_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_west_slavic_nationalism_by_three_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CZE_REVOLT_RISK
+							value = 0.03
+						}
+						clamp_variable = {
+							var = CZE_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				add_stability = 0.01
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_west_slavic_nationalism_by_five_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CZE_REVOLT_RISK
+							value = 0.05
+						}
+						clamp_variable = {
+							var = CZE_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_west_slavic_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CZE_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = CZE_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else = {
+				add_stability = 0.03
+				custom_effect_tooltip = AUS_decrease_west_slavic_nationalism_by_two_tt
+				hidden_effect = {
+					subtract_from_variable = {
+						var = CZE_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = CZE_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				check_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.3
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.2
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.1
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.05
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 3
+				has_country_flag = AUS_restore_order_flag
+			}
+		}
+	}
+	
+	#Suppress South Slavic Nationalism
+	AUS_decision_suppress_south_slavic_nationalism = {
+
+		icon = oppression_cro
+
+		available = {
+			has_stability > 0.4
+			has_completed_focus = AUS_focus_croatian_situation
+		}
+
+		visible = {
+			check_variable = {
+				var = CRO_REVOLT_RISK
+				value = 0
+				compare = greater_than
+			}
+		}
+		
+		cost = 25
+		
+        days_remove = 180
+         
+        modifier = {
+            political_power_gain = -0.05
+			drift_defence_factor = 0.25
+			resistance_growth = -0.5
+			resistance_decay = 0.5
+			stability_weekly = -0.001
+        }
+
+		complete_effect = {
+			if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_two_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = CRO_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = CRO_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_three_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = CRO_REVOLT_RISK
+						value = 0.03
+					}
+					clamp_variable = {
+						var = CRO_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_one_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = CRO_REVOLT_RISK
+						value = 0.01
+					}
+					clamp_variable = {
+						var = CRO_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+        remove_effect = {
+		   if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				add_stability = 0.02
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_south_slavic_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CRO_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = CRO_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_south_slavic_nationalism_by_three_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CRO_REVOLT_RISK
+							value = 0.03
+						}
+						clamp_variable = {
+							var = CRO_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				add_stability = 0.01
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_south_slavic_nationalism_by_five_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CRO_REVOLT_RISK
+							value = 0.05
+						}
+						clamp_variable = {
+							var = CRO_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_south_slavic_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = CRO_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = CRO_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else = {
+				add_stability = 0.03
+				custom_effect_tooltip = AUS_decrease_south_slavic_nationalism_by_two_tt
+				hidden_effect = {
+					subtract_from_variable = {
+						var = CRO_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = CRO_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				check_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.3
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.2
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.1
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.05
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 3
+				has_country_flag = AUS_restore_order_flag
+			}
+		}
+	}
+	
+	#Suppress Polish Nationalism
+	AUS_decision_suppress_polish_nationalism = {
+
+		icon = oppression_pol
+
+		available = {
+			has_stability > 0.4
+		}
+
+		visible = {
+			check_variable = {
+				var = POL_REVOLT_RISK
+				value = 0
+				compare = greater_than
+			}
+		}
+		
+		cost = 25
+		
+        days_remove = 180
+         
+        modifier = {
+            political_power_gain = -0.05
+			drift_defence_factor = 0.25
+			resistance_growth = -0.5
+			resistance_decay = 0.5
+			stability_weekly = -0.001
+        }
+
+		complete_effect = {
+			if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				custom_effect_tooltip = AUS_increase_polish_nationalism_by_two_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = POL_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = POL_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				custom_effect_tooltip = AUS_increase_polish_nationalism_by_three_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = POL_REVOLT_RISK
+						value = 0.03
+					}
+					clamp_variable = {
+						var = POL_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = AUS_increase_polish_nationalism_by_one_tt
+				hidden_effect = {
+					add_to_variable = {
+						var = POL_REVOLT_RISK
+						value = 0.01
+					}
+					clamp_variable = {
+						var = POL_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+        remove_effect = {
+			if = {
+				limit = {
+					PS_pol_negative_null = yes
+					NOT = {
+						OR = {
+							PS_pol_stab_minus_three = yes
+							PS_pol_stab_minus_four = yes
+							PS_pol_stab_minus_five = yes
+						}
+					}
+				}
+				add_stability = 0.02
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_polish_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = POL_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = POL_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_polish_nationalism_by_three_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = POL_REVOLT_RISK
+							value = 0.03
+						}
+						clamp_variable = {
+							var = POL_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						PS_pol_stab_minus_three = yes
+						PS_pol_stab_minus_four = yes
+						PS_pol_stab_minus_five = yes
+					}
+				}
+				add_stability = 0.01
+				if = {
+					limit = {
+						has_country_flag = AUS_restore_order_flag
+					}
+					custom_effect_tooltip = AUS_decrease_polish_nationalism_by_five_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = POL_REVOLT_RISK
+							value = 0.05
+						}
+						clamp_variable = {
+							var = POL_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = AUS_decrease_polish_nationalism_by_four_tt
+					hidden_effect = {
+						subtract_from_variable = {
+							var = POL_REVOLT_RISK
+							value = 0.04
+						}
+						clamp_variable = {
+							var = POL_REVOLT_RISK
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+			else = {
+				add_stability = 0.03
+				custom_effect_tooltip = AUS_decrease_polish_nationalism_by_two_tt
+				hidden_effect = {
+					subtract_from_variable = {
+						var = POL_REVOLT_RISK
+						value = 0.02
+					}
+					clamp_variable = {
+						var = POL_REVOLT_RISK
+						min = 0
+						max = 1
+					}
+				}
+			}
+		}
+       
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				check_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.3
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.2
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.1
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.05
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 3
+				has_country_flag = AUS_restore_order_flag
+			}
+		}
+	}
+}
+
+AUS_decision_category_domestic_politics = {
+
+	#The Empire in Peril
+	AUS_mission_the_empire_in_peril = {
+
+		icon = revolt
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_the_empire_in_peril_trigger_1_tt
+				hidden_trigger = {
+					has_country_flag = AUS_new_prime_minister_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_the_empire_in_peril_trigger_2_tt
+				hidden_trigger = {
+					has_country_flag = AUS_reichsrat_has_gathered_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_the_empire_in_peril_trigger_3_tt
+				hidden_trigger = {
+					has_country_flag = AUS_state_debt_commission_created_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_the_empire_in_peril_trigger_4_tt
+				hidden_trigger = {
+					has_country_flag = AUS_constitutional_diploma_enacted_flag
+				}
+			}
+		}
+		
+		activation = {
+			always = no
+		}
+		
+		fire_only_once = yes
+		
+		is_good = no
+		
+		days_mission_timeout = 600
+
+        timeout_effect = {
+			decrease_ps_by_two = yes
+			add_political_power = -200
+			add_stability = -0.2
+			hidden_effect = {
+				clr_country_flag = AUS_new_prime_minister_flag
+				clr_country_flag = AUS_reichsrat_has_gathered_flag
+				clr_country_flag = AUS_state_debt_commission_created_flag
+				clr_country_flag = AUS_constitutional_diploma_enacted_flag
+			}
+        }
+
+        complete_effect = {
+            increase_ps_by_one = yes
+			add_political_power = 100
+			add_stability = 0.1
+			hidden_effect = {
+				clr_country_flag = AUS_new_prime_minister_flag
+				clr_country_flag = AUS_reichsrat_has_gathered_flag
+				clr_country_flag = AUS_state_debt_commission_created_flag
+				clr_country_flag = AUS_constitutional_diploma_enacted_flag
+			}
+        }
+
+        ai_will_do = {
+			base = 2500
+		}
+    }
+	
+	#Summon the Reichsrat
+	AUS_decision_summon_the_reichsrat = {
+
+		icon = generic_speech
+
+		available = {
+			has_war = no
+			NOT = {
+				has_country_leader = {
+					character = AUS_alexander_von_bach
+					ruling_only = yes
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = AUS_focus_summon_the_reichsrat
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+			add_stability = 0.02
+		}
+		
+        remove_effect = {
+			country_event = { id = austria.403 }
+		}
+		
+		ai_will_do = {
+			base = 2000
+		}
+	}
+	
+	#Create a State Debt Commission
+	AUS_decision_create_a_state_debt_commission = {
+
+		icon = money
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			has_completed_focus = AUS_focus_create_a_state_debt_commission
+			has_idea = egy_vic_debt
+			check_variable = { debt_level > 0 }
+			check_variable = { debt_level < 50 }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		days_remove = 60
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+        remove_effect = {
+			country_event = { id = austria.404 }
+		}
+		
+		ai_will_do = {
+			base = 2000
+		}
+	}
+	
+	#Draft a Constitutional Diploma
+	AUS_decision_draft_a_constitutional_diploma = {
+
+		icon = eng_trade_unions_support
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			has_completed_focus = AUS_focus_enact_a_constitutional_diploma
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+		
+        remove_effect = {
+			country_event = { id = austria.406 }
+		}
+		
+		ai_will_do = {
+			base = 2000
+		}
+	}
+	
+	#Enact the Constitutional Diploma
+	AUS_decision_enact_the_constitutional_diploma = {
+
+		icon = constitution
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			has_country_flag = AUS_draft_constitutional_diploma_ready_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 60
+		
+		modifier = {
+			political_power_gain = -0.2
+		}
+		
+        remove_effect = {
+			country_event = { id = austria.407 }
+			hidden_effect = {
+				clr_country_flag = AUS_draft_constitutional_diploma_ready_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 2000
+		}
+	}
+	
+	#Revise the Constitution
+	AUS_decision_revise_the_constitution = {
+
+		icon = eng_trade_unions_support
+
+		available = {
+			has_war = no
+			has_completed_focus = AUS_focus_revise_the_constitution
+		}
+
+		visible = {
+			has_country_leader = {
+				character = AUS_anton_von_schmerling
+				ruling_only = yes
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		days_remove = 60
+		
+		modifier = {
+			political_power_gain = -0.25
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				country_event = { id = austria.412 days = 5 }	#Temporary Calm
+			}
+		}
+		
+        remove_effect = {
+			country_event = { id = austria.413 }	#The Imperial Constitution of 1861
+		}
+		
+		ai_will_do = {
+			base = 2000
+		}
+	}
+	
+	#Enact Personal Liberties
+	AUS_decision_enact_personal_liberties = {
+
+		icon = constitution
+
+		available = {
+			has_stability > 0.4
+			centrism > 0.4
+			has_completed_focus = AUS_focus_enact_personal_liberties
+		}
+
+		visible = {
+			has_idea = AUS_idea_imperial_constitution_of_1861
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.1
+			resistance_growth = -0.25
+		}
+
+		complete_effect = {
+			add_stability = 0.01
+		}
+		
+        remove_effect = {
+			custom_effect_tooltip = AUS_decision_enact_personal_liberties_effect_tt
+			country_event = { id = austria.427 }	#Laws to Protect Personal Liberty and Property
+		}
+		
+		ai_will_do = {
+			base = 500
+		}
+	}
+	
+	#Enforce Constitutionality Across the Empire
+	AUS_mission_enforce_constitutionality_across_the_empire = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_1_tt
+				hidden_trigger = {
+					has_country_flag = AUS_delegates_agree_to_constitution_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_2_tt
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_country_flag = AUS_hungarian_protest_flag
+							has_country_flag = AUS_hungarian_disobedience_flag
+							has_country_flag = AUS_hungarian_resistance_flag
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_3_tt
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_country_flag = AUS_croatian_protest_flag
+							has_country_flag = AUS_croatian_disobedience_flag
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_4_tt
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = AUS_bohemian_protest_flag
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_5_tt
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = AUS_galician_protest_flag
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_6_tt
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = AUS_transylvanian_protest_flag
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_7_tt
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = AUS_istrian_protest_flag
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_enforce_constitutionality_across_the_empire_trigger_8_tt
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = AUS_south_tyrolean_protest_flag
+					}
+				}
+			}
+		}
+		
+		activation = {
+			always = no
+		}
+
+		fire_only_once = yes
+		
+		is_good = no
+		
+		days_mission_timeout = 1500
+		
+		#cancel_trigger = {
+		#	has_war = yes
+		#}
+
+        timeout_effect = {
+            custom_effect_tooltip = AUS_mission_enforce_constitutionality_across_the_empire_timeout_effect_tt
+			hidden_effect = {
+				country_event = { id = austria.428 days = 7 }	#Resignation of Anton von Schmerling
+				clr_country_flag = AUS_delegates_agree_to_constitution_flag
+				clr_country_flag = AUS_hungarian_protest_flag
+				clr_country_flag = AUS_hungarian_disobedience_flag
+				clr_country_flag = AUS_hungarian_resistance_flag
+				clr_country_flag = AUS_croatian_protest_flag
+				clr_country_flag = AUS_croatian_disobedience_flag
+				clr_country_flag = AUS_bohemian_protest_flag
+				clr_country_flag = AUS_galician_protest_flag
+				clr_country_flag = AUS_transylvanian_protest_flag
+				clr_country_flag = AUS_istrian_protest_flag
+				clr_country_flag = AUS_south_tyrolean_protest_flag
+			}
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = AUS_mission_enforce_constitutionality_across_the_empire_complete_effect_tt
+			country_event = { id = austria.431 days = 30 }	#Constitutionality Established
+			hidden_effect = {
+				clr_country_flag = AUS_delegates_agree_to_constitution_flag
+			}
+        }
+
+        ai_will_do = {
+			base = 5000
+		}
+    }
+	
+	#Dissolve the Hungarian Landtag
+	AUS_decision_dissolve_the_hungarian_landtag = {
+
+		icon = parliament_speech_denied_hun_autocracy
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_HUN_REVOLT_RISK_LESS_THAN_55 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_hungarian_resistance_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_decision_dissolve_the_hungarian_landtag_effect_tt
+			custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_five_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.05
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				clr_country_flag = AUS_hungarian_resistance_flag
+				set_country_flag = AUS_hungarian_disobedience_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 500
+		}
+	}
+	
+	#Appoint Moritz Pálffy as Imperial Governor in Hungary
+	AUS_decision_appoint_hungarian_governor = {
+
+		icon = franz_joseph
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_HUN_REVOLT_RISK_LESS_THAN_45 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_hungarian_disobedience_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		days_remove = 60
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = -0.01
+			if = {
+				limit = {
+					amount_taken_ideas = {
+						amount < 3
+						slots = { political_advisor }
+					}
+				}
+				AUS_moritz_palffy_von_erdod = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = AUS_advisor_moritz_palffy_von_erdod
+							allowed = {
+								original_tag = AUS
+							}
+							visible = {
+								date < 1897.9.14
+							}
+							traits = {
+								AUS_trait_Moritz_Palffy_von_Erdod
+							}
+						}
+						activate = yes
+					}
+				}
+			}
+			else = {
+				AUS_moritz_palffy_von_erdod = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = AUS_advisor_moritz_palffy_von_erdod
+							allowed = {
+								original_tag = AUS
+							}
+							visible = {
+								date < 1897.9.14
+							}
+							traits = {
+								AUS_trait_Moritz_Palffy_von_Erdod
+							}
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_three_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				clr_country_flag = AUS_hungarian_disobedience_flag
+				set_country_flag = AUS_hungarian_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 500
+		}
+	}
+	
+	#Bring the Hungarians to Reason
+	AUS_decision_bring_hungarians_to_reason = {
+
+		icon = civil_support_hun_autocracy
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_moritz_palffy_von_erdod = {
+				is_advisor = yes
+				is_character_slot = political_advisor
+			}
+			AUS_HUN_REVOLT_RISK_LESS_THAN_35 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_hungarian_protest_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.005
+			custom_effect_tooltip = AUS_decision_bring_to_reason_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_hungarian_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+	}
+	
+	#Adjourn the Croatian Landtag
+	AUS_decision_adjourn_the_croatian_landtag = {
+
+		icon = parliament_speech_denied_cro_autocracy
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_CRO_REVOLT_RISK_LESS_THAN_35 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_croatian_disobedience_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 30
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_decision_adjourn_the_croatian_landtag_effect_tt
+			custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_three_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+				clr_country_flag = AUS_croatian_disobedience_flag
+				set_country_flag = AUS_croatian_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 500
+		}
+	}
+	
+	#Bring the Croatians to Reason
+	AUS_decision_bring_croatians_to_reason = {
+
+		icon = civil_support_cro_autocracy
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_CRO_REVOLT_RISK_LESS_THAN_25 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_croatian_protest_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.005
+			custom_effect_tooltip = AUS_decision_bring_to_reason_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_croatian_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+	}
+	
+	#Bring the Bohemians to Reason
+	AUS_decision_bring_bohemians_to_reason = {
+
+		icon = civil_support_boh
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_CZE_REVOLT_RISK_LESS_THAN_25 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_bohemian_protest_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.005
+			custom_effect_tooltip = AUS_decision_bring_to_reason_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_bohemian_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+	}
+	
+	#Bring the Galicians to Reason
+	AUS_decision_bring_galicians_to_reason = {
+
+		icon = civil_support_glm
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_POL_REVOLT_RISK_LESS_THAN_25 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_galician_protest_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 10
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.005
+			custom_effect_tooltip = AUS_decision_bring_to_reason_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_galician_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+	}
+	
+	#Bring the Transylvanians to Reason
+	AUS_decision_bring_transylvanians_to_reason = {
+
+		icon = civil_support_trn
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_HUN_REVOLT_RISK_LESS_THAN_55 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_transylvanian_protest_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 5
+		
+		days_remove = 90
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.005
+			custom_effect_tooltip = AUS_decision_bring_to_reason_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_transylvanian_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+	}
+	
+	#Bring the Istrians to Reason
+	AUS_decision_bring_istrians_to_reason = {
+
+		icon = civil_support_ita
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_ITA_REVOLT_RISK_LESS_THAN_60 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_istrian_protest_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 5
+		
+		days_remove = 90
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.005
+			custom_effect_tooltip = AUS_decision_bring_to_reason_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_istrian_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 150
+		}
+	}
+	
+	#Bring the South Tyroleans to Reason
+	AUS_decision_bring_south_tyroleans_to_reason = {
+
+		icon = civil_support_ita
+
+		available = {
+			has_completed_focus = AUS_focus_deal_with_the_troublemakers
+			NOT = { has_country_flag = AUS_bringing_to_reason_flag }
+			AUS_ITA_REVOLT_RISK_LESS_THAN_60 = yes
+		}
+
+		visible = {
+			has_active_mission = AUS_mission_enforce_constitutionality_across_the_empire
+			has_country_flag = AUS_south_tyrolean_protest_flag
+		}
+		
+		fire_only_once = yes
+		
+		cost = 5
+		
+		days_remove = 90
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.005
+			custom_effect_tooltip = AUS_decision_bring_to_reason_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_south_tyrolean_protest_flag
+				clr_country_flag = AUS_bringing_to_reason_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 150
+		}
+	}
+	
+	#Enforce the Concordat
+	AUS_decision_enforce_the_concordat = {
+
+		icon = catholicism
+
+		available = {
+			has_stability > 0.5
+			has_completed_focus = AUS_focus_ramifications_of_the_concordat_of_1855
+		}
+
+		visible = {
+			has_idea = AUS_idea_concordat_of_1855_1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 365
+		
+		modifier = {
+			political_power_gain = -0.1
+			autocracy_drift = 0.05
+			fundamentalism_drift = 0.03
+		}
+
+		complete_effect = {
+			add_stability = -0.01
+			decrease_ps_by_one = yes
+		}
+		
+        remove_effect = {
+			swap_ideas = {
+				remove_idea = AUS_idea_concordat_of_1855_1
+				add_idea = AUS_idea_concordat_of_1855_2
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Enact the Protestantenpatent
+	AUS_decision_enact_the_protestantenpatent = {
+
+		icon = protestantism
+
+		available = {
+			has_stability > 0.3
+			has_idea = AUS_idea_imperial_constitution_of_1861
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = AUS_focus_protestantenpatent_alt
+				has_completed_focus = AUS_focus_protestantenpatent
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		days_remove = 30
+		
+		modifier = {
+			political_power_gain = -0.1
+			resistance_growth = -0.1
+		}
+
+		complete_effect = {
+			add_stability = 0.01
+		}
+		
+        remove_effect = {
+			country_event = { id = austria.493 }	#The Protestantenpatent
+		}
+		
+		ai_will_do = {
+			base = 500
+		}
+	}
+	
+	#Crack Down on Heretics
+	AUS_decision_crack_down_on_heretics = {
+
+		icon = oppression
+
+		available = {
+			has_stability > 0.25
+			has_completed_focus = AUS_focus_denominational_unrest
+		}
+
+		visible = {
+			check_variable = {
+				var = CZE_REVOLT_RISK
+				value = 0
+				compare = greater_than
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 25
+		
+		days_remove = 365
+		
+		modifier = {
+			political_power_gain = -0.05
+			autocracy_drift = 0.02
+			fundamentalism_drift = 0.01
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_one_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		
+        remove_effect = {
+			add_stability = 0.02
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
+
+AUS_decision_category_financial_affairs = {
+
+	#Avoid Bankruptcy
+	AUS_mission_avoid_bankruptcy = {
+
+		icon = money
+
+		allowed = { 
+			always = no
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_mission_avoid_bankruptcy_trigger_tt
+				hidden_trigger = {
+					check_variable = { ROOT.debt_level > 49 }
+					has_country_flag = debt_declared_bankruptcy_flag
+				}
+			}
+		}
+		
+		activation = {
+			always = no
+		}
+		
+		fire_only_once = no
+		
+		is_good = yes
+		
+		days_mission_timeout = 3650
+
+        timeout_effect = {
+			increase_ps_by_one = yes
+			add_political_power = 250
+			add_stability = 0.15
+			add_war_support = 0.15
+        }
+
+        complete_effect = {
+            decrease_ps_by_two = yes
+			add_political_power = -250
+			add_stability = -0.15
+			add_war_support = -0.15
+        }
+
+        ai_will_do = {
+			base = 2000
+		}
+    }
+	
+	#Make Debt Repayment
+	AUS_decision_debt_repayments = {
+		
+		icon = money
+		
+		#available = {
+		#	has_idea = egy_vic_debt
+		#}
+
+		visible = {
+			has_idea = egy_vic_debt
+			check_variable = { ROOT.debt_level > 0 }
+			NOT = { has_country_flag = paying_debt }
+			NOT = { has_country_flag = debt_free_flag }
+			NOT = { has_country_flag = debt_declared_bankruptcy_flag }
+		}
+
+		fire_only_once = no
+
+		cost = 10
+		
+		complete_effect = {
+			activate_mission = AUS_mission_paying_debt
+			custom_effect_tooltip = AUS_decision_debt_repayments_effect_tt
+			add_ideas = AUS_idea_debt_repayments
+			hidden_effect = {
+				AUS_calculate_debt_time = yes
+				set_country_flag = paying_debt
+			}
+		}
+
+		ai_will_do = {
+			base = 500
+		}
+	}
+	
+	#Made Debt Repayment
+	AUS_decision_debt_repayments_done = {
+	
+		icon = money
+		
+		visible = { always = no }
+		
+		fire_only_once = no
+		
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = paying_debt
+					}
+					clr_country_flag = paying_debt
+				}
+				if = {
+					limit = {
+						has_idea = AUS_idea_debt_repayments 
+					}
+					remove_ideas = AUS_idea_debt_repayments
+				}
+			}
+			if = {
+				limit = { 
+					check_variable = { debt_level = 0 }
+				}
+				country_event = { id = austria.902 }
+			}
+			else = {
+				country_event = { id = austria.903 }
+			}
+		}
+	}
+	
+	#Repaying Debt
+	AUS_mission_paying_debt = {
+		
+		icon = money
+		
+		allowed = { 
+			always = no
+		}
+		
+		available = {
+			hidden_trigger = { always = no }
+		}
+		
+		activation = {
+			always = no
+		}
+		
+		days_mission_timeout = 180
+		
+		cancel_trigger = {
+			hidden_trigger = { 
+				OR = {
+					has_country_flag = debt_declared_bankruptcy_flag
+					has_country_flag = debt_free_flag
+				}
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			debt_level_decrease_by_1 = yes
+			hidden_effect = {
+				activate_decision = AUS_decision_debt_repayments_done
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Restrict Stock Exchange Speculation
+	AUS_decision_restrict_stock_exchange_speculation = {
+
+		icon = gre_paying_ifc_debt
+
+		available = {
+			has_stability > 0.4
+			has_completed_focus = AUS_focus_financial_crisis
+			NOT = { has_country_flag = AUS_fiscal_measure_in_progress_flag }
+		}
+
+		visible = {
+			#
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = AUS_financial_management_effect_tt
+			hidden_effect = {
+				set_country_flag = AUS_fiscal_measure_in_progress_flag
+				set_country_flag = AUS_restrict_stock_exchange_speculation_flag
+			}
+		}
+		
+        remove_effect = {
+			if = {
+				limit = {
+					has_country_flag = AUS_seize_paper_money_in_favor_of_coins_flag
+				}
+				debt_level_decrease_by_1 = yes
+				hidden_effect = {
+					clr_country_flag = AUS_restrict_stock_exchange_speculation_flag
+					clr_country_flag = AUS_seize_paper_money_in_favor_of_coins_flag
+				}
+			}
+			else = {
+				add_stability = 0.03
+			}
+			hidden_effect = {
+				clr_country_flag = AUS_fiscal_measure_in_progress_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Seize Paper Money in Favor of Coins
+	AUS_decision_seize_paper_money_in_favor_of_coins = {
+
+		icon = hol_attract_foreign_investors
+
+		available = {
+			has_stability > 0.4
+			has_completed_focus = AUS_focus_financial_crisis
+			NOT = { has_country_flag = AUS_fiscal_measure_in_progress_flag }
+		}
+
+		visible = {
+			#
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = AUS_financial_management_effect_tt
+			hidden_effect = {
+				set_country_flag = AUS_fiscal_measure_in_progress_flag
+				set_country_flag = AUS_seize_paper_money_in_favor_of_coins_flag
+			}
+		}
+		
+        remove_effect = {
+			if = {
+				limit = {
+					has_country_flag = AUS_restrict_stock_exchange_speculation_flag
+				}
+				debt_level_decrease_by_1 = yes
+				hidden_effect = {
+					clr_country_flag = AUS_restrict_stock_exchange_speculation_flag
+					clr_country_flag = AUS_seize_paper_money_in_favor_of_coins_flag
+				}
+			}
+			else = {
+				add_stability = 0.03
+			}
+			hidden_effect = {
+				clr_country_flag = AUS_fiscal_measure_in_progress_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	#Reduce Army Budget
+	AUS_decision_reduce_army_budget = {
+
+		icon = money
+
+		available = {
+			NOT = { has_country_flag = AUS_fiscal_measure_in_progress_flag }
+		}
+
+		visible = {
+			has_completed_focus = AUS_focus_cut_army_budget
+			OR = {
+				has_idea = ten_percent
+				has_idea = five_percent
+				has_idea = three_percent
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		days_remove = 400
+		
+		modifier = {
+			political_power_gain = -0.05
+			war_support_weekly = -0.003
+			stability_weekly = -0.001
+		}
+
+		complete_effect = {
+			add_stability = -0.02
+			if = {
+				limit = {
+					has_idea = three_percent
+				}
+				swap_ideas = { remove_idea = three_percent add_idea = two_percent }
+				hidden_effect = {
+					set_country_flag = AUS_army_budget_was_three_percent
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = five_percent
+				}
+				swap_ideas = { remove_idea = five_percent add_idea = three_percent }
+				hidden_effect = {
+					set_country_flag = AUS_army_budget_was_five_percent
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = ten_percent
+				}
+				swap_ideas = { remove_idea = ten_percent add_idea = five_percent }
+				hidden_effect = {
+					set_country_flag = AUS_army_budget_was_ten_percent
+				}
+			}
+			hidden_effect = {
+				set_country_flag = AUS_fiscal_measure_in_progress_flag
+			}
+		}
+		
+        remove_effect = {
+			custom_effect_tooltip = AUS_decision_reduce_army_budget_effect_tt
+			debt_level_decrease_by_1 = yes
+			hidden_effect = {
+				clr_country_flag = AUS_fiscal_measure_in_progress_flag
+				country_event = { id = austria.904 days = 365 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 500
+		}
+	}
+	
+	#Levy Newspaper Tax
+	AUS_decision_levy_newspaper_tax = {
+
+		icon = newspaper_folded
+
+		available = {
+			has_stability > 0.3
+			NOT = { has_country_flag = AUS_fiscal_measure_in_progress_flag }
+		}
+
+		visible = {
+			has_completed_focus = AUS_focus_newspaper_tax
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 90
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_fiscal_measure_in_progress_flag
+			}
+		}
+		
+        remove_effect = {
+			custom_effect_tooltip = AUS_decision_levy_newspaper_tax_effect_tt
+			add_ideas = AUS_idea_newspaper_tax
+			hidden_effect = {
+				clr_country_flag = AUS_fiscal_measure_in_progress_flag
+				country_event = { id = austria.906 days = 500 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 300
+		}
+	}
+	
+	#Cooperate with the Kreditanstalt
+	AUS_decision_cooperate_with_the_kreditanstalt = {
+
+		icon = gre_investment_decisions
+
+		available = {
+			has_stability > 0.4
+			has_completed_focus = AUS_focus_cooperate_with_the_kreditanstalt
+			NOT = { has_country_flag = AUS_fiscal_measure_in_progress_flag }
+		}
+
+		visible = {
+			#
+		}
+		
+		fire_only_once = yes
+		
+		cost = 150
+		
+		days_remove = 180
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = AUS_fiscal_measure_in_progress_flag
+			}
+		}
+		
+        remove_effect = {
+			if = {
+				limit = {
+					amount_taken_ideas = {
+						amount < 3
+						slots = { political_advisor }
+					}
+				}
+				AUS_anselm_salomon_von_rothschild = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = AUS_advisor_anselm_salomon_von_rothschild
+							allowed = {
+								original_tag = AUS
+							}
+							visible = {
+								date < 1874.7.27
+							}
+							research_bonus = {
+								economics_tech = 0.02
+								humanities_tech = 0.02
+							}
+							traits = {
+								AUS_trait_Anselm_Salomon_von_Rothschild
+							}
+						}
+						activate = yes
+					}
+				}
+			}
+			else = {
+				AUS_anselm_salomon_von_rothschild = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = AUS_advisor_anselm_salomon_von_rothschild
+							allowed = {
+								original_tag = AUS
+							}
+							visible = {
+								date < 1874.7.27
+							}
+							research_bonus = {
+								economics_tech = 0.02
+								humanities_tech = 0.02
+							}
+							traits = {
+								AUS_trait_Anselm_Salomon_von_Rothschild
+							}
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = AUS_decision_cooperate_with_the_kreditanstalt_effect_tt
+			hidden_effect = {
+				clr_country_flag = AUS_fiscal_measure_in_progress_flag
+			}
+		}
+		
+		ai_will_do = {
+			base = 300
+		}
+	}
 }
 
 AUS_decision_category_habsburg_industry = {
@@ -1211,7 +4281,7 @@ AUS_decision_category_habsburg_industry = {
             tag = AUS
         }
 
-		icon = eng_trade_unions_support
+		icon = franz_joseph
 
 		available = {
 			controls_state = 956
@@ -1220,7 +4290,7 @@ AUS_decision_category_habsburg_industry = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
 		}
 
 		fire_only_once = yes
@@ -1260,7 +4330,7 @@ AUS_decision_category_habsburg_industry = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_trade_code
+			has_completed_focus = AUS_focus_trade_code
 		}
 
 		fire_only_once = yes
@@ -1309,7 +4379,7 @@ AUS_decision_category_habsburg_industry = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_trade_code
+			has_completed_focus = AUS_focus_trade_code
 		}
 
 		fire_only_once = yes
@@ -1358,7 +4428,7 @@ AUS_decision_category_habsburg_industry = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_trade_code
+			has_completed_focus = AUS_focus_trade_code
 		}
 
 		fire_only_once = yes
@@ -1409,7 +4479,7 @@ AUS_decision_category_habsburg_industry = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_trade_code
+			has_completed_focus = AUS_focus_trade_code
 		}
 
 		fire_only_once = yes
@@ -1429,7 +4499,7 @@ AUS_decision_category_habsburg_industry = {
 			hidden_effect = {
 				clr_country_flag = SAX_industry_development_ongoing_flag
 			}
-			country_event = { days = 5 id = AUSfocustree.4 }
+			country_event = { days = 5 id = austria.934 }
 		}
 
 		modifier = {
@@ -1453,11 +4523,11 @@ AUS_decision_category_habsburg_industry = {
 			num_of_civilian_factories_available_for_projects > 1
 			controls_state = 153
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
-			has_completed_focus = AUS_tyrolean_lumber
+			has_completed_focus = AUS_focus_tyrolean_lumber
 		}
 
 		visible = {
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
 		}
 
 		fire_only_once = yes
@@ -1547,14 +4617,14 @@ AUS_decision_category_habsburg_industry = {
 
         available = {
 			num_of_civilian_factories_available_for_projects > 2
-			has_completed_focus = AUS_steyr_arms
+			has_completed_focus = AUS_focus_steyr_arms
 			152 = { arms_factory > 0 }
 			152 = { industrial_complex > 0 }
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
 		}
 
         visible = {
-            has_completed_focus = AUS_Privatize_Railways
+            has_completed_focus = AUS_focus_privatize_railways
         }
 
         fire_only_once = yes
@@ -1596,11 +4666,11 @@ AUS_decision_category_habsburg_industry = {
 			num_of_civilian_factories_available_for_projects > 2
 			controls_state = 152
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
-			has_completed_focus = AUS_styrian_coal
+			has_completed_focus = AUS_focus_styrian_coal
 		}
 
 		visible = {
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
 		}
 
 		fire_only_once = yes
@@ -1637,7 +4707,7 @@ AUS_decision_category_habsburg_industry = {
 		}
 	}
 	
-	AUS_mission_vic_Moravia = {
+	AUS_mission_vic_Bohemia = {
 
         allowed = {
             always = no
@@ -1684,7 +4754,7 @@ AUS_decision_category_habsburg_industry = {
 		}
     }
 	
-	AUS_mission_vic_Bohemia = {
+	AUS_mission_vic_Moravia = {
 
         allowed = {
             always = no
@@ -1882,13 +4952,13 @@ AUS_decision_category_habsburg_industry = {
 
         available = {
 			num_of_civilian_factories_available_for_projects > 1
-			has_completed_focus = AUS_viennamaschinenfabrik
+			has_completed_focus = AUS_focus_vienna_maschinenfabrik
 			956 = { industrial_complex > 1 }
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
 		}
 
         visible = {
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
         }
 
         fire_only_once = yes
@@ -1974,13 +5044,13 @@ AUS_decision_category_habsburg_industry = {
 
         available = {
 			num_of_civilian_factories_available_for_projects > 1
-			has_completed_focus = AUS_ganz_works
+			has_completed_focus = AUS_focus_ganz_works
 			43 = { industrial_complex > 1 }
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
 		}
 
         visible = {
-			has_completed_focus = AUS_ganz_works
+			has_completed_focus = AUS_focus_ganz_works
 			owns_state = 43
         }
 
@@ -2022,12 +5092,12 @@ AUS_decision_category_habsburg_industry = {
 
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
-			has_completed_focus = AUS_bank_galicyjski
+			has_completed_focus = AUS_focus_bank_galicyjski
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
 		}
 
 		visible = {
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
 		}
 
 		fire_only_once = yes
@@ -2072,14 +5142,14 @@ AUS_decision_category_habsburg_industry = {
 		allowed = { tag = AUS }
 		
 		available = {
-			has_completed_focus = AUS_galician_oil
+			has_completed_focus = AUS_focus_galician_oil
 			has_idea = AUS_advisor_ignacy_lukasiewicz
 			has_tech = refining
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
 		}
 
 		visible = {
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
 		}
 
 		fire_only_once = yes
@@ -2123,14 +5193,14 @@ AUS_decision_category_habsburg_industry = {
 		allowed = { tag = AUS }
 		
 		available = {
-			has_completed_focus = AUS_galician_oil
+			has_completed_focus = AUS_focus_galician_oil
 			has_idea = AUS_advisor_ignacy_lukasiewicz
 			has_tech = mechanized_mining
 			NOT = { has_country_flag = SAX_industry_development_ongoing_flag }
 		}
 
 		visible = {
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
 		}
 
 		fire_only_once = yes
@@ -2475,10 +5545,10 @@ AUS_decision_category_habsburg_industry = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = AUS_tt_railway_upgrade
-					has_completed_focus = AUS_erzgberbahn
-					has_completed_focus = AUS_galician_railways
-					has_completed_focus = AUS_hungarian_railways
-					has_completed_focus = AUS_czech_railway_expansion
+					has_completed_focus = AUS_focus_erzbergbahn
+					has_completed_focus = AUS_focus_galician_railways
+					has_completed_focus = AUS_focus_hungarian_railways
+					has_completed_focus = AUS_focus_czech_railway_expansion
 					has_tech = steam_locomotive_3
 					has_tech = standardized_gauge
 			}
@@ -2486,7 +5556,7 @@ AUS_decision_category_habsburg_industry = {
 
 		visible = {
 			has_idea = NA_B_small_scale_railways
-			has_completed_focus = AUS_Privatize_Railways
+			has_completed_focus = AUS_focus_privatize_railways
 		}
 
 		fire_only_once = yes
@@ -2932,7 +6002,7 @@ eoanb_category_diplomatic_actions = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event =  { id = AUShungaryrevolt.5 days = 1 }
+	    	    country_event =  { id = austria.1505 days = 1 }
 			}
 		}
 
@@ -2967,7 +6037,7 @@ eoanb_category_diplomatic_actions = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUShungaryrevolt.6
+	    	    country_event =  { id = austria.1506 }
 			}
 		}
 
@@ -2993,7 +6063,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.4
+	    	    country_event = austria.1704
 			}
 		}
 
@@ -3016,7 +6086,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.5
+	    	    country_event = austria.1705
 			}
 		}
 
@@ -3039,7 +6109,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.6
+	    	    country_event = austria.1706
 			}
 		}
 
@@ -3062,7 +6132,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.7
+	    	    country_event = austria.1707
 			}
 		}
 
@@ -3085,7 +6155,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.8
+	    	    country_event = austria.1708
 			}
 		}
 
@@ -3108,7 +6178,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.9
+	    	    country_event = austria.1709
 			}
 		}
 
@@ -3131,7 +6201,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.10
+	    	    country_event = austria.1710
 			}
 		}
 
@@ -3154,7 +6224,7 @@ eoanb_category_aus_federalization_1 = {
 
 		complete_effect = {
 		    HUN = {
-	    	    country_event = AUSfedcompromise.11
+	    	    country_event = austria.1711
 			}
 		}
 
@@ -3173,7 +6243,7 @@ AUS_decision_category_habsburg_navy = {
 
 		available = {
 			num_of_civilian_factories_available_for_projects > 5
-			has_completed_focus = AUS_drache_ironclad
+			has_completed_focus = AUS_focus_drache_class_ironclads
 			if = {
 	            limit = {
 	            	is_ai = no
@@ -3183,7 +6253,7 @@ AUS_decision_category_habsburg_navy = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_new_ships_designs
+			has_completed_focus = AUS_focus_new_ship_designs
 			hidden_trigger = { has_dlc = "Man the Guns" }
 		}
 
@@ -3204,7 +6274,7 @@ AUS_decision_category_habsburg_navy = {
 		}
 
 		remove_effect = {
-			country_event = { days = 5 id = AUSfocustree.5 }
+			country_event = { days = 5 id = austria.804 }
         }
 
 		ai_will_do = {
@@ -3219,7 +6289,7 @@ AUS_decision_category_habsburg_navy = {
 
 		available = {
 			num_of_civilian_factories_available_for_projects > 5
-			has_completed_focus = AUS_kaiser_max_ironclad
+			has_completed_focus = AUS_focus_kaiser_max_class_ironclads
 			if = {
 	            limit = {
 	            	is_ai = no
@@ -3229,7 +6299,7 @@ AUS_decision_category_habsburg_navy = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_new_ships_designs
+			has_completed_focus = AUS_focus_new_ship_designs
 			hidden_trigger = { has_dlc = "Man the Guns" }
 		}
 
@@ -3250,7 +6320,7 @@ AUS_decision_category_habsburg_navy = {
 		}
 
 		remove_effect = {
-			country_event = { days = 5 id = AUSfocustree.6 }
+			country_event = { days = 5 id = austria.805 }
         }
 
 		ai_will_do = {
@@ -3265,7 +6335,7 @@ AUS_decision_category_habsburg_navy = {
 
 		available = {
 			num_of_civilian_factories_available_for_projects > 5
-			has_completed_focus = AUS_Erzherzog_Ferdinand_Max_ironclad
+			has_completed_focus = AUS_focus_erzherzog_ferdinand_max_class_ironclads
 			if = {
 	            limit = {
 	            	is_ai = no
@@ -3275,7 +6345,7 @@ AUS_decision_category_habsburg_navy = {
 		}
 
 		visible = {
-			has_completed_focus = AUS_new_ships_designs
+			has_completed_focus = AUS_focus_new_ship_designs
 			hidden_trigger = { has_dlc = "Man the Guns" }
 		}
 
@@ -3296,7 +6366,7 @@ AUS_decision_category_habsburg_navy = {
 		}
 
 		remove_effect = {
-			country_event = { days = 5 id = AUSfocustree.7 }
+			country_event = { days = 5 id = austria.806 }
         }
 
 		ai_will_do = {
@@ -3311,11 +6381,11 @@ AUS_decision_category_habsburg_navy = {
         allowed = { tag = AUS }
 
 		available = {
-			has_completed_focus = AUS_ministry_of_marine
+			has_completed_focus = AUS_focus_establish_marineministerium
 		}
 
 		visible = {
-			has_completed_focus = AUS_ministry_of_marine
+			has_completed_focus = AUS_focus_establish_marineministerium
 		}
 
 		fire_only_once = yes
@@ -3364,11 +6434,11 @@ AUS_decision_category_habsburg_navy = {
         allowed = { tag = AUS }
 
 		available = {
-			has_completed_focus = AUS_Maximilian_Lessons
+			has_completed_focus = AUS_focus_maximilians_lessons
 		}
 
 		visible = {
-			has_completed_focus = AUS_ministry_of_marine
+			has_completed_focus = AUS_focus_establish_marineministerium
 		}
 
 		fire_only_once = yes
@@ -3393,11 +6463,11 @@ AUS_decision_category_habsburg_navy = {
         allowed = { tag = AUS }
 
 		available = {
-			has_completed_focus = AUS_Screw_Corvettes
+			has_completed_focus = AUS_focus_screw_corvette_designs
 		}
 
 		visible = {
-			has_completed_focus = AUS_new_ships_designs
+			has_completed_focus = AUS_focus_new_ship_designs
 		}
 
 		fire_only_once = yes
@@ -3414,7 +6484,7 @@ AUS_decision_category_habsburg_navy = {
 		days_remove = 180
 
         remove_effect = {
-			country_event = { days = 5 id = AUSfocustree.8 }
+			country_event = { days = 5 id = austria.803 }
         }
 
 		ai_will_do = {
@@ -3428,11 +6498,11 @@ AUS_decision_category_habsburg_navy = {
         allowed = { tag = AUS }
 
 		available = {
-			has_completed_focus = AUS_marineschule_fiume
+			has_completed_focus = AUS_focus_fiume_naval_academy
 		}
 
 		visible = {
-			has_completed_focus = AUS_Fabbrica_Macchine_Andrea
+			has_completed_focus = AUS_focus_fabbrica_macchine_andrea
 		}
 
 		fire_only_once = yes
@@ -3552,7 +6622,7 @@ AUS_decision_category_habsburg_army = {
 
 		available = {
 			NOT = { has_country_flag = AUS_army_reform_ongoing_flag }
-			has_completed_focus = AUS_focus_edelsheim_gyulais_proposal
+			#has_completed_focus = AUS_focus_edelsheim_gyulais_proposal
 		}
 
 		visible = {
@@ -3635,6 +6705,7 @@ AUS_decision_category_habsburg_army = {
 		}
 		
 		complete_effect = {
+			army_experience = -50
 			custom_effect_tooltip = RUS_military_reform_ongoing_effect_tt
 			hidden_effect = { 
 				set_country_flag = AUS_army_reform_ongoing_flag 
@@ -3824,7 +6895,7 @@ AUS_decision_category_habsburg_army = {
 	
 	AUS_decision_new_uhlan_regiments = {
 
-		icon = generic_army_support
+		icon = generic_cavalry
 
 		allowed = { tag = AUS }
 		

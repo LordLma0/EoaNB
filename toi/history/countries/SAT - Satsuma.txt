@@ -139,9 +139,9 @@
 			social_egalitarianism = 0
 			centrism = 0
 			traditional_conservatism = 0
-			radical_democracy = 0
+			radical_democracy = 56
 			chauvinist_populism = 0
-			autocracy = 100
+			autocracy = 44
 			fundamentalism = 0
 		}
 
@@ -168,8 +168,9 @@
 		# Advisors
   		recruit_character = SAT_character_saigo_takamori
   		recruit_character = SAT_character_okubo_toshimichi
+		recruit_character =SAT_character_hashimoto_kanai
 		# Commanders
 		  recruit_character = SAT_character_komatsu_kiyokado
-		  recruit_character = SAT_character_kirino_toshiaki
+		  recruit_character = JAP_character_kirino_toshiaki
 	}
 }

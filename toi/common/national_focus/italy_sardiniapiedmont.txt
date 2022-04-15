@@ -132,7 +132,9 @@ focus_tree = {
 			has_completed_focus = PIE_Napoleon3_Help
 		}
 		completion_reward = {
-			add_political_power = 150
+			country_event = {
+				id = sardinia.232
+			}
 		}
 	}
 	focus = {
@@ -747,36 +749,36 @@ focus_tree = {
 	#		ITA_Formation_of_Italy = yes
 	#	}
 	#}
-	focus = {
-		id = PIE_Encourage_Resistance_Italy
-		icon = GFX_goal_focus_italian_identity
-		cost = 15
-		prerequisite = {
-			focus = PIE_Napoleon3_Help
-		}
-		available = {
-			has_completed_focus = PIE_Political_Structure_Planning_FT
-			has_completed_focus = PIE_Napoleon3_Help
-		}
-		relative_position_id = PIE_Napoleon3_Help
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-			FOCUS_FILTER_HISTORICAL
-		}
-		x = 5
-		y = 1
-		completion_reward = {
-			unlock_decision_category_tooltip = ITA_decisions_category_PIE_influence_minor_states
-			### These decisions will involve investing to get Volunteers from different nations
-			### Custom flavor for Tuscany maybe? New Generals?
-		}
-	}
+	#focus = {
+	#	id = PIE_Encourage_Resistance_Italy
+	#	icon = GFX_goal_focus_italian_identity
+	#	cost = 15
+	#	prerequisite = {
+	#		focus = PIE_Napoleon3_Help
+	#	}
+	#	available = {
+	#		has_completed_focus = PIE_Political_Structure_Planning_FT
+	#		has_completed_focus = PIE_Napoleon3_Help
+	#	}
+	#	relative_position_id = PIE_Napoleon3_Help
+	#	search_filters = {
+	#		FOCUS_FILTER_POLITICAL
+	#		FOCUS_FILTER_HISTORICAL
+	#	}
+	#	x = 5
+	#	y = 1
+	#	completion_reward = {
+	#		unlock_decision_category_tooltip = ITA_decisions_category_PIE_influence_minor_states
+	#		### These decisions will involve investing to get Volunteers from different nations
+	#		### Custom flavor for Tuscany maybe? New Generals?
+	#	}
+	#}
 	focus = {
 		id = PIE_Support_for_Garibaldi
 		icon = GFX_focus_PIE_Garibaldi2
 		cost = 15
 		prerequisite = {
-			focus = PIE_Encourage_Resistance_Italy
+			focus = PIE_Napoleon3_Help
 		}
 		available = {
 			has_completed_focus = PIE_post_war_organization
@@ -787,8 +789,8 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_HISTORICAL
 		}
-		relative_position_id = PIE_Encourage_Resistance_Italy
-		x = -1
+		relative_position_id = PIE_Napoleon3_Help
+		x = 4
 		y = 1
 		ai_will_do = {
 			base = 2
@@ -858,6 +860,9 @@ focus_tree = {
 					id = sardinia.71
 				}
 			}
+			country_event = {
+				id = sardinia.147
+			}
 		}
 	}
 	focus = {
@@ -892,17 +897,20 @@ focus_tree = {
 					id = sardinia.72
 				}
 			}
+			country_event = {
+				id = sardinia.254
+			}
 		}
 	}
 	focus = {
 		id = PIE_Influence_Central_States
-		icon = GFX_focus_central_italian_states
+		icon = GFX_goal_focus_italian_identity
 		cost = 15
 		bypass = {
 			has_completed_focus = PIE_Support_Democracy_in_Tuscany
 		}
 		prerequisite = {
-			focus = PIE_Encourage_Resistance_Italy
+			focus = PIE_Napoleon3_Help
 		}
 		ai_will_do = {
 			base = 1
@@ -914,9 +922,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 		}
-		relative_position_id = PIE_Encourage_Resistance_Italy
-		x = 1
+		relative_position_id = PIE_Napoleon3_Help
+		x = 6
 		y = 1
+		completion_reward = {
+			country_event = {
+				id = sardinia.242
+			}
+		}
 	}
 	focus = {
 		id = PIE_Support_Democracy_in_Tuscany
@@ -939,6 +952,9 @@ focus_tree = {
 			base = 1
 		}
 		completion_reward = {
+			country_event = {
+				id = tuscany.21
+			}
 			###unlock some more decisions
 			### Interactions with Tuscany if they go down path of democracy 
 		}
@@ -964,7 +980,16 @@ focus_tree = {
 			base = 2
 		}
 		completion_reward = {
-			#### WILL BE MOVED TO TUSCAN TREE EVENTUALLY 
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = PIE_The_Russian_Alliance
+					}
+				}
+				country_event = {
+					id = sardinia.144
+				}
+			}
 			if = {
 				limit = {
 					TUS = {
@@ -1016,6 +1041,14 @@ focus_tree = {
 						}
 						has_completed_focus = TUS_plebiscite_for_unification
 					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = PIE_The_Russian_Alliance
+				}
+				TUS = {
+					has_completed_focus = TUS_plebiscite_for_unification
 				}
 			}
 		}
@@ -1108,6 +1141,7 @@ focus_tree = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_ALTHISTORY
+			FOCUS_FILTER_DIPLOMACY
 		}
 		available = {
 			has_completed_Focus = PIE_Political_Structure_Planning_FT
@@ -1136,6 +1170,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_DIPLOMACY
 		}
 		relative_position_id = PIE_Plombieres_Meeting
 		x = 0
@@ -1147,6 +1182,7 @@ focus_tree = {
 			country_event = {
 				id = sardinia.6
 			}
+			activate_decision = ITA_ENG_Diplomacy_Begin
 		}
 	}
 	focus = {
@@ -1162,6 +1198,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_DIPLOMACY
 		}
 		ai_will_do = {
 			base = 5
@@ -1205,6 +1242,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_DIPLOMACY
 		}
 		relative_position_id = PIE_Plombieres_Meeting
 		x = 2
@@ -1228,6 +1266,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_DIPLOMACY
 		}
 		ai_will_do = {
 			base = 5
@@ -1330,6 +1369,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_DIPLOMACY
 		}
 		ai_will_do = {
 			base = 5
@@ -1400,13 +1440,28 @@ focus_tree = {
 						country_event = {
 							id = sardinia.225
 						}
+						add_ai_strategy = {
+							type = prepare_for_war
+							id = AUS
+							value = 5
+						}
+					}
+					
+				}
+				AUS = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = PIE
+						value = 3
 					}
 				}
 			}
 			add_ideas = ITA_2IP_Idea
 			if = {
 				limit = {
-					has_country_flag = PIE_Plombieres_War_Leader
+					PIE = {
+						has_country_flag = PIE_Plombieres_War_Leader
+					}	
 				}
 				country_event = {
 					id = sardinia.108
@@ -1418,8 +1473,10 @@ focus_tree = {
 						has_country_flag = PIE_Plombieres_War_Leader
 					}
 				}
-				country_event = {
-					id = sardinia.108
+				FRA = {
+					country_event = {
+						id = sardinia.108
+					}
 				}
 			}
 			AUS = {
@@ -1468,10 +1525,8 @@ focus_tree = {
 			base = 1
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = naval_equipment
+			country_event = {
+				id = sardinia.231
 			}
 		}
 	}
@@ -1574,7 +1629,9 @@ focus_tree = {
 			base = 1
 		}
 		completion_reward = {
-			load_oob = PIE_frigate_agreement
+			country_event = {
+				id = sardinia.230
+			}
 		}
 	}
 	focus = {
@@ -1669,7 +1726,9 @@ focus_tree = {
 			base = 2
 		}
 		completion_reward = {
-			add_political_power = 50
+			country_event = {
+				id = sardinia.233
+			}
 		}
 	}
 	focus = {
@@ -1898,6 +1957,21 @@ focus_tree = {
 						has_completed_Focus = PIE_The_Russian_Alliance
 					}
 				}
+				TUS = {
+					country_event = {
+						id = sardinia.145
+					}
+				}
+				TIC = {
+					country_event = {
+						id = sardinia.145
+					}
+				}
+				PRM = {
+					country_event = {
+						id = sardinia.145
+					}
+				}
 				country_event = {
 					id = sardinia.203
 				}
@@ -1930,16 +2004,29 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			LVN = {
+				remove_state_core = 159
+			}
 			add_state_core = 159
 			if = {
 				limit = {
 					owns_state = 160
 				}
+				LVN = {
+					remove_state_core = 160
+				}
 				add_state_core = 160
 			}
 			add_stability = 0.02
-			country_event = {
-				id = sardinia.204
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = PIE_The_Russian_Alliance
+					}
+				}
+				country_event = {
+					id = sardinia.204
+				}
 			}
 		}
 	}
@@ -2007,7 +2094,13 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
+			country_event = {
+				id = sardinia.257
+			}
 			FRA = {
+				country_event = {
+					id = sardinia.257
+				}
 				transfer_state = 735
 				transfer_state = 822
 				if = {
@@ -2023,6 +2116,7 @@ focus_tree = {
 					}
 				}
 			}
+			#complete_national_focus = PIE_Formation_of_the_Central_States
 		}
 	}
 	#focus = {
@@ -2087,6 +2181,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_ALTHISTORY
+			FOCUS_FILTER_DIPLOMACY
 		}
 		available = {
 			custom_trigger_tooltip = {

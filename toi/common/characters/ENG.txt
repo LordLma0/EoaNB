@@ -108,7 +108,7 @@ characters = {
 		name = "Benjamin Disraeli, 1st Earl of Beaconsfield"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/ENG/Portrait_ENG_Benjamin_Disraeli.png"
+				large = "GFX_Portrait_ENG_Benjamin_Disraeli"
 			}
 			civilian = {
                 small = "GFX_idea_ENG_political_advisor_benjamin_disraeli"
@@ -132,11 +132,27 @@ characters = {
 			traits = { administrative_genius }
         }
 	}
+	ENG_Salisbury = {
+		name = "Robert Gascoyne-Cecil, 3rd Marquess of Salisbury"
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_ENG_Salisbury"
+			}
+			civilian = {
+                small = "GFX_idea_ENG_political_advisor_salisbury"
+            }
+		}
+		country_leader = {
+			ideology = conserv
+			expire = "1903.2.3"
+			#id=-1
+		}
+	}
 	ENG_John_Russell = {
 		name = "John Russell, 1st Earl Russell"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/ENG/Portrait_ENG_John_Russell.png"
+				large = "GFX_Portrait_ENG_John_Russell"
 			}
 			civilian = {
                 small = "GFX_idea_ENG_political_advisor_russel"
@@ -164,7 +180,7 @@ characters = {
 		name = "William Ewart Gladstone"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/ENG/Portrait_ENG_William_Ewart_Gladstone.png"
+				large = "GFX_Portrait_ENG_William_Ewart_Gladstone"
 			}
 			civilian = {
 				small = "GFX_idea_ENG_political_advisor_gladstone"
@@ -192,7 +208,7 @@ characters = {
 		name = "Spencer Cavendish"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/ENG/Portrait_ENG_Cavendish.png"
+				large = "GFX_Portrait_ENG_Cavendish"
 			}
 		}
 		country_leader = {

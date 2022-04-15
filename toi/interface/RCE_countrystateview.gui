@@ -17,23 +17,26 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 65 y = 5 }
+			position = { x = 45 y = 5 }
 			textureFile = ""
 			font = "hoi_20header"
 			borderSize = { x = 0 y = 0 }
-			text = "Pre-Industrial Buildings"
-			maxWidth = 160
+			text = "afr_empire_politics_state_autonomy_decision"
+			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
 			format = centre
 			vertical_alignment = center
+			
+			pdx_tooltip_delayed = "afr_empire_politics_state_autonomy_decision_desc"
 		}
 
 		iconType = {
 			name = "interactive_map"
 			position = { x = 9 y = 27 }
 			spriteType = "GFX_state_interactive_map"
-			alwaystransparent = yes
+			#alwaystransparent = yes
+			pdx_tooltip_delayed = "afr_empire_politics_state_autonomy_decision_desc"
 		}
 		iconType = {
 			name = "interactive_map_frame"
@@ -46,7 +49,7 @@ guiTypes = {
 			name = "interactive_map_button_frame"
 			position = { x = 200 y = 23 }
 			spriteType = "GFX_state_interactive_map_button_frame"
-			alwaystransparent = yes
+			alwaystransparent = yes	
 		}
 
 		iconType = {
@@ -225,5 +228,19 @@ guiTypes = {
 
 			pdx_tooltip = "state_menu_state_interactive_commons_button_tt"
 			pdx_tooltip_delayed = "state_menu_state_interactive_commons_button_tt_delayed"
+		}
+		buttonType = {
+			name = "rce_info_icon"
+			position = { x = 160 y = 185 }
+			quadTextureSprite = "GFX_state_rce_info_icon"
+			#alwaystransparent = yes
+
+			buttonText = ""
+			buttonFont = "hoi_18"
+
+			clicksound = "decisions_ui_tab"
+			oversound = "ui_menu_over"
+
+			pdx_tooltip = "afr_empire_politics_state_autonomy_decision_desc"
 		}
 }

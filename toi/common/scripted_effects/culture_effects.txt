@@ -2,7 +2,7 @@
 german_culture_setup = {
 	set_variable = { global.austro_bavarian = 1 }
 	set_variable = { global.westphalian = 2 }
-	set_variable = { global.lower_saxon = 3 } #Actually Pomeranian
+	set_variable = { global.lower_saxon = 3 }
 	set_variable = { global.saxon = 4 }
 	set_variable = { global.swabian = 5 }
 	set_variable = { global.alsatian = 6 }
@@ -13,7 +13,9 @@ german_culture_setup = {
 	set_variable = { global.branderburg-prussian = 13 }
 	set_variable = { global.hessian = 464 }
 	set_variable = { global.franconian = 465 }
-	set_variable = { global.pomeranian = 540 }
+	set_variable = { global.lower_saxon_true = 540 }
+	set_variable = { global.sudeten_german = 549 }
+	
 	
 	set_variable = { global.amero-deutsh = 461 }
 	set_variable = { global.transylvania_saxon = 11 }
@@ -35,14 +37,15 @@ german_culture_setup = {
 	add_to_array = { global.german_array = global.silesian }
 	add_to_array = { global.german_array = global.alemmanic }
 	add_to_array = { global.german_array = global.branderburg-prussian }
-	add_to_array = { global.german_array = global.hessian }	
+	add_to_array = { global.german_array = global.hessian }
 	add_to_array = { global.german_array = global.franconian }
+	add_to_array = { global.german_array = global.sudeten_german }
 	add_to_array = { global.outergerman_array = global.transylvania_saxon }
-	add_to_array = { global.outergerman_array = global.volga_german }	
+	add_to_array = { global.outergerman_array = global.volga_german }
 	add_to_array = { global.outergerman_array = global.baltic_german }
-	add_to_array = { global.outergerman_array = global.bukovina_german }	
-	add_to_array = { global.outergerman_array = global.amish }	
-	add_to_array = { global.outergerman_array = global.crimean-german }		
+	add_to_array = { global.outergerman_array = global.bukovina_german }
+	add_to_array = { global.outergerman_array = global.amish }
+	add_to_array = { global.outergerman_array = global.crimean-german }
 }
 
 #British culture set up
@@ -119,6 +122,8 @@ italian_culture_setup = {
 	set_variable = { global.dalmatian = 44 }
 	set_variable = { global.sardinian = 45 }
 	set_variable = { global.corsican = 46 }
+	set_variable = { global.ligurian = 547 }
+	set_variable = { global.maltese = 548 }
 	
 	add_to_array = { global.italian_array = global.tuscan }
 	add_to_array = { global.italian_array = global.lombard }
@@ -130,6 +135,8 @@ italian_culture_setup = {
 	add_to_array = { global.italian_array = global.dalmatian }	
 	add_to_array = { global.italian_array = global.sardinian }
 	add_to_array = { global.italian_array = global.corsican }
+	add_to_array = { global.italian_array = global.ligurian }
+	add_to_array = { global.italian_array = global.maltese }
 }
 
 #Iberian cultures set up
@@ -194,7 +201,7 @@ greek_culture_setup = {
 albanian_culture_setup = {
 	set_variable = { global.albanian = 62 }
 	set_variable = { global.kosovar = 63 }
-	set_variable = { global.cham = 64 }	
+	set_variable = { global.cham = 64 }
 	set_variable = { global.arbereshe = 65 }
 	
 	add_to_array = { global.albanian_array = global.albanian }
@@ -245,14 +252,14 @@ slovene_culture_setup = {
 	add_to_array = { global.bosniak_array = global.bosniak }
 }
 
-#Czecho-slovak culture set up
+#Czecho-Slovak culture set up
 czechoslovak_culture_setup = {
 	set_variable = { global.bohemian = 77 }
 	set_variable = { global.moravian = 78 }
 	set_variable = { global.slovak = 79 }
 	
 	add_to_array = { global.czechoslovak_array = global.bohemian }
-	add_to_array = { global.czechoslovak_array = global.moravian } 
+	add_to_array = { global.czechoslovak_array = global.moravian }
 	add_to_array = { global.czechoslovak_array = global.slovak }
 
 }
@@ -1144,6 +1151,7 @@ austronesian_culture_setup = {
 	set_variable = { global.degar = 523 }
 	
 	set_variable = { global.dayak = 241 }#barito
+	set_variable = { global.kenyah = 524 }#Kenyah
 	set_variable = { global.sakalava = 391 }
 	set_variable = { global.tsimihety = 392 }
 	set_variable = { global.betsimisaraka = 393 }
@@ -1317,7 +1325,8 @@ latin_american_culture_setup = {
 	set_variable = { global.peruvian = 473 }
 	set_variable = { global.ecuadorian = 474 }
 	set_variable = { global.venezuelan = 475 }
-	set_variable = { global.montubio = 476 }
+	set_variable = { global.montubio = 479 }
+	set_variable = { global.llanero = 550 }
 	
 	set_variable = { global.brazilian = 421 }
 	set_variable = { global.caipira = 466 }
@@ -1416,7 +1425,7 @@ native_american_culture_setup = {
 
 
 religion_setup = {
-		set_variable = { global.orthodoxy = 1 }
+	set_variable = { global.orthodoxy = 1 }
 	set_variable = { global.catholicism = 2 }
 	set_variable = { global.protestant = 3 }
 	set_variable = { global.coptic = 4 }
@@ -1469,6 +1478,7 @@ religion_setup = {
 	set_variable = { global.evangelical = 51 }
 	set_variable = { global.spirtism = 52 }
 	set_variable = { global.ukonusko = 53 }
+	set_variable = { global.waldensian = 54 }
 }
 
 countries_culture_religion_setup = {
@@ -1477,7 +1487,7 @@ countries_culture_religion_setup = {
 		add_to_array = { national_religion_array = global.catholicism }
 	}
 	PRS = {
-				add_to_array = { national_culture_array = global.branderburg-prussian }
+		add_to_array = { national_culture_array = global.branderburg-prussian }
 		add_to_array = { national_religion_array = global.protestant }
 	}
 	BAV = {
@@ -1487,12 +1497,12 @@ countries_culture_religion_setup = {
 	WUR = {
 		add_to_array = { national_culture_array = global.swabian }
 		add_to_array = { national_religion_array = global.protestant }
-				add_to_array = { national_religion_array = global.catholicism }
+		add_to_array = { national_religion_array = global.catholicism }
 	}
 	BAD = {
 		add_to_array = { national_culture_array = global.alemmanic }
 		add_to_array = { national_religion_array = global.protestant }
-				add_to_array = { national_religion_array = global.catholicism }
+		add_to_array = { national_religion_array = global.catholicism }
 	}
 	THU = {
 		add_to_array = { national_culture_array = global.saxon }
@@ -1500,7 +1510,7 @@ countries_culture_religion_setup = {
 	}
 	ENG = { 
 		add_to_array = { national_culture_array = global.english }
-		add_to_array = { national_religion_array = global.protestant }				
+		add_to_array = { national_religion_array = global.anglican }				
 	}
 }
 
@@ -1852,7 +1862,7 @@ d_check_culture = {
 			value = v
 			if = {
 				limit = {
-					check_variable = { v > 455 }					# MAKE SURE TO UPDATE THIS WHEN ADDING NEW CULTURES
+					check_variable = { v > 549 }					# MAKE SURE TO UPDATE THIS WHEN ADDING NEW CULTURES
 				}
 				set_temp_variable = { check2 = 1 }
 			}
@@ -1972,7 +1982,7 @@ d_check_religion = {
 			value = v
 			if = {
 				limit = {
-					check_variable = { v > 24 }					# MAKE SURE TO UPDATE THIS WHEN ADDING NEW RELIGIONS
+					check_variable = { v > 54 }					# MAKE SURE TO UPDATE THIS WHEN ADDING NEW RELIGIONS
 				}
 				set_temp_variable = { check2 = 1 }
 			}

@@ -4,7 +4,7 @@ state = {
 	name = "STATE_1255"
 
 	local_supplies=0.0 
-	manpower = 2350
+	manpower = 335072
 
 	state_category = town
 
@@ -15,8 +15,8 @@ state = {
 		}
 		add_core_of = QNG
 
-		add_to_array = { state_culture_array = 267}
 		add_to_array = { state_culture_array = 252}
+		add_to_array = { state_culture_array = 267}
 		add_to_array = { state_culture_array = 281}
 
 		add_to_array = { state_culture_array_num = 0.86}

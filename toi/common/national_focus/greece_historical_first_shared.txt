@@ -2,7 +2,7 @@
 	
 	shared_focus = {
 		id = GRE_control_the_national_debt
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 13
 		y = 0
 		cost = 70
@@ -14,21 +14,18 @@
 		
 		completion_reward = {
 			custom_effect_tooltip = GRE_tt_control_debts
-			hidden_effect = {
-				swap_ideas	= {
-					add_idea = GRE_idea_national_debt
-					remove_idea = GRE_idea_national_debt1
-				}
-			}
+
+			add_political_power = -100
+			add_ideas = GRE_idea_control_debt_1
 		}
 	}
 	
 	shared_focus = {
 		id = GRE_clamp_down_on_corruption
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -1
 		y = 1
-		cost = 70
+		cost = 150
 		available_if_capitulated = no
 		relative_position_id = GRE_control_the_national_debt
 		
@@ -41,16 +38,21 @@
 		}
 		
 		completion_reward = {
-			
+			decrease_ps_by_one = yes
+			add_stability = -0.5
+			swap_ideas = {
+				remove_idea = GRE_idea_control_debt_1
+				add_idea = GRE_idea_control_debt_2
+			}
 		}
 	}
 	
 	shared_focus = {
 		id = GRE_reduce_the_civil_administration
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 1
 		y = 1
-		cost = 70
+		cost = 150
 		available_if_capitulated = no
 		relative_position_id = GRE_control_the_national_debt
 		
@@ -64,6 +66,10 @@
 		
 		completion_reward = {
 			custom_effect_tooltip = GRE_tt_cut_administration
+			swap_ideas = {
+				remove_idea = GRE_idea_control_debt_2
+				add_idea = GRE_idea_control_debt_3
+			}
 			hidden_effect = {
 				add_stability = -0.1
 			}
@@ -72,10 +78,10 @@
 	
 	shared_focus = {
 		id = GRE_fiscal_responsability
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 2
-		cost = 70
+		cost = 150
 		available_if_capitulated = no
 		relative_position_id = GRE_control_the_national_debt
 		
@@ -91,16 +97,19 @@
 		}
 		
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GRE_idea_control_debt_3
+				add_idea = GRE_idea_control_debt_4
+			}
 		}
 	}
 	
 	shared_focus = {
 		id = GRE_repay_the_1831_loan
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 3
-		cost = 70
+		cost = 210
 		available_if_capitulated = no
 		relative_position_id = GRE_control_the_national_debt
 		
@@ -114,17 +123,18 @@
 		
 		completion_reward = {
 			custom_effect_tooltip = GRE_tt_repay_debt
-			hidden_effect = {
-				remove_ideas = GRE_idea_national_debt
-				add_stability = 0.1
-				add_political_power = 100
-			}
+			remove_ideas = GRE_idea_control_debt_4
+			debt_level_decrease_by_5 = yes
+
+			add_stability = 0.1
+			add_political_power = 100
+			remove_ideas = GRE_idea_national_debt
 		}
 	}
 	
 	shared_focus = {
 		id = GRE_agrarian_nation
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 21
 		y = 0
 		cost = 70
@@ -146,7 +156,7 @@
 	
 	shared_focus = {
 		id = GRE_industrialization
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -3
 		y = 1
 		cost = 70
@@ -181,7 +191,7 @@
 	
 	shared_focus = {
 		id = GRE_encourage_the_growth_of_basileiades
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -3
 		y = 2
 		cost = 70
@@ -216,7 +226,7 @@
 	
 	shared_focus = {
 		id = GRE_expand_the_laurion_mines
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -3
 		y = 3
 		cost = 70
@@ -243,7 +253,7 @@
 	
 	shared_focus = {
 		id = GRE_attract_foreign_investors
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -3
 		y = 4
 		cost = 70
@@ -272,7 +282,7 @@
 	
 	shared_focus = {
 		id = GRE_the_athens-piraeus_rail
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -4
 		y = 5
 		cost = 70
@@ -304,7 +314,7 @@
 	
 	shared_focus = {
 		id = GRE_balance_import_and_export
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -4
 		y = 6
 		cost = 70
@@ -351,7 +361,7 @@
 	
 	shared_focus = {
 		id = GRE_the_syros_shipyard
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -2
 		y = 5
 		cost = 70
@@ -395,7 +405,7 @@
 	
 	shared_focus = {
 		id = GRE_focus_on_export
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -2
 		y = 6
 		cost = 70
@@ -425,7 +435,7 @@
 	
 	shared_focus = {
 		id = GRE_athens_industry
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -3
 		y = 7
 		cost = 70
@@ -458,7 +468,7 @@
 	
 	shared_focus = {
 		id = GRE_land_reform
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 3
 		y = 1
 		cost = 70
@@ -489,7 +499,7 @@
 	
 	shared_focus = {
 		id = GRE_guideline_basileiades
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 3
 		y = 2
 		cost = 70
@@ -524,7 +534,7 @@
 	
 	shared_focus = {
 		id = GRE_restructure_kouppas
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 3
 		y = 3
 		cost = 70
@@ -550,7 +560,7 @@
 	
 	shared_focus = {
 		id = GRE_cotton_plantations
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 3
 		y = 4
 		cost = 70
@@ -577,7 +587,7 @@
 	
 	shared_focus = {
 		id = GRE_encourage_textile_industry
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 2
 		y = 5
 		cost = 70
@@ -607,7 +617,7 @@
 	
 	shared_focus = {
 		id = GRE_expand_public_housing
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 2
 		y = 6
 		cost = 70
@@ -643,7 +653,7 @@
 	
 	shared_focus = {
 		id = GRE_fruit_exports
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 4
 		y = 5
 		cost = 70
@@ -673,7 +683,7 @@
 	
 	shared_focus = {
 		id = GRE_rural_exodus
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 4
 		y = 6
 		cost = 70
@@ -701,7 +711,7 @@
 	
 	shared_focus = {
 		id = GRE_rural_development
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 3
 		y = 7
 		cost = 70
@@ -728,7 +738,7 @@
 	
 	shared_focus = {
 		id = GRE_the_build_up_of_piraeus
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 2
 		cost = 70
@@ -773,7 +783,7 @@
 	
 	shared_focus = {
 		id = GRE_establish_the_greek_stock_market
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = -1
 		y = 3
 		cost = 70
@@ -808,7 +818,7 @@
 	
 	shared_focus = {
 		id = GRE_acquire_train_technologies
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 1
 		y = 3
 		cost = 70
@@ -834,7 +844,7 @@
 	
 	shared_focus = {
 		id = GRE_increase_industrial_capacity
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 4
 		cost = 70
@@ -863,7 +873,7 @@
 	
 	shared_focus = {
 		id = GRE_expand_fix_beer_into_piraeus
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 5
 		cost = 70
@@ -889,7 +899,7 @@
 	
 	shared_focus = {
 		id = GRE_subsidise_the_epirotiki_line
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 6
 		cost = 70
@@ -937,7 +947,7 @@
 	
 	shared_focus = {
 		id = GRE_dry_lake_kopais
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 7
 		cost = 70
@@ -966,7 +976,7 @@
 	
 	shared_focus = {
 		id = GRE_national_benefactors
-		icon = GFX_focus_ITA_Farms
+		icon = placeholder
 		x = 0
 		y = 8
 		cost = 70

@@ -17,7 +17,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = great_depression
+			picture = the_market_crash
 			
 			modifier = {
 				production_speed_buildings_factor = -0.1
@@ -30,7 +30,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = great_depression
+			picture = the_market_crash
 			
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -45,7 +45,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = great_depression
+			picture = the_market_crash
 			
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -60,7 +60,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = great_depression
+			picture = the_market_crash
 			
 			modifier = {
 				consumer_goods_factor = 0.1

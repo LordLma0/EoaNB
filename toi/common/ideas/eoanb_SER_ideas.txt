@@ -12,7 +12,7 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				research_speed_factor = 0.02
+				research_speed_factor = 0.03
 			}
     	}
 		SER_idea_educated_austrian_serbs = {
@@ -98,9 +98,36 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				production_speed_infrastructure_factor = 0.05
+				production_speed_infrastructure_factor = 0.02
 			}
     	}
+		SER_idea_foreign_geologist_1 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.025
+				local_resources_factor = 0.025
+			}
+    	}
+		
+		SER_idea_foreign_geologist_2 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.03
+				local_resources_factor = 0.03
+			}
+    	}
+		
+		SER_idea_foreign_geologist_3 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.035
+				local_resources_factor = 0.04
+			}
+    	}
+		
 		SER_idea_knyaz_assembly_tension = {
 			picture = generic_disjointed_gov
 			
@@ -162,13 +189,25 @@ ideas = {
 				consumer_goods_factor = -0.03
 			}
     	}
-		SER_idea_european_architecture = {
+		
+		SER_idea_european_architecture1 = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.02
+				production_speed_buildings_factor = 0.01
 			}
     	}
+		
+		SER_idea_european_architecture2 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_power_gain = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+    	}
+		
 		SER_idea_army_investment = {
 			picture = generic_disjointed_gov
 			
@@ -276,13 +315,7 @@ ideas = {
 				research_speed_factor = 0.03
 			}
     	}
-		SER_idea_educational_reform = {
-			picture = generic_disjointed_gov
-			
-			modifier = {
-				research_speed_factor = 0.01
-			}
-    	}
+
 		SER_idea_navigate_morava_river = {
 			picture = generic_disjointed_gov
 			
@@ -301,21 +334,18 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				production_speed_dockyard_factor = 0.1
+				trade_opinion_factor = 0.03
+				local_resources_factor = 0.02
+				min_export = 0.03
 			}
     	}
 		SER_idea_serbian_flotilla_beginning = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				production_speed_naval_base_factor = 0.1
-			}
-    	}
-		SER_idea_ = {
-			picture = generic_disjointed_gov
-			
-			modifier = {
-				
+				trade_opinion_factor = 0.05
+				local_resources_factor = 0.04
+				min_export = 0.04
 			}
     	}
 		SER_idea_modernised_army = {
@@ -521,6 +551,188 @@ ideas = {
 				research_speed_factor = 0.3
 			}
 		}
+
+		SER_idea_lyubomir_1 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.01
+			}
+    	}
+		SER_idea_lyubomir_2 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.02
+			}
+    	}
+		SER_idea_lyubomir_3 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.03
+			}
+    	}
+		SER_idea_lyubomir_4 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.05
+			}
+    	}
+		SER_idea_lyubomir_5 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.06
+			}
+    	}
+
+		SER_idea_lyubomir_0a = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.01
+			}
+    	}
+		SER_idea_lyubomir_1a = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.02
+			}
+    	}
+		SER_idea_lyubomir_2a = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.03
+			}
+    	}
+		SER_idea_lyubomir_3a = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.05
+			}
+    	}
+		SER_idea_lyubomir_4a = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.06
+			}
+    	}
+		SER_idea_lyubomir_5a = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.08
+			}
+    	}
+
+		SER_idea_lyubomir_0b = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.02
+			}
+    	}
+		SER_idea_lyubomir_1b = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.03
+			}
+    	}
+		SER_idea_lyubomir_2b = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.05
+			}
+    	}
+		SER_idea_lyubomir_3b = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.06
+			}
+    	}
+		SER_idea_lyubomir_4b = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.08
+			}
+    	}
+		SER_idea_lyubomir_5b = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+    	}
+		SER_idea_experienced_engineer = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				#research_bonus = {
+				#	mechanical_engineering_tech = 0.05
+				#}
+			}
+    	}
+		SER_idea_renovated_finance_schools= {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				research_speed_factor = 0.03
+			}
+    	}
+		
+		SER_idea_widespread_bankrupcies = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.2
+				production_speed_buildings_factor = -0.15
+			}
+    	}
+		
+		SER_idea_widespread_bankrupcies2 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.005
+				consumer_goods_factor = 0.04
+				political_power_gain = -0.15
+				production_speed_buildings_factor = -0.14
+			}
+    	}
+		
+		SER_idea_widespread_bankrupcies3 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.015
+				consumer_goods_factor = 0.03
+				political_power_gain = -0.10
+				production_speed_buildings_factor = -0.13
+			}
+    	}
+		
+		SER_idea_widespread_bankrupcies4 = {
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.025
+				industrial_capacity_factory = 0.03
+				consumer_goods_factor = 0.02
+				political_power_gain = -0.05
+				production_speed_buildings_factor = -0.12
+			}
+    	}
 	}
 	
 	materiel_manufacturer = {

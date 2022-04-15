@@ -18,7 +18,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.03
-				political_power_factor = -0.05
+				political_power_factor = -0.15
 				research_speed_factor = 0.04
 				production_speed_buildings_factor = 0.08
 			}
@@ -141,7 +141,7 @@ ideas = {
 				
 			}
 
-			picture = generic_goods_red_bonus
+			picture = JAP_foreign_trade
 
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -157,7 +157,7 @@ ideas = {
 				
 			}
 
-			picture = generic_goods_red_bonus
+			picture = JAP_foreign_trade
 
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -173,7 +173,7 @@ ideas = {
 				
 			}
 
-			picture = generic_goods_red_bonus
+			picture = JAP_foreign_trade
 
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -189,7 +189,7 @@ ideas = {
 				
 			}
 
-			picture = generic_goods_red_bonus
+			picture = JAP_foreign_trade
 
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -205,10 +205,10 @@ ideas = {
 				
 			}
 
-			picture = generic_goods_red_bonus
+			picture = JAP_foreign_trade
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.03
 				
 			}
 		}
@@ -322,8 +322,8 @@ ideas = {
 				political_power_gain = -0.6
 			}
 			on_remove = {
-				add_ideas = JAP_industrial_revolution_part2
-				complete_national_focus = JAP_our_military_economy
+				# add_ideas = JAP_industrial_revolution_part2
+				# complete_national_focus = JAP_our_military_economy
 			}
 		}
 
@@ -474,7 +474,7 @@ ideas = {
 				}
 			on_remove = {
 				add_ideas = JAP_industrial_revolution_part2
-				complete_national_focus = JAP_kaigun_industry
+				#complete_national_focus = JAP_kaigun_industry
 			}
 		}
 
@@ -573,8 +573,8 @@ ideas = {
 				political_power_gain = -0.6
 			}
 			on_remove = {
-				add_ideas = JAP_industrial_revolution_part3
-				complete_national_focus = JAP_tetsudou_industry
+				# add_ideas = JAP_industrial_revolution_part3
+				# complete_national_focus = JAP_tetsudou_industry
 			}
 		}
 
@@ -743,7 +743,7 @@ ideas = {
 				political_power_gain = -0.30
 			}
 			on_remove = {
-				complete_national_focus = JAP_end_of_the_industrial_revolution
+				#complete_national_focus = JAP_end_of_the_industrial_revolution
 			}
 		}
 
@@ -1480,7 +1480,7 @@ ideas = {
 				original_tag = JAP
 			}
 
-			#picture = 
+			picture = JAP_imperial_seal
 
 			modifier = {
 				stability_weekly = 0.001
@@ -1629,6 +1629,20 @@ ideas = {
 			modifier = {
 				min_export = -0.05
 				line_change_production_efficiency_factor = 0.06 
+			}
+		}
+		### liberal
+		JAP_liberal_japan = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = 0
+
+			picture = asa_social_egalitarianism
+			
+			modifier = {
+				centrism_drift = 0.03
 			}
 		}
 		### Military Foreign

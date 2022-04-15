@@ -20,14 +20,15 @@ state = {
 				infrastructure = 3
 			}
 
-			victory_points = { 3617 5 } # Neusatz
+			victory_points = { 3617 3 } # Novi Sad/Neusatz
+			victory_points = { 9621 5 } # Subotica/Maria-Theresiopel
 			
 			add_to_array = { state_culture_array = 1 } # Austro-Bavarian
-			add_to_array = { state_culture_array_num = 0.276 } 
+			add_to_array = { state_culture_array_num = 0.347 } 
 			add_to_array = { state_culture_array = 66 } # Serbian
-			add_to_array = { state_culture_array_num = 0.264 } 	
+			add_to_array = { state_culture_array_num = 0.333 } 	
 			add_to_array = { state_culture_array = 86 }	# Magyar
-			add_to_array = { state_culture_array_num = 0.251 } 	
+			add_to_array = { state_culture_array_num = 0.32 } 	
 
 			add_to_array = { state_religion_array = 2 } # Catholic
 			add_to_array = { state_religion_array_num = 0.475 }

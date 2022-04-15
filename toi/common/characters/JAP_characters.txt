@@ -234,11 +234,11 @@ characters = {
 					large = GFX_Portrait_TSH_Tokugawa_Iesato
 				}
 			}
-			country_leader = {
-				desc = "TSH_character_tokugawa_iesato_desc"
-				ideology = shogunate
-				expire = "1942.1.1"
-			}
+			# country_leader = {
+			# 	desc = "TSH_character_tokugawa_iesato_desc"
+			# 	ideology = shogunate
+			# 	expire = "1942.1.1"
+			# }
 		}
 		TSH_character_tokugawa_iemasa = {
 			name = "Tokugawa Iemasa"
@@ -260,11 +260,11 @@ characters = {
 					large = GFX_Portrait_TSH_Tokugawa_Tsunenari
 				}
 			}
-			country_leader = {
-				desc = "TSH_character_tokugawa_tsunenari_desc"
-				ideology = shogunate
-				expire = "2004.1.1" # Retirement in 2002. Alive as of Nov 2021
-			}
+			# country_leader = {
+			# 	desc = "TSH_character_tokugawa_tsunenari_desc"
+			# 	ideology = shogunate
+			# 	expire = "2004.1.1" # Retirement in 2002. Alive as of Nov 2021
+			# }
 		}
 		TSH_character_tokugawa_iehiro = {
 			name = "Tokugawa Iehiro"
@@ -273,13 +273,26 @@ characters = {
 					large = GFX_Portrait_TSH_Tokugawa_Iehiro
 				}
 			}
-			country_leader = {
-				desc = "TSH_character_tokugawa_iehiro_desc"
-				ideology = shogunate
-				expire = "2050.1.1"
-			}
+			# country_leader = {
+			# 	desc = "TSH_character_tokugawa_iehiro_desc"
+			# 	ideology = shogunate
+			# 	expire = "2050.1.1"
+			# }
 		}
-
+		TSH_character_kitashirakawa_yoshihisa = {
+			name = "Kitashirakawa Yoshihisa"
+			# https://en.wikipedia.org/wiki/Prince_Kitashirakawa_Yoshihisa
+			portraits = {
+				civilian = {
+					large = GFX_Portrait_TSH_Kitashirakawa_Yoshihisa
+				}
+			}
+			# country_leader = {
+			# 	desc = "TSH_character_kitashirakawa_yoshihisa_desc"
+			# 	ideology = shogunate
+			# 	expire = "1920.1.1"
+			# }
+		}
 	# Advisors
 		TSH_character_hotta_masayoshi = {
 			name = "Hotta Masayoshi"
@@ -292,23 +305,18 @@ characters = {
 				name = "Hotta Masayoshi"
 				# desc = "TSH_character_hotta_masayoshi_desc"
 
-				slot = advisor
+				slot = political_advisor
 				idea_token = TSH_character_hotta_masayoshi
 
 				cost = 75
 				removal_cost = 10
 
-				available = {
-					if = {
-						limit = { has_character_flag = TSH_ansei_purged }
-						NOT = { has_character_flag = TSH_ansei_purged }
-					}
+				ai_will_do = {
+					base = 5
 				}
 
 				traits = {
-					eoanb_kii_party
 					eoanb_trait_experienced_diplomat
-					eoanb_trait_foreign_secretary
 				}
 
 				on_add = {
@@ -328,7 +336,212 @@ characters = {
 					small = GFX_Portrait_TSH_Ii_Naosuke_Small
 				}
 			}
+			advisor = {
+				name = "Ii Naosuke"
+				# desc = "TSH_character_hotta_masayoshi_desc"
+
+				slot = political_advisor
+				idea_token = TSH_character_ii_naosuke
+
+				cost = 75
+				removal_cost = 10
+
+				ai_will_do = {
+					base = 5
+				}
+
+				traits = {
+					eoanb_trait_foreign_secretary
+				}
+
+				on_add = {
+					add_to_variable = {
+						var = kii_faction
+						value = 10
+						tooltip = TSH_decision_tokugawa_iesada_succession_crisis_kii_tt
+					}
+				}
+			}
 		}
+		TSH_character_ando_nobumasa = {
+			name = "Andō Nobumasa"
+			portraits = {
+				civilian = {
+					large = GFX_Portrait_TSH_Ando_Nobumasa
+					small = GFX_Portrait_TSH_Ando_Nobumasa_Small
+				}
+			}
+			advisor = {
+				name = "Andō Nobumasa"
+				# desc = "TSH_character_hotta_masayoshi_desc"
+
+				slot = political_advisor
+				idea_token = TSH_character_ando_nobumasa
+
+				cost = 75
+				removal_cost = 10
+
+				traits = {
+					eoanb_trait_foreign_secretary
+				}
+
+				on_add = {
+					add_to_variable = {
+						var = hitosubashi_faction
+						value = 10
+						tooltip = TSH_decision_tokugawa_iesada_succession_crisis_hitosubashi_tt
+					}
+				}
+			}
+		}
+		TSH_character_sakuma_shozan = {
+			name = "Sakuma Shōzan"
+			# https://en.wikipedia.org/wiki/Sakuma_Sh%C5%8Dzan
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_TSH_Sakuma_Shozan_Small
+				}
+			}
+			advisor = {
+				name = "Sakuma Shōzan"
+				# desc = "TSH_character_hotta_masayoshi_desc"
+
+				slot = political_advisor
+				idea_token = TSH_character_sakuma_shozan
+
+				cost = 75
+				removal_cost = 10
+
+				traits = {
+					economic_organizer
+				}
+
+				on_add = {
+					add_to_variable = {
+						var = hitosubashi_faction
+						value = 10
+						tooltip = TSH_decision_tokugawa_iesada_succession_crisis_hitosubashi_tt
+					}
+				}
+			}
+		}
+		TSH_character_takashima_shuhan = {
+			name = "Takashima Shūhan"
+			# https://en.wikipedia.org/wiki/Takashima_Sh%C5%ABhan
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_TSH_Takashima_Shuhan_Small
+				}
+			}
+			advisor = {
+				name = "Takashima Shūhan"
+				# desc = "TSH_character_hotta_masayoshi_desc"
+
+				slot = political_advisor
+				idea_token = TSH_character_takashima_shuhan_desc
+
+				cost = 75
+				removal_cost = 10
+
+				traits = {
+					superior_firepower_expert
+				}
+
+				on_add = {
+					add_to_variable = {
+						var = hitosubashi_faction
+						value = 10
+						tooltip = TSH_decision_tokugawa_iesada_succession_crisis_hitosubashi_tt
+					}
+				}
+			}
+		}
+		TSH_character_abe_masato = {
+			name = "Abe Masatō"
+			# https://en.wikipedia.org/wiki/Abe_Masat%C5%8D
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_TSH_Abe_Masato_Small
+				}
+			}
+			advisor = {
+				name = "Takashima Shūhan"
+				# desc = "TSH_character_hotta_masayoshi_desc"
+
+				slot = political_advisor
+				idea_token = TSH_character_takashima_shuhan_desc
+
+				cost = 75
+				removal_cost = 10
+
+				modifier = {
+					political_power_gain = 0.2
+				}
+
+				on_add = {
+					add_to_variable = {
+						var = kii_faction
+						value = 10
+						tooltip = TSH_decision_tokugawa_iesada_succession_crisis_kii_tt
+					}
+				}
+			}
+		}
+		TSH_character_pompe_van_meerdervort = {
+			name = "Johannes L. C. Pompe Van Meerdervort"
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_TSH_Pompe_Van_Meerdervort
+				}
+			}
+		}
+		TSH_character_andre_cazeneuve = {
+			name = "Andre Cazeneuvre"
+			# 
+			portraits = {
+				army = {
+					small = GFX_Portrait_TSH_Andre_Cazeneuve_Small
+				}
+			}
+		}
+		TSH_character_bouffier_francoise = {
+			name = "Bouffier Francoise"
+			#
+			portraits = {
+				army = {
+					small = GFX_Portrait_TSH_Bouffier_Francoise_Small
+				}
+			}
+		}
+		TSH_character_eugene_collache = {
+			name = "Eugene Collache"
+			#
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_TSH_Eugene_Collache_Small
+				}
+			}
+		}
+		TSH_character_jules_brunet = {
+			name = "Jules Brunet"
+			#
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_TSH_Jules_Albert_Small
+				}
+			}
+		}
+
+		TSH_matsudaira_tsuneo = {
+			name = "Matsudaira Tsuneo"
+			# https://en.wikipedia.org/wiki/Tsuneo_Matsudaira
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_TSH_Matsudaira_Tsuneo_Small
+				}
+			}
+		}
+	# Commanders
 		TSH_character_katsu_yasuyoshi = {
 			name = "Katsu Yasuyoshi"
 			# https://en.wikipedia.org/wiki/Katsu_Kaish%C5%AB
@@ -370,93 +583,12 @@ characters = {
 				logistics_skill = 1
 			}
 		}
-		TSH_character_sakuma_shozan = {
-			name = "Sakuma Shōzan"
-			# https://en.wikipedia.org/wiki/Sakuma_Sh%C5%8Dzan
-			portraits = {
-				civilian = {
-					small = GFX_Portrait_TSH_Sakuma_Shozan_Small
-				}
-			}
-		}
-		TSH_character_takashima_shuhan = {
-			name = "Takashima Shūhan"
-			# https://en.wikipedia.org/wiki/Takashima_Sh%C5%ABhan
-			portraits = {
-				civilian = {
-					small = GFX_Portrait_TSH_Takashima_Shuhan_Small
-				}
-			}
-		}
 		TSH_character_princess_kazunomiya = {
 			name = "Princess Kazunomiya"
 			# https://en.wikipedia.org/wiki/Princess_Kazu
 			portraits = {
 				civilian = {
 					small = GFX_Portrait_TSH_Princess_Kazunomiya_Small
-				}
-			}
-		}
-		TSH_character_abe_masato = {
-			name = "Abe Masatō"
-			# https://en.wikipedia.org/wiki/Abe_Masat%C5%8D
-			portraits = {
-				civilian = {
-					small = GFX_Portrait_TSH_Abe_Masato_Small
-				}
-			}
-		}
-		TSH_character_pompe_van_meerdervort = {
-			name = "Johannes L. C. Pompe Van Meerdervort"
-			portraits = {
-				civilian = {
-					small = GFX_Portrait_TSH_Pompe_Van_Meerdervort
-				}
-			}
-		}
-		TSH_character_andre_cazeneuve = {
-			name = "Andre Cazeneuvre"
-			# 
-			portraits = {
-				army = {
-					small = GFX_Portrait_TSH_Andre_Cazeneuve_Small
-				}
-			}
-		}
-		TSH_character_bouffier_francoise = {
-			name = "Bouffier Francoise"
-			#
-			portraits = {
-				army = {
-					small = GFX_Portrait_TSH_Bouffier_Francoise_Small
-				}
-			}
-		}
-		TSH_character_eugene_collache = {
-			name = "Eugene Collache"
-			#
-			portraits = {
-				army = {
-					small = GFX_Portrait_TSH_Eugene_Collache_Small
-				}
-			}
-		}
-		TSH_character_jules_brunet = {
-			name = "Jules Brunet"
-			#
-			portraits = {
-				army = {
-					small = GFX_Portrait_TSH_Jules_Albert_Small
-				}
-			}
-		}
-
-		TSH_matsudaira_tsuneo = {
-			name = "Matsudaira Tsuneo"
-			# https://en.wikipedia.org/wiki/Tsuneo_Matsudaira
-			portraits = {
-				civilian = {
-					small = GFX_Portrait_TSH_Matsudaira_Tsuneo_Small
 				}
 			}
 		}
@@ -566,10 +698,8 @@ characters = {
 				expire = "1914.1.1"
 
 				traits = {
-					eoanb_trait_patriotic_orator
-					eoanb_militarist
-					eoanb_trait_ruler_autocract_2
-					industrial_promoter
+					trait_restored_emperor
+					trait_house_yamato
 				}
 			}
 			advisor = {
@@ -1069,7 +1199,38 @@ characters = {
 			# https://en.wikipedia.org/wiki/Prince_Komatsu_Akihito
 			portraits = {
 				civilian = {
-					small = GFX_Portrait_Komatsu_Akihito_Small
+					small = GFX_Portrait_JAP_Komatsu_Akihito_Small
+				}
+				army = {
+					large = GFX_Portrait_JAP_Komatsu_Akihito
+				}
+			}
+			corps_commander = {
+				#name = "Prince Komatsu Akihito"
+				#picture = GFX_Portrait_JAP_Emperor_Akihito
+				traits = { infantry_leader }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		JAP_character_edmund_morel = {
+			name = "Edmund Morel"
+			# https://en.wikipedia.org/wiki/Prince_Komatsu_Akihito
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_JAP_Hermann_Rumschottel_Small
+				}
+			}
+		}
+		JAP_character_hermann_rumschottel = {
+			name = "Hermann Rumschöttel"
+			# https://en.wikipedia.org/wiki/Prince_Komatsu_Akihito
+			portraits = {
+				civilian = {
+					small = GFX_Portrait_JAP_Hermann_Rumschottel_Small
 				}
 			}
 		}
@@ -1084,7 +1245,7 @@ characters = {
 				}
 			}
 		}
-		JAP_chracter_kirino_toshiaki = {
+		JAP_character_kirino_toshiaki = {
 			name = "Kirino Toshiaki"
 			# https://en.wikipedia.org/wiki/Kirino_Toshiaki
 			portraits = {
@@ -1180,8 +1341,8 @@ characters = {
 			# https://en.wikipedia.org/wiki/Matsudaira_Tar%C5%8D
 			portraits = {
 				civilian = {
-					large = GFX_Portrait_EZO_matsudaira_taro
-					small = GFX_Portrait_EZO_matsudaira_taro_Small
+					large = GFX_Portrait_EZO_Matsudaira_Taro
+					small = GFX_Portrait_EZO_Matsudaira_Taro_Small
 				}
 				army = {
 					large = GFX_Portrait_EZO_Matsudaira_Taro
@@ -1208,6 +1369,10 @@ characters = {
 
 				cost = 75
 				removal_cost = 10
+
+				ai_will_do = {
+					base = 5
+				}
 
 				available = {
 					NOT = {
@@ -1323,9 +1488,14 @@ characters = {
 
 				slot = political_advisor
 				idea_token = EZO_character_banikichi_matsuoka
+				picture = GFX_Portrait_EZO_Banikichi_Matsuoka_Small
 
 				cost = 75
 				removal_cost = 10
+
+				ai_will_do = {
+					base = 5
+				}
 
 				traits = {
 					army_artillery_1
@@ -1360,9 +1530,14 @@ characters = {
 
 				slot = political_advisor
 				idea_token = EZO_character_otori_keisuke
+				picture = GFX_Portrait_EZO_Otori_Keisuke_Small
 
 				cost = 75
 				removal_cost = 10
+
+				ai_will_do = {
+					base = 5
+				}
 
 				traits = {
 					war_veteran
@@ -1396,6 +1571,7 @@ characters = {
 
 				slot = political_advisor
 				idea_token = EZO_character_hijikata_toshizo
+				picture = GFX_Portrait_EZO_Hijikata_Toshizo_Small
 
 				cost = 75
 				removal_cost = 10
@@ -1441,6 +1617,9 @@ characters = {
 
 				traits = {
 					efficient_administrator
+				}
+				research_bonus = {
+					capital_ship_tech = 0.07
 				}
 			}
 		}

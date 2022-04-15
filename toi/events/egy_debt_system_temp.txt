@@ -317,7 +317,7 @@ country_event = {
 	}
 }
 
-country_event = { #national debt hits conserning levels, public confedence starts to drop
+country_event = { #national debt hits conserning levels, public confidence starts to drop
 	id = egy_debt_system.1
 	title = egy_debt_system.1.t
 	desc = egy_debt_system.1.d
@@ -342,9 +342,20 @@ country_event = { #national debt hits conserning levels, public confedence start
 	option = {#damn public
 		name = egy_debt_system.1.a
 		ai_chance = { factor = 100 }
-		add_timed_idea = {
-			idea = egy_public_consered_debt_1
-			days = 100
+		if = {
+			limit = {
+				TAG = AUS
+			}
+			add_timed_idea = {
+				idea = egy_public_consered_debt_1
+				days = 50
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = egy_public_consered_debt_1
+				days = 100
+			}
 		}
 	}
 	mean_time_to_happen = {

@@ -716,6 +716,7 @@
   
  hos_trait_partially_paralyzed:0 "Partially Paralyzed"
  hos_trait_colonial_monarch:0 "Colonial Monarch"
+ hos_trait_unifying_figure:0 "Unifying Figure"
  hawk:0 "Political Hawk"
 
  #HOL General traits
@@ -759,6 +760,9 @@
 
  eoanb_trait_ruler_infertile:0 "Infertile\n  §W- Heir Chance:§! §R-85.00%§!"
  eoanb_trait_ruler_sickly:0 "Sickly"
+ eoanb_trait_ruler_autocract_2:0 "Autocratic Ruler"
+ trait_house_yamato:0 "House Yamato"
+ trait_restored_emperor:0 "Restored Emperor"
  trait_hitosubashi_party:0 "Hitosubashi Loyalist"
  trait_hitosubashi_party_desc:0 ""
  trait_kii_party:0 "Kii Loyalist"
@@ -767,7 +771,8 @@
  trait_bakumatsu_party_desc:0 ""
  trait_sonno_joi_party:0 "Sonno Joi Loyalist"
  trait_sonno_joi_party_desc:0 ""
- 
+ trait_chao_oun_kham: "Laotian Nationalist"
+ trait_chao_oun_kham_desc: ""
  age_aged:0 "Aged"
  age_aged_desc:0 ""
  age_experienced:0 "Experienced"

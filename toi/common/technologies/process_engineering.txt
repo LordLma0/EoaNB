@@ -11,7 +11,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -81,7 +81,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = process_engineering_folder
@@ -129,7 +129,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -172,7 +172,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -203,7 +203,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = process_engineering_folder
@@ -229,7 +229,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -268,7 +268,7 @@ technologies = {
 			internal_combustion_engine = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = process_engineering_folder
@@ -304,7 +304,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -340,7 +340,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -376,7 +376,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = process_engineering_folder
@@ -407,7 +407,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -438,7 +438,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -469,11 +469,15 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
 			position = { x = 16 y = 44 }
+		}
+		
+		dependencies={
+			tungsten_wire_production = 1
 		}
 		
 		ai_will_do = {
@@ -500,7 +504,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -531,7 +535,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = process_engineering_folder
@@ -565,7 +569,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1995
 		folder = {
 			name = process_engineering_folder
@@ -596,7 +600,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = process_engineering_folder
@@ -627,7 +631,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = process_engineering_folder
@@ -653,7 +657,7 @@ technologies = {
 		
 		local_resources_factor = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		folder = {
 			name = process_engineering_folder
@@ -683,7 +687,7 @@ technologies = {
 		
 		local_resources_factor = 2.00
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2045
 		folder = {
 			name = process_engineering_folder
@@ -721,7 +725,7 @@ technologies = {
 			tribal_steel_tools = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -784,7 +788,7 @@ technologies = {
 		production_oil_factor = 0.05
 		raw_goods_rgo_output_modifier = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -827,7 +831,7 @@ technologies = {
 		production_oil_factor = 0.1
 		raw_goods_rgo_output_modifier = 0.025
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -860,7 +864,7 @@ technologies = {
 		production_oil_factor = 0.1
 		raw_goods_rgo_output_modifier = 0.025
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = process_engineering_folder
@@ -898,7 +902,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -934,7 +938,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -969,7 +973,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1890
 		folder = {
 			name = process_engineering_folder
@@ -1000,7 +1004,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -1031,7 +1035,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -1062,7 +1066,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -1092,7 +1096,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -1126,7 +1130,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -1163,7 +1167,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -1196,7 +1200,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -1233,7 +1237,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1915
 		folder = {
 			name = process_engineering_folder
@@ -1264,7 +1268,7 @@ technologies = {
 		
 		production_oil_factor = 0.1
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1915
 		folder = {
 			name = process_engineering_folder
@@ -1299,7 +1303,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -1344,7 +1348,7 @@ technologies = {
 		
 		production_oil_factor = 0.15
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1935
 		folder = {
 			name = process_engineering_folder
@@ -1375,7 +1379,7 @@ technologies = {
 		
 		production_oil_factor = 0.15
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -1406,7 +1410,7 @@ technologies = {
 		
 		production_oil_factor = 0.15
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -1440,7 +1444,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1935
 		folder = {
 			name = process_engineering_folder
@@ -1477,7 +1481,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -1514,7 +1518,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -1548,7 +1552,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1955
 		folder = {
 			name = process_engineering_folder
@@ -1589,7 +1593,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1965
 		folder = {
 			name = process_engineering_folder
@@ -1620,7 +1624,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = process_engineering_folder
@@ -1651,7 +1655,7 @@ technologies = {
 		
 		fuel_gain_factor = 0.15
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -1682,7 +1686,7 @@ technologies = {
 		
 		production_oil_factor = 0.1
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -1716,7 +1720,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -1751,7 +1755,7 @@ technologies = {
 		}
 		production_oil_factor = 0.25
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1965
 		folder = {
 			name = process_engineering_folder
@@ -1785,7 +1789,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1975
 		folder = {
 			name = process_engineering_folder
@@ -1823,7 +1827,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1990
 		folder = {
 			name = process_engineering_folder
@@ -1855,7 +1859,7 @@ technologies = {
 		fuel_gain_factor = 0.15
 		production_oil_factor = 0.1
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1995
 		folder = {
 			name = process_engineering_folder
@@ -1889,7 +1893,7 @@ technologies = {
 			level = 5
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2000
 		folder = {
 			name = process_engineering_folder
@@ -1921,7 +1925,7 @@ technologies = {
 		fuel_gain_factor = 0.2
 		fuel_gain_factor_from_states = 0.2
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2010
 		folder = {
 			name = process_engineering_folder
@@ -1953,7 +1957,7 @@ technologies = {
 		fuel_gain_factor = 0.5
 		fuel_gain_factor_from_states = 0.2
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2010
 		folder = {
 			name = process_engineering_folder
@@ -1980,7 +1984,7 @@ technologies = {
 		
 		production_oil_factor = 0.33
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1985
 		folder = {
 			name = process_engineering_folder
@@ -2014,7 +2018,7 @@ technologies = {
 		
 		production_oil_factor = 0.66
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2035
 		folder = {
 			name = process_engineering_folder
@@ -2045,7 +2049,7 @@ technologies = {
 		
 		research_speed_factor = 0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2097,7 +2101,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05
 		factory_input_modifier = -0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2173,7 +2177,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2219,7 +2223,7 @@ technologies = {
 		
 		line_change_production_efficiency_factor = 0.05		
 		industrial_goods_factory_throughput_modifier = 0.08
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2264,7 +2268,7 @@ technologies = {
 	industrial_finery_forge = {
 				
 		industrial_goods_factory_output_modifier = 0.04
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2332,7 +2336,7 @@ technologies = {
 	wrought_iron_industrialization = {
 		
 		industrial_goods_factory_output_modifier = 0.04
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2379,7 +2383,7 @@ technologies = {
 		navy_screen_defence_factor = 0.05
 		army_defence_factor = 0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2449,7 +2453,7 @@ technologies = {
 	
 
 		industrial_goods_factory_output_modifier = 0.04
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1855
 		folder = {
 			name = process_engineering_folder
@@ -2526,7 +2530,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -2559,7 +2563,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.05
 		industrial_goods_factory_throughput_modifier = 0.08
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1865
 		folder = {
 			name = process_engineering_folder
@@ -2604,7 +2608,7 @@ technologies = {
 	
 		industrial_goods_factory_throughput_modifier = 0.16
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2677,7 +2681,7 @@ technologies = {
 	
 		industrial_goods_factory_output_modifier = 0.04
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = process_engineering_folder
@@ -2710,7 +2714,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05
 		production_factory_efficiency_gain_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -2742,7 +2746,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -2779,7 +2783,7 @@ technologies = {
 		production_speed_buildings_factor = 0.05	
 		build_cost_modifier = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = process_engineering_folder
@@ -2816,7 +2820,7 @@ technologies = {
 			custom_effect_tooltip = ALUMINIUM_UNLOCKED
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -2844,7 +2848,7 @@ technologies = {
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -2880,7 +2884,7 @@ technologies = {
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -2912,7 +2916,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -2949,7 +2953,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -2984,7 +2988,7 @@ technologies = {
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -3018,7 +3022,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -3049,7 +3053,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -3087,7 +3091,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -3113,7 +3117,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1944
 		folder = {
 			name = process_engineering_folder
@@ -3144,7 +3148,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -3182,7 +3186,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -3208,7 +3212,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -3242,7 +3246,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -3280,7 +3284,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = process_engineering_folder
@@ -3314,7 +3318,7 @@ technologies = {
 		}
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = process_engineering_folder
@@ -3352,7 +3356,7 @@ technologies = {
 		}
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1985
 		folder = {
 			name = process_engineering_folder
@@ -3387,7 +3391,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = process_engineering_folder
@@ -3418,7 +3422,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = process_engineering_folder
@@ -3449,7 +3453,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = process_engineering_folder
@@ -3480,7 +3484,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = process_engineering_folder
@@ -3515,7 +3519,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = process_engineering_folder
@@ -3546,7 +3550,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = process_engineering_folder
@@ -3577,7 +3581,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = process_engineering_folder
@@ -3610,7 +3614,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = process_engineering_folder
@@ -3655,7 +3659,7 @@ technologies = {
 		
 		local_resources_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -3705,7 +3709,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder

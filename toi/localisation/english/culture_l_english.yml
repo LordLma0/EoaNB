@@ -11,7 +11,7 @@
  
  NATIONAL_RELIGION_1_DELAYED_TOOLTIP:0 "[GetNationalChurch1]"
  
- NATIONAL_CULTURE_SUBCULTURES_LIST_GERMAN:0 "The following sub-cultures are part of this culture:\n- Austro-Bavarian\n- Brandenburg-Prussian\n- Westphalian\n- Pomeranian\n- Saxon\n- Swabian\n- Alsatian\n- Rhenish\n- Silesian\n- Alemmanic\n- Transylvania Saxon\n- Volga German\n- Baltic German\n- Bukovina German"
+ NATIONAL_CULTURE_SUBCULTURES_LIST_GERMAN:0 "The following sub-cultures are part of this culture:\n- Austro-Bavarian\n- Brandenburg-Prussian\n- Westphalian\n- Pomeranian\n- Saxon\n- Swabian\n- Alsatian\n- Rhenish\n- Silesian\n- Alemmanic\n- Sudeten German\n- Transylvania Saxon\n- Volga German\n- Baltic German\n- Bukovina German"
  NATIONAL_CULTURE_SUBCULTURES_LIST_BRITISH:0 "The following sub-cultures are part of this culture:\n- English\n- Lowland Scots\n- Ulster Scots"
  NATIONAL_CULTURE_SUBCULTURES_LIST_DUTCH:0 "The following sub-cultures are part of this culture:\n- Dutch\n- Flemish\n- Frisian\n- Afrikaner (Boer)"
  NATIONAL_CULTURE_SUBCULTURES_LIST_FINNISH:0 "The following sub-cultures are part of this culture:\n- Finnish\n- Karelian"
@@ -40,7 +40,7 @@
  NATIONAL_CULTURE_SUBCULTURES_LIST_AZERI:0 "The following sub-cultures are part of this culture:\n- Azerbaijani\n- Iranian Azerbaijani\n- Qarapapaq"
  NATIONAL_CULTURE_SUBCULTURES_LIST_TATAR:0 "The following sub-cultures are part of this culture:\n- Crimea Tatar\n- Volga Tatar"
  NATIONAL_CULTURE_SUBCULTURES_LIST_CENTRAL_ASIAN:0 "The following sub-cultures are part of this culture:\n- Kazakh\n- Kyrgyz\n- Turkmen\n- Uzbek\n- Karakalpak"
- NATIONAL_CULTURE_SUBCULTURES_LIST_JEWISH:0 "The following sub-cultures are part of this culture:\n- Ashnekazi\n- Sephardic\n- Mizrahi\n- Beta Israel (Ethiopian Jewish)\n- Mountain (Gorsky) Jewish\n- Bukharan Jewish"
+ NATIONAL_CULTURE_SUBCULTURES_LIST_JEWISH:0 "The following sub-cultures are part of this culture:\n- Ashkenazi\n- Sephardic\n- Mizrahi\n- Beta Israel (Ethiopian Jewish)\n- Mountain (Gorsky) Jewish\n- Bukharan Jewish"
  NATIONAL_CULTURE_SUBCULTURES_LIST_NORTHWEST_CAUCASIAN:0 "The following sub-cultures are part of this culture:\n- Circassian\n- Abkhazi"
  NATIONAL_CULTURE_SUBCULTURES_LIST_NORTHEAST_CAUCASIAN:0 "The following sub-cultures are part of this culture:\n- Chechen\n- Avar\n- Lezgin\n- Lak"
  NATIONAL_CULTURE_SUBCULTURES_LIST_GEORGIAN:0 "The following sub-cultures are part of this culture:\n- Georgian\n- Laz\n- Mingrelian"
@@ -114,7 +114,7 @@
  NATIONAL_CULTURE_SUBCULTURES_LIST_KADIC:0 "The following sub-cultures are part of this culture:\n- Bouyei\n- Zhuang\n- Gelao\n- Tay\n- Kam\n- Sui\n- Hlai"
  NATIONAL_CULTURE_SUBCULTURES_LIST_TAI:0 "The following sub-cultures are part of this culture:\n- Shan\n- Isan\n- Siamese\n- Ahom\n- Lue\n- Dai\n- Pak"
  NATIONAL_CULTURE_SUBCULTURES_LIST_BURMEIC:0 "The following sub-cultures are part of this culture:\n- Burmese\n- Karen\n- Kachin\n- Rakhine\n- Lahu\n- Lisu\n- Pai\n- Yi\n- Hani"
- NATIONAL_CULTURE_SUBCULTURES_LIST_BRAHMAPUTRANIC:0 "The following sub-cultures are part of this culture:\n- Monpa\n- Chakma\n- Tani\n- Bodo-Garo\n- Naga\n- Chin"
+ NATIONAL_CULTURE_SUBCULTURES_LIST_BRAHMAPUTRANIC:0 "The following sub-cultures are part of this culture:\n- Monpa\n- Manipuri\n- Tani\n- Bodo-Garo\n- Naga\n- Chin"
  NATIONAL_CULTURE_SUBCULTURES_LIST_BODIC:0 "The following sub-cultures are part of this culture:\n- Tibetean\n- Qiang\n- Sikkimese\n- Bhotia\n- Nepali\n- Ladakhi\n- Nashi\n- Mulao"
  NATIONAL_CULTURE_SUBCULTURES_LIST_BENGAL:0 "The following sub-cultures are part of this culture:\n- Bengali\n- Assamese\n- Oriyha\n- Bihari\n- Bhojpari"
  NATIONAL_CULTURE_SUBCULTURES_LIST_HINDI:0 "The following sub-cultures are part of this culture:\n- Braj\n- Khari\n- Hariyanavi\n- Bundeli\n- Kannauji\n- Awadhi\n- Bagheli\n- Chattisgahri"
@@ -465,7 +465,9 @@
  AFU_3_chauvinist_populism_ADJ:0 "Franco-English"
  AFU_3_fundamentalism_ADJ:0 "Franco-English"
  
- eoanb_tt_protestantism_recognised:0 "Make §YProtestantism§! a §Yrecognised§! religion"
- eoanb_sunni_islam_recognised:0 "Make §YSunni Islam§! a §Yrecognised§! religion"
+ eoanb_tt_sorbian_recognised:0 "Recognise §YSorbian§! as a §Yminority culture§!."
+ eoanb_tt_danish_unrecognised:0 "Unrecognise §YDanish§! as a §Yminority culture§!."
+ eoanb_tt_protestantism_recognised:0 "Make §YProtestantism§! a §Yrecognised§! religion."
+ eoanb_sunni_islam_recognised:0 "Make §YSunni Islam§! a §Yrecognised§! religion."
  
  CULTURE_AUSTRO_BAVARIAN:0 "Austro-Bavarian"

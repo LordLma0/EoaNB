@@ -3986,6 +3986,11 @@
 					modifier = { compliance_gain = 10 }
 				}  
 			}
+			258 = { 
+				add_state_modifier = {
+					modifier = { compliance_gain = 10 }
+				}  
+			}
 			380 = { 
 				add_state_modifier = {
 					modifier = { compliance_gain = 10 }
@@ -4018,6 +4023,11 @@
 		}
 		completion_reward = {
 			379 = { 
+				add_state_modifier = {
+					modifier = { resistance_target = -0.1 }
+				}  
+			}
+			258 = { 
 				add_state_modifier = {
 					modifier = { resistance_target = -0.1 }
 				}  
@@ -4083,6 +4093,11 @@
 		}
 		completion_reward = {
 			379 = { 
+				add_state_modifier = {
+					modifier = { resistance_target = 0.35 }
+				}  
+			}
+			258 = { 
 				add_state_modifier = {
 					modifier = { resistance_target = 0.35 }
 				}  
@@ -4224,6 +4239,11 @@
 					modifier = { resistance_growth = 0.08 }
 				}  
 			}
+			258 = { 
+				add_state_modifier = {
+					modifier = { resistance_growth = 0.08 }
+				}  
+			}
 			380 = { 
 				add_state_modifier = {
 					modifier = { resistance_growth = 0.08 }
@@ -4259,6 +4279,10 @@
 				custom_effect_tooltip = AFR_Racial_Tension_plus_4
 				hidden_effect = { state_event = { id = afr_rrp_racial_tension_increase.4 } }
 			}
+			258 = {
+				custom_effect_tooltip = AFR_Racial_Tension_plus_4
+				hidden_effect = { state_event = { id = afr_rrp_racial_tension_increase.4 } }
+			}
 			380 = {
 				custom_effect_tooltip = AFR_Racial_Tension_plus_4
 				hidden_effect = { state_event = { id = afr_rrp_racial_tension_increase.4 } }
@@ -4288,6 +4312,11 @@
 		}
 		completion_reward = {
 			379 = { 
+				add_state_modifier = {
+					modifier = { compliance_gain = 7.5 }
+				}  
+			}
+			258 = { 
 				add_state_modifier = {
 					modifier = { compliance_gain = 7.5 }
 				}  
@@ -4879,7 +4908,7 @@
 				has_completed_focus = USA_inclusive_cabinet
 			}
 		}
-		x = 6
+		x = 7
 		y = 1
 		ai_will_do = {
 			factor = 100
@@ -4902,7 +4931,7 @@
 			factor = 100
 		}
 		completion_reward = {
-			custom_effect_tooltip = usa_tooltip_focus_unlocks_decision
+			unlock_decision_tooltip = USA_clayton_bulwar_treaty_decision
 		}
 	}
 	shared_focus = {
@@ -4928,7 +4957,7 @@
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = usa_tooltip_focus_unlocks_decision
+			unlock_decision_tooltip = utahWar12
 		}
 	}
 	shared_focus = {
@@ -5026,7 +5055,7 @@
 		completion_reward = {
 			#482
 			#483
-			custom_effect_tooltip = usa_tooltip_focus_unlocks_decision
+			unlock_decision_tooltip = USA_mexican_protectorate_1
 			hidden_effect = {
 				set_variable = {
 					varaible = raid_483
@@ -5071,6 +5100,36 @@
 			country_event = usa.215
 		}
 	}
+
+	shared_focus = {
+		id = USA_paraguay_intervention
+		icon = GFX_focus_PAR_expedition
+		cost = 55
+
+		available = {
+			has_country_leader = {
+				name = "James Buchanan"
+				ruling_only = yes
+			}
+		}
+
+		prerequisite = {
+			focus = USA_buchanan_diplomacy
+		}
+
+		relative_position_id = USA_buchanan_diplomacy
+		x = -4
+		y = 1
+
+		ai_will_do = {
+			base = 100
+		}
+
+		completion_reward = {
+			country_event={id = par.22}
+		}
+	}
+
 	shared_focus = {
 		id = USA_buchanan_end_first_sioux_war
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
@@ -5084,7 +5143,7 @@
 		}
 		
 		relative_position_id = USA_buchanan_presidency
-		x = 11
+		x = 12
 		ai_will_do = {
 			factor = 100
 		}

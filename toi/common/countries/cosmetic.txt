@@ -22,7 +22,11 @@ PIE_focus_ITA = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 67 127 63 }
 }
-TUS_focus_ITA = {
+TUSCM = {
+	color = rgb { 67 127 63 }
+	color_ui = rgb { 67 127 63 }
+}
+TUSRR = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 67 127 63 }
 }
@@ -541,6 +545,15 @@ EASTER_EGG_BTS_Cosmetic = {
 	color_ui = rgb { 26  53  177 }
 }
 
+TSH_Ouetsu_Alliance_Cosmetic = {
+	color = rgb { 255  200  200 }
+	color_ui = rgb { 255  200  200 }
+}
+TSH_Daimyo_Republic_Cosmetic = {
+	color = rgb { 255  100  25 }
+	color_ui = rgb { 255  100  25 }
+}
+
 BDY_SS_ordenstat = {
 	color = rgb { 90 0 0 }
 	color_ui = rgb { 255 255 122 }
@@ -608,4 +621,12 @@ SPC = {
 DOM_SPC_cosmetic = {
 	color = rgb { 242 205 94 }
 	color_ui = rgb { 255 255 122 }
+}
+BCO_Hudson_Bay_Columbia_Cosmetic = {
+	color = rgb { 73  32  27 }
+	color_ui = rgb { 73  32  27 }
+}
+NWT_Northwest_Territories_Cosmetic = {
+	color = rgb { 73  32  27 }
+	color_ui = rgb { 73  32  27 }
 }

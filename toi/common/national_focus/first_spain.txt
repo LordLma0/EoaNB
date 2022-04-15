@@ -112,8 +112,8 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SPR_customeffect_infra_bonus_three
-			unlock_decision_tooltip = SPR_mission_madrid_zaragoza_railway_concession
-			unlock_decision_tooltip = SPR_mission_valladolid_burgos_railway_concession
+			unlock_decision_tooltip = SPR_decision_madrid_zaragoza_railway_concession
+			unlock_decision_tooltip = SPR_decision_valladolid_burgos_railway_concession
 			hidden_effect = {
 				set_variable = { infra_total = 0 }
 				every_owned_state = {
@@ -1157,6 +1157,9 @@ focus = {
 
 		completion_reward = {
 			add_political_power = 100
+			country_event = {
+				id = spain.13
+			}
 		}
 		#allow_branch = { always = yes }
 	}
@@ -2672,7 +2675,7 @@ focus = {
 
 	focus = {
 		id = SPR_cochinchina_expedition
-		icon = GFX_Focus_secure_cochichina
+		icon = GFX_Focus_secure_cochinchina
 		relative_position_id = SPR_asia
 		x = -3
 		y = 1
@@ -2777,8 +2780,11 @@ focus = {
 		prerequisite = { focus = SPR_patriotic_call }
 
 		completion_reward = {
-		}	
-	}
+				country_event = {
+					id = spain.15
+				}
+		}
+    }
 	
 	focus = {
 		id = SPR_obey_france

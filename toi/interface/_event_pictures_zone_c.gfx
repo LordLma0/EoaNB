@@ -51,4 +51,77 @@ spriteTypes = {
 			name = "GFX_nicolae_vogoride"
 			texturefile = "gfx/event_pictures/danubian_principalities/before_union/nicolae_vogoride.tga"
 		}
+	### United Kingdom ###
+		spriteType = {
+			name = "GFX_news_event_british_army1"
+			texturefile = "gfx/event_pictures/uk/news_event_british_army1.png"
+			}
+		spriteType = {
+			name = "GFX_news_event_british_army2"
+			texturefile = "gfx/event_pictures/uk/news_event_british_army2.png"
+		}
+		spriteType = {
+			name = "GFX_news_event_british_army3"
+			texturefile = "gfx/event_pictures/uk/news_event_british_army3.png"
+		}
+		spriteType = {
+			name = "GFX_news_event_parliamnet1"
+			texturefile = "gfx/event_pictures/uk/news_event_parliamnet1.png"
+		}
+		spriteType = {
+			name = "GFX_news_event_parliamnet2"
+			texturefile = "gfx/event_pictures/uk/news_event_parliamnet2.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_british_army1"
+			texturefile = "gfx/event_pictures/uk/report_event_british_army1.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_british_army2"
+			texturefile = "gfx/event_pictures/uk/report_event_british_army2.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_british_army3"
+			texturefile = "gfx/event_pictures/uk/report_event_british_army3.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_british_army4"
+			texturefile = "gfx/event_pictures/uk/report_event_british_army4.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_british_army5"
+			texturefile = "gfx/event_pictures/uk/report_event_british_army5.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_trooping_the_colour"
+			texturefile = "gfx/event_pictures/uk/report_event_trooping_the_colour.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_cork"
+			texturefile = "gfx/event_pictures/uk/report_event_cork.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_Liverpool"
+			texturefile = "gfx/event_pictures/uk/report_event_Liverpool.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_dublin"
+			texturefile = "gfx/event_pictures/uk/report_event_dublin.png"
+		}
+		spriteType = {
+			name = "GFX_report_event_derry"
+			texturefile = "gfx/event_pictures/uk/report_event_derry.png"
+		}
+		spriteType = {
+			name = "GFX_cochinchina_campaign"
+			texturefile = "gfx/event_pictures/spain/cochinchina_campaign.png"
+		}
+		spriteType = {
+			name = "GFX_colonization_fernando_poo_event"
+			texturefile = "gfx/event_pictures/spain/colonization_fernando_poo_event.png"
+		}
+		spriteType = {
+			name = "GFX_plan_de_escuadra"
+			texturefile = "gfx/event_pictures/spain/plan_de_escuadra.png"
+		}
 }

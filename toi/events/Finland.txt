@@ -540,6 +540,73 @@ country_event = {
 	}
 }
 
+#New Flag? FENNOMAN
+country_event = {
+	id = finlandfocus.22
+	title = finlandfocus.22.t
+	desc = finlandfocus.22.d
+	#picture = GFX_france_kepi_general
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+option = { #No Change
+        name = finlandfocus.22.a
+        ai_chance = { 
+            base = 100
+            modifier = {
+                add = -25
+                is_historical_focus_on = no
+            }
+        }
+    }
+     #Change to Fennoman
+    option = {
+        name = finlandfocus.22.b
+        set_cosmetic_tag = FIN_Fennoman
+        ai_chance = { 
+            base = 0
+            modifier = {
+                add = 25
+                is_historical_focus_on = no
+            }
+        }
+    }
+}
+#New Flag? SVECOMAN
+country_event = {
+	id = finlandfocus.23
+	title = finlandfocus.23.t
+	desc = finlandfocus.23.d
+	#picture = GFX_france_kepi_general
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+option = { #No Change
+        name = finlandfocus.23.a
+        ai_chance = { 
+            base = 100
+            modifier = {
+                add = -25
+                is_historical_focus_on = no
+            }
+        }
+    }
+     #Change to Fennoman
+    option = {
+        name = finlandfocus.23.b
+        set_cosmetic_tag = FIN_Fennoman
+        ai_chance = { 
+            base = 0
+            modifier = {
+                add = 25
+                is_historical_focus_on = no
+            }
+        }
+    }
+}
+
 country_event = {  #Status of finnish economy
 		id = finlandfocus.1
 		title = finlandfocus.1.t
@@ -682,7 +749,7 @@ country_event = {  #Status of finnish economy
 							original_tag = FIN
 						}
 						traits = {
-							FIN_axel_olof_freudenthal
+							FIN_traits_axel_olof_freudenthal
 						}
 						ai_will_do = {
 							factor = 5
@@ -967,7 +1034,57 @@ country_event = {  #Status of finnish economy
 			set_temp_variable = { EOANBSYS_humanitive_change = 0.03 }
 			EOANBSYS_institutions_humanitive_change = yes
 			set_temp_variable = { eoanb_prestige_change = 10 }
-			eoanb_change_prestige_score = ye
+			eoanb_change_prestige_score = yes
+		}
+	}
+	
+	country_event = {  #Inspecting Economy
+		id = finlandfocus.24
+		title = finlandfocus.24.t
+		desc = finlandfocus.24.d
+
+		picture = GFX_GEO_report_event_Dadiani_Palace
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = finlandfocus.24.a
+			ai_chance = { base = 40 }
+			EOANBSYS_institutions_mechanization_add_two = yes
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = mechanical_engineering_tech 
+				category = process_engineering_tech
+				category = biochemistry_tech
+			}
+		}
+		
+		option = {
+			name = finlandfocus.24.b
+			ai_chance = { base = 40 }
+			EOANBSYS_institutions_mechanization_add_two = yes
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = humanities_tech 
+				category = economics_tech
+				category = policies_tech
+			}
+		}
+		
+		option = {
+			name = finlandfocus.24.c
+			ai_chance = { base = 20 }
+			EOANBSYS_institutions_mechanization_add_one = yes
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = farming_tech 
+				category = resource_extraction_tech
+				category = transport_tech
+			}
 		}
 	}
 	
