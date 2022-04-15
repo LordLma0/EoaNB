@@ -198,6 +198,16 @@ scripted_gui = {
 					has_state_flag = pops_rgos_petroleum_flag
 				}
 			}
+
+			time_button_visible = {
+				is_debug = yes
+			}
+			reset_button_visible = {
+				is_debug = yes
+			}
+			extra_button_visible = {
+				is_debug = yes
+			}
 		}
 
 		effects = {
@@ -480,6 +490,18 @@ scripted_gui = {
 		visible = {
 			ROOT = {
 				has_country_flag = country_economy_view_open
+			}
+		}
+
+		triggers = {
+			time_button_visible = {
+				is_debug = yes
+			}
+			reset_button_visible = {
+				is_debug = yes
+			}
+			extra_button_visible = {
+				is_debug = yes
 			}
 		}
 
@@ -1591,6 +1613,11 @@ scripted_gui = {
 				array = proj_id
 				entry_container = project_entry
 				change_scope = no
+			}
+			corporation_entries = {
+				array = corporations
+				entry_container = corporation_entry
+				change_scope = yes
 			}
 		}
 

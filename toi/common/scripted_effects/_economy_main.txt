@@ -10,53 +10,53 @@
 				add_to_variable = { global.years_passed = 1 }
 			}
 			clear_array = global.econ_gp_list_array
-			add_to_array = { global.econ_gp_list_array = ENG }
+			# add_to_array = { global.econ_gp_list_array = ENG }
 			add_to_array = { global.econ_gp_list_array = USA }
-			add_to_array = { global.econ_gp_list_array = BRA }
-			add_to_array = { global.econ_gp_list_array = MEX }
-			add_to_array = { global.econ_gp_list_array = COL }
-			add_to_array = { global.econ_gp_list_array = VEN }
-			add_to_array = { global.econ_gp_list_array = CAN }
-			add_to_array = { global.econ_gp_list_array = CHL }
-			add_to_array = { global.econ_gp_list_array = BOL }
-			add_to_array = { global.econ_gp_list_array = PRU }
-			add_to_array = { global.econ_gp_list_array = ARG }
-			add_to_array = { global.econ_gp_list_array = BUE }
-			add_to_array = { global.econ_gp_list_array = HBC }
-			add_to_array = { global.econ_gp_list_array = URG }
-			add_to_array = { global.econ_gp_list_array = PAR }
-			#
-			add_to_array = { global.econ_gp_list_array = ECU }
-			add_to_array = { global.econ_gp_list_array = PRR }
-			#
-			add_to_array = { global.econ_gp_list_array = UTA }
-			add_to_array = { global.econ_gp_list_array = NVS }
-			add_to_array = { global.econ_gp_list_array = VAN }
-			add_to_array = { global.econ_gp_list_array = BRK }
-			add_to_array = { global.econ_gp_list_array = NFL }
-			add_to_array = { global.econ_gp_list_array = BCO }
-			add_to_array = { global.econ_gp_list_array = QCI }
-			add_to_array = { global.econ_gp_list_array = NWT }
-			##
-			add_to_array = { global.econ_gp_list_array = GUA }
-			add_to_array = { global.econ_gp_list_array = HON }
-			add_to_array = { global.econ_gp_list_array = NIC }
-			add_to_array = { global.econ_gp_list_array = COS }
-			add_to_array = { global.econ_gp_list_array = ELS }
-			add_to_array = { global.econ_gp_list_array = DOM }
-			add_to_array = { global.econ_gp_list_array = HAI }
-			##
-			##Primitives
-			add_to_array = { global.econ_gp_list_array = SIX }
-			add_to_array = { global.econ_gp_list_array = CHY }
-			add_to_array = { global.econ_gp_list_array = COM }
-			add_to_array = { global.econ_gp_list_array = SHO }
-			add_to_array = { global.econ_gp_list_array = APA }
-			add_to_array = { global.econ_gp_list_array = CRW }
-			add_to_array = { global.econ_gp_list_array = BFT }
-			add_to_array = { global.econ_gp_list_array = NAV }
-			add_to_array = { global.econ_gp_list_array = NEZ }
-			add_to_array = { global.econ_gp_list_array = SEM }
+			# add_to_array = { global.econ_gp_list_array = BRA }
+			# add_to_array = { global.econ_gp_list_array = MEX }
+			# add_to_array = { global.econ_gp_list_array = COL }
+			# add_to_array = { global.econ_gp_list_array = VEN }
+			# add_to_array = { global.econ_gp_list_array = CAN }
+			# add_to_array = { global.econ_gp_list_array = CHL }
+			# add_to_array = { global.econ_gp_list_array = BOL }
+			# add_to_array = { global.econ_gp_list_array = PRU }
+			# add_to_array = { global.econ_gp_list_array = ARG }
+			# add_to_array = { global.econ_gp_list_array = BUE }
+			# add_to_array = { global.econ_gp_list_array = HBC }
+			# add_to_array = { global.econ_gp_list_array = URG }
+			# add_to_array = { global.econ_gp_list_array = PAR }
+			# #
+			# add_to_array = { global.econ_gp_list_array = ECU }
+			# add_to_array = { global.econ_gp_list_array = PRR }
+			# #
+			# add_to_array = { global.econ_gp_list_array = UTA }
+			# add_to_array = { global.econ_gp_list_array = NVS }
+			# add_to_array = { global.econ_gp_list_array = VAN }
+			# add_to_array = { global.econ_gp_list_array = BRK }
+			# add_to_array = { global.econ_gp_list_array = NFL }
+			# add_to_array = { global.econ_gp_list_array = BCO }
+			# add_to_array = { global.econ_gp_list_array = QCI }
+			# add_to_array = { global.econ_gp_list_array = NWT }
+			# ##
+			# add_to_array = { global.econ_gp_list_array = GUA }
+			# add_to_array = { global.econ_gp_list_array = HON }
+			# add_to_array = { global.econ_gp_list_array = NIC }
+			# add_to_array = { global.econ_gp_list_array = COS }
+			# add_to_array = { global.econ_gp_list_array = ELS }
+			# add_to_array = { global.econ_gp_list_array = DOM }
+			# add_to_array = { global.econ_gp_list_array = HAI }
+			# ##
+			# ##Primitives
+			# add_to_array = { global.econ_gp_list_array = SIX }
+			# add_to_array = { global.econ_gp_list_array = CHY }
+			# add_to_array = { global.econ_gp_list_array = COM }
+			# add_to_array = { global.econ_gp_list_array = SHO }
+			# add_to_array = { global.econ_gp_list_array = APA }
+			# add_to_array = { global.econ_gp_list_array = CRW }
+			# add_to_array = { global.econ_gp_list_array = BFT }
+			# add_to_array = { global.econ_gp_list_array = NAV }
+			# add_to_array = { global.econ_gp_list_array = NEZ }
+			# add_to_array = { global.econ_gp_list_array = SEM }
 
 			clear_array = global.econ_order_array
 			clear_array = global.econ_value_array
@@ -358,6 +358,39 @@
 			calculate_military_demand = yes
 
 			every_controlled_state = {
+				#Soldier Payroll
+					set_temp_variable = { payroll_temp = 0 }
+
+					set_temp_variable = { conscripted_amount = PREV.max_available_manpower_k } #Temporary
+					multiply_temp_variable = { conscripted_amount = 10 }
+					divide_temp_variable = { conscripted_amount = PREV.max_manpower_k }
+					multiply_temp_variable = { conscripted_amount = state_population_k }
+					divide_temp_variable = { conscripted_amount = 10 }
+
+					set_temp_variable = { need_temp = global.conscripted_base_life_goods_need }
+					multiply_temp_variable = { need_temp = conscripted_amount }
+					divide_temp_variable = { need_temp = 100 }
+					multiply_temp_variable = { need_temp = life_goods_price }
+					add_to_temp_variable = { payroll_temp = need_temp }
+
+					set_temp_variable = { need_temp = global.conscripted_base_everyday_goods_need }
+					multiply_temp_variable = { need_temp = conscripted_amount }
+					divide_temp_variable = { need_temp = 100 }
+					multiply_temp_variable = { need_temp = everyday_goods_price }
+					add_to_temp_variable = { payroll_temp = need_temp }
+					
+					set_temp_variable = { need_temp = global.conscripted_base_luxury_goods_need }
+					multiply_temp_variable = { need_temp = conscripted_amount }
+					divide_temp_variable = { need_temp = 100 }
+					multiply_temp_variable = { need_temp = luxury_goods_price }
+					add_to_temp_variable = { payroll_temp = need_temp }
+
+					multiply_temp_variable = { payroll_temp = global.conscripted_payroll_multiplier }
+					add_to_variable = { pops_earnings = payroll_temp }
+					add_to_variable = { soldiers_earnings = payroll_temp }
+					subtract_from_variable = { PREV.treasury = payroll_temp }
+					add_to_variable = { PREV.actual_military_spending = payroll_temp }
+				#
 				#Pops/Govt get paid
 					set_variable = { pops_spending = 0 }
 					set_variable = { pops_goods_spending = 0 }
@@ -412,37 +445,6 @@
 					}
 					subtract_from_variable = { PREV.treasury = admin_temp }
 					add_to_variable = { PREV.actual_administration_spending = admin_temp }
-				#
-				#Soldier Payroll
-					set_temp_variable = { payroll_temp = 0 }
-
-					set_temp_variable = { conscripted_amount = PREV.max_available_manpower_k } #Temporary
-					multiply_temp_variable = { conscripted_amount = 10 }
-					divide_temp_variable = { conscripted_amount = PREV.max_manpower_k }
-					multiply_temp_variable = { conscripted_amount = state_population_k }
-					divide_temp_variable = { conscripted_amount = 10 }
-
-					set_temp_variable = { need_temp = global.conscripted_base_life_goods_need }
-					multiply_temp_variable = { need_temp = conscripted_amount }
-					divide_temp_variable = { need_temp = 100 }
-					multiply_temp_variable = { need_temp = life_goods_price }
-					add_to_temp_variable = { payroll_temp = need_temp }
-
-					set_temp_variable = { need_temp = global.conscripted_base_everyday_goods_need }
-					multiply_temp_variable = { need_temp = conscripted_amount }
-					divide_temp_variable = { need_temp = 100 }
-					multiply_temp_variable = { need_temp = everyday_goods_price }
-					add_to_temp_variable = { payroll_temp = need_temp }
-					
-					set_temp_variable = { need_temp = global.conscripted_base_luxury_goods_need }
-					multiply_temp_variable = { need_temp = conscripted_amount }
-					divide_temp_variable = { need_temp = 100 }
-					multiply_temp_variable = { need_temp = luxury_goods_price }
-					add_to_temp_variable = { payroll_temp = need_temp }
-
-					multiply_temp_variable = { payroll_temp = global.conscripted_payroll_multiplier }
-					subtract_from_variable = { PREV.treasury = payroll_temp }
-					add_to_variable = { PREV.actual_military_spending = payroll_temp }
 				#
 				#Reset
 					set_variable = { life_goods_trade_amount = 0 } #Positive: Goods Bought / Negative: Goods Sold - Note, this only applies in this effect. It's always positive elsewhere.
@@ -2218,7 +2220,9 @@
 				
 				add_to_variable = { life_goods_demand = life_goods_government_demand }
 				add_to_variable = { everyday_goods_demand = everyday_goods_government_demand }
-				add_to_variable = { luxury_goods_demand = luxury_goods_government_demand }				
+				add_to_variable = { luxury_goods_demand = luxury_goods_government_demand }	
+				add_to_variable = { services_demand = services_government_demand }
+				add_to_variable = { raw_goods_demand = raw_goods_government_demand }
 				add_to_variable = { industrial_goods_demand = industrial_goods_government_demand }
 			#
 			#Minimum goods supply to be in a country & Some necessary vars for resolving international trade
@@ -2971,7 +2975,7 @@
 							set_temp_variable = { cheapest_brk = 1 }
 						}
 					}
-                #services
+                #raw_goods
 					set_temp_variable = { buy_amount_left = raw_goods_demand }
 					set_temp_variable = { spending_left = raw_goods_demand }
 					multiply_temp_variable = { spending_left = raw_goods_price }
@@ -6717,6 +6721,7 @@
 					add_to_variable = { PREV.private_factory_amount = private_factory_amount }
 					
 					#GDP
+						#This month's GDP
 						set_variable = { gdp_amount = 0 }
 						
 						set_temp_variable = { gdp_value_temp = life_goods_produced_amount }
@@ -6756,7 +6761,7 @@
 						}
 						if = {
 							limit = {
-								check_variable = { gdp_amount_array^num > 25 }
+								check_variable = { gdp_amount_array^num > 37 }
 							}
 							remove_from_array = { array = gdp_amount_array }
 						}
@@ -6800,7 +6805,7 @@
 						add_to_array = { annual_gdp_amount_array = annual_gdp_amount }
 						if = {
 							limit = {
-								check_variable = { annual_gdp_amount_array^num > 24 }
+								check_variable = { annual_gdp_amount_array^num > 37 }
 							}
 							remove_from_array = { array = annual_gdp_amount_array index = 0 }
 						}
@@ -6961,6 +6966,7 @@
 					limit = {
 						check_variable = { national_bank_amount_left_k > 10 }
 					}
+					set_temp_variable = { bb = 0 }
 					for_each_loop = {
 						array = global.global_bank_countries
 						index = ii
@@ -6976,7 +6982,7 @@
 								value = THIS
 								index = ii
 							}
-							add_to_array = { 
+							add_to_array = {  
 								array = global.global_bank_interest_rate 
 								value = national_bank_international_interest_rate
 								index = ii
@@ -6984,6 +6990,7 @@
 							set_temp_variable = { bb = 1 }
 						}
 					}
+
 					if = {
 						limit = {
 							check_variable = { bb = 0 }
@@ -7546,7 +7553,7 @@
 						set_variable = { global.pops_rgos_raw_goods_base_workforce_amount = 2 }
 						set_variable = { global.pops_rgos_raw_goods_base_production = 6 }
 						set_variable = { global.pops_rgos_valuable_goods_base_workforce_amount = 0.5 }
-						set_variable = { global.pops_rgos_valuable_goods_base_production = 10 }
+						set_variable = { global.pops_rgos_valuable_goods_base_production = 0 }
 
 						set_variable = { global.pops_rgos_cash_crops_output_multiplier = 1.2 } #Applies to Life/Raw Goods
 						set_variable = { global.pops_rgos_coal_output_multiplier = 1.25 } #Only to Raw
@@ -7744,6 +7751,75 @@
 					set_variable = { global.conscripted_base_everyday_goods_need = 1 }
 					set_variable = { global.conscripted_base_luxury_goods_need = 0.1 }
 					set_variable = { global.conscripted_payroll_multiplier = 2 } #The multiple of the above expense that goes directly to pops
+
+					###############################################################
+					set_variable = { global.infantry_base_life_goods_need = 0.0 } #Per Battalion
+					set_variable = { global.infantry_base_everyday_goods_need = 0.0 }
+					set_variable = { global.infantry_base_luxury_goods_need = 0.0 }
+					set_variable = { global.infantry_base_industrial_goods_need = 0 }
+					
+					set_variable = { global.militia_base_life_goods_need = 0.0 }
+					set_variable = { global.militia_base_everyday_goods_need = 0.0 }
+					set_variable = { global.militia_base_luxury_goods_need = 0 }
+					set_variable = { global.militia_base_industrial_goods_need = 0 }
+					
+					set_variable = { global.artillery_base_life_goods_need = 0.0 }
+					set_variable = { global.artillery_base_everyday_goods_need = 0.0 }
+					set_variable = { global.artillery_base_luxury_goods_need = 0.0 }
+					set_variable = { global.artillery_base_industrial_goods_need = 0.0 }
+					
+					set_variable = { global.cavalry_base_life_goods_need = 0.0 }
+					set_variable = { global.cavalry_base_everyday_goods_need = 0.0 }
+					set_variable = { global.cavalry_base_luxury_goods_need = 0.0 }
+					set_variable = { global.cavalry_base_industrial_goods_need = 0 }
+					
+					set_variable = { global.mobile_base_life_goods_need = 0.0 }
+					set_variable = { global.mobile_base_everyday_goods_need = 0.0 }
+					set_variable = { global.mobile_base_luxury_goods_need = 0.0 }
+					set_variable = { global.mobile_base_industrial_goods_need = 0.0 }
+					
+					set_variable = { global.armor_base_life_goods_need = 0.0 }
+					set_variable = { global.armor_base_everyday_goods_need = 0.0 }
+					set_variable = { global.armor_base_luxury_goods_need = 0.0 }
+					set_variable = { global.armor_base_industrial_goods_need = 0.0 }
+					
+					set_variable = { global.robotic_base_life_goods_need = 0.0 }
+					set_variable = { global.robotic_base_everyday_goods_need = 0.0 }
+					set_variable = { global.robotic_base_luxury_goods_need = 0.0 }
+					set_variable = { global.robotic_base_industrial_goods_need = 0.0 }
+					
+					set_variable = { global.support_base_life_goods_need = 0.0 } #Per Support Company
+					set_variable = { global.support_base_everyday_goods_need = 0.0 }
+					set_variable = { global.support_base_luxury_goods_need = 0 }
+					set_variable = { global.support_base_industrial_goods_need = 0 }
+					
+					#Navy
+					set_variable = { global.screen_base_life_goods_need = 0.0 } #Per Ship
+					set_variable = { global.screen_base_everyday_goods_need = 0.0 }
+					set_variable = { global.screen_base_luxury_goods_need = 0.0 }
+					set_variable = { global.screen_base_industrial_goods_need = 0.0 }
+					
+					set_variable = { global.capital_base_life_goods_need = 0.0 }
+					set_variable = { global.capital_base_everyday_goods_need = 0.0 }
+					set_variable = { global.capital_base_luxury_goods_need = 0.0 }
+					set_variable = { global.capital_base_industrial_goods_need = 0.0 }
+					
+					set_variable = { global.submarine_base_life_goods_need = 0.0 }
+					set_variable = { global.submarine_base_everyday_goods_need = 0.0 }
+					set_variable = { global.submarine_base_luxury_goods_need = 0.0 }
+					set_variable = { global.submarine_base_industrial_goods_need = 0.0 }
+					
+					#Airforce
+					set_variable = { global.deployed_planes_base_life_goods_need = 0.0 } #Per Deployed Plane
+					set_variable = { global.deployed_planes_base_everyday_goods_need = 0.0 }
+					set_variable = { global.deployed_planes_base_luxury_goods_need = 0.0}
+					set_variable = { global.deployed_planes_base_industrial_goods_need = 0.0 }
+
+					#Other
+					set_variable = { global.conscripted_base_life_goods_need = 0 } #Per 100K
+					set_variable = { global.conscripted_base_everyday_goods_need = 0 }
+					set_variable = { global.conscripted_base_luxury_goods_need = 0.0 }
+					set_variable = { global.conscripted_payroll_multiplier = 0 } #The multiple of the above expense that goes directly to pops
 				#
 				#Projects
 					clear_array = proj_id
@@ -10138,6 +10214,19 @@
 						index = ii
 					}
 					set_temp_variable = { bb = 1 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { bb = 0 }
+				}
+				add_to_array = { 
+					array = global_bank_countries 
+					value = THIS
+				}
+				add_to_array = { 
+					array = global_bank_interest_rate 
+					value = interest_temp
 				}
 			}
 		}
@@ -13135,19 +13224,26 @@
 					#Next Cheapest
 					set_temp_variable = { ii_temp = ii }
 					add_to_temp_variable = { ii_temp = 1 }
-					set_temp_variable = { interest_rate_temp = global_bank_interest_rate^ii_temp }
-					subtract_from_temp_variable = { interest_rate_temp = global_bank_interest_rate^ii }
-					add_to_temp_variable = { interest_rate_temp = global.loan_scarcity_increase_willingness }
-
-					set_temp_variable = { borrow_limit_temp_k = country_bank_temp:national_bank_amount_k }
-					divide_temp_variable = { borrow_limit_temp_k = global.loan_scarcity_rate }
-					multiply_temp_variable = { borrow_limit_temp_k = interest_rate_temp }
 					if = {
 						limit = {
-							check_variable = { borrow_temp_k > borrow_limit_temp_k }
+							check_variable = { ii_temp < global_bank_countries^num }
 						}
-						set_temp_variable = { borrow_temp_k = borrow_limit_temp_k }
+						set_temp_variable = { interest_rate_temp = global_bank_interest_rate^ii_temp }
+						subtract_from_temp_variable = { interest_rate_temp = global_bank_interest_rate^ii }
+						add_to_temp_variable = { interest_rate_temp = global.loan_scarcity_increase_willingness }
+
+						set_temp_variable = { borrow_limit_temp_k = country_bank_temp:national_bank_amount_k }
+						divide_temp_variable = { borrow_limit_temp_k = global.loan_scarcity_rate }
+						multiply_temp_variable = { borrow_limit_temp_k = interest_rate_temp }
+
+						if = {
+							limit = {
+								check_variable = { borrow_temp_k > borrow_limit_temp_k }
+							}
+							set_temp_variable = { borrow_temp_k = borrow_limit_temp_k }
+						}
 					}
+					
 					if = {
 						limit = {
 							check_variable = { borrow_temp_k < 0 }
@@ -13727,7 +13823,7 @@
 		
 		add_to_variable = { industrial_goods_government_demand = military_industrial_goods_demand }
 
-		set_variable` = { projects_life_goods_demand = 0 }
+		set_variable = { projects_life_goods_demand = 0 }
 		set_variable = { projects_everyday_goods_demand = 0 }
 		set_variable = { projects_luxury_goods_demand = 0 }
 		set_variable = { projects_services_demand = 0 }
@@ -13753,6 +13849,20 @@
 		add_to_variable = { services_government_demand = projects_services_demand }
 		add_to_variable = { raw_goods_government_demand = projects_raw_goods_demand }
 		add_to_variable = { industrial_goods_government_demand = projects_industrial_goods_demand }
+
+		
+		# set_variable = { life_goods_government_demand = 0 }
+		# set_variable = { everyday_goods_government_demand = 0 }
+		# set_variable = { luxury_goods_government_demand = 0 }
+		# set_variable = { services_government_demand = 0 }
+		# set_variable = { raw_goods_government_demand = 0 }
+		# set_variable = { industrial_goods_government_demand = 0 }
+		# if = {
+		# 	limit = {
+		# 		tag = USA
+		# 	}
+		# 	set_variable = { life_goods_government_demand = 0 }
+		# }
 	}
 	
 	calculate_pop_demand = {

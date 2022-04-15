@@ -10,21 +10,73 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = economy.1.a
+		name = economy.1.o1
+		random_owned_state = {
+			limit = {
+				NOT = { has_variable = corp_name }
+			}
+			add_to_array = { PREV.corporations = THIS }
+			set_variable = { corp_name = random }
+			divide_variable = { corp_name = 1.4 } #Combo Names more common
+			round_variable = corp_name
+			if = {
+				limit = {
+					check_variable = { corp_name = 1 }
+				}
+				randomize_variable = {
+					var = corp_first_name
+					distribution = uniform
+					min = 0
+					max = 23
+				}
+				round_variable = corp_first_name
+			}
+			else_if = {
+				limit = {
+					check_variable = { corp_name = 0 }
+				}
+				randomize_variable = {
+					var = corp_first_name
+					distribution = uniform
+					min = 0
+					max = 27
+				}
+				randomize_variable = {
+					var = corp_last_name
+					distribution = uniform
+					min = 1
+					max = 12
+				}
+				round_variable = corp_first_name
+				round_variable = corp_last_name
+				if = {
+					limit = {
+						check_variable = { random < 0.3 }
+					}
+					set_variable = { corp_first_name = 0 }
+				}
+			}
+		}
+	}
+	option = {
+		name = economy.1.o2
+		clear_array = corporations
+		every_owned_state = {
+			clear_variable = corp_name
+			clear_variable = corp_first_name
+			clear_variable = corp_last_name
+		}
+	}
+	option = {
+		name = economy.1.o3
 		
 	}
-}
-
-news_event = {
-	id = economy.2
-	title = economy.2.t
-	desc = economy.2.d
-	picture = GFX_news_event_ukraine_invasion
-
-	is_triggered_only = yes
-
-	option = { #War In Europe is back in fashion
-		name = economy.2.a
+	option = {
+		name = economy.1.o4
+		
+	}
+	option = {
+		name = economy.1.o5
 		
 	}
 }

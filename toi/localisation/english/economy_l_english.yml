@@ -6,9 +6,10 @@
 
   military_goods_loc:0 "[?government_military_goods_percent|0]%"
 
-  economy.2.t:0 "Russia invades Ukraine"
-  economy.2.d:0 "In the early hours on the 24th of February, Russian missiles and artillery shells rained down on the Ukranian cities of Kharkov, Kiev, Odessa, among others. Russian Naval forces have been spotted in the Black Sea with naval invasions near Odessa and Mauripol.\n\nDuring the UN Emergency Council meeting that day, the Ukranian representative called the actions a declaration of war and demanded for Russia's UN Security Council status to be revoked. The Russian representative called the manuevers  'Special Military Operations,' insisting that Russia is not invading Ukraine. Many NATO countries, including a previously hesitant Germany, have condemned this operation. \n\nLarge portions of the civilian Ukrainian population are fleeing from the combat zones. The sitution is still developing."
-  economy.2.a:0 "War in Europe is back in fashion"
+  #Shhh
+  # economy.2.t:0 "Russia invades Ukraine"
+  # economy.2.d:0 "In the early hours on the 24th of February, Russian missiles and artillery shells rained down on the Ukranian cities of Kharkov, Kiev, Odessa, among others. Russian Naval forces have been spotted in the Black Sea with naval invasions near Odessa and Mauripol.\n\nDuring the UN Emergency Council meeting that day, the Ukranian representative called the actions a declaration of war and demanded for Russia's UN Security Council status to be revoked. The Russian representative called the manuevers  'Special Military Operations,' insisting that Russia is not invading Ukraine. Many NATO countries, including a previously hesitant Germany, have condemned this operation. \n\nLarge portions of the civilian Ukrainian population are fleeing from the combat zones. The sitution is still developing."
+  # economy.2.a:0 "War in Europe is back in fashion"
 
   #Modifiers
     rgo_max_size_modifier:0 "RGO Max Size"
@@ -57,6 +58,8 @@
       pops_title:0 "Population"
       pops_amount_loc:0 "§Y[?pops_amount|3]K§!"
 
+      pops_wealth_loc:0 "§Y[?pops_wealth|1]§!"
+
       pops_militancy_loc:0 "§R[?pops_militancy|1]%§!"
 
       pops_money_loc:0 "§Y[?pops_money|3]§!"
@@ -69,6 +72,8 @@
       pops_savings_loc:0 "§Y[?pops_savings|3]§![GetCurrencyTextIconState]"
       pops_debt_loc:0 "§R[?pops_debt|3]§![GetCurrencyTextIconState]"
       pops_bank_tt:0 "§YLocal Bank:§!\nCurrent Savings: §Y[?pops_savings|3]§![GetCurrencyTextIconState] \n   - Deposits: §G+[?pops_savings_deposits|3]§![GetCurrencyTextIconState] \n   - Interest: §G+[?pops_savings_interest|3]§![GetCurrencyTextIconState] \n   - Withdrawals: §R-[?pops_savings_withdrawals|3]§![GetCurrencyTextIconState] \n\nDebt: §R[?pops_debt|3]§![GetCurrencyTextIconState]"
+
+      pops_workforce_loc:0 "§C[?pops_workforce_amount|3]K§!"
 
       #Pop Table
       pop_types_name_title:0 "Name"
@@ -331,6 +336,19 @@
 
   #Corporations
     #Corporation Names
+      corp_name_co:0 " Co."
+      corp_name_inc:0 " Inc."
+      corp_name_ltd:0 " Ltd."
+      corp_name_collective:0 " Collective"
+      corp_name_enterprises:0 " Enterprises"
+      corp_name_group:0 " Group"
+      corp_name_industries:0 " Industries"
+      corp_name_solutions:0 " Solutions"
+      corp_name_systems:0 " Systems"
+      corp_name_partners:0 " Partners"
+      corp_name_and_son:0 " & Son"
+      corp_name_works:0 " Works"
+
       corporation_name_life_goods_generic_zz:0 "[This.GetName] Farming"
 
       corporation_name_everyday_goods_generic_zz:0 "[This.GetName] Corp"
@@ -343,6 +361,7 @@
 
       corporation_name_industrial_goods_generic_zz:0 "[This.GetName] Industries"
     #
+  #
   #Budget Screen
     budget_title:0 "Budget of [ROOT.GetNameDef]"
 
@@ -550,6 +569,8 @@
   #
   #Population & Economy Screen
     pops_eco_title:0 "Population & Economy"
+
+    corporation_name:0 "[GetCorpName] [?owner.GetFlag]"
   #
 
   #Currency
@@ -650,6 +671,12 @@
     gdp_c_map_mode_tooltip:0 "§YGross Domestic Product per Capita§! in §C[FROM.GetName]§!: §Y[?FROM.gdp_per_capita|3]§![FROM.GetCurrencyTextIconState]"
     gdp_c_map_mode_tooltip_delayed:0 "§YGross Domestic Product per Capita§! (§YGDP/c§!) is the measure of the value of goods produced in a given region in a year divided by the population total."
 
+  #
+
+  #Events
+    economy.1.t:0 "Debug Event"
+    economy.1.d:0 ""
+    economy.1.o1:0 "Spawn a Corporation in NYC"
   #
 
   #Scripted Loc

@@ -847,54 +847,651 @@ defined_text = {
             #Generic Names
             text = {
                 trigger = {
-                    check_variable = { corporation_name < 100 }
+                    check_variable = { corp_name = 0 }
                 }
-                localization_key = "[GetGenericCorpName]"
+                localization_key = "[GetCorpBeginning][GetCorpEnding]"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 1 }
+                }
+                localization_key = "[GetCorpWhole]"
             }
             #Unique Names
-        }
-        
-        #Generic Names
-        defined_text = {
-            name = GetGenericCorpName
-            #Generics
 
-            #Super Generics
+            #American
             text = {
                 trigger = {
-                    check_variable = { corporation_type = 1 }
+                    check_variable = { corp_name = 10 }
                 }
-                localization_key = corporation_name_life_goods_generic_zz
+                localization_key = "US Steel" #Pops up in 1883 via "Carnegie Acquires Homestead Steel Works"
             }
             text = {
                 trigger = {
-                    check_variable = { corporation_type = 2 }
+                    check_variable = { corp_name = 11 }
                 }
-                localization_key = corporation_name_everyday_goods_generic_zz
+                localization_key = "Standard Oil" #Pops up in 1870
             }
             text = {
                 trigger = {
-                    check_variable = { corporation_type = 3 }
+                    check_variable = { corp_name = 12 }
                 }
-                localization_key = corporation_name_luxury_goods_generic_zz
+                localization_key = "General Electric" #Pops up after 'War of the Currents.' Either this or WE will exist
             }
             text = {
                 trigger = {
-                    check_variable = { corporation_type = 4 }
+                    check_variable = { corp_name = 13 }
                 }
-                localization_key = corporation_name_services_generic_zz
+                localization_key = "General Motors" #1900
             }
             text = {
                 trigger = {
-                    check_variable = { corporation_type = 5 }
+                    check_variable = { corp_name = 14 }
                 }
-                localization_key = corporation_name_raw_goods_generic_zz
+                localization_key = "American Tobacco Company" #1890
             }
             text = {
                 trigger = {
-                    check_variable = { corporation_type = 6 }
+                    check_variable = { corp_name = 15 }
                 }
-                localization_key = corporation_name_industrial_goods_generic_zz
+                localization_key = "Vanderbilt Railroads" #1863 (Acquisition of New York & Harlem RR)
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 16 }
+                }
+                localization_key = "PepsiCo" #1965, if Coca-Cola no longer exists
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 17 }
+                }
+                localization_key = "Coca-Cola" #1885
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 18 }
+                }
+                localization_key = "Nestle" #1866
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 19 }
+                }
+                localization_key = "Westinghouse Electric" #Pops up after 'War of the Currents.' Either this or GE will exist
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 20 }
+                }
+                localization_key = "Ford Motors" #1901
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 21 }
+                }
+                localization_key = "Union Pacific" #Transcontinental RR construction
+            }
+
+            #Japanese
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 51 }
+                }
+                localization_key = "Mitsubishi"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 52 }
+                }
+                localization_key = "Yasuda"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 53 }
+                }
+                localization_key = "Mitsui Group"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 54 }
+                }
+                localization_key = "Sumitomo Group"
+            }
+
+            #German
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 101 }
+                }
+                localization_key = "Lufthansa"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 102 }
+                }
+                localization_key = "Daimler"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 103 }
+                }
+                localization_key = "Siemens"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 104 }
+                }
+                localization_key = "RWKS" #Rheinish-Westphalian Coal Syndicate. 54% of coal in Germany, 93% coal of Ruhr
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 105 }
+                }
+                localization_key = "IG Farben"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 106 }
+                }
+                localization_key = "Krupp"
+            }
+
+            #Austria/Czechoslovakia/Hungary/Balkans
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 151 }
+                }
+                localization_key = "Steyr-Daimler-Puch"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 152 }
+                }
+                localization_key = "Skoda"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 153 }
+                }
+                localization_key = "Ganz Works"
+            }
+
+            #British
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 201 }
+                }
+                localization_key = "British Petroleum"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 202 }
+                }
+                localization_key = "Rolls-Royce"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 203 }
+                }
+                localization_key = "Twinings"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 204 }
+                }
+                localization_key = "Wedgwood"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 205 }
+                }
+                localization_key = "Cadbury"
+            }
+
+            #French
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 251 }
+                }
+                localization_key = "Renault"
+            }
+
+            #Arabian
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 301 }
+                }
+                localization_key = "Aramco"
+            }
+
+            #Scandinavian
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 351 }
+                }
+                localization_key = "Aker" #Conglomerate (Shipping mostly)
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 352 }
+                }
+                localization_key = "Smedvig" #Oil
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 353 }
+                }
+                localization_key = "Norske Skog" #Lumber
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_name = 353 }
+                }
+                localization_key = "Christiana Spigerverk" #Steel
+            }
+
+        }
+
+        defined_text = {
+            name = GetCorpWhole
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 0 }
+                }
+                localization_key = "Santander"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 1 }
+                }
+                localization_key = "Woolsworths"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 2 }
+                }
+                localization_key = "Eaton"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 3 }
+                }
+                localization_key = "Stryker"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 4 }
+                }
+                localization_key = "Vivendi"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 5 }
+                }
+                localization_key = "BCE"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 6 }
+                }
+                localization_key = "Applied Materials"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 7 }
+                }
+                localization_key = "Inditex"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 8 }
+                }
+                localization_key = "Ericsson"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 9 }
+                }
+                localization_key = "Kering"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 10 }
+                }
+                localization_key = "Diageo"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 11 }
+                }
+                localization_key = "Tesla"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 12 }
+                }
+                localization_key = "Edison"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 13 }
+                }
+                localization_key = "Falcor"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 14 }
+                }
+                localization_key = "Dow"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 15 }
+                }
+                localization_key = "Amgen"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 16 }
+                }
+                localization_key = "3M"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 17 }
+                }
+                localization_key = "Exelon"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 18 }
+                }
+                localization_key = "CNOOC"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 19 }
+                }
+                localization_key = "CK Hutchinson"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 20 }
+                }
+                localization_key = "Travelers"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 21 }
+                }
+                localization_key = "Rio Tinto"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 22 }
+                }
+                localization_key = "UBS"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 23 }
+                }
+                localization_key = "Amazon"
+            }
+        }
+
+        defined_text = {
+            name = GetCorpBeginning
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 0 }
+                }
+                localization_key = "[This.GetName]"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 1 }
+                }
+                localization_key = "Oracle"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 2 }
+                }
+                localization_key = "Summit"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 3 }
+                }
+                localization_key = "Dynamic"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 4 }
+                }
+                localization_key = "Eclipse"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 5 }
+                }
+                localization_key = "Green"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 6 }
+                }
+                localization_key = "Eclipse"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 7 }
+                }
+                localization_key = "Reliance"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 8 }
+                }
+                localization_key = "Anthem"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 9 }
+                }
+                localization_key = "Charter"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 10 }
+                }
+                localization_key = "Abbot"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 11 }
+                }
+                localization_key = "Johnson"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 12 }
+                }
+                localization_key = "Caterpillar"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 13 }
+                }
+                localization_key = "General"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 14 }
+                }
+                localization_key = "Charles"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 15 }
+                }
+                localization_key = "Arkham"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 16 }
+                }
+                localization_key = "Stark"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 17 }
+                }
+                localization_key = "Orange"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 18 }
+                }
+                localization_key = "Wayne"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 19 }
+                }
+                localization_key = "Oliver"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 20 }
+                }
+                localization_key = "Luther"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 21 }
+                }
+                localization_key = "Union"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 22 }
+                }
+                localization_key = "Duke"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 23 }
+                }
+                localization_key = "Hammer"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 24 }
+                }
+                localization_key = "Staine"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 25 }
+                }
+                localization_key = "National"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 26 }
+                }
+                localization_key = "Total"
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_first_name = 27 }
+                }
+                localization_key = "Imperial"
+            }
+        }
+
+        defined_text = {
+            name = GetCorpEnding
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 0 }
+                }
+                localization_key = ""
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 1 }
+                }
+                localization_key = corp_name_co
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 2 }
+                }
+                localization_key = corp_name_inc
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 3 }
+                }
+                localization_key = corp_name_ltd
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 4 }
+                }
+                localization_key = corp_name_collective
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 5 }
+                }
+                localization_key = corp_name_enterprises
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 6 }
+                }
+                localization_key = corp_name_group
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 7 }
+                }
+                localization_key = corp_name_industries
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 8 }
+                }
+                localization_key = corp_name_solutions
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 9 }
+                }
+                localization_key = corp_name_systems
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 10 }
+                }
+                localization_key = corp_name_partners
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 11 }
+                }
+                localization_key = corp_name_and_son
+            }
+            text = {
+                trigger = {
+                    check_variable = { corp_last_name = 12 }
+                }
+                localization_key = corp_name_works
             }
         }
     #

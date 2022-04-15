@@ -106,6 +106,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/workforce_icon.dds"
 	} 
 	spriteType = {
+		name = "GFX_wealth_icon"
+		texturefile = "gfx/interface/wealth_icon.dds"
+	} 
+	spriteType = {
 		name = "GFX_national_bank_icon"
 		texturefile = "gfx/interface/national_bank_icon.dds"
 	}
@@ -141,6 +145,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_worker_organization_icon"
 		texturefile = "gfx/interface/worker_organization_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_ownership_govt_icon"
+		texturefile = "gfx/interface/ownership_govt_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_ownership_corp_icon"
+		texturefile = "gfx/interface/ownership_corp_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_ownership_local_icon"
+		texturefile = "gfx/interface/ownership_local_icon.dds"
 	}
 
 	#Pop Icons
