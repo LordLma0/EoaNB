@@ -11,10 +11,10 @@
 			}
 			clear_array = global.econ_gp_list_array
 			# add_to_array = { global.econ_gp_list_array = ENG }
-			add_to_array = { global.econ_gp_list_array = USA }
+			# add_to_array = { global.econ_gp_list_array = USA }
 			# add_to_array = { global.econ_gp_list_array = BRA }
 			# add_to_array = { global.econ_gp_list_array = MEX }
-			# add_to_array = { global.econ_gp_list_array = COL }
+			add_to_array = { global.econ_gp_list_array = COL }
 			# add_to_array = { global.econ_gp_list_array = VEN }
 			# add_to_array = { global.econ_gp_list_array = CAN }
 			# add_to_array = { global.econ_gp_list_array = CHL }
@@ -37,7 +37,7 @@
 			# add_to_array = { global.econ_gp_list_array = BCO }
 			# add_to_array = { global.econ_gp_list_array = QCI }
 			# add_to_array = { global.econ_gp_list_array = NWT }
-			# ##
+			# #
 			# add_to_array = { global.econ_gp_list_array = GUA }
 			# add_to_array = { global.econ_gp_list_array = HON }
 			# add_to_array = { global.econ_gp_list_array = NIC }
@@ -45,8 +45,8 @@
 			# add_to_array = { global.econ_gp_list_array = ELS }
 			# add_to_array = { global.econ_gp_list_array = DOM }
 			# add_to_array = { global.econ_gp_list_array = HAI }
-			# ##
-			# ##Primitives
+			# #
+			# #Primitives
 			# add_to_array = { global.econ_gp_list_array = SIX }
 			# add_to_array = { global.econ_gp_list_array = CHY }
 			# add_to_array = { global.econ_gp_list_array = COM }
@@ -523,11 +523,17 @@
 					set_variable = { soldiers_earnings = 0 }
 					set_variable = { officers_earnings = 0 }
 
-					set_variable = { factory_earnings = 0 }
-					set_variable = { factory_spending = 0 }
 					set_variable = { factory_everyday_goods_sold = 0 }
+					set_variable = { factory_everyday_goods_earnings = 0 }
+					set_variable = { factory_everyday_goods_spending = 0 }
+					
 					set_variable = { factory_luxury_goods_sold = 0 }
+					set_variable = { factory_luxury_goods_earnings = 0 }
+					set_variable = { factory_luxury_goods_spending = 0 }
+					
 					set_variable = { factory_industrial_goods_sold = 0 }
+					set_variable = { factory_industrial_goods_earnings = 0 }
+					set_variable = { factory_industrial_goods_spending = 0 }
 				#
 				
 				set_variable = { infrastructure_max_level = PREV.infrastructure_max_level }
@@ -641,7 +647,29 @@
 					add_to_temp_variable = { industrial_spending_temp = industrial_goods_temp }
 					multiply_temp_variable = { industrial_spending_temp = PREV.industrial_subsidy_percentage }
 					divide_temp_variable = { industrial_spending_temp = 100 }
-					add_to_variable = { factory_money = industrial_spending_temp }
+
+					#Splitting between industry categories
+					set_temp_variable = { m_temp = factory_everyday_goods_amount }
+					multiply_temp_variable = { m_temp = 100 }
+					divide_temp_variable = { m_temp = private_factory_amount }
+					multiply_temp_variable = { m_temp = industrial_spending_temp }
+					divide_temp_variable = { m_temp = 100 }
+					add_to_variable = { factory_everyday_goods_money = m_temp }
+
+					set_temp_variable = { m_temp = factory_luxury_goods_amount }
+					multiply_temp_variable = { m_temp = 100 }
+					divide_temp_variable = { m_temp = private_factory_amount }
+					multiply_temp_variable = { m_temp = industrial_spending_temp }
+					divide_temp_variable = { m_temp = 100 }
+					add_to_variable = { factory_luxury_goods_money = m_temp }
+
+					set_temp_variable = { m_temp = factory_industrial_goods_amount }
+					multiply_temp_variable = { m_temp = 100 }
+					divide_temp_variable = { m_temp = private_factory_amount }
+					multiply_temp_variable = { m_temp = industrial_spending_temp }
+					divide_temp_variable = { m_temp = 100 }
+					add_to_variable = { factory_industrial_goods_money = m_temp }
+
 					subtract_from_variable = { PREV.treasury = industrial_spending_temp }
 					add_to_variable = { PREV.actual_industrial_spending = industrial_spending_temp }
 				#
@@ -673,8 +701,12 @@
 
 					set_variable = { pops_artisans_raw_goods_fulfilled_percentage = 0 }
 
-					set_variable = { factory_raw_goods_fulfilled_percentage = 0 }
-					set_variable = { factory_industrial_goods_fulfilled_percentage = 0 }
+					set_variable = { factory_everyday_goods_raw_goods_fulfilled_percentage = 0 }
+					set_variable = { factory_everyday_goods_industrial_goods_fulfilled_percentage = 0 }
+					set_variable = { factory_luxury_goods_raw_goods_fulfilled_percentage = 0 }
+					set_variable = { factory_luxury_goods_industrial_goods_fulfilled_percentage = 0 }
+					set_variable = { factory_industrial_goods_raw_goods_fulfilled_percentage = 0 }
+					set_variable = { factory_industrial_goods_industrial_goods_fulfilled_percentage = 0 }
 
 					set_variable = { infrastructure_industrial_goods_fulfilled_percentage = 0 }
 					
@@ -5186,8 +5218,8 @@
 								add_to_temp_variable = { artisan_buy_amount = 0.001 }
 							}
 							
-							add_to_variable = { factory_money = factory_cost_temp }
-							add_to_variable = { factory_earnings = factory_cost_temp }
+							add_to_variable = { factory_everyday_goods_money = factory_cost_temp }
+							add_to_variable = { factory_everyday_goods_earnings = factory_cost_temp }
 							add_to_variable = { factory_everyday_goods_sold = factory_buy_amount }
 
 							if = { 
@@ -5295,8 +5327,8 @@
 								add_to_temp_variable = { artisan_buy_amount = 0.001 }
 							}
 							
-							add_to_variable = { factory_money = factory_cost_temp }
-							add_to_variable = { factory_earnings = factory_cost_temp }
+							add_to_variable = { factory_luxury_goods_money = factory_cost_temp }
+							add_to_variable = { factory_luxury_goods_earnings = factory_cost_temp }
 							add_to_variable = { factory_luxury_goods_sold = factory_buy_amount }
 
 							if = { 
@@ -5464,13 +5496,60 @@
 								subtract_from_temp_variable = { factory_goods_amount = total_goods_amount_temp }
 							}
 							
-							subtract_from_variable = { factory_money = factory_goods_value }
-							add_to_variable = { factory_spending = factory_goods_value }
-							set_temp_variable = { needs_fulfilled_temp = factory_goods_amount }
-							divide_temp_variable = { needs_fulfilled_temp = factory_raw_goods_need }
-							add_to_variable = { factory_raw_goods_fulfilled_percentage = needs_fulfilled_temp }
+							#Splitting between industry categories
+							set_temp_variable = { m_temp = factory_everyday_goods_raw_goods_demand }
+							multiply_temp_variable = { m_temp = 100 }
+							divide_temp_variable = { m_temp = factory_raw_goods_demand }
+							set_temp_variable = { needs_fulfilled_temp = m_temp }
+							multiply_temp_variable = { m_temp = factory_goods_value }
+							divide_temp_variable = { m_temp = 100 }
+							subtract_from_variable = { factory_everyday_goods_money = m_temp }
+							add_to_variable = { factory_everyday_goods_spending = m_temp }
+							
+							multiply_temp_variable = { needs_fulfilled_temp = factory_goods_amount }
+							divide_temp_variable = { needs_fulfilled_temp = factory_everyday_goods_raw_goods_need }
+							divide_temp_variable = { needs_fulfilled_temp = 100 }
+							add_to_variable = { factory_everyday_goods_raw_goods_fulfilled_percentage = needs_fulfilled_temp }
 							clamp_variable = {
-								var = factory_raw_goods_fulfilled_percentage
+								var = factory_everyday_goods_raw_goods_fulfilled_percentage
+								min = 0
+								max = 1
+							}
+
+							set_temp_variable = { m_temp = factory_luxury_goods_raw_goods_demand }
+							multiply_temp_variable = { m_temp = 100 }
+							divide_temp_variable = { m_temp = factory_raw_goods_demand }
+							set_temp_variable = { needs_fulfilled_temp = m_temp }
+							multiply_temp_variable = { m_temp = factory_goods_value }
+							divide_temp_variable = { m_temp = 100 }
+							subtract_from_variable = { factory_luxury_goods_money = m_temp }
+							add_to_variable = { factory_luxury_goods_spending = m_temp }
+							
+							multiply_temp_variable = { needs_fulfilled_temp = factory_goods_amount }
+							divide_temp_variable = { needs_fulfilled_temp = factory_luxury_goods_raw_goods_need }
+							divide_temp_variable = { needs_fulfilled_temp = 100 }
+							add_to_variable = { factory_luxury_goods_raw_goods_fulfilled_percentage = needs_fulfilled_temp }
+							clamp_variable = {
+								var = factory_luxury_goods_raw_goods_fulfilled_percentage
+								min = 0
+								max = 1
+							}
+
+							set_temp_variable = { m_temp = factory_industrial_goods_raw_goods_demand }
+							multiply_temp_variable = { m_temp = 100 }
+							divide_temp_variable = { m_temp = factory_raw_goods_demand }
+							set_temp_variable = { needs_fulfilled_temp = m_temp }
+							multiply_temp_variable = { m_temp = factory_goods_value }
+							divide_temp_variable = { m_temp = 100 }
+							subtract_from_variable = { factory_industrial_goods_money = m_temp }
+							add_to_variable = { factory_industrial_goods_spending = m_temp }
+							
+							multiply_temp_variable = { needs_fulfilled_temp = factory_goods_amount }
+							divide_temp_variable = { needs_fulfilled_temp = factory_industrial_goods_raw_goods_need }
+							divide_temp_variable = { needs_fulfilled_temp = 100 }
+							add_to_variable = { factory_industrial_goods_raw_goods_fulfilled_percentage = needs_fulfilled_temp }
+							clamp_variable = {
+								var = factory_industrial_goods_raw_goods_fulfilled_percentage
 								min = 0
 								max = 1
 							}
@@ -5654,13 +5733,60 @@
 											check_variable = { amount_array_temp^0 > 0 }
 										}
 									}
-									subtract_from_variable = { factory_money = value_array_temp^0 }
-									add_to_variable = { factory_spending = value_array_temp^0 }
-									set_temp_variable = { needs_fulfilled_temp = amount_array_temp^0 }
-									divide_temp_variable = { needs_fulfilled_temp = factory_industrial_goods_need }
-									add_to_variable = { factory_industrial_goods_fulfilled_percentage = needs_fulfilled_temp }
+									#Splitting between industry categories
+									set_temp_variable = { m_temp = factory_everyday_goods_industrial_goods_demand }
+									multiply_temp_variable = { m_temp = 100 }
+									divide_temp_variable = { m_temp = factory_industrial_goods_demand }
+									set_temp_variable = { needs_fulfilled_temp = m_temp }
+									multiply_temp_variable = { m_temp = value_array_temp^0 }
+									divide_temp_variable = { m_temp = 100 }
+									subtract_from_variable = { factory_everyday_goods_money = m_temp }
+									add_to_variable = { factory_everyday_goods_spending = m_temp }
+									
+									multiply_temp_variable = { needs_fulfilled_temp = amount_array_temp^0 }
+									divide_temp_variable = { needs_fulfilled_temp = factory_everyday_goods_industrial_goods_need }
+									divide_temp_variable = { needs_fulfilled_temp = 100 }
+									add_to_variable = { factory_everyday_goods_industrial_goods_fulfilled_percentage = needs_fulfilled_temp }
 									clamp_variable = {
-										var = factory_industrial_goods_fulfilled_percentage
+										var = factory_everyday_goods_industrial_goods_fulfilled_percentage
+										min = 0
+										max = 1
+									}
+
+									set_temp_variable = { m_temp = factory_luxury_goods_industrial_goods_demand }
+									multiply_temp_variable = { m_temp = 100 }
+									divide_temp_variable = { m_temp = factory_industrial_goods_demand }
+									set_temp_variable = { needs_fulfilled_temp = m_temp }
+									multiply_temp_variable = { m_temp = value_array_temp^0 }
+									divide_temp_variable = { m_temp = 100 }
+									subtract_from_variable = { factory_luxury_goods_money = m_temp }
+									add_to_variable = { factory_luxury_goods_spending = m_temp }
+									
+									multiply_temp_variable = { needs_fulfilled_temp = amount_array_temp^0 }
+									divide_temp_variable = { needs_fulfilled_temp = factory_luxury_goods_industrial_goods_need }
+									divide_temp_variable = { needs_fulfilled_temp = 100 }
+									add_to_variable = { factory_luxury_goods_industrial_goods_fulfilled_percentage = needs_fulfilled_temp }
+									clamp_variable = {
+										var = factory_luxury_goods_industrial_goods_fulfilled_percentage
+										min = 0
+										max = 1
+									}
+
+									set_temp_variable = { m_temp = factory_industrial_goods_industrial_goods_demand }
+									multiply_temp_variable = { m_temp = 100 }
+									divide_temp_variable = { m_temp = factory_industrial_goods_demand }
+									set_temp_variable = { needs_fulfilled_temp = m_temp }
+									multiply_temp_variable = { m_temp = value_array_temp^0 }
+									divide_temp_variable = { m_temp = 100 }
+									subtract_from_variable = { factory_industrial_goods_money = m_temp }
+									add_to_variable = { factory_industrial_goods_spending = m_temp }
+									
+									multiply_temp_variable = { needs_fulfilled_temp = amount_array_temp^0 }
+									divide_temp_variable = { needs_fulfilled_temp = factory_industrial_goods_industrial_goods_need }
+									divide_temp_variable = { needs_fulfilled_temp = 100 }
+									add_to_variable = { factory_industrial_goods_industrial_goods_fulfilled_percentage = needs_fulfilled_temp }
+									clamp_variable = {
+										var = factory_industrial_goods_industrial_goods_fulfilled_percentage
 										min = 0
 										max = 1
 									}
@@ -5835,8 +5961,8 @@
 								add_to_temp_variable = { artisan_buy_amount = 0.001 }
 							}
 							
-							add_to_variable = { factory_money = factory_cost_temp }
-							add_to_variable = { factory_earnings = factory_cost_temp }
+							add_to_variable = { factory_industrial_goods_money = factory_cost_temp }
+							add_to_variable = { factory_industrial_goods_earnings = factory_cost_temp }
 							add_to_variable = { factory_industrial_goods_sold = factory_buy_amount }
 
 							if = { 
@@ -5856,94 +5982,276 @@
 				#
 
 				#Factory Wages & Profit
-					set_variable = { factory_wages = factory_earnings }
-					multiply_variable = { factory_wages = global.factory_wages_revenue_percentage }
+					#Everyday Goods
+						set_variable = { factory_everyday_goods_wages = factory_everyday_goods_earnings }
+						multiply_variable = { factory_everyday_goods_wages = global.factory_wages_revenue_percentage }
 
-					set_temp_variable = { factory_wage_max_money_temp = global.factory_wages_max_money_percentage }
-					multiply_temp_variable = { factory_wage_max_money_temp = factory_money_limit }
-					multiply_temp_variable = { factory_wage_max_money_temp = factory_employment_amount }
-					divide_temp_variable = { factory_wage_max_money_temp = factory_employment_amount_max }
-					add_to_variable = { factory_wages = factory_wage_max_money_temp }
+						set_temp_variable = { factory_wage_max_money_temp = global.factory_wages_max_money_percentage }
+						multiply_temp_variable = { factory_wage_max_money_temp = factory_everyday_goods_money_limit }
+						multiply_temp_variable = { factory_wage_max_money_temp = factory_employment_amount }
+						divide_temp_variable = { factory_wage_max_money_temp = factory_employment_amount_max }
+						add_to_variable = { factory_everyday_goods_wages = factory_wage_max_money_temp }
 
-					add_to_variable = { factory_spending = factory_wages }
+						add_to_variable = { factory_everyday_goods_spending = factory_everyday_goods_wages }
 
-					set_variable = { factory_profit = factory_earnings }
-					subtract_from_variable = { factory_profit = factory_spending }
+						set_variable = { factory_everyday_goods_profit = factory_everyday_goods_earnings }
+						subtract_from_variable = { factory_everyday_goods_profit = factory_everyday_goods_spending }
 
-					set_temp_variable = { bonuses_temp = factory_profit }
-					multiply_temp_variable = { bonuses_temp = global.factory_wages_profit_percentage }
-					add_to_variable = { factory_wages = bonuses_temp }
+						set_temp_variable = { bonuses_temp = factory_everyday_goods_profit }
+						multiply_temp_variable = { bonuses_temp = global.factory_wages_profit_percentage }
+						add_to_variable = { factory_everyday_goods_wages = bonuses_temp }
 
-					add_to_variable = { factory_spending = bonuses_temp }
-					subtract_from_variable = { factory_profit = bonuses_temp }
+						add_to_variable = { factory_everyday_goods_spending = bonuses_temp }
+						subtract_from_variable = { factory_everyday_goods_profit = bonuses_temp }
 
-					subtract_from_variable = { factory_money = factory_wages }
-					if = {
-						limit = {
-							check_variable = { factory_money < 0 }
+						subtract_from_variable = { factory_everyday_goods_money = factory_everyday_goods_wages }
+						if = {
+							limit = {
+								check_variable = { factory_everyday_goods_money < 0 }
+							}
+							add_to_variable = { factory_everyday_goods_wages = factory_everyday_goods_money }
+							set_variable = { factory_everyday_goods_money = 0 }
 						}
-						add_to_variable = { factory_wages = factory_money }
-						set_variable = { factory_money = 0 }
-					}
-					add_to_variable = { pops_earnings = factory_wages }
+						add_to_variable = { pops_earnings = factory_everyday_goods_wages }
 
-					set_temp_variable = { capitalists_share = capitalists_percentage }
-					multiply_temp_variable = { capitalists_share = 900 }
-					set_temp_variable = { craftsmen_share = craftsmen_percentage }
-					multiply_temp_variable = { craftsmen_share = 100 }
-					set_temp_variable = { specialists_share = specialists_percentage }
-					multiply_temp_variable = { specialists_share = 100 }
-					set_temp_variable = { modifier_temp = global.pops_specialists_production_bonus }
-					add_to_temp_variable = { modifier_temp = 1 }
-					multiply_temp_variable = { specialists_share = modifier_temp }
+						set_temp_variable = { capitalists_share = capitalists_percentage }
+						multiply_temp_variable = { capitalists_share = 900 }
+						set_temp_variable = { craftsmen_share = craftsmen_percentage }
+						multiply_temp_variable = { craftsmen_share = 100 }
+						set_temp_variable = { specialists_share = specialists_percentage }
+						multiply_temp_variable = { specialists_share = 100 }
+						set_temp_variable = { modifier_temp = global.pops_specialists_production_bonus }
+						add_to_temp_variable = { modifier_temp = 1 }
+						multiply_temp_variable = { specialists_share = modifier_temp }
 
-					set_temp_variable = { share_total = capitalists_share }
-					add_to_temp_variable = { share_total = craftsmen_share }
-					add_to_temp_variable = { share_total = specialists_share }
-					divide_temp_variable = { share_total = 100 }
+						set_temp_variable = { share_total = capitalists_share }
+						add_to_temp_variable = { share_total = craftsmen_share }
+						add_to_temp_variable = { share_total = specialists_share }
+						divide_temp_variable = { share_total = 100 }
 
-					divide_temp_variable = { capitalists_share = share_total }
-					divide_temp_variable = { craftsmen_share = share_total }
-					divide_temp_variable = { specialists_share = share_total }
+						divide_temp_variable = { capitalists_share = share_total }
+						divide_temp_variable = { craftsmen_share = share_total }
+						divide_temp_variable = { specialists_share = share_total }
 
-					set_temp_variable = { capitalists_value = factory_wages }
-					multiply_temp_variable = { capitalists_value = capitalists_share }
-					divide_temp_variable = { capitalists_value = 100 }
-					set_temp_variable = { craftsmen_value = factory_wages }
-					multiply_temp_variable = { craftsmen_value = craftsmen_share }
-					divide_temp_variable = { craftsmen_value = 100 }
-					set_temp_variable = { specialists_value = factory_wages }
-					multiply_temp_variable = { specialists_value = specialists_share }
-					divide_temp_variable = { specialists_value = 100 }
-
-					add_to_variable = { capitalists_earnings = capitalists_value }
-					add_to_variable = { craftsmen_earnings = craftsmen_value }
-					add_to_variable = { specialists_earnings = specialists_value }
-					
-					if = {
-						limit = {
-							check_variable = { factory_money > factory_money_limit }
-						}
-						set_temp_variable = { excess_temp = factory_money }
-						subtract_from_temp_variable = { excess_temp = factory_money_limit }
-						divide_temp_variable = { excess_temp = 2 }
-						add_to_variable = { pops_earnings = excess_temp }
-						set_temp_variable = { capitalists_value = excess_temp }
+						set_temp_variable = { capitalists_value = factory_everyday_goods_wages }
 						multiply_temp_variable = { capitalists_value = capitalists_share }
 						divide_temp_variable = { capitalists_value = 100 }
-						set_temp_variable = { craftsmen_value = excess_temp }
+						set_temp_variable = { craftsmen_value = factory_everyday_goods_wages }
 						multiply_temp_variable = { craftsmen_value = craftsmen_share }
 						divide_temp_variable = { craftsmen_value = 100 }
-						set_temp_variable = { specialists_value = excess_temp }
+						set_temp_variable = { specialists_value = factory_everyday_goods_wages }
 						multiply_temp_variable = { specialists_value = specialists_share }
 						divide_temp_variable = { specialists_value = 100 }
 
 						add_to_variable = { capitalists_earnings = capitalists_value }
 						add_to_variable = { craftsmen_earnings = craftsmen_value }
 						add_to_variable = { specialists_earnings = specialists_value }
+						
+						if = {
+							limit = {
+								check_variable = { factory_everyday_goods_money > factory_everyday_goods_money_limit }
+							}
+							set_temp_variable = { excess_temp = factory_everyday_goods_money }
+							subtract_from_temp_variable = { excess_temp = factory_everyday_goods_money_limit }
+							divide_temp_variable = { excess_temp = 2 }
+							add_to_variable = { pops_earnings = excess_temp }
+							set_temp_variable = { capitalists_value = excess_temp }
+							multiply_temp_variable = { capitalists_value = capitalists_share }
+							divide_temp_variable = { capitalists_value = 100 }
+							set_temp_variable = { craftsmen_value = excess_temp }
+							multiply_temp_variable = { craftsmen_value = craftsmen_share }
+							divide_temp_variable = { craftsmen_value = 100 }
+							set_temp_variable = { specialists_value = excess_temp }
+							multiply_temp_variable = { specialists_value = specialists_share }
+							divide_temp_variable = { specialists_value = 100 }
 
-						subtract_from_variable = { factory_money = excess_temp }
-					}
+							add_to_variable = { capitalists_earnings = capitalists_value }
+							add_to_variable = { craftsmen_earnings = craftsmen_value }
+							add_to_variable = { specialists_earnings = specialists_value }
+
+							subtract_from_variable = { factory_everyday_goods_money = excess_temp }
+						}
+					#
+					#Luxury Goods
+						set_variable = { factory_luxury_goods_wages = factory_luxury_goods_earnings }
+						multiply_variable = { factory_luxury_goods_wages = global.factory_wages_revenue_percentage }
+
+						set_temp_variable = { factory_wage_max_money_temp = global.factory_wages_max_money_percentage }
+						multiply_temp_variable = { factory_wage_max_money_temp = factory_luxury_goods_money_limit }
+						multiply_temp_variable = { factory_wage_max_money_temp = factory_employment_amount }
+						divide_temp_variable = { factory_wage_max_money_temp = factory_employment_amount_max }
+						add_to_variable = { factory_luxury_goods_wages = factory_wage_max_money_temp }
+
+						add_to_variable = { factory_luxury_goods_spending = factory_luxury_goods_wages }
+
+						set_variable = { factory_luxury_goods_profit = factory_luxury_goods_earnings }
+						subtract_from_variable = { factory_luxury_goods_profit = factory_luxury_goods_spending }
+
+						set_temp_variable = { bonuses_temp = factory_luxury_goods_profit }
+						multiply_temp_variable = { bonuses_temp = global.factory_wages_profit_percentage }
+						add_to_variable = { factory_luxury_goods_wages = bonuses_temp }
+
+						add_to_variable = { factory_luxury_goods_spending = bonuses_temp }
+						subtract_from_variable = { factory_luxury_goods_profit = bonuses_temp }
+
+						subtract_from_variable = { factory_luxury_goods_money = factory_luxury_goods_wages }
+						if = {
+							limit = {
+								check_variable = { factory_luxury_goods_money < 0 }
+							}
+							add_to_variable = { factory_luxury_goods_wages = factory_luxury_goods_money }
+							set_variable = { factory_luxury_goods_money = 0 }
+						}
+						add_to_variable = { pops_earnings = factory_luxury_goods_wages }
+
+						set_temp_variable = { capitalists_share = capitalists_percentage }
+						multiply_temp_variable = { capitalists_share = 900 }
+						set_temp_variable = { craftsmen_share = craftsmen_percentage }
+						multiply_temp_variable = { craftsmen_share = 100 }
+						set_temp_variable = { specialists_share = specialists_percentage }
+						multiply_temp_variable = { specialists_share = 100 }
+						set_temp_variable = { modifier_temp = global.pops_specialists_production_bonus }
+						add_to_temp_variable = { modifier_temp = 1 }
+						multiply_temp_variable = { specialists_share = modifier_temp }
+
+						set_temp_variable = { share_total = capitalists_share }
+						add_to_temp_variable = { share_total = craftsmen_share }
+						add_to_temp_variable = { share_total = specialists_share }
+						divide_temp_variable = { share_total = 100 }
+
+						divide_temp_variable = { capitalists_share = share_total }
+						divide_temp_variable = { craftsmen_share = share_total }
+						divide_temp_variable = { specialists_share = share_total }
+
+						set_temp_variable = { capitalists_value = factory_luxury_goods_wages }
+						multiply_temp_variable = { capitalists_value = capitalists_share }
+						divide_temp_variable = { capitalists_value = 100 }
+						set_temp_variable = { craftsmen_value = factory_luxury_goods_wages }
+						multiply_temp_variable = { craftsmen_value = craftsmen_share }
+						divide_temp_variable = { craftsmen_value = 100 }
+						set_temp_variable = { specialists_value = factory_luxury_goods_wages }
+						multiply_temp_variable = { specialists_value = specialists_share }
+						divide_temp_variable = { specialists_value = 100 }
+
+						add_to_variable = { capitalists_earnings = capitalists_value }
+						add_to_variable = { craftsmen_earnings = craftsmen_value }
+						add_to_variable = { specialists_earnings = specialists_value }
+						
+						if = {
+							limit = {
+								check_variable = { factory_luxury_goods_money > factory_luxury_goods_money_limit }
+							}
+							set_temp_variable = { excess_temp = factory_luxury_goods_money }
+							subtract_from_temp_variable = { excess_temp = factory_luxury_goods_money_limit }
+							divide_temp_variable = { excess_temp = 2 }
+							add_to_variable = { pops_earnings = excess_temp }
+							set_temp_variable = { capitalists_value = excess_temp }
+							multiply_temp_variable = { capitalists_value = capitalists_share }
+							divide_temp_variable = { capitalists_value = 100 }
+							set_temp_variable = { craftsmen_value = excess_temp }
+							multiply_temp_variable = { craftsmen_value = craftsmen_share }
+							divide_temp_variable = { craftsmen_value = 100 }
+							set_temp_variable = { specialists_value = excess_temp }
+							multiply_temp_variable = { specialists_value = specialists_share }
+							divide_temp_variable = { specialists_value = 100 }
+
+							add_to_variable = { capitalists_earnings = capitalists_value }
+							add_to_variable = { craftsmen_earnings = craftsmen_value }
+							add_to_variable = { specialists_earnings = specialists_value }
+
+							subtract_from_variable = { factory_luxury_goods_money = excess_temp }
+						}
+					#
+					#Industrial Goods
+						set_variable = { factory_industrial_goods_wages = factory_industrial_goods_earnings }
+						multiply_variable = { factory_industrial_goods_wages = global.factory_wages_revenue_percentage }
+
+						set_temp_variable = { factory_wage_max_money_temp = global.factory_wages_max_money_percentage }
+						multiply_temp_variable = { factory_wage_max_money_temp = factory_industrial_goods_money_limit }
+						multiply_temp_variable = { factory_wage_max_money_temp = factory_employment_amount }
+						divide_temp_variable = { factory_wage_max_money_temp = factory_employment_amount_max }
+						add_to_variable = { factory_industrial_goods_wages = factory_wage_max_money_temp }
+
+						add_to_variable = { factory_industrial_goods_spending = factory_industrial_goods_wages }
+
+						set_variable = { factory_industrial_goods_profit = factory_industrial_goods_earnings }
+						subtract_from_variable = { factory_industrial_goods_profit = factory_industrial_goods_spending }
+
+						set_temp_variable = { bonuses_temp = factory_industrial_goods_profit }
+						multiply_temp_variable = { bonuses_temp = global.factory_wages_profit_percentage }
+						add_to_variable = { factory_industrial_goods_wages = bonuses_temp }
+
+						add_to_variable = { factory_industrial_goods_spending = bonuses_temp }
+						subtract_from_variable = { factory_industrial_goods_profit = bonuses_temp }
+
+						subtract_from_variable = { factory_industrial_goods_money = factory_industrial_goods_wages }
+						if = {
+							limit = {
+								check_variable = { factory_industrial_goods_money < 0 }
+							}
+							add_to_variable = { factory_industrial_goods_wages = factory_industrial_goods_money }
+							set_variable = { factory_industrial_goods_money = 0 }
+						}
+						add_to_variable = { pops_earnings = factory_industrial_goods_wages }
+
+						set_temp_variable = { capitalists_share = capitalists_percentage }
+						multiply_temp_variable = { capitalists_share = 900 }
+						set_temp_variable = { craftsmen_share = craftsmen_percentage }
+						multiply_temp_variable = { craftsmen_share = 100 }
+						set_temp_variable = { specialists_share = specialists_percentage }
+						multiply_temp_variable = { specialists_share = 100 }
+						set_temp_variable = { modifier_temp = global.pops_specialists_production_bonus }
+						add_to_temp_variable = { modifier_temp = 1 }
+						multiply_temp_variable = { specialists_share = modifier_temp }
+
+						set_temp_variable = { share_total = capitalists_share }
+						add_to_temp_variable = { share_total = craftsmen_share }
+						add_to_temp_variable = { share_total = specialists_share }
+						divide_temp_variable = { share_total = 100 }
+
+						divide_temp_variable = { capitalists_share = share_total }
+						divide_temp_variable = { craftsmen_share = share_total }
+						divide_temp_variable = { specialists_share = share_total }
+
+						set_temp_variable = { capitalists_value = factory_industrial_goods_wages }
+						multiply_temp_variable = { capitalists_value = capitalists_share }
+						divide_temp_variable = { capitalists_value = 100 }
+						set_temp_variable = { craftsmen_value = factory_industrial_goods_wages }
+						multiply_temp_variable = { craftsmen_value = craftsmen_share }
+						divide_temp_variable = { craftsmen_value = 100 }
+						set_temp_variable = { specialists_value = factory_industrial_goods_wages }
+						multiply_temp_variable = { specialists_value = specialists_share }
+						divide_temp_variable = { specialists_value = 100 }
+
+						add_to_variable = { capitalists_earnings = capitalists_value }
+						add_to_variable = { craftsmen_earnings = craftsmen_value }
+						add_to_variable = { specialists_earnings = specialists_value }
+						
+						if = {
+							limit = {
+								check_variable = { factory_industrial_goods_money > factory_industrial_goods_money_limit }
+							}
+							set_temp_variable = { excess_temp = factory_industrial_goods_money }
+							subtract_from_temp_variable = { excess_temp = factory_industrial_goods_money_limit }
+							divide_temp_variable = { excess_temp = 2 }
+							add_to_variable = { pops_earnings = excess_temp }
+							set_temp_variable = { capitalists_value = excess_temp }
+							multiply_temp_variable = { capitalists_value = capitalists_share }
+							divide_temp_variable = { capitalists_value = 100 }
+							set_temp_variable = { craftsmen_value = excess_temp }
+							multiply_temp_variable = { craftsmen_value = craftsmen_share }
+							divide_temp_variable = { craftsmen_value = 100 }
+							set_temp_variable = { specialists_value = excess_temp }
+							multiply_temp_variable = { specialists_value = specialists_share }
+							divide_temp_variable = { specialists_value = 100 }
+
+							add_to_variable = { capitalists_earnings = capitalists_value }
+							add_to_variable = { craftsmen_earnings = craftsmen_value }
+							add_to_variable = { specialists_earnings = specialists_value }
+
+							subtract_from_variable = { factory_industrial_goods_money = excess_temp }
+						}
+					#
 				#
 
 				add_to_variable = { pops_earnings = pops_rgos_valuable_goods_production } #Gold in dem hills
@@ -6616,26 +6924,58 @@
 					#
 
 					#Factory Earnings/Spending
-						add_to_array = { factory_earnings_array = factory_earnings }
+						add_to_array = { factory_everyday_goods_earnings_array = factory_everyday_goods_earnings }
 						if = {
 							limit = {
-								check_variable = { factory_earnings_array^num > 12 }
+								check_variable = { factory_everyday_goods_earnings_array^num > 12 }
 							}
-							remove_from_array = { array = factory_earnings_array index = 0 }
+							remove_from_array = { array = factory_everyday_goods_earnings_array index = 0 }
 						}
-						add_to_array = { factory_spending_array = factory_spending }
+						add_to_array = { factory_everyday_goods_spending_array = factory_everyday_goods_spending }
 						if = {
 							limit = {
-								check_variable = { factory_spending_array^num > 12 }
+								check_variable = { factory_everyday_goods_spending_array^num > 12 }
 							}
-							remove_from_array = { array = factory_spending_array index = 0 }
+							remove_from_array = { array = factory_everyday_goods_spending_array index = 0 }
+						}
+						
+						add_to_array = { factory_luxury_goods_earnings_array = factory_luxury_goods_earnings }
+						if = {
+							limit = {
+								check_variable = { factory_luxury_goods_earnings_array^num > 12 }
+							}
+							remove_from_array = { array = factory_luxury_goods_earnings_array index = 0 }
+						}
+						add_to_array = { factory_luxury_goods_spending_array = factory_luxury_goods_spending }
+						if = {
+							limit = {
+								check_variable = { factory_luxury_goods_spending_array^num > 12 }
+							}
+							remove_from_array = { array = factory_luxury_goods_spending_array index = 0 }
+						}
+						
+						add_to_array = { factory_industrial_goods_earnings_array = factory_industrial_goods_earnings }
+						if = {
+							limit = {
+								check_variable = { factory_industrial_goods_earnings_array^num > 12 }
+							}
+							remove_from_array = { array = factory_industrial_goods_earnings_array index = 0 }
+						}
+						add_to_array = { factory_industrial_goods_spending_array = factory_industrial_goods_spending }
+						if = {
+							limit = {
+								check_variable = { factory_industrial_goods_spending_array^num > 12 }
+							}
+							remove_from_array = { array = factory_industrial_goods_spending_array index = 0 }
 						}
 					#
 
 					#Money Supply
 						set_variable = { total_money = pops_money }
 						add_to_variable = { total_money = infrastructure_money }
-						add_to_variable = { total_money = factory_money }
+						add_to_variable = { total_money = factory_everyday_goods_money }
+						add_to_variable = { total_money = factory_luxury_goods_money }
+						add_to_variable = { total_money = factory_industrial_goods_money }
 						add_to_variable = { total_money = pops_earnings }
 						add_to_variable = { total_money = pops_savings }
 						add_to_variable = { total_money = factory_everyday_goods_construction_investment_money }
@@ -7753,73 +8093,73 @@
 					set_variable = { global.conscripted_payroll_multiplier = 2 } #The multiple of the above expense that goes directly to pops
 
 					###############################################################
-					set_variable = { global.infantry_base_life_goods_need = 0.0 } #Per Battalion
-					set_variable = { global.infantry_base_everyday_goods_need = 0.0 }
-					set_variable = { global.infantry_base_luxury_goods_need = 0.0 }
-					set_variable = { global.infantry_base_industrial_goods_need = 0 }
+					# set_variable = { global.infantry_base_life_goods_need = 0.0 } #Per Battalion
+					# set_variable = { global.infantry_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.infantry_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.infantry_base_industrial_goods_need = 0 }
 					
-					set_variable = { global.militia_base_life_goods_need = 0.0 }
-					set_variable = { global.militia_base_everyday_goods_need = 0.0 }
-					set_variable = { global.militia_base_luxury_goods_need = 0 }
-					set_variable = { global.militia_base_industrial_goods_need = 0 }
+					# set_variable = { global.militia_base_life_goods_need = 0.0 }
+					# set_variable = { global.militia_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.militia_base_luxury_goods_need = 0 }
+					# set_variable = { global.militia_base_industrial_goods_need = 0 }
 					
-					set_variable = { global.artillery_base_life_goods_need = 0.0 }
-					set_variable = { global.artillery_base_everyday_goods_need = 0.0 }
-					set_variable = { global.artillery_base_luxury_goods_need = 0.0 }
-					set_variable = { global.artillery_base_industrial_goods_need = 0.0 }
+					# set_variable = { global.artillery_base_life_goods_need = 0.0 }
+					# set_variable = { global.artillery_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.artillery_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.artillery_base_industrial_goods_need = 0.0 }
 					
-					set_variable = { global.cavalry_base_life_goods_need = 0.0 }
-					set_variable = { global.cavalry_base_everyday_goods_need = 0.0 }
-					set_variable = { global.cavalry_base_luxury_goods_need = 0.0 }
-					set_variable = { global.cavalry_base_industrial_goods_need = 0 }
+					# set_variable = { global.cavalry_base_life_goods_need = 0.0 }
+					# set_variable = { global.cavalry_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.cavalry_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.cavalry_base_industrial_goods_need = 0 }
 					
-					set_variable = { global.mobile_base_life_goods_need = 0.0 }
-					set_variable = { global.mobile_base_everyday_goods_need = 0.0 }
-					set_variable = { global.mobile_base_luxury_goods_need = 0.0 }
-					set_variable = { global.mobile_base_industrial_goods_need = 0.0 }
+					# set_variable = { global.mobile_base_life_goods_need = 0.0 }
+					# set_variable = { global.mobile_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.mobile_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.mobile_base_industrial_goods_need = 0.0 }
 					
-					set_variable = { global.armor_base_life_goods_need = 0.0 }
-					set_variable = { global.armor_base_everyday_goods_need = 0.0 }
-					set_variable = { global.armor_base_luxury_goods_need = 0.0 }
-					set_variable = { global.armor_base_industrial_goods_need = 0.0 }
+					# set_variable = { global.armor_base_life_goods_need = 0.0 }
+					# set_variable = { global.armor_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.armor_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.armor_base_industrial_goods_need = 0.0 }
 					
-					set_variable = { global.robotic_base_life_goods_need = 0.0 }
-					set_variable = { global.robotic_base_everyday_goods_need = 0.0 }
-					set_variable = { global.robotic_base_luxury_goods_need = 0.0 }
-					set_variable = { global.robotic_base_industrial_goods_need = 0.0 }
+					# set_variable = { global.robotic_base_life_goods_need = 0.0 }
+					# set_variable = { global.robotic_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.robotic_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.robotic_base_industrial_goods_need = 0.0 }
 					
-					set_variable = { global.support_base_life_goods_need = 0.0 } #Per Support Company
-					set_variable = { global.support_base_everyday_goods_need = 0.0 }
-					set_variable = { global.support_base_luxury_goods_need = 0 }
-					set_variable = { global.support_base_industrial_goods_need = 0 }
+					# set_variable = { global.support_base_life_goods_need = 0.0 } #Per Support Company
+					# set_variable = { global.support_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.support_base_luxury_goods_need = 0 }
+					# set_variable = { global.support_base_industrial_goods_need = 0 }
 					
-					#Navy
-					set_variable = { global.screen_base_life_goods_need = 0.0 } #Per Ship
-					set_variable = { global.screen_base_everyday_goods_need = 0.0 }
-					set_variable = { global.screen_base_luxury_goods_need = 0.0 }
-					set_variable = { global.screen_base_industrial_goods_need = 0.0 }
+					# #Navy
+					# set_variable = { global.screen_base_life_goods_need = 0.0 } #Per Ship
+					# set_variable = { global.screen_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.screen_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.screen_base_industrial_goods_need = 0.0 }
 					
-					set_variable = { global.capital_base_life_goods_need = 0.0 }
-					set_variable = { global.capital_base_everyday_goods_need = 0.0 }
-					set_variable = { global.capital_base_luxury_goods_need = 0.0 }
-					set_variable = { global.capital_base_industrial_goods_need = 0.0 }
+					# set_variable = { global.capital_base_life_goods_need = 0.0 }
+					# set_variable = { global.capital_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.capital_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.capital_base_industrial_goods_need = 0.0 }
 					
-					set_variable = { global.submarine_base_life_goods_need = 0.0 }
-					set_variable = { global.submarine_base_everyday_goods_need = 0.0 }
-					set_variable = { global.submarine_base_luxury_goods_need = 0.0 }
-					set_variable = { global.submarine_base_industrial_goods_need = 0.0 }
+					# set_variable = { global.submarine_base_life_goods_need = 0.0 }
+					# set_variable = { global.submarine_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.submarine_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.submarine_base_industrial_goods_need = 0.0 }
 					
-					#Airforce
-					set_variable = { global.deployed_planes_base_life_goods_need = 0.0 } #Per Deployed Plane
-					set_variable = { global.deployed_planes_base_everyday_goods_need = 0.0 }
-					set_variable = { global.deployed_planes_base_luxury_goods_need = 0.0}
-					set_variable = { global.deployed_planes_base_industrial_goods_need = 0.0 }
+					# #Airforce
+					# set_variable = { global.deployed_planes_base_life_goods_need = 0.0 } #Per Deployed Plane
+					# set_variable = { global.deployed_planes_base_everyday_goods_need = 0.0 }
+					# set_variable = { global.deployed_planes_base_luxury_goods_need = 0.0}
+					# set_variable = { global.deployed_planes_base_industrial_goods_need = 0.0 }
 
-					#Other
-					set_variable = { global.conscripted_base_life_goods_need = 0 } #Per 100K
-					set_variable = { global.conscripted_base_everyday_goods_need = 0 }
-					set_variable = { global.conscripted_base_luxury_goods_need = 0.0 }
-					set_variable = { global.conscripted_payroll_multiplier = 0 } #The multiple of the above expense that goes directly to pops
+					# #Other
+					# set_variable = { global.conscripted_base_life_goods_need = 0 } #Per 100K
+					# set_variable = { global.conscripted_base_everyday_goods_need = 0 }
+					# set_variable = { global.conscripted_base_luxury_goods_need = 0.0 }
+					# set_variable = { global.conscripted_payroll_multiplier = 0 } #The multiple of the above expense that goes directly to pops
 				#
 				#Projects
 					clear_array = proj_id
@@ -8037,9 +8377,9 @@
 			set_variable = { income_tax_lower_strata_percentage = 0 }
 			set_variable = { export_tariff_percentage = 25 }
 			set_variable = { import_tariff_percentage = 25 }
-			set_variable = { sales_tax_percentage = 1 }
+			set_variable = { sales_tax_percentage = 5 }
 
-			set_variable = { military_spending_percentage = 100 }
+			set_variable = { military_spending_percentage = 50 }
 			set_variable = { intelligence_spending_percentage = 100 }
 			set_variable = { construction_spending_percentage = 100 }
 			
@@ -8073,12 +8413,18 @@
 					set_variable = { pops_goods_spending = 0 }
 					set_variable = { pops_savings = 0 }
 					set_variable = { pops_debt = 0 }
-
-					set_variable = { factory_earnings = 0 }
-					set_variable = { factory_spending = 0 }
+					
 					set_variable = { factory_everyday_goods_sold = 0 }
+					set_variable = { factory_everyday_goods_earnings = 0 }
+					set_variable = { factory_everyday_goods_spending = 0 }
+					
 					set_variable = { factory_luxury_goods_sold = 0 }
+					set_variable = { factory_luxury_goods_earnings = 0 }
+					set_variable = { factory_luxury_goods_spending = 0 }
+					
 					set_variable = { factory_industrial_goods_sold = 0 }
+					set_variable = { factory_industrial_goods_earnings = 0 }
+					set_variable = { factory_industrial_goods_spending = 0 }
 
 					set_variable = { pops_life_goods_fulfilled_percentage = 1 }
 					set_variable = { pops_everyday_goods_fulfilled_percentage = 1 }
@@ -8092,8 +8438,12 @@
 
 					set_variable = { pops_artisans_raw_goods_fulfilled_percentage = 1 }
 
-					set_variable = { factory_raw_goods_fulfilled_percentage = 1 }
-					set_variable = { factory_industrial_goods_fulfilled_percentage = 1 }
+					set_variable = { factory_everyday_goods_raw_goods_fulfilled_percentage = 1 }
+					set_variable = { factory_luxury_goods_raw_goods_fulfilled_percentage = 1 }
+					set_variable = { factory_industrial_goods_raw_goods_fulfilled_percentage = 1 }
+					set_variable = { factory_everyday_goods_industrial_goods_fulfilled_percentage = 1 }
+					set_variable = { factory_luxury_goods_industrial_goods_fulfilled_percentage = 1 }
+					set_variable = { factory_industrial_goods_industrial_goods_fulfilled_percentage = 1 }
 
 					set_variable = { infrastructure_industrial_goods_fulfilled_percentage = 1 }
 					set_variable = { infrastructure_crumbling_ticks = 0 }
@@ -8789,16 +9139,24 @@
 				
 
 				factories_update = yes
-				set_variable = { factory_money = factory_money_limit }
-				multiply_variable = { factory_money = 1.25 }
+				set_variable = { factory_everyday_goods_money = factory_everyday_goods_money_limit }
+				multiply_variable = { factory_everyday_goods_money = 1.25 }
+				set_variable = { factory_luxury_goods_money = factory_luxury_goods_money_limit }
+				multiply_variable = { factory_luxury_goods_money = 1.25 }
+				set_variable = { factory_industrial_goods_money = factory_industrial_goods_money_limit }
+				multiply_variable = { factory_industrial_goods_money = 1.25 }
 				update_production_maintenance = yes
 				calculate_supply = yes
 
 				clear_array = pops_life_goods_fulfilled_array
 				clear_array = pops_everyday_goods_fulfilled_array
 				clear_array = pops_luxury_goods_fulfilled_array
-				clear_array = factory_earnings_array
-				clear_array = factory_spending_array
+				clear_array = factory_everyday_goods_earnings_array
+				clear_array = factory_everyday_goods_spending_array
+				clear_array = factory_luxury_goods_earnings_array
+				clear_array = factory_luxury_goods_spending_array
+				clear_array = factory_industrial_goods_earnings_array
+				clear_array = factory_industrial_goods_spending_array
 				clear_array = gdp_amount_array
 
 				pops_update = yes
@@ -9337,43 +9695,115 @@
 		divide_variable = { factory_employment_percentage = factory_employment_amount_max }
 
 		#Money Limit
-		set_temp_variable = { everyday_goods_factory_money_limit_temp = global.factory_money_limit }
-		multiply_temp_variable = { everyday_goods_factory_money_limit_temp = factory_everyday_goods_amount }
-		multiply_temp_variable = { everyday_goods_factory_money_limit_temp = everyday_goods_base_price }
+		set_variable = { factory_everyday_goods_money_limit = global.factory_money_limit }
+		multiply_variable = { factory_everyday_goods_money_limit = factory_everyday_goods_amount }
+		multiply_variable = { factory_everyday_goods_money_limit = everyday_goods_base_price }
+		divide_variable = { factory_everyday_goods_money_limit = 100 }
+		multiply_variable = { factory_everyday_goods_money_limit = factory_employment_amount_per_factory }
 		
-		set_temp_variable = { luxury_goods_factory_money_limit_temp = global.factory_money_limit }
-		multiply_temp_variable = { luxury_goods_factory_money_limit_temp = factory_luxury_goods_amount }
-		multiply_temp_variable = { luxury_goods_factory_money_limit_temp = luxury_goods_base_price }
+		set_variable = { factory_luxury_goods_money_limit = global.factory_money_limit }
+		multiply_variable = { factory_luxury_goods_money_limit = factory_luxury_goods_amount }
+		multiply_variable = { factory_luxury_goods_money_limit = luxury_goods_base_price }
+		divide_variable = { factory_luxury_goods_money_limit = 100 }
+		multiply_variable = { factory_luxury_goods_money_limit = factory_employment_amount_per_factory }
 		
-		set_temp_variable = { industrial_goods_factory_money_limit_temp = global.factory_money_limit }
-		multiply_temp_variable = { industrial_goods_factory_money_limit_temp = factory_industrial_goods_amount }
-		multiply_temp_variable = { industrial_goods_factory_money_limit_temp = industrial_goods_base_price }
-
-		set_variable = { factory_money_limit = everyday_goods_factory_money_limit_temp }
-		add_to_variable = { factory_money_limit = luxury_goods_factory_money_limit_temp }
-		add_to_variable = { factory_money_limit = industrial_goods_factory_money_limit_temp }
-		divide_variable = { factory_money_limit = 100 }
-		multiply_variable = { factory_money_limit = factory_employment_amount_per_factory }
+		set_variable = { factory_industrial_goods_money_limit = global.factory_money_limit }
+		multiply_variable = { factory_industrial_goods_money_limit = factory_industrial_goods_amount }
+		multiply_variable = { factory_industrial_goods_money_limit = industrial_goods_base_price }
+		divide_variable = { factory_industrial_goods_money_limit = 100 }
+		multiply_variable = { factory_industrial_goods_money_limit = factory_employment_amount_per_factory }
 
 		#Profitability
-		set_variable = { factory_profitability_this_month = factory_profit }
-		divide_variable = { factory_profitability_this_month = factory_earnings }
+		set_variable = { factory_everyday_goods_profitability_this_month = factory_everyday_goods_profit }
+		divide_variable = { factory_everyday_goods_profitability_this_month = factory_everyday_goods_earnings }
+		
+		set_variable = { factory_luxury_goods_profitability_this_month = factory_luxury_goods_profit }
+		divide_variable = { factory_luxury_goods_profitability_this_month = factory_luxury_goods_earnings }
+		
+		set_variable = { factory_industrial_goods_profitability_this_month = factory_industrial_goods_profit }
+		divide_variable = { factory_industrial_goods_profitability_this_month = factory_industrial_goods_earnings }
 
 		set_temp_variable = { factory_earnings_temp = 0 }
 		set_temp_variable = { factory_spending_temp = 0 }
 		for_each_loop = { 
-			array = factory_earnings_array
+			array = factory_everyday_goods_earnings_array
 			value = vv
 			add_to_temp_variable = { factory_earnings_temp = vv }
 		}
 		for_each_loop = { 
-			array = factory_spending_array
+			array = factory_everyday_goods_spending_array
 			value = vv
 			add_to_temp_variable = { factory_spending_temp = vv }
 		}
-		set_variable = { factory_profitability = factory_earnings_temp }
-		subtract_from_variable ={ factory_profitability = factory_spending_temp }
-		divide_variable = { factory_profitability = factory_earnings_temp }
+		set_variable = { factory_everyday_goods_profitability = factory_earnings_temp }
+		subtract_from_variable ={ factory_everyday_goods_profitability = factory_spending_temp }
+		divide_variable = { factory_everyday_goods_profitability = factory_earnings_temp }
+
+		set_temp_variable = { factory_earnings_temp = 0 }
+		set_temp_variable = { factory_spending_temp = 0 }
+		for_each_loop = { 
+			array = factory_luxury_goods_earnings_array
+			value = vv
+			add_to_temp_variable = { factory_earnings_temp = vv }
+		}
+		for_each_loop = { 
+			array = factory_luxury_goods_spending_array
+			value = vv
+			add_to_temp_variable = { factory_spending_temp = vv }
+		}
+		set_variable = { factory_luxury_goods_profitability = factory_earnings_temp }
+		subtract_from_variable ={ factory_luxury_goods_profitability = factory_spending_temp }
+		divide_variable = { factory_luxury_goods_profitability = factory_earnings_temp }
+
+		set_temp_variable = { factory_earnings_temp = 0 }
+		set_temp_variable = { factory_spending_temp = 0 }
+		for_each_loop = { 
+			array = factory_industrial_goods_earnings_array
+			value = vv
+			add_to_temp_variable = { factory_earnings_temp = vv }
+		}
+		for_each_loop = { 
+			array = factory_industrial_goods_spending_array
+			value = vv
+			add_to_temp_variable = { factory_spending_temp = vv }
+		}
+		set_variable = { factory_industrial_goods_profitability = factory_earnings_temp }
+		subtract_from_variable ={ factory_industrial_goods_profitability = factory_spending_temp }
+		divide_variable = { factory_industrial_goods_profitability = factory_earnings_temp }
+
+		#Input %
+		set_variable = { factory_raw_goods_fulfilled_percentage = 0 }
+		
+		set_temp_variable = { g_temp = factory_everyday_goods_raw_goods_fulfilled_percentage }
+		multiply_temp_variable = { g_temp = factory_everyday_goods_raw_goods_need }
+		add_to_variable = { factory_raw_goods_fulfilled_percentage = g_temp }
+		
+		set_temp_variable = { g_temp = factory_luxury_goods_raw_goods_fulfilled_percentage }
+		multiply_temp_variable = { g_temp = factory_luxury_goods_raw_goods_need }
+		add_to_variable = { factory_raw_goods_fulfilled_percentage = g_temp }
+		
+		set_temp_variable = { g_temp = factory_industrial_goods_raw_goods_fulfilled_percentage }
+		multiply_temp_variable = { g_temp = factory_industrial_goods_raw_goods_need }
+		add_to_variable = { factory_raw_goods_fulfilled_percentage = g_temp }
+
+		divide_variable = { factory_raw_goods_fulfilled_percentage = factory_raw_goods_need }
+
+
+		set_variable = { factory_industrial_goods_fulfilled_percentage = 0 }
+		
+		set_temp_variable = { g_temp = factory_everyday_goods_industrial_goods_fulfilled_percentage }
+		multiply_temp_variable = { g_temp = factory_everyday_goods_industrial_goods_need }
+		add_to_variable = { factory_industrial_goods_fulfilled_percentage = g_temp }
+		
+		set_temp_variable = { g_temp = factory_luxury_goods_industrial_goods_fulfilled_percentage }
+		multiply_temp_variable = { g_temp = factory_luxury_goods_industrial_goods_need }
+		add_to_variable = { factory_industrial_goods_fulfilled_percentage = g_temp }
+		
+		set_temp_variable = { g_temp = factory_industrial_goods_industrial_goods_fulfilled_percentage }
+		multiply_temp_variable = { g_temp = factory_industrial_goods_industrial_goods_need }
+		add_to_variable = { factory_industrial_goods_fulfilled_percentage = g_temp }
+		
+		divide_variable = { factory_industrial_goods_fulfilled_percentage = factory_industrial_goods_need }
 	}
 
 	update_production_maintenance = {
@@ -9666,13 +10096,24 @@
 			multiply_variable = { factory_industrial_goods_production = modifier_temp }
 
 			#Maintenance
-			set_variable = { factory_industrial_goods_need = factory_everyday_goods_production }
-			add_to_variable = { factory_industrial_goods_need = factory_luxury_goods_production }
-			add_to_variable = { factory_industrial_goods_need = factory_industrial_goods_production }
-			multiply_variable = { factory_industrial_goods_need = global.factory_industrial_goods_base_need }
 			set_temp_variable = { modifier_temp = factory_industrial_goods_maintenance_effect }
 			add_to_temp_variable = { modifier_temp = 1 }
-			multiply_variable = { factory_industrial_goods_need = modifier_temp }
+
+			set_variable = { factory_everyday_goods_industrial_goods_need = factory_everyday_goods_production }
+			multiply_variable = { factory_everyday_goods_industrial_goods_need = global.factory_industrial_goods_base_need }
+			multiply_variable = { factory_everyday_goods_industrial_goods_need = modifier_temp }
+			
+			set_variable = { factory_luxury_goods_industrial_goods_need = factory_luxury_goods_production }
+			multiply_variable = { factory_luxury_goods_industrial_goods_need = global.factory_industrial_goods_base_need }
+			multiply_variable = { factory_luxury_goods_industrial_goods_need = modifier_temp }
+			
+			set_variable = { factory_industrial_goods_industrial_goods_need = factory_industrial_goods_production }
+			multiply_variable = { factory_industrial_goods_industrial_goods_need = global.factory_industrial_goods_base_need }
+			multiply_variable = { factory_industrial_goods_industrial_goods_need = modifier_temp }
+
+			set_variable = { factory_industrial_goods_need = factory_everyday_goods_industrial_goods_need }
+			add_to_variable = { factory_industrial_goods_need = factory_luxury_goods_industrial_goods_need }
+			add_to_variable = { factory_industrial_goods_need = factory_industrial_goods_industrial_goods_need }
 
 			#Input
 			set_variable = { factory_everyday_goods_raw_goods_need = global.factory_everyday_goods_raw_goods_base_need }
@@ -9697,22 +10138,26 @@
 			add_to_variable = { factory_raw_goods_need = factory_luxury_goods_raw_goods_need }
 			add_to_variable = { factory_raw_goods_need = factory_industrial_goods_raw_goods_need }
 
-			#Fulfilled
-			set_temp_variable = { fulfilled_temp = factory_raw_goods_fulfilled_percentage }
-			add_to_temp_variable = { fulfilled_temp = factory_industrial_goods_fulfilled_percentage }
-			divide_temp_variable = { fulfilled_temp = 2 }
-
 			#Output
+			set_temp_variable = { fulfilled_temp = factory_everyday_goods_raw_goods_fulfilled_percentage }
+			add_to_temp_variable = { fulfilled_temp = factory_everyday_goods_industrial_goods_fulfilled_percentage }
+			divide_temp_variable = { fulfilled_temp = 2 }
 			multiply_variable = { factory_everyday_goods_production = fulfilled_temp }
 			set_temp_variable = { modifier_temp = factory_everyday_goods_output_effect }
 			add_to_temp_variable = { modifier_temp = 1 }
 			multiply_variable = { factory_everyday_goods_production = modifier_temp }
 
+			set_temp_variable = { fulfilled_temp = factory_luxury_goods_raw_goods_fulfilled_percentage }
+			add_to_temp_variable = { fulfilled_temp = factory_luxury_goods_industrial_goods_fulfilled_percentage }
+			divide_temp_variable = { fulfilled_temp = 2 }
 			multiply_variable = { factory_luxury_goods_production = fulfilled_temp }
 			set_temp_variable = { modifier_temp = factory_luxury_goods_output_effect }
 			add_to_temp_variable = { modifier_temp = 1 }
 			multiply_variable = { factory_luxury_goods_production = modifier_temp }
 
+			set_temp_variable = { fulfilled_temp = factory_industrial_goods_raw_goods_fulfilled_percentage }
+			add_to_temp_variable = { fulfilled_temp = factory_industrial_goods_industrial_goods_fulfilled_percentage }
+			divide_temp_variable = { fulfilled_temp = 2 }
 			multiply_variable = { factory_industrial_goods_production = fulfilled_temp }
 			set_temp_variable = { modifier_temp = factory_industrial_goods_output_effect }
 			add_to_temp_variable = { modifier_temp = 1 }
@@ -11477,18 +11922,21 @@
 			multiply_temp_variable = { factory_raw_goods_need_temp = modifier_temp }
 
 			#Fulfilled
-			set_temp_variable = { fulfilled_temp = factory_raw_goods_fulfilled_percentage }
-			add_to_temp_variable = { fulfilled_temp = factory_industrial_goods_fulfilled_percentage }
+			set_temp_variable = { fulfilled_temp = factory_everyday_goods_raw_goods_fulfilled_percentage }
+			add_to_temp_variable = { fulfilled_temp = factory_everyday_goods_industrial_goods_fulfilled_percentage }
 			divide_temp_variable = { fulfilled_temp = 2 }
 
 			if = {
 				limit = {
-					check_variable = { factory_employment_amount < 0.1 }
+					OR = {
+						check_variable = { factory_employment_amount < 0.1 }
+						check_variable = { factory_everyday_goods_amount = 0 }
+					}
 					check_variable = { fulfilled_temp < 0.25 }
 				}
 				if = {
 					limit = {
-						check_variable = { factory_employment_amount = 0 }
+						check_variable = { factory_everyday_goods_amount = 0 }
 					}
 					set_temp_variable = { fulfilled_temp = 1 }
 				}
@@ -11795,18 +12243,21 @@
 			multiply_temp_variable = { factory_raw_goods_need_temp = modifier_temp }
 
 			#Fulfilled
-			set_temp_variable = { fulfilled_temp = factory_raw_goods_fulfilled_percentage }
-			add_to_temp_variable = { fulfilled_temp = factory_industrial_goods_fulfilled_percentage }
+			set_temp_variable = { fulfilled_temp = factory_luxury_goods_raw_goods_fulfilled_percentage }
+			add_to_temp_variable = { fulfilled_temp = factory_luxury_goods_industrial_goods_fulfilled_percentage }
 			divide_temp_variable = { fulfilled_temp = 2 }
 
 			if = {
 				limit = {
-					check_variable = { factory_employment_amount < 0.1 }
+					OR = {
+						check_variable = { factory_employment_amount < 0.1 }
+						check_variable = { factory_luxury_goods_amount = 0 }
+					}
 					check_variable = { fulfilled_temp < 0.25 }
 				}
 				if = {
 					limit = {
-						check_variable = { factory_employment_amount = 0 }
+						check_variable = { factory_luxury_goods_amount = 0 }
 					}
 					set_temp_variable = { fulfilled_temp = 1 }
 				}
@@ -12112,18 +12563,21 @@
 			multiply_temp_variable = { factory_raw_goods_need_temp = modifier_temp }
 
 			#Fulfilled
-			set_temp_variable = { fulfilled_temp = factory_raw_goods_fulfilled_percentage }
-			add_to_temp_variable = { fulfilled_temp = factory_industrial_goods_fulfilled_percentage }
+			set_temp_variable = { fulfilled_temp = factory_industrial_goods_raw_goods_fulfilled_percentage }
+			add_to_temp_variable = { fulfilled_temp = factory_industrial_goods_industrial_goods_fulfilled_percentage }
 			divide_temp_variable = { fulfilled_temp = 2 }
 
 			if = {
 				limit = {
-					check_variable = { factory_employment_amount < 0.1 }
+					OR = {
+						check_variable = { factory_employment_amount < 0.1 }
+						check_variable = { factory_industrial_goods_amount = 0 }
+					}
 					check_variable = { fulfilled_temp < 0.25 }
 				}
 				if = {
 					limit = {
-						check_variable = { factory_employment_amount = 0 }
+						check_variable = { factory_industrial_goods_amount = 0 }
 					}
 					set_temp_variable = { fulfilled_temp = 1 }
 				}
@@ -12418,7 +12872,7 @@
 			clr_state_flag = factory_everyday_goods_construction_government_subsidized
 
 			add_to_variable = { factory_everyday_goods_amount = 1 }
-			add_to_variable = { factory_money = factory_everyday_goods_construction_investment_money }
+			add_to_variable = { factory_everyday_goods_money = factory_everyday_goods_construction_investment_money }
 			set_variable = { factory_everyday_goods_construction_investment_money = 0 }
 			set_variable = { factory_everyday_goods_construction_industrial_goods_need = 0 }
 
@@ -12478,7 +12932,7 @@
 			clr_state_flag = factory_luxury_goods_construction_government_subsidized
 
 			add_to_variable = { factory_luxury_goods_amount = 1 }
-			add_to_variable = { factory_money = factory_luxury_goods_investment_money }
+			add_to_variable = { factory_luxury_goods_money = factory_luxury_goods_investment_money }
 			set_variable = { factory_luxury_goods_investment_money = 0 }
 			set_variable = { factory_luxury_goods_construction_industrial_goods_need = 0 }
 
@@ -12538,7 +12992,7 @@
 			clr_state_flag = factory_industrial_goods_construction_government_subsidized
 
 			add_to_variable = { factory_industrial_goods_amount = 1 }
-			add_to_variable = { factory_money = factory_industrial_goods_investment_money }
+			add_to_variable = { factory_industrial_goods_money = factory_industrial_goods_investment_money }
 			set_variable = { factory_industrial_goods_investment_money = 0 }
 			set_variable = { factory_industrial_goods_construction_industrial_goods_need = 0 }
 
@@ -13849,20 +14303,6 @@
 		add_to_variable = { services_government_demand = projects_services_demand }
 		add_to_variable = { raw_goods_government_demand = projects_raw_goods_demand }
 		add_to_variable = { industrial_goods_government_demand = projects_industrial_goods_demand }
-
-		
-		# set_variable = { life_goods_government_demand = 0 }
-		# set_variable = { everyday_goods_government_demand = 0 }
-		# set_variable = { luxury_goods_government_demand = 0 }
-		# set_variable = { services_government_demand = 0 }
-		# set_variable = { raw_goods_government_demand = 0 }
-		# set_variable = { industrial_goods_government_demand = 0 }
-		# if = {
-		# 	limit = {
-		# 		tag = USA
-		# 	}
-		# 	set_variable = { life_goods_government_demand = 0 }
-		# }
 	}
 	
 	calculate_pop_demand = {
@@ -14472,106 +14912,317 @@
 	calculate_factory_demand = {
 		#State Scope
 
-		set_temp_variable = { money_left_temp = factory_money }
-		add_to_temp_variable = { money_left_temp = factory_earnings }
 
 		#Factory Demand is a factor of A: How much they need the resource and B: How much they are willing to spend
 
-		#Raw Goods
-			set_temp_variable = { money_raw_goods_temp = money_left_temp }
-			multiply_temp_variable = { money_raw_goods_temp = global.factory_raw_goods_spending_max } #Factories will spend up to 30% of their money on Raw Goods
-			
-			set_temp_variable = { price_temp = raw_goods_price }
-			set_temp_variable = { magnitude_temp = 1 }
-			if = {
-				limit = {
-					divide_temp_variable = { price_temp = 1.1 }
-					check_variable = { price_temp > raw_goods_base_price }
-				}
-				while_loop_effect = {
+		#Everyday Goods Factory
+			set_temp_variable = { money_left_temp = factory_everyday_goods_money }
+			add_to_temp_variable = { money_left_temp = factory_everyday_goods_earnings }
+
+			#Raw Goods
+				set_temp_variable = { money_raw_goods_temp = money_left_temp }
+				multiply_temp_variable = { money_raw_goods_temp = global.factory_raw_goods_spending_max } #Factories will spend up to 30% of their money on Raw Goods
+				
+				set_temp_variable = { price_temp = raw_goods_price }
+				set_temp_variable = { magnitude_temp = 1 }
+				if = {
 					limit = {
+						divide_temp_variable = { price_temp = 1.1 }
 						check_variable = { price_temp > raw_goods_base_price }
-						check_variable = { magnitude_temp < 5 }
 					}
-					divide_temp_variable = { price_temp = 1.1 }
-					add_to_temp_variable = { magnitude_temp = 0.1 }
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp > raw_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						divide_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					divide_temp_variable = { money_raw_goods_temp = magnitude_temp }
 				}
-				divide_temp_variable = { money_raw_goods_temp = magnitude_temp }
-			}
-			else_if = {
-				limit = {
-					multiply_temp_variable = { price_temp = 1.21 }
-					check_variable = { price_temp < raw_goods_base_price }
-				}
-				while_loop_effect = {
+				else_if = {
 					limit = {
+						multiply_temp_variable = { price_temp = 1.21 }
 						check_variable = { price_temp < raw_goods_base_price }
-						check_variable = { magnitude_temp < 5 }
 					}
-					multiply_temp_variable = { price_temp = 1.1 }
-					add_to_temp_variable = { magnitude_temp = 0.1 }
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp < raw_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						multiply_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					multiply_temp_variable = { money_raw_goods_temp = magnitude_temp }
 				}
-				multiply_temp_variable = { money_raw_goods_temp = magnitude_temp }
-			}
 
-			set_variable = { factory_raw_goods_demand = money_raw_goods_temp }
-			divide_variable = { factory_raw_goods_demand = raw_goods_price }
-			multiply_variable = { factory_raw_goods_demand = 0.99 }
+				set_variable = { factory_everyday_goods_raw_goods_demand = money_raw_goods_temp }
+				divide_variable = { factory_everyday_goods_raw_goods_demand = raw_goods_price }
+				multiply_variable = { factory_everyday_goods_raw_goods_demand = 0.99 }
 
-			if = {
-				limit = {
-					check_variable = { factory_raw_goods_demand > factory_raw_goods_need }
-				}
-				set_variable = { factory_raw_goods_demand = factory_raw_goods_need }
-			}
-
-		#Industrial Goods
-			set_temp_variable = { money_industrial_goods_temp = money_left_temp }
-			multiply_temp_variable = { money_industrial_goods_temp = global.factory_industrial_goods_spending_max } #Factories will spend up to 30% of their money on Industrial Goods
-			
-			set_temp_variable = { price_temp = industrial_goods_price }
-			set_temp_variable = { magnitude_temp = 1 }
-			if = {
-				limit = {
-					divide_temp_variable = { price_temp = 1.1 }
-					check_variable = { price_temp > industrial_goods_base_price }
-				}
-				while_loop_effect = {
+				if = {
 					limit = {
+						check_variable = { factory_everyday_goods_raw_goods_demand > factory_everyday_goods_raw_goods_need }
+					}
+					set_variable = { factory_everyday_goods_raw_goods_demand = factory_everyday_goods_raw_goods_need }
+				}
+
+			#Industrial Goods
+				set_temp_variable = { money_industrial_goods_temp = money_left_temp }
+				multiply_temp_variable = { money_industrial_goods_temp = global.factory_industrial_goods_spending_max } #Factories will spend up to 30% of their money on Industrial Goods
+				
+				set_temp_variable = { price_temp = industrial_goods_price }
+				set_temp_variable = { magnitude_temp = 1 }
+				if = {
+					limit = {
+						divide_temp_variable = { price_temp = 1.1 }
 						check_variable = { price_temp > industrial_goods_base_price }
-						check_variable = { magnitude_temp < 5 }
 					}
-					divide_temp_variable = { price_temp = 1.1 }
-					add_to_temp_variable = { magnitude_temp = 0.1 }
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp > industrial_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						divide_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					divide_temp_variable = { money_industrial_goods_temp = magnitude_temp }
 				}
-				divide_temp_variable = { money_industrial_goods_temp = magnitude_temp }
-			}
-			else_if = {
-				limit = {
-					multiply_temp_variable = { price_temp = 1.21 }
-					check_variable = { price_temp < industrial_goods_base_price }
-				}
-				while_loop_effect = {
+				else_if = {
 					limit = {
+						multiply_temp_variable = { price_temp = 1.21 }
 						check_variable = { price_temp < industrial_goods_base_price }
-						check_variable = { magnitude_temp < 5 }
 					}
-					multiply_temp_variable = { price_temp = 1.1 }
-					add_to_temp_variable = { magnitude_temp = 0.1 }
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp < industrial_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						multiply_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					multiply_temp_variable = { money_industrial_goods_temp = magnitude_temp }
 				}
-				multiply_temp_variable = { money_industrial_goods_temp = magnitude_temp }
-			}
 
-			set_variable = { factory_industrial_goods_demand = money_industrial_goods_temp }
-			divide_variable = { factory_industrial_goods_demand = industrial_goods_price }
-			multiply_variable = { factory_industrial_goods_demand = 0.99 }
+				set_variable = { factory_everyday_goods_industrial_goods_demand = money_industrial_goods_temp }
+				divide_variable = { factory_everyday_goods_industrial_goods_demand = industrial_goods_price }
+				multiply_variable = { factory_everyday_goods_industrial_goods_demand = 0.99 }
 
-			if = {
-				limit = {
-					check_variable = { factory_industrial_goods_demand > factory_industrial_goods_need }
+				if = {
+					limit = {
+						check_variable = { factory_everyday_goods_industrial_goods_demand > factory_everyday_goods_industrial_goods_need }
+					}
+					set_variable = { factory_everyday_goods_industrial_goods_demand = factory_everyday_goods_industrial_goods_need }
 				}
-				set_variable = { factory_industrial_goods_demand = factory_industrial_goods_need }
-			}
+		#
+		#Luxury Goods Factory
+			set_temp_variable = { money_left_temp = factory_luxury_goods_money }
+			add_to_temp_variable = { money_left_temp = factory_luxury_goods_earnings }
+
+			#Raw Goods
+				set_temp_variable = { money_raw_goods_temp = money_left_temp }
+				multiply_temp_variable = { money_raw_goods_temp = global.factory_raw_goods_spending_max } #Factories will spend up to 30% of their money on Raw Goods
+				
+				set_temp_variable = { price_temp = raw_goods_price }
+				set_temp_variable = { magnitude_temp = 1 }
+				if = {
+					limit = {
+						divide_temp_variable = { price_temp = 1.1 }
+						check_variable = { price_temp > raw_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp > raw_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						divide_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					divide_temp_variable = { money_raw_goods_temp = magnitude_temp }
+				}
+				else_if = {
+					limit = {
+						multiply_temp_variable = { price_temp = 1.21 }
+						check_variable = { price_temp < raw_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp < raw_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						multiply_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					multiply_temp_variable = { money_raw_goods_temp = magnitude_temp }
+				}
+
+				set_variable = { factory_luxury_goods_raw_goods_demand = money_raw_goods_temp }
+				divide_variable = { factory_luxury_goods_raw_goods_demand = raw_goods_price }
+				multiply_variable = { factory_luxury_goods_raw_goods_demand = 0.99 }
+
+				if = {
+					limit = {
+						check_variable = { factory_luxury_goods_raw_goods_demand > factory_luxury_goods_raw_goods_need }
+					}
+					set_variable = { factory_luxury_goods_raw_goods_demand = factory_luxury_goods_raw_goods_need }
+				}
+
+			#Industrial Goods
+				set_temp_variable = { money_industrial_goods_temp = money_left_temp }
+				multiply_temp_variable = { money_industrial_goods_temp = global.factory_industrial_goods_spending_max } #Factories will spend up to 30% of their money on Industrial Goods
+				
+				set_temp_variable = { price_temp = industrial_goods_price }
+				set_temp_variable = { magnitude_temp = 1 }
+				if = {
+					limit = {
+						divide_temp_variable = { price_temp = 1.1 }
+						check_variable = { price_temp > industrial_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp > industrial_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						divide_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					divide_temp_variable = { money_industrial_goods_temp = magnitude_temp }
+				}
+				else_if = {
+					limit = {
+						multiply_temp_variable = { price_temp = 1.21 }
+						check_variable = { price_temp < industrial_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp < industrial_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						multiply_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					multiply_temp_variable = { money_industrial_goods_temp = magnitude_temp }
+				}
+
+				set_variable = { factory_luxury_goods_industrial_goods_demand = money_industrial_goods_temp }
+				divide_variable = { factory_luxury_goods_industrial_goods_demand = industrial_goods_price }
+				multiply_variable = { factory_luxury_goods_industrial_goods_demand = 0.99 }
+
+				if = {
+					limit = {
+						check_variable = { factory_luxury_goods_industrial_goods_demand > factory_luxury_goods_industrial_goods_need }
+					}
+					set_variable = { factory_luxury_goods_industrial_goods_demand = factory_luxury_goods_industrial_goods_need }
+				}
+		#
+		#Industrial Goods Factory
+			set_temp_variable = { money_left_temp = factory_industrial_goods_money }
+			add_to_temp_variable = { money_left_temp = factory_industrial_goods_earnings }
+
+			#Raw Goods
+				set_temp_variable = { money_raw_goods_temp = money_left_temp }
+				multiply_temp_variable = { money_raw_goods_temp = global.factory_raw_goods_spending_max } #Factories will spend up to 30% of their money on Raw Goods
+				
+				set_temp_variable = { price_temp = raw_goods_price }
+				set_temp_variable = { magnitude_temp = 1 }
+				if = {
+					limit = {
+						divide_temp_variable = { price_temp = 1.1 }
+						check_variable = { price_temp > raw_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp > raw_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						divide_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					divide_temp_variable = { money_raw_goods_temp = magnitude_temp }
+				}
+				else_if = {
+					limit = {
+						multiply_temp_variable = { price_temp = 1.21 }
+						check_variable = { price_temp < raw_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp < raw_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						multiply_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					multiply_temp_variable = { money_raw_goods_temp = magnitude_temp }
+				}
+
+				set_variable = { factory_industrial_goods_raw_goods_demand = money_raw_goods_temp }
+				divide_variable = { factory_industrial_goods_raw_goods_demand = raw_goods_price }
+				multiply_variable = { factory_industrial_goods_raw_goods_demand = 0.99 }
+
+				if = {
+					limit = {
+						check_variable = { factory_industrial_goods_raw_goods_demand > factory_industrial_goods_raw_goods_need }
+					}
+					set_variable = { factory_industrial_goods_raw_goods_demand = factory_industrial_goods_raw_goods_need }
+				}
+
+			#Industrial Goods
+				set_temp_variable = { money_industrial_goods_temp = money_left_temp }
+				multiply_temp_variable = { money_industrial_goods_temp = global.factory_industrial_goods_spending_max } #Factories will spend up to 30% of their money on Industrial Goods
+				
+				set_temp_variable = { price_temp = industrial_goods_price }
+				set_temp_variable = { magnitude_temp = 1 }
+				if = {
+					limit = {
+						divide_temp_variable = { price_temp = 1.1 }
+						check_variable = { price_temp > industrial_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp > industrial_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						divide_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					divide_temp_variable = { money_industrial_goods_temp = magnitude_temp }
+				}
+				else_if = {
+					limit = {
+						multiply_temp_variable = { price_temp = 1.21 }
+						check_variable = { price_temp < industrial_goods_base_price }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { price_temp < industrial_goods_base_price }
+							check_variable = { magnitude_temp < 5 }
+						}
+						multiply_temp_variable = { price_temp = 1.1 }
+						add_to_temp_variable = { magnitude_temp = 0.1 }
+					}
+					multiply_temp_variable = { money_industrial_goods_temp = magnitude_temp }
+				}
+
+				set_variable = { factory_industrial_goods_industrial_goods_demand = money_industrial_goods_temp }
+				divide_variable = { factory_industrial_goods_industrial_goods_demand = industrial_goods_price }
+				multiply_variable = { factory_industrial_goods_industrial_goods_demand = 0.99 }
+
+				if = {
+					limit = {
+						check_variable = { factory_industrial_goods_industrial_goods_demand > factory_industrial_goods_industrial_goods_need }
+					}
+					set_variable = { factory_industrial_goods_industrial_goods_demand = factory_industrial_goods_industrial_goods_need }
+				}
+		#
+		set_variable = { factory_raw_goods_demand = factory_everyday_goods_raw_goods_demand }
+		add_to_variable = { factory_raw_goods_demand = factory_luxury_goods_raw_goods_demand }
+		add_to_variable = { factory_raw_goods_demand = factory_industrial_goods_raw_goods_demand }
+		
+		set_variable = { factory_industrial_goods_demand = factory_everyday_goods_industrial_goods_demand }
+		add_to_variable = { factory_industrial_goods_demand = factory_luxury_goods_industrial_goods_demand }
+		add_to_variable = { factory_industrial_goods_demand = factory_industrial_goods_industrial_goods_demand }
+
 		#Construction
 			set_temp_variable = { max_demand_temp = factory_employment_amount_per_factory }
 			divide_temp_variable = { max_demand_temp = 20 }
@@ -17133,3 +17784,56 @@ mark_land_connected_states = {
 #In order to check if two states have a land connection to each other, compare their state_land_connection_index variables. If they are the same, then they have a land connection. Example:
 # If this returns true, then the capitals of THIS and FROM share a land connection
 	#check_variable = { THIS.capital.state_land_connection_index = FROM.capital.state_land_connection_index }
+
+
+
+calc_supply_demand = {
+	set_variable = { supply = 0 }
+	set_variable = { demand = 0 }
+	set_variable = { offers = 0 }
+	set_variable = { requests = 0 }
+	every_controlled_state = {
+		set_variable = { supply = production }
+		set_variable = { demand = need }
+		divide_variable = { demand = PREV.price }
+
+		set_temp_variable = { trade_temp = supply }
+		subtract_from_temp_variable = { trade_temp = demand }
+
+		if = {
+			limit = { 
+				check_variable = { trade_temp > 0 } #More Supply
+			}
+			if = {
+				limit = {
+					check_variable = { trade_temp > infra }
+				}
+				set_temp_variable = { trade_temp = infra }
+			}
+			set_variable = { trade_amount = trade_temp }
+			add_to_variable = { PREV.offers = trade_temp }
+			add_to_temp_variable = { trade_temp = demand }
+			
+			add_to_variable = { PREV.supply = trade_temp }
+			add_to_variable = { PREV.demand = demand }
+		}
+		if = {
+			limit = { 
+				check_variable = { trade_temp < 0 } #More Demand
+			}
+			multiply_temp_variable = { trade_temp = -1 }
+			if = {
+				limit = {
+					check_variable = { trade_temp > infra }
+				}
+				set_temp_variable = { trade_temp = infra }
+			}
+			set_variable = { trade_amount = trade_temp }
+			add_to_variable = { PREV.requests = trade_temp }
+			add_to_temp_variable = { trade_temp = supply }
+
+			add_to_variable = { PREV.supply = supply }
+			add_to_variable = { PREV.demand = trade_temp }
+		}
+	}
+}
