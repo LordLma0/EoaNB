@@ -680,9 +680,15 @@
 				calculate_demand = yes #Do first
 
 				update_production_maintenance = yes #Do just after Demand
-
+				
 				calculate_supply = yes #Do just after Production
+			}
 
+			#National Supply & Demand, Setting National Price
+				#adjust_national_price = yes
+			#
+
+			every_controlled_state = {
 				#Reset Other things
 					set_variable = { aristocrats_earnings = 0 }
 					set_variable = { artisans_earnings = 0 }
@@ -14086,6 +14092,1345 @@
 #
 
 #Supply, Demand, Price
+	adjust_national_price = {
+		set_temp_variable = { brk_v = 0 }
+		while_loop_effect = {
+			limit = {
+				OR = {
+					NOT = { check_variable = { life_goods_supply = life_goods_demand } }
+					NOT = { check_variable = { everyday_goods_supply = everyday_goods_demand } }
+					NOT = { check_variable = { luxury_goods_supply = luxury_goods_demand } }
+					NOT = { check_variable = { services_supply = services_demand } }
+					NOT = { check_variable = { raw_goods_supply = raw_goods_demand } }
+					NOT = { check_variable = { industrial_goods_supply = industrial_goods_demand } }
+				}
+				check_variable = { brk_v < 5 }
+			}
+			#Changing Prices
+				#Life Goods
+					if = {
+						limit = {
+							set_temp_variable = { supply_low = life_goods_supply }
+							divide_temp_variable = { supply_low = 1.03 }
+							set_temp_variable = { supply_high = life_goods_supply }
+							multiply_temp_variable = { supply_high = 1.03 }
+
+							OR = {
+								check_variable = { supply_low > life_goods_demand }
+								check_variable = { supply_high < life_goods_demand }
+							}
+						}
+
+						if = {
+							limit = {
+								NOT = { check_variable = { life_goods_demand = 0 } }
+								NOT = { check_variable = { life_goods_supply = 0 } }
+							}
+							set_temp_variable = { multiplier_temp = life_goods_demand }
+							divide_temp_variable = { multiplier_temp = life_goods_supply }
+							subtract_from_temp_variable = { multiplier_temp = 1 }
+							divide_temp_variable = { multiplier_temp = 2 }
+							add_to_temp_variable = { multiplier_temp = 1 }
+							multiply_variable = { life_goods_price = multiplier_temp }
+						}
+						else_if = {
+							limit = {
+								check_variable = { life_goods_demand < 0.01 }
+								check_variable = { life_goods_need > 0.01 }
+							}
+							multiply_variable = { life_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { life_goods_demand = 0 }
+								check_variable = { life_goods_need > 0 }
+							}
+							multiply_variable = { life_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { life_goods_supply = 0 }
+								check_variable = { life_goods_demand > 0.01 }
+							}
+							multiply_variable = { life_goods_price = 1.2 }
+							add_to_temp_variable = { brk_v = 10 }
+						}
+
+						if = {
+							limit = {
+								check_variable = { life_goods_price < 0.01 }
+							}
+							set_variable = { life_goods_price = 0.01 }
+						}
+					}
+				#
+				#Everyday Goods
+					if = {
+						limit = {
+							set_temp_variable = { supply_low = everyday_goods_supply }
+							divide_temp_variable = { supply_low = 1.03 }
+							set_temp_variable = { supply_high = everyday_goods_supply }
+							multiply_temp_variable = { supply_high = 1.03 }
+
+							OR = {
+								check_variable = { supply_low > everyday_goods_demand }
+								check_variable = { supply_high < everyday_goods_demand }
+							}
+						}
+
+						if = {
+							limit = {
+								NOT = { check_variable = { everyday_goods_demand = 0 } }
+								NOT = { check_variable = { everyday_goods_supply = 0 } }
+							}
+							set_temp_variable = { multiplier_temp = everyday_goods_demand }
+							divide_temp_variable = { multiplier_temp = everyday_goods_supply }
+							subtract_from_temp_variable = { multiplier_temp = 1 }
+							divide_temp_variable = { multiplier_temp = 2 }
+							add_to_temp_variable = { multiplier_temp = 1 }
+							multiply_variable = { everyday_goods_price = multiplier_temp }
+						}
+						else_if = {
+							limit = {
+								check_variable = { everyday_goods_demand < 0.01 }
+								check_variable = { everyday_goods_need > 0.01 }
+							}
+							multiply_variable = { everyday_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { everyday_goods_demand = 0 }
+								check_variable = { everyday_goods_need > 0 }
+							}
+							multiply_variable = { everyday_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { everyday_goods_supply = 0 }
+								check_variable = { everyday_goods_demand > 0.01 }
+							}
+							multiply_variable = { everyday_goods_price = 1.2 }
+							add_to_temp_variable = { brk_v = 10 }
+						}
+
+						if = {
+							limit = {
+								check_variable = { everyday_goods_price < 0.01 }
+							}
+							set_variable = { everyday_goods_price = 0.01 }
+						}
+					}
+				#
+				#Luxury Goods
+					if = {
+						limit = {
+							set_temp_variable = { supply_low = luxury_goods_supply }
+							divide_temp_variable = { supply_low = 1.03 }
+							set_temp_variable = { supply_high = luxury_goods_supply }
+							multiply_temp_variable = { supply_high = 1.03 }
+
+							OR = {
+								check_variable = { supply_low > luxury_goods_demand }
+								check_variable = { supply_high < luxury_goods_demand }
+							}
+						}
+
+						if = {
+							limit = {
+								NOT = { check_variable = { luxury_goods_demand = 0 } }
+								NOT = { check_variable = { luxury_goods_supply = 0 } }
+							}
+							set_temp_variable = { multiplier_temp = luxury_goods_demand }
+							divide_temp_variable = { multiplier_temp = luxury_goods_supply }
+							subtract_from_temp_variable = { multiplier_temp = 1 }
+							divide_temp_variable = { multiplier_temp = 2 }
+							add_to_temp_variable = { multiplier_temp = 1 }
+							multiply_variable = { luxury_goods_price = multiplier_temp }
+						}
+						else_if = {
+							limit = {
+								check_variable = { luxury_goods_demand < 0.01 }
+								check_variable = { luxury_goods_need > 0.01 }
+							}
+							multiply_variable = { luxury_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { luxury_goods_demand = 0 }
+								check_variable = { luxury_goods_need > 0 }
+							}
+							multiply_variable = { luxury_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { luxury_goods_supply = 0 }
+								check_variable = { luxury_goods_demand > 0.01 }
+							}
+							multiply_variable = { luxury_goods_price = 1.2 }
+							add_to_temp_variable = { brk_v = 10 }
+						}
+
+						if = {
+							limit = {
+								check_variable = { luxury_goods_price < 0.01 }
+							}
+							set_variable = { luxury_goods_price = 0.01 }
+						}
+					}
+				#
+				#Services
+					if = {
+						limit = {
+							set_temp_variable = { supply_low = services_supply }
+							divide_temp_variable = { supply_low = 1.03 }
+							set_temp_variable = { supply_high = services_supply }
+							multiply_temp_variable = { supply_high = 1.03 }
+
+							OR = {
+								check_variable = { supply_low > services_demand }
+								check_variable = { supply_high < services_demand }
+							}
+						}
+
+						if = {
+							limit = {
+								NOT = { check_variable = { services_demand = 0 } }
+								NOT = { check_variable = { services_supply = 0 } }
+							}
+							set_temp_variable = { multiplier_temp = services_demand }
+							divide_temp_variable = { multiplier_temp = services_supply }
+							subtract_from_temp_variable = { multiplier_temp = 1 }
+							divide_temp_variable = { multiplier_temp = 2 }
+							add_to_temp_variable = { multiplier_temp = 1 }
+							multiply_variable = { services_price = multiplier_temp }
+						}
+						else_if = {
+							limit = {
+								check_variable = { services_demand < 0.01 }
+								check_variable = { services_need > 0.01 }
+							}
+							multiply_variable = { services_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { services_demand = 0 }
+								check_variable = { services_need > 0 }
+							}
+							multiply_variable = { services_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { services_supply = 0 }
+								check_variable = { services_demand > 0.01 }
+							}
+							multiply_variable = { services_price = 1.2 }
+							add_to_temp_variable = { brk_v = 10 }
+						}
+
+						if = {
+							limit = {
+								check_variable = { services_price < 0.01 }
+							}
+							set_variable = { services_price = 0.01 }
+						}
+					}
+				#
+				#Raw Goods
+					if = {
+						limit = {
+							set_temp_variable = { supply_low = raw_goods_supply }
+							divide_temp_variable = { supply_low = 1.03 }
+							set_temp_variable = { supply_high = raw_goods_supply }
+							multiply_temp_variable = { supply_high = 1.03 }
+
+							OR = {
+								check_variable = { supply_low > raw_goods_demand }
+								check_variable = { supply_high < raw_goods_demand }
+							}
+						}
+
+						if = {
+							limit = {
+								NOT = { check_variable = { raw_goods_demand = 0 } }
+								NOT = { check_variable = { raw_goods_supply = 0 } }
+							}
+							set_temp_variable = { multiplier_temp = raw_goods_demand }
+							divide_temp_variable = { multiplier_temp = raw_goods_supply }
+							subtract_from_temp_variable = { multiplier_temp = 1 }
+							divide_temp_variable = { multiplier_temp = 2 }
+							add_to_temp_variable = { multiplier_temp = 1 }
+							multiply_variable = { raw_goods_price = multiplier_temp }
+						}
+						else_if = {
+							limit = {
+								check_variable = { raw_goods_demand < 0.01 }
+								check_variable = { raw_goods_need > 0.01 }
+							}
+							multiply_variable = { raw_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { raw_goods_demand = 0 }
+								check_variable = { raw_goods_need > 0 }
+							}
+							multiply_variable = { raw_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { raw_goods_supply = 0 }
+								check_variable = { raw_goods_demand > 0.01 }
+							}
+							multiply_variable = { raw_goods_price = 1.2 }
+							add_to_temp_variable = { brk_v = 10 }
+						}
+
+						if = {
+							limit = {
+								check_variable = { raw_goods_price < 0.01 }
+							}
+							set_variable = { raw_goods_price = 0.01 }
+						}
+					}
+				#
+				#Industrial Goods
+					if = {
+						limit = {
+							set_temp_variable = { supply_low = industrial_goods_supply }
+							divide_temp_variable = { supply_low = 1.03 }
+							set_temp_variable = { supply_high = industrial_goods_supply }
+							multiply_temp_variable = { supply_high = 1.03 }
+
+							OR = {
+								check_variable = { supply_low > industrial_goods_demand }
+								check_variable = { supply_high < industrial_goods_demand }
+							}
+						}
+
+						if = {
+							limit = {
+								NOT = { check_variable = { industrial_goods_demand = 0 } }
+								NOT = { check_variable = { industrial_goods_supply = 0 } }
+							}
+							set_temp_variable = { multiplier_temp = industrial_goods_demand }
+							divide_temp_variable = { multiplier_temp = industrial_goods_supply }
+							subtract_from_temp_variable = { multiplier_temp = 1 }
+							divide_temp_variable = { multiplier_temp = 2 }
+							add_to_temp_variable = { multiplier_temp = 1 }
+							multiply_variable = { industrial_goods_price = multiplier_temp }
+						}
+						else_if = {
+							limit = {
+								check_variable = { industrial_goods_demand < 0.01 }
+								check_variable = { industrial_goods_need > 0.01 }
+							}
+							multiply_variable = { industrial_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { industrial_goods_demand = 0 }
+								check_variable = { industrial_goods_need > 0 }
+							}
+							multiply_variable = { industrial_goods_price = 0.9 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { industrial_goods_supply = 0 }
+								check_variable = { industrial_goods_demand > 0.01 }
+							}
+							multiply_variable = { industrial_goods_price = 1.2 }
+							add_to_temp_variable = { brk_v = 10 }
+						}
+
+						if = {
+							limit = {
+								check_variable = { industrial_goods_price < 0.01 }
+							}
+							set_variable = { industrial_goods_price = 0.01 }
+						}
+					}
+				#
+			#
+
+			every_controlled_state = {
+				calculate_demand = yes
+			}
+			calculate_national_supply_demand = yes
+			
+			add_to_temp_variable = { brk_v = 1 }
+		}
+	}
+	calculate_national_supply_demand = {
+		#Doesn't calculate on the state side. Only gets the supply/demand on the national side
+
+		reset_supply = yes
+		reset_demand = yes
+		#Reset Offers & Requests
+			set_variable = { life_goods_offers = 0 }
+			set_variable = { life_goods_requests = 0 }
+
+			set_variable = { everyday_goods_offers = 0 }
+			set_variable = { everyday_goods_requests = 0 }
+
+			set_variable = { luxury_goods_offers = 0 }
+			set_variable = { luxury_goods_requests = 0 }
+
+			set_variable = { raw_goods_offers = 0 }
+			set_variable = { raw_goods_requests = 0 }
+
+			set_variable = { industrial_goods_offers = 0 }
+			set_variable = { industrial_goods_requests = 0 }
+		#
+
+
+		every_controlled_state = {
+			#How many goods can be exchanged total
+			set_temp_variable = { infra_cap = 10000 } #TODO: Infrastructure
+
+			#Total amount of goods that should be exchanged
+			set_temp_variable = { infra_stress = 0 }
+
+			#Preliminary - Finding how much needs to be traded
+				#Life Goods
+					set_temp_variable = { life_goods_trade_temp = life_goods_supply }
+					subtract_from_temp_variable = { life_goods_trade_temp = life_goods_demand }
+
+					if = {
+						limit = { 
+							check_variable = { life_goods_trade_temp > 0 } #More Supply
+						}
+						add_to_temp_variable = { infra_stress = life_goods_trade_temp }
+					}
+					if = {
+						limit = { 
+							check_variable = { life_goods_trade_temp < 0 } #More Demand
+						}
+						subtract_from_temp_variable = { infra_stress = life_goods_trade_temp }
+					}
+				#
+				#Everyday Goods
+					set_temp_variable = { everyday_goods_trade_temp = everyday_goods_supply }
+					subtract_from_temp_variable = { everyday_goods_trade_temp = everyday_goods_demand }
+
+					if = {
+						limit = { 
+							check_variable = { everyday_goods_trade_temp > 0 } #More Supply
+						}
+						add_to_temp_variable = { infra_stress = everyday_goods_trade_temp }
+					}
+					if = {
+						limit = { 
+							check_variable = { everyday_goods_trade_temp < 0 } #More Demand
+						}
+						subtract_from_temp_variable = { infra_stress = everyday_goods_trade_temp }
+					}
+				#
+				#Luxury Goods
+					set_temp_variable = { luxury_goods_trade_temp = luxury_goods_supply }
+					subtract_from_temp_variable = { luxury_goods_trade_temp = luxury_goods_demand }
+
+					if = {
+						limit = { 
+							check_variable = { luxury_goods_trade_temp > 0 } #More Supply
+						}
+						add_to_temp_variable = { infra_stress = luxury_goods_trade_temp }
+					}
+					if = {
+						limit = { 
+							check_variable = { luxury_goods_trade_temp < 0 } #More Demand
+						}
+						subtract_from_temp_variable = { infra_stress = luxury_goods_trade_temp }
+					}
+				#
+				#Services
+					set_temp_variable = { services_trade_temp = services_supply }
+					subtract_from_temp_variable = { services_trade_temp = services_demand }
+
+					if = {
+						limit = { 
+							check_variable = { services_trade_temp > 0 } #More Supply
+						}
+						add_to_temp_variable = { infra_stress = services_trade_temp }
+					}
+					if = {
+						limit = { 
+							check_variable = { services_trade_temp < 0 } #More Demand
+						}
+						subtract_from_temp_variable = { infra_stress = services_trade_temp }
+					}
+				#
+				#Raw Goods
+					set_temp_variable = { raw_goods_trade_temp = raw_goods_supply }
+					subtract_from_temp_variable = { raw_goods_trade_temp = raw_goods_demand }
+
+					if = {
+						limit = { 
+							check_variable = { raw_goods_trade_temp > 0 } #More Supply
+						}
+						add_to_temp_variable = { infra_stress = raw_goods_trade_temp }
+					}
+					if = {
+						limit = { 
+							check_variable = { raw_goods_trade_temp < 0 } #More Demand
+						}
+						subtract_from_temp_variable = { infra_stress = raw_goods_trade_temp }
+					}
+				#
+				#Industrial Goods
+					set_temp_variable = { industrial_goods_trade_temp = industrial_goods_supply }
+					subtract_from_temp_variable = { industrial_goods_trade_temp = industrial_goods_demand }
+
+					if = {
+						limit = { 
+							check_variable = { industrial_goods_trade_temp > 0 } #More Supply
+						}
+						add_to_temp_variable = { infra_stress = industrial_goods_trade_temp }
+					}
+					if = {
+						limit = { 
+							check_variable = { industrial_goods_trade_temp < 0 } #More Demand
+						}
+						subtract_from_temp_variable = { infra_stress = industrial_goods_trade_temp }
+					}
+				#
+			#
+
+			#Capping Trade at infrastructure amount
+				if = {
+					limit = {
+						check_variable = { infra_stress > infra_cap }
+					}
+					set_temp_variable = { trade_factor_temp = infra_cap }
+					multiply_temp_variable = { trade_factor_temp = 100 }
+					divide_temp_variable = { trade_factor_temp = infra_stress }
+
+					#Multiply Each Amount & Divide by 100 to get true trade value
+					multiply_temp_variable = { life_goods_trade_temp = trade_factor_temp }
+					divide_temp_variable = { life_goods_trade_temp = 100 }
+					
+					multiply_temp_variable = { everyday_goods_trade_temp = trade_factor_temp }
+					divide_temp_variable = { everyday_goods_trade_temp = 100 }
+					
+					multiply_temp_variable = { luxury_goods_trade_temp = trade_factor_temp }
+					divide_temp_variable = { luxury_goods_trade_temp = 100 }
+					
+					multiply_temp_variable = { services_trade_temp = trade_factor_temp }
+					divide_temp_variable = { services_trade_temp = 100 }
+					
+					multiply_temp_variable = { raw_goods_trade_temp = trade_factor_temp }
+					divide_temp_variable = { raw_goods_trade_temp = 100 }
+					
+					multiply_temp_variable = { industrial_goods_trade_temp = trade_factor_temp }
+					divide_temp_variable = { industrial_goods_trade_temp = 100 }
+				}
+
+				set_variable = { infrastructure_stress = infra_stress } #Storing amount for visualization
+				set_variable = { infrastructure_stress_percentage = infra_stress }
+				divide_variable = { infrastructure_stress_percentage = infra_cap }
+			#
+
+			#Final - Getting actual numbers
+				#Life Goods
+					if = {
+						limit = { 
+							check_variable = { life_goods_trade_temp > 0 } #More Supply
+						}
+						set_variable = { life_goods_trade_amount = life_goods_trade_temp }
+						add_to_variable = { PREV.life_goods_offers = life_goods_trade_temp }
+						add_to_temp_variable = { life_goods_trade_temp = life_goods_demand }
+						
+						add_to_variable = { PREV.life_goods_supply = life_goods_trade_temp }
+						add_to_variable = { PREV.life_goods_demand = life_goods_demand }
+					}
+					if = {
+						limit = { 
+							check_variable = { life_goods_trade_temp < 0 } #More Demand
+						}
+						multiply_temp_variable = { life_goods_trade_temp = -1 }
+						set_variable = { life_goods_trade_amount = life_goods_trade_temp }
+						add_to_variable = { PREV.life_goods_requests = life_goods_trade_temp }
+						add_to_temp_variable = { life_goods_trade_temp = life_goods_supply }
+
+						add_to_variable = { PREV.life_goods_supply = life_goods_supply }
+						add_to_variable = { PREV.life_goods_demand = life_goods_trade_temp }
+					}
+				#
+				#Everyday Goods
+					if = {
+						limit = { 
+							check_variable = { everyday_goods_trade_temp > 0 } #More Supply
+						}
+						set_variable = { everyday_goods_trade_amount = everyday_goods_trade_temp }
+						add_to_variable = { PREV.everyday_goods_offers = everyday_goods_trade_temp }
+						add_to_temp_variable = { everyday_goods_trade_temp = everyday_goods_demand }
+						
+						add_to_variable = { PREV.everyday_goods_supply = everyday_goods_trade_temp }
+						add_to_variable = { PREV.everyday_goods_demand = everyday_goods_demand }
+					}
+					if = {
+						limit = { 
+							check_variable = { everyday_goods_trade_temp < 0 } #More Demand
+						}
+						multiply_temp_variable = { everyday_goods_trade_temp = -1 }
+						set_variable = { everyday_goods_trade_amount = everyday_goods_trade_temp }
+						add_to_variable = { PREV.everyday_goods_requests = everyday_goods_trade_temp }
+						add_to_temp_variable = { everyday_goods_trade_temp = everyday_goods_supply }
+
+						add_to_variable = { PREV.everyday_goods_supply = everyday_goods_supply }
+						add_to_variable = { PREV.everyday_goods_demand = everyday_goods_trade_temp }
+					}
+				#
+				#Luxury Goods
+					if = {
+						limit = { 
+							check_variable = { luxury_goods_trade_temp > 0 } #More Supply
+						}
+						set_variable = { luxury_goods_trade_amount = luxury_goods_trade_temp }
+						add_to_variable = { PREV.luxury_goods_offers = luxury_goods_trade_temp }
+						add_to_temp_variable = { luxury_goods_trade_temp = luxury_goods_demand }
+						
+						add_to_variable = { PREV.luxury_goods_supply = luxury_goods_trade_temp }
+						add_to_variable = { PREV.luxury_goods_demand = luxury_goods_demand }
+					}
+					if = {
+						limit = { 
+							check_variable = { luxury_goods_trade_temp < 0 } #More Demand
+						}
+						multiply_temp_variable = { luxury_goods_trade_temp = -1 }
+						set_variable = { luxury_goods_trade_amount = luxury_goods_trade_temp }
+						add_to_variable = { PREV.luxury_goods_requests = luxury_goods_trade_temp }
+						add_to_temp_variable = { luxury_goods_trade_temp = luxury_goods_supply }
+
+						add_to_variable = { PREV.luxury_goods_supply = luxury_goods_supply }
+						add_to_variable = { PREV.luxury_goods_demand = luxury_goods_trade_temp }
+					}
+				#
+				#Services
+					if = {
+						limit = { 
+							check_variable = { services_trade_temp > 0 } #More Supply
+						}
+						set_variable = { services_trade_amount = services_trade_temp }
+						add_to_variable = { PREV.services_offers = services_trade_temp }
+						add_to_temp_variable = { services_trade_temp = services_demand }
+						
+						add_to_variable = { PREV.services_supply = services_trade_temp }
+						add_to_variable = { PREV.services_demand = services_demand }
+					}
+					if = {
+						limit = { 
+							check_variable = { services_trade_temp < 0 } #More Demand
+						}
+						multiply_temp_variable = { services_trade_temp = -1 }
+						set_variable = { services_trade_amount = services_trade_temp }
+						add_to_variable = { PREV.services_requests = services_trade_temp }
+						add_to_temp_variable = { services_trade_temp = services_supply }
+
+						add_to_variable = { PREV.services_supply = services_supply }
+						add_to_variable = { PREV.services_demand = services_trade_temp }
+					}
+				#
+				#Raw Goods
+					if = {
+						limit = { 
+							check_variable = { raw_goods_trade_temp > 0 } #More Supply
+						}
+						set_variable = { raw_goods_trade_amount = raw_goods_trade_temp }
+						add_to_variable = { PREV.raw_goods_offers = raw_goods_trade_temp }
+						add_to_temp_variable = { raw_goods_trade_temp = raw_goods_demand }
+						
+						add_to_variable = { PREV.raw_goods_supply = raw_goods_trade_temp }
+						add_to_variable = { PREV.raw_goods_demand = raw_goods_demand }
+					}
+					if = {
+						limit = { 
+							check_variable = { raw_goods_trade_temp < 0 } #More Demand
+						}
+						multiply_temp_variable = { raw_goods_trade_temp = -1 }
+						set_variable = { raw_goods_trade_amount = raw_goods_trade_temp }
+						add_to_variable = { PREV.raw_goods_requests = raw_goods_trade_temp }
+						add_to_temp_variable = { raw_goods_trade_temp = raw_goods_supply }
+
+						add_to_variable = { PREV.raw_goods_supply = raw_goods_supply }
+						add_to_variable = { PREV.raw_goods_demand = raw_goods_trade_temp }
+					}
+				#
+				#Industrial Goods
+					if = {
+						limit = { 
+							check_variable = { industrial_goods_trade_temp > 0 } #More Supply
+						}
+						set_variable = { industrial_goods_trade_amount = industrial_goods_trade_temp }
+						add_to_variable = { PREV.industrial_goods_offers = industrial_goods_trade_temp }
+						add_to_temp_variable = { industrial_goods_trade_temp = industrial_goods_demand }
+						
+						add_to_variable = { PREV.industrial_goods_supply = industrial_goods_trade_temp }
+						add_to_variable = { PREV.industrial_goods_demand = industrial_goods_demand }
+					}
+					if = {
+						limit = { 
+							check_variable = { industrial_goods_trade_temp < 0 } #More Demand
+						}
+						multiply_temp_variable = { industrial_goods_trade_temp = -1 }
+						set_variable = { industrial_goods_trade_amount = industrial_goods_trade_temp }
+						add_to_variable = { PREV.industrial_goods_requests = industrial_goods_trade_temp }
+						add_to_temp_variable = { industrial_goods_trade_temp = industrial_goods_supply }
+
+						add_to_variable = { PREV.industrial_goods_supply = industrial_goods_supply }
+						add_to_variable = { PREV.industrial_goods_demand = industrial_goods_trade_temp }
+					}
+				#
+			#
+		}
+	}
+	calculate_trade_coefficient = {
+		# NOTE:	Make sure to clear coefficient variables after usage. 
+		#		Don't want unnecessary vars hanging around
+
+		#Life Goods
+			if = {
+				limit = {
+					check_variable = { life_goods_offers > life_goods_requests }
+				}
+				set_variable = { life_goods_offers_coeff = life_goods_requests }
+				multiply_variable = { life_goods_offers_coeff = 10 }
+				divide_variable = { life_goods_offers_coeff = life_goods_offers }
+				set_variable = { life_goods_requests_coeff = 10 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { life_goods_offers < life_goods_requests }
+				}
+				set_variable = { life_goods_requests_coeff = life_goods_offers }
+				multiply_variable = { life_goods_requests_coeff = 10 }
+				divide_variable = { life_goods_requests_coeff = life_goods_requests }
+				set_variable = { life_goods_offers_coeff = 10 }
+			}
+		#
+		#Everyday Goods
+			if = {
+				limit = {
+					check_variable = { everyday_goods_offers > everyday_goods_requests }
+				}
+				set_variable = { everyday_goods_offers_coeff = everyday_goods_requests }
+				multiply_variable = { everyday_goods_offers_coeff = 10 }
+				divide_variable = { everyday_goods_offers_coeff = everyday_goods_offers }
+				set_variable = { everyday_goods_requests_coeff = 10 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { everyday_goods_offers < everyday_goods_requests }
+				}
+				set_variable = { everyday_goods_requests_coeff = everyday_goods_offers }
+				multiply_variable = { everyday_goods_requests_coeff = 10 }
+				divide_variable = { everyday_goods_requests_coeff = everyday_goods_requests }
+				set_variable = { everyday_goods_offers_coeff = 10 }
+			}
+		#
+		#Luxury Goods
+			if = {
+				limit = {
+					check_variable = { luxury_goods_offers > luxury_goods_requests }
+				}
+				set_variable = { luxury_goods_offers_coeff = luxury_goods_requests }
+				multiply_variable = { luxury_goods_offers_coeff = 10 }
+				divide_variable = { luxury_goods_offers_coeff = luxury_goods_offers }
+				set_variable = { luxury_goods_requests_coeff = 10 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { luxury_goods_offers < luxury_goods_requests }
+				}
+				set_variable = { luxury_goods_requests_coeff = luxury_goods_offers }
+				multiply_variable = { luxury_goods_requests_coeff = 10 }
+				divide_variable = { luxury_goods_requests_coeff = luxury_goods_requests }
+				set_variable = { luxury_goods_offers_coeff = 10 }
+			}
+		#
+		#Raw Goods
+			if = {
+				limit = {
+					check_variable = { raw_goods_offers > raw_goods_requests }
+				}
+				set_variable = { raw_goods_offers_coeff = raw_goods_requests }
+				multiply_variable = { raw_goods_offers_coeff = 10 }
+				divide_variable = { raw_goods_offers_coeff = raw_goods_offers }
+				set_variable = { raw_goods_requests_coeff = 10 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { raw_goods_offers < raw_goods_requests }
+				}
+				set_variable = { raw_goods_requests_coeff = raw_goods_offers }
+				multiply_variable = { raw_goods_requests_coeff = 10 }
+				divide_variable = { raw_goods_requests_coeff = raw_goods_requests }
+				set_variable = { raw_goods_offers_coeff = 10 }
+			}
+		#
+		#Industrial Goods
+			if = {
+				limit = {
+					check_variable = { industrial_goods_offers > industrial_goods_requests }
+				}
+				set_variable = { industrial_goods_offers_coeff = industrial_goods_requests }
+				multiply_variable = { industrial_goods_offers_coeff = 10 }
+				divide_variable = { industrial_goods_offers_coeff = industrial_goods_offers }
+				set_variable = { industrial_goods_requests_coeff = 10 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { industrial_goods_offers < industrial_goods_requests }
+				}
+				set_variable = { industrial_goods_requests_coeff = industrial_goods_offers }
+				multiply_variable = { industrial_goods_requests_coeff = 10 }
+				divide_variable = { industrial_goods_requests_coeff = industrial_goods_requests }
+				set_variable = { industrial_goods_offers_coeff = 10 }
+			}
+		#
+		#Services
+			if = {
+				limit = {
+					check_variable = { services_offers > services_requests }
+				}
+				set_variable = { services_offers_coeff = services_requests }
+				multiply_variable = { services_offers_coeff = 10 }
+				divide_variable = { services_offers_coeff = services_offers }
+				set_variable = { services_requests_coeff = 10 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { services_offers < services_requests }
+				}
+				set_variable = { services_requests_coeff = services_offers }
+				multiply_variable = { services_requests_coeff = 10 }
+				divide_variable = { services_requests_coeff = services_requests }
+				set_variable = { services_offers_coeff = 10 }
+			}
+		#
+	}
+	calculate_interstate_trade = {
+		#Country Scope
+		
+		set_variable = { life_goods_trade_amount = 0 }
+		set_variable = { everyday_goods_trade_amount = 0 }
+		set_variable = { luxury_goods_trade_amount = 0 }
+		set_variable = { services_trade_amount = 0 }
+		set_variable = { raw_goods_trade_amount = 0 }
+		set_variable = { industrial_goods_trade_amount = 0 }
+		every_controlled_state = {
+			#Life Goods
+				if = { #Export
+					limit = {
+						check_variable = { life_goods_supply > life_goods_demand }
+					}
+					multiply_variable = { life_goods_trade_amount = PREV.life_goods_offers_coeff }
+					divide_variable = { life_goods_trade_amount = 10 }
+
+					subtract_from_variable = { life_goods_supply = life_goods_trade_amount }
+					multiply_variable = { life_goods_trade_amount = -1 }
+				}
+				if = { #Import
+					limit = {
+						check_variable = { life_goods_supply < life_goods_demand }
+					}
+					multiply_variable = { life_goods_trade_amount = PREV.life_goods_requests_coeff }
+					divide_variable = { life_goods_trade_amount = 10 }
+
+					add_to_variable = { life_goods_supply = life_goods_trade_amount }
+					add_to_variable = { PREV.life_goods_trade_amount = life_goods_trade_amount }
+				}
+			#
+			#Everyday Goods
+				if = { #Export
+					limit = {
+						check_variable = { everyday_goods_supply > everyday_goods_demand }
+					}
+					multiply_variable = { everyday_goods_trade_amount = PREV.everyday_goods_offers_coeff }
+					divide_variable = { everyday_goods_trade_amount = 10 }
+
+					subtract_from_variable = { everyday_goods_supply = everyday_goods_trade_amount }
+					multiply_variable = { everyday_goods_trade_amount = -1 }
+				}
+				if = { #Import
+					limit = {
+						check_variable = { everyday_goods_supply < everyday_goods_demand }
+					}
+					multiply_variable = { everyday_goods_trade_amount = PREV.everyday_goods_requests_coeff }
+					divide_variable = { everyday_goods_trade_amount = 10 }
+
+					add_to_variable = { everyday_goods_supply = everyday_goods_trade_amount }
+					add_to_variable = { PREV.everyday_goods_trade_amount = everyday_goods_trade_amount }
+				}
+			#
+			#Luxury Goods
+				if = { #Export
+					limit = {
+						check_variable = { luxury_goods_supply > luxury_goods_demand }
+					}
+					multiply_variable = { luxury_goods_trade_amount = PREV.luxury_goods_offers_coeff }
+					divide_variable = { luxury_goods_trade_amount = 10 }
+
+					subtract_from_variable = { luxury_goods_supply = luxury_goods_trade_amount }
+					multiply_variable = { luxury_goods_trade_amount = -1 }
+				}
+				if = { #Import
+					limit = {
+						check_variable = { luxury_goods_supply < luxury_goods_demand }
+					}
+					multiply_variable = { luxury_goods_trade_amount = PREV.luxury_goods_requests_coeff }
+					divide_variable = { luxury_goods_trade_amount = 10 }
+
+					add_to_variable = { luxury_goods_supply = luxury_goods_trade_amount }
+					add_to_variable = { PREV.luxury_goods_trade_amount = luxury_goods_trade_amount }
+				}
+			#
+			#Services
+				if = { #Export
+					limit = {
+						check_variable = { services_supply > services_demand }
+					}
+					multiply_variable = { services_trade_amount = PREV.services_offers_coeff }
+					divide_variable = { services_trade_amount = 10 }
+
+					subtract_from_variable = { services_supply = services_trade_amount }
+					multiply_variable = { services_trade_amount = -1 }
+				}
+				if = { #Import
+					limit = {
+						check_variable = { services_supply < services_demand }
+					}
+					multiply_variable = { services_trade_amount = PREV.services_requests_coeff }
+					divide_variable = { services_trade_amount = 10 }
+
+					add_to_variable = { services_supply = services_trade_amount }
+					add_to_variable = { PREV.services_trade_amount = services_trade_amount }
+				}
+			#
+			#Raw Goods
+				if = { #Export
+					limit = {
+						check_variable = { raw_goods_supply > raw_goods_demand }
+					}
+					multiply_variable = { raw_goods_trade_amount = PREV.raw_goods_offers_coeff }
+					divide_variable = { raw_goods_trade_amount = 10 }
+
+					subtract_from_variable = { raw_goods_supply = raw_goods_trade_amount }
+					multiply_variable = { raw_goods_trade_amount = -1 }
+				}
+				if = { #Import
+					limit = {
+						check_variable = { raw_goods_supply < raw_goods_demand }
+					}
+					multiply_variable = { raw_goods_trade_amount = PREV.raw_goods_requests_coeff }
+					divide_variable = { raw_goods_trade_amount = 10 }
+
+					add_to_variable = { raw_goods_supply = raw_goods_trade_amount }
+					add_to_variable = { PREV.raw_goods_trade_amount = raw_goods_trade_amount }
+				}
+			#
+			#Industrial Goods
+				if = { #Export
+					limit = {
+						check_variable = { industrial_goods_supply > industrial_goods_demand }
+					}
+					multiply_variable = { industrial_goods_trade_amount = PREV.industrial_goods_offers_coeff }
+					divide_variable = { industrial_goods_trade_amount = 10 }
+
+					subtract_from_variable = { industrial_goods_supply = industrial_goods_trade_amount }
+					multiply_variable = { industrial_goods_trade_amount = -1 }
+				}
+				if = { #Import
+					limit = {
+						check_variable = { industrial_goods_supply < industrial_goods_demand }
+					}
+					multiply_variable = { industrial_goods_trade_amount = PREV.industrial_goods_requests_coeff }
+					divide_variable = { industrial_goods_trade_amount = 10 }
+
+					add_to_variable = { industrial_goods_supply = industrial_goods_trade_amount }
+					add_to_variable = { PREV.industrial_goods_trade_amount = industrial_goods_trade_amount }
+				}
+			#
+		}
+	}
+	state_price_adjustment = {
+		#After Trade
+
+		#Country Scope
+		
+		every_controlled_state = {
+
+			set_variable = { life_goods_price = PREV.life_goods_price }
+			set_variable = { everyday_goods_price = PREV.everyday_goods_price }
+			set_variable = { luxury_goods_price = PREV.luxury_goods_price }
+			set_variable = { services_price = PREV.services_price }
+			set_variable = { raw_goods_price = PREV.raw_goods_price }
+			set_variable = { industrial_goods_price = PREV.industrial_goods_price }
+
+			set_temp_variable = { brk_v = 0 }
+			while_loop_effect = {
+				limit = {
+					OR = {
+						NOT = { check_variable = { life_goods_supply = life_goods_demand } }
+						NOT = { check_variable = { everyday_goods_supply = everyday_goods_demand } }
+						NOT = { check_variable = { luxury_goods_supply = luxury_goods_demand } }
+						NOT = { check_variable = { services_supply = services_demand } }
+						NOT = { check_variable = { raw_goods_supply = raw_goods_demand } }
+						NOT = { check_variable = { industrial_goods_supply = industrial_goods_demand } }
+					}
+					check_variable = { brk_v < 3 }
+				}
+
+				#Changing Prices
+					#Life Goods
+						if = {
+							limit = {
+								set_temp_variable = { supply_low = life_goods_supply }
+								divide_temp_variable = { supply_low = 1.03 }
+								set_temp_variable = { supply_high = life_goods_supply }
+								multiply_temp_variable = { supply_high = 1.03 }
+
+								OR = {
+									check_variable = { supply_low > life_goods_demand }
+									check_variable = { supply_high < life_goods_demand }
+								}
+							}
+
+							if = {
+								limit = {
+									NOT = { check_variable = { life_goods_demand = 0 } }
+									NOT = { check_variable = { life_goods_supply = 0 } }
+								}
+								set_temp_variable = { multiplier_temp = life_goods_demand }
+								divide_temp_variable = { multiplier_temp = life_goods_supply }
+								subtract_from_temp_variable = { multiplier_temp = 1 }
+								divide_temp_variable = { multiplier_temp = 2 }
+								add_to_temp_variable = { multiplier_temp = 1 }
+								multiply_variable = { life_goods_price = multiplier_temp }
+							}
+							else_if = {
+								limit = {
+									check_variable = { life_goods_demand < 0.01 }
+									check_variable = { life_goods_need > 0.01 }
+								}
+								multiply_variable = { life_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { life_goods_demand = 0 }
+									check_variable = { life_goods_need > 0 }
+								}
+								multiply_variable = { life_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { life_goods_supply = 0 }
+									check_variable = { life_goods_demand > 0.01 }
+								}
+								multiply_variable = { life_goods_price = 1.2 }
+								add_to_temp_variable = { brk_v = 10 }
+							}
+
+							if = {
+								limit = {
+									check_variable = { life_goods_price < 0.01 }
+								}
+								set_variable = { life_goods_price = 0.01 }
+							}
+						}
+					#
+					#Everyday Goods
+						if = {
+							limit = {
+								set_temp_variable = { supply_low = everyday_goods_supply }
+								divide_temp_variable = { supply_low = 1.03 }
+								set_temp_variable = { supply_high = everyday_goods_supply }
+								multiply_temp_variable = { supply_high = 1.03 }
+
+								OR = {
+									check_variable = { supply_low > everyday_goods_demand }
+									check_variable = { supply_high < everyday_goods_demand }
+								}
+							}
+
+							if = {
+								limit = {
+									NOT = { check_variable = { everyday_goods_demand = 0 } }
+									NOT = { check_variable = { everyday_goods_supply = 0 } }
+								}
+								set_temp_variable = { multiplier_temp = everyday_goods_demand }
+								divide_temp_variable = { multiplier_temp = everyday_goods_supply }
+								subtract_from_temp_variable = { multiplier_temp = 1 }
+								divide_temp_variable = { multiplier_temp = 2 }
+								add_to_temp_variable = { multiplier_temp = 1 }
+								multiply_variable = { everyday_goods_price = multiplier_temp }
+							}
+							else_if = {
+								limit = {
+									check_variable = { everyday_goods_demand < 0.01 }
+									check_variable = { everyday_goods_need > 0.01 }
+								}
+								multiply_variable = { everyday_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { everyday_goods_demand = 0 }
+									check_variable = { everyday_goods_need > 0 }
+								}
+								multiply_variable = { everyday_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { everyday_goods_supply = 0 }
+									check_variable = { everyday_goods_demand > 0.01 }
+								}
+								multiply_variable = { everyday_goods_price = 1.2 }
+								add_to_temp_variable = { brk_v = 10 }
+							}
+
+							if = {
+								limit = {
+									check_variable = { everyday_goods_price < 0.01 }
+								}
+								set_variable = { everyday_goods_price = 0.01 }
+							}
+						}
+					#
+					#Luxury Goods
+						if = {
+							limit = {
+								set_temp_variable = { supply_low = luxury_goods_supply }
+								divide_temp_variable = { supply_low = 1.03 }
+								set_temp_variable = { supply_high = luxury_goods_supply }
+								multiply_temp_variable = { supply_high = 1.03 }
+
+								OR = {
+									check_variable = { supply_low > luxury_goods_demand }
+									check_variable = { supply_high < luxury_goods_demand }
+								}
+							}
+
+							if = {
+								limit = {
+									NOT = { check_variable = { luxury_goods_demand = 0 } }
+									NOT = { check_variable = { luxury_goods_supply = 0 } }
+								}
+								set_temp_variable = { multiplier_temp = luxury_goods_demand }
+								divide_temp_variable = { multiplier_temp = luxury_goods_supply }
+								subtract_from_temp_variable = { multiplier_temp = 1 }
+								divide_temp_variable = { multiplier_temp = 2 }
+								add_to_temp_variable = { multiplier_temp = 1 }
+								multiply_variable = { luxury_goods_price = multiplier_temp }
+							}
+							else_if = {
+								limit = {
+									check_variable = { luxury_goods_demand < 0.01 }
+									check_variable = { luxury_goods_need > 0.01 }
+								}
+								multiply_variable = { luxury_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { luxury_goods_demand = 0 }
+									check_variable = { luxury_goods_need > 0 }
+								}
+								multiply_variable = { luxury_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { luxury_goods_supply = 0 }
+									check_variable = { luxury_goods_demand > 0.01 }
+								}
+								multiply_variable = { luxury_goods_price = 1.2 }
+								add_to_temp_variable = { brk_v = 10 }
+							}
+
+							if = {
+								limit = {
+									check_variable = { luxury_goods_price < 0.01 }
+								}
+								set_variable = { luxury_goods_price = 0.01 }
+							}
+						}
+					#
+					#Services
+						if = {
+							limit = {
+								set_temp_variable = { supply_low = services_supply }
+								divide_temp_variable = { supply_low = 1.03 }
+								set_temp_variable = { supply_high = services_supply }
+								multiply_temp_variable = { supply_high = 1.03 }
+
+								OR = {
+									check_variable = { supply_low > services_demand }
+									check_variable = { supply_high < services_demand }
+								}
+							}
+
+							if = {
+								limit = {
+									NOT = { check_variable = { services_demand = 0 } }
+									NOT = { check_variable = { services_supply = 0 } }
+								}
+								set_temp_variable = { multiplier_temp = services_demand }
+								divide_temp_variable = { multiplier_temp = services_supply }
+								subtract_from_temp_variable = { multiplier_temp = 1 }
+								divide_temp_variable = { multiplier_temp = 2 }
+								add_to_temp_variable = { multiplier_temp = 1 }
+								multiply_variable = { services_price = multiplier_temp }
+							}
+							else_if = {
+								limit = {
+									check_variable = { services_demand < 0.01 }
+									check_variable = { services_need > 0.01 }
+								}
+								multiply_variable = { services_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { services_demand = 0 }
+									check_variable = { services_need > 0 }
+								}
+								multiply_variable = { services_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { services_supply = 0 }
+									check_variable = { services_demand > 0.01 }
+								}
+								multiply_variable = { services_price = 1.2 }
+								add_to_temp_variable = { brk_v = 10 }
+							}
+
+							if = {
+								limit = {
+									check_variable = { services_price < 0.01 }
+								}
+								set_variable = { services_price = 0.01 }
+							}
+						}
+					#
+					#Raw Goods
+						if = {
+							limit = {
+								set_temp_variable = { supply_low = raw_goods_supply }
+								divide_temp_variable = { supply_low = 1.03 }
+								set_temp_variable = { supply_high = raw_goods_supply }
+								multiply_temp_variable = { supply_high = 1.03 }
+
+								OR = {
+									check_variable = { supply_low > raw_goods_demand }
+									check_variable = { supply_high < raw_goods_demand }
+								}
+							}
+
+							if = {
+								limit = {
+									NOT = { check_variable = { raw_goods_demand = 0 } }
+									NOT = { check_variable = { raw_goods_supply = 0 } }
+								}
+								set_temp_variable = { multiplier_temp = raw_goods_demand }
+								divide_temp_variable = { multiplier_temp = raw_goods_supply }
+								subtract_from_temp_variable = { multiplier_temp = 1 }
+								divide_temp_variable = { multiplier_temp = 2 }
+								add_to_temp_variable = { multiplier_temp = 1 }
+								multiply_variable = { raw_goods_price = multiplier_temp }
+							}
+							else_if = {
+								limit = {
+									check_variable = { raw_goods_demand < 0.01 }
+									check_variable = { raw_goods_need > 0.01 }
+								}
+								multiply_variable = { raw_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { raw_goods_demand = 0 }
+									check_variable = { raw_goods_need > 0 }
+								}
+								multiply_variable = { raw_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { raw_goods_supply = 0 }
+									check_variable = { raw_goods_demand > 0.01 }
+								}
+								multiply_variable = { raw_goods_price = 1.2 }
+								add_to_temp_variable = { brk_v = 10 }
+							}
+
+							if = {
+								limit = {
+									check_variable = { raw_goods_price < 0.01 }
+								}
+								set_variable = { raw_goods_price = 0.01 }
+							}
+						}
+					#
+					#Industrial Goods
+						if = {
+							limit = {
+								set_temp_variable = { supply_low = industrial_goods_supply }
+								divide_temp_variable = { supply_low = 1.03 }
+								set_temp_variable = { supply_high = industrial_goods_supply }
+								multiply_temp_variable = { supply_high = 1.03 }
+
+								OR = {
+									check_variable = { supply_low > industrial_goods_demand }
+									check_variable = { supply_high < industrial_goods_demand }
+								}
+							}
+
+							if = {
+								limit = {
+									NOT = { check_variable = { industrial_goods_demand = 0 } }
+									NOT = { check_variable = { industrial_goods_supply = 0 } }
+								}
+								set_temp_variable = { multiplier_temp = industrial_goods_demand }
+								divide_temp_variable = { multiplier_temp = industrial_goods_supply }
+								subtract_from_temp_variable = { multiplier_temp = 1 }
+								divide_temp_variable = { multiplier_temp = 2 }
+								add_to_temp_variable = { multiplier_temp = 1 }
+								multiply_variable = { industrial_goods_price = multiplier_temp }
+							}
+							else_if = {
+								limit = {
+									check_variable = { industrial_goods_demand < 0.01 }
+									check_variable = { industrial_goods_need > 0.01 }
+								}
+								multiply_variable = { industrial_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { industrial_goods_demand = 0 }
+									check_variable = { industrial_goods_need > 0 }
+								}
+								multiply_variable = { industrial_goods_price = 0.9 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { industrial_goods_supply = 0 }
+									check_variable = { industrial_goods_demand > 0.01 }
+								}
+								multiply_variable = { industrial_goods_price = 1.2 }
+								add_to_temp_variable = { brk_v = 10 }
+							}
+
+							if = {
+								limit = {
+									check_variable = { industrial_goods_price < 0.01 }
+								}
+								set_variable = { industrial_goods_price = 0.01 }
+							}
+						}
+					#
+				#
+
+				calculate_demand_no_adjust = yes
+				
+				add_to_temp_variable = { brk_v = 1 }
+			}
+		}
+	}
+
 	reset_supply = {
 		#Should be done at the start
 		#Country Scope
@@ -14100,6 +15445,8 @@
 
 		set_variable = { services_supply = 0 }
 		set_variable = { services_produced_amount = 0 }
+		set_variable = { services_offers = 0 }
+		set_variable = { services_requests = 0 }
 
 		set_variable = { raw_goods_supply = 0 }
 		set_variable = { raw_goods_produced_amount = 0 }
@@ -14176,6 +15523,30 @@
 		#reset_demand on the national scope should be done before this
 		#Do this before pops get paid or after they spend it
 		#State Scope
+
+		calculate_demand_no_adjust = yes
+
+		controller = {
+			add_to_variable = { life_goods_demand = PREV.life_goods_demand }
+			add_to_variable = { everyday_goods_demand = PREV.everyday_goods_demand }
+			add_to_variable = { luxury_goods_demand = PREV.luxury_goods_demand }
+			add_to_variable = { services_demand = PREV.services_demand }
+			add_to_variable = { raw_goods_demand = PREV.raw_goods_demand }
+			add_to_variable = { industrial_goods_demand = PREV.industrial_goods_demand }
+
+			add_to_variable = { life_goods_need = PREV.life_goods_need }
+			add_to_variable = { everyday_goods_need = PREV.everyday_goods_need }
+			add_to_variable = { luxury_goods_need = PREV.luxury_goods_need }
+			add_to_variable = { services_need = PREV.services_need }
+			add_to_variable = { raw_goods_need = PREV.raw_goods_need }
+			add_to_variable = { industrial_goods_need = PREV.industrial_goods_need }
+		}
+	}
+	calculate_demand_no_adjust = {
+		#For the times when you just need demand to be recalculated on the state scope. Idk why, but it's here
+		#Do this before pops get paid or after they spend it
+		#State Scope
+
 		set_variable = { life_goods_need = pops_life_goods_need }
 		set_variable = { everyday_goods_need = pops_everyday_goods_need }
 		set_variable = { luxury_goods_need = pops_luxury_goods_need }
@@ -14217,45 +15588,6 @@
 			add_to_variable = { industrial_goods_demand = factory_everyday_goods_construction_industrial_goods_demand }
 			add_to_variable = { industrial_goods_demand = factory_luxury_goods_construction_industrial_goods_demand }
 			add_to_variable = { industrial_goods_demand = factory_industrial_goods_construction_industrial_goods_demand }
-
-		controller = {
-			add_to_variable = { life_goods_demand = PREV.life_goods_demand }
-			add_to_variable = { everyday_goods_demand = PREV.everyday_goods_demand }
-			add_to_variable = { luxury_goods_demand = PREV.luxury_goods_demand }
-			add_to_variable = { services_demand = PREV.services_demand }
-			add_to_variable = { raw_goods_demand = PREV.raw_goods_demand }
-			add_to_variable = { industrial_goods_demand = PREV.industrial_goods_demand }
-
-			add_to_variable = { life_goods_need = PREV.life_goods_need }
-			add_to_variable = { everyday_goods_need = PREV.everyday_goods_need }
-			add_to_variable = { luxury_goods_need = PREV.luxury_goods_need }
-			add_to_variable = { services_need = PREV.services_need }
-			add_to_variable = { raw_goods_need = PREV.raw_goods_need }
-			add_to_variable = { industrial_goods_need = PREV.industrial_goods_need }
-		}
-	}
-	calculate_demand_no_adjust = {
-		#For the times when you just need demand to be recalculated on the state scope. Idk why, but it's here
-		#Do this before pops get paid or after they spend it
-		#State Scope
-
-		calculate_demand = yes
-
-		controller = {
-			subtract_from_variable = { life_goods_demand = PREV.life_goods_demand }
-			subtract_from_variable = { everyday_goods_demand = PREV.everyday_goods_demand }
-			subtract_from_variable = { luxury_goods_demand = PREV.luxury_goods_demand }
-			subtract_from_variable = { services_demand = PREV.services_demand }
-			subtract_from_variable = { raw_goods_demand = PREV.raw_goods_demand }
-			subtract_from_variable = { industrial_goods_demand = PREV.industrial_goods_demand }
-
-			subtract_from_variable = { life_goods_need = PREV.life_goods_need }
-			subtract_from_variable = { everyday_goods_need = PREV.everyday_goods_need }
-			subtract_from_variable = { luxury_goods_need = PREV.luxury_goods_need }
-			subtract_from_variable = { services_need = PREV.services_need }
-			subtract_from_variable = { raw_goods_need = PREV.raw_goods_need }
-			subtract_from_variable = { industrial_goods_need = PREV.industrial_goods_need }
-		}
 	}
 	calculate_govt_demand = {
 		set_variable = { life_goods_government_demand = 0 }
