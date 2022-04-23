@@ -131,7 +131,7 @@ ideas = {
 
 			modifier = {
 				conscription_factor = -0.2
-				army_org_Factor = -0.05
+				army_org_factor = -0.05
 				stability_factor = -0.2
 			}
 		}
@@ -280,7 +280,39 @@ ideas = {
 			}
 		}
 
-		 AUS_abolish_landwehr = {
+		#Seven Weeks War
+		
+		AUS_idea_PRS_boost_socialism = {
+			allowed = {
+				original_tag = AUS
+			}
+
+			removal_cost = -1
+
+			picture = fourth_international
+
+			modifier = {
+				social_egalitarianism_drift = 0.02
+			}
+		}
+		
+		GC_idea_south_german_bund = {
+		    allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = holy_roman_empire
+			
+			modifier = {
+				generate_wargoal_tension = 0.25
+			}
+		}
+
+		#Hungarian Revolution
+		
+		AUS_idea_lost_hungary_revolt = {
 
 			allowed = {
 				always = no
@@ -292,112 +324,425 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = placeholder
+			picture = AUS_hungarian_revolution
 
 			modifier = {
-	            training_time_factor = -0.1
-                experience_gain_army_factor = -0.1
+				stability_factor = -0.25
+				political_power_gain = -0.2
 			}
 		}
+		
+		### ARMY ###
+		
+		AUS_idea_army_spending_cuts = {
+			allowed = {
+				original_tag = AUS
+			}
 
-		AUS_reform_landwehr = {
+			removal_cost = -1
 
-		   allowed = {
-			   always = no
-		   }
+			picture = army_spending_cuts
 
-		   allowed_civil_war = {
-			   always = yes
-		   }
-
-		   removal_cost = -1
-
-		   picture = placeholder
-
-		   modifier = {
-	           training_time_factor = +0.1
-               experience_gain_army_factor = +0.1
+			modifier = {
+				army_morale_factor = -0.05
+				conscription = -0.005
+				conscription_factor = -0.1
+				command_power_gain = -0.05
+				mobilization_speed = -0.1
+				supply_consumption_factor = 0.2
+				production_speed_arms_factory_factor = -0.2
+				industrial_capacity_factory = -0.1
 			}
 		}
+		
+		AUS_idea_military_railway_department = {
 
-		AUS_strongest_confederation = {
+			allowed = {
+				always = yes
+			}
 
-		   allowed = {
-			   always = no
-		   }
+			allowed_civil_war = {
+				always = yes
+			}
 
-		   allowed_civil_war = {
-			   always = yes
-		   }
+			removal_cost = -1
 
-		   removal_cost = -1
+			#picture = 
 
-		   picture = placeholder
-
-		   modifier = {
-	           army_morale_factor = 0.05
+			modifier = {
+				mobilization_speed = 0.2
+				army_speed_factor = 0.02
+				supply_consumption_factor = 0.05
 			}
 		}
+		
+		AUS_idea_modified_operational_structure = {
+		
+			allowed = {
+				always = yes
+			}
 
-		AUS_austrian_railways = {
+			allowed_civil_war = {
+				always = yes
+			}
 
-		    allowed = {
-			    always = no
-		    }
+			removal_cost = -1
+			
+			#picture = 
 
-		    allowed_civil_war = {
-			    always = yes
-		    }
-
-		    removal_cost = -1
-
-		    picture = placeholder
-
-		    modifier = {
-	            mobilization_speed = 0.15
-	            army_speed_factor = 0.05
+			modifier = {
+				land_reinforce_rate = 0.02
+				army_org_factor = 0.03
+				army_leader_cost_factor = -0.25
 			}
 		}
-
-		AUS_lack_of_recruits = {
-
-		   allowed = {
-			   always = no
-		   }
-
-		   allowed_civil_war = {
-			   always = yes
-		   }
-
-		   removal_cost = -1
-
-		   picture = placeholder
-
-		   modifier = {
-	           conscription_factor = -0.05
+		
+		AUS_idea_new_infantry_regulations_degenfeld_1 = {
+		
+			allowed = {
+				always = yes
 			}
-	    }
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				army_morale_factor = 0.02
+			}
+		}
+		
+		AUS_idea_new_infantry_regulations_degenfeld_2 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				army_morale_factor = 0.02
+				experience_gain_army_unit_factor = 0.1
+				land_doctrine_cost_factor = -0.05
+			}
+		}
+		
+		AUS_idea_new_infantry_regulations_benedek_1 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				breakthrough_factor = 0.025
+				max_dig_in_factor = -0.25
+			}
+		}
+		
+		AUS_idea_new_infantry_regulations_benedek_2 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				breakthrough_factor = 0.025
+				max_dig_in_factor = -0.25
+				experience_gain_army_unit_factor = 0.1
+				land_doctrine_cost_factor = -0.05
+			}
+		}
+		
+		AUS_idea_austrian_general_staff_1 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				max_planning_factor = 0.05
+				planning_speed = 0.03
+				supply_consumption_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+		
+		AUS_idea_austrian_general_staff_2 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+				supply_consumption_factor = -0.1
+				political_power_factor = -0.1
+				experience_gain_factor = 0.05
+				experience_gain_army = 0.01
+			}
+		}
+		
+		AUS_idea_adjutantenkorps_1 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				max_command_power = 25
+				planning_speed = -0.05
+				supply_consumption_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		
+		AUS_idea_adjutantenkorps_2 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				max_command_power = 25
+				planning_speed = -0.1
+				supply_consumption_factor = 0.1
+				political_power_factor = 0.1
+				experience_gain_factor = -0.05
+				experience_gain_army = -0.01
+			}
+		}
+		
+		AUS_idea_esprit_de_corps_1 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				army_morale_factor = 0.02
+				army_org_regain = 0.03
+			}
+		}
+		
+		AUS_idea_esprit_de_corps_2 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				army_morale_factor = 0.03
+				army_org_regain = 0.05
+			}
+		}
+		
+		AUS_idea_hauslab_assault = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = AUS_hauslab_assault_tactics
+
+			modifier = {
+				army_artillery_attack_factor = 0.05
+				#modifier_army_sub_unit_light_cavalry_attack_factor = 0.05
+			}
+		}
+		
+		AUS_idea_stosstaktik = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = -0.05
+				breakthrough_factor = 0.05
+				max_dig_in = -0.5
+			}
+		}
+		
+		### NAVY ###
+		
+		AUS_idea_navy_spending_cuts_1 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = navy_spending_cuts
+
+			modifier = {
+				naval_coordination = -0.15
+				naval_morale = -0.15
+				experience_gain_navy_factor = -0.15
+				experience_gain_navy = -0.10
+				political_power_gain = -0.05
+				industrial_capacity_dockyard = -0.15
+				production_speed_dockyard_factor = -0.1
+			}
+		}
+		
+		AUS_idea_navy_spending_cuts_2 = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = navy_spending_cuts
+
+			modifier = {
+				naval_coordination = -0.1
+				naval_morale = -0.1
+				experience_gain_navy_factor = -0.1
+				experience_gain_navy = -0.05
+				industrial_capacity_dockyard = -0.1
+				production_speed_dockyard_factor = -0.05
+			}
+		}
+		
 		AUS_New_Navy_1 = {
 
-		    allowed = {
-			    always = no
-		    }
-
-		    allowed_civil_war = {
-			    always = yes
-		    }
-
-		    removal_cost = -1
-
-		    picture = placeholder
-
-		    modifier = {
-		        consumer_goods_factor = 0.05
-	            industrial_capacity_dockyard = 0.15
+			allowed = {
+				always = yes
 			}
-	    }
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = 
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		
+		AUS_idea_salvacoste = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_salvacoste
+			
+			modifier = {
+				naval_damage_factor = 0.05
+			}
+		}
+		
 		AUS_idea_adriatic_navy = {
 
 		    allowed = {
@@ -418,7 +763,331 @@ ideas = {
 	            production_speed_dockyard_factor = 0.15
 			}
 	    }
+		
+		### ECONOMY ###
 
+		AUS_idea_railway_concessions = {
+
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = generic_build_infrastructure
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+		
+		AUS_idea_newspaper_tax = {
+
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = AUS_newspaper_tax
+
+			modifier = {
+				consumer_goods_factor = -0.01
+				political_power_factor = 0.03
+			}
+		}
+		
+		#Debt Management
+		
+		AUS_idea_debt_repayments = {
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = SWE_lumber_boom
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		
+		#Trade Union
+		
+		AUS_idea_austrian_trade_union = {
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = free_trade
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+			
+			targeted_modifier = {
+				tag = LIE
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = LVN
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = MOD
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = PRM
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+		}
+		
+		LIE_idea_austrian_trade_union = {
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = free_trade
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+			targeted_modifier = {
+				tag = AUS
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = LVN
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = MOD
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = PRM
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+		}
+		
+		LVN_idea_austrian_trade_union = {
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = free_trade
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+			
+			targeted_modifier = {
+				tag = AUS
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = LIE
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = MOD
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = PRM
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+		}
+		
+		MOD_idea_austrian_trade_union = {
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = free_trade
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+			targeted_modifier = {
+				tag = AUS
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = LIE
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = LVN
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = PRM
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+		}
+		
+		PRM_idea_austrian_trade_union = {
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = free_trade
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+			targeted_modifier = {
+				tag = AUS
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = LIE
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = LVN
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+			
+			targeted_modifier = {
+				tag = MOD
+				extra_trade_to_target_factor = 0.25
+				trade_opinion_factor = 0.5
+			}
+		}
+		
+		AUS_idea_mountanuniversitat_leoben = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_pp_unity_bonus
+
+			removal_cost = -1
+			
+			research_bonus = {
+				process_engineering_tech = 0.05
+				mechanical_engineering_tech = 0.05
+			}
+
+			modifier = {
+				local_resources_factor = 0.05
+				research_speed_factor = 0.02
+			}
+		}
+		
+		AUS_idea_hungarian_gold = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = AUS_Hungarian_gold
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.15
+			}
+		}
+		
+		AUS_idea_bank_galicyjski = {
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = tur_balkan_central_bank_wealthy_greece
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.01
+				trade_laws_cost_factor = -0.1
+				trade_opinion_factor = 0.05
+			}
+		}
+		
 		AUS_idea_industrialization_bohemia = {
 
 		   allowed = {
@@ -470,43 +1139,8 @@ ideas = {
 			}
 	    }
 		
-		AUS_idea_Metternich_Legacy = {
-
-		   allowed = {
-			   always = no
-		   }
-
-		   allowed_civil_war = {
-			   always = yes
-		   }
-
-		   removal_cost = -1
-
-		   picture = placeholder
-
-		   modifier = {
-	           production_speed_dockyard_factor = 0.1
-			}
-	    }
-		AUS_idea_lost_hungary_revolt = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-
-			modifier = {
-				stability_factor = -0.25
-				political_power_gain = -0.2
-			}
-		}
+		### AUSTRIA-HUNGARY IDEAS ###
+		
 		AUS_idea_prioritize_Austrian_army = {
 
 			allowed = {
@@ -644,6 +1278,7 @@ ideas = {
 				army_core_defence_factor = 0.05
 			}
 		}
+		
 		AUS_HUN_Dual_Monarchy = { ##NEEDS TO BE FIXED
 
 			allowed = {
@@ -1000,78 +1635,6 @@ ideas = {
 				army_artillery_defence_factor = 0.1
 			}
 		}
-		
-		AUS_idea_financial_crisis = {
-
-			allowed = {
-				original_tag = AUS
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = TSH_fading_fiscal_crisis
-
-			modifier = {
-				consumer_goods_factor = 0.2
-				industrial_capacity_factory = -0.05
-				production_factory_max_efficiency_factor = -0.05
-				production_factory_efficiency_gain_factor = -0.02
-				production_speed_infrastructure_factor = -0.15
-			}
-		}
-		
-		AUS_idea_army_spending_cuts = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			removal_cost = -1
-
-			picture = army_spending_cuts
-
-			modifier = {
-				army_morale_factor = -0.05
-				conscription = -0.005
-				conscription_factor = -0.1
-				command_power_gain = -0.05
-				mobilization_speed = -0.1
-				supply_consumption_factor = 0.2
-				production_speed_arms_factory_factor = -0.2
-				industrial_capacity_factory = -0.1
-			}
-		}
-		
-		AUS_idea_PRS_boost_socialism = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			removal_cost = -1
-
-			picture = fourth_international
-
-			modifier = {
-				social_egalitarianism_drift = 0.02
-			}
-		}
-		
-		GC_idea_south_german_bund = {
-		    allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = holy_roman_empire
-			
-			modifier = {
-				generate_wargoal_tension = 0.25
-			}
-		}
 
 		AUH_idea_Global_Trade_1873 = {
 
@@ -1111,676 +1674,13 @@ ideas = {
 				industrial_capacity_dockyard = 0.06
 			}
 		}
-		
-		###Pre 1866 Economy Ideas
-		
-		AUS_idea_railway_concessions = {
-
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = generic_build_infrastructure
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_speed_rail_way_factor = 0.15
-			}
-		}
-		
-		AUS_idea_newspaper_tax = {
-
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = AUS_newspaper_tax
-
-			modifier = {
-				consumer_goods_factor = -0.01
-				political_power_factor = 0.03
-			}
-		}
-		
-		#Debt Management
-		
-		AUS_idea_debt_repayments = {
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = SWE_lumber_boom
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				industrial_capacity_factory = -0.05
-				production_speed_buildings_factor = -0.05
-			}
-		}
-		
-		#Trade Union
-		
-		AUS_idea_austrian_trade_union = {
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = free_trade
-
-			modifier = {
-				consumer_goods_factor = -0.02
-			}
-			
-			targeted_modifier = {
-				tag = LIE
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = LVN
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = MOD
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = PRM
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-		}
-		
-		LIE_idea_austrian_trade_union = {
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = free_trade
-
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-			
-			targeted_modifier = {
-				tag = AUS
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = LVN
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = MOD
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = PRM
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-		}
-		
-		LVN_idea_austrian_trade_union = {
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = free_trade
-
-			modifier = {
-				consumer_goods_factor = -0.03
-			}
-			
-			targeted_modifier = {
-				tag = AUS
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = LIE
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = MOD
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = PRM
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-		}
-		
-		MOD_idea_austrian_trade_union = {
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = free_trade
-
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-			
-			targeted_modifier = {
-				tag = AUS
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = LIE
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = LVN
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = PRM
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-		}
-		
-		PRM_idea_austrian_trade_union = {
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			picture = free_trade
-
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-			
-			targeted_modifier = {
-				tag = AUS
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = LIE
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = LVN
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-			
-			targeted_modifier = {
-				tag = MOD
-				extra_trade_to_target_factor = 0.25
-				trade_opinion_factor = 0.5
-			}
-		}
-		
-		AUS_idea_mountanuniversitat_leoben = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = generic_pp_unity_bonus
-
-			removal_cost = -1
-			
-			research_bonus = {
-				process_engineering_tech = 0.05
-				mechanical_engineering_tech = 0.05
-			}
-
-			modifier = {
-				local_resources_factor = 0.05
-				research_speed_factor = 0.02
-			}
-		}
-		
-		AUS_idea_hungarian_gold = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = AUS_Hungarian_gold
-
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.02
-				political_power_gain = 0.15
-			}
-		}
-		
-		AUS_idea_bank_galicyjski = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = tur_balkan_central_bank_wealthy_greece
-
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.01
-				trade_laws_cost_factor = -0.1
-				trade_opinion_factor = 0.05
-			}
-		}
-		
-		###Pre Navy Ideas
-		
-		AUS_idea_salvacoste = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_salvacoste
-			
-			modifier = {
-				naval_damage_factor = 0.05
-			}
-		}
-		
-		AUS_idea_navy_spending_cuts_1 = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			picture = navy_spending_cuts
-
-			modifier = {
-				naval_coordination = -0.15
-				naval_morale = -0.15
-				experience_gain_navy_factor = -0.15
-				experience_gain_navy = -0.10
-				political_power_gain = -0.05
-				industrial_capacity_dockyard = -0.15
-				production_speed_dockyard_factor = -0.1
-			}
-		}
-		
-		AUS_idea_navy_spending_cuts_2 = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			picture = navy_spending_cuts
-
-			modifier = {
-				naval_coordination = -0.1
-				naval_morale = -0.1
-				experience_gain_navy_factor = -0.1
-				experience_gain_navy = -0.05
-				industrial_capacity_dockyard = -0.1
-				production_speed_dockyard_factor = -0.05
-			}
-		}
-		
-		###Pre Army Ideas
-		
-		AUS_Austrian_General_Staff = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			research_bonus = {
-			
-			}
-
-			modifier = {
-				army_org_Factor = 0.045
-				planning_speed = 0.05
-				political_power_factor = -0.05
-			}
-		}
-		
-		AUS_Austrian_General_Staff1 = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			research_bonus = {
-			
-			}
-
-			modifier = {
-				army_org_Factor = 0.055
-				planning_speed = 0.1
-				political_power_factor = -0.15
-				experience_gain_factor = 0.05
-				experience_gain_army = 0.01
-			}
-		}
-		
-		AUS_Cooperation_Steyr = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.05 
-				production_factory_max_efficiency_factor = 0.05
-			}
-		}
-		
-		AUS_Adjutantenkorps = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			research_bonus = {
-			
-			}
-
-			modifier = {
-				max_dig_in_factor = 0.005
-				planning_speed = 0.05
-				political_power_factor = -0.05
-			}
-		}
-		
-		AUS_Adjutantenkorps1 = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			research_bonus = {
-			
-			}
-
-			modifier = {
-				attrition = 0.01
-				army_morale_factor = 0.01
-				max_dig_in_factor = 0.01
-				planning_speed = 0.1
-				political_power_factor = -0.1
-			}
-		}
-		
-		AUS_idea_stosstaktik = {
-		
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				army_infantry_attack_factor  = 0.05
-				army_infantry_defence_factor = -0.05
-				breakthrough_factor = 0.05
-				max_dig_in = -0.5
-			}
-		}
 	}
-
-#	army_chief = {
-#		AUS_idea_army_archduke_albrecht = {
-#
-#			allowed = {
-#				original_tag = AUS
-#			}
-#
-#			visible = {
-#                date < 1895.02.18
-#            }
-#
-#			available = {
-#				has_completed_focus = AUS_Archduke_Albrecht
-#				date < 1895.02.18
-#			}
-#
-#			picture = AUS_theorist_Albrecht_von_Teschen
-#
-#			cost = 50
-#
-#			traits = { army_chief_defensive_1 army_chief_old_guard }
-#		}
-#	}
-#	navy_chief = {
-#		AUS_idea_naval_maximilian_austria = {
-#
-#			allowed = {
-#				original_tag = AUS
-#			}
-#
-#			picture = AUS_theorist_Archduke_Maximillian
-#
-#			cost = 50
-#
-#			traits = { navy_chief_reform_1 }
-#		}
-#		AUS_idea_naval_ludwig_von_fautz = {
-#
-#			allowed = {
-#				original_tag = AUS
-#			}
-#
-#			visible = {
-#                date < 1880.02.23
-#            }
-#
-#			available = {
-#				has_completed_focus = AUS_New_Leadership
-#				date < 1880.02.23
-#			}
-#
-#			picture = AUS_advisor_Ludwig_von_Fautz
-#
-#			cost = 50
-#
-#			traits = { navy_chief_decisive_battle_1 }
-#		}
-#
-#	}
-#	high_command = {
-#
-#		AUS_vic_Heinrich_von_Littrow = {
-#
-#            allowed = {
-#                original_tag = AUS
-#            }
-#
-#            visible = {
-#                date < 1895.04.25
-#            }
-#
-#            available = {
-#                date < 1895.04.25
-#            }
-#
-#            traits = { navy_fleet_logistics_2 }
-#        }
-#
-#        AUS_vic_Maximilian_Daublebsky_von_Sterneck = {
-#
-#            allowed = {
-#                original_tag = AUS
-#            }
-#
-#            visible = {
-#                date < 1897.12.05
-#            }
-#
-#            available = {
-#                date < 1897.12.05
-#            }
-#
-#            traits = { navy_screen_2 }
-#        }
-#
-#        AUS_vic_Ludwig_von_Gablenz = {
-#
-#            allowed = {
-#                original_tag = AUS
-#            }
-#
-#            visible = {
-#                date < 1874.01.28
-#            }
-#
-#            available = {
-#                date < 1874.01.28
-#            }
-#
-#            traits = { army_infantry_2 }
-#        }
-#
-#        AUS_vic_Ludwig_von_Benedek = {
-#
-#            allowed = {
-#                original_tag = AUS
-#            }
-#
-#            visible = {
-#                date < 1866.07.26
-#            }
-#
-#            available = {
-#                date < 1866.07.26
-#            }
-#
-#            traits = { army_entrenchment_2 }
-#        }
-#
-#    }
 
 	naval_manufacturer = {
 
 		designer = yes
 
 		AUS_vic_naval_company_osterreichischer_lloyd = {
-
-			picture = generic_naval_manufacturer_2
 
 			allowed = {
 				original_tag = AUS
@@ -1803,8 +1703,6 @@ ideas = {
 		}
 		
 		AUS_vic_naval_company_stabilimento_tecnico_triestino = {
-
-			picture = GFX_idea_AUS_vic_naval_company_stabilimento_tecnico_triestino
 
 			#allowed = {
 			#	original_tag = AUS  # will be owned by Italy later
@@ -1833,39 +1731,95 @@ ideas = {
 
 		designer = yes
 
-		AUS_vic_steyr_mannlicher_AG = {
+		AUS_oewg = {
 
-			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				original_tag = AUS
+			}
+			
+			available = {
+                #has_completed_focus = AUS_focus_steyr_arms
+            }
+			
+			visible = {
+				NOT = { has_country_flag = AUS_breechloader_waenzel_flag }
+			}
+
+			cost = 150
+            removal_cost = 10
+
+            research_bonus = {
+                rifle_equipment_techs = 0.05
+            }
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+				}
+			}
+
+            traits = { infantry_equipment_manufacturer_1 }
+		}
+		
+		AUS_oewg_waenzel = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			visible = {
+				has_country_flag = AUS_breechloader_waenzel_flag
+			}
+
+			cost = 150
+            removal_cost = 10
+
+            research_bonus = {
+                rifle_equipment_techs = 0.07
+            }
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					defense = 0.05
+					breakthrough = 0.1
+				}
+			}
+
+            traits = { infantry_equipment_manufacturer_1 }
+		}
+		
+		AUS_vic_steyr_mannlicher_AG = {
 
 			allowed = {
 				original_tag = AUS
 			}
 
 			available = {
-                has_completed_focus = AUS_focus_steyr_arms
-            }
+				has_completed_focus = AUS_focus_steyr_arms
+			}
+			
+			visible = {
+				always = no
+			}
 
 			cost = 150
-            removal_cost = 10
+			removal_cost = 10
 
-            research_bonus = {
-                infantry_weapons = 0.02
-				tech_category_uniforms = 0.02
-            }
-
-            traits = { infantry_equipment_manufacturer_1 }
+			research_bonus = {
+				rifle_equipment_techs = 0.05
+			}
 			
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.05
-                    instant = yes					
-		        }
-	        }
+				}
+			}
+			
+			traits = { infantry_equipment_manufacturer_1 }
 		}
 		
 		AUS_vienna_arsenal = {
-
-			picture = generic_infantry_equipment_manufacturer_2
 
 			allowed = {
 				original_tag = AUS
@@ -1881,17 +1835,15 @@ ideas = {
                 infantry_weapons = 0.02
 				tech_category_uniforms = 0.02
             }
-
-            traits = { AUS_trait_Vienna_Arsenal }
 			
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.05
-                    instant = yes					
-		        }
-	        }
-		}
+					soft_attack = 0.05
+				}
+			}
 
+            traits = { infantry_equipment_manufacturer_1 }
+		}
 	}
 
 	industrial_concern = {
@@ -1973,6 +1925,5 @@ ideas = {
 
 			traits = { AUS_trait_concern_austrian_ganzworks }
 		}
-
 	}
 }

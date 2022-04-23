@@ -3010,6 +3010,18 @@ spriteTypes = {
 		name = "GFX_event_ITA_napoleon_victor"
 		texturefile = "gfx/event_pictures/italy/event_ITA_napoleon_victor.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_ITA_cavour_speech"
+		texturefile = "gfx/event_pictures/italy/news_event_ITA_cavour_speech.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_ITA_florence_19thcent"
+		texturefile = "gfx/event_pictures/italy/news_event_ITA_florence_19thcent.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_ITA_death_of_Pisacane"
+		texturefile = "gfx/event_pictures/italy/news_event_ITA_death_of_Pisacane.png"
+	}
 	
 	
 	
@@ -3862,7 +3874,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_report_event_eng_great_stink"
-		texturefile = "gfx/event_pictures/britain/report_event_eng_great_stink.dds"
+		texturefile = "gfx/event_pictures/uk/report_event_eng_great_stink.dds"
 	}
 	
 	spriteType = {
@@ -4048,6 +4060,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_railway_bridge_szeged"
 		texturefile = "gfx/event_pictures/austria/report_event_railway_bridge_szeged.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_sms_drache"
+		texturefile = "gfx/event_pictures/austria/report_event_sms_drache.png"
 	}
 	
 	spriteType = {

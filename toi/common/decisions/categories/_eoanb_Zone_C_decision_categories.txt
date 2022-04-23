@@ -17,7 +17,7 @@ PRS_decision_category_zollverein = {
 		nation_is_in_zollverein = yes
 	}
 }
- 
+
 PRS_decision_category_industrialisation = {
 	icon = generic_industry
 	
@@ -288,14 +288,17 @@ GEC_decision_category_polizeiverein = {
 	}
 	
 	visible = {
-		OR = { has_idea = GEC_idea_polizeiverein_leader has_idea = GEC_idea_polizeiverein_member }
+		OR = {
+			has_idea = GEC_idea_polizeiverein_leader
+			has_idea = GEC_idea_polizeiverein_member
+		}
 		OR = {
 			has_government = traditional_conservatism
 			has_government = autocracy
 			has_government = chauvinist_populism
 			AND = {
 				has_government = centrism
-				centrism < 0.45
+				centrism < 0.55
 			}
 		}
 	}
@@ -414,27 +417,16 @@ AUS_decision_category_austrian_army = {
 	}
 	
 	visible = {
-		#has_completed_focus = AUS_focus_the_austrian_army
+		OR = {
+			has_completed_focus = AUS_focus_degenfelds_army_reform_plans
+			has_completed_focus = AUS_focus_benedeks_army_reform_plans
+		}
 	}
 }
 
-eoanb_category_aus_federalization_1 = {
-	icon = generic_political_actions
-        
-	picture = GFX_decision_cat_generic_austria_hungary
-	
-	allowed = {
-		tag = AUS
-	}
-	
-	visible = {
-		has_country_flag = AUS_flag_federalization_begin
-	}
-}
-
-AUS_decision_category_habsburg_navy = {
+AUS_decision_category_austrian_navy = {
        
-	icon = generic_political_actions
+	icon = navy
 		
 	picture = GFX_decision_cat_generic_austria_hungary
 	
@@ -445,7 +437,23 @@ AUS_decision_category_habsburg_navy = {
 	}
 	
 	visible = {
-		#has_completed_focus = AUS_focus_reform_trieste_navy
+		#has_completed_focus = AUS_focus_archduke_maximilians_tenure
+	}
+}
+
+eoanb_category_aus_federalization_1 = {
+	icon = generic_political_actions
+        
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	priority = 50
+	
+	allowed = {
+		tag = AUS
+	}
+	
+	visible = {
+		has_country_flag = AUS_flag_federalization_begin
 	}
 }
 

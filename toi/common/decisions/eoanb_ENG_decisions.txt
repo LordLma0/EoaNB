@@ -1172,7 +1172,7 @@ eoanb_category_worker_unrest_ENG = {
 				transfer_state = 121
 				transfer_state = 136
 				transfer_state = 120
-				transfer_state = 1152
+				#transfer_state = 1152
 				white_peace = ENG
 			}
 		}
@@ -2621,6 +2621,9 @@ ENG_fenian_leader_arrest = {
 			IRE={
 				transfer_state = 119
 				white_peace = ENG
+			}
+			ENG = {
+				remove_ideas = ENG_irish_unrest
 			}
 		}
 

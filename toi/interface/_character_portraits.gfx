@@ -160,6 +160,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_Portrait_BEL_Jules_Joseph_d_Anethan"
+		texturefile = "gfx/leaders/BEL/Portrait_BEL_Jules_Joseph_d_Anethan.png"
+	}
+	
+	spriteType = {
 		name = "GFX_Portrait_BEL_Leonard_Greindl"
 		texturefile = "gfx/leaders/BEL/Portrait_BEL_Leonard_Greindl.png"
 	}
@@ -833,6 +838,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_OLD_Peter_von_Rossing"
 		texturefile = "gfx/leaders/OLD/Portrait_OLD_Peter_von_Rossing.png"
+	}
+	
+	### POR
+	
+	spriteType = {
+		name = "GFX_Portrait_POR_Eudoxio_Cesar_Azedo_Gneco"
+		texturefile = "gfx/leaders/POR/Portrait_POR_Eudoxio_Cesar_Azedo_Gneco.png"
 	}
 
 	### PRM
@@ -1675,6 +1687,13 @@ spriteTypes = {
 		texturefile = "gfx/leaders/UTA/Portrait_UTA_Brigham_Young.png"
 	}
 	
+	#### NMX
+
+	spriteType = {
+		name = "GFX_portrait_NMX_abraham_rencher"
+		texturefile = "gfx/leaders/NMX/Portrait_NMX_Abraham_Rencher.png"
+	}
+
 	#### ORE
 
 	#### DAK

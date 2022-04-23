@@ -10,12 +10,12 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = FRK
 		1857.1.1 = {
-			owner = FRK
 			add_core_of = FRK
 			
 			buildings = {
-				infrastructure = 4
+				infrastructure = 7
 			}
 			
 			victory_points = { 6488 20 } # Frankfurt

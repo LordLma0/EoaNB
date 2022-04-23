@@ -1,22 +1,13 @@
 ﻿1857.1.1 = {
 	capital = 981
 	oob = "PIE_1857"
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_naval_oob = "PIE_1857_naval_mtg"
-		else = {
-			set_naval_oob = "PIE_1857_naval_legacy"
-		}
-	}
 	set_convoys = 100
 	set_research_slots = 3
 	set_truce = {
 		target = RUS
 		days = 1820
 	}
-	add_to_variable = { prestige_score = 15 }
+	add_to_variable = { prestige_score = 25 }
 	add_ideas = {
 		#POLITICS 
 		hos_is_leader
@@ -142,7 +133,7 @@
 		ornithopter = 1
 		screw_propeller = 1
 		basic_train = 1
-		support_equipment_1 = 1
+		tech_support = 1
 		train_1855 = 1
 	}
 	add_equipment_to_stockpile = {
@@ -194,17 +185,19 @@
 	recruit_character = PIE_giovanni_durando
 	recruit_character = PIE_luigi_acquaviva
 	recruit_character = PIE_nino_bixio
+	recruit_character = PIE_luigi_federico_menabrea
+	recruit_character = PIE_enrico_cosenz
+	recruit_character = PIE_maurizio_gerbaix_sonnaz
 	# NAVY LEADERS
 	recruit_character = PIE_carlo_pellion_di_persano
 	recruit_character = PIE_battista_albini
+	recruit_character = PIE_orazio_di_negro
 
   # Non Startup Generals
 	# recruit_character = PIE_matteo_albertone Ethiopian war
 	# recruit_character = PIE_vittorio_asinari_di_bernezzo Becomes general 1883
-	# recruit_character = PIE_luigi_federico_menabrea Recruited in 2IP
 	# recruit_character = PIE_giuseppe_arimondi Becomes General 1887
 	# recruit_character = PIE_domenico_cucchiari Upon Unification
-	# recruit_character = PIE_enrico_cosenz 2IP General 
 
 	# ADVISORS 
 	recruit_character = PIE_Carlo_Bombrini
@@ -297,8 +290,38 @@
 			}
 			obsolete = no
 		}
+		set_naval_oob = "PIE_1857_naval_mtg"
 		else = {
-			# Load the non-mtg OOB
+			create_equipment_variant = {
+				name = "Corvette Class"
+				type = ship_corvette_0
+				name_group = GER_CA_HISTORICAL
+				parent_version = 0
+			}
+			create_equipment_variant = {
+				name = "Gunboat Class"
+				type = ship_gunboat_0
+				name_group = GER_CA_HISTORICAL
+				parent_version = 0
+			}
+			create_equipment_variant = {
+				name = "Early Frigate Class"
+				type = ship_frigate_0
+				name_group = GER_CA_HISTORICAL
+				parent_version = 0
+			}
+			create_equipment_variant = {
+				name = "Frigate Class"
+				type = ship_frigate_1
+				name_group = GER_CA_HISTORICAL
+				parent_version = 0
+			}
+			create_equipment_variant = {
+				name = "Ship of the Line Class"
+				type = ship_lineship_0
+				name_group = GER_CA_HISTORICAL
+				parent_version = 0
+			}
 			set_naval_oob = "PIE_1857_naval_legacy"
 		}
 	}

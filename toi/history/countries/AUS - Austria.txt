@@ -75,10 +75,10 @@
 		AUS_idea_hungarian_revolution
 		AUS_idea_grundentlastungspatent
 		AUS_idea_nationalist_unrest
-		AUS_idea_austrian_trade_union
 		AUS_idea_railway_concessions
 		AUS_idea_army_spending_cuts
 		AUS_idea_navy_spending_cuts_1
+		AUS_idea_austrian_trade_union
 		NA_B_small_scale_railways
 	}
 
@@ -112,6 +112,12 @@
 	set_variable = { AUS_ITA_Unrest_sf = -0.02 tooltip = stability_factor_tooltip }
 	set_variable = { AUS_ITA_Unrest_risk_change = 0.02 tooltip = AUS_ITA_Unrest_risk_change_tooltip }
 	add_dynamic_modifier = { modifier = AUS_Italian_Unrest_Modifier }
+	
+	set_variable = { AUS_naval_reform_cgf = 0.05 tooltip = consumer_goods_factor_tooltip }
+	set_variable = { AUS_naval_reform_ppf = -0.05 tooltip = political_power_factor_tooltip }
+	set_variable = { AUS_naval_reform_icd = 0.1 }
+	set_variable = { AUS_naval_reform_psdf = 0.1 }
+	add_dynamic_modifier = { modifier = dynmod_AUS_naval_reform }
 
 	# Diplo
 
@@ -361,11 +367,11 @@
 	recruit_character = AUS_eugen_wratislaw_von_mitrowitz
 	
 	#Generals
-	recruit_character = AUS_heinrich_von_hess 						#also theorist
+	recruit_character = AUS_heinrich_von_hess
 	recruit_character = AUS_albrecht_von_osterreich_teschen
 	recruit_character = AUS_eduard_clam_gallas
 	recruit_character = AUS_leopold_von_osterreich 					#also admiral 
-	recruit_character = AUS_ludwig_von_benedek						#also possible army chief
+	recruit_character = AUS_ludwig_von_benedek						#also possible army chief/theorist
 	recruit_character = AUS_ludwig_von_gablenz
 	recruit_character = AUS_wilhelm_von_ramming
 	recruit_character = AUS_hermann_von_nostitz_rieneck
@@ -382,7 +388,7 @@
 	recruit_character = AUS_philipp_von_stadion_und_thannhausen
 	recruit_character = AUS_karl_von_urban
 	recruit_character = AUS_karl_von_thun_und_hohenstein
-	recruit_character = AUS_august_von_degenfeld			#also possible army chief
+	recruit_character = AUS_august_von_degenfeld					#also possible army chief/theorist
 	recruit_character = AUS_ernst_von_osterreich
 
 	#Admirals
@@ -430,7 +436,7 @@
 			modules = {
 				fixed_ship_battery_slot = ship_cannon_battery_0
 				fixed_ship_fire_control_system_slot = fire_control_system_0
-				fixed_ship_engine_slot = ship_engine_sail_0
+				fixed_ship_engine_slot = ship_engine_sail_1
 				fixed_ship_armor_slot = ship_armor_screen_hardwood_0
 				mid_1_custom_slot = ship_cannon_battery_0
 				front_1_custom_slot = empty
@@ -438,14 +444,47 @@
 			#obsolete = no
 		}
 		create_equipment_variant = {
-			name = "Frigate Class"
+			name = "Screw Corvette Class"
+			type = ship_hull_corvette_1
+			name_group = GER_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_cannon_battery_0
+				fixed_ship_fire_control_system_slot = fire_control_system_0
+				fixed_ship_engine_slot = ship_engine_steam_screw_screen
+				fixed_ship_armor_slot = ship_armor_screen_hardwood_0
+				mid_1_custom_slot = ship_cannon_battery_0
+				front_1_custom_slot = empty
+			}
+			#obsolete = no
+		}
+		create_equipment_variant = {
+			name = "Early Frigate Class"
+			type = ship_hull_frigate_0
+			name_group = GER_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_cannon_battery_0
+				fixed_ship_fire_control_system_slot = fire_control_system_0
+				fixed_ship_engine_slot = ship_engine_sail_1
+				fixed_ship_armor_slot = ship_armor_capital_hardwood_0
+				mid_1_custom_slot = ship_cannon_battery_0
+				mid_2_custom_slot = ship_cannon_battery_0
+				mid_3_custom_slot = ship_cannon_battery_0
+				front_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+			#obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Sail Frigate Class"
 			type = ship_hull_frigate_1
 			name_group = GER_CA_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_cannon_battery_0
 				fixed_ship_fire_control_system_slot = fire_control_system_0
-				fixed_ship_engine_slot = ship_engine_sail_0
+				fixed_ship_engine_slot = ship_engine_sail_2
 				fixed_ship_armor_slot = ship_armor_capital_hardwood_1
 				mid_1_custom_slot = ship_cannon_battery_0
 				mid_2_custom_slot = ship_cannon_battery_1
@@ -454,6 +493,61 @@
 				rear_1_custom_slot = ship_cannon_battery_1
 			}
 			#obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Paddle Frigate Class"
+			type = ship_hull_frigate_1
+			name_group = GER_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_cannon_battery_1
+				fixed_ship_fire_control_system_slot = fire_control_system_0
+				fixed_ship_engine_slot = ship_engine_paddle_cruiser
+				fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+				mid_1_custom_slot = ship_cannon_battery_0
+				mid_2_custom_slot = ship_cannon_battery_1
+				mid_3_custom_slot = empty
+				front_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+			#obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Screw Frigate Class"
+			type = ship_hull_frigate_1
+			name_group = GER_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_cannon_battery_1
+				fixed_ship_fire_control_system_slot = fire_control_system_0
+				fixed_ship_engine_slot = ship_engine_steam_screw_cruiser
+				fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+				mid_1_custom_slot = ship_cannon_battery_0
+				mid_2_custom_slot = ship_cannon_battery_1
+				mid_3_custom_slot = empty
+				front_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+			#obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Screw Ship of the Line Class"
+			type = ship_hull_lineship_1
+			name_group = GER_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot=ship_cannon_battery_1
+				fixed_ship_fire_control_system_slot=fire_control_system_0
+				fixed_ship_engine_slot=ship_engine_steam_screw_capital
+				mid_1_custom_slot=ship_cannon_battery_1
+				fixed_ship_armor_slot=ship_armor_capital_hardwood_0
+				mid_2_custom_slot=ship_cannon_battery_0
+				mid_3_custom_slot=ship_cannon_battery_0
+				front_1_custom_slot=ship_cannon_battery_0
+				front_2_custom_slot=ship_cannon_battery_0
+				rear_1_custom_slot=empty
+			}
+			#obsolete = no
 		}
 		create_equipment_variant = {
 			name = "Early Gunboat Class"

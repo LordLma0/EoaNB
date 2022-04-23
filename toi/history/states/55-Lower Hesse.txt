@@ -16,12 +16,12 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = HES
 		1857.1.1 = {
-			owner = HES
 			add_core_of = HES
 
 			buildings = {
-				infrastructure = 3
+				infrastructure = 6
 				industrial_complex = 1
 			}
 
