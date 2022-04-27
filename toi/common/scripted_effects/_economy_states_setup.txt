@@ -96,6 +96,9 @@ set_historical_state_rgos={
 		add_to_array = { global.coal_states = 473 }
 		add_to_array = { global.raw_goods_states = 463}
 
+		add_to_array = { global.raw_goods_states = 468 }
+		add_to_array = { global.raw_goods_states = 1311 }
+
 		#Mexico
 		add_to_array = { global.raw_goods_states = 480 }
 		add_to_array = { global.coal_states = 480 }

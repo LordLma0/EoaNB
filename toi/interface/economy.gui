@@ -2903,6 +2903,8 @@ guiTypes = {
 						name ="trade_life_goods_icon"
 						spriteType = "GFX_life_goods"
 						position = { x = 4 y = 7 }
+
+						pdx_tooltip = trade_life_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_life_goods_title"
@@ -2914,6 +2916,8 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+
+						pdx_tooltip = trade_life_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -2926,6 +2930,8 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+
+						pdx_tooltip = trade_life_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -2938,6 +2944,8 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+
+						pdx_tooltip = trade_life_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_life_goods_trade_amount_loc"
@@ -2949,6 +2957,8 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+
+						pdx_tooltip = trade_life_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_life_goods_trade_value_loc"
@@ -2960,6 +2970,8 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+
+						pdx_tooltip = trade_life_goods_tt
 					}
 				}
 			#
@@ -2974,6 +2986,7 @@ guiTypes = {
 						name ="trade_everyday_goods_icon"
 						spriteType = "GFX_everyday_goods"
 						position = { x = 4 y = 7 }
+						pdx_tooltip = trade_everyday_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_everyday_goods_title"
@@ -2985,6 +2998,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_everyday_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -2997,6 +3011,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_everyday_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -3009,6 +3024,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_everyday_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_everyday_goods_trade_amount_loc"
@@ -3020,6 +3036,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_everyday_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_everyday_goods_trade_value_loc"
@@ -3031,6 +3048,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_everyday_goods_tt
 					}
 				}
 			#
@@ -3045,6 +3063,7 @@ guiTypes = {
 						name ="trade_luxury_goods_icon"
 						spriteType = "GFX_luxury_goods"
 						position = { x = 4 y = 7 }
+						pdx_tooltip = trade_luxury_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_luxury_goods_title"
@@ -3056,6 +3075,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_luxury_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -3068,6 +3088,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_luxury_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -3080,6 +3101,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_luxury_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_luxury_goods_trade_amount_loc"
@@ -3091,6 +3113,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_luxury_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_luxury_goods_trade_value_loc"
@@ -3102,6 +3125,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_luxury_goods_tt
 					}
 				}
 			#
@@ -3116,6 +3140,7 @@ guiTypes = {
 						name ="trade_services_icon"
 						spriteType = "GFX_services"
 						position = { x = 4 y = 7 }
+						pdx_tooltip = trade_services_tt
 					}
 					instantTextBoxType = {
 						name = "trade_services_title"
@@ -3127,6 +3152,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_services_tt
 					}
 
 					instantTextBoxType = {
@@ -3139,6 +3165,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_services_tt
 					}
 
 					instantTextBoxType = {
@@ -3151,6 +3178,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_services_tt
 					}
 					instantTextBoxType = {
 						name = "trade_services_trade_amount_loc"
@@ -3162,6 +3190,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_services_tt
 					}
 					instantTextBoxType = {
 						name = "trade_services_trade_value_loc"
@@ -3173,6 +3202,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_services_tt
 					}
 				}
 			#
@@ -3187,6 +3217,7 @@ guiTypes = {
 						name ="trade_raw_goods_icon"
 						spriteType = "GFX_raw_goods"
 						position = { x = 4 y = 7 }
+						pdx_tooltip = trade_raw_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_raw_goods_title"
@@ -3198,6 +3229,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_raw_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -3210,6 +3242,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_raw_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -3222,6 +3255,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_raw_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_raw_goods_trade_amount_loc"
@@ -3233,6 +3267,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_raw_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_raw_goods_trade_value_loc"
@@ -3244,6 +3279,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_raw_goods_tt
 					}
 				}
 			#
@@ -3258,6 +3294,7 @@ guiTypes = {
 						name ="trade_industrial_goods_icon"
 						spriteType = "GFX_industrial_goods"
 						position = { x = 4 y = 7 }
+						pdx_tooltip = trade_industrial_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_industrial_goods_title"
@@ -3269,6 +3306,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_industrial_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -3281,6 +3319,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_industrial_goods_tt
 					}
 
 					instantTextBoxType = {
@@ -3293,6 +3332,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_industrial_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_industrial_goods_trade_amount_loc"
@@ -3304,6 +3344,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_industrial_goods_tt
 					}
 					instantTextBoxType = {
 						name = "trade_industrial_goods_trade_value_loc"
@@ -3315,6 +3356,7 @@ guiTypes = {
 						maxHeight = 24
 						fixedsize = yes
 						#alwaystransparent = yes
+						pdx_tooltip = trade_industrial_goods_tt
 					}
 				}
 			#
