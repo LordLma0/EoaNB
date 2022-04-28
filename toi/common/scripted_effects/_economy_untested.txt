@@ -6,3 +6,252 @@ __advance_time__ = {
 
     
 }
+
+change_interest_rate = {
+    #input: ir_change_temp
+
+    if = {
+        limit = {
+            check_variable = { ir_change_temp > 0 }
+        }
+        add_to_variable = { interest_rate = ir_change_temp }
+        
+        if = {
+            limit = {
+                check_variable = { interest_rate > 10 }
+            }
+            set_variable = { interest_rate = 10 }
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { ir_change_temp < 0 }
+        }
+        add_to_variable = { interest_rate = ir_change_temp }
+
+        if = {
+            limit = {
+                check_variable = { interest_rate < 1 }
+            }
+            set_variable = { interest_rate = 1 }
+        }
+    }
+}
+
+calculate_global_price = {
+    #Global Scope
+    set_variable = { global.life_goods_price = 0 }
+    set_variable = { global.everyday_goods_price = 0 }
+    set_variable = { global.luxury_goods_price = 0 }
+    set_variable = { global.services_price = 0 }
+    set_variable = { global.raw_goods_price = 0 }
+    set_variable = { global.industrial_goods_price = 0 }
+    
+    set_variable = { global.life_goods_supply = 0 }
+    set_variable = { global.everyday_goods_supply = 0 }
+    set_variable = { global.luxury_goods_supply = 0 }
+    set_variable = { global.services_supply = 0 }
+    set_variable = { global.raw_goods_supply = 0 }
+    set_variable = { global.industrial_goods_supply = 0 }
+
+    for_each_scope_loop = {
+        array = global.econ_order_array
+        set_temp_variable = { p_temp = life_goods_price }
+        multiply_temp_variable = { p_temp = life_goods_supply }
+        divide_temp_variable = { p_temp = 1000 }
+        add_to_variable = { global.life_goods_price = p_temp }
+        
+        set_temp_variable = { p_temp = everyday_goods_price }
+        multiply_temp_variable = { p_temp = everyday_goods_supply }
+        divide_temp_variable = { p_temp = 1000 }
+        add_to_variable = { global.everyday_goods_price = p_temp }
+        
+        set_temp_variable = { p_temp = luxury_goods_price }
+        multiply_temp_variable = { p_temp = luxury_goods_supply }
+        divide_temp_variable = { p_temp = 1000 }
+        add_to_variable = { global.luxury_goods_price = p_temp }
+        
+        set_temp_variable = { p_temp = services_price }
+        multiply_temp_variable = { p_temp = services_supply }
+        divide_temp_variable = { p_temp = 1000 }
+        add_to_variable = { global.services_price = p_temp }
+        
+        set_temp_variable = { p_temp = raw_goods_price }
+        multiply_temp_variable = { p_temp = raw_goods_supply }
+        divide_temp_variable = { p_temp = 1000 }
+        add_to_variable = { global.raw_goods_price = p_temp }
+        
+        set_temp_variable = { p_temp = industrial_goods_price }
+        multiply_temp_variable = { p_temp = industrial_goods_supply }
+        divide_temp_variable = { p_temp = 1000 }
+        add_to_variable = { global.industrial_goods_price = p_temp }
+
+        set_temp_variable = { s_temp = life_goods_supply }
+        divide_temp_variable = { s_temp = 1000 }
+        add_to_variable = { global.life_goods_supply = s_temp }
+        
+        set_temp_variable = { s_temp = everyday_goods_supply }
+        divide_temp_variable = { s_temp = 1000 }
+        add_to_variable = { global.everyday_goods_supply = s_temp }
+        
+        set_temp_variable = { s_temp = luxury_goods_supply }
+        divide_temp_variable = { s_temp = 1000 }
+        add_to_variable = { global.luxury_goods_supply = s_temp }
+        
+        set_temp_variable = { s_temp = services_supply }
+        divide_temp_variable = { s_temp = 1000 }
+        add_to_variable = { global.services_supply = s_temp }
+        
+        set_temp_variable = { s_temp = raw_goods_supply }
+        divide_temp_variable = { s_temp = 1000 }
+        add_to_variable = { global.raw_goods_supply = s_temp }
+        
+        set_temp_variable = { s_temp = industrial_goods_supply }
+        divide_temp_variable = { s_temp = 1000 }
+        add_to_variable = { global.industrial_goods_supply = s_temp }
+    }
+
+    divide_variable = { global.life_goods_price = global.life_goods_supply }
+    divide_variable = { global.everyday_goods_price = global.everyday_goods_supply }
+    divide_variable = { global.luxury_goods_price = global.luxury_goods_supply }
+    divide_variable = { global.services_price = global.services_supply }
+    divide_variable = { global.raw_goods_price = global.raw_goods_supply }
+    divide_variable = { global.industrial_goods_price = global.industrial_goods_supply }
+}
+
+calculate_trade_neighbors = {
+    clear_array = global_trade_neighbor_array
+
+    every_neighbor_country = {
+        limit = {
+            is_in_array = { global.econ_order_array = THIS }
+        }
+        if = {
+            limit = {
+                any_controlled_state = {
+                    is_in_home_area = yes
+                    any_neighbor_state = {
+                        is_controlled_by = PREV.PREV.PREV
+                        is_in_home_area = yes
+                    }
+                }
+            }
+            add_to_array = { PREV.global_trade_neighbor_array = THIS }
+        }
+    }
+}
+
+calculate_trade_step_size = {
+    #Country Scope
+
+    #Life Goods
+        set_variable = { life_goods_trade_step_amount = life_goods_demand }
+        divide_variable = { life_goods_trade_step_amount = 20 }
+    #
+}
+
+ai_international_trade_calc = {
+    #Country Scope
+
+}
+
+calculate_international_trade = {
+    #Country Scope
+
+    #Life Goods
+        for_each_loop = {
+            array = life_goods_global_trade_country_array
+            value = country_temp
+            index = iii
+            break = cheapest_brk
+
+            #life_goods_global_trade_country_array - SET
+            #life_goods_global_trade_amount_array - SET
+            #life_goods_global_trade_value_array
+            #life_goods_global_trade_shipping_cost_array
+
+            #Value
+            set_variable = { life_goods_global_trade_value_array^iii = life_goods_global_trade_amount_array^iii }
+            set_temp_variable = { net_tariff_percentage_temp = import_tariff_percentage }
+            add_to_temp_variable = { net_tariff_percentage_temp = country_temp:export_tariff_percentage }
+            subtract_from_temp_variable = { net_tariff_percentage_temp = import_subsidy_percentage }
+            subtract_from_temp_variable = { net_tariff_percentage_temp = country_temp:export_subsidy_percentage }
+            add_to_temp_variable = { net_tariff_percentage_temp = 100 }
+            if = {
+                limit = {
+                    check_variable = { net_tariff_percentage_temp < 10 }
+                }
+                set_temp_variable = { net_tariff_percentage_temp = 10 }
+            }
+
+            set_temp_variable = { true_price = country_temp:life_goods_price }
+            multiply_temp_variable = { true_price = shipping_cost }
+            multiply_temp_variable = { true_price = net_tariff_percentage_temp }
+            divide_temp_variable = { true_price = 100 }
+            multiply_variable = { life_goods_global_trade_value_array^iii = true_price }
+
+            #Shipping Cost
+            if = { 
+                limit = {
+                    is_in_array = { global_trade_neighbor_array = country_temp }
+                }
+                set_variable = { life_goods_global_trade_shipping_cost_array^iii = 0 }
+            }
+            else = {
+                set_temp_variable = { exporter_capital = country_temp:capital }
+                var:exporter_capital = {
+                    set_variable = { PREV.shipping_distance = distance_to@PREV.capital } #This needs to be a normal variable
+                }
+                divide_variable = { shipping_distance = global.base_shipping_cost_divisor }
+                set_temp_variable = { modifier_temp = modifier@shipping_cost_modifier }
+                add_to_temp_variable = { modifier_temp = 1 }
+                multiply_variable = { shipping_distance = modifier_temp }
+                add_to_variable = { shipping_distance = 1 }
+
+                set_variable = { life_goods_global_trade_shipping_cost_array^iii = shipping_distance }
+                multiply_variable = { life_goods_global_trade_shipping_cost_array^iii = life_goods_global_trade_amount_array^iii }
+            }
+        }
+    #
+}
+
+calculate_shipping_capacity = {
+    set_variable = { shipping_capacity = 0 }
+    every_controlled_state = {
+        limit = {
+            any_province_building_level = {
+                building = naval_base
+                level > 1
+            }
+        }
+        add_to_variable = { PREV.shipping_capacity = 10 }
+    }
+
+    set_variable = { shipping_capacity = 1000000 } #TODO - based off ports
+    set_variable = { shipping_stress = 0 }
+    for_each_loop = {
+        array = life_goods_global_trade_shipping_cost_array
+        value = cost_temp
+        add_to_variable = { shipping_stress = cost_temp }
+    }
+
+    
+    if = {
+        limit = {
+            check_variable = { shipping_stress > shipping_capacity }
+        }
+        set_temp_variable = { shipping_penalty_temp = shipping_stress }
+        divide_temp_variable = { shipping_penalty_temp = shipping_capacity }
+
+        set_variable = { shipping_penalty = 1 }
+        divide_variable = { shipping_penalty = shipping_penalty_temp }
+        subtract_from_variable = { shipping_penalty = 1 }
+    }
+    else = {
+        set_variable = { shipping_penalty = 0 }
+    }
+}
+
+conduct_international_trade = {
+
+}
