@@ -683,7 +683,12 @@ country_event = {
 				base = 10
 				modifier = { factor = 0 is_historical_focus_on = yes }
 			}
-			trigger = { check_variable = { USA_Slavery_Debate_Leaning < 35 } has_war = no }
+			trigger = {
+				AND = {
+					has_country_flag = USA_Slavery_Debate_Ongoing
+					has_completed_focus = USA_Focus_PACW_The_Unionists
+				}
+			}
 
 			add_popularity = { ideology = traditional_conservatism popularity = 0.03 }
 
@@ -703,7 +708,7 @@ country_event = {
 				OR = {
 					AND = {
 						has_country_flag = USA_Slavery_Debate_Ongoing
-						check_variable = { USA_Slavery_Debate_Leaning > -25 }
+						has_completed_focus = USA_Focus_PACW_The_Unionists
 					}
 					AND = {
 						NOT = { has_country_flag = USA_Slavery_Debate_Ongoing }
@@ -729,7 +734,7 @@ country_event = {
 		option = { # Breckinridge
 			name = usa_slavery_debate.100.e
 			ai_chance = {
-				base = 1
+				base = 10
 				modifier = { factor = 0 is_historical_focus_on = yes }
 			}
 			trigger = {
@@ -760,7 +765,7 @@ country_event = {
 		option = { # Buchanan
 			name = usa_slavery_debate.100.f
 			ai_chance = {
-				base = 10
+				base = 5
 				modifier = { factor = 0 is_historical_focus_on = yes }
 			}
 			# trigger = { check_variable = { USA_Slavery_Debate_Leaning > -35 } }
@@ -768,11 +773,13 @@ country_event = {
 				OR = {
 					AND = {
 						has_country_flag = USA_Slavery_Debate_Ongoing
-						check_variable = { USA_Slavery_Debate_Leaning > -35 }
-					}
-					AND = {
-						NOT = { has_country_flag = USA_Slavery_Debate_Ongoing }
-						NOT = { has_war_with = CSA }
+						has_completed_focus = USA_Focus_PACW_Pro_Slavery
+						OR = {
+							NOT = {
+								has_country_flag = breckinridge_sucessor
+								has_country_flag = douglas_successor
+							}
+						}
 					}
 				}
 			}
@@ -782,6 +789,10 @@ country_event = {
 			hidden_effect = {
 				set_country_flag = USA_BuchananElected
 				country_event = { id = acw_buchanan.1 days = 21 }
+				add_to_variable = {
+					var = USA_Slavery_Debate_Leaning
+					value = 40
+				}
 				news_event = usa_slavery_debate.101
 			}
 		}
@@ -863,7 +874,7 @@ country_event = {
 				modifier = { factor = 0 USA = { has_country_flag = USA_BreckinridgeElected } }
 				modifier = { factor = 0 USA = { has_country_flag = USA_BuchananElected } }
 			}
-			complete_national_focus = SNM_Honor_Abraham_Lincoln
+			complete_national_focus = SNM_focus_Honor_Abraham_Lincoln
 			add_opinion_modifier = {
 				target = USA
 				modifier = eoanb_minor_opinion_boost
@@ -5993,7 +6004,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_country_leader = {
-			name = "Abraham Lincoln"
+			character = USA_character_abraham_lincoln
 			ruling_only = yes
 		}
 	}
@@ -6018,7 +6029,6 @@ country_event = {
 			set_global_flag = Lincoln_Assassinated
 			set_country_flag = Lincoln_Assassinated
 		}
-		kill_country_leader = yes
 		hidden_effect = { news_event = { id = usa_news.18 } }
 		if = {
 			limit = { date > 1864.11.5 }
@@ -6031,6 +6041,7 @@ country_event = {
 							ideology = federal
 						}
 					}
+					promote_character = yes
 				}
 				set_politics = {
 					ruling_party = traditional_conservatism
@@ -6039,8 +6050,7 @@ country_event = {
 				}
 			}
 		}
-		else_if = {
-			limit = { date < 1864.11.5 }
+		else = {
 			hidden_effect = {
 				USA_character_hannibal_hamlin = {
 					add_country_leader_role = {
@@ -6050,6 +6060,7 @@ country_event = {
 							ideology = social_liberal
 						}
 					}
+					promote_character = yes
 				}
 				set_politics = {
 					ruling_party = centrism
@@ -6058,6 +6069,7 @@ country_event = {
 				}
 			}
 		}
+		retire_character = USA_character_abraham_lincoln
 	}
 	option = {
 		name = acw_lincoln.100.b
@@ -6700,7 +6712,6 @@ country_event = {
 	fire_only_once = yes
 
 	immediate = {
-		kill_country_leader = yes
 		USA_character_william_herschell = {
 			add_country_leader_role = {
 				country_leader = {
@@ -6709,7 +6720,9 @@ country_event = {
 					ideology = conserv_liberal
 				}
 			}
+			promote_character = yes
 		}
+		retire_character = USA_character_stephen_douglas
 	}
 	option = {
 		name = acw_douglas.14.a
@@ -6738,7 +6751,6 @@ country_event = {
 	fire_only_once = yes
 
 	immediate = {
-		kill_country_leader = yes
 		USA_character_william_pennington = {
 			add_country_leader_role = {
 				country_leader = {
@@ -6747,7 +6759,9 @@ country_event = {
 					ideology = market_liberal
 				}
 			}
+			promote_character = yes
 		}
+		retire_character = USA_character_william_herschell
 		hidden_effect = {
 			country_event = { id = acw_douglas.16 }
 		}

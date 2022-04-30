@@ -1,5 +1,73 @@
-# Dominican Republic
 spriteTypes = {
+	# Mexico
+		spriteType = {
+			name = "GFX_Portrait_MEX_Jesus_Gonzalez_Ortega"
+			texturefile = "gfx/leaders/MEX/Portrait_MEX_Jesus_Gonzalez_Ortega.dds"
+		}
+		spriteType = {
+			name = "GFX_Portrait_MEX_Tomas_Camacho"
+			texturefile = "gfx/leaders/MEX/Portrait_MEX_Tomas_Camacho.dds"
+		}
+		spriteType = {
+			name = "GFX_Portrait_MEX_Jose_Degollado"
+			texturefile = "gfx/leaders/MEX/Portrait_MEX_Jose_Degollado.dds"
+		}
+		spriteType = {
+			name = "GFX_Portrait_MEX_Luis_Osollo"
+			texturefile = "gfx/leaders/MEX/Portrait_MEX_Luis_Osollo.dds"
+		}
+	# Chile
+		spriteType = {
+			name = "GFX_Portrait_CHI_Manuel_Montt"
+			texturefile = "gfx/leaders/CHL/Portrait_CHI_Manuel_Montt.png"
+		}
+		spriteType = {
+			name = "GFX_Portrait_CHL_Pedro_Leon_Gallo"
+			texturefile = "gfx/leaders/CHL/Portrait_CHL_Pedro_Leon_Gallo.png"
+		}
+		spriteType = {
+			name = "GFX_Portrait_CHL_Gregorio_Urrutia"
+			texturefile = "gfx/leaders/CHL/Portrait_CHL_Gregorio_Urrutia.png"
+		}
+		spriteType = {
+			name = "GFX_Portrait_CHL_Cornelio_Rodriguez"
+			texturefile = "gfx/leaders/CHL/Portrait_CHL_Cornelio_Rodriguez.png"
+		}
+		spriteType = {
+			name = "GFX_Portrait_CHL_Juan_Wiliams"
+			texturefile = "gfx/leaders/CHL/Portrait_CHL_Juan_Wiliams.png"
+		}
+	# Paraguay
+		spriteType = {
+			name = "GFX_Portrait_PAR_Francisco_Antonio_Lopez"
+			texturefile = "gfx/leaders/PAR/Portrait_PAR_Francisco_Antonio_Lopez.dds"
+		}
+		spriteType = {
+			name = "GFX_Portrait_PAR_Jose_Diaz"
+			texturefile = "gfx/leaders/PAR/Portrait_PAR_Jose_Diaz.dds"
+		}
+		spriteType = {
+			name = "GFX_Portrait_PAR_Domingo_Francisco_Sanchez"
+			texturefile = "gfx/leaders/PAR/Portrait_PAR_Domingo_Francisco_Sanchez.dds"
+		}
+	# Uruguay
+		spriteType = {
+			name = "GFX_Portrait_URG_Enrique_Castro"
+			texturefile = "gfx/leaders/URG/Portrait_URG_Enrique_Castro.dds"
+		}
+		spriteType = {
+			name = "GFX_Portrait_URG_Anacleto_Medina"
+			texturefile = "gfx/leaders/URG/Portrait_URG_Anacleto_Medina.dds"
+		}
+	# Venezuela
+		spriteType = {
+			name = "GFX_Portrait_USV_Ezequiel_Zamora"
+			texturefile = "ggfx/leaders/USV/Portrait_USV_Ezequiel_Zamora.dds"
+		}
+		spriteType = {
+			name = "GFX_Portrait_USV_Manuel_Bruzual"
+			texturefile = "gfx/leaders/USV/Portrait_USV_Manuel_Bruzual.dds"
+		}
 	# Dominican Republic
 		spriteType = {
 			name = "GFX_Portrait_DOM_Buenaventura_Baez"
@@ -68,7 +136,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_NFL_John_Thomas_Mullock"
 		textureFile = "gfx/leaders/NFL/Portrait_NFL_John_Thomas_Mullock.dds"
-	}
+	} 
 	spriteType = {
 		name = "GFX_Portrait_NVS_Joseph_Howe"
 		textureFile = "gfx/leaders/NVS/Portrait_NVS_Joseph_Howe.dds"
@@ -85,10 +153,109 @@ spriteTypes = {
 		name = "GFX_Portrait_NVS_James_Rogers"
 		textureFile = "gfx/leaders/NVS/Portrait_NVS_James_Rogers.dds"
 	}
-
-
 	spriteType = {
 		name = "GFX_Portrait_NMX_Abraham_Rencher"
-		textureFile = "gfx/leaders/USA/Portrait_NMX_Abraham_Rencher.png"
+		textureFile = "gfx/leaders/NMX/Portrait_NMX_Abraham_Rencher.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_DAK_Wilmot_Brookings"
+		textureFile = "gfx/leaders/DAK/Portrait_DAK_Wilmot_Brookings.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ORE_John_Whiteaker"
+		textureFile = "gfx/leaders/ORE/Portrait_ORE_John_Whiteaker.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_PUE_Manuel_Namancura"
+		textureFile = "gfx/leaders/PUE/Portrait_PUE_Manuel_Namancura.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_USA_Andrew_Hull_Foote"
+		textureFile = "gfx/leaders/USA/Portrait_USA_Andrew_Hull_Foote.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_USA_David_Farragut"
+		textureFile = "gfx/leaders/USA/Portrait_USA_David_Farragut.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_USA_Josiah_Tattnall"
+		textureFile = "gfx/leaders/USA/Portrait_USA_Josiah_Tattnall.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_DOM_Gregorio_Luperon"
+		textureFile = "gfx/leaders/DOM/Portrait_DOM_Gregorio_Luperon.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_DOM_Gaspar_Polanco"
+		textureFile = "gfx/leaders/DOM/Portrait_DOM_Gaspar_Polanco.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_MEX_Ignacio_Comonfort"
+		textureFile = "gfx/leaders/MEX/Portrait_MEX_Ignacio_Comonfort.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_SPC_Juan_de_Borbon"
+		textureFile = "gfx/leaders/SPC/Portrait_SPC_Juan_de_Borbon.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_SPC_Juan_Nepomuceno_de_Orbe"
+		textureFile = "gfx/leaders/SPC/Portrait_SPC_Juan_Nepomuceno_de_Orbe.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_SPC_Antonio_Dorregaray"
+		textureFile = "gfx/leaders/SPC/Portrait_SPC_Antonio_Dorregaray.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ETR_Richardo_Lopez_Jordan"
+		textureFile = "gfx/leaders/ETR/Portrait_ETR_Richardo_Lopez_Jordan.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_URC_Venancio_Flores"
+		textureFile = "gfx/leaders/URC/Portrait_URC_Venancio_Flores.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_URC_Leon_de_Palleja"
+		textureFile = "gfx/leaders/URC/Portrait_URC_Leon_de_Palleja.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_USV_Juan_Falcon"
+		textureFile = "gfx/leaders/USV/Portrait_USV_Juan_Falcon.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_USV_Jose_Ruperto_Monagas"
+		textureFile = "gfx/leaders/USV/Portrait_USV_Antonio_Guzman_Blanco.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BUE_Bartolome_Mitre"
+		textureFile = "gfx/leaders/ARG/Portrait_BUE_Bartolome_Mitre.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_BUE_Salustiano_Zavalia"
+		textureFile = "gfx/leaders/ARG/Portrait_BUE_Salustiano_Zavalia.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ARG_Justo_Jose_de_Urquiza"
+		textureFile = "gfx/leaders/ARG/Portrait_ARG_Justo_Jose_de_Urquiza.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_ARG_Angel_Vicente_Penaloza"
+		textureFile = "gfx/leaders/ARG/Portrait_ARG_Angel_Vicente_Penaloza.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WLL_Quilapan_Kulapang"
+		textureFile = "gfx/leaders/WLL/Portrait_WLL_Quilapan_Kulapang.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WLL_Quilapan_Kulapang"
+		textureFile = "gfx/leaders/WLL/Portrait_WLL_Quilapan_Kulapang.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WLL_Valentin_Sayhueque"
+		textureFile = "gfx/leaders/WLL/Portrait_WLL_Valentin_Sayhueque.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WLL_Modesto_Inacayal"
+		textureFile = "gfx/leaders/WLL/Portrait_WLL_Modesto_Inacayal.dds"
 	}
 }

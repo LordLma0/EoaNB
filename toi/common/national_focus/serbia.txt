@@ -238,7 +238,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_karadjordjevic_remain
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Karadjordjevici
 		relative_position_id = SER_end_oligarch_rule
 		x = -9
 		y = 1
@@ -269,7 +269,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_eliminate_resistance
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Eliminate_Resistance
 		relative_position_id = SER_karadjordjevic_remain
 		x = 0
 		y = 1
@@ -319,7 +319,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_dissolve_council
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Dissolve_Council
 		relative_position_id = SER_eliminate_resistance
 		x = -3
 		y = 1
@@ -348,7 +348,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_accelerate_serbian_development
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Rapid_Industrial_Growth
 		relative_position_id = SER_dissolve_council
 		x = -2
 		y = 1
@@ -374,7 +374,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_renovate_school
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Renovate_School
 		relative_position_id = SER_dissolve_council
 		x = 0
 		y = 1
@@ -406,7 +406,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_imrpove_administration
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Central_State_Administration
 		relative_position_id = SER_dissolve_council
 		x = 2
 		y = 1
@@ -433,7 +433,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_reform_judicial_system
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Judicial_Reform
 		relative_position_id = SER_accelerate_serbian_development
 		x = 2
 		y = 1
@@ -474,7 +474,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_austria_educated_serbs
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Educated_Austrian_Serbs
 		relative_position_id = SER_eliminate_resistance
 		x = 1
 		y = 1
@@ -504,7 +504,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_advance_science
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Advance_Science
 		relative_position_id = SER_austria_educated_serbs
 		x = 0
 		y = 1
@@ -535,7 +535,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_new_fertilisers
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_New_Fertilisers
 		relative_position_id = SER_advance_science
 		x = 0
 		y = 1
@@ -567,7 +567,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_deal_with_ustavobranitelji
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Eliminate_Resistance	# eliminate resistance
 		relative_position_id = SER_eliminate_resistance
 		x = 4
 		y = 1
@@ -597,7 +597,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_serbian_welfare
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Welfare
 		relative_position_id = SER_deal_with_ustavobranitelji
 		x = -1
 		y = 1
@@ -624,7 +624,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_increase_state_power
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Government_Centralisation
 		relative_position_id = SER_deal_with_ustavobranitelji
 		x = 1
 		y = 1
@@ -656,7 +656,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_continue_radical_reform
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Reform_Government
 		relative_position_id = SER_serbian_welfare
 		x = 1
 		y = 1
@@ -685,7 +685,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_compulsory_conscription
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Mandatory_Conscription
 		relative_position_id = SER_continue_radical_reform
 		x = 0
 		y = 1
@@ -713,7 +713,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_assasination_attempt
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Assassination_Attempt
 		relative_position_id = SER_reform_judicial_system
 		x = 3
 		y = 2
@@ -754,9 +754,9 @@ focus_tree = {
 
 	 focus = {
 		id = SER_obrenovic_dynasty_return
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Obrenovic_Return
 		relative_position_id = SER_end_oligarch_rule
-		x = 10
+		x = 7
 		y = 1
 		cost = 70
 
@@ -784,7 +784,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_question_1838_constitution
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Question_Constitution
 		relative_position_id = SER_obrenovic_dynasty_return
 		x = 0
 		y = 1
@@ -815,7 +815,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_milos_death
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Monarch_Death
 		relative_position_id = SER_question_1838_constitution
 		x = 0
 		y = 1
@@ -842,7 +842,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_constitutional_reform
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Constitutional_Reform
 		relative_position_id = SER_milos_death
 		x = 0
 		y = 1
@@ -877,7 +877,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_strengthen_mihailo_regime
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Strengthen_Mihailo_Reign
 		relative_position_id = SER_constitutional_reform
 		x = 0
 		y = 1
@@ -906,9 +906,9 @@ focus_tree = {
 
 	focus = {
 		id = SER_serbian_council_national_propoganda
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_National_Propaganda
 		relative_position_id = SER_strengthen_mihailo_regime
-		x = -7
+		x = -4
 		y = 1
 		cost = 70
 
@@ -933,7 +933,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_maintain_ravoski_tie
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Maintai_Ravoski_Ties
 		relative_position_id = SER_serbian_council_national_propoganda
 		x = -1
 		y = 1
@@ -958,29 +958,29 @@ focus_tree = {
 		#		id = placeholder.1
 		#		hours = 5
 		#	}
-		SER_georgi_rakovkski = {
-			add_advisor_role = {
-				advisor = {
-					slot = political_advisor
-					idea_token = SER_georgi_rakovkski
-					allowed = {
-						original_tag = SER
-					}
-					traits = {
-						SER_trait_georgi_rakovkski
-					}
-					ai_will_do = {
-						factor = 0
-					}
-				}
-			}
-		}
+			# SER_georgi_rakovkski = {
+			# 	add_advisor_role = {
+			# 		advisor = {
+			# 			slot = political_advisor
+			# 			idea_token = SER_georgi_rakovkski
+			# 			allowed = {
+			# 				original_tag = SER
+			# 			}
+			# 			traits = {
+			# 				SER_trait_georgi_rakovkski
+			# 			}
+			# 			ai_will_do = {
+			# 				factor = 0
+			# 			}
+			# 		}
+			# 	}
+			# }
 		}
 	}
 
 	focus = {
 		id = SER_bulgarian_immigrant_agreement
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Bulgarian_Immigration_Treaty
 		relative_position_id = SER_maintain_ravoski_tie
 		x = 0
 		y = 1
@@ -1009,7 +1009,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_macedonia_propoganda
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_National_Propaganda
 		relative_position_id = SER_serbian_council_national_propoganda
 		x = 1
 		y = 1
@@ -1035,7 +1035,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_establish_network
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Establish_Spy_Network
 		relative_position_id = SER_macedonia_propoganda
 		x = 0
 		y = 1
@@ -1062,7 +1062,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_bulgarian_serbian_friendship
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Bulgarian_Serbian_Friendship
 		relative_position_id = SER_bulgarian_immigrant_agreement
 		x = 1
 		y = 1
@@ -1091,38 +1091,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SER_form_three_ministry
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_strengthen_mihailo_regime
-		x = -4
-		y = 1
-		cost = 70
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_strengthen_mihailo_regime
-		}
-		search_filters = { 
-			FOCUS_FILTER_POLITICAL
-			FOCUS_FILTER_STABILITY
-			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_HISTORICAL
-		}
-		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 20
-		}
-	}
-
-	focus = {
 		id = SER_central_state_administration
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Central_State_Administration
 		relative_position_id = SER_strengthen_mihailo_regime
 		x = -2
 		y = 1
@@ -1152,7 +1122,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_government_centralisation
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Government_Centralisation
 		relative_position_id = SER_strengthen_mihailo_regime
 		x = 0
 		y = 1
@@ -1180,9 +1150,9 @@ focus_tree = {
 
 	focus = {
 		id = SER_strong_absolutist_rule
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_form_three_ministry
-		x = 2
+		icon = GFX_Focus_Strong_Absolutist_Rule
+		relative_position_id = SER_central_state_administration
+		x = 1
 		y = 1
 		cost = 70
 
@@ -1192,9 +1162,6 @@ focus_tree = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
-		}
-		prerequisite = {
-			focus = SER_form_three_ministry
 		}
 		prerequisite = {
 			focus = SER_central_state_administration
@@ -1215,9 +1182,9 @@ focus_tree = {
 
 	focus = {
 		id = SER_create_balkan_alliance
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Balkan_Alliance
 		relative_position_id = SER_strengthen_mihailo_regime
-		x = 5
+		x = 4
 		y = 1
 		cost = 70
 
@@ -1244,7 +1211,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_serb_montenegrin_agreement
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Montenegro_Agreement
 		relative_position_id = SER_create_balkan_alliance
 		x = -3
 		y = 1
@@ -1277,7 +1244,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_voslau_treaty
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Voslau_Treaty
 		relative_position_id = SER_create_balkan_alliance
 		x = -1
 		y = 1
@@ -1306,7 +1273,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_romanian_trade_deals
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Romanian_Trade_Deal
 		relative_position_id = SER_create_balkan_alliance
 		x = 1
 		y = 1
@@ -1345,7 +1312,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_cooperate_with_albania
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Cooperate_With_Albania
 		relative_position_id = SER_create_balkan_alliance
 		x = 3
 		y = 1
@@ -1371,7 +1338,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_united_balkans
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Balkan_Alliance
 		relative_position_id = SER_serb_montenegrin_agreement
 		x = 3
 		y = 1
@@ -1406,8 +1373,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SER_work_with_omalandi
-		icon = GFX_Focus_Meme_NGTGYU
+		id = SER_work_with_omalandi 
+		icon = GFX_Focus_SER_National_Propaganda
 		relative_position_id = SER_united_balkans
 		x = 0
 		y = 1
@@ -1457,7 +1424,7 @@ focus_tree = {
     
 	focus = {
 		id = SER_malogospojinska_assembly
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Assembly_Law
 		relative_position_id = SER_karadjordjevic_remain
 		x = 9
 		y = 1
@@ -1484,7 +1451,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_single_commercial_court
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Commercial_Act
 		relative_position_id = SER_malogospojinska_assembly
 		x = -2
 		y = 1
@@ -1510,7 +1477,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_modern_organisation_army
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Army_Law_Reform
 		relative_position_id = SER_malogospojinska_assembly
 		x = 0
 		y = 1
@@ -1537,7 +1504,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_recognise_economic_administration
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Reform_Economy
 		relative_position_id = SER_malogospojinska_assembly
 		x = 2
 		y = 1
@@ -1563,7 +1530,7 @@ focus_tree = {
 	
 	focus = {
 		id = SER_civil_servants_law_1861
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Civil_Servant_Law
 		relative_position_id = SER_single_commercial_court
 		x = 2
 		y = 1
@@ -1595,7 +1562,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_cukur_fountain_incident
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Cukur_Fountain_Incident
 		relative_position_id = SER_civil_servants_law_1861
 		x = 0
 		y = 1
@@ -1621,7 +1588,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_serbian_police_day
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Police
 		relative_position_id = SER_cukur_fountain_incident
 		x = 0
 		y = 1
@@ -1647,7 +1614,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_constantinople_visit
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Visit_Constantinople
 		relative_position_id = SER_serbian_police_day
 		x = 0
 		y = 1
@@ -1679,7 +1646,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_belgrade_negotiations
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Belgrad_Negotiations
 		relative_position_id = SER_constantinople_visit
 		x = 0
 		y = 1
@@ -1736,1487 +1703,1487 @@ focus_tree = {
 	
 	# There is currently no transition between regency and the prev tree so yea
 
-	focus = {
-		id = SER_prince_milan_return
-		icon = GFX_Focus_Meme_NGTGYU
-		#relative_position_id = SER_
-		x = 8
-		y = 16
-		cost = 70
+	# focus = {
+	# 	id = SER_prince_milan_return
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	#relative_position_id = SER_
+	# 	x = 8
+	# 	y = 16
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		#prerequisite = {
-		#	focus = SER_
-		#}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	#prerequisite = {
+	# 	#	focus = SER_
+	# 	#}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	
-	focus = {
-		id = SER_three_member_governorship
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_prince_milan_return
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_three_member_governorship
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_prince_milan_return
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_prince_milan_return
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_prince_milan_return
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_provisional_viceroyalty_princely_dignity
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_three_member_governorship
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_provisional_viceroyalty_princely_dignity
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_three_member_governorship
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_three_member_governorship
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_three_member_governorship
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_review_nachertanije
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_provisional_viceroyalty_princely_dignity
-		x = -12
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_review_nachertanije
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_provisional_viceroyalty_princely_dignity
+	# 	x = -12
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_provisional_viceroyalty_princely_dignity
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_provisional_viceroyalty_princely_dignity
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_montenegro_military_convention
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_review_nachertanije
-		x = -5
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_montenegro_military_convention
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_review_nachertanije
+	# 	x = -5
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_review_nachertanije
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_review_nachertanije
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_convergence_with_austria_hungary
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_review_nachertanije
-		x = -3
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_convergence_with_austria_hungary
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_review_nachertanije
+	# 	x = -3
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_review_nachertanije
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_review_nachertanije
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_bosnia_herzegovinian_question
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_convergence_with_austria_hungary
-		x = -2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_bosnia_herzegovinian_question
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_convergence_with_austria_hungary
+	# 	x = -2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_convergence_with_austria_hungary
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_convergence_with_austria_hungary
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_liberation_serbia_committee
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_bosnia_herzegovinian_question
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_liberation_serbia_committee
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_bosnia_herzegovinian_question
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_bosnia_herzegovinian_question
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_bosnia_herzegovinian_question
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_suspend_bosnian_railway_project
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_convergence_with_austria_hungary
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_suspend_bosnian_railway_project
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_convergence_with_austria_hungary
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_convergence_with_austria_hungary
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_convergence_with_austria_hungary
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_serbian_turkish_railway_agreement
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_suspend_bosnian_railway_project
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_serbian_turkish_railway_agreement
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_suspend_bosnian_railway_project
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_suspend_bosnian_railway_project
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_suspend_bosnian_railway_project
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_serbian_hungarian_friendship
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_convergence_with_austria_hungary
-		x = 2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_serbian_hungarian_friendship
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_convergence_with_austria_hungary
+	# 	x = 2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_convergence_with_austria_hungary
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_convergence_with_austria_hungary
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_fight_austrian_secret_service
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_serbian_hungarian_friendship
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_fight_austrian_secret_service
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_serbian_hungarian_friendship
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_serbian_hungarian_friendship
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_serbian_hungarian_friendship
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_ask_french_england_help
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_review_nachertanije
-		x = 1
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_ask_french_england_help
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_review_nachertanije
+	# 	x = 1
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_review_nachertanije
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_review_nachertanije
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_initiate_british_negotiations
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_ask_french_england_help
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_initiate_british_negotiations
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_ask_french_england_help
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_ask_french_england_help
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_ask_french_england_help
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_serbian_administration_bosnia
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_initiate_british_negotiations
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_serbian_administration_bosnia
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_initiate_british_negotiations
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_initiate_british_negotiations
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_initiate_british_negotiations
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_visit_russian_tsar
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_review_nachertanije
-		x = 3
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_visit_russian_tsar
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_review_nachertanije
+	# 	x = 3
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_review_nachertanije
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_review_nachertanije
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_persuade_bosnian_muslims
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_review_nachertanije
-		x = 5
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_persuade_bosnian_muslims
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_review_nachertanije
+	# 	x = 5
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_review_nachertanije
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_review_nachertanije
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_publish_historical_map_lands
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_visit_russian_tsar
-		x = 1
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_publish_historical_map_lands
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_visit_russian_tsar
+	# 	x = 1
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_visit_russian_tsar
-		}
-		prerequisite = {
-			focus = SER_persuade_bosnian_muslims
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_visit_russian_tsar
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_persuade_bosnian_muslims
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_greater_serbian_doctrine
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_publish_historical_map_lands
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_greater_serbian_doctrine
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_publish_historical_map_lands
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_publish_historical_map_lands
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_publish_historical_map_lands
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_maintain_status_quo
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_fight_austrian_secret_service
-		x = 1
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_maintain_status_quo
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_fight_austrian_secret_service
+	# 	x = 1
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_liberation_serbia_committee
-		}
-		prerequisite = {
-			focus = SER_serbian_turkish_railway_agreement
-		}
-		prerequisite = {
-			focus = SER_fight_austrian_secret_service
-		}
-		prerequisite = {
-			focus = SER_serbian_administration_bosnia
-		}
-		prerequisite = {
-			focus = SER_greater_serbian_doctrine
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_liberation_serbia_committee
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_serbian_turkish_railway_agreement
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_fight_austrian_secret_service
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_serbian_administration_bosnia
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_greater_serbian_doctrine
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  	
-	focus = {
-		id = SER_maintain_internal_peace
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_provisional_viceroyalty_princely_dignity
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_maintain_internal_peace
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_provisional_viceroyalty_princely_dignity
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_provisional_viceroyalty_princely_dignity
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_provisional_viceroyalty_princely_dignity
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  
-	focus = {
-		id = SER_three_political_current
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_maintain_internal_peace
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_three_political_current
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_maintain_internal_peace
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_maintain_internal_peace
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_maintain_internal_peace
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  
-	focus = {
-		id = SER_blaznavac_coup
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_three_political_current
-		x = -4
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_blaznavac_coup
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_three_political_current
+	# 	x = -4
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		mutually_exclusive = {
-			focus = SER_start_radical_change
-		}
-		prerequisite = {
-			focus = SER_three_political_current
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SER_start_radical_change
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_three_political_current
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_strengthen_armys_role
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_blaznavac_coup
-		x = -2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_strengthen_armys_role
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_blaznavac_coup
+	# 	x = -2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_blaznavac_coup
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_blaznavac_coup
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_crush_russian_influence
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_strengthen_armys_role
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_crush_russian_influence
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_strengthen_armys_role
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_strengthen_armys_role
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_strengthen_armys_role
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_regulate_penal_institutions
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_blaznavac_coup
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_regulate_penal_institutions
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_blaznavac_coup
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_blaznavac_coup
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_blaznavac_coup
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_abolish_corporal_punishment
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_regulate_penal_institutions
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_abolish_corporal_punishment
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_regulate_penal_institutions
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_regulate_penal_institutions
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_regulate_penal_institutions
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_restrict_peoples_freedom
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_blaznavac_coup
-		x = 2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_restrict_peoples_freedom
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_blaznavac_coup
+	# 	x = 2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_blaznavac_coup
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_blaznavac_coup
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_modern_european_nation
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_abolish_corporal_punishment
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_modern_european_nation
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_abolish_corporal_punishment
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_crush_russian_influence
-		}
-		prerequisite = {
-			focus = SER_abolish_corporal_punishment
-		}
-		prerequisite = {
-			focus = SER_restrict_peoples_freedom
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_crush_russian_influence
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_abolish_corporal_punishment
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_restrict_peoples_freedom
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_limit_executive_power
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_three_political_current
-		x = 0
-		y = 2
-		cost = 70
+	# focus = {
+	# 	id = SER_limit_executive_power
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_three_political_current
+	# 	x = 0
+	# 	y = 2
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_blaznavac_coup
-			focus = SER_start_radical_change
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_blaznavac_coup
+	# 		focus = SER_start_radical_change
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_support_obrenovic_dynasty
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_limit_executive_power
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_support_obrenovic_dynasty
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_limit_executive_power
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_limit_executive_power
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_limit_executive_power
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_russophile_politics
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_support_obrenovic_dynasty
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_russophile_politics
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_support_obrenovic_dynasty
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_support_obrenovic_dynasty
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_support_obrenovic_dynasty
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_defend_serbian_orthodox
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_russophile_politics
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_defend_serbian_orthodox
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_russophile_politics
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_russophile_politics
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_russophile_politics
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_start_radical_change
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_three_political_current
-		x = 4
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_start_radical_change
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_three_political_current
+	# 	x = 4
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		mutually_exclusive = {
-			focus = SER_blaznavac_coup
-		}
-		prerequisite = {
-			focus = SER_three_political_current
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SER_blaznavac_coup
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_three_political_current
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
-			SER_svetozar_markovic = {
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						idea_token = SER_svetozar_markovic
-						allowed = {
-							original_tag = SER
-						}
-						traits = {
-							SER_trait_svetozar_markovic
-						}
-						ai_will_do = {
-							factor = 0
-						}
-					}
-				}
-			}
-		}
-	}
+	# 	}
+	# 	completion_reward = {
+	# 		SER_svetozar_markovic = {
+	# 			add_advisor_role = {
+	# 				advisor = {
+	# 					slot = political_advisor
+	# 					idea_token = SER_svetozar_markovic
+	# 					allowed = {
+	# 						original_tag = SER
+	# 					}
+	# 					traits = {
+	# 						SER_trait_svetozar_markovic
+	# 					}
+	# 					ai_will_do = {
+	# 						factor = 0
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_reject_modernisation #return to monkay
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_start_radical_change
-		x = -2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_reject_modernisation #return to monkay
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_start_radical_change
+	# 	x = -2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_start_radical_change
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_start_radical_change
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_fight_capitalism
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_reject_modernisation
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_fight_capitalism
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_reject_modernisation
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_reject_modernisation
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_reject_modernisation
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_serbian_adult_electoral_right
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_start_radical_change
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_serbian_adult_electoral_right
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_start_radical_change
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_start_radical_change
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_start_radical_change
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_bureaucratic_serbian_rule
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_start_radical_change
-		x = 2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_bureaucratic_serbian_rule
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_start_radical_change
+	# 	x = 2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_start_radical_change
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_start_radical_change
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_next_generation_social_revolutionaries
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_bureaucratic_serbian_rule
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_next_generation_social_revolutionaries
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_bureaucratic_serbian_rule
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_bureaucratic_serbian_rule
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_bureaucratic_serbian_rule
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_balkan_federation_idea
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_fight_capitalism
-		x = 2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_balkan_federation_idea
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_fight_capitalism
+	# 	x = 2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_fight_capitalism
-		}
-		prerequisite = {
-			focus = SER_serbian_adult_electoral_right
-		}
-		prerequisite = {
-			focus = SER_next_generation_social_revolutionaries
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_fight_capitalism
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_serbian_adult_electoral_right
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_next_generation_social_revolutionaries
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_this_isnt_completed_lol_hence_idk_draft_maker_and_kenhel
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_defend_serbian_orthodox
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_this_isnt_completed_lol_hence_idk_draft_maker_and_kenhel
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_defend_serbian_orthodox
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_modern_european_nation
-			focus = SER_balkan_federation_idea
-		}
-		prerequisite = {
-			focus = SER_defend_serbian_orthodox
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_modern_european_nation
+	# 		focus = SER_balkan_federation_idea
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_defend_serbian_orthodox
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_establish_svetonikolsky_committee
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_provisional_viceroyalty_princely_dignity
-		x = 12
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_establish_svetonikolsky_committee
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_provisional_viceroyalty_princely_dignity
+	# 	x = 12
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_provisional_viceroyalty_princely_dignity
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_provisional_viceroyalty_princely_dignity
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_economic_order_national_assembly_law
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_establish_svetonikolsky_committee
-		x = -4
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_economic_order_national_assembly_law
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_establish_svetonikolsky_committee
+	# 	x = -4
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_establish_svetonikolsky_committee
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_establish_svetonikolsky_committee
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
  
-	focus = {
-		id = SER_economic_order_council_state_law
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_establish_svetonikolsky_committee
-		x = -2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_economic_order_council_state_law
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_establish_svetonikolsky_committee
+	# 	x = -2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_establish_svetonikolsky_committee
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_establish_svetonikolsky_committee
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 		 
-	focus = {
-		id = SER_election_deputies_law
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_establish_svetonikolsky_committee
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_election_deputies_law
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_establish_svetonikolsky_committee
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_establish_svetonikolsky_committee
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_establish_svetonikolsky_committee
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_ministers_responsibility_law
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_establish_svetonikolsky_committee
-		x = 2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_ministers_responsibility_law
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_establish_svetonikolsky_committee
+	# 	x = 2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_establish_svetonikolsky_committee
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_establish_svetonikolsky_committee
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_freedom_press_act
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_establish_svetonikolsky_committee
-		x = 4
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_freedom_press_act
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_establish_svetonikolsky_committee
+	# 	x = 4
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_establish_svetonikolsky_committee
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_establish_svetonikolsky_committee
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_1869_constitution
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_election_deputies_law
-		x = 0
-		y = 1
-		cost = 120
+	# focus = {
+	# 	id = SER_1869_constitution
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_election_deputies_law
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 120
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_economic_order_council_state_law
-		}
-		prerequisite = {
-			focus = SER_economic_order_national_assembly_law
-		}
-		prerequisite = {
-			focus = SER_election_deputies_law
-		}
-		prerequisite = {
-			focus = SER_ministers_responsibility_law
-		}
-		prerequisite = {
-			focus = SER_freedom_press_act
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_economic_order_council_state_law
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_economic_order_national_assembly_law
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_election_deputies_law
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_ministers_responsibility_law
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_freedom_press_act
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	 
-	focus = {
-		id = SER_ministerial_responsibility_act
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_1869_constitution
-		x = -4
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_ministerial_responsibility_act
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_1869_constitution
+	# 	x = -4
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_1869_constitution
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_1869_constitution
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 		 
-	focus = {
-		id = SER_commercial_order_national_assembly_law
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_1869_constitution
-		x = -2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_commercial_order_national_assembly_law
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_1869_constitution
+	# 	x = -2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_1869_constitution
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_1869_constitution
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 		 
-	focus = {
-		id = SER_commercial_order_state_council
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_1869_constitution
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_commercial_order_state_council
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_1869_constitution
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_1869_constitution
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_1869_constitution
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 		 
-	focus = {
-		id = SER_deputies_travelling_and_subsistence
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_1869_constitution
-		x = 2
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_deputies_travelling_and_subsistence
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_1869_constitution
+	# 	x = 2
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_1869_constitution
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_1869_constitution
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 		 
-	focus = {
-		id = SER_amending_state_steel_organisation_act
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_1869_constitution
-		x = 4
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_amending_state_steel_organisation_act
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_1869_constitution
+	# 	x = 4
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_1869_constitution
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_1869_constitution
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 		 
-	focus = {
-		id = SER_struggle_for_democracy
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_commercial_order_state_council
-		x = 0
-		y = 1
-		cost = 70
+	# focus = {
+	# 	id = SER_struggle_for_democracy
+	# 	icon = GFX_Focus_Meme_NGTGYU
+	# 	relative_position_id = SER_commercial_order_state_council
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 70
 
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = SER_commercial_order_state_council
-		}
-		prerequisite = {
-			focus = SER_commercial_order_national_assembly_law
-		}
-		prerequisite = {
-			focus = SER_ministerial_responsibility_act
-		}
-		prerequisite = {
-			focus = SER_deputies_travelling_and_subsistence
-		}
-		prerequisite = {
-			focus = SER_amending_state_steel_organisation_act
-		}
-		search_filters = { 
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 		modifier = {
+	# 			factor = 0
+	# 			is_historical_focus_on = yes
+	# 		}
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_commercial_order_state_council
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_commercial_order_national_assembly_law
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_ministerial_responsibility_act
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_deputies_travelling_and_subsistence
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SER_amending_state_steel_organisation_act
+	# 	}
+	# 	search_filters = { 
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 
-		}
-	}
+	# 	}
+	# }
 	
 	##     ## #### ##       #### ########    ###    ########  ##    ## 
 	###   ###  ##  ##        ##     ##      ## ##   ##     ##  ##  ##  
@@ -3228,7 +3195,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_establish_national_army
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Establish_National_Army
 		x = 28
 		y = 0
 		cost = 70
@@ -3250,7 +3217,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_people_army_decree
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Peoples_Army_Decree
 		relative_position_id = SER_establish_national_army
 		x = 0
 		y = 1
@@ -3276,7 +3243,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_mondain_army_reform
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Mondarin_Army_Reform
 		relative_position_id = SER_people_army_decree
 		x = 0
 		y = 1
@@ -3317,7 +3284,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_zajecar_fortification
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Forts
 		relative_position_id = SER_mondain_army_reform
 		x = -4
 		y = 1
@@ -3346,7 +3313,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_danub_fortification
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Forts
 		relative_position_id = SER_zajecar_fortification
 		x = 0
 		y = 1
@@ -3375,7 +3342,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_belgrad_fortification
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Forts
 		relative_position_id = SER_danub_fortification
 		x = 0
 		y = 1
@@ -3404,7 +3371,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_kragujevac_factory
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Factory
 		relative_position_id = SER_mondain_army_reform
 		x = -1
 		y = 1
@@ -3434,7 +3401,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_modern_army_rifle
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_New_Rifle
 		relative_position_id = SER_kragujevac_factory
 		x = 0
 		y = 1
@@ -3468,7 +3435,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_contract_with_belgian
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Contact_Belgium
 		relative_position_id = SER_modern_army_rifle
 		x = -1
 		y = 1
@@ -3501,7 +3468,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_contract_with_french
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Contact_France
 		relative_position_id = SER_modern_army_rifle
 		x = 1
 		y = 1
@@ -3534,7 +3501,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_petrovic_system_rifle
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_New_Rifle
 		relative_position_id = SER_contract_with_belgian
 		x = 1
 		y = 1
@@ -3571,7 +3538,7 @@ focus_tree = {
 	
 	focus = {
 		id = SER_stragari_gunpowder
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Gunpowder
 		relative_position_id = SER_mondain_army_reform
 		x = 2
 		y = 1
@@ -3600,7 +3567,7 @@ focus_tree = {
 	
 	focus = {
 		id = SER_artillery_administration_law
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Artillery_Administration_Law
 		relative_position_id = SER_stragari_gunpowder
 		x = 0
 		y = 1
@@ -3630,7 +3597,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_artillery_school
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Artillery_School
 		relative_position_id = SER_artillery_administration_law
 		x = 0
 		y = 1
@@ -3665,7 +3632,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_la_hitte_cannons
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Artillery_Administration_Law
 		relative_position_id = SER_artillery_school
 		x = 0
 		y = 1
@@ -3701,7 +3668,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_serbian_gendarmerie
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Police # police day
 		relative_position_id = SER_mondain_army_reform
 		x = 4
 		y = 1
@@ -3729,8 +3696,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SER_military_uniform_regulation
-		icon = GFX_Focus_Meme_NGTGYU
+		id = SER_military_uniform_regulation 
+		icon = GFX_Focus_SER_Peoples_Army_Decree # people army decree
 		relative_position_id = SER_serbian_gendarmerie
 		x = 0
 		y = 1
@@ -3764,7 +3731,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_french_medical_officer
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_French_Officer
 		relative_position_id = SER_military_uniform_regulation
 		x = 0
 		y = 1
@@ -3799,7 +3766,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_blaznavac_war_minister
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Blaznavac
 		relative_position_id = SER_petrovic_system_rifle
 		x = 1
 		y = 1
@@ -3839,7 +3806,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_army_political_influence
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Army_Political_Influence
 		relative_position_id = SER_blaznavac_war_minister
 		x = -3
 		y = 1
@@ -3865,7 +3832,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_corruption_affair
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Army_Corruption
 		relative_position_id = SER_army_political_influence
 		x = -1
 		y = 1
@@ -3891,7 +3858,7 @@ focus_tree = {
     
 	focus = {
 		id = SER_belgrade_military_drills
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Army_Drill
 		relative_position_id = SER_army_political_influence
 		x = 1
 		y = 1
@@ -3918,7 +3885,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_army_dominance
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Army
 		relative_position_id = SER_corruption_affair
 		x = 1
 		y = 1
@@ -3948,7 +3915,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_fresh_russian_capitals
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Russian_Capitals
 		relative_position_id = SER_army_dominance
 		x = 0
 		y = 1
@@ -3983,7 +3950,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_rearm_serbian_military
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_New_Rifle
 		relative_position_id = SER_blaznavac_war_minister
 		x = 1
 		y = 1
@@ -4009,7 +3976,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_military_foundry
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Factory
 		relative_position_id = SER_rearm_serbian_military
 		x = -1
 		y = 1
@@ -4035,7 +4002,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_european_model_army
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Army
 		relative_position_id = SER_rearm_serbian_military
 		x = 1
 		y = 1
@@ -4074,7 +4041,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_new_generals
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Establish_National_Army
 		relative_position_id = SER_military_foundry
 		x = 0
 		y = 1
@@ -4103,7 +4070,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_franco_prussian_observer
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Franco_Prussian_Observer
 		relative_position_id = SER_military_foundry
 		x = 2
 		y = 1
@@ -4142,7 +4109,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_greater_military_autonomy
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Greater_Military_Autonomy
 		relative_position_id = SER_new_generals
 		x = 1
 		y = 1
@@ -4178,7 +4145,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_secret_military_council
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Secret_War_Council
 		relative_position_id = SER_greater_military_autonomy
 		x = 0
 		y = 1
@@ -4212,7 +4179,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_coordinate_military_actions
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Coordinate_Military_Action
 		relative_position_id = SER_blaznavac_war_minister
 		x = 4
 		y = 1
@@ -4243,7 +4210,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_convocate_second_bulgarian_legion
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Second_Bulgarian_Legion
 		relative_position_id = SER_coordinate_military_actions
 		x = 0
 		y = 1
@@ -4269,7 +4236,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_join_forces_montenegro
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Join_Montenegro_Forces
 		relative_position_id = SER_convocate_second_bulgarian_legion
 		x = 0
 		y = 1
@@ -4295,7 +4262,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_prepare_for_war
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Prepare_For_War
 		relative_position_id = SER_secret_military_council
 		x = 1
 		y = 1
@@ -4324,7 +4291,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_grujic_war_plan
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Grujic_War_Plan
 		relative_position_id = SER_secret_military_council
 		x = -1
 		y = 1
@@ -4350,7 +4317,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_serbian_ottoman_war
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Ottoman_War
 		relative_position_id = SER_grujic_war_plan
 		x = 1
 		y = 1
@@ -4392,39 +4359,10 @@ focus_tree = {
   
 	focus = {
 		id = SER_begin_economic_recovery
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Rapid_Industrial_Growth
 		x = 50
 		y = 1
-		cost = 70
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		available = {
-			date > 1858.1.1
-		}
-		search_filters = { 
-			
-		}
-		completion_reward = {
-			#country_event = SER_bankrupcy.1
-			hidden_effect = {
-				country_event = { id = SERmisc.26 days = 180 }
-			}
-		}
-	}
-
-	focus = {
-		id = SER_dobra_mine_question
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_begin_economic_recovery
-		x = -9
-		y = 1
-		cost = 0
+		cost = 1
 
 		ai_will_do = {
 			factor = 0
@@ -4438,6 +4376,34 @@ focus_tree = {
 				tooltip = GENERIC_Triggered_By_Event_tt
 				always = no
 			}
+			#date > 1858.1.1
+		}
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = { id = SERmisc.26 days = 18 }
+			}
+		}
+	}
+
+	focus = {
+		id = SER_dobra_mine_question
+		icon = GFX_Focus_SER_Dobra_Mine_Question
+		relative_position_id = SER_begin_economic_recovery
+		x = -9
+		y = 1
+		cost = 25
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		available = {
 		}
 		prerequisite = {
 			focus = SER_begin_economic_recovery
@@ -4452,7 +4418,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_french_mind_buisness
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_France_Mind_Own_Buisness
 		relative_position_id = SER_dobra_mine_question
 		x = -1
 		y = 1
@@ -4491,7 +4457,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_build_own_mines
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Build_Own_Mines
 		relative_position_id = SER_french_mind_buisness
 		x = 0
 		y = 1
@@ -4511,16 +4477,17 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = SER_idea_build_own_mines
-				days = 180
-			} 
+			add_resource = {
+    			type = coal
+    			amount = 3
+    			state = 941
+			}
 		}
 	}
 
 	focus = {
 		id = SER_welcome_french_support
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Welcome_French_Support
 		relative_position_id = SER_dobra_mine_question
 		x = 1
 		y = 1
@@ -4559,7 +4526,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_invest_mining
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Improve_Mining_Condition
 		relative_position_id = SER_welcome_french_support
 		x = 0
 		y = 1
@@ -4579,16 +4546,24 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = SER_idea_invest_mining
-				days = 180
+			add_resource = {
+    			type = coal
+    			amount = 3
+    			state = 941
 			}
+			give_resource_rights = { receiver = FRA state = 941 }
+			add_resource = {
+    			type = coal
+    			amount = 4
+    			state = 941
+			}
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = process_engineering_tech }
 		}
 	}
 
 	focus = {
 		id = SER_search_experience_engineers
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Search_For_Experienced_Engineers
 		relative_position_id = SER_build_own_mines
 		x = 1
 		y = 1
@@ -4615,7 +4590,7 @@ focus_tree = {
 	
 	focus = {
 		id = SER_pancics_time
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Pancic_Time
 		relative_position_id = SER_search_experience_engineers
 		x = 0
 		y = 1
@@ -4641,7 +4616,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_review_ami_boue_work
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Review_Ami_Boue_Work
 		relative_position_id = SER_pancics_time
 		x = -3
 		y = 1
@@ -4669,8 +4644,8 @@ focus_tree = {
 	}
  
 	focus = {
-		id = SER_explore_serbian_geologoy
-		icon = GFX_Focus_Meme_NGTGYU
+		id = SER_explore_serbian_geology
+		icon = GFX_Focus_SER_Explore_Serbian_Geology
 		relative_position_id = SER_review_ami_boue_work
 		x = 0
 		y = 1
@@ -4697,8 +4672,8 @@ focus_tree = {
  
 	focus = {
 		id = SER_pek_river_auriferous_sediments
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_explore_serbian_geologoy
+		icon = GFX_Focus_SER_Build_Own_Mines
+		relative_position_id = SER_explore_serbian_geology
 		x = -2
 		y = 1
 		cost = 20
@@ -4711,7 +4686,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = SER_explore_serbian_geologoy
+			focus = SER_explore_serbian_geology
 		}
 		search_filters = { 
 			
@@ -4728,8 +4703,8 @@ focus_tree = {
  
 	focus = {
 		id = SER_copper_in_bor
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_explore_serbian_geologoy
+		icon = GFX_Focus_SER_Build_Own_Mines
+		relative_position_id = SER_explore_serbian_geology
 		x = 0
 		y = 1
 		cost = 20
@@ -4742,7 +4717,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = SER_explore_serbian_geologoy
+			focus = SER_explore_serbian_geology
 		}
 		search_filters = { 
 			
@@ -4759,8 +4734,8 @@ focus_tree = {
  
 	focus = {
 		id = SER_awala_mercury
-		icon = GFX_Focus_Meme_NGTGYU
-		relative_position_id = SER_explore_serbian_geologoy
+		icon = GFX_Focus_SER_Mercury
+		relative_position_id = SER_explore_serbian_geology
 		x = 4
 		y = 1
 		cost = 20
@@ -4773,7 +4748,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = SER_explore_serbian_geologoy
+			focus = SER_explore_serbian_geology
 		}
 		search_filters = { 
 			
@@ -4790,7 +4765,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_j_szabo
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Szabo
 		relative_position_id = SER_copper_in_bor
 		x = 0
 		y = 1
@@ -4837,8 +4812,8 @@ focus_tree = {
 	}
  
 	focus = {
-		id = SER_geoloske_criticise_sbriji
-		icon = GFX_Focus_Meme_NGTGYU
+		id = SER_serbian_geological_sketches
+		icon = GFX_Focus_SER_Geological_Sketch
 		relative_position_id = SER_j_szabo
 		x = 0
 		y = 1
@@ -4864,7 +4839,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_invite_felix_hoffman
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Invite_Felix_Hoffmann
 		relative_position_id = SER_pancics_time
 		x = 2
 		y = 1
@@ -4907,7 +4882,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_stari_kostolac_quarry
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Build_Own_Mines
 		relative_position_id = SER_invite_felix_hoffman
 		x = -1
 		y = 1
@@ -4936,7 +4911,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_kucajna_mine
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Build_Own_Mines
 		relative_position_id = SER_invite_felix_hoffman
 		x = 1
 		y = 1
@@ -4962,7 +4937,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_balgojev_gold_mine
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Gold_Mine
 		relative_position_id = SER_stari_kostolac_quarry
 		x = -2
 		y = 1
@@ -5000,7 +4975,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_export_vojvodina_romania
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Export_Vojvodina_Romania
 		relative_position_id = SER_balgojev_gold_mine
 		x = 0
 		y = 1
@@ -5033,7 +5008,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_foreign_geologist
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Foreign_Geologist
 		relative_position_id = SER_pancics_time
 		x = 5
 		y = 1
@@ -5059,7 +5034,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_improve_mining_conditions
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Improve_Mining_Condition
 		relative_position_id = SER_foreign_geologist
 		x = 0
 		y = 1
@@ -5091,7 +5066,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_educate_new_staff
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Educate_New_Staff
 		relative_position_id = SER_improve_mining_conditions
 		x = 0
 		y = 1
@@ -5122,7 +5097,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_lyubomir_state_service_job
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Lyubomir_State_Service
 		relative_position_id = SER_export_vojvodina_romania
 		x = -2
 		y = 2
@@ -5136,7 +5111,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = SER_geoloske_criticise_sbriji
+			focus = SER_serbian_geological_sketches
 		}
 		prerequisite = {
 			focus = SER_export_vojvodina_romania
@@ -5154,7 +5129,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_science_innovations
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Science_Innovation
 		relative_position_id = SER_lyubomir_state_service_job
 		x = 0
 		y = 1
@@ -5191,7 +5166,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_improve_credit_organisation
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Improve_Credit_Organisation
 		relative_position_id = SER_begin_economic_recovery
 		x = 2
 		y = 1
@@ -5217,7 +5192,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_captain_misha_construction
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Captain_Misha
 		relative_position_id = SER_improve_credit_organisation
 		x = -6
 		y = 1
@@ -5247,7 +5222,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_begin_modernise_belgrade
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Modernise_Belgrade
 		relative_position_id = SER_captain_misha_construction
 		x = 0
 		y = 1
@@ -5279,7 +5254,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_european_architecture
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_European_Architectual
 		relative_position_id = SER_begin_modernise_belgrade
 		x = 0
 		y = 1
@@ -5316,7 +5291,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_secret_russian_appeal
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Secret_Russian_Appeal
 		relative_position_id = SER_improve_credit_organisation
 		x = -3
 		y = 1
@@ -5336,18 +5311,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#RUS = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
-			#}
+			country_event = SERmisc.32
 		}
 	}
   
 	focus = {
 		id = SER_british_bank_loan
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_British_Bank_Loan
 		relative_position_id = SER_secret_russian_appeal
 		x = -1
 		y = 1
@@ -5373,7 +5343,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_ask_peterbug_help
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Secret_Russian_Appeal
 		relative_position_id = SER_secret_russian_appeal
 		x = 1
 		y = 1
@@ -5399,7 +5369,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_invest_in_army
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Prepare_For_War
 		relative_position_id = SER_british_bank_loan
 		x = 1
 		y = 1
@@ -5428,7 +5398,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_use_of_coal
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Use_Coal
 		relative_position_id = SER_european_architecture
 		x = 2
 		y = 1
@@ -5457,7 +5427,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_deforestation_problem
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Deforestation
 		relative_position_id = SER_use_of_coal
 		x = 0
 		y = 1
@@ -5488,7 +5458,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_follow_french_model
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Follow_French_Model
 		relative_position_id = SER_improve_credit_organisation
 		x = 2
 		y = 1
@@ -5516,7 +5486,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_serbian_egalitarianism
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Egalitarianism
 		relative_position_id = SER_follow_french_model
 		x = -1
 		y = 1
@@ -5551,7 +5521,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_rapid_industralisation
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Rapid_Industrial_Growth
 		relative_position_id = SER_follow_french_model
 		x = 1
 		y = 1
@@ -5586,7 +5556,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_poor_working_condition
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Poor_Working_Condition
 		relative_position_id = SER_serbian_egalitarianism
 		x = -1
 		y = 1
@@ -5620,7 +5590,7 @@ focus_tree = {
 	#	UNLOCK VIA PREVIOUS MENTION EPIDEMIC EVENT
 	focus = {
 		id = SER_fight_epidemics
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Fight_Epidemic
 		relative_position_id = SER_poor_working_condition
 		x = 0
 		y = 1
@@ -5648,7 +5618,7 @@ focus_tree = {
 
 	focus = {
 		id = SER_compulsory_chemical_analysis
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Compulsory_Chemical_Analysis
 		relative_position_id = SER_fight_epidemics
 		x = -2
 		y = 1
@@ -5685,7 +5655,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_border_quarantine_service
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Border_Quarantine_Service
 		relative_position_id = SER_fight_epidemics
 		x = 0
 		y = 1
@@ -5728,7 +5698,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_serbian_sanitary_history
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Sanitary_History
 		relative_position_id = SER_fight_epidemics
 		x = 2
 		y = 1
@@ -5776,7 +5746,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_merich_lindenmeier_legacy
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Compulsory_Chemical_Analysis	
 		relative_position_id = SER_border_quarantine_service
 		x = 0
 		y = 1
@@ -5808,7 +5778,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_military_medical_school
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Educate_New_Staff	
 		relative_position_id = SER_merich_lindenmeier_legacy
 		x = 0
 		y = 1
@@ -5840,7 +5810,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_fund_administration
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Fund_Administration
 		relative_position_id = SER_serbian_egalitarianism
 		x = 3
 		y = 1
@@ -5868,7 +5838,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_begin_commercial_investment_banking
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Bank
 		relative_position_id = SER_fund_administration
 		x = 0
 		y = 1
@@ -5894,7 +5864,7 @@ focus_tree = {
  
 	focus = {
 		id = SER_introduce_bronze_coins
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Bank
 		relative_position_id = SER_begin_commercial_investment_banking
 		x = 0
 		y = 1
@@ -5914,16 +5884,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
+			country_event = SERmisc.31
 		}
 	}
   
 	focus = {
 		id = SER_first_serbian_bank
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Bank
 		relative_position_id = SER_introduce_bronze_coins
 		x = -1
 		y = 1
@@ -5957,7 +5924,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_join_latin_monetary_union
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Bank
 		relative_position_id = SER_introduce_bronze_coins
 		x = 1
 		y = 1
@@ -5984,7 +5951,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_develop_serbia_banking
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Bank
 		relative_position_id = SER_first_serbian_bank
 		x = 1
 		y = 1
@@ -6013,7 +5980,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_kragujevac_technical_school
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Serbian_Bank
 		relative_position_id = SER_military_medical_school
 		x = 0
 		y = 1
@@ -6054,7 +6021,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_educational_reform
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Educational_Reform
 		relative_position_id = SER_kragujevac_technical_school
 		x = 0
 		y = 1
@@ -6080,7 +6047,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_sima_andreevich_theological_teaching
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Theological_Teaching
 		relative_position_id = SER_educational_reform
 		x = 0
 		y = 1
@@ -6106,7 +6073,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_merchants_issue
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Merchant_Issue
 		relative_position_id = SER_begin_economic_recovery
 		x = 11
 		y = 1
@@ -6143,7 +6110,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_jewish_merchant_discrimination
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Salt_Monopoly
 		relative_position_id = SER_merchants_issue
 		x = -3
 		y = 1
@@ -6163,16 +6130,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
+			country_event = SERmisc.33
 		}
 	}
    
 	focus = {
 		id = SER_three_member_comittee
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Three_Member_Committee
 		relative_position_id = SER_merchants_issue
 		x = -1
 		y = 1
@@ -6211,7 +6175,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_1860_commercial_code
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Commercial_Act
 		relative_position_id = SER_jewish_merchant_discrimination
 		x = 1
 		y = 1
@@ -6240,7 +6204,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_anti_austrian_policiy
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Anti_Austrian_Policy
 		relative_position_id = SER_1860_commercial_code
 		x = 0
 		y = 1
@@ -6269,7 +6233,7 @@ focus_tree = {
   
 	focus = {
 		id = SER_deligrad_ship
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Deligrad_Ship
 		relative_position_id = SER_anti_austrian_policiy
 		x = 0
 		y = 1
@@ -6295,7 +6259,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_hand_to_defence_ministry
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Hand_To_Defence_Ministry
 		relative_position_id = SER_deligrad_ship
 		x = 0
 		y = 1
@@ -6315,16 +6279,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
+			country_event = SERmisc.34
 		}
 	}
    
 	focus = {
 		id = SER_serbian_steam_navigation_company
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Steam_Navigation_Company
 		relative_position_id = SER_merchants_issue
 		x = 2
 		y = 1
@@ -6344,16 +6305,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
+			country_event = SERmisc.35
 		}
 	}
    
 	focus = {
 		id = SER_english_danube_company_request
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_English_Company_Request
 		relative_position_id = SER_serbian_steam_navigation_company
 		x = -1
 		y = 1
@@ -6373,16 +6331,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
+			country_event = SERmisc.36
 		}
 	}
    
 	focus = {
 		id = SER_navigate_morava_river
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Navigate
 		relative_position_id = SER_english_danube_company_request
 		x = -1
 		y = 1
@@ -6408,7 +6363,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_dig_topcider_river_quay
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Dig_Quay
 		relative_position_id = SER_english_danube_company_request
 		x = 1
 		y = 1
@@ -6434,7 +6389,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_begin_negotiations
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Begin_Negoations
 		relative_position_id = SER_navigate_morava_river
 		x = 1
 		y = 1
@@ -6457,16 +6412,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
+			country_event = SERmisc.37
 		}
 	}
   
 	focus = {
 		id = SER_purchase_steamships
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Purchase_Ship
 		relative_position_id = SER_begin_negotiations
 		x = 0
 		y = 1
@@ -6492,7 +6444,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_franco_serbian_navigation_company
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Franco_Serbian_Navigation_Company
 		relative_position_id = SER_serbian_steam_navigation_company
 		x = 2
 		y = 1
@@ -6515,16 +6467,13 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			#	country_event = {
-			#		id = placeholder.1
-			#		hours = 5
-			#	}
+			country_event = SERmisc.38
 		}
 	}
    
 	focus = {
 		id = SER_allow_french_sail_danube
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Allow_French_Sail
 		relative_position_id = SER_franco_serbian_navigation_company
 		x = 0
 		y = 1
@@ -6553,7 +6502,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_salt_monopoly
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Salt_Monopoly
 		relative_position_id = SER_allow_french_sail_danube
 		x = 0
 		y = 1
@@ -6584,7 +6533,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_royal_serbian_shipyard
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Deligrad_Ship
 		relative_position_id = SER_purchase_steamships
 		x = -1
 		y = 1
@@ -6616,7 +6565,7 @@ focus_tree = {
    
 	focus = {
 		id = SER_serbian_flotilla_beginning
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_SER_Deligrad_Ship
 		relative_position_id = SER_royal_serbian_shipyard
 		x = 0
 		y = 1
@@ -6645,10 +6594,10 @@ focus_tree = {
    
 	focus = {
 		id = SER_begin_modernisation
-		icon = GFX_Focus_Meme_NGTGYU
+		icon = GFX_Focus_Advance_Science
 		relative_position_id = SER_sima_andreevich_theological_teaching
 		x = 0
-		y = 1
+		y = 2
 		cost = 70
 
 		ai_will_do = {

@@ -289,7 +289,8 @@ GEC_decision_category_polizeiverein = {
 	
 	visible = {
 		OR = {
-			has_idea = GEC_idea_polizeiverein_leader
+			has_idea = GEC_idea_polizeiverein_leader_1
+			has_idea = GEC_idea_polizeiverein_leader_2
 			has_idea = GEC_idea_polizeiverein_member
 		}
 		OR = {
@@ -437,7 +438,7 @@ AUS_decision_category_austrian_navy = {
 	}
 	
 	visible = {
-		#has_completed_focus = AUS_focus_archduke_maximilians_tenure
+		has_completed_focus = AUS_focus_archduke_maximilians_tenure
 	}
 }
 
@@ -933,6 +934,24 @@ RUS_decision_category_russian_technical_society = {
 	}
 }
 
+###ROMANIA###
+
+ROM_economy_descision_wallachia = {
+	icon = GFX_decision_cat_rom_agriculture_icon
+
+	picture = GFX_decision_cat_rom_agriculture_picture
+	priority = 185
+    
+	allowed = {
+		tag = ROM
+	}
+
+	visible = {
+                has_completed_focus = ROM_ever_burning_fields
+		tag = ROM
+	}
+}
+
 #### England Decision Categories ####
 
 eoanb_category_worker_unrest_ENG = {
@@ -1105,6 +1124,10 @@ FIN_category_Industrialisation_decisions = {
 	icon = generic_economy
 	allowed = {
 		tag = FIN
+	}
+	
+	visible = {
+		has_completed_focus = FIN_question_of_industralization
 	}
 }
 
@@ -1279,22 +1302,6 @@ POR_decision_category_colonies = {
 	allowed = { tag = POR }
 }
 
-#### Romania Decision Categories ####
-
-ROM_economy_descision_wallachia = {
-	icon = generic_independence
-
-	picture = GFX_decision_cat_generic_commonwealth
-    
-	allowed = {
-		tag = ROM
-	}
-
-	visible = {
-		tag = ROM
-	}
-}
-
 #### Serbia Decision Categories ####
 
 SER_ctg_withdrawal = {
@@ -1392,6 +1399,14 @@ SER_decision_category_propaganda_newspaper = {
 		has_completed_focus = SER_work_with_omalandi
 	}
 	visible_when_empty = yes
+}
+SER_decision_category_coup_category = {
+	icon = generic_crisis
+	priority = 100
+}
+SER_decision_category_cukur_category = {
+	icon = generic_crisis
+	priority = 100
 }
 #### Spain Decision Categories ####
 

@@ -610,6 +610,8 @@ eoanb_category_economic = {
 					tag = OLD
 					tag = THU
 					tag = WUR
+					tag = PIE
+					tag = TUS
 				}
 			}
 		}
@@ -1348,7 +1350,8 @@ eoanb_category_politics_internal = {
 			if = {
 				limit = {
 					OR = {
-						has_idea = GEC_idea_polizeiverein_leader
+						has_idea = GEC_idea_polizeiverein_leader_1
+						has_idea = GEC_idea_polizeiverein_leader_2
 						has_idea = GEC_idea_polizeiverein_member
 					}
 				}
@@ -1427,7 +1430,8 @@ eoanb_category_politics_internal = {
 			if = {
 				limit = {
 					OR = {
-						has_idea = GEC_idea_polizeiverein_leader
+						has_idea = GEC_idea_polizeiverein_leader_1
+						has_idea = GEC_idea_polizeiverein_leader_2
 						has_idea = GEC_idea_polizeiverein_member
 					}
 				}

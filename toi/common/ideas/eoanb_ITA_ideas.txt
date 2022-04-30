@@ -764,6 +764,7 @@ ideas = {
 				OR = {
 					original_tag = PIE
 					original_tag = TUS
+					original_tag = SAR
 					#original_tag = NSC
 				}
 			}
@@ -777,7 +778,7 @@ ideas = {
 					limit = {
 						tag = TUS
 					}
-					has_completed_focus = TUS_attract_moderates
+					has_completed_focus = TUS_focus_attract_moderates
 				}
 			}
 			research_bonus = {
@@ -808,6 +809,12 @@ ideas = {
 			}
 			modifier = {
 				army_attack_factor = 0.35
+			}
+		}
+		ITA_AI_Boost_PP = {
+			modifier = {
+				political_power_gain = 1
+				political_power_factor = 0.1
 			}
 		}
 	}

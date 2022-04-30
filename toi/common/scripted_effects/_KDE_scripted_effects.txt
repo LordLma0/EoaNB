@@ -219,6 +219,9 @@ KDE_bi_yearly_event_fire_1858 = {
 	SGP = {
 		country_event = { id = straits_settlements_event.2 days = 453} #1859.8.6
 	}
+	SER = {
+		country_event = { id = SER_bankrupcy.1 days = 10 }
+	}
 }
 
 # Events fired in between 1 Jan. 1860 and 31 Dec. 1861
@@ -263,7 +266,6 @@ KDE_bi_yearly_event_fire_1860 = {
 	TSH = {
 		country_event = { id = tsushima.4 days = 495 } # 1861.5.11
 		country_event = { id = feudal_tokugawa_shogunate.61 days = 100 random_days = 50 }
-		country_event=	{ id = feudal_tokugawa_shogunate.62 days = 200 random_days = 50 }
 		country_event=	{ id = feudal_tokugawa_shogunate.94 days = 50 random_days = 50 }
 		country_event=	{ id = feudal_tokugawa_shogunate.95 days = 125 random_days = 50 }
 		country_event=	{ id = feudal_tokugawa_shogunate.96 days = 200 random_days = 50 }
@@ -1342,8 +1344,8 @@ KDE_bi_yearly_event_fire_1886 = {
 
 KDE_bi_yearly_event_fire_1888 = {
 	NJD = {
-				country_event = { id = arab_events.61 days = 395 } # 1889.1.31
-		}
+		country_event = { id = arab_events.61 days = 395 } # 1889.1.31
+	}
 	ENG = {
 		country_event = { id = britain.171 days = 395 } # 1889.1.31
 	}
@@ -1356,11 +1358,11 @@ KDE_bi_yearly_event_fire_1888 = {
 
 KDE_bi_yearly_event_fire_1890 = {
 	JSH = {
-				country_event = { id = arab_events.51 days = 414 } # 1891.2.19
-		}
+		country_event = { id = arab_events.51 days = 414 } # 1891.2.19
+	}
 	FIN = {
-				country_event = { id = finland.4 days = 90 } # 1900.4.1
-		}
+		country_event = { id = finland.4 days = 90 } # 1900.4.1
+	}
 	USA = {
 		country_event = usa_event_check.7
 	}
@@ -1377,11 +1379,11 @@ KDE_bi_yearly_event_fire_1890 = {
 
 KDE_bi_yearly_event_fire_1892 = {
 	RUS = {
-				country_event = { id = russiacommander.37 days = 54 } # 1892.2.24
-		}
+		country_event = { id = russiacommander.37 days = 54 } # 1892.2.24
+	}
 	FIN = {
-				country_event = { id = finland.13 days = 360 } # 1892.12.27
-		}
+		country_event = { id = finland.13 days = 360 } # 1892.12.27
+	}
 	PRS = {
 		country_event = { id = prussiaadvisors.20 days = 145 } # 1892.5.26
 	}

@@ -64,6 +64,14 @@ characters = {
 			}
 		}
 	}
+	AUS_karl_ludwig_bruck = {
+		name = "Karl Ludwig Bruck"
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_AUS_Karl_Ludwig_Bruck"
+			}
+		}
+	}
 	AUS_richard_belcredi = {
 		name = "Richard Belcredi"
 		portraits = {
@@ -153,7 +161,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { old_guard cavalry_officer }
+			traits = { old_guard cavalry_officer cavalry_leader }
 			skill = 2
 				attack_skill = 2
 				defense_skill = 2
@@ -171,7 +179,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer }
+			traits = { cavalry_officer cavalry_leader }
 			skill = 3
 				attack_skill = 3
 				defense_skill = 2
@@ -508,6 +516,42 @@ characters = {
 			legacy_id = 16824
 		}
 	}
+	AUS_franz_von_schlik = {
+		name = "Franz von Schlik"
+		portraits = {
+			army = {
+				small = "GFX_idea_AUS_mhc_army_Franz_von_Schlik"
+				large = "gfx/leaders/AUS/Portrait_AUS_Franz_von_Schlik.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer cavalry_leader }
+			skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 2
+			legacy_id = 16825
+		}
+	}
+	AUS_franz_emil_lorenz_wimpffen = {
+		name = "Franz Emil Lorenz Wimpffen"
+		portraits = {
+			army = {
+				small = "GFX_idea_AUS_mhc_army_Franz_von_Schlik"
+				large = "gfx/leaders/AUS/Portrait_AUS_Franz_Emil_Lorenz_Wimpffen.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			legacy_id = 16826
+		}
+	}
 	
 	#Admirals
 	AUS_maximilian_von_osterreich = {
@@ -519,7 +563,7 @@ characters = {
 			}
 		}
 		navy_leader = {
-			skill = 2
+			skill = 3
 				attack_skill = 2
 				defense_skill = 2
 				maneuvering_skill = 2
@@ -714,6 +758,14 @@ characters = {
 			}
 		}
 	}
+	AUS_hans_dahlerup = {
+		name = "Hans Dahlerup"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AUS_advisor_Hans_Dahlerup"
+			}
+		}
+	}
 	AUS_heinrich_von_ferstel = {
 		name = "Heinrich von Ferstel"
 		portraits = {
@@ -901,7 +953,8 @@ characters = {
 		name = "Moritz Pálffy von Erdőd"
 		portraits = {
 			civilian = {
-				small = "GFX_idea_europe_generic_1"
+				large = "GFX_Portrait_AUS_Moritz_Palffy_von_Erdod"
+				small = "GFX_idea_AUS_advisor_Moritz_Palffy_von_Erdod"
 			}
 		}
 	}

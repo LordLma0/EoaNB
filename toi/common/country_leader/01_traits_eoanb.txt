@@ -609,6 +609,7 @@ leader_traits = {
 		stability_factor = 0.15
 		stability_weekly = 0.001
 		drift_defence_factor = 0.1
+		political_advisor_cost_factor = -0.1
 		resistance_growth = -0.5
 
 		ai_will_do = {
@@ -994,6 +995,11 @@ leader_traits = {
 		random = no
 		political_power_gain = 0.5 
 	}
+	ITA_trait_Popular_Leader = {
+		random = no
+		political_power_gain = 0.5
+		political_power_factor = 0.05
+	}
 	
 	###Austrian Leader Traits
 	
@@ -1050,6 +1056,18 @@ leader_traits = {
 		production_speed_rail_way_factor = 0.1
 		production_speed_infrastructure_factor = 0.05
 		army_speed_factor = 0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	AUS_trait_Hans_Dahlerup = {
+		random = no
+		
+		political_power_factor = -0.05
+		production_speed_dockyard_factor = 0.05
+		production_speed_naval_base_factor = 0.05
+		max_command_power = 10
+		experience_gain_navy = 0.03
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1881,21 +1899,26 @@ leader_traits = {
 		naval_doctrine_cost_factor = -0.05
 		ai_will_do = { factor = 5 }
 	}
+	
 	FIN_trait_Sofia_Zweygberg = {
 		random = no
 		political_power_gain = 0.05
 		experience_gain_navy = 0.05
 		naval_doctrine_cost_factor = -0.05
+		
 		ai_will_do = { factor = 5 }
 	}
+	
 	FIN_trait_elias_lonnrot = {
 		random = no
 		political_power_gain = 0.10
 		weekly_manpower = 10
 		stability_weekly = 0.001
 		research_speed_factor = 0.01
+		
 		ai_will_do = { factor = 5 }
 	}
+	
 	FIN_trait_axel_olof_freudenthal = {
 		random = no
 		weekly_manpower = -50
@@ -1904,6 +1927,35 @@ leader_traits = {
 		political_power_factor = -0.02
 		consumer_goods_factor = -0.02
 		trade_opinion_factor = 0.1
+		
+		ai_will_do = { factor = 5 }
+	}
+	
+	FIN_trait_axel_olof_freudenthal = {
+		random = no
+		weekly_manpower = -100
+		stability_factor = -0.15
+		political_power_factor = -0.02
+		consumer_goods_factor = -0.02
+		trade_opinion_factor = 0.2
+		
+		ai_will_do = { factor = 5 }
+	}
+	
+	FIN_trait_Edvard_Bergenheim1 = {
+		random = no
+		stability_factor = 0.10
+		political_power_factor = 0.05
+		
+		ai_will_do = { factor = 5 }
+	}
+	
+	FIN_trait_Carl_Creutz = {
+		random = no
+		autonomy_gain = 0.5
+		drift_defence_factor = 0.05
+		political_advisor_cost_factor = -0.1
+		
 		ai_will_do = { factor = 5 }
 	}
 		

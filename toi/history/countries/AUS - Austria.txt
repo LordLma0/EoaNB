@@ -68,7 +68,7 @@
 		#NATIONAL SPIRITS
 		GER_general_idea_ger_confed
 		BAD_currency_reform
-		GEC_idea_polizeiverein_leader
+		GEC_idea_polizeiverein_leader_1
 		egy_vic_debt
 		AUS_idea_klerikalabsolutist
 		AUS_idea_concordat_of_1855_1
@@ -107,16 +107,24 @@
 		value = 0.2
 	}
 	
-	set_variable = { AUS_ITA_Unrest_ppf = -0.05 tooltip = political_power_factor_tooltip }
-	set_variable = { AUS_ITA_Unrest_ddf = -0.1 tooltip = drift_defence_factor_tooltip }
-	set_variable = { AUS_ITA_Unrest_sf = -0.02 tooltip = stability_factor_tooltip }
+	set_variable = { AUS_ITA_Unrest_ppf = -0.05 }
+	set_variable = { AUS_ITA_Unrest_ddf = -0.1 }
+	set_variable = { AUS_ITA_Unrest_sf = -0.02 }
 	set_variable = { AUS_ITA_Unrest_risk_change = 0.02 tooltip = AUS_ITA_Unrest_risk_change_tooltip }
 	add_dynamic_modifier = { modifier = AUS_Italian_Unrest_Modifier }
 	
-	set_variable = { AUS_naval_reform_cgf = 0.05 tooltip = consumer_goods_factor_tooltip }
-	set_variable = { AUS_naval_reform_ppf = -0.05 tooltip = political_power_factor_tooltip }
+	set_variable = { AUS_naval_reform_cgf = 0.05 }
+	set_variable = { AUS_naval_reform_ppf = -0.05 }
+	set_variable = { AUS_naval_reform_sf = 0 }
+	set_variable = { AUS_naval_reform_wsf = 0 }
+	set_variable = { AUS_naval_reform_wsw = 0 }
+	set_variable = { AUS_naval_reform_tof = 0 }
+	set_variable = { AUS_naval_reform_mcp = 0 }
 	set_variable = { AUS_naval_reform_icd = 0.1 }
 	set_variable = { AUS_naval_reform_psdf = 0.1 }
+	set_variable = { AUS_naval_reform_nrs = 0.1 }
+	set_variable = { AUS_naval_reform_egn = 0 }
+	set_variable = { AUS_naval_reform_ndcf = 0 }
 	add_dynamic_modifier = { modifier = dynmod_AUS_naval_reform }
 
 	# Diplo
@@ -358,6 +366,7 @@
 	#Politicians for later
 	recruit_character = AUS_anton_von_schmerling
 	recruit_character = AUS_bernhard_von_rechberg
+	recruit_character = AUS_karl_ludwig_bruck
 	recruit_character = AUS_richard_belcredi
 	
 	### FIELD MARSHALS, GENERALS & ADMIRALS ###
@@ -390,6 +399,8 @@
 	recruit_character = AUS_karl_von_thun_und_hohenstein
 	recruit_character = AUS_august_von_degenfeld					#also possible army chief/theorist
 	recruit_character = AUS_ernst_von_osterreich
+	recruit_character = AUS_franz_von_schlik
+	recruit_character = AUS_franz_emil_lorenz_wimpffen
 
 	#Admirals
 	recruit_character = AUS_maximilian_von_osterreich
@@ -409,6 +420,7 @@
 	recruit_character = AUS_bernhard_von_wullerstorf_urbair 		#later also admiral
 	recruit_character = AUS_carl_than
 	recruit_character = AUS_georg_sigl
+	recruit_character = AUS_hans_dahlerup
 	recruit_character = AUS_heinrich_von_ferstel
 	recruit_character = AUS_ignacy_lukasiewicz
 	recruit_character = AUS_ignaz_semmelweis
@@ -441,7 +453,7 @@
 				mid_1_custom_slot = ship_cannon_battery_0
 				front_1_custom_slot = empty
 			}
-			#obsolete = no
+			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Screw Corvette Class"
@@ -470,11 +482,10 @@
 				fixed_ship_armor_slot = ship_armor_capital_hardwood_0
 				mid_1_custom_slot = ship_cannon_battery_0
 				mid_2_custom_slot = ship_cannon_battery_0
-				mid_3_custom_slot = ship_cannon_battery_0
 				front_1_custom_slot = empty
 				rear_1_custom_slot = empty
 			}
-			#obsolete = yes
+			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Sail Frigate Class"
@@ -492,7 +503,7 @@
 				front_1_custom_slot = ship_cannon_battery_1
 				rear_1_custom_slot = ship_cannon_battery_1
 			}
-			#obsolete = yes
+			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Paddle Frigate Class"
@@ -510,7 +521,7 @@
 				front_1_custom_slot = empty
 				rear_1_custom_slot = empty
 			}
-			#obsolete = yes
+			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Screw Frigate Class"
@@ -528,7 +539,7 @@
 				front_1_custom_slot = empty
 				rear_1_custom_slot = empty
 			}
-			#obsolete = yes
+			#obsolete = no
 		}
 		create_equipment_variant = {
 			name = "Screw Ship of the Line Class"
@@ -536,16 +547,16 @@
 			name_group = GER_CA_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_battery_slot=ship_cannon_battery_1
-				fixed_ship_fire_control_system_slot=fire_control_system_0
-				fixed_ship_engine_slot=ship_engine_steam_screw_capital
-				mid_1_custom_slot=ship_cannon_battery_1
-				fixed_ship_armor_slot=ship_armor_capital_hardwood_0
-				mid_2_custom_slot=ship_cannon_battery_0
-				mid_3_custom_slot=ship_cannon_battery_0
-				front_1_custom_slot=ship_cannon_battery_0
-				front_2_custom_slot=ship_cannon_battery_0
-				rear_1_custom_slot=empty
+				fixed_ship_battery_slot = ship_cannon_battery_1
+				fixed_ship_fire_control_system_slot = fire_control_system_0
+				fixed_ship_engine_slot = ship_engine_steam_screw_capital
+				mid_1_custom_slot = ship_cannon_battery_1
+				fixed_ship_armor_slot = ship_armor_capital_hardwood_0
+				mid_2_custom_slot = ship_cannon_battery_0
+				mid_3_custom_slot = ship_cannon_battery_0
+				front_1_custom_slot = ship_cannon_battery_0
+				front_2_custom_slot = ship_cannon_battery_0
+				rear_1_custom_slot = empty
 			}
 			#obsolete = no
 		}
@@ -562,25 +573,24 @@
 				mid_1_custom_slot = ship_cannon_battery_0
 				mid_2_custom_slot = ship_cannon_battery_1
 			}
-			#obsolete = yes
+			obsolete = yes
 		}
-		create_equipment_variant = {
-			name = "Early Ironclad Class"
-			type = ship_hull_ironclad_0
-			name_group = GER_CA_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_cannon_battery_1
-				fixed_ship_fire_control_system_slot = fire_control_system_0
-				fixed_ship_engine_slot = ship_engine_paddle_capital
-				fixed_ship_armor_slot = ship_armor_capital_hardwood_1
-				mid_1_custom_slot = ship_cannon_battery_1
-				mid_2_custom_slot = ship_cannon_battery_1
-				front_1_custom_slot = ship_cannon_battery_1
-				rear_1_custom_slot = ship_cannon_battery_1
-			}
-			#obsolete = no
-		}
+		#create_equipment_variant = {
+		#	name = "Early Ironclad Class"
+		#	type = ship_hull_ironclad_0
+		#	name_group = GER_CA_HISTORICAL
+		#	parent_version = 0
+		#	modules = {
+		#		fixed_ship_battery_slot = ship_cannon_battery_1
+		#		fixed_ship_fire_control_system_slot = fire_control_system_0
+		#		fixed_ship_engine_slot = ship_engine_paddle_cruiser
+		#		fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+		#		mid_1_custom_slot = ship_cannon_battery_1
+		#		mid_2_custom_slot = ship_cannon_battery_1
+		#		front_1_custom_slot = ship_cannon_battery_1
+		#		rear_1_custom_slot = ship_cannon_battery_1
+		#	}
+		#	#obsolete = no
+		#}
 	}
-
 }

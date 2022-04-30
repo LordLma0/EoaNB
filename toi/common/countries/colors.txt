@@ -265,8 +265,8 @@ USV = {
 	color_ui = rgb{ 214 219 75 }
 }
 USA = {
-	color = rgb { 20 133 237 }
-	color_ui = rgb { 87 160 255 }
+	color = rgb { 86 104 160 }
+	color_ui = rgb { 86 104 180 }
 }
 MON = {
 	#color = HSV { 0.1 0.15 0.4 }
@@ -370,8 +370,8 @@ SYR = {
 }
 
 SER = {
-	color = rgb { 160 110 110 }
-	color_ui = rgb { 160 110 110 }
+	color = rgb { 40  88 142 }
+	color_ui = rgb { 40  88 142 }
 }
 
 GLM = {

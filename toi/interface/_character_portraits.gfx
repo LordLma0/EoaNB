@@ -6,7 +6,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_Portrait_AND_Jose_Caixal"
-		texturefile = "gfx/leaders/AUS/Portrait_AND_Jose_Caixal.png"
+		texturefile = "gfx/leaders/ADR/Portrait_AND_Jose_Caixal.png"
 	}
 
 	### AUS
@@ -29,6 +29,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_AUS_Bernhard_von_Rechberg"
 		texturefile = "gfx/leaders/AUS/Portrait_AUS_Bernhard_von_Rechberg.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_AUS_Archduke_Karl_Ludwig"
+		texturefile = "gfx/leaders/AUS/Portrait_AUS_Archduke_Karl_Ludwig.png"
 	}
 
 	spriteType = {
@@ -57,8 +62,18 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_Portrait_AUS_Karl_Ludwig_Bruck"
+		texturefile = "gfx/leaders/AUS/Portrait_AUS_Karl_Ludwig_Bruck.png"
+	}
+	
+	spriteType = {
 		name = "GFX_Portrait_AUS_Karl_von_Vogelsang"
 		texturefile = "gfx/leaders/AUS/Portrait_AUS_Karl_von_Vogelsang.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_AUS_Moritz_Palffy_von_Erdod"
+		texturefile = "gfx/leaders/AUS/Portrait_AUS_Moritz_Palffy_von_Erdod.png"
 	}
 
 	spriteType = {
@@ -356,7 +371,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_Portrait_ENG_Queen_Victoria"
-		texturefile = "gfx/leaders/ENG/Portrait_ENG_Queen_Victoria.png"
+		texturefile = "gfx/leaders/ENG/Portrait_ENG_Victoria.png"
 	}
 
 	spriteType = {
@@ -1212,57 +1227,57 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_rus_alexander_bagration_imeretinsky"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Alexander_Bagration_Imeretinsky.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Alexander_Bagration_Imeretinsky.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_eduard_totleben"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Eduard_Totleben.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Eduard_Totleben.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_georgiy_evseevich_eristov"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Georgiy_Evseevich_Eristov.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Georgiy_Evseevich_Eristov.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_grigol_orbelani"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Grigol_Orbelani.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Grigol_Orbelani.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_hrigory_gagarin"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Hrigory_Gagarin.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Hrigory_Gagarin.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_joseph_carl_von_anrep"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Joseph_Carl_von_Anrep.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Joseph_Carl_von_Anrep.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_nicholas_annenkov"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nicholas_Annenkov.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nicholas_Annenkov.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_nikolai_karlovich_krabbe"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nikolai_Karlovich_Krabbe.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nikolai_Karlovich_Krabbe.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_nikolai_sukhozanet"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nikolai_Sukhozanet.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nikolai_Sukhozanet.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_nikolay_muravyov_karsky"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Muravyov_Karsky.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Muravyov_Karsky.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_rus_yegor_tolstoy"
-		textureFile = "gfx/leaders/RUS/Portrait_RUS_Yegor_Tolstoy.dds"
+		textureFile = "gfx/leaders/RUS/Portrait_RUS_Yegor_Tolstoy.png"
 	}
 
 	#### USA
@@ -2521,6 +2536,11 @@ spriteTypes = {
 		name = "GFX_europe_generic_land_5"
 		textureFile = "gfx//leaders//Europe//Portrait_Europe_Generic_land_5.png"
 	}
+	spriteType = {
+		name = "GFX_Portrait_Europe_generic_leader_politician_17"
+		textureFile = "gfx/leaders/Europe/Portrait_Europe_generic_leader_politician_17.png"
+	}
+
 
 
 	#### MEXICO ###

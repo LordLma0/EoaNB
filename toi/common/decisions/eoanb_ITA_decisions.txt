@@ -137,7 +137,7 @@ ITA_decisions_category_wars_and_conflicts = {
 	# War Against Sardinia
 	ITA_TUS_decision_Tuscan_Banks = {
 		ai_will_do = {
-			base = 35
+			base = 50
 		}
 		fire_only_once = yes
 		allowed = {
@@ -145,7 +145,7 @@ ITA_decisions_category_wars_and_conflicts = {
 		}
 		icon = generic_political_actions
 		visible = {
-			has_completed_Focus = TUS_hostility_break_out
+			has_completed_Focus = TUS_focus_hostility_break_out
 			country_exists = PIE
 		}
 		available = {
@@ -161,7 +161,7 @@ ITA_decisions_category_wars_and_conflicts = {
 	}
 	ITA_TUS_decision_accept_volunteers = {
 		ai_will_do = {
-			base = 35
+			base = 50
 		}
 		fire_only_once = yes
 		allowed = {
@@ -169,7 +169,7 @@ ITA_decisions_category_wars_and_conflicts = {
 		}
 		icon = generic_political_actions
 		visible = {
-			has_completed_Focus = TUS_hostility_break_out
+			has_completed_Focus = TUS_focus_hostility_break_out
 			country_exists = PIE
 		}
 		available = {
@@ -182,7 +182,7 @@ ITA_decisions_category_wars_and_conflicts = {
 	}
 	ITA_TUS_decision_encourage_resistance_sardinia = {
 		ai_will_do = {
-			base = 35
+			base = 60
 		}
 		fire_only_once = yes
 		allowed = {
@@ -190,7 +190,7 @@ ITA_decisions_category_wars_and_conflicts = {
 		}
 		icon = generic_political_actions
 		visible = {
-			has_completed_Focus = TUS_hostility_break_out
+			has_completed_Focus = TUS_focus_hostility_break_out
 			country_exists = PIE
 		}
 		available = {
@@ -920,12 +920,13 @@ ITA_decisions_category_wars_and_conflicts = {
 						}
 						OR = {
 							PIE = {
-								controls_state = 159
-								controls_state = 160
+								controls_province = 6656
+								controls_province = 603
 							}
 							RUS = {
-								controls_state = 88
-								controls_state = 91
+								controls_province = 442
+								controls_province = 6522
+								controls_province = 11478
 							}
 							AUS = {
 								surrender_progress > 0.5
@@ -946,7 +947,7 @@ ITA_decisions_category_wars_and_conflicts = {
 					tooltip = ITA_Mission_AUS_PIE_Peace_Treaty_1860_AUS_VICTORY_tt
 					tag = AUS
 					PIE = {
-						surrender_progress > 0.3
+						surrender_progress > 0.25
 					}
 				}
 			}
@@ -1174,15 +1175,20 @@ ITA_decisions_category_wars_and_conflicts = {
 				if = {
 					limit = {
 						OR = {
-							LVN = {
-								has_capitulated = yes
+							PIE = {
+								controls_province = 6656
+								controls_province = 603
 							}
 							RUS = {
-								controls_state = 88
-								controls_state = 91
+								controls_province = 442
+								controls_province = 6522
+								controls_province = 11478
 							}
 							AUS = {
-								surrender_progress > 0.4
+								surrender_progress > 0.5
+							}
+							LVN = {
+								has_capitulated = yes
 							}
 						}
 						PIE = {
@@ -1194,6 +1200,36 @@ ITA_decisions_category_wars_and_conflicts = {
 						}
 					}
 					hidden_effect = {
+						AUS = {
+							if = {
+								limit = {
+									PIE = {
+										controls_province = 6656
+										controls_province = 603
+									}
+								}
+								country_event = {
+									id = sardinia.259
+								}
+							}
+							if = {
+								limit = {
+									RUS = {
+										controls_province = 442
+										controls_province = 6522
+										controls_province = 11478
+									}
+								}
+								country_event = {
+									id = sardinia.260
+								}
+							}
+						}
+						RUS = {
+							country_event = {
+								id = sardinia.261
+							}
+						}
 						159 = {
 							remove_dynamic_modifier = {
 								modifier = dynmod_AUS_italian_unrest
@@ -1296,35 +1332,36 @@ ITA_decisions_category_wars_and_conflicts = {
 						remove_ideas = {
 							ITA_2IP_Idea
 						}
-					}
-					PIE = {
-						if = {
-							limit = {
-								has_country_flag = PIE_RUS_taking_LVN
-							}
-							transfer_state = 160
-							add_state_core = 160
-							160 = {
-								remove_dynamic_modifier = {
-									modifier = dynmod_AUS_italian_unrest
-								}
-							}
-							clr_country_flag = PIE_RUS_taking_LVN
-							AUS = {
-								remove_dynamic_modifier = {
-									modifier = AUS_Italian_Unrest_Modifier
-								}
-								clear_variable = AUS_ITA_Unrest_ppf
-								clear_variable = AUS_ITA_Unrest_ddf
-								clear_variable = AUS_ITA_Unrest_sf
-								clear_variable = AUS_ITA_Unrest_risk_change
-								clear_variable = ITA_UPROAR_RISK
-							}
-						}
 						transfer_state = 159
-						add_state_core = 159
-						clr_country_flag = PIE_RUS_taking_Lombardy
 					}
+
+					#PIE = {
+					#	if = {
+					#		limit = {
+					#			has_country_flag = PIE_RUS_taking_LVN
+					#		}
+					#		transfer_state = 160
+					#		add_state_core = 160
+					#		160 = {
+					#			remove_dynamic_modifier = {
+					#				modifier = dynmod_AUS_italian_unrest
+					#			}
+					#		}
+					#		clr_country_flag = PIE_RUS_taking_LVN
+					#		AUS = {
+					#			remove_dynamic_modifier = {
+					#				modifier = AUS_Italian_Unrest_Modifier
+					#			}
+					#			clear_variable = AUS_ITA_Unrest_ppf
+					#			clear_variable = AUS_ITA_Unrest_ddf
+					#			clear_variable = AUS_ITA_Unrest_sf
+					#			clear_variable = AUS_ITA_Unrest_risk_change
+					#			clear_variable = ITA_UPROAR_RISK
+					#		}
+					#	}
+					#	add_state_core = 159
+					#	#clr_country_flag = PIE_RUS_taking_Lombardy
+					#}
 				}
 			}
 			if = {
@@ -1332,11 +1369,12 @@ ITA_decisions_category_wars_and_conflicts = {
 				limit = {
 					tag = AUS
 					PIE = {
-						surrender_progress > 0.3						# Austria's Victory Conditions
+						surrender_progress > 0.25						# Austria's Victory Conditions
 					}
 				}
 				AUS = {
 					remove_mission = ITA_Mission_AUS_PIE_Peace_Treaty_1860
+					white_peace = PIE
 					white_peace = PRM
 					if = {
 						limit = {
@@ -1376,48 +1414,60 @@ ITA_decisions_category_wars_and_conflicts = {
 							white_peace = LVN
 						}
 					}
+					country_event = { id = austria.1601 } #Event enabling Austrian post-war victory content
+					country_event = { id = sardinia.48 } #House of Savoy Flees
+					hidden_effect = {
+						set_country_flag = AUS_triumph_in_italy_flag
+						mark_focus_tree_layout_dirty = yes
+					}
 				}
 				PIE = {
 					remove_mission = ITA_Mission_AUS_PIE_Peace_Treaty_1860
+					#country_event = { id = sardinia_something } #Event that the ruling dynasty has fled to Sardinia
 				}
 				# Insert Austria's Victory Here (Recommended you also check for tag so it only fires for Austria)
 				LVN = {
+					white_peace = PIE
 					white_peace = PRM
 					#country_event = {
 					#	id = ita_confederation.6
 					#}
-					annex_country = {
-						target = PIE
-					}
-					annex_country = {
-						target = PRM
-					}
-					annex_country = {
-						target = TIC
-					}
-					if = {
-						limit = {
-							MNC = {
-								is_puppet_of = PIE
-							}
-						}
-						LVN = {
-							annex_country = {
-								target = MNC
-							}
-						}
-					}
+					#Annex all states of PIE into LVN, apart from Sardinia
+					transfer_state = 158
+					transfer_state = 735
+					transfer_state = 822
+					transfer_state = 981
+					transfer_state = 1153
+					#Perhaps set a cosmetic tag to change name and flag?
+					#annex_country = {
+					#	target = PRM
+					#}
+					#annex_country = {
+					#	target = TIC
+					#}
+					#if = {
+					#	limit = {
+					#		MNC = {
+					#			is_puppet_of = PIE
+					#		}
+					#	}
+					#	LVN = {
+					#		annex_country = {
+					#			target = MNC
+					#		}
+					#	}
+					#}
 					#set_country_flag = ITA_AUS_Divide_Italy_Yes
 					#set_country_flag = ITA_AUS_won_2I_Divide_Italy
-				}
-				TUS = {
-					every_enemy_country = {
-						white_peace = TUS
-					}
 				}
 				MNC = {
 					every_enemy_country = {
 						white_peace = MNC
+					}
+				}
+				TUS = {
+					every_enemy_country = {
+						white_peace = TUS
 					}
 				}
 			}
@@ -1636,6 +1686,9 @@ ITA_decisions_category_wars_and_conflicts = {
 								RUS = {
 									controls_state = 89
 								}
+								PIE = {
+									controls_province = 11584
+								}
 							}
 						}
 					}
@@ -1779,6 +1832,7 @@ ITA_decisions_category_wars_and_conflicts = {
 						}
 						AUS = {
 							remove_mission = ITA_Mission_AUS_PIE_Peace_Treaty_1860
+							white_peace = PIE
 							white_peace = PRM
 							if = {
 								limit = {
@@ -1818,48 +1872,60 @@ ITA_decisions_category_wars_and_conflicts = {
 									white_peace = LVN
 								}
 							}
+							country_event = { id = austria.1601 } #Event enabling Austrian post-war victory content
+							country_event = { id = sardinia.48 } #House of Savoy Flees
+							hidden_effect = {
+								set_country_flag = AUS_triumph_in_italy_flag
+								mark_focus_tree_layout_dirty = yes
+							}
 						}
 						PIE = {
 							remove_mission = ITA_Mission_AUS_PIE_Peace_Treaty_1860
+							#country_event = { id = sardinia_something } #Event that the ruling dynasty has fled to Sardinia
 						}
 						# Insert Austria's Victory Here (Recommended you also check for tag so it only fires for Austria)
 						LVN = {
+							white_peace = PIE
 							white_peace = PRM
 							#country_event = {
 							#	id = ita_confederation.6
 							#}
-							annex_country = {
-								target = PIE
-							}
-							annex_country = {
-								target = PRM
-							}
-							annex_country = {
-								target = TIC
-							}
-							if = {
-								limit = {
-									MNC = {
-										is_puppet_of = PIE
-									}
-								}
-								LVN = {
-									annex_country = {
-										target = MNC
-									}
-								}
-							}
+							#Annex all states of PIE into LVN, apart from Sardinia
+							transfer_state = 158
+							transfer_state = 735
+							transfer_state = 822
+							transfer_state = 981
+							transfer_state = 1153
+							#Perhaps set a cosmetic tag to change name and flag?
+							#annex_country = {
+							#	target = PRM
+							#}
+							#annex_country = {
+							#	target = TIC
+							#}
+							#if = {
+							#	limit = {
+							#		MNC = {
+							#			is_puppet_of = PIE
+							#		}
+							#	}
+							#	LVN = {
+							#		annex_country = {
+							#			target = MNC
+							#		}
+							#	}
+							#}
 							#set_country_flag = ITA_AUS_Divide_Italy_Yes
 							#set_country_flag = ITA_AUS_won_2I_Divide_Italy
-						}
-						TUS = {
-							every_enemy_country = {
-								white_peace = TUS
-							}
 						}
 						MNC = {
 							every_enemy_country = {
 								white_peace = MNC
+							}
+						}
+						TUS = {
+							every_enemy_country = {
+								white_peace = TUS
 							}
 						}
 					}
@@ -2745,6 +2811,13 @@ ITA_decisions_category_wars_and_conflicts = {
 		timeout_effect = {
 			remove_mission = ITA_2IP_Mobilization_War_Imiment
 			hidden_effect = {
+				add_political_power = 100
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					add_political_power = 100
+				}
 				country_event = {
 					id = sardinia.180
 					days = 10
@@ -2792,8 +2865,10 @@ ITA_decisions_category_wars_and_conflicts = {
 				limit = {
 					has_completed_focus = PIE_The_Russian_Alliance
 				}
-				country_event = {
-					id = sardinia.85
+				RUS = {
+					country_event = {
+						id = sardinia.86
+					}
 				}
 				AUS = {
 					declare_war_on = {
@@ -3194,13 +3269,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_textile_industry
+			has_completed_focus = TUS_focus_textile_industry
 		}
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 60
 		modifier = {
 			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 200
 		remove_effect = {
@@ -3219,13 +3297,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_textile_industry
+			has_completed_focus = TUS_focus_textile_industry
 		}
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 50
 		modifier = {
 			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 200
 		remove_effect = {
@@ -3244,13 +3325,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_textile_industry
+			has_completed_focus = TUS_focus_textile_industry
 		}
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 50
 		modifier = {
 			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 200
 		remove_effect = {
@@ -3269,7 +3353,10 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_the_artisans
+			has_completed_focus = TUS_focus_the_artisans
+		}
+		ai_will_do = {
+			base = 25
 		}
 		icon = generic_construction
 		fire_only_once = yes
@@ -3286,13 +3373,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_the_artisans
+			has_completed_focus = TUS_focus_the_artisans
 		}
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 75
 		modifier = {
 			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 150
 		remove_effect = {
@@ -3311,13 +3401,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_the_artisans
+			has_completed_focus = TUS_focus_the_artisans
 		}
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 50
 		modifier = {
 			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 100
 		remove_effect = {
@@ -3333,13 +3426,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_the_artisans
+			has_completed_focus = TUS_focus_the_artisans
 		}
 		icon = generic_construction
 		fire_only_once = yes
 		cost = 50
 		modifier = {
 			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 150
 		remove_effect = {
@@ -3358,13 +3454,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_not_industrialisation
+			has_completed_focus = TUS_focus_not_industrialisation
 		}
 		icon = railway
 		fire_only_once = yes
 		cost = 80
 		modifier = {
 			consumer_goods_factor = 0.04
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 250
 		remove_effect = {
@@ -3383,13 +3482,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_not_industrialisation
+			has_completed_focus = TUS_focus_not_industrialisation
 		}
 		icon = railway
 		fire_only_once = yes
 		cost = 80
 		modifier = {
 			consumer_goods_factor = 0.04
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 250
 		complete_effect = {
@@ -3421,13 +3523,16 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_not_industrialisation
+			has_completed_focus = TUS_focus_not_industrialisation
 		}
 		icon = railway
 		fire_only_once = yes
 		cost = 80
 		modifier = {
 			consumer_goods_factor = 0.04
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 250
 		complete_effect = {
@@ -3458,7 +3563,7 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_not_industrialisation
+			has_completed_focus = TUS_focus_not_industrialisation
 			has_country_flag = TUS_arezzo_perugia_rail_decision
 		}
 		icon = railway
@@ -3466,6 +3571,9 @@ ITA_decisions_category_artisan_industry = {
 		cost = 80
 		modifier = {
 			consumer_goods_factor = 0.04
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 250
 		remove_effect = {
@@ -3486,7 +3594,7 @@ ITA_decisions_category_artisan_industry = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_not_industrialisation
+			has_completed_focus = TUS_focus_not_industrialisation
 			has_country_flag = TUS_siena_perugia_rail_decision
 		}
 		icon = railway
@@ -3494,6 +3602,9 @@ ITA_decisions_category_artisan_industry = {
 		cost = 80
 		modifier = {
 			consumer_goods_factor = 0.04
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 250
 		remove_effect = {
@@ -3522,6 +3633,9 @@ ITA_decisions_category_artisan_industry = {
 		modifier = {
 			consumer_goods_factor = 0.04
 		}
+		ai_will_do = {
+			base = 25
+		}
 		days_remove = 250
 		remove_effect = {
 			114 = {
@@ -3545,6 +3659,9 @@ ITA_decisions_category_artisan_industry = {
 		cost = 65
 		modifier = {
 			consumer_goods_factor = 0.04
+		}
+		ai_will_do = {
+			base = 25
 		}
 		days_remove = 250
 		remove_effect = {
@@ -3571,13 +3688,13 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		icon = generic_political_actions
 		fire_only_once = yes
 		cost = 25
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		days_remove = 250
 		complete_effect = {
@@ -3595,7 +3712,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_equipment = {
@@ -3607,7 +3724,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 		fire_only_once = yes
 		cost = 25
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		days_remove = 100
 		complete_effect = {
@@ -3622,7 +3739,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_arm_civic_militias
@@ -3632,7 +3749,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 		fire_only_once = yes
 		cost = 35
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			division_template = {
@@ -3692,7 +3809,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
@@ -3701,7 +3818,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 		fire_only_once = yes
 		cost = 35
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		days_remove = 200
 		complete_effect = {
@@ -3728,17 +3845,17 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
-			has_completed_focus = TUS_work_with_outside_forces
+			has_completed_focus = TUS_focus_work_with_outside_forces
 		}
 		icon = generic_political_actions
 		fire_only_once = yes
 		cost = 35
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			162 = {
@@ -3760,11 +3877,11 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
-			has_completed_focus = TUS_a_message_to_sardinia
+			has_completed_focus = TUS_focus_a_message_to_sardinia
 			custom_trigger_tooltip = {
 				tooltip = PIE_TUS_supported_tuscany_tt
 				PIE = {
@@ -3776,7 +3893,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 		fire_only_once = yes
 		cost = 25
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
@@ -3790,11 +3907,11 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
-			has_completed_focus = TUS_a_message_to_sardinia
+			has_completed_focus = TUS_focus_a_message_to_sardinia
 			custom_trigger_tooltip = {
 				tooltip = PIE_TUS_supported_tuscany_tt
 				PIE = {
@@ -3806,7 +3923,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 		fire_only_once = yes
 		cost = 35
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			army_experience = 15
@@ -3831,17 +3948,17 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
-			has_completed_focus = TUS_a_message_to_others
+			has_completed_focus = TUS_focus_a_message_to_others
 		}
 		icon = generic_political_actions
 		fire_only_once = yes
 		cost = 25
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			FRA = {
@@ -3856,17 +3973,17 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
-			has_completed_focus = TUS_a_message_to_others
+			has_completed_focus = TUS_focus_a_message_to_others
 		}
 		icon = generic_political_actions
 		fire_only_once = yes
 		cost = 25
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			RUS = {
@@ -3881,17 +3998,17 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
+			has_completed_focus = TUS_focus_convince_the_populace
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
-			has_completed_focus = TUS_a_message_to_others
+			has_completed_focus = TUS_focus_a_message_to_others
 		}
 		icon = generic_political_actions
 		fire_only_once = yes
 		cost = 25
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 		complete_effect = {
 			ENG = {
@@ -3906,8 +4023,8 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 			tag = TUS
 		}
 		visible = {
-			has_completed_focus = TUS_convince_the_populace
-			has_completed_focus = TUS_into_republicanism
+			has_completed_focus = TUS_focus_convince_the_populace
+			has_completed_focus = TUS_focus_into_republicanism
 		}
 		available = {
 			has_decision = ITA_TUS_subverting_austrian_influence
@@ -3916,7 +4033,7 @@ ITA_decisions_category_TUS_liberalizing_tuscany = {
 		fire_only_once = yes
 		cost = 25
 		ai_will_do = {
-			base = 10
+			base = 40
 		}
 		complete_effect = {
 			#remove_decision = ITA_TUS_subverting_austrian_influence

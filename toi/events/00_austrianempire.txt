@@ -116,7 +116,6 @@ country_event = {
 			set_province_name = { id = 11659 name = "Debrezin" }
 			set_province_name = { id = 11666 name = "Wien" }
 			set_province_name = { id = 11691 name = "Ungwar" }
-			set_province_name = { id = 11735 name = "Pola" }
 			set_province_name = { id = 13677 name = "Tschernowitz" }
 			set_province_name = { id = 14191 name = "Görz" }
 			set_province_name = { id = 14287 name = "Tarvis" }
@@ -147,6 +146,10 @@ country_event = {
 		activate_mission_tooltip = AUS_mission_avoid_bankruptcy
 		hidden_effect = {
 			activate_mission = AUS_mission_avoid_bankruptcy
+			set_temp_variable = {
+				mhc_add_ncs_target = 1
+			}
+			mhc_add_ncs = yes
 		}
 	}
 }
@@ -3935,6 +3938,10 @@ country_event = {
 	fire_only_once = yes
     is_triggered_only = yes
 	
+	trigger = {
+		has_idea = egy_vic_debt
+	}
+	
 	option = {
 		name = austria.405.a
 		ai_chance = { base = 100 }
@@ -4160,7 +4167,7 @@ country_event = {
 	option = {	#Perhaps it's time for a change?
 		name = austria.409.a
 		ai_chance = { base = 100 }
-		add_ideas = AUS_idea_hungarian_tax_refusal
+		add_ideas = AUS_idea_hungarian_tax_refusal_1
 		add_political_power = -25
 		add_stability = -0.025
 		add_popularity = { ideology = centrism popularity = 0.05 }
@@ -4187,7 +4194,7 @@ country_event = {
 	option = {	#Keep the diploma in place!
 		name = austria.409.b
 		ai_chance = { base = 0 }
-		add_ideas = AUS_idea_hungarian_tax_refusal
+		add_ideas = AUS_idea_hungarian_tax_refusal_1
 		add_political_power = -50
 		add_stability = -0.05
 		add_popularity = { ideology = centrism popularity = 0.05 }
@@ -5080,6 +5087,62 @@ country_event = {
 	}
 }
 
+#Archduke Maximilian Leaves for Mexico
+country_event = {
+	id = austria.433
+	title = austria.433.t
+	desc = austria.433.d
+	picture = GFX_report_event_habsburg_family
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = austria.433.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = {
+				LVN = {
+					has_character = LVN_archduke_maximilian
+				}
+			}
+			complete_national_focus = AUS_focus_replace_viceroy_maximilian
+		}
+		if = {
+			limit = {
+				has_character = AUS_maximilian_von_osterreich
+			}
+			retire_character = AUS_maximilian_von_osterreich
+		}
+		complete_national_focus = AUS_focus_vacancy_at_the_helm
+		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
+			set_temp_variable = {
+				temp_advisor_frame = 1
+			}
+			mhc_remove_navy_advisor = yes
+		}
+	}
+}
+
+#Archduke Maximilian Crowned Emperor of Mexico
+country_event = {
+	id = austria.434
+	title = austria.434.t
+	desc = austria.434.d
+	picture = GFX_report_event_habsburg_family
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = austria.434.a
+		ai_chance = { base = 100 }
+		set_temp_variable = { eoanb_prestige_change = 3 }
+		eoanb_change_prestige_score = yes
+	}
+}
+
 #Choose Beust or Keep Belcredi
 country_event = {
 	id = austria.451
@@ -5789,13 +5852,12 @@ country_event = {
 	option = {
 		name = austria.802.a
 		ai_chance = { base = 100 }
-		add_ideas = AUS_idea_salvacoste
 		set_temp_variable = { eoanb_prestige_change = 1 }
 		eoanb_change_prestige_score = yes
 	}
 }
 
-#Austrian Screw Corvettes
+#Incorporation of the Flottillenkorps
 country_event = {
 	id = austria.803
 	title = austria.803.t
@@ -5813,20 +5875,36 @@ country_event = {
 			if = {
 				limit = { has_dlc = "Man the Guns" }
 				create_equipment_variant = {
-					name = "Erzherzog Friedrich-Klasse"
-					type = ship_hull_corvette_2
-					name_group = GER_CO_HISTORICAL
+					name = "Paddle River Gunboat"
+					type = ship_hull_gunboat_1
+					name_group = GER_CA_HISTORICAL
 					parent_version = 0
 					modules = {
-						fixed_ship_battery_slot=ship_cannon_battery_1
-						fixed_ship_fire_control_system_slot=fire_control_system_0
-						fixed_ship_engine_slot=ship_engine_sail_1
-						fixed_ship_armor_slot=ship_armor_screen_hardwood_0
-						mid_1_custom_slot=ship_cannon_battery_1
+						fixed_ship_battery_slot = ship_cannon_battery_0
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_paddle_gunboat
+						fixed_ship_armor_slot = empty
+						mid_1_custom_slot = empty
+						mid_2_custom_slot = empty
+					}
+					obsolete = yes
+				}
+				create_equipment_variant = {
+					name = "Screw River Gunboat"
+					type = ship_hull_gunboat_1
+					name_group = GER_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_cannon_battery_0
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_gunboat
+						fixed_ship_armor_slot = empty
+						mid_1_custom_slot = empty
+						mid_2_custom_slot = empty
 					}
 					#obsolete = no
 				}
-				load_oob = AUS_screw_corvettes
+				load_oob = AUS_flottillenkorps_naval_mtg
 			}
 		}
 	}
@@ -5855,18 +5933,18 @@ country_event = {
 					name_group = GER_CA_HISTORICAL
 					parent_version = 0
 					modules = {
-						fixed_ship_engine_slot=ship_engine_paddle_capital
-						fixed_ship_battery_slot=ship_cannon_battery_1
-						fixed_ship_fire_control_system_slot=fire_control_system_0
-						fixed_ship_armor_slot=ship_armor_capital_hardwood_1
-						mid_1_custom_slot=ship_cannon_battery_1
-						mid_2_custom_slot=ship_cannon_battery_1
-						front_1_custom_slot=ship_cannon_battery_1
-						rear_1_custom_slot=ship_cannon_battery_1
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_paddle_cruiser
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+						mid_1_custom_slot = ship_cannon_battery_1
+						mid_2_custom_slot = ship_cannon_battery_1
+						front_1_custom_slot = ship_cannon_battery_1
+						rear_1_custom_slot = ship_cannon_battery_1
 					}
 					#obsolete = no
 				}
-				load_oob = AUS_drache_ironclads
+				load_oob = AUS_drache_ironclads_naval_mtg
 			}
 		}
 	}
@@ -5895,18 +5973,18 @@ country_event = {
 					name_group = GER_CA_HISTORICAL
 					parent_version = 0
 					modules = {
-						fixed_ship_engine_slot=ship_engine_paddle_capital
-						fixed_ship_battery_slot=ship_cannon_battery_1
-						fixed_ship_fire_control_system_slot=fire_control_system_0
-						fixed_ship_armor_slot=ship_armor_capital_hardwood_1
-						mid_1_custom_slot=ship_cannon_battery_1
-						mid_2_custom_slot=ship_cannon_battery_1
-						front_1_custom_slot=ship_cannon_battery_1
-						rear_1_custom_slot=ship_cannon_battery_1
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_cruiser
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+						mid_1_custom_slot = ship_cannon_battery_1
+						mid_2_custom_slot = ship_cannon_battery_1
+						front_1_custom_slot = ship_cannon_battery_1
+						rear_1_custom_slot = ship_cannon_battery_1
 					}
 					#obsolete = no
 				}
-				load_oob = AUS_kaiser_max_ironclads
+				load_oob = AUS_kaiser_max_ironclads_naval_mtg
 			}
 		}
 	}
@@ -5935,18 +6013,18 @@ country_event = {
 					name_group = GER_CA_HISTORICAL
 					parent_version = 0
 					modules = {
-						fixed_ship_engine_slot=ship_engine_steam_screw_capital
-						fixed_ship_battery_slot=ship_cannon_battery_1
-						fixed_ship_fire_control_system_slot=fire_control_system_0
-						fixed_ship_armor_slot=ship_armor_capital_hardwood_1
-						mid_1_custom_slot=ship_cannon_battery_1
-						mid_2_custom_slot=ship_cannon_battery_1
-						front_1_custom_slot=ship_cannon_battery_1
-						rear_1_custom_slot=ship_cannon_battery_1
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_cruiser
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+						mid_1_custom_slot = ship_cannon_battery_1
+						mid_2_custom_slot = ship_cannon_battery_1
+						front_1_custom_slot = ship_cannon_battery_1
+						rear_1_custom_slot = ship_cannon_battery_1
 					}
 					#obsolete = no
 				}
-				load_oob = AUS_erzherzog_ferdinand_max_ironclads
+				load_oob = AUS_erzherzog_ferdinand_max_ironclads_naval_mtg
 			}
 		}
 	}
@@ -6035,6 +6113,154 @@ country_event = {
 		ai_chance = { base = 100 }
 		set_temp_variable = { eoanb_prestige_change = -1 }
 		eoanb_change_prestige_score = yes
+	}
+}
+
+#A Screw Gunboat Prototype
+country_event = {
+	id = austria.811
+	title = austria.811.t
+	desc = austria.811.d
+	picture = GFX_report_event_sms_drache
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#Yes
+		name = austria.811.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = AUS_screw_gunboat_prototype_effect_tt
+		add_political_power = -20
+		navy_experience = 5
+		hidden_effect = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_equipment_variant = {
+					name = "Screw Gunboat"
+					type = ship_hull_gunboat_2
+					name_group = GER_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_gunboat
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+						mid_1_custom_slot = ship_cannon_battery_1
+						mid_2_custom_slot = ship_cannon_battery_1
+					}
+					#obsolete = no
+				}
+				load_oob = AUS_mowe_gunboat_prototype_naval_mtg
+			}
+		}
+	}
+	
+	option = {	#No
+		name = austria.811.b
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_equipment_variant = {
+					name = "Screw Gunboat"
+					type = ship_hull_gunboat_2
+					name_group = GER_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_gunboat
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_0
+						mid_1_custom_slot = ship_cannon_battery_1
+						mid_2_custom_slot = ship_cannon_battery_1
+					}
+					#obsolete = no
+				}
+			}
+		}
+	}
+}
+
+#Gunboats Ordered 1
+country_event = {
+	id = austria.812
+	title = austria.812.t
+	desc = austria.812.d
+	picture = GFX_report_event_sms_drache
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = austria.812.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = AUS_screw_gunboat_first_series_effect_tt
+		navy_experience = 5
+		if = {
+			limit = { has_dlc = "Man the Guns" }
+			unlock_decision_tooltip = AUS_decision_order_screw_gunboats_2
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_equipment_variant = {
+					name = "Screw Gunboat"
+					type = ship_hull_gunboat_2
+					name_group = GER_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_gunboat
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+						mid_1_custom_slot = ship_cannon_battery_1
+						mid_2_custom_slot = ship_cannon_battery_1
+					}
+					#obsolete = no
+				}
+				load_oob = AUS_screw_gunboats_1_naval_mtg
+				set_country_flag = AUS_first_screw_gunboat_series_delivered_flag
+			}
+		}
+	}
+}
+
+#Gunboats Ordered 2
+country_event = {
+	id = austria.813
+	title = austria.813.t
+	desc = austria.813.d
+	picture = GFX_report_event_sms_drache
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = austria.813.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = AUS_screw_gunboat_second_series_effect_tt
+		navy_experience = 5
+		hidden_effect = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_equipment_variant = {
+					name = "Screw Gunboat"
+					type = ship_hull_gunboat_2
+					name_group = GER_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_cannon_battery_1
+						fixed_ship_fire_control_system_slot = fire_control_system_0
+						fixed_ship_engine_slot = ship_engine_steam_screw_gunboat
+						fixed_ship_armor_slot = ship_armor_capital_hardwood_1
+						mid_1_custom_slot = ship_cannon_battery_1
+						mid_2_custom_slot = ship_cannon_battery_1
+					}
+					#obsolete = no
+				}
+				load_oob = AUS_screw_gunboats_2_naval_mtg
+			}
+		}
 	}
 }
 
@@ -7355,12 +7581,12 @@ country_event = {
     					}
   					}
 				}
-				load_oob = "AUS_1859_novara_naval_mtg"
+				load_oob = AUS_novara_naval_mtg
 			}
 		}
 		else = {
 			hidden_effect = {
-				load_oob = "AUS_1859_novara_naval_legacy"
+				load_oob = AUS_novara_naval_legacy
 			}
 		}
 		hidden_effect = {
@@ -7799,18 +8025,359 @@ country_event = {
 
 ### Italian Organization after victory in 2IW
 
-#Future of Lombardy-Venetia
+#Victory in Italy!
 country_event = {
 	id = austria.1601
 	title = austria.1601.t
 	desc = austria.1601.d
-	picture = GFX_report_event_vienna_1
+	picture = GFX_report_event_franz_joseph_coronation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = austria.1601.a
+		ai_chance = { base = 100 }
+		complete_national_focus = AUS_focus_triumph_in_italy
+		set_temp_variable = { eoanb_prestige_change = 25 }
+		eoanb_change_prestige_score = yes
+		hidden_effect = {
+			country_event = { id = austria.1602 days = 7 }
+		}
+	}
+}
+
+#Future of the Central Italian States
+country_event = {
+	id = austria.1602
+	title = austria.1602.t
+	desc = austria.1602.d
+	picture = GFX_report_event_austrian_north_italy
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = austria.1603 days = 14 }
+		}
+	}
+	
+	timeout_days = 10
+	
+	option = { #Make them Puppets
+		name = austria.1602.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = AUS_future_of_the_central_italian_states_effect_tt
+		custom_effect_tooltip = AUS_unrest_in_italy_plus_two_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Waking the Tiger"
+						has_dlc = "Death or Dishonor"
+					}
+				}
+				if = {
+					limit = {
+						country_exists = MOD
+					}
+					set_autonomy = {
+						target = MOD
+						autonomy_state = autonomy_puppet
+					}
+				}
+				if = {
+					limit = {
+						country_exists = PRM
+					}
+					set_autonomy = {
+						target = PRM
+						autonomy_state = autonomy_puppet
+					}
+				}
+				if = {
+					limit = {
+						country_exists = TUS
+					}
+					set_autonomy = {
+						target = TUS
+						autonomy_state = autonomy_puppet
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						country_exists = MOD
+					}
+					puppet = MOD
+				}
+				if = {
+					limit = {
+						country_exists = PRM
+					}
+					puppet = PRM
+				}
+				if = {
+					limit = {
+						country_exists = TUS
+					}
+					puppet = TUS
+				}
+			}
+			add_to_variable = {
+				ITA_UPROAR_RISK = 0.02
+			}
+			clamp_variable = {
+				var = ITA_UPROAR_RISK
+				min = 0
+				max = 1
+			}
+		}
+	}
+	
+	option = { #Status Quo
+		name = austria.1602.b
+		ai_chance = { base = 0 }
+	}
+}
+
+#Future of the Former Piedmontese Lands
+country_event = {
+	id = austria.1603
+	title = austria.1603.t
+	desc = austria.1603.d
+	picture = GFX_report_event_turin_city
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = austria.1604 days = 14 }
+		}
+	}
+	
+	timeout_days = 10
+	
+	option = { #Separate Kingdom
+		name = austria.1603.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = AUS_create_piedmontese_kingdom_effect_tt
+		custom_effect_tooltip = unfinished_content_tt
+		hidden_effect = {
+			PIE = {
+				set_cosmetic_tag = PIE_habsburg_kingdom_of_piedmont
+				transfer_state = 158
+				transfer_state = 735
+				transfer_state = 822
+				transfer_state = 981
+				transfer_state = 1153
+				inherit_technology = SAR
+				retire_country_leader = yes
+				PIE_archduke_karl_ludwig = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = despotism
+							expire = "1896.5.19"
+							#id=-1
+						}
+					}
+				}
+				set_party_name = { ideology = autocracy name = PIE_habsburg_autocracy_party }
+				remove_ideas = PIE_Italian_National_Society
+				remove_ideas = PIE_Spearheading_The_Risorgimento
+				remove_ideas = PIE_Perfect_Fusion
+				remove_ideas = PIE_Sardinian_Question
+				remove_ideas = PIE_Piedmontese_Militarism
+				remove_ideas = PIE_Baby_Boom
+				remove_ideas = ITA_2IP_War_Leader
+				remove_ideas = ITA_2IP_Idea
+				remove_ideas = PIE_Sardinian_Question_worse
+				remove_ideas = PIE_Sardinian_Question_better
+				remove_ideas = PIE_Sound_Toll_Payment
+				swap_ideas = { remove_idea = ITA_hos_Victor_Emmanuel_II add_idea = AUS_Franz_Joseph_I }
+			}
+			AUS = {
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Together for Victory"
+							has_dlc = "Waking the Tiger"
+							has_dlc = "Death or Dishonor"
+						}
+					}
+					PIE = { set_country_flag = is_junior_personal_union_member }
+					set_autonomy = {
+						target = PIE
+						autonomy_state = autonomy_personal_union_2
+						freedom_level = 0.1
+					}
+				}
+				else = {
+					puppet = PIE
+				}
+			}
+		}
+	}
+	
+	option = { #Integrate them into LVN
+		name = austria.1603.b
+		ai_chance = { base = 0 }
+		add_political_power = 25
+		LVN = {
+			add_political_power = 25
+			158 = { add_core_of = LVN }
+			735 = { add_core_of = LVN }
+			822 = { add_core_of = LVN }
+			981 = { add_core_of = LVN }
+			1153 = { add_core_of = LVN }
+		}
+	}
+	
+	option = { #Hand them back to SAR
+		name = austria.1603.c
+		ai_chance = { base = 0 }
+		custom_effect_tooltip = unfinished_content_tt
+		SAR = {
+			transfer_state = 158
+			transfer_state = 735
+			transfer_state = 822
+			transfer_state = 981
+			transfer_state = 1153
+		}
+	}
+}
+
+#Creation of the Italian League
+country_event = {
+	id = austria.1604
+	title = austria.1604.t
+	desc = austria.1604.d
+	picture = GFX_report_event_austrian_north_italy
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = { id = austria.1608 days = 14 }
+		}
+	}
+	
+	timeout_days = 10
+	
+	option = { #Yes
+		name = austria.1604.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = AUS_italian_league_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = LVN
+				}
+				LVN = {
+					add_ideas = AUS_idea_italian_league
+					add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+					reverse_add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = MOD
+				}
+				MOD = {
+					add_ideas = AUS_idea_italian_league
+					add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+					reverse_add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PRM
+				}
+				PRM = {
+					add_ideas = AUS_idea_italian_league
+					add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+					reverse_add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PIE
+					PIE = { has_cosmetic_tag = PIE_habsburg_kingdom_of_piedmont }
+				}
+				PIE = {
+					add_ideas = AUS_idea_italian_league
+					add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+					reverse_add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = TUS
+				}
+				TUS = {
+					add_ideas = AUS_idea_italian_league
+					add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+					reverse_add_opinion_modifier = {
+						target = AUS
+						modifier = AUS_ITALIAN_LEAGUE_REL
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #No
+		name = austria.1604.b
+		ai_chance = { base = 0 }
+	}
+}
+
+#Future of the Kingdom of Lombardy-Venetia
+country_event = {
+	id = austria.1607
+	title = austria.1607.t
+	desc = austria.1607.d
+	picture = GFX_report_event_turin_city
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = { #Keep the Puppet
-		name = austria.1601.a
+		name = austria.1607.a
 		ai_chance = {
 			base = 100
 			modifier = {
@@ -7822,7 +8389,7 @@ country_event = {
 	}
 	
 	option = { #Annex only Venetia
-		name = austria.1601.b
+		name = austria.1607.b
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -7841,7 +8408,7 @@ country_event = {
 	}
 	
 	option = { #TfV - Give more freedom
-		name = austria.1601.c
+		name = austria.1607.c
 		trigger = {
 			OR = {
 				has_dlc = "Together for Victory"
@@ -7880,139 +8447,22 @@ country_event = {
 	}
 }
 
-#Future of the Central Italian States
-country_event = {
-	id = austria.1602
-	title = austria.1602.t
-	desc = austria.1602.d
-	picture = GFX_report_event_vienna_1
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	option = { #Make them Puppets
-		name = austria.1602.a
-		ai_chance = {
-			base = 100
-			modifier = {
-				add = -5
-				is_historical_focus_on = no
-			}
-		}
-		custom_effect_tooltip = AUS_italian_league_effect_tt
-		if = {
-			limit = {
-				OR = {
-					has_dlc = "Together for Victory"
-					has_dlc = "Waking the Tiger"
-					has_dlc = "Death or Dishonor"
-				}
-			}
-			set_autonomy = {
-				target = MOD
-				autonomy_state = autonomy_puppet
-			}
-			set_autonomy = {
-				target = PRM
-				autonomy_state = autonomy_puppet
-			}
-			set_autonomy = {
-				target = TUS
-				autonomy_state = autonomy_puppet
-			}
-		}
-		else = {
-			AUS = {
-				puppet = MOD
-				puppet = PRM
-				puppet = TUS
-			}
-		}
-		custom_effect_tooltip = AUS_unrest_in_italy_plus_two_effect_tt
-		hidden_effect = {
-			LVN = {
-				add_ideas = AUS_idea_italian_league
-				add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-				reverse_add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-			}
-			MOD = {
-				add_ideas = AUS_idea_italian_league
-				add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-				reverse_add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-			}
-			PRM = {
-				add_ideas = AUS_idea_italian_league
-				add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-				reverse_add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-			}
-			TUS = {
-				add_ideas = AUS_idea_italian_league
-				add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-				reverse_add_opinion_modifier = {
-					target = AUS
-					modifier = AUS_ITALIAN_LEAGUE_REL
-				}
-			}
-			add_to_variable = {
-				ITA_UPROAR_RISK = 0.02
-			}
-			clamp_variable = {
-				var = ITA_UPROAR_RISK
-				min = 0
-				max = 1
-			}
-		}
-	}
-	
-	option = { #Status Quo
-		name = austria.1602.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = -5
-				is_historical_focus_on = no
-			}
-		}
-	}
-}
-
 #Cede Savoy and Nice to France
 country_event = {
-	id = austria.1603
-	title = austria.1603.t
-	desc = austria.1603.d
+	id = austria.1608
+	title = austria.1608.t
+	desc = austria.1608.d
 	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = { #Give Savoy and Nice to France
-		name = austria.1603.a
+		name = austria.1608.a
 		ai_chance = {
-			base = 60
+			base = 90
 			modifier = {
-				add = 40
+				add = 10
 				FRA = {
 					has_completed_focus = FRA_close_relations_austria
 				}
@@ -8032,7 +8482,7 @@ country_event = {
 		}
 		custom_effect_tooltip = AUS_unrest_in_italy_plus_two_effect_tt
 		hidden_effect = {
-			FRA = { country_event = austria.1604 }
+			FRA = { country_event = austria.1609 }
 			add_to_variable = {
 				ITA_UPROAR_RISK = 0.02
 			}
@@ -8044,12 +8494,39 @@ country_event = {
 		}
 	}
 	
-	option = { #Let Piedmont keep them
-		name = austria.1603.b
+	option = { #Keep them
+		name = austria.1608.b
+		trigger = {
+			NOT = {
+				PIE = {
+					owns_state = 735
+					owns_state = 822
+				}
+			}
+		}
 		ai_chance = {
-			base = 40
+			base = 10
 			modifier = {
-				add = 40
+				add = -10
+				FRA = {
+					has_completed_focus = FRA_close_relations_austria
+				}
+			}
+		}
+	}
+	
+	option = { #Let the Sardinians keep them
+		name = austria.1608.c
+		trigger = {
+			PIE = {
+				owns_state = 735
+				owns_state = 822
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
 				NOT = {
 					FRA = {
 						has_completed_focus = FRA_close_relations_austria
@@ -8073,9 +8550,9 @@ country_event = {
 
 #FRA - Savoy and Nice ceded
 country_event = {
-	id = austria.1604
-	title = austria.1604.t
-	desc = austria.1604.d
+	id = austria.1609
+	title = austria.1609.t
+	desc = austria.1609.d
 	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
@@ -8108,7 +8585,7 @@ country_event = {
 	}
 	
 	option = {
-		name = austria.1604.a
+		name = austria.1609.a
 		ai_chance = { base = 100 }
 		FRA = {
 			transfer_state = 735
@@ -8116,15 +8593,792 @@ country_event = {
 		}
 		735 = {
 			add_core_of = FRA
+			remove_core_of = LVN
 			remove_core_of = PIE
 		}
 		822 = {
 			add_core_of = FRA
+			remove_core_of = LVN
 			remove_core_of = PIE
 		}
 		add_opinion_modifier = {
 			target = AUS
 			modifier = AUS_FRA_SAVOY_NICE_REL
+		}
+	}
+}
+
+### Domestic Policy after Victory in Italy
+
+#The State Debt Commission Gathers
+country_event = {
+	id = austria.1611
+	title = austria.1611.t
+	desc = austria.1611.d
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = austria.1611.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			country_event = { id = austria.1612 days = 21 }
+			random_list = {
+				25 = {
+					country_event = { id = austria.1613 days = 7 random_days = 7 }
+				}
+				75 = {
+					#
+				}
+			}
+		}
+	}
+}
+
+#The State Debt Commission Reports on the Debt Situation
+country_event = {
+	id = austria.1612
+	title = austria.1612.t
+	desc = {
+		trigger = {
+			check_variable = { debt_level > 0 }
+			check_variable = { debt_level < 23 }
+		}
+		text = austria.1612.d_reasonable_debt
+	}
+	desc = {
+		trigger = {
+			check_variable = { debt_level > 22 }
+			check_variable = { debt_level < 30 }
+		}
+		text = austria.1612.d_significant_debt
+	}
+	desc = {
+		trigger = {
+			check_variable = { debt_level > 29 }
+		}
+		text = austria.1612.d_insurmountable_debt
+	}
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = egy_vic_debt
+	}
+	
+	immediate = {
+		random_list = {
+			50 = {
+				country_event = { id = austria.1614 days = 14 random_days = 14 }
+			}
+			50 = {
+				#
+			}
+		}
+	}
+	
+	option = {
+		name = austria.1612.a
+		ai_chance = { base = 100 }
+		trigger = {
+			check_variable = { debt_level > 0 }
+			check_variable = { debt_level < 25 }
+		}
+		add_political_power = -25
+		add_stability = -0.01
+	}
+	
+	option = {
+		name = austria.1612.b
+		ai_chance = { base = 100 }
+		trigger = {
+			check_variable = { debt_level > 24 }
+			check_variable = { debt_level < 32 }
+		}
+		add_political_power = -50
+		add_stability = -0.02
+	}
+	
+	option = {
+		name = austria.1612.c
+		ai_chance = { base = 100 }
+		trigger = {
+			check_variable = { debt_level > 31 }
+		}
+		add_political_power = -75
+		add_stability = -0.03
+	}
+}
+
+#Rumors about a Secret Meeting in Vienna Circulate
+country_event = {
+	id = austria.1613
+	title = austria.1613.t
+	desc = austria.1613.d	#Tie to Polizeiverein?
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = egy_vic_debt
+		check_variable = { debt_level > 12 }
+	}
+	
+	option = {
+		name = austria.1613.a
+		ai_chance = { base = 100 }
+		add_political_power = -25
+		add_stability = -0.01
+	}
+}
+
+#Anonymous Article about Looming Debt Crisis Published
+country_event = {
+	id = austria.1614
+	title = austria.1614.t
+	desc = austria.1614.d	#Tie to Polizeiverein?
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = egy_vic_debt
+		check_variable = { debt_level > 12 }
+	}
+	
+	option = {
+		name = austria.1614.a
+		ai_chance = { base = 100 }
+		add_political_power = -50
+		add_stability = -0.02
+	}
+}
+
+#Preparation for Centralization Measures Complete
+country_event = {
+	id = austria.1615
+	title = austria.1615.t
+	desc = austria.1615.d
+	picture = GFX_report_event_abgeordnetenhaus_schmerlingtheater
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = austria.1615.a
+		ai_chance = { base = 100 }
+		unlock_decision_tooltip = AUS_decision_enforce_enhanced_centralization
+		hidden_effect = {
+			set_country_flag = AUS_centralization_measures_ready_flag
+		}
+	}
+}
+
+#Enhanced Centralization Measures
+country_event = {
+	id = austria.1616
+	title = austria.1616.t
+	desc = austria.1616.d
+	picture = GFX_report_event_abgeordnetenhaus_schmerlingtheater
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			#Hungary
+			country_event = { id = austria.1617 days = 14 random_days = 7 }
+			random_list = {
+				75 = {
+					set_country_flag = AUS_massive_resistance_against_centralization_hungary_flag
+				}
+				25 = {
+					set_country_flag = AUS_heavy_resistance_against_centralization_hungary_flag
+				}
+			}
+			
+			#Bohemia
+			country_event = { id = austria.1618 days = 14 random_days = 14 } # Bohemia
+			random_list = {
+				50 = {
+					set_country_flag = AUS_massive_resistance_against_centralization_bohemia_flag
+				}
+				25 = {
+					set_country_flag = AUS_heavy_resistance_against_centralization_bohemia_flag
+				}
+				20 = {
+					set_country_flag = AUS_significant_resistance_against_centralization_bohemia_flag
+				}
+				5 = {
+					set_country_flag = AUS_minor_resistance_against_centralization_bohemia_flag
+				}
+			}
+			
+			#Croatia
+			country_event = { id = austria.1619 days = 14 random_days = 21 } # Croatia
+			random_list = {
+				50 = {
+					set_country_flag = AUS_massive_resistance_against_centralization_croatia_flag
+				}
+				25 = {
+					set_country_flag = AUS_heavy_resistance_against_centralization_croatia_flag
+				}
+				15 = {
+					set_country_flag = AUS_significant_resistance_against_centralization_croatia_flag
+				}
+				10 = {
+					set_country_flag = AUS_minor_resistance_against_centralization_croatia_flag
+				}
+			}
+			
+			#Poland
+			country_event = { id = austria.1620 days = 14 random_days = 28 } # Poland
+			random_list = {
+				10 = {
+					set_country_flag = AUS_heavy_resistance_against_centralization_poland_flag
+				}
+				15 = {
+					set_country_flag = AUS_significant_resistance_against_centralization_poland_flag
+				}
+				50 = {
+					set_country_flag = AUS_minor_resistance_against_centralization_poland_flag
+				}
+				25 = {
+					#
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = austria.1616.a
+		ai_chance = { base = 100 }
+		add_ideas = AUS_idea_enhanced_centralization
+		add_political_power = 25
+	}
+}
+
+#Resistance Against Centralization Measures in Hungary
+country_event = {
+	id = austria.1617
+	title = {
+		trigger = { has_country_flag = AUS_massive_resistance_against_centralization_hungary_flag }
+		text = austria.1617.t_massive
+	}
+	title = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_hungary_flag }
+		text = austria.1617.t_heavy
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_massive_resistance_against_centralization_hungary_flag }
+		text = austria.1617.d_massive
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_hungary_flag }
+		text = austria.1617.d_heavy
+	}
+	picture = GFX_report_event_budapest_1
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = AUS_massive_resistance_against_centralization_hungary_flag
+			has_country_flag = AUS_heavy_resistance_against_centralization_hungary_flag
+		}
+	}
+	
+	option = {
+		name = austria.1617.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = {
+				has_country_flag = AUS_massive_resistance_against_centralization_hungary_flag
+			}
+			add_political_power = -50
+			add_stability = -0.02
+			custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_five_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.05
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else = {
+			add_political_power = -25
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_three_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = HUN_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = austria.1621 days = 21 }
+		}
+	}
+}
+
+#Resistance Against Centralization Measures in Bohemia
+country_event = {
+	id = austria.1618
+	title = {
+		trigger = { has_country_flag = AUS_massive_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.t_massive
+	}
+	title = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.t_heavy
+	}
+	title = {
+		trigger = { has_country_flag = AUS_significant_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.t_significant
+	}
+	title = {
+		trigger = { has_country_flag = AUS_minor_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.t_minor
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_massive_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.d_massive
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.d_heavy
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_significant_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.d_significant
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_minor_resistance_against_centralization_bohemia_flag }
+		text = austria.1618.d_minor
+	}
+	picture = GFX_report_event_vienna_opera
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = AUS_massive_resistance_against_centralization_bohemia_flag
+			has_country_flag = AUS_heavy_resistance_against_centralization_bohemia_flag
+			has_country_flag = AUS_significant_resistance_against_centralization_bohemia_flag
+			has_country_flag = AUS_minor_resistance_against_centralization_bohemia_flag
+		}
+	}
+	
+	option = {
+		name = austria.1618.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = {
+				has_country_flag = AUS_massive_resistance_against_centralization_bohemia_flag
+			}
+			add_political_power = -50
+			add_stability = -0.02
+			custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_five_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.05
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = AUS_heavy_resistance_against_centralization_bohemia_flag
+			}
+			add_political_power = -25
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_three_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = AUS_significant_resistance_against_centralization_bohemia_flag
+			}
+			add_political_power = -20
+			custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_two_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else = {
+			add_political_power = -10
+			custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_one_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CZE_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+	}
+}
+
+#Resistance Against Centralization Measures in Croatia
+country_event = {
+	id = austria.1619
+	title = {
+		trigger = { has_country_flag = AUS_massive_resistance_against_centralization_croatia_flag }
+		text = austria.1619.t_massive
+	}
+	title = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_croatia_flag }
+		text = austria.1619.t_heavy
+	}
+	title = {
+		trigger = { has_country_flag = AUS_significant_resistance_against_centralization_croatia_flag }
+		text = austria.1619.t_significant
+	}
+	title = {
+		trigger = { has_country_flag = AUS_minor_resistance_against_centralization_croatia_flag }
+		text = austria.1619.t_minor
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_massive_resistance_against_centralization_croatia_flag }
+		text = austria.1619.d_massive
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_croatia_flag }
+		text = austria.1619.d_heavy
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_significant_resistance_against_centralization_croatia_flag }
+		text = austria.1619.d_significant
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_minor_resistance_against_centralization_croatia_flag }
+		text = austria.1619.d_minor
+	}
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = AUS_massive_resistance_against_centralization_croatia_flag
+			has_country_flag = AUS_heavy_resistance_against_centralization_croatia_flag
+			has_country_flag = AUS_significant_resistance_against_centralization_croatia_flag
+			has_country_flag = AUS_minor_resistance_against_centralization_croatia_flag
+		}
+	}
+	
+	option = {
+		name = austria.1619.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = {
+				has_country_flag = AUS_massive_resistance_against_centralization_croatia_flag
+			}
+			add_political_power = -50
+			add_stability = -0.02
+			custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_five_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.05
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = AUS_heavy_resistance_against_centralization_croatia_flag
+			}
+			add_political_power = -25
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_three_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = AUS_significant_resistance_against_centralization_croatia_flag
+			}
+			add_political_power = -20
+			custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_two_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else = {
+			add_political_power = -10
+			custom_effect_tooltip = AUS_increase_south_slavic_nationalism_by_one_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = CRO_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = CRO_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+	}
+}
+
+#Resistance Against Centralization Measures in our Polish Lands
+country_event = {
+	id = austria.1620
+	title = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_poland_flag }
+		text = austria.1620.t_heavy
+	}
+	title = {
+		trigger = { has_country_flag = AUS_significant_resistance_against_centralization_poland_flag }
+		text = austria.1620.t_significant
+	}
+	title = {
+		trigger = { has_country_flag = AUS_minor_resistance_against_centralization_poland_flag }
+		text = austria.1620.t_minor
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_heavy_resistance_against_centralization_poland_flag }
+		text = austria.1620.d_heavy
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_significant_resistance_against_centralization_poland_flag }
+		text = austria.1620.d_significant
+	}
+	desc = {
+		trigger = { has_country_flag = AUS_minor_resistance_against_centralization_poland_flag }
+		text = austria.1620.d_minor
+	}
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = AUS_heavy_resistance_against_centralization_poland_flag
+			has_country_flag = AUS_significant_resistance_against_centralization_poland_flag
+			has_country_flag = AUS_minor_resistance_against_centralization_poland_flag
+		}
+	}
+	
+	option = {
+		name = austria.1620.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = {
+				has_country_flag = AUS_heavy_resistance_against_centralization_poland_flag
+			}
+			add_political_power = -25
+			add_stability = -0.01
+			custom_effect_tooltip = AUS_increase_polish_nationalism_by_three_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.03
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = AUS_significant_resistance_against_centralization_poland_flag
+			}
+			add_political_power = -20
+			custom_effect_tooltip = AUS_increase_polish_nationalism_by_two_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.02
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+		else = {
+			add_political_power = -10
+			custom_effect_tooltip = AUS_increase_polish_nationalism_by_one_tt
+			hidden_effect = {
+				add_to_variable = {
+					var = POL_REVOLT_RISK
+					value = 0.01
+				}
+				clamp_variable = {
+					var = POL_REVOLT_RISK
+					min = 0
+					max = 1
+				}
+			}
+		}
+	}
+}
+
+#Hungarian Tax Refusal
+country_event = {
+	id = austria.1621
+	title = austria.1621.t
+	desc = austria.1621.d
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = austria.1621.a
+		ai_chance = { base = 100 }
+		add_ideas = AUS_idea_hungarian_tax_refusal_1
+		add_political_power = -25
+		add_stability = -0.025
+		add_popularity = { ideology = centrism popularity = 0.05 }
+		custom_effect_tooltip = AUS_enforced_enhanced_centralization_effect_tt
+		custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_three_tt
+		hidden_effect = {
+			add_to_variable = {
+				var = HUN_REVOLT_RISK
+				value = 0.03
+			}
+			clamp_variable = {
+				var = HUN_REVOLT_RISK
+				min = 0
+				max = 1
+			}
+			set_country_flag = AUS_enforced_enhanced_centralization_flag
+			mark_focus_tree_layout_dirty = yes
+			compute_national_vote = yes
+		}
+	}
+}
+
+#Central Authority Successfully Enforced
+country_event = {
+	id = austria.1622
+	title = austria.1622.t
+	desc = austria.1622.d
+	picture = GFX_report_event_vienna_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = austria.1622.a
+		ai_chance = { base = 100 }
+		complete_national_focus = AUS_focus_a_unitary_empire
+		add_popularity = { ideology = autocracy popularity = 0.05 }
+		custom_effect_tooltip = AUS_decrease_all_nationalisms_by_two_tt
+		hidden_effect = {
+			subtract_from_variable = {
+				var = HUN_REVOLT_RISK
+				value = 0.02
+			}
+			clamp_variable = {
+				var = HUN_REVOLT_RISK
+				min = 0
+				max = 1
+			}
+			subtract_from_variable = {
+				var = CZE_REVOLT_RISK
+				value = 0.02
+			}
+			clamp_variable = {
+				var = CZE_REVOLT_RISK
+				min = 0
+				max = 1
+			}
+			subtract_from_variable = {
+				var = CRO_REVOLT_RISK
+				value = 0.02
+			}
+			clamp_variable = {
+				var = CRO_REVOLT_RISK
+				min = 0
+				max = 1
+			}
+			subtract_from_variable = {
+				var = POL_REVOLT_RISK
+				value = 0.02
+			}
+			clamp_variable = {
+				var = POL_REVOLT_RISK
+				min = 0
+				max = 1
+			}
+			compute_national_vote = yes
 		}
 	}
 }

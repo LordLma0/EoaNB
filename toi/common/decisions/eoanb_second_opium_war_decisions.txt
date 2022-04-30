@@ -1,9 +1,4 @@
 eoanb_category_second_opium_war = {
-
-	######################
-	### Rework by DEM0 ###
-	######################
-
 	#ENG: Prepare to Assault Canton
 	eoanb_decision_sow_ENG_prep = {
 
@@ -173,7 +168,7 @@ eoanb_category_second_opium_war = {
 	}
 
 	#ENG: Assault Taku 2+3
-	eoanb_decision_sow_LEG_assault_taku2+3 = {
+	eoanb_decision_sow_LEG_assault_taku2_3 = {
 
 		icon = generic_prepare_civil_war
 
@@ -196,7 +191,7 @@ eoanb_category_second_opium_war = {
 		remove_effect = {
 			hidden_effect = {
 				QNG = {
-					activate_mission = eoanb_mission_sow_defend_taku2+3
+					activate_mission = eoanb_mission_sow_defend_taku2_3
 				}
 			}
 		}
@@ -251,15 +246,29 @@ eoanb_category_second_opium_war = {
 		icon = generic_prepare_civil_war
 
 		available = {
-			NOT = { controls_state = 608 }
-			always = no
+			army_manpower_in_state = {
+				type = infantry
+				amount > 5000
+				state = 564
+			}
+			army_manpower_in_state = {
+				type = infantry
+				amount > 5000
+				state = 563
+			}
+			army_manpower_in_state = {
+				type = infantry
+				amount > 5000
+				state = 566
+			}
 		}
 
 		visible = {
-			TAG = ENG
+			TAG = RUS
 			has_global_flag = eoanb_flag_sow_ongoing
+			has_global_flag = SOW_taku_forts
 		}
-		allowed = { TAG = ENG }
+		allowed = { TAG = RUS }
 
 		fire_only_once = yes
 		days_remove = 30
@@ -291,6 +300,7 @@ eoanb_category_second_opium_war = {
 				amount > 40000
 				state = 592
 			}
+			has_completed_focus = QNG_dealing_with_ENG
 		}
 		
 		allowed = { 
@@ -335,11 +345,24 @@ eoanb_category_second_opium_war = {
 		
 		timeout_effect = { #Europeans Win
 			country_event = secondopiumwarnew.11
+			hidden_effect = {
+				ENG = {
+					country_event = secondopiumwarnew.11
+				}
+				if = {
+					limit = {
+						has_global_flag = SOW_anglo_french_yes
+					}
+					FRA = {
+						country_event = secondopiumwarnew.11
+					}
+				}
+			}
 		}
 	}
 
 	#QNG: Defend taku forts 2+3
-	eoanb_mission_sow_defend_taku2+3 = {
+	eoanb_mission_sow_defend_taku2_3 = {
 		icon = generic_naval
 		ai_will_do = { factor = 1 }
 		available = {
@@ -351,6 +374,7 @@ eoanb_category_second_opium_war = {
 				amount > 30000
 				state = 126
 			}
+			has_completed_focus = QNG_fighting_the_opium_war
 		}
 		
 		allowed = { 
@@ -395,6 +419,22 @@ eoanb_category_second_opium_war = {
 		
 		timeout_effect = { #Europeans Win
 			country_event = secondopiumwarnew.17
+			hidden_effect = {
+				ENG = {
+					country_event = secondopiumwarnew.17
+				}
+				if = {
+					limit = {
+						has_global_flag = SOW_anglo_french_yes
+					}
+					FRA = {
+						country_event = secondopiumwarnew.17
+					}
+				}
+				USA = {
+					country_event = secondopiumwarnew.34
+				}
+			}
 		}
 	}
 
@@ -421,6 +461,7 @@ eoanb_category_second_opium_war = {
 				amount > 35000
 				state = 126
 			}
+			has_completed_focus = QNG_fighting_the_opium_war
 		}
 		
 		allowed = { 
@@ -464,7 +505,7 @@ eoanb_category_second_opium_war = {
 		}
 		
 		timeout_effect = { #Europeans Win
-			country_event = secondopiumwarnew.11
+			country_event = secondopiumwarnew.24
 			ENG = {
 				add_manpower = -21
 			}
@@ -519,7 +560,7 @@ eoanb_category_second_opium_war = {
 		}
 		
 		complete_effect = { #Europeans Lose
-			ENG = {
+			RUS = {
 				country_event = secondopiumwarnew.32
 			}
 			hidden_effect = {
@@ -530,7 +571,14 @@ eoanb_category_second_opium_war = {
 		}
 		
 		timeout_effect = { #Europeans Win
-			country_event = secondopiumwarnew.31
+			QNG = {
+				country_event = secondopiumwarnew.31
+			}
+			hidden_effect = {
+				RUS = {
+					country_event = secondopiumwarnew.31
+				}
+			}
 		}
 	}
 }

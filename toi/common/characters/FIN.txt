@@ -68,6 +68,34 @@ characters={
 			expire="2050.3.1"
 		}
 	}
+
+	FIN_Waldemar_Schauman = {
+		name="Waldemar Schauman"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Finland_Waldemar_Schauman.png"
+			}
+		}
+	}
+
+	FIN_Alexander_Jarnefelt = {
+		name="Alexander Järnefelt"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Finland_Alexander_Järnefelt.png"
+			}
+		}
+	}
+
+	FIN_Nikolai_Adlerberg = {
+		name="Count Nikolai Adlerberg"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_FIN_Nikolay_Adlerberg.png"
+			}
+		}
+	}
+
 	##### ADVISORS AND THEORISTS #####
 	
 	FIN_Johan_Snellman = {
@@ -281,16 +309,20 @@ characters={
 			civilian = {
 				small = "GFX_idea_FIN_vic_Carl_Robert_Mannerheim"
 			}
+			army = {
+				large = "gfx/leaders/FIN/Portrait_FIN_Edvard_Bergenheim.png"
+			}
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = FIN_advisor_Edvard_Bergenheim
+			idea_token = FIN_advisor_Edvard_Bergenheim1
 			allowed = {
 				original_tag = FIN
 			}
 			traits = {
-				
+				FIN_trait_Edvard_Bergenheim1
 			}
+			research_bonus = { humanities_tech = 0.02 }
 			ai_will_do = {
 				factor = 5
 			}
@@ -311,7 +343,7 @@ characters={
 				original_tag = FIN
 			}
 			traits = {
-				
+				FIN_trait_Carl_Creutz
 			}
 			ai_will_do = {
 				factor = 5
