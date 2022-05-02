@@ -1,12 +1,12 @@
-state={
-	id=747
-	name="STATE_747"
-	resources={
+state = {
+	id =747
+	name = "STATE_747"
+	resources = {
 		iron=2
-		chromium=2
+		chromium =2
 	}
 
-	history={
+	history = {
 		owner = OFS
 		buildings = {
 			infrastructure = 3
@@ -29,14 +29,15 @@ state={
 		add_to_array = { state_culture_array_num = 0.10 }
 
 		add_to_array = { state_religion_array = 3 }
-		add_to_array = { state_religion_array_num = 0.86 }
+		add_to_array = { state_religion_array_num = 0.76 }
 		add_to_array = { state_religion_array = 20 }
 		add_to_array = { state_religion_array_num = 0.24 }
 	}
 	
-	provinces={
+	provinces = {
 		5231 13241 13244 
 	}
-	manpower=72842
-	state_category=city
+	manpower =72842
+	state_category =city
+	local_supplies=0.0 
 }

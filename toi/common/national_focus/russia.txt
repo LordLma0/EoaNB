@@ -24,7 +24,6 @@ focus_tree = {
 		cost = 105
 
 		available = {
-			has_war = no
 			has_stability > 0.35
 			has_completed_focus = RUS_vic_Radical_Reforms
 			has_completed_focus = RUS_vic_Emancipation_of_Serfs
@@ -40,12 +39,20 @@ focus_tree = {
 			add_stability = 0.03
 			add_tech_bonus = { bonus = 0.35 uses = 1 category = humanities_tech }
 			add_political_power = -100
+			260 = {
+				add_building_construction = {
+					type = supply_node
+					province = 413
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
     focus = {
 		id = RUS_vic_Rapid_Industrialization
-		icon = GFX_goal_focus_support_liberalism
+		icon = GFX_Focus_Ideology_Support_Liberalism
 		cost = 105
 
 		available = {}
@@ -69,7 +76,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Urbanisation_Committee
-		icon = GFX_goal_focus_banks
+		icon = GFX_Focus_banks
 		cost = 70
 
 		available = {}
@@ -109,7 +116,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Trans_European_Railway
-		icon = GFX_goal_focus_railroad_development
+		icon = GFX_Focus_transport_railroad_development
 		cost = 70
 
 		available = {}
@@ -166,7 +173,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Encourage_Capitalism
-		icon = GFX_goal_focus_freedom_economy
+		icon = GFX_Focus_freedom_economy
 		cost = 70
 
 		available = { RUS = { NOT = { has_idea = RUS_rapid_industrialization } } }
@@ -230,13 +237,34 @@ focus_tree = {
                 }
                 add_political_power = -40
             }
-            custom_effect_tooltip = "RUS_vic_John_Hughes_tooltip"
+            if = {
+				limit = {
+					RUS_john_hughes = { is_advisor = no }
+				}
+				RUS_john_hughes = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = RUS_advisor_john_hughes
+							allowed = {
+								original_tag = RUS
+							}
+							visible = {
+								date < 1889.6.17
+							}
+							traits = {
+								RUS_trait_John_Hughes
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Support_Volga_German_Farming
-		icon = GFX_goal_focus_agriculture
+		icon = GFX_Focus_Agriculture
 		cost = 40
 
 		available = {
@@ -287,7 +315,7 @@ focus_tree = {
 		}
 
 		prerequisite = { focus = RUS_vic_Support_Volga_German_Farming }
-		prerequisite = { focus = RUS_vic_Utilise_Abandoned_Land }
+		prerequisite = { focus = RUS_vic_Agricultural_Improvements }
 
 		x = 2
 		y = 8
@@ -308,69 +336,67 @@ focus_tree = {
 		cost = 40
 
 		available = {
-		    RUS = {
-		        OR = { has_completed_focus = RUS_vic_Rapid_Industrialization has_completed_focus = RUS_vic_Steady_Industrialization }
-		    }
-		    209 = { is_owned_and_controlled_by = RUS }
-			96 = { is_owned_and_controlled_by = RUS }
-			97 = { is_owned_and_controlled_by = RUS }
-			1135 = { is_owned_and_controlled_by = RUS }
+		    owns_state = 1134
+			owns_state = 11
+			owns_state = 1135
+			owns_state = 10
 		}
 		bypass = {
             OR = {
-                209 = { NOT = { is_owned_by = RUS } }
-                96 = { NOT = { is_owned_by = RUS } }
-                97 = { NOT = { is_owned_by = RUS } }
-				1135 = { NOT = { is_owned_by = RUS } }
+				NOT = { owns_state = 1134 }
+				NOT = { owns_state = 11 }
+				NOT = { owns_state = 1135 }
+				NOT = { owns_state = 10 }
             }
 		}
-		prerequisite = { focus = RUS_vic_Radical_Economic_Reforms focus = RUS_vic_Stable_Development }
+		prerequisite = { focus = RUS_vic_Rapid_Industrialization focus = RUS_vic_Steady_Industrialization }
 
 		x = 5
-		y = 1
+		y = 2
 
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			activate_mission_tooltip = RUS_mission_vic_Petersburg_Warsaw_Railway
+			activate_mission = RUS_mission_vic_Petersburg_Warsaw_Railway
 			custom_effect_tooltip = RUS_tt_vic_Petersburg_Warsaw_Railway
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_timed_idea = {
+                	idea = RUS_idea_railway_constructing_AI
+                	days = 300
+            	}
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Moscow_Tsaritsyn_Railway
-		icon = GFX_goal_focus_railroad_development
+		icon = GFX_Focus_transport_railroad_development
 		cost = 40
 
 		available = {
-		    if = {
-                limit = {
-                    209 = { is_owned_by = RUS }
-		        	96 = { is_owned_by = RUS }
-		        	97 = { is_owned_by = RUS }
-					1135 = { is_owned_by = RUS }
-                }
-                209 = { infrastructure > 3 }
-                96 = { infrastructure > 3 }
-                97 = { infrastructure > 3 }
-				1135 = { infrastructure > 3 }
-                else = {
-                    custom_trigger_tooltip = {
-		                tooltip = "RUS_vic_W_P_Railway_Foc_Trigger_Tooltip"
-                        RUS = { NOT = { has_active_mission = RUS_mission_vic_Petersburg_Warsaw_Railway } }
-		            }
-                }
+            custom_trigger_tooltip = {
+		        tooltip = "RUS_vic_W_P_Railway_Foc_Trigger_Tooltip"
+                NOT = { has_active_mission = RUS_mission_vic_Petersburg_Warsaw_Railway }
             }
-            265 = { is_owned_and_controlled_by = RUS }
-			257 = { is_owned_and_controlled_by = RUS }
-			254 = { is_owned_and_controlled_by = RUS }
+            owns_state = 217
+			owns_state = 265
+			owns_state = 260
+			owns_state = 223
+			owns_state = 219
+			owns_state = 953
         }
         bypass = {
             OR = {
-                265 = { NOT = { is_owned_by = RUS } }
-                257 = { NOT = { is_owned_by = RUS } }
-                254 = { NOT = { is_owned_by = RUS } }
-            }
+				NOT = { owns_state = 217 }
+				NOT = { owns_state = 265 }
+				NOT = { owns_state = 260 }
+				NOT = { owns_state = 223 }
+				NOT = { owns_state = 219 }
+				NOT = { owns_state = 953 }
+			}
 		}
 		prerequisite = { focus = RUS_vic_Petersburg_Warsaw_Railway }
 
@@ -380,14 +406,23 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			activate_mission_tooltip = RUS_mission_vic_Moscow_Tsaritsyn_Railway
+			activate_mission = RUS_mission_vic_Moscow_Tsaritsyn_Railway
 			custom_effect_tooltip = RUS_tt_vic_Moscow_Tsaritsyn_Railway
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_timed_idea = {
+                	idea = RUS_idea_railway_constructing_AI
+                	days = 400
+            	}
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Governorate_Of_Alaska
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		cost = 70
 
 		available = { 463 = { is_owned_and_controlled_by = RUS } }
@@ -453,38 +488,29 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RUS_vic_Railways_In_Tbilisi
-		icon = GFX_goal_focus_tblisi_railroad
+		id = RUS_vic_West_Russia_Railways
+		icon = GFX_Focus_movement_of_grain
 		cost = 40
 
 		available = {
-            if = {
-                limit = {
-                    265 = { is_owned_by = RUS }
-		        	257 = { is_owned_by = RUS }
-			        254 = { is_owned_by = RUS }
-                }
-                265 = { infrastructure > 3 }
-                257 = { infrastructure > 2 }
-                254 = { infrastructure > 3 }
-                else = {
-                    custom_trigger_tooltip = {
-		                tooltip = "RUS_vic_T_Railway_Foc_Trigger_Tooltip"
-                        RUS = { NOT = { has_active_mission = RUS_mission_vic_Moscow_Tsaritsyn_Railway } }
-		            }
-                }
-            }
-            1120 = { is_owned_and_controlled_by = RUS }
-            OR = {
-                date > 1860.01.01
-                AND = {
-                    CIR = { exists = no }
-                    CAU = { exists = no }
-                }
-            }
+            custom_trigger_tooltip = {
+		        tooltip = "RUS_vic_T_Railway_Foc_Trigger_Tooltip"
+                NOT = { has_active_mission = RUS_mission_vic_Moscow_Tsaritsyn_Railway }
+		    }
+		    owns_state = 1134
+			owns_state = 207
+			owns_state = 242
+			owns_state = 224
+			owns_state = 222
 		}
 		bypass = {
-            1120 = { NOT = { is_owned_by = RUS } }
+			OR = {
+				NOT = { owns_state = 1134 }
+				NOT = { owns_state = 207 }
+				NOT = { owns_state = 242 }
+				NOT = { owns_state = 224 }
+				NOT = { owns_state = 222 }
+			}
 		}
 		prerequisite = { focus = RUS_vic_Moscow_Tsaritsyn_Railway }
 
@@ -494,8 +520,17 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			activate_mission_tooltip = RUS_mission_vic_Railways_In_Tbilisi
-			custom_effect_tooltip = RUS_tt_vic_Railways_In_Tbilisi
+			activate_mission = RUS_mission_vic_daugavplis_oryol_railway
+			custom_effect_tooltip = RUS_tt_vic_daugavplis_oryol_railway
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_timed_idea = {
+                	idea = RUS_idea_railway_constructing_AI
+                	days = 400
+            	}
+			}
 		}
 	}
 
@@ -510,7 +545,7 @@ focus_tree = {
 		bypass = {
             229 = { NOT = { is_owned_by = RUS } }
 		}
-		prerequisite = { focus = RUS_vic_Railways_In_Tbilisi }
+		prerequisite = { focus = RUS_vic_West_Russia_Railways }
 
 		x = 5
 		y = 7
@@ -524,52 +559,77 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RUS_vic_Railways_In_The_Volga_Region
-		icon = GFX_goal_generic_construct_infrastructure
+		id = RUS_vic_Moscow_Railways
+		icon = GFX_focus_KNS_rail_company_subsidies
 		cost = 40
 
 		available = {
-		    if = {
-                limit = {
-			        1120 = { is_owned_by = RUS }
-                }
-                1120 = { infrastructure > 2 }
-                else = {
-                    custom_trigger_tooltip = {
-		                tooltip = "RUS_vic_V_R_Railway_Foc_Trigger_Tooltip"
-                        RUS = { NOT = { has_active_mission = RUS_mission_vic_Railways_In_Tbilisi } }
-		            }
-                }
-            }
-		    236 = { is_owned_and_controlled_by = RUS }
-		    238 = { is_owned_and_controlled_by = RUS }
+            NOT = { has_active_mission = RUS_mission_vic_daugavplis_oryol_railway }
+		    owns_state = 953
+			owns_state = 219
+			owns_state = 223
+			owns_state = 222
+			owns_state = 220
+			owns_state = 193
+			owns_state = 202
+			owns_state = 242
+			owns_state = 207
+			owns_state = 206
+			owns_state = 95
+			owns_state = 94
 		}
 		bypass = {
             OR = {
-                236 = { NOT = { is_owned_by = RUS } }
-                238 = { NOT = { is_owned_by = RUS } }
+            	NOT = { owns_state = 953 }
+				NOT = { owns_state = 219 }
+				NOT = { owns_state = 223 }
+				NOT = { owns_state = 222 }
+				NOT = { owns_state = 220 }
+				NOT = { owns_state = 193 }
+				NOT = { owns_state = 202 }
+				NOT = { owns_state = 242 }
+				NOT = { owns_state = 207 }
+				NOT = { owns_state = 206 }
+				NOT = { owns_state = 95 }
+				NOT = { owns_state = 94 }
             }
-		}
-		prerequisite = { focus = RUS_vic_Railways_In_Tbilisi }
+        }
+		prerequisite = { focus = RUS_vic_West_Russia_Railways }
 
 		x = 3
 		y = 6
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 14
+				NOT = { has_active_mission = RUS_mission_vic_ryazan_saratov_railway }
+			}
+		}
 
 		completion_reward = {
-			activate_mission_tooltip = RUS_mission_vic_Railways_In_Volga
-			custom_effect_tooltip = RUS_tt_vic_Railways_In_The_Volga_Region
+			activate_mission = RUS_mission_vic_moscow_kiev_railway
+			activate_mission = RUS_mission_vic_moscow_brzesc_railway
+			custom_effect_tooltip = RUS_tt_vic_Moscow_Railways
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_timed_idea = {
+                	idea = RUS_idea_railway_constructing_AI
+                	days = 700
+            	}
+			}
 		}
 	}
 
 	focus = {
-		id = RUS_vic_Utilise_Abandoned_Land
-		icon = GFX_goal_generic_construction2
+		id = RUS_vic_Agricultural_Improvements
+		icon = GFX_Focus_health_famine_relief
 		cost = 70
 
 		available = {}
-		prerequisite = { focus = RUS_vic_Railways_In_The_Volga_Region }
+		prerequisite = { focus = RUS_vic_Moscow_Railways }
 
 		x = 3
 		y = 7
@@ -577,60 +637,80 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_political_power = 45
-            custom_effect_tooltip = "RUS_vic_Utilise_Abandoned_Land_tooltip"
+			add_stability = 0.05
+			add_tech_bonus = { bonus = 1 uses = 3 category = biochemistry_tech }
+			1314 = { add_extra_state_shared_building_slots = 1 }
+			202 = { add_extra_state_shared_building_slots = 1 }
+			195 = { add_extra_state_shared_building_slots = 1 }
+			953 = { add_extra_state_shared_building_slots = 1 }
+			239 = { add_extra_state_shared_building_slots = 1 }
+			242 = { add_extra_state_shared_building_slots = 1 }
 		}
 	}
 
 	focus = {
-		id = RUS_vic_Railways_In_The_Urals
-		icon = GFX_goal_generic_construct_infrastructure
+		id = RUS_vic_Smaller_Railways
+		icon = GFX_goal_focus_tblisi_railroad
 		cost = 40
 
 		available = {
-		    if = {
-                limit = {
-			        1120 = { is_owned_by = RUS }
-                }
-                1120 = { infrastructure > 2 }
-                else = {
-                    custom_trigger_tooltip = {
-		                tooltip = "RUS_vic_V_R_Railway_Foc_Trigger_Tooltip"
-                        RUS = { NOT = { has_active_mission = RUS_mission_vic_Railways_In_Tbilisi } }
-		            }
-                }
-            }
-		    653 = { is_owned_and_controlled_by = RUS }
-		    651 = { is_owned_and_controlled_by = RUS }
-		    652 = { is_owned_and_controlled_by = RUS }
+            NOT = { has_active_mission = RUS_mission_vic_daugavplis_oryol_railway }
+			custom_trigger_tooltip = {
+				tooltip = RUS_tt_vic_Smaller_Railways_trigger
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 6380
+						target_province = 11314
+					}
+				}
+			}
+		    owns_state = 254
+			owns_state = 257
+			owns_state = 239
 		}
 		bypass = {
             OR = {
-                653 = { NOT = { is_owned_by = RUS } }
-                651 = { NOT = { is_owned_by = RUS } }
-                652 = { NOT = { is_owned_by = RUS } }
+                NOT = { owns_state = 254 }
+				NOT = { owns_state = 257 }
+				NOT = { owns_state = 239 }
             }
 		}
-		prerequisite = { focus = RUS_vic_Railways_In_Tbilisi }
+		prerequisite = { focus = RUS_vic_West_Russia_Railways }
 
 		x = 7
 		y = 6
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 14
+				NOT = { has_active_mission = RUS_mission_vic_moscow_kiev_railway }
+				NOT = { has_active_mission = RUS_mission_vic_moscow_brzesc_railway }
+			}
+		}
 
 		completion_reward = {
-			activate_mission_tooltip = RUS_mission_vic_Railways_In_The_Urals
-			custom_effect_tooltip = RUS_tt_vic_Railways_In_The_Urals
+			activate_mission = RUS_mission_vic_ryazan_saratov_railway
+			custom_effect_tooltip = RUS_tt_vic_Smaller_Railways
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_timed_idea = {
+                	idea = RUS_idea_railway_constructing_AI
+                	days = 400
+            	}
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Improve_Mining_Techniques
-		icon = GFX_goal_generic_production
+		icon = GFX_Focus_Production_Raw_Iron
 		cost = 70
 
 		available = {}
-		prerequisite = { focus = RUS_vic_Railways_In_The_Urals }
+		prerequisite = { focus = RUS_vic_Smaller_Railways }
 
 		x = 7
 		y = 7
@@ -652,7 +732,7 @@ focus_tree = {
 
 		available = {
 		}
-		prerequisite = { focus = RUS_vic_Utilise_Abandoned_Land }
+		prerequisite = { focus = RUS_vic_Agricultural_Improvements }
 		prerequisite = { focus = RUS_vic_Oil_Extraction_In_Baku }
 		prerequisite = { focus = RUS_vic_Improve_Mining_Techniques }
 		prerequisite = { focus = RUS_vic_Yuzovka_Mining_Operation focus = RUS_vic_Support_Volga_German_Farming }
@@ -664,14 +744,15 @@ focus_tree = {
 
 		completion_reward = {
 		    add_political_power = 50
+		    unlock_decision_tooltip = RUS_decision_vic_ural_mining_railway
 			add_tech_bonus = { bonus = 1.5 uses = 2 category = transport_tech }
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Support_The_Coal_Mining_Industry
-		icon = GFX_goal_focus_coal_mines
-		cost = 40
+		icon = GFX_Focus_coal_mines
+		cost = 50
 
 		available = {}
 		prerequisite = { focus = RUS_vic_Facilitate_Resource_Transfer }
@@ -683,15 +764,41 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
+			add_tech_bonus = { bonus = 1 uses = 2 category = process_engineering_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = explosives_tech }
 			unlock_decision_tooltip = RUS_mission_vic_Coal_Mining_Industry_1
 			unlock_decision_tooltip = RUS_mission_vic_Coal_Mining_Industry_2
+			573 = {
+				add_resource = {
+					type = coal
+					amount = 4
+				}
+			}
+			219 = {
+				add_resource = {
+					type = coal
+					amount = 6
+				}
+			}
+			227 = {
+				add_resource = {
+					type = coal
+					amount = 5
+				}
+			}
+			221 = {
+				add_resource = {
+					type = coal
+					amount = 5
+				}
+			}
 		}
 	}
 
 	focus = {
-		id = RUS_vic_Invest_In_The_Logging_Industry
-		icon = GFX_goal_generic_construct_civilian
-		cost = 40
+		id = RUS_vic_Industrial_Innovations
+		icon = GFX_Focus_Production_Machine_Parts
+		cost = 50
 
 		available = {}
 		prerequisite = { focus = RUS_vic_Facilitate_Resource_Transfer }
@@ -702,16 +809,17 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_political_power = 50
-			unlock_decision_tooltip = RUS_mission_vic_Logging_Industry_1
-			unlock_decision_tooltip = RUS_mission_vic_Logging_Industry_2
-			unlock_decision_tooltip = RUS_mission_vic_Logging_Industry_3
+			add_tech_bonus = { bonus = 1.5 uses = 2 category = mechanical_engineering_tech }
+			add_tech_bonus = { bonus = 1.5 uses = 2 category = electronics_devices_tech }
+			195 = { add_extra_state_shared_building_slots = 1 }
+			953 = { add_extra_state_shared_building_slots = 1 }
+			1314 = { add_extra_state_shared_building_slots = 1 }
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Industrialise_The_Empire
-		icon = GFX_goal_focus_the_workers
+		icon = GFX_Focus_Worker
 		cost = 70
 
 		available = {
@@ -723,7 +831,7 @@ focus_tree = {
             }
 		}
 		prerequisite = { focus = RUS_vic_Support_The_Coal_Mining_Industry }
-		prerequisite = { focus = RUS_vic_Invest_In_The_Logging_Industry }
+		prerequisite = { focus = RUS_vic_Industrial_Innovations }
 
 		x = 5
 		y = 10
@@ -733,28 +841,32 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_tech_bonus = { bonus = 0.75 uses = 2 category = humanities_tech }
-			add_tech_bonus = { bonus = 0.55 uses = 1 category = mechanical_engineering_tech }
-			add_tech_bonus = { bonus = 0.55 uses = 1 category = process_engineering_tech }
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = mechanical_engineering_tech }
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = process_engineering_tech }
 		}
 	}
 
 	focus = {
-		id = RUS_vic_Trans_Siberian_Railway
-		icon = GFX_goal_focus_railroad_development
-		cost = 70
+		id = RUS_vic_Vistulan_Railway
+		icon = GFX_Focus_transport_railroad_development
+		cost = 40
 
 		available = {
-		    953 = { is_owned_and_controlled_by = RUS }
-			252 = { is_owned_and_controlled_by = RUS }
-			398 = { is_owned_and_controlled_by = RUS }
-			571 = { is_owned_and_controlled_by = RUS }
+		    owns_state = 98
+			owns_state = 1314
+			owns_state = 10
+			owns_state = 1313
+			owns_state = 92
+			owns_state = 93
 		}
 		bypass = {
             OR = {
-                953 = { NOT = { is_owned_by = RUS } }
-                252 = { NOT = { is_owned_by = RUS } }
-                398 = { NOT = { is_owned_by = RUS } }
-                571 = { NOT = { is_owned_by = RUS } }
+                NOT = { owns_state = 98 }
+				NOT = { owns_state = 1314 }
+				NOT = { owns_state = 10 }
+				NOT = { owns_state = 1313 }
+				NOT = { owns_state = 92 }
+				NOT = { owns_state = 93 }
             }
 		}
 		prerequisite = { focus = RUS_vic_Industrialise_The_Empire }
@@ -762,11 +874,28 @@ focus_tree = {
 		x = 5
 		y = 11
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 14
+				NOT = { has_active_mission = RUS_mission_vic_moscow_kiev_railway }
+				NOT = { has_active_mission = RUS_mission_vic_moscow_brzesc_railway }
+				NOT = { has_active_mission = RUS_mission_vic_ryazan_saratov_railway }
+			}
+		}
 
 		completion_reward = {
-			activate_mission_tooltip = RUS_mission_vic_Trans_Siberian_Railway
-			custom_effect_tooltip = RUS_tt_vic_Trans_Siberian_Railway
+			activate_mission = RUS_mission_vic_vistulan_railway
+			custom_effect_tooltip = RUS_tt_vic_Vistulan_Railway
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_timed_idea = {
+                	idea = RUS_idea_railway_constructing_AI
+                	days = 300
+            	}
+			}
 		}
 
 	}
@@ -778,7 +907,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 105
 
-		available = { has_war = no }
+		available = {}
 		mutually_exclusive = { focus = RUS_vic_Radical_Economic_Reforms }
 
 		x = 8
@@ -799,7 +928,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Steady_Industrialization
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		cost = 105
 
 		available = {}
@@ -914,7 +1043,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Invest_In_The_Navy
-		icon = GFX_goal_focus_mass_produce_ships
+		icon = GFX_Focus_Production_Mass
 		cost = 70
 
 		available = {
@@ -980,7 +1109,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Yuzovka_Mining_Operation
-		icon = GFX_goal_generic_production2
+		icon = GFX_Focus_coal_mines
 		cost = 40
 
 		available = {
@@ -1002,13 +1131,34 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_tooltip = RUS_mission_vic_Yuzovka_Mining
-			custom_effect_tooltip = "RUS_vic_John_Hughes_tooltip"
+			if = {
+				limit = {
+					RUS_john_hughes = { is_advisor = no }
+				}
+				RUS_john_hughes = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = RUS_advisor_john_hughes
+							allowed = {
+								original_tag = RUS
+							}
+							visible = {
+								date < 1889.6.17
+							}
+							traits = {
+								RUS_trait_John_Hughes
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Factories_In_Warsaw
-		icon = GFX_goal_generic_construction
+		icon = GFX_Focus_Industrial_Complex
 		cost = 40
 
 		available = {
@@ -1074,21 +1224,25 @@ focus_tree = {
 
 		completion_reward = {
 		    army_experience = 25
-		    custom_effect_tooltip = "RUS_vic_army_dmitry_milyutin"
+		    #custom_effect_tooltip = "RUS_vic_army_dmitry_milyutin"
 		    hidden_effect = {
 			    #add_ideas = { RUS_idea_dmitry_milyutin }
+			    add_ai_strategy = { # Removes the ai strategy from history file
+    				type = ignore_army_incompetence
+    				value = -200
+				}
 			}
 
 			# Add Dmitry Milyutin as MHC
-			set_temp_variable = { temp_advisor_frame = 4 }
-			set_temp_variable = { temp_advisor_trait = 13 }
-			mhc_add_army_advisor = yes
-			mhc_add_mark_advisor_as_high_army_brass = yes
+			#set_temp_variable = { temp_advisor_frame = 4 }
+			#set_temp_variable = { temp_advisor_trait = 13 }
+			#mhc_add_army_advisor = yes
+			#mhc_add_mark_advisor_as_high_army_brass = yes
 
 			# Add Fyodor Logginovich van Heiden as MHC
-			set_temp_variable = { temp_advisor_frame = 5 }
-			set_temp_variable = { temp_advisor_trait = 4 }
-			mhc_add_army_advisor = yes
+			#set_temp_variable = { temp_advisor_frame = 5 }
+			#set_temp_variable = { temp_advisor_trait = 4 }
+			#mhc_add_army_advisor = yes
 		}
 	}
 
@@ -1261,7 +1415,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { ROOT = { is_ai = yes } }
-				add_tech_bonus = { bonus = 1 uses = 2 category = naval_doctrine }
+				add_doctrine_cost_reduction = { cost_reduction = 1 uses = 2 category = naval_doctrine }
             	navy_experience = 25
             	reverse_add_opinion_modifier = { target = DEN modifier = eoanb_om_RUS_decrease_opinion }
             	reverse_add_opinion_modifier = { target = SWE modifier = eoanb_om_RUS_decrease_opinion }
@@ -1328,7 +1482,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { ROOT = { is_ai = yes } }
-				add_tech_bonus = { bonus = 1 uses = 2 category = naval_doctrine }
+				add_doctrine_cost_reduction = { cost_reduction = 1 uses = 2 category = naval_doctrine }
             	navy_experience = 25
             	if = {
                 	limit = {
@@ -1420,7 +1574,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_tech_bonus = { bonus = 1 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 1 uses = 1 category = land_doctrine }
 			swap_ideas = {
                 remove_idea = RUS_idea_outdated_army
                 add_idea = RUS_idea_outdated_army1
@@ -1444,7 +1598,7 @@ focus_tree = {
 
 		completion_reward = {
 		    army_experience = 15
-			add_tech_bonus = { bonus = 1 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 1 uses = 1 category = land_doctrine }
 			swap_ideas = {
                 remove_idea = RUS_idea_outdated_army1
                 add_idea = RUS_idea_outdated_army2
@@ -1501,7 +1655,7 @@ focus_tree = {
 
 		completion_reward = {
 		    army_experience = 10
-			add_tech_bonus = { bonus = 1.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 1.5 uses = 2 category = land_doctrine }
 			remove_ideas = RUS_idea_outdated_army2
 		}
 	}
@@ -1824,7 +1978,7 @@ focus_tree = {
                     RUS_idea_lost_crimea_war2
                 }
 			}
-			add_tech_bonus = { bonus = 1.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 1.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1887,7 +2041,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Re_Establish_The_Finnish_Diet
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		cost = 70
 
 		available = {
@@ -1906,15 +2060,11 @@ focus_tree = {
 		    }
 		}
 
-		x = 13
+		x = 15
 		y = 8
 
 		ai_will_do = {
 		    factor = 10
-		    modifier = {
-                factor = 1000000
-                is_historical_focus_on = yes
-            }
 		}
 
 		completion_reward = {
@@ -1943,47 +2093,47 @@ focus_tree = {
 		    }
 		}
 
-		x = 15
+		x = 13
 		y = 8
 
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-	    if = {
-        limit = {
-          OR = {
+	    	if = {
+        		limit = {
+          			OR = {
 						has_dlc = "Together for Victory"
 						has_dlc = "Waking the Tiger"
 						has_dlc = "Death or Dishonor"
 					}
-        }
-        set_autonomy = {
-          target = FIN
-          autonomy_state = autonomy_integrated_puppet
-        }
-        FIN = { add_stability = -0.1 }
-	    }
-      else = {
-        FIN = {
+        		}
+        		set_autonomy = {
+          			target = FIN
+          			autonomy_state = autonomy_integrated_puppet
+        			}
+        		FIN = { add_stability = -0.1 }
+	    	}
+      		else = {
+        		FIN = {
 					add_autonomy_score = {
 						value = -400
 					}
 					add_stability = -0.1
 				}
-	    }
-	    FIN = {
+	    	}
+	    	FIN = {
 				country_event = {
-						id = russiavicfocus.18
-						days = 1
+					id = russiavicfocus.18
+					days = 1
 				}
 				clr_country_flag = FIN_vic_Berg_Governor
-	    }
+	    	}
 		}
 	}
 
 	focus = {
 		id = RUS_vic_Support_Foreign_Investment
-		icon = GFX_goal_focus_international_investments
+		icon = GFX_Focus_Trade_International
 		cost = 70
 
 		available = {
@@ -2000,7 +2150,7 @@ focus_tree = {
 		    }
 		}
 
-		x = 13
+		x = 15
 		y = 9
 
 		ai_will_do = { factor = 10 }
@@ -2039,7 +2189,7 @@ focus_tree = {
 		    }
 		}
 
-		x = 15
+		x = 13
 		y = 9
 
 		ai_will_do = { factor = 10 }
@@ -2103,17 +2253,30 @@ focus_tree = {
 		    }
 		}
 		prerequisite = { focus = RUS_vic_Support_Russian_Imigration }
-		prerequisite = { focus = RUS_vic_Expand_Helsinki_Dockyards }
 
-		x = 14
+		x = 13
 		y = 11
 
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_stability = -0.07
-			add_political_power = -20
-			activate_decision = RUS_mission_vic_Annex_FIN
+			effect_tooltip = {
+				add_stability = -0.07
+				add_political_power = -20
+				activate_decision = RUS_mission_vic_Annex_FIN
+			}
+			146 = { add_claim_by = RUS }
+			111 = { add_claim_by = RUS }
+			149 = { add_claim_by = RUS }
+			150 = { add_claim_by = RUS }
+			148 = { add_claim_by = RUS }
+			145 = { add_claim_by = RUS }
+			FIN = {
+				country_event = {
+					id = russiavicfocus.24
+					days = 1
+				}
+	    	}
 		}
 	}
 
@@ -2125,17 +2288,19 @@ focus_tree = {
 		cost = 35
 
 		available = {
-		    date > 1864.10.01
-		    90 = { is_owned_and_controlled_by = RUS }
-		    92 = { is_owned_and_controlled_by = RUS }
-		    1313 = { is_owned_and_controlled_by = RUS }
-		    10 = { is_owned_and_controlled_by = RUS }
-		    87 = { is_owned_and_controlled_by = RUS }
-		    1315 = { is_owned_and_controlled_by = RUS }
-		    1314 = { is_owned_and_controlled_by = RUS }
-		    98 = { is_owned_and_controlled_by = RUS }
-		    939 = { is_owned_and_controlled_by = RUS }
-		    940 = { is_owned_and_controlled_by = RUS }
+		    custom_trigger_tooltip = {
+                tooltip = RUS_vic_owns_poland
+                90 = { is_owned_and_controlled_by = RUS }
+		        92 = { is_owned_and_controlled_by = RUS }
+		        1313 = { is_owned_and_controlled_by = RUS }
+		        10 = { is_owned_and_controlled_by = RUS }
+		        87 = { is_owned_and_controlled_by = RUS }
+		        1314 = { is_owned_and_controlled_by = RUS }
+		        98 = { is_owned_and_controlled_by = RUS }
+		        939 = { is_owned_and_controlled_by = RUS }
+		        940 = { is_owned_and_controlled_by = RUS }
+            }
+			date > 1864.10.01
 		}
 		prerequisite = { focus = RUS_vic_Russian_European_Empire }
 		bypass = { POL = { is_subject_of = RUS } }
@@ -2163,12 +2328,12 @@ focus_tree = {
 		        1313 = { is_owned_and_controlled_by = RUS }
 		        10 = { is_owned_and_controlled_by = RUS }
 		        87 = { is_owned_and_controlled_by = RUS }
-		        1315 = { is_owned_and_controlled_by = RUS }
 		        1314 = { is_owned_and_controlled_by = RUS }
 		        98 = { is_owned_and_controlled_by = RUS }
 		        939 = { is_owned_and_controlled_by = RUS }
 		        940 = { is_owned_and_controlled_by = RUS }
             }
+            has_completed_focus = RUS_vic_Radical_Economic_Reforms
 		}
 		prerequisite = { focus = RUS_vic_Poland }
 		mutually_exclusive = { focus = RUS_vic_Tighten_Grip_On_Poland }
@@ -2177,7 +2342,13 @@ focus_tree = {
 		x = 17
 		y = 8
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 
 		completion_reward = {
 			add_stability = 0.03
@@ -2187,7 +2358,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Tighten_Grip_On_Poland
-		icon = GFX_goal_focus_suppress_liberalism
+		icon = GFX_Focus_Partisans_Suppress_Liberalism
 		cost = 70
 
 		available = {
@@ -2198,7 +2369,6 @@ focus_tree = {
 		        1313 = { is_owned_and_controlled_by = RUS }
 		        10 = { is_owned_and_controlled_by = RUS }
 		        87 = { is_owned_and_controlled_by = RUS }
-		        1315 = { is_owned_and_controlled_by = RUS }
 		        1314 = { is_owned_and_controlled_by = RUS }
 		        98 = { is_owned_and_controlled_by = RUS }
 		        939 = { is_owned_and_controlled_by = RUS }
@@ -2213,9 +2383,9 @@ focus_tree = {
 		y = 8
 
 		ai_will_do = {
-		    factor = 10
+		    base = 95
 		    modifier = {
-                factor = 1000000
+                factor = 100
                 is_historical_focus_on = yes
             }
 		}
@@ -2228,7 +2398,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_End_Russification_In_Poland
-		icon = GFX_goal_focus_freedom_association
+		icon = GFX_Focus_freedom_association
 		cost = 70
 
 		available = {
@@ -2239,7 +2409,6 @@ focus_tree = {
 		        1313 = { is_owned_and_controlled_by = RUS }
 		        10 = { is_owned_and_controlled_by = RUS }
 		        87 = { is_owned_and_controlled_by = RUS }
-		        1315 = { is_owned_and_controlled_by = RUS }
 		        1314 = { is_owned_and_controlled_by = RUS }
 		        98 = { is_owned_and_controlled_by = RUS }
 		        939 = { is_owned_and_controlled_by = RUS }
@@ -2262,7 +2431,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Enforce_Russification_In_Poland
-		icon = GFX_goal_focus_forced_refugee_management
+		icon = GFX_Focus_refugee_management
 		cost = 70
 
 		available = {
@@ -2273,7 +2442,6 @@ focus_tree = {
 		        1313 = { is_owned_and_controlled_by = RUS }
 		        10 = { is_owned_and_controlled_by = RUS }
 		        87 = { is_owned_and_controlled_by = RUS }
-		        1315 = { is_owned_and_controlled_by = RUS }
 		        1314 = { is_owned_and_controlled_by = RUS }
 		        98 = { is_owned_and_controlled_by = RUS }
 		        939 = { is_owned_and_controlled_by = RUS }
@@ -2309,7 +2477,6 @@ focus_tree = {
 		        1313 = { is_owned_and_controlled_by = RUS }
 		        10 = { is_owned_and_controlled_by = RUS }
 		        87 = { is_owned_and_controlled_by = RUS }
-		        1315 = { is_owned_and_controlled_by = RUS }
 		        1314 = { is_owned_and_controlled_by = RUS }
 		        98 = { is_owned_and_controlled_by = RUS }
 		        939 = { is_owned_and_controlled_by = RUS }
@@ -2320,13 +2487,13 @@ focus_tree = {
 		}
 		prerequisite = { focus = RUS_vic_End_Russification_In_Poland focus = RUS_vic_Enforce_Russification_In_Poland }
 
-		x = 18
+		x = 19
 		y = 10
 
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_tech_bonus = { bonus = 1.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 1.5 uses = 1 category = land_doctrine }
 			939 = {
 				add_building_construction = {
 					type = bunker
@@ -2341,7 +2508,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Governorate_of_Poland
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		cost = 70
 
 		available = {
@@ -2352,7 +2519,6 @@ focus_tree = {
 		        1313 = { is_owned_and_controlled_by = RUS }
 		        10 = { is_owned_and_controlled_by = RUS }
 		        87 = { is_owned_and_controlled_by = RUS }
-		        1315 = { is_owned_and_controlled_by = RUS }
 		        1314 = { is_owned_and_controlled_by = RUS }
 		        98 = { is_owned_and_controlled_by = RUS }
 		        939 = { is_owned_and_controlled_by = RUS }
@@ -2361,11 +2527,10 @@ focus_tree = {
             POL = { exists = no }
 		}
 		prerequisite = { focus = RUS_vic_End_Russification_In_Poland }
-		prerequisite = { focus = RUS_vic_Vistula_Defence_Scheme }
 		bypass = { POL = { exists = yes } }
 
-		x = 18
-		y = 11
+		x = 17
+		y = 10
 
 		ai_will_do = { factor = 10 }
 
@@ -2380,7 +2545,6 @@ focus_tree = {
 		        transfer_state = 940
 		        transfer_state = 1313
 		        transfer_state = 1314
-		        transfer_state = 1315
 		        set_politics = { ruling_party = autocracy }
 		        create_country_leader = {
 	                name = "Aleksander Wielopolski"
@@ -2397,10 +2561,8 @@ focus_tree = {
 		        add_state_core = 87
 		        add_state_core = 98
 		        add_state_core = 939
-		        add_state_core = 940
 		        add_state_core = 1313
 		        add_state_core = 1314
-		        add_state_core = 1315
 		        country_event = { # Russia Returns to 1815 POL
                     id = poland.101
                     days = 2
@@ -2431,6 +2593,10 @@ focus_tree = {
 				    add_idea = absolutism
 				    remove_idea = universal_male_suffrage
 			    }
+				swap_ideas = {
+				    add_idea = censored_press
+				    remove_idea = free_press
+					}
 			    }
 	        }
 	        news_event = {
@@ -2492,12 +2658,58 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-		    add_political_power = 35
 		    add_popularity = {
                 ideology = social_egalitarianism
                 popularity = 0.03
             }
-			custom_effect_tooltip = "RUS_vic_Mykhailo_Drahomanov_tooltip"
+			if = {
+            	limit = {
+            		amount_taken_ideas = {
+   	 					amount > 5
+    					slots = { political_advisor }
+					}
+            	}
+            	RUS_mykhailo_drahomanov = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = RUS_advisor_mykhailo_drahomanov
+							allowed = {
+								original_tag = RUS
+							}
+							visible = {
+								date < 1895.07.02
+							}
+							traits = {
+								eoanb_trait_popular_figure
+							}
+						}
+					}
+				}
+            }
+            else = {
+            	custom_effect_tooltip = "RUS_vic_Mykhailo_Drahomanov_tooltip"
+				hidden_effect = {
+			    	RUS_mykhailo_drahomanov = {
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = RUS_advisor_mykhailo_drahomanov
+								allowed = {
+									original_tag = RUS
+								}
+								visible = {
+									date < 1895.07.02
+								}
+								traits = {
+									eoanb_trait_popular_figure
+								}
+							}
+						}
+					}
+					add_ideas = { RUS_advisor_mykhailo_drahomanov }
+				}
+            }
 		}
 	}
 
@@ -2535,7 +2747,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_The_Granary_of_Europe
-		icon = GFX_goal_focus_agriculture
+		icon = GFX_Focus_Agriculture
 		cost = 70
 
 		available = {
@@ -2714,7 +2926,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Support_National_Awakening
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		cost = 35
 
 		available = {
@@ -2750,7 +2962,23 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.03
 			add_political_power = -35
-			custom_effect_tooltip = "RUS_vic_Krisjanis_Valdemars_tooltip"
+			RUS_krisjanis_valdemars = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = RUS_advisor_krisjanis_valdemars
+						allowed = {
+							original_tag = RUS
+						}
+						visible = {
+							date < 1891.12.07
+						}
+						traits = {
+							RUS_trait_Krisjanis_Valdemars
+						}
+					}
+				}
+			}
 			191 = {
 				custom_effect_tooltip = "RUS_vic_NA_good_tooltip"
 				hidden_effect = {
@@ -2828,7 +3056,26 @@ focus_tree = {
 			add_political_power = 45
 			add_stability = 0.02
 			add_tech_bonus = { bonus = 0.35 uses = 1 category = humanities_tech }
-			custom_effect_tooltip = "RUS_vic_Carl_Schmidt_tooltip"
+			RUS_carl_schmidt = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = RUS_advisor_carl_schmidt
+						allowed = {
+							original_tag = RUS
+						}
+						visible = {
+							date < 1894.03.11
+						}
+						traits = {
+							chemist
+						}
+						research_bonus = {
+							biochemistry_tech = 0.07
+						}
+					}
+				}
+			}
 			191 = {
 				custom_effect_tooltip = "RUS_vic_NA_tooltip"
 				hidden_effect = {
@@ -2871,7 +3118,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Question_of_Russification
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		cost = 70
 
 		available = {
@@ -2880,7 +3127,7 @@ focus_tree = {
 		prerequisite = { focus = RUS_vic_Governorate_of_Poland }
 
 		x = 16
-		y = 12
+		y = 11
 
 		ai_will_do = { factor = 10 }
 
@@ -2919,7 +3166,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Radical_Reforms
-		icon = GFX_goal_focus_support_conservatism
+		icon = GFX_Focus_Ideology_Support_Liberty
 		cost = 70
 
 		available = {
@@ -2933,7 +3180,24 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-		    custom_effect_tooltip = "RUS_vic_Abaza_A_tooltip"
+		    RUS_alexander_ageevich_abaza = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = RUS_advisor_alexander_ageevich_abaza
+						allowed = {
+							original_tag = RUS
+						}
+						visible = {
+							date < 1895.1.24
+						}
+						traits = {
+							eoanb_trait_finance_minister
+							centrism_alignment
+						}
+					}
+				}
+			}
 			add_political_power = 50
 			if = {
 				limit = { has_idea = absolutism }
@@ -2970,7 +3234,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Establish_Rural_Dumas
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		cost = 70
 
 		available = {
@@ -2993,7 +3257,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Completely_Reformed_Conscription
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		cost = 70
 
 		available = {
@@ -3057,7 +3321,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Establish_The_ISB
-		icon = GFX_goal_focus_freedom_press
+		icon = GFX_Focus_Freedom_Press
 		cost = 70
 
 		available = {
@@ -3097,7 +3361,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_political_power = 30
 			country_event = {
                 id = russiavicfocus.5
             }
@@ -3108,12 +3371,45 @@ focus_tree = {
     					slots = { political_advisor }
 					}
             	}
-            	custom_effect_tooltip = "RUS_vic_Von_Reutern_A_tooltip"
+				RUS_mikhail_von_reutern = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = RUS_advisor_mikhail_von_reutern
+							allowed = {
+								original_tag = RUS
+							}
+							visible = {
+								date < 1878.7.7
+							}
+							traits = {
+								RUS_trait_Imperial_Finance_Minister
+							}
+						}
+					}
+				}
             }
             else = {
             	custom_effect_tooltip = "RUS_vic_Von_Reutern_tooltip"
 				hidden_effect = {
-			    	add_ideas = { RUS_vic_Mikhail_von_Reutern }
+			    	RUS_mikhail_von_reutern = {
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = RUS_advisor_mikhail_von_reutern
+								allowed = {
+									original_tag = RUS
+								}
+								visible = {
+									date < 1878.7.7
+								}
+								traits = {
+									RUS_trait_Imperial_Finance_Minister
+								}
+							}
+						}
+					}
+					add_ideas = { RUS_advisor_mikhail_von_reutern }
 				}
             }
 		}
@@ -3121,7 +3417,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Reintroduce_Brandy_Excise_Tax
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		cost = 70
 
 		available = {
@@ -3168,7 +3464,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Introduce_Public_Accounting
-		icon = GFX_goal_focus_banks
+		icon = GFX_Focus_banks
 		cost = 70
 
 		available = {
@@ -3203,7 +3499,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_political_power = 30
 			country_event = {
                 id = russiavicfocus.6
             }
@@ -3214,12 +3509,47 @@ focus_tree = {
     					slots = { political_advisor }
 					}
             	}
-            	custom_effect_tooltip = "RUS_vic_Gorchakov_A_tooltip"
+            	RUS_alexander_gorchakov = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = RUS_advisor_alexander_gorchakov
+							allowed = {
+								original_tag = RUS
+							}
+							visible = {
+								date < 1882.4.9
+							}
+							traits = {
+								RUS_trait_Staunch_Authoritarian
+								popular_figurehead
+							}
+						}
+					}
+				}
             }
             else = {
             	custom_effect_tooltip = "RUS_vic_Gorchakov_tooltip"
 				hidden_effect = {
-			    	add_ideas = { RUS_vic_Alexander_Gorchakov }
+			    	RUS_alexander_gorchakov = {
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = RUS_advisor_alexander_gorchakov
+								allowed = {
+									original_tag = RUS
+								}
+								visible = {
+									date < 1882.4.9
+								}
+								traits = {
+									RUS_trait_Staunch_Authoritarian
+									popular_figurehead
+								}
+							}
+						}
+					}
+					add_ideas = RUS_advisor_alexander_gorchakov
 				}
             }
 		}
@@ -3246,7 +3576,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			remove_ideas = { RUS_WUR_politica_isolation }
+			remove_ideas = RUS_WUR_politica_isolation
 			reverse_add_opinion_modifier = { target = FRA modifier = eoanb_om_RUS_increase_opinion }
 			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_RUS_increase_opinion }
 		}
@@ -3254,7 +3584,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Emancipation_of_Serfs
-		icon = GFX_goal_focus_freedom_association
+		icon = GFX_Focus_freedom_association
 		cost = 70
 
 		available = {
@@ -3299,7 +3629,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_political_power = 30
 			country_event = {
                 id = russiavicfocus.7
             }
@@ -3310,12 +3639,47 @@ focus_tree = {
     					slots = { political_advisor }
 					}
             	}
-            	custom_effect_tooltip = "RUS_vic_Panin_A_tooltip"
+            	RUS_victor_panin = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = RUS_advisor_victor_panin
+							allowed = {
+								original_tag = RUS
+							}
+							visible = {
+								date < 1862.4.13
+							}
+							traits = {
+								RUS_trait_Staunch_Authoritarian
+								eoanb_trait_effective_judge
+							}
+						}
+					}
+				}
             }
             else = {
             	custom_effect_tooltip = "RUS_vic_Panin_tooltip"
 				hidden_effect = {
-			    	add_ideas = { RUS_vic_Victor_Panin }
+			    	RUS_victor_panin = {
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = RUS_advisor_victor_panin
+								allowed = {
+									original_tag = RUS
+								}
+								visible = {
+									date < 1862.4.13
+								}
+								traits = {
+									RUS_trait_Staunch_Authoritarian
+									eoanb_trait_effective_judge
+								}
+							}
+						}
+					}
+					add_ideas = { RUS_advisor_victor_panin }
 				}
             }
 		}
@@ -3357,7 +3721,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Promote_Emancipation_Within_Nobility
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		cost = 70
 
 		available = {
@@ -3405,7 +3769,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Create_The_Zemstvos
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		cost = 70
 
 		available = {
@@ -3426,7 +3790,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Establish_City_Dumas
-		icon = GFX_goal_focus_banks
+		icon = GFX_Focus_banks
 		cost = 70
 
 		available = {
@@ -3465,7 +3829,54 @@ focus_tree = {
 			country_event = {
                 id = russiavicfocus.8
             }
-            custom_effect_tooltip = "RUS_vic_Dolgorukov_tooltip"
+            if = {
+            	limit = {
+            		amount_taken_ideas = {
+   	 					amount > 5
+    					slots = { political_advisor }
+					}
+            	}
+            	RUS_vasily_dolgorukov = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = RUS_advisor_vasily_dolgorukov
+							allowed = {
+								original_tag = RUS
+							}
+							visible = {
+								date < 1866.5.1
+							}
+							traits = {
+								head_of_intelligence
+							}
+						}
+					}
+				}
+            }
+            else = {
+            	custom_effect_tooltip = "RUS_vic_Dolgorukov_tooltip"
+				hidden_effect = {
+			    	RUS_vasily_dolgorukov = {
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = RUS_advisor_vasily_dolgorukov
+								allowed = {
+									original_tag = RUS
+								}
+								visible = {
+									date < 1866.5.1
+								}
+								traits = {
+									head_of_intelligence
+								}
+							}
+						}
+					}
+					add_ideas = { RUS_advisor_vasily_dolgorukov }
+				}
+            }
             upgrade_intelligence_agency = upgrade_anti_partisan
 		}
 	}
@@ -3657,7 +4068,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_End_The_Censorship
-		icon = GFX_goal_focus_free_press
+		icon = GFX_Focus_Partisans_Popularize
 		cost = 70
 
 		available = {
@@ -3698,7 +4109,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Limit_The_Censorship
-		icon = GFX_goal_focus_newspapers
+		icon = GFX_Focus_Freedom_Press_newspapers
 		cost = 70
 
 		available = {
@@ -3733,7 +4144,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Third_Rome
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		cost = 70
 
 		available = {
@@ -3753,7 +4164,7 @@ focus_tree = {
 
     focus = {
 		id = RUS_vic_Real_Politik
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		cost = 70
 
 		available = {
@@ -3824,7 +4235,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Abandon_Britain
-		icon = GFX_goal_focus_leave_continent_alone
+		icon = GFX_Focus_leave_continent_alone
 		cost = 70
 
 		available = {
@@ -3862,13 +4273,13 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Restore_The_Holy_Alliance
-		icon = GFX_goal_focus_christianity_state_religion
+		icon = GFX_Focus_Catholic_Religion
 		cost = 70
 
 		available = {
 		    NOT = { has_war_with = AUS }
 		    NOT = { has_war_with = PRS }
-		    NOT = { has_war_with = GER }
+		    NOT = { has_war_with = PRS }
 		}
 		prerequisite = { focus = RUS_vic_Abandon_Britain }
 
@@ -3905,7 +4316,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Encourage_British_Investment
-		icon = GFX_goal_focus_foreign_diplomacy_economy
+		icon = GFX_Focus_Diplomatic_foreign_economy
 		cost = 70
 
 		available = {
@@ -3933,7 +4344,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_American_Relations
-		icon = GFX_goal_focus_continent_north_america
+		icon = GFX_Focus_Continent_North_America
 		cost = 70
 
 		available = {
@@ -3969,7 +4380,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Flexible_Foreign_Policy
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		cost = 70
 
 		available = {
@@ -4084,7 +4495,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Southern_Question
-		icon = GFX_goal_focus_gerrymandering
+		icon = GFX_Focus_Map_Gerrymandering
 		cost = 70
 
 		available = {
@@ -4111,7 +4522,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Protect_Orthodoxy_In_Jerusalem
-		icon = GFX_goal_focus_international_investments
+		icon = GFX_Focus_Trade_International
 		cost = 70
 
 		available = {
@@ -4164,7 +4575,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_European_Diplomacy
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 70
 
 		available = {
@@ -4193,7 +4604,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Welt_Politik
-		icon = GFX_focus_Colonial_Troops
+		icon = GFX_Focus_Colonial_Troops
 		cost = 70
 
 		available = {
@@ -4248,7 +4659,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Break_French_Diplomatic_Isolationism
-		icon = GFX_goal_focus_ally_FRA
+		icon = GFX_Focus_Diplomatic_Ally_FRA
 		cost = 70
 
 		available = {
@@ -4289,7 +4700,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_vic_Encourage_French_Investment
-		icon = GFX_goal_focus_international_investments
+		icon = GFX_Focus_Trade_International
 		cost = 70
 
 		available = {
@@ -4360,7 +4771,7 @@ focus_tree = {
                 add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_increase_small }
 			    reverse_add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_increase_small }
                 navy_experience = 10
-			    add_tech_bonus = { bonus = 2 uses = 2 category = naval_doctrine }
+			    add_doctrine_cost_reduction = { cost_reduction = 2 uses = 2 category = naval_doctrine }
             }
             ENG = {
                 effect_tooltip = {
@@ -4396,7 +4807,31 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-		    custom_effect_tooltip = RUS_vic_Catacazy_A_tooltip
+		    RUS_konstantin_gavrilovich_catacazy = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = RUS_advisor_konstantin_gavrilovich_catacazy
+						allowed = {
+							original_tag = RUS
+						}
+						visible = {
+							date < 1890.4.1
+						}
+						traits = {
+							eoanb_trait_experienced_diplomat
+						}
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = eoanb_om_increase_rel_25
+			}
+			reverse_add_opinion_modifier = {
+				target = USA
+				modifier = eoanb_om_increase_rel_25
+			}
 			USA = {
 			    country_event = { id = russiaforeign.13 }
 			}

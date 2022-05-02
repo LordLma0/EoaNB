@@ -4,25 +4,25 @@
 	oob = "WUR_1857"
 
 	set_convoys = 0
-  
+
 	set_research_slots = 3
 
-	add_ideas = { 
-		#STATE OF COUNTRY   
+	add_ideas = {
+		#STATE OF COUNTRY
 		hos_is_leader
 		has_heir
 		agrarian
 		victorian_era
 		law_victorian_army
 		religion_protestant
-		
+
 		#GOVERNMENTAL POLICIES
 		constitutional_monarchy
 		constitution_adopted
 		no_elections
 		no_separation
 		federal_control
-		
+
 		#CULTURE AND EDUCATION
 		compulsory_education
 		state_religion
@@ -30,7 +30,7 @@
 		foa_non_socialist
 		tu_non_political
 		high_judge_courtroom
-		
+
 		#ECONOMY
 		limited_exports
 		normal_taxes
@@ -38,7 +38,7 @@
 		fourteen_hour_work_day
 		lp_land_purchase
 		civilian_economy
-		
+
 		#DEMOGRAPHICS
 		stagnation_growth
 		border_control
@@ -46,7 +46,7 @@
 		parliamentary_suffrage
 		early_conscription
 		pp_ban_extremist_parties
-		
+
 		#BUDGET
 		hc_no_healthcare
 		law_police_force
@@ -54,11 +54,12 @@
 		navinfra_no_naval_infrastructure
 		two_percent
 		sfund_limited_state_sponsorship
-	
+
 		#NATIONAL SPIRITS
 		GER_general_idea_ger_confed
 		PRS_Zollverein
 		BAD_currency_reform
+		GEC_idea_polizeiverein_member
 		WUR_russiancampaign
 		WUR_victorian_emigration_1
 		WUR_victorian_inflation
@@ -82,7 +83,7 @@
 		autocracy = 21
 		fundamentalism = 16
 	}
-	
+
 	#was
 	#set_popularities = {
 	#	anarchism = 0
@@ -99,23 +100,32 @@
 
 	set_technology = {
 		infantry_weapons = 1 traditional_mixed_arms = 1
-		tribal_carrier_birds=1 tribal_electrical_theory=1
-		tribal_steel_tools=1
-		tribal_tatics=1
-		tribal_gunpowder=1
-		tribal_riding=1
-		tribal_steam_experiments=1
-		tribal_forging=1
-		tribal_artisan=1
-		tribal_chemistry=1
-		tribal_guilds_trade=1
-		tribal_crop_planting=1
-		tribal_irrigation=1
-		tribal_crop_rotation=1
-		tribal_salted_smoked_goods=1
-		tribal_leching=1
+		tribal_carrier_birds = 1 tribal_electrical_theory = 1
+		tribal_steel_tools = 1
+		tribal_tatics = 1
+		tribal_gunpowder = 1
+		tribal_riding = 1
+		tribal_steam_experiments = 1
+		tribal_forging = 1
+		tribal_artisan = 1
+		tribal_chemistry = 1
+		tribal_guilds_trade = 1
+		tribal_crop_planting = 1
+		tribal_irrigation = 1
+		tribal_crop_rotation = 1
+		tribal_salted_smoked_goods = 1
+		tribal_leching = 1
+		tech_infantry_flintlock_pistol = 1
+		tech_infantry_caplock_pistol = 1
 		tech_infantry_napoleonic_uniform = 1
+		tech_infantry_practical_rifling = 1
 		vic_army_cloth = 1
+		tech_infantry_infantry_swords = 1
+		socket_bayonet = 1
+		civil_army_cloth = 1
+		basic_cavalry = 1
+		horse_transport = 1
+		mounted_infantry = 1
 		tech_naval_mtg_simple_corvette_hull = 1
 		tech_naval_mtg_24_pounder_battery = 1
 		tech_naval_mtg_sails = 1
@@ -128,104 +138,42 @@
 		food_preserving_icebox = 1
 		early_artificial_fertilizer = 1
 		electrical_engineering = 1
-		basic_cavalry = 1
 		start_build_tech = 1
 	}
-	
+
 	add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 800 producer = WUR }
 	add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 800 producer = WUR }
 	add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 150 producer = WUR }
 	add_equipment_to_stockpile = { type = cannon_equipment_0 amount = 12 producer = WUR }
-	
+
 	#How to set up initial debt_level
 	#WUR = {
 	#	add_to_variable = {var = debt_level value = 1} #Württemberg's National Debt amounted to 55.26m Gulden (31.58m Thaler, roughly 1.05m pounds of Silver; 94,73m Mark as of 1871/73 exchange rate = 4.64m Pound Sterling as of 1871) at the end of 1858; income per year 13.77m Gulden (7.87m Thaler = 1.16m Pound Sterling; 21.9% direct taxes, 28.7% indirect taxes, 49.4% crown lands income) = 4.00 GDP of debt
 	#}
 
-	# POLITICAL LEADERS
-
-	create_country_leader = {
-		name = "Wilhelm I."
-		desc = "POLITICS_WILHELM_I_WURTTEMBERG_DESC"
-		picture = "Portrait_WUR_Wilhelm_I_of_Wurttemberg.dds"
-		expire = "1864.1.1"
-		ideology = despotism
-		traits = { 
-		}
-	}
+	### POLITICAL LEADERS ###
+	recruit_character = WUR_king_wilhelm_i
+	recruit_character = WUR_regency
+	recruit_character = WUR_karl_i
 	
-	create_country_leader = {
-		name = "Wilhelm I."
-		desc = "POLITICS_WILHELM_I_WURTTEMBERG_DESC"
-		picture = "Portrait_WUR_Wilhelm_I_of_Wurttemberg.dds"
-		expire = "1864.1.1"
-		ideology = conserv
-		traits = { 
-		}
-	}
+	### FIELD MARSHALS & GENERALS ###
+	recruit_character = WUR_eduard_von_kallee
+	recruit_character = WUR_ferdinand_von_zeppelin
+	recruit_character = WUR_oskar_von_hardegg
+	recruit_character = WUR_hermann_von_sachsenweimareisenach
+	recruit_character = WUR_albert_von_suckow
 	
-	create_country_leader = {
-		name = "Wilhelm I."
-		desc = "POLITICS_WILHELM_I_WURTTEMBERG_DESC"
-		picture = "Portrait_WUR_Wilhelm_I_of_Wurttemberg.dds"
-		expire = "1864.1.1"
-		ideology = conserv_liberal
-		traits = { 
-		}
-	}
+	### ADVISORS & THEORISTS ###
+	#Political Advisors
+	recruit_character = WUR_adolph_gottlieb_ferdinand_schoder
+	recruit_character = WUR_fidel_von_baur_breitenfeld
+	recruit_character = WUR_friedrich_von_roemer
+	recruit_character = WUR_gottlob_tafel
+	recruit_character = WUR_johannes_von_kuhn
+	recruit_character = WUR_joseph_von_linden
+	recruit_character = WUR_karl_von_varnbueler
+	recruit_character = WUR_theodor_von_gessler
 	
-	create_country_leader = {
-		name = "Wilhelm I."
-		desc = "POLITICS_WILHELM_I_WURTTEMBERG_DESC"
-		picture = "Portrait_WUR_Wilhelm_I_of_Wurttemberg.dds"
-		expire = "1864.1.1"
-		ideology = christian
-		traits = { 
-		}
-	}
-
-	create_corps_commander = {
-		name = "Eduard von Kallee"
-		picture = "Portrait_WUR_Eduard_von_Kallee.dds"
-		traits = { infantry_officer trait_cautious }
-		skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 1
-	}
-
-	create_corps_commander = {
-		name = "Ferdinand von Zeppelin"
-		picture = "Portrait_WUR_Ferdinand_von_Zeppelin.dds"
-		traits = { cavalry_officer }
-		skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 3
-	}
-
-	create_corps_commander = {
-		name = "Oskar von Hardegg"
-		picture = "Portrait_WUR_Oskar_von_Hardegg.dds"
-		traits = { infantry_officer }
-		skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-	}
-	
-	create_corps_commander = {
-		name = "Hermann von Sachsen-Weimar-Eisenach"
-		picture = "Portrait_WUR_Hermann_von_Sachsen_Weimar_Eisenach.dds"
-		traits = { cavalry_officer }
-		skill = 3
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-	}
-	
+	#Theorists
+	recruit_character = WUR_theodor_wundt
 }

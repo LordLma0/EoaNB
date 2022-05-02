@@ -1,8 +1,10 @@
-state={
-	id=634
-	name="STATE_634"
+state = {
+	id =634
+	name = "STATE_634"
 
-	history={
+
+	local_supplies=0.0 
+	history = {
 		victory_points = {
 			1269 3
 		}
@@ -14,12 +16,18 @@ state={
 		buildings = {
 			infrastructure = 1 
 		}
+		
+		add_to_array = { state_culture_array = 399 } # Melanesian
+		add_to_array = { state_culture_array_num = 1 }
+
+		add_to_array = { state_religion_array = 20 } # Animist
+		add_to_array = { state_religion_array_num = 1 }
 	}
 
-	provinces={
+	provinces = {
 		1042 1085 1269 1358 1370 4226 4252 4292 4378 7437 10234 10291 10319 12265
 	}
-	manpower=72056
-	buildings_max_level_factor=1
-	state_category="small_island"
+	manpower =72056
+	buildings_max_level_factor = 1
+	state_category = "small_island"
 }

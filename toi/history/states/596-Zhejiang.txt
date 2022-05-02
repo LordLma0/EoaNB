@@ -1,10 +1,11 @@
-state=
-{
-	id=596
-	name="STATE_596"
+state = {
+	id =596
+	name = "STATE_596"
 	manpower = 20027000
+
+	local_supplies=0.0 
 	state_category = city
-	history={
+	history = {
 		owner = QNG
 		add_core_of = QNG
 		add_core_of = TAI
@@ -42,9 +43,20 @@ state=
 				set_province_controller = 7191
 			}
 		}
+		add_to_array = { state_culture_array = 511 }
+		add_to_array = { state_culture_array = 249 }
+		add_to_array = { state_culture_array = 254 }
+
+		add_to_array = { state_culture_array_num = 0.78 }
+		add_to_array = { state_culture_array_num = 0.20 }
+		add_to_array = { state_culture_array_num = 0.02 }
+
+		add_to_array = { state_religion_array = 50 }
+		
+		add_to_array = { state_religion_array_num = 1 }
 
 	}
-	provinces={
+	provinces = {
 		1055 1096 1168 1195 4013 4042 4099 7058 7086 7146 7174 7191 9944 9972 9974 10014 10058 10086 10101 11920 11947 11991 12059
 	}
 }

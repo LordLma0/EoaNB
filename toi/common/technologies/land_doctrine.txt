@@ -9,7 +9,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3
 		doctrine = yes
@@ -47,7 +47,7 @@ technologies = {
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
-				date > 1850.1.1
+ 
 				date < 1875.1.1
 			}
 			modifier = { 
@@ -110,7 +110,7 @@ technologies = {
 		xor = { doctrine_victorian_innovation doctrine_victorian_tradition doctrine_victorian_industry } 
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4.5
 		doctrine = yes
@@ -129,7 +129,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -146,7 +146,7 @@ technologies = {
 		xor = { doctrine_victorian_artillery_heavy }
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -160,7 +160,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -213,7 +213,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4.5
 		doctrine = yes
@@ -227,7 +227,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -276,7 +276,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3
 		doctrine = yes
@@ -290,7 +290,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -307,7 +307,7 @@ technologies = {
 		xor = { doctrine_victorian_artillery_light }
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 5
 		doctrine = yes
@@ -321,7 +321,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -340,7 +340,7 @@ technologies = {
 		army_artillery_defence_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3
 		doctrine = yes
@@ -354,7 +354,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -403,7 +403,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -417,7 +417,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -466,7 +466,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4.5
 		doctrine = yes
@@ -480,7 +480,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -495,7 +495,7 @@ technologies = {
 		army_morale_factor = 0.02
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -509,7 +509,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -558,7 +558,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -572,7 +572,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -587,7 +587,7 @@ technologies = {
 		experience_gain_army = 0.005
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2.5
 		doctrine = yes
@@ -601,7 +601,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -619,7 +619,7 @@ technologies = {
 		xor = { doctrine_victorian_innovation doctrine_victorian_artillery doctrine_victorian_industry} 
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2.5
 		doctrine = yes
@@ -633,7 +633,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -652,7 +652,7 @@ technologies = {
 		land_reinforce_rate = 0.005
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2
 		doctrine = yes
@@ -666,7 +666,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -707,7 +707,7 @@ technologies = {
 		#enemy_partisan_effect = -0.1
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2.5
 		doctrine = yes
@@ -726,7 +726,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -741,7 +741,7 @@ technologies = {
 		army_morale_factor = 0.04
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3
 		doctrine = yes
@@ -755,7 +755,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -771,7 +771,7 @@ technologies = {
 		special_forces_defence_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2.5
 		doctrine = yes
@@ -785,7 +785,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -801,7 +801,7 @@ technologies = {
 		winter_attrition_factor = -0.1
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2
 		doctrine = yes
@@ -815,7 +815,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -831,7 +831,7 @@ technologies = {
 		invasion_preparation = -0.5
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3
 		doctrine = yes
@@ -850,7 +850,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -865,7 +865,7 @@ technologies = {
 		defence = 0.04
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2
 		doctrine = yes
@@ -879,7 +879,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -894,7 +894,7 @@ technologies = {
 		training_time_army_factor = -0.03
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2.5
 		doctrine = yes
@@ -908,7 +908,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -923,7 +923,7 @@ technologies = {
 		conscription_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 1.5
 		doctrine = yes
@@ -937,7 +937,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -953,7 +953,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4.5
 		doctrine = yes
@@ -974,7 +974,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -991,7 +991,7 @@ technologies = {
 		xor = { doctrine_victorian_industry_land }
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1005,7 +1005,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -1024,7 +1024,7 @@ technologies = {
 		production_speed_dockyard_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 5
 		doctrine = yes
@@ -1038,7 +1038,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1055,7 +1055,7 @@ technologies = {
 		xor = { doctrine_victorian_industry_naval }
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -1069,7 +1069,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -1088,7 +1088,7 @@ technologies = {
 		production_speed_arms_factory_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -1102,7 +1102,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1118,7 +1118,7 @@ technologies = {
 		out_of_supply_factor = -0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1132,7 +1132,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1147,7 +1147,7 @@ technologies = {
 		experience_gain_army_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4.5
 		doctrine = yes
@@ -1161,7 +1161,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1176,7 +1176,7 @@ technologies = {
 		production_speed_naval_base_factor = 0.1
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2.5
 		doctrine = yes
@@ -1190,7 +1190,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1206,7 +1206,7 @@ technologies = {
 		production_speed_coastal_bunker_factor = 0.1
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 5.5
 		doctrine = yes
@@ -1220,7 +1220,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1238,7 +1238,7 @@ technologies = {
 		xor = { doctrine_victorian_tradition doctrine_victorian_artillery doctrine_victorian_industry} 
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4.5
 		doctrine = yes
@@ -1257,7 +1257,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -1276,7 +1276,7 @@ technologies = {
 		army_speed_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1290,7 +1290,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -1331,7 +1331,7 @@ technologies = {
 		mobilization_speed = 0.07
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3
 		doctrine = yes
@@ -1345,7 +1345,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1360,7 +1360,7 @@ technologies = {
 		research_speed_factor = 0.01
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -1374,7 +1374,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -1417,7 +1417,7 @@ technologies = {
 		army_leader_start_planning_level = 1
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1431,7 +1431,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1447,7 +1447,7 @@ technologies = {
 		army_armor_defence_factor = 0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 2.5
 		doctrine = yes
@@ -1466,7 +1466,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1483,7 +1483,7 @@ technologies = {
 		xor = { doctrine_victorian_innovation_new_navy }
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -1497,7 +1497,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -1516,7 +1516,7 @@ technologies = {
 		attrition = -0.05
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3
 		doctrine = yes
@@ -1530,7 +1530,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1547,7 +1547,7 @@ technologies = {
 		xor = { doctrine_victorian_innovation_air }
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1561,7 +1561,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 			modifier = {
 				factor = 0
@@ -1581,7 +1581,7 @@ technologies = {
 		navy_capital_ship_attack_factor = 0.02
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4.5
 		doctrine = yes
@@ -1595,7 +1595,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1610,7 +1610,7 @@ technologies = {
 		planning_speed = 0.1
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1624,7 +1624,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1643,7 +1643,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -1681,7 +1681,7 @@ technologies = {
 			modifier = { 
 				factor = 0 
 				afr_is_tribal = yes 
-				date > 1850.1.1 
+ 
 				date < 1875.1.1 
 			} 
 			modifier = { 
@@ -1712,7 +1712,7 @@ technologies = {
 		xor = { doctrine_machine_first_battle }
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1729,7 +1729,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1743,7 +1743,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1757,7 +1757,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1771,7 +1771,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1789,7 +1789,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1803,7 +1803,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1817,7 +1817,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1831,7 +1831,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1845,7 +1845,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1859,7 +1859,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1873,7 +1873,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1887,7 +1887,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1901,7 +1901,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1916,7 +1916,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1930,7 +1930,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1948,7 +1948,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1966,7 +1966,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -1981,7 +1981,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -1995,7 +1995,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2009,7 +2009,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2027,7 +2027,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2041,7 +2041,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2055,7 +2055,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2069,7 +2069,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2083,7 +2083,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2097,7 +2097,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2111,7 +2111,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2125,7 +2125,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2139,7 +2139,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2153,7 +2153,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2167,7 +2167,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2185,7 +2185,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2207,7 +2207,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2221,7 +2221,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2235,7 +2235,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2249,7 +2249,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2263,7 +2263,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2276,7 +2276,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2290,7 +2290,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2303,7 +2303,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2317,7 +2317,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2330,7 +2330,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2344,7 +2344,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2357,7 +2357,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2371,7 +2371,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2389,7 +2389,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2407,7 +2407,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2421,7 +2421,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2435,7 +2435,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2449,7 +2449,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2463,7 +2463,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2477,7 +2477,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2495,7 +2495,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2509,7 +2509,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2523,7 +2523,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2537,7 +2537,7 @@ technologies = {
 		
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2551,7 +2551,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2562,7 +2562,7 @@ technologies = {
 	}
 	doctrine_machine_maxim = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 4
 		doctrine = yes
@@ -2576,7 +2576,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1	
 		}
 		
@@ -2595,7 +2595,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -2616,7 +2616,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			
 			modifier = {
@@ -2634,7 +2634,7 @@ technologies = {
 	trench_warfare = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		max_dig_in = 5
@@ -2677,7 +2677,7 @@ technologies = {
 	wars_of_attrition = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		army_infantry_defence_factor = 0.1
@@ -2714,7 +2714,7 @@ technologies = {
 	dedicated_trench_infrastructure = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		production_speed_trench_factor = 0.3
@@ -2755,7 +2755,7 @@ technologies = {
 	static_warfare = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		max_dig_in = 5
@@ -2806,7 +2806,7 @@ technologies = {
 	armies_of_scale = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		conscription_factor = 0.05
@@ -2847,7 +2847,7 @@ technologies = {
 	constant_barrages = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		army_artillery_attack_factor = 0.07
@@ -2885,7 +2885,7 @@ technologies = {
 	we_want_you = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		non_core_manpower = 0.02
@@ -2925,7 +2925,7 @@ technologies = {
 	reinforced_trenches = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		production_speed_trench_factor = 0.3
@@ -2966,7 +2966,7 @@ technologies = {
 	doctrine_shock_troops = { # doctrine_ appended because of the unit "shock_troops"
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		#production_speed_trench_factor = 0.3
@@ -3004,7 +3004,7 @@ technologies = {
 	trench_clearing = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		#production_speed_trench_factor = 0.3
@@ -3043,7 +3043,7 @@ technologies = {
 	softening_bombardment = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		
@@ -3084,7 +3084,7 @@ technologies = {
 	support_integration = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		category_support_battalions = {
@@ -3125,7 +3125,7 @@ technologies = {
 	creeping_barrage = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		enable_tactic = creaping_barrage
@@ -3164,7 +3164,7 @@ technologies = {
 	over_the_top = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		enable_tactic = over_the_top
@@ -3209,7 +3209,7 @@ technologies = {
 	war_of_movement = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		army_infantry_attack_factor = 0.1
@@ -3246,7 +3246,7 @@ technologies = {
 	tactical_refining = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		path = {
@@ -3289,7 +3289,7 @@ technologies = {
 	integrate_tanks = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		path = {
@@ -3328,7 +3328,7 @@ technologies = {
 	integrate_aircraft = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		path = {
@@ -3367,7 +3367,7 @@ technologies = {
 	movable_artillery_position = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		path = {
@@ -3421,7 +3421,7 @@ technologies = {
 		}
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1
 		research_cost = 3.5
 		doctrine = yes
@@ -3430,7 +3430,7 @@ technologies = {
 			position = { x = 16 y = 56 }
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			
 			modifier = {
@@ -3451,7 +3451,7 @@ technologies = {
 		doctrine_name = "MOBILE_WARFARE_DOCTRINE"
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		xor = { mass_assault superior_firepower grand_battle_plan } 
@@ -3504,7 +3504,7 @@ technologies = {
 	delay = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		category_all_infantry = {
@@ -3551,7 +3551,7 @@ technologies = {
 
 		land_reinforce_rate = 0.02
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 
 		category_tanks = {
@@ -3608,7 +3608,7 @@ technologies = {
 	mobile_infantry = { #Branch focuses on infantry, included Motorised and Mechanised.
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		xor={
@@ -3687,7 +3687,7 @@ technologies = {
 	}
 	mass_motorization = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
 			max_organisation = 10
@@ -3730,7 +3730,7 @@ technologies = {
 	}
 	mechanised_offensive = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 
 		motorized = {
@@ -3794,7 +3794,7 @@ technologies = {
 	}
 	armored_spearhead = { #Branch focused on Tanks 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_tanks = {
 			max_organisation = 3
@@ -3847,7 +3847,7 @@ technologies = {
 	}
 	schwerpunk = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_tanks = {
 			max_organisation = 2
@@ -3895,7 +3895,7 @@ technologies = {
 	}
 	blitzkrieg = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_tanks = {
 			max_organisation = 1
@@ -3961,7 +3961,7 @@ technologies = {
 	}
 	kampfgruppe = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
 			default_morale = 0.2
@@ -4012,7 +4012,7 @@ technologies = {
 	}
 	firebrigades = { #Branch focused on mobile warfares
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor={
 			volkssturm
@@ -4066,7 +4066,7 @@ technologies = {
 	backhand_blow = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		enable_tactic = tactic_backhand_blow
 		
@@ -4100,7 +4100,7 @@ technologies = {
 	}
 	modern_blitzkrieg = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_tanks = {
 			max_organisation = 3
@@ -4151,7 +4151,7 @@ technologies = {
 	}
 	volkssturm = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor={
 			firebrigades
@@ -4200,7 +4200,7 @@ technologies = {
 	}
 	nd_conscription = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		conscription = 0.03
 
@@ -4235,7 +4235,7 @@ technologies = {
 	werwolf_guerillas = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		#Increased Partisan effect on your land occupied by others
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1 
@@ -4274,7 +4274,7 @@ technologies = {
 		doctrine_name = "SUPERIOR_FIREPOWER_DOCTRINE"
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		xor = { mobile_warfare grand_battle_plan mass_assault } 
@@ -4324,7 +4324,7 @@ technologies = {
 	}
 	sup_delay = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_light_infantry = {
 			max_organisation = 10
@@ -4366,7 +4366,7 @@ technologies = {
 	}
 	mobile_defence = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
 			defense = 0.10
@@ -4415,7 +4415,7 @@ technologies = {
 	}
 	intergrated_support = { #This Branch is focused on boosting stuff in the support column 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor={
 			dispersed_support
@@ -4463,7 +4463,7 @@ technologies = {
 	}
 	regimental_combat_teams = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_support_battalions = {
 			max_organisation = 10
@@ -4507,7 +4507,7 @@ technologies = {
 	}
 	dispersed_support = { # Branch is focused on support units as part of the regular brigades
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor = {
 			intergrated_support
@@ -4553,7 +4553,7 @@ technologies = {
 	}
 	overwhelming_firepower = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_line_artillery = {
 			soft_attack = 0.10
@@ -4597,7 +4597,7 @@ technologies = {
 	}
 	sup_mechanized_offensive = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_armor = {
 			breakthrough = 0.10
@@ -4647,7 +4647,7 @@ technologies = {
 	}
 	concentrated_fire_plans = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor = {
 			centralized_fire_control
@@ -4693,7 +4693,7 @@ technologies = {
 	}
 	combined_arms = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		category_all_armor = {
@@ -4747,7 +4747,7 @@ technologies = {
 	}
 	tactical_control = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		land_reinforce_rate = 0.02
 	
@@ -4789,7 +4789,7 @@ technologies = {
 	}
 	air_land_battle = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_front_line = {
 			max_organisation = 5
@@ -4833,7 +4833,7 @@ technologies = {
 	}
 	centralized_fire_control = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor = {
 			concentrated_fire_plans
@@ -4883,7 +4883,7 @@ technologies = {
 
 		land_reinforce_rate = 0.02
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_recon = {
 			recon = 1
@@ -4925,7 +4925,7 @@ technologies = {
 	}
 	advanced_firebases = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		category_all_infantry = {
@@ -4982,7 +4982,7 @@ technologies = {
 	}
 	shock_and_awe = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		category_front_line = {
@@ -5038,7 +5038,7 @@ technologies = {
 		doctrine_name = "GRAND_BATTLEPLAN_DOCTRINE"
 	
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		path = {
@@ -5091,7 +5091,7 @@ technologies = {
 	refined_trench_warfare = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 	
 		max_dig_in = 5
@@ -5134,7 +5134,7 @@ technologies = {
 	}
 	prepared_defense = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
 			defense = 0.10
@@ -5177,7 +5177,7 @@ technologies = {
 	}
 	grand_assault = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_army = {
 			breakthrough = 0.10
@@ -5226,7 +5226,7 @@ technologies = {
 	}
 	grand_mechanized_offensive = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor = {
 			infantry_offensive
@@ -5286,7 +5286,7 @@ technologies = {
 	}
 	assault_concentration = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		max_planning = 0.1
 
@@ -5329,7 +5329,7 @@ technologies = {
 	}
 	branch_interoperation = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
 			max_organisation = 5
@@ -5377,7 +5377,7 @@ technologies = {
 	}
 	assault_breakthrough = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_army = {
 			breakthrough = 0.10
@@ -5423,7 +5423,7 @@ technologies = {
 	}
 	central_planning = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		max_planning = 0.1
 		
@@ -5464,7 +5464,7 @@ technologies = {
 	}
 	c3i_theory = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		land_reinforce_rate = 0.02
 		category_all_infantry = {
@@ -5513,7 +5513,7 @@ technologies = {
 	}
 	infantry_offensive = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor = {
 			grand_mechanized_offensive
@@ -5561,7 +5561,7 @@ technologies = {
 	}
 	armored_operations = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_tanks = {
 			max_organisation = 2
@@ -5615,7 +5615,7 @@ technologies = {
 	infiltration_assault = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		supply_consumption_factor = -0.10
 		
@@ -5655,7 +5655,7 @@ technologies = {
 	}
 	night_assault_tactics = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		#reduce land night combat penalty
 		land_night_attack = 0.25 # negates half of base penalty
@@ -5699,7 +5699,7 @@ technologies = {
 	}
 	attritional_containment = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
 			max_organisation = 5
@@ -5747,7 +5747,7 @@ technologies = {
 	}
 	infiltration_in_depth = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		land_reinforce_rate = 0.02
 		
@@ -5793,7 +5793,7 @@ technologies = {
 		doctrine_name = "MASS_ASSAULT_DOCTRINE"
 		
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor = { mobile_warfare superior_firepower grand_battle_plan } 
 
@@ -5840,7 +5840,7 @@ technologies = {
 	pocket_defence = {
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		#reduced pocketed combat penalty and/or reduces the out of supply penalty or increases time before moving to worse penalty
 		no_supply_grace = 48 # more hours before supply penalty changes
@@ -5881,7 +5881,7 @@ technologies = {
 	}
 	defence_in_depth = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		max_dig_in = 5
 
@@ -5929,7 +5929,7 @@ technologies = {
 	}
 	large_front_operations = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		xor = {
 			peoples_army
@@ -6001,7 +6001,7 @@ technologies = {
 		}
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		enable_tactic = tactic_blitz
 		
@@ -6041,7 +6041,7 @@ technologies = {
 	}
 	operational_concentration = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		max_planning = 0.10
 		land_reinforce_rate = 0.05
@@ -6083,7 +6083,7 @@ technologies = {
 	}
 	vast_offensives = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		supply_consumption_factor = -0.10
 		
@@ -6129,7 +6129,7 @@ technologies = {
 	}
 	breakthrough_priority = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_tanks = {
 			max_organisation = 1
@@ -6184,7 +6184,7 @@ technologies = {
 			max_organisation = 2
 		}
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_armor = {
 			default_morale = 0.1
@@ -6243,7 +6243,7 @@ technologies = {
 	}
 	continuous_offensive = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		org_loss_when_moving = -0.25
 		land_reinforce_rate = 0.05
@@ -6290,7 +6290,7 @@ technologies = {
 		}
 
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		#Increased Partisan effect on your land occupied by others
@@ -6350,7 +6350,7 @@ technologies = {
 	}
 	human_infantry_offensive = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		infantry = {
 			default_morale = 0.30
@@ -6392,7 +6392,7 @@ technologies = {
 	}
 	large_front_offensive = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
 			max_organisation = 10
@@ -6442,7 +6442,7 @@ technologies = {
 
 		conscription = 0.05
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		infantry = {
 			combat_width = -0.4
@@ -6486,7 +6486,7 @@ technologies = {
 	}
 	guerilla_warfare = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		out_of_supply_factor = -0.30
 		category_army = {
@@ -6533,7 +6533,7 @@ technologies = {
 	
 	doctrine_modern_arms = {
 		xp_research_type = army
-		xp_research_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		category_army = {
 			default_morale = 0.2

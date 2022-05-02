@@ -1,7 +1,4 @@
 eoanb_category_diplomatic_actions = {
-	lar_local_recruitment = {
-		allowed = { always = yes }
-	}
 	Minor_Greek_Influence = {
 	
 		visible = {
@@ -342,14 +339,17 @@ eoanb_category_diplomatic_actions = {
 			
 			modifier = {
 				factor = 0 
-				tag = PRS
-				NOT = { PRS_trigger_formed_germany = yes }
+				OR = {
+					AND = {
+						tag = PRS
+						NOT = { PRS_trigger_formed_germany = yes }
+					}
+					tag = AUS
+				}
 			}
 		}
 		
 	}
-	
-
 	Major_Greek_Influence = {
 	
 		visible = {
@@ -562,10 +562,14 @@ eoanb_category_diplomatic_actions = {
 			
 			modifier = {
 				factor = 0 
-				tag = PRS
-				NOT = { PRS_trigger_formed_germany = yes }
+				OR = {
+					AND = {
+						tag = PRS
+						NOT = { PRS_trigger_formed_germany = yes }
+					}
+					tag = AUS
+				}
 			}
 		}
 	}
-
 }

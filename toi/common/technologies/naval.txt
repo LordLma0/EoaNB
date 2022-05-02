@@ -59,7 +59,7 @@ technologies = {
 			steam_engine = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1800
 		folder = {
 			name = naval_folder
@@ -73,7 +73,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -96,7 +96,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = naval_folder
@@ -110,7 +110,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -134,7 +134,7 @@ technologies = {
 			high_speed_steam_engine = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = naval_folder
@@ -148,7 +148,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -167,7 +167,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = naval_folder
@@ -181,7 +181,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -200,7 +200,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = naval_folder
@@ -214,7 +214,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -237,7 +237,7 @@ technologies = {
 			impulse_steam_turbine = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = naval_folder
@@ -251,7 +251,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -274,7 +274,7 @@ technologies = {
 			ljungstrom_turbine = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = naval_folder
@@ -288,7 +288,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -311,7 +311,7 @@ technologies = {
 			petrol_combustion_engine = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1914
 		folder = {
 			name = naval_folder
@@ -325,7 +325,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -344,7 +344,7 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1935
 		folder = {
 			name = naval_folder
@@ -358,7 +358,7 @@ technologies = {
 			naval_mtg_gunboat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -377,7 +377,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = naval_folder
@@ -391,7 +391,7 @@ technologies = {
 			naval_mtg_monitor_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -410,7 +410,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = naval_folder
@@ -424,7 +424,7 @@ technologies = {
 			naval_mtg_monitor_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -444,7 +444,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1880
 		folder = {
 			name = naval_folder
@@ -458,7 +458,7 @@ technologies = {
 			naval_mtg_monitor_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -489,7 +489,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1896
 		folder = {
 			name = naval_folder
@@ -503,7 +503,7 @@ technologies = {
 			naval_mtg_monitor_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -534,7 +534,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1850
 		folder = {
 			name = naval_folder
@@ -548,7 +548,7 @@ technologies = {
 			naval_mtg_corvette_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -567,7 +567,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1852
 		folder = {
 			name = naval_folder
@@ -581,7 +581,7 @@ technologies = {
 			naval_mtg_corvette_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -600,7 +600,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1860
 		folder = {
 			name = naval_folder
@@ -614,7 +614,7 @@ technologies = {
 			naval_mtg_corvette_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -637,7 +637,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1865
 		folder = {
 			name = naval_folder
@@ -651,7 +651,7 @@ technologies = {
 			naval_mtg_corvette_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -670,7 +670,7 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1875
 		folder = {
 			name = naval_folder
@@ -684,7 +684,7 @@ technologies = {
 			naval_mtg_corvette_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -707,7 +707,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1875
 		folder = {
 			name = naval_folder
@@ -721,7 +721,7 @@ technologies = {
 			naval_mtg_torpedo_boat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -748,7 +748,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1884
 		folder = {
 			name = naval_folder
@@ -762,7 +762,7 @@ technologies = {
 			naval_mtg_torpedo_boat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -785,7 +785,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1890
 		folder = {
 			name = naval_folder
@@ -799,7 +799,7 @@ technologies = {
 			naval_mtg_torpedo_boat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -822,7 +822,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1905
 		folder = {
 			name = naval_folder
@@ -836,7 +836,7 @@ technologies = {
 			naval_mtg_torpedo_boat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -859,7 +859,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1915
 		folder = {
 			name = naval_folder
@@ -873,7 +873,7 @@ technologies = {
 			naval_mtg_torpedo_boat_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -896,7 +896,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1890
 		folder = {
 			name = naval_folder
@@ -910,7 +910,7 @@ technologies = {
 			naval_mtg_destroyer_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -933,7 +933,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1900
 		folder = {
 			name = naval_folder
@@ -947,7 +947,7 @@ technologies = {
 			naval_mtg_destroyer_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -970,7 +970,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1910
 		folder = {
 			name = naval_folder
@@ -984,7 +984,7 @@ technologies = {
 			naval_mtg_destroyer_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1007,7 +1007,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1914
 		folder = {
 			name = naval_folder
@@ -1021,7 +1021,7 @@ technologies = {
 			naval_mtg_destroyer_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1044,7 +1044,7 @@ technologies = {
 			# tech_naval_mtg_steam_driven_single_screw_propeller = 1
 		# }
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1916
 		folder = {
 			name = naval_folder
@@ -1058,7 +1058,7 @@ technologies = {
 			naval_mtg_destroyer_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1078,7 +1078,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1800
 		folder = {
 			name = naval_folder
@@ -1092,7 +1092,7 @@ technologies = {
 			naval_mtg_frigate_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1115,7 +1115,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1850
 		folder = {
 			name = naval_folder
@@ -1129,7 +1129,7 @@ technologies = {
 			naval_mtg_frigate_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1147,7 +1147,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1865
 		folder = {
 			name = naval_folder
@@ -1161,7 +1161,7 @@ technologies = {
 			naval_mtg_frigate_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1180,7 +1180,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1800
 		folder = {
 			name = naval_folder
@@ -1194,7 +1194,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1213,7 +1213,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = naval_folder
@@ -1227,7 +1227,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1246,7 +1246,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = naval_folder
@@ -1260,7 +1260,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1279,7 +1279,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = naval_folder
@@ -1293,7 +1293,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1316,7 +1316,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = naval_folder
@@ -1330,7 +1330,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1349,7 +1349,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = naval_folder
@@ -1363,7 +1363,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1382,7 +1382,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = naval_folder
@@ -1396,7 +1396,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1415,7 +1415,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = naval_folder
@@ -1429,7 +1429,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1448,7 +1448,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = naval_folder
@@ -1462,7 +1462,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1482,7 +1482,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = naval_folder
@@ -1496,7 +1496,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1515,7 +1515,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = naval_folder
@@ -1529,7 +1529,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1548,7 +1548,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = naval_folder
@@ -1562,7 +1562,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1581,7 +1581,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = naval_folder
@@ -1595,7 +1595,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1614,7 +1614,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = naval_folder
@@ -1628,7 +1628,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1647,7 +1647,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = naval_folder
@@ -1661,7 +1661,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1680,7 +1680,7 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1918
 		folder = {
 			name = naval_folder
@@ -1694,7 +1694,7 @@ technologies = {
 			naval_mtg_lineship_hulls_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1714,9 +1714,9 @@ technologies = {
 		}
 
 		xp_research_type = navy
-		xp_research_cost = 25
+		xp_boost_cost = 25
 		xp_research_bonus = 1
-		research_cost = 1.2
+		research_cost = 0.12
 		start_year = 1800
 		folder = {
 			name = naval_folder
@@ -1728,7 +1728,7 @@ technologies = {
 			naval_mtg_module_transport_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1749,9 +1749,9 @@ technologies = {
 		}
 
 		xp_research_type = navy
-		xp_research_cost = 25
+		xp_boost_cost = 25
 		xp_research_bonus = 1
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1860
 		folder = {
 			name = naval_folder
@@ -1763,7 +1763,7 @@ technologies = {
 			naval_mtg_module_transport_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1784,9 +1784,9 @@ technologies = {
 		}
 
 		xp_research_type = navy
-		xp_research_cost = 25
+		xp_boost_cost = 25
 		xp_research_bonus = 1
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1880
 		folder = {
 			name = naval_folder
@@ -1798,7 +1798,7 @@ technologies = {
 			naval_mtg_module_transport_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1822,9 +1822,9 @@ technologies = {
 		}
 
 		xp_research_type = navy
-		xp_research_cost = 25
+		xp_boost_cost = 25
 		xp_research_bonus = 1
-		research_cost = 1.35
+		research_cost = 0.135
 		start_year = 1900
 		folder = {
 			name = naval_folder
@@ -1836,7 +1836,7 @@ technologies = {
 			naval_mtg_module_transport_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1859,9 +1859,9 @@ technologies = {
 		amphibious_invasion_defence = 0.2
 
 		xp_research_type = navy
-		xp_research_cost = 25
+		xp_boost_cost = 25
 		xp_research_bonus = 1
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1916
 		folder = {
 			name = naval_folder
@@ -1873,7 +1873,7 @@ technologies = {
 			naval_mtg_module_transport_tech
 		}
 
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 1
 			modifier = {
 				factor = 1.5
@@ -1894,7 +1894,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1940
 		
 		folder = {
@@ -1902,7 +1902,7 @@ technologies = {
 			position = { x = 28 y = @1940}
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 2
 			
 			modifier = {
@@ -1951,14 +1951,14 @@ technologies = {
 		amphibious_invasion_defence = 0.5
 		naval_invasion_capacity = 100
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1944
 		folder = {
 			name = naval_folder
 			position = { x = 28 y = @1944}
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0 num_of_naval_factories < 3 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 			factor = 2
 			
 			modifier = {

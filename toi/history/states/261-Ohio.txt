@@ -2,6 +2,8 @@ state = {
 	id = 261
 	name = "STATE_261"
 	manpower = 2339511
+
+	local_supplies=0.0 
 	resources = {
 		iron = 4
 		coal = 14
@@ -20,6 +22,12 @@ state = {
 			farm = 2
 			industrial_complex = 1
 			fabric_weavery = 1
+			6890 = {
+				supply_node = 1
+			}
+			689 = {
+				supply_node = 1
+			}
 		}
 
 		victory_points = { 11776 2 }

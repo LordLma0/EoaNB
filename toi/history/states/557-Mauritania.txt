@@ -1,17 +1,19 @@
 
-state={
-	id=557
-	name="STATE_557" # Mauritania
+state = {
+	id =557
+	name = "STATE_557" # Mauritania
+
+	local_supplies=0.0 
 	manpower = 24235
 
 	state_category = wasteland
 
 	
 
-	provinces={
+	provinces = {
 		1962 7943
 	}
-	history={
+	history = {
 		buildings = {
 			infrastructure = 0
 		}

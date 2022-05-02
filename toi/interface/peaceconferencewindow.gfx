@@ -49,9 +49,9 @@ spriteTypes = {
 
 	corneredTileSpriteType = {
 		name = "GFX_tiled_peace_upper_bar"
-		size= { x=363 y=96 }
+		size = { x = 363 y = 96 }
 		textureFile = "gfx/interface/tiles/tiled_peace_upper_bar.dds"
-		borderSize = { x=52 y=52 }
+		borderSize = { x = 52 y = 52 }
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
     }
@@ -65,6 +65,18 @@ spriteTypes = {
 		name = "GFX_conference_action_entry_bg"
 		texturefile = "gfx/interface/conference_action_entry_bg.dds"
 		noOfFrames = 3		
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_tutorial_peace_conference_glow"
+		texturefile = "gfx//interface//tutorial//tut_peace_conference_done.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
 
 }

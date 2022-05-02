@@ -2,19 +2,22 @@
 state = {
 	id = 144
 	name = "STATE_144"
+
+	local_supplies=0.0 
 	manpower = 177023
 
 	state_category = rural
 
 	resources = {
-		iron=2
+		iron = 2
 		wood = 10
 	}
 
 	history = {
 		owner = NOR
+		remove_core_of = NOR
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 			192 = {
 				naval_base = 1
 			}
@@ -34,15 +37,19 @@ state = {
 		victory_points = {
 			9116 1
 		}
-		add_core_of = NOR
-		add_core_of = SMI
+
+
 		add_to_array = { state_culture_array = 31 } # Norwegian
-		add_to_array = { state_culture_array_num = 0.513 }
+		add_to_array = { state_culture_array_num = 0.713 }
 		add_to_array = { state_culture_array = 28 } # Sami
-		add_to_array = { state_culture_array_num = 0.487 }
+		add_to_array = { state_culture_array_num = 0.253 }
+		add_to_array = { state_culture_array = 23 } # Finnish
+		add_to_array = { state_culture_array_num = 0.034 }
 
 		add_to_array = { state_religion_array = 3 } # Protestant
-		add_to_array = { state_religion_array_num = 1 }
+		add_to_array = { state_religion_array_num = 0.78 }
+		add_to_array = { state_religion_array = 53 } # Ukonusko
+		add_to_array = { state_religion_array_num = 0.22 }
 	}
 
 	provinces = {

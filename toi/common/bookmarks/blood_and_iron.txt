@@ -48,7 +48,7 @@ bookmarks = {
       }
     } 
 
-    "PIE" = {
+    "ITA" = {
       history = "ITA_BLOOD_AND_IRON_DESC"
       ideology = centrism
       ideas={
@@ -57,6 +57,24 @@ bookmarks = {
       }
     }    
 	
+	"JAP" = {
+		history = "JAP_BLOOD_AND_IRON_DESC"
+		ideology = autocracy
+		ideas = {
+		}
+		focuses = {
+		}
+	}
+
+	"AUS" = {
+		history = "AUS_BLOOD_AND_IRON_DESC"
+		ideology = autocracy
+		minor = yes
+		ideas = {
+		}
+		focuses = {
+		}
+	}
 
 	"---" = {
 			history = "OTHER_EONAB_DESC"

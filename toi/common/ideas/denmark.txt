@@ -1,5 +1,11 @@
 ideas = {
+	
+	##### COUNTRY IDEAS #####
+	
 	country = {
+		
+		### GENERAL SPIRITS ###
+		
 		DEN_idea_london_protocol = {
 			allowed = {
 				original_tag = DEN
@@ -7,10 +13,12 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = HUN_treaty_of_triannon
+			picture = DEN_london_protocol
 
 			modifier = {
-
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_factor = 0.05
 			}
 		}
 		
@@ -27,22 +35,376 @@ ideas = {
 				stability_factor = 0.1
 			}
 		}
+		
+		### ECONOMIC SPIRITS ###
 
-		DEN_Colonial_Purchases = {
+		DEN_idea_sound_toll_compensation = {
 			allowed = {
-				always = no
+				original_tag = DEN
 			}
-
-			removal_cost = -1
 
 			allowed_civil_war = {
 				always = yes
 			}
 
-			picture = chi_hyper_inflation3
+			removal_cost = -1
+
+			picture = SPR_seize_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		
+		DEN_idea_infrastructure_projects = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+		
+		DEN_idea_danske_statsbaner = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DEN_danske_statsbaner
+
+			modifier = {
+				production_speed_rail_way_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.03
+				local_resources = 0.05
+			}
+		}
+		
+		DEN_idea_infrastructure_projects_helstaten = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
 
 			modifier = {
 				consumer_goods_factor = 0.05
+			}
+		}
+		
+		DEN_idea_danish_demographics_1 = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SCH_major_danish_population
+
+			modifier = {
+				MONTHLY_POPULATION = 0.02
+			}
+			
+			research_bonus = {
+				biochemistry_tech = 0.02
+			}
+		}
+		
+		DEN_idea_danish_demographics_2 = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SCH_major_danish_population
+
+			modifier = {
+				MONTHLY_POPULATION = 0.04
+			}
+			
+			research_bonus = {
+				biochemistry_tech = 0.04
+			}
+		}
+		
+		DEN_idea_industrialization_efforts = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		
+		DEN_idea_hansen_writing_ball = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DEN_hansen_writing_ball
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		
+		DEN_idea_danske_bank = {
+			allowed = {
+				original_tag = DEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_profits_gold_rush
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_factor = -0.03
+			}
+			
+			research_bonus = {
+				humanities_tech = 0.02
+			}
+		}
+		
+		DEN_idea_hamburg_trade_influence_1 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {
+			    country_exists = HAM
+			}
+
+			removal_cost = -1
+			
+			picture = DEN_HAM_trade_influence
+
+			modifier = {
+			    production_factory_max_efficiency_factor = 0.05
+                production_speed_buildings_factor = 0.05
+                consumer_goods_factor = 0.01
+				political_power_gain = -0.10
+				trade_laws_cost_factor = 0.05
+				trade_opinion_factor = -0.05
+			}
+		}
+		
+		DEN_idea_hamburg_trade_influence_2 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = DEN_HAM_trade_influence
+
+			modifier = {
+			    production_factory_max_efficiency_factor = 0.05
+                production_speed_buildings_factor = 0.05
+                consumer_goods_factor = -0.01
+				trade_laws_cost_factor = -0.05
+			}
+		}
+		
+		DEN_idea_lubeck_trade_influence_1 = {
+			allowed = {
+				always = yes
+			}
+			
+			available = {
+			    country_exists = LCK
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = DEN_LCK_trade_influence
+
+			modifier = {
+			    production_factory_max_efficiency_factor = 0.1
+                consumer_goods_factor = 0.01
+				political_power_gain = -0.05
+			}
+		}
+		
+		DEN_idea_lubeck_trade_influence_2 = {
+			allowed = {
+				always = yes
+			}
+			
+			available = {
+			    country_exists = LCK
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = DEN_LCK_trade_influence
+
+			modifier = {
+			    production_factory_max_efficiency_factor = 0.05
+                consumer_goods_factor = -0.01
+				political_power_gain = 0.05
+			}
+		}
+		
+		### MILITARY SPIRITS ###
+		
+		DEN_idea_victors_of_first_schleswig_war = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = DEN_victors_of_the_first_schleswig_war
+
+			modifier = {
+			    political_power_gain = -0.2
+				experience_gain_army_factor = -0.05
+				training_time_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				army_morale_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		DEN_idea_wartime_battalion_duplication = {
+			allowed = {
+				has_war = yes
+			}
+			
+			cancel = {
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = DEN_victors_of_the_first_schleswig_war
+
+			modifier = {
+			    mobilization_speed = 0.5
+				conscription = 0.003
+				army_infantry_attack_factor = -0.05
+				weekly_manpower = 15
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						has_manpower > 5999
+					}
+					load_oob = "DEN_mobilized_wartime_battalions"
+					add_manpower = -6000
+				}
+			}
+			
+			on_remove = {
+				if = {
+					limit = {
+						has_template = "Danish Line Battalion (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Danish Line Battalion (mob.)"
+						disband = yes
+					}
+				}
+			}
+		}
+		
+		DEN_idea_frilodsmaend = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = DEN_victors_of_the_first_schleswig_war
+
+			modifier = {
+			    conscription = 0.005
+				army_infantry_attack_factor = -0.05
+				experience_gain_army_unit_factor = -0.05
 			}
 		}
 		
@@ -72,8 +434,28 @@ ideas = {
 				defense_bonus_against = 0.15
 			}
 		}
+		
+		DEN_idea_pomerania_blockade = {
+			allowed = {
+				always = yes
+			}
 
-		DEN_Lost_Schleswig_War = {
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation3
+
+			modifier = {
+			    stability_weekly = -0.01
+				war_support_weekly = -0.01
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		DEN_idea_lost_second_schleswig_war = {
 			allowed = {
 				always = no
 			}
@@ -94,7 +476,7 @@ ideas = {
 			}
 		}
 
-		DEN_Lost_Schleswig_War_2 = {
+		DEN_idea_lost_second_schleswig_war_2 = {
 			allowed = {
 				always = no
 			}
@@ -115,7 +497,7 @@ ideas = {
 			}
 		}
 
-		DEN_Lost_Schleswig_War_3 = {
+		DEN_idea_lost_second_schleswig_war_3 = {
 			allowed = {
 				always = no
 			}
@@ -136,7 +518,7 @@ ideas = {
 			}
 		}
 
-		DEN_Lost_Schleswig_War_4 = {
+		DEN_idea_lost_second_schleswig_war_4 = {
 			allowed = {
 				always = no
 			}
@@ -157,7 +539,7 @@ ideas = {
 			}
 		}
 
-		DEN_Lost_Schleswig_War_5 = {
+		DEN_idea_lost_second_schleswig_war_5 = {
 			allowed = {
 				always = no
 			}
@@ -176,26 +558,9 @@ ideas = {
 				army_morale_factor = -0.06
 			}
 		}
-
-		DEN_the_scanidavian_monatry_union = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_constitutional_guarantees
-
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-
-		DEN_schleswig_is_dannish = {
+		
+		#obsolote?
+		DEN_idea_schleswig_is_danish_1 = {
 			allowed = {
 				always = no
 			}
@@ -205,11 +570,11 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			modifier = {
-				conscription = 0.0025
+				conscription = 0.002
 			}
 		}
 
-		DEN_schleswig_is_dannish2 = {
+		DEN_idea_schleswig_is_danish_2 = {
 			allowed = {
 				always = no
 			}
@@ -219,73 +584,11 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			modifier = {
-				conscription = 0.005
+				conscription = 0.004
 			}
 		}
-
-		DEN_keept_our_colony = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = chi_hyper_inflation3
-
-			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-
-		DEN_winners_of_war = {
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			picture = chi_hyper_inflation3
-
-			modifier = {
-			    political_power_gain = -0.2
-				experience_gain_army_factor = -0.05
-				training_time_factor = 0.05
-				army_infantry_defence_factor = 0.05
-				army_morale_factor = 0.05
-				stability_factor = 0.05
-			}
-		}
-
-		DEN_new_buisness_act = {
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			picture = chi_hyper_inflation3
-
-			modifier = {
-                production_factory_max_efficiency_factor = 0.05
-                production_speed_buildings_factor = 0.05
-                consumer_goods_factor = -0.01
-				political_power_gain = -0.15
-			}
-		}
-
-		DEN_won_second_schleswig_War1 = {
+		
+		DEN_idea_won_second_schleswig_war_1 = {
 			allowed = {
 				always = no
 			}
@@ -306,7 +609,7 @@ ideas = {
 			}
 		}
 
-		DEN_won_second_schleswig_War2 = {
+		DEN_idea_won_second_schleswig_war_2 = {
 			allowed = {
 				always = no
 			}
@@ -327,7 +630,7 @@ ideas = {
 			}
 		}
 
-		DEN_won_second_schleswig_War3 = {
+		DEN_idea_won_second_schleswig_war_3 = {
 			allowed = {
 				always = no
 			}
@@ -348,17 +651,74 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
+		
+		### DANISH IMPERIALISM ###
+		
+		DEN_idea_danish_colonies_1 = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
 
-		DEN_buy_west_aro = {
+			picture = DEN_colonies
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		DEN_icelandic_independence_movement_1 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = DEN_icelandic_resistance
+
+			modifier = {
+			    stability_factor = -0.02
+				war_support_factor = -0.01
+				political_power_factor = -0.05
+			}
+		}
+		
+		DEN_icelandic_independence_movement_2 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = DEN_icelandic_resistance
+
+			modifier = {
+			    stability_factor = -0.01
+				war_support_factor = -0.01
+				political_power_factor = -0.03
+			}
+		}
+		
+		#obsolete?
+		DEN_idea_colonial_purchases = {
 			allowed = {
 				always = no
 			}
 
+			removal_cost = -1
+
 			allowed_civil_war = {
 				always = yes
 			}
-			
-			removal_cost = -1
 
 			picture = chi_hyper_inflation3
 
@@ -385,6 +745,24 @@ ideas = {
 			}
 		}
 		
+		DEN_kept_our_colony = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation3
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		
 		DEN_den_bought_west_aro = {
 			allowed = {
 				always = no
@@ -400,6 +778,28 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.05
+			}
+		}
+		
+		#Obsolete
+		DEN_new_buisness_act = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation3
+
+			modifier = {
+                production_factory_max_efficiency_factor = 0.05
+                production_speed_buildings_factor = 0.05
+                consumer_goods_factor = -0.01
+				political_power_gain = -0.15
 			}
 		}
 		
@@ -439,8 +839,8 @@ ideas = {
 			    conscription = -0.001
 			}
 		}
-		
-		DEN_pomerania_blockade = {
+
+		DEN_unbelievable_triumph = {
 			allowed = {
 				always = yes
 			}
@@ -451,16 +851,16 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = chi_hyper_inflation3
+			picture = DEN_imperial_control
 
 			modifier = {
-			    stability_weekly = -0.01
-				war_support_weekly = -0.01
-				consumer_goods_factor = 0.05
+			    stability_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
 			}
 		}
-		
-		DEN_hamburg_industry_influence_1 = {
+
+		DEN_ger_will_return = {
 			allowed = {
 				always = yes
 			}
@@ -468,26 +868,19 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
-			available = {
-			    country_exists = HAM
-			}
 
 			removal_cost = -1
-			
-			picture = DEN_HAM_trade_influence
+
+			picture = DEN_imperial_control
 
 			modifier = {
-			    production_factory_max_efficiency_factor = 0.05
-                production_speed_buildings_factor = 0.05
-                consumer_goods_factor = 0.01
-				political_power_gain = -0.10
-				trade_laws_cost_factor = 0.05
-				trade_opinion_factor = -0.05
+			    war_support_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
 			}
 		}
-		
-		DEN_hamburg_industry_influence_2 = {
+
+		DEN_defensive_construction = {
 			allowed = {
 				always = yes
 			}
@@ -497,24 +890,17 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			picture = DEN_HAM_trade_influence
+
+			picture = DEN_imperial_control
 
 			modifier = {
-			    production_factory_max_efficiency_factor = 0.05
-                production_speed_buildings_factor = 0.05
-                consumer_goods_factor = -0.01
-				trade_laws_cost_factor = -0.05
+			    production_speed_bunker_factor = 0.2
 			}
 		}
-		
-		DEN_trade_lubeck_1 = {
+
+		DEN_perseverance= {
 			allowed = {
 				always = yes
-			}
-			
-			available = {
-			    country_exists = LCK
 			}
 
 			allowed_civil_war = {
@@ -522,23 +908,19 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			picture = DEN_LCK_trade_influence
+
+			picture = DEN_imperial_control
 
 			modifier = {
-			    production_factory_max_efficiency_factor = 0.1
-                consumer_goods_factor = 0.01
-				political_power_gain = -0.05
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
 			}
 		}
-		
-		DEN_trade_lubeck_2 = {
+
+		DEN_perseverance2= {
 			allowed = {
 				always = yes
-			}
-			
-			available = {
-			    country_exists = LCK
 			}
 
 			allowed_civil_war = {
@@ -546,17 +928,17 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			picture = DEN_LCK_trade_influence
+
+			picture = DEN_imperial_control
 
 			modifier = {
-			    production_factory_max_efficiency_factor = 0.05
-                consumer_goods_factor = -0.01
-				political_power_gain = 0.05
+				army_core_defence_factor = 0.02
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
 			}
 		}
-		
-		DEN_icelandic_independence_movement_1 = {
+
+		DEN_costly_victory = {
 			allowed = {
 				always = yes
 			}
@@ -566,17 +948,17 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			picture = DEN_icelandic_independence
+
+			picture = DEN_imperial_control
 
 			modifier = {
-			    stability_factor = -0.02
-				war_support_factor = -0.01
-				political_power_factor = -0.05
+			    stability_factor = 0.05
+				production_speed_industrial_complex_factor = 0.02
+				production_speed_infrastructure_factor = 0.02
 			}
 		}
-		
-		DEN_icelandic_independence_movement_2 = {
+
+		DEN_embarrassingly_trounced1= {
 			allowed = {
 				always = yes
 			}
@@ -586,139 +968,198 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			picture = DEN_icelandic_independence
+
+			picture = DEN_imperial_control
 
 			modifier = {
-			    stability_factor = -0.01
-				war_support_factor = -0.01
-				political_power_factor = -0.03
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.1
+				army_defence_factor = -0.5
+			}
+		}
+
+		DEN_embarrassingly_trounced2= {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = DEN_imperial_control
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		DEN_embarrassingly_trounced3= {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = DEN_imperial_control
+
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.1
+				army_defence_factor = -0.5
+			}
+		}
+
+		DEN_recovery = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = DEN_imperial_control
+
+			modifier = {
+				industry_repair_factor = 0.1
+				production_speed_buildings_factor = 0.1
 			}
 		}
 	}
+	
+	
+	##### COMPANIES #####
+	
+	naval_manufacturer = {
 
-	political_advisor = {
+		designer = yes
 
-		DEN_Johan_Fridolin_Hassel = {
-
-			picture = DEN_Johan_Fridolin_Hassel
-
-			allowed = {
-				original_tag = DEN
-			}
-
-			traits = {
-				clever_buisnessman
-			}
-
-			visible = {
-				has_completed_focus = DEN_hassel_teudt
-			}
-		}
-
-		DEN_Carl_Frederik_Tietgen = {
-
-			picture = DEN_Carl_Frederik_Tietgen
+		orlogsvaerftet = {
 
 			allowed = {
 				original_tag = DEN
-			}
-
-			traits = {
-				friend_of_capitalism eoanb_trait_industrial_investor
-			}
-
-			visible = {
-				date < 1901.10.19
 			}
 			
 			available = {
-				date < 1901.10.19
+				owns_state = 37
 			}
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+
+			traits = { eoanb_naval_manufacturer_light }
 		}
+	}
+	
+	materiel_manufacturer = {
 
-		DEN_Johan_Nicolai_Madvig = {
+		designer = yes
 
-			picture = DEN_Johan_Nicolai_Madvig
+		ammunitionsarsenalet = {
 
 			allowed = {
 				original_tag = DEN
 			}
-
-			traits = {
-				influencial_writer centrism_alignment
-			}
-
-			visible = {
-				date < 1886.12.12
-			}
-
+			
 			available = {
-				date < 1886.12.12
+				owns_state = 37
 			}
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				infantry_weapons = 0.03
+				tech_category_uniforms = 0.03
+			}
+
+			traits = { DEN_trait_ammunitionsarsenalet }
 		}
+	}
+	
+	industrial_concern = {
 
-		DEN_Jacob_Christian_Jacobsen = {
+		royal_copenhagen = {
 
-			picture = DEN_Johan_Nicolai_Madvig
+		    picture = idea_royal_copenhagen
 
 			allowed = {
 				original_tag = DEN
 			}
-
-			traits = {
-				industrial_promoter centrism_alignment
-			}
-
-			visible = {
-				date < 1887.04.30
-			}
-
+			
 			available = {
-				date < 1887.04.30
+				owns_state = 37
 			}
+
+			research_bonus = {
+				biochemistry_tech = 0.03
+			}
+
+			traits = { DEN_trait_concern_royal_copenhagen }
 		}
+		
+		dfds = {
 
-		DEN_Christian_Albrecht_Bluhme = {
-
-			picture = DEN_Bluhme
+		    picture = idea_dfds
 
 			allowed = {
 				original_tag = DEN
 			}
-
-			traits = {
-				efficient_administrator traditional_conservative
-			}
-
-			visible = {
-				date < 1866.12.16
-			}
-
+			
 			available = {
-				date < 1866.12.16
+				owns_state = 37
+				has_completed_focus = DEN_focus_dfds_company
 			}
+
+			research_bonus = {
+				naval_equipment = 0.07
+			}
+
+			traits = { DEN_trait_concern_dfds }
 		}
+		
+		carlsberg = {
 
-		DEN_Adam_Wilhelm = {
-
-			picture = DEN_Adam_Wilhelm_Moltke
+		    picture = idea_carlsberg
 
 			allowed = {
 				original_tag = DEN
 			}
-
-			traits = {
-				eoanb_trait_finance_minister traditional_conservative
-			}
-
-			visible = {
-				date < 1864.02.15
-			}
-
+			
 			available = {
-				date < 1864.02.15
+				owns_state = 37
+				has_completed_focus = DEN_focus_carlsberg_company
 			}
+
+			research_bonus = {
+				biochemistry_tech = 0.03
+			}
+
+			traits = { DEN_trait_concern_carlsberg }
 		}
-    }
+	}
 }

@@ -1,12 +1,6 @@
 ideas = {
 	country = {
 		IOM_idea_british_subject = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
 			picture = stiff_upper_lip
 
 			modifier = {
@@ -14,12 +8,6 @@ ideas = {
 			}
 		}
 		ENG_idea_banned_species_origin = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = jap_duplicate_research
 
 			modifier = {
@@ -27,12 +15,6 @@ ideas = {
 			}
 		}
 		ENG_idea_sow_coalition_support = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = ast_volunteer_defence_corps
 			
 			cancel = { NOT = { has_global_flag = eoanb_flag_sow_ongoing } }
@@ -48,12 +30,6 @@ ideas = {
 			}
 		}
 		ENG_USA_idea_sow_payment = {
-			allowed = {
-				original_tag = USA
-			}
-			
-			removal_cost = -1
-			
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
@@ -61,12 +37,6 @@ ideas = {
 			}
 		}
 		ENG_ENG_idea_sow_payment = {
-			allowed = {
-				original_tag = ENG
-			}
-			
-			removal_cost = -1
-			
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
@@ -74,12 +44,6 @@ ideas = {
 			}
 		}
 		ENG_idea_sun_never_sets = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = stiff_upper_lip
 
 			modifier = {
@@ -91,12 +55,6 @@ ideas = {
 			}
 		}
 		ENG_idea_working_class_exploitation = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_oppression
 
 			modifier = {
@@ -106,12 +64,6 @@ ideas = {
 			}
 		}
 		ENG_idea_working_class_exploitation_2 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_oppression
 
 			modifier = {
@@ -120,12 +72,6 @@ ideas = {
 			}
 		}
 		ENG_idea_working_class_exploitation_3 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_oppression
 
 			modifier = {
@@ -135,12 +81,6 @@ ideas = {
 			}
 		}
 		ENG_idea_working_class_exploitation_4 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_oppression
 
 			modifier = {
@@ -150,12 +90,6 @@ ideas = {
 			}
 		}
 		ENG_idea_british_industrial_revolution = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_production_bonus
 
 			modifier = {
@@ -166,12 +100,6 @@ ideas = {
 			}
 		}
 		ENG_idea_british_industrial_revolution_2 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_production_bonus
 
 			modifier = {
@@ -182,12 +110,6 @@ ideas = {
 			}
 		}
 		ENG_idea_british_industrial_revolution_3 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_production_bonus
 
 			modifier = {
@@ -198,12 +120,6 @@ ideas = {
 			}
 		}
 		ENG_idea_british_industrial_revolution_4 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_production_bonus
 
 			modifier = {
@@ -214,12 +130,6 @@ ideas = {
 			}
 		}
 		ENG_idea_british_industrial_revolution_5 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_production_bonus
 
 			modifier = {
@@ -230,12 +140,6 @@ ideas = {
 			}
 		}
 		ENG_idea_military_infrastructure_expansion = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_build_infrastructure
 
 			modifier = {
@@ -244,12 +148,6 @@ ideas = {
 			}
 		}
 		ENG_idea_national_fortification_projects = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = FRA_fortification_focus
 
 			modifier = {
@@ -258,12 +156,6 @@ ideas = {
 			}
 		}
 		ENG_idea_industrial_development_projects = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_central_management
 
 			modifier = {
@@ -271,12 +163,6 @@ ideas = {
 			}
 		}
 		ENG_idea_industrial_development_projects_2 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_central_management
 
 			modifier = {
@@ -285,12 +171,6 @@ ideas = {
 			}
 		}
 		ENG_idea_industrial_development_projects_3 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_central_management
 
 			modifier = {
@@ -299,12 +179,6 @@ ideas = {
 			}
 		}
 		ENG_idea_industrial_development_projects_4 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_central_management
 
 			modifier = {
@@ -314,12 +188,6 @@ ideas = {
 			}
 		}
 		ENG_idea_cottage_industry = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_agrarian_reform
 
 			modifier = {
@@ -328,27 +196,17 @@ ideas = {
 			}
 		}
 		ENG_idea_european_isolationism = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
-			picture = FRA_fortification_focus
+			picture = ENG_pax_britannica
 
 			modifier = {
+				stability_factor = 0.10
 				drift_defence_factor = 0.25
 				join_faction_tension = 1.00
-				#ai_get_ally_desire_factor = -100
+				justify_war_goal_time = 0.1
+				trade_opinion_factor = 0.25
 			}
 		}
 		ENG_idea_defend_RAJ = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = generic_war_preparation
 
 			cancel = { NOT = { has_war_with = SRS } }
@@ -359,12 +217,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_central_campaign = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = CZE_planning_bonus
 
 			cancel = { NOT = { has_war_with = SRS } }
@@ -379,12 +231,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_preliminary_suppression = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_all_india_forward_bloc
 
 			modifier = {
@@ -393,12 +239,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_gse_act = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = generic_manpower_bonus
 
 			modifier = {
@@ -407,12 +247,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_civil_unrest = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = chi_war_of_resistance
 
 			modifier = {
@@ -420,12 +254,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_indian = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -435,12 +263,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_indian_2 = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -451,12 +273,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_indian_3 = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -468,12 +284,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_indian_4 = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -487,12 +297,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_indian_5 = {
-			allowed = {
-				original_tag = RAJ
-			}
-			
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -508,12 +312,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_european = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -523,12 +321,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_european_2 = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -538,12 +330,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_european_3 = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -555,12 +341,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_european_4 = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -574,12 +354,6 @@ ideas = {
 			}
 		}
 		ENG_idea_RAJ_army_european_5 = {
-			allowed = {
-				original_tag = RAJ
-			}
-
-			removal_cost = -1
-
 			picture = raj_indian_gentlemen_officers
 
 			modifier = {
@@ -595,13 +369,7 @@ ideas = {
 			}
 		}
 		ENG_idea_volunteer_movement = {
-			allowed = {
-				original_tag = ENG
-			}
-
 			cancel = { date > 1871.1.1 }
-
-			removal_cost = -1
 
 			picture = generic_reserve_divisions
 
@@ -613,13 +381,7 @@ ideas = {
 			}
 		}
 		ENG_idea_volunteer_movement_2 = {
-			allowed = {
-				original_tag = ENG
-			}
-
 			cancel = { date > 1871.1.1 }
-
-			removal_cost = -1
 
 			picture = generic_reserve_divisions
 
@@ -630,13 +392,7 @@ ideas = {
 			}
 		}
 		ENG_idea_volunteer_movement_3 = {
-			allowed = {
-				original_tag = ENG
-			}
-
 			cancel = { date > 1871.1.1 }
-
-			removal_cost = -1
 
 			picture = generic_reserve_divisions
 
@@ -648,12 +404,6 @@ ideas = {
 			}
 		}
 		ENG_idea_wolseley_plan = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			cancel = { has_idea = law_trench_infantry }
 
 			picture = generic_intel_bonus
@@ -665,12 +415,6 @@ ideas = {
 			}
 		}
 		ENG_idea_wolseley_plan_2 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			cancel = { has_idea = law_trench_infantry }
 
 			picture = generic_intel_bonus
@@ -684,12 +428,6 @@ ideas = {
 			}
 		}
 		ENG_idea_jones_plan = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			cancel = { has_idea = law_trench_infantry }
 
 			picture = chi_army_corruption3
@@ -701,12 +439,6 @@ ideas = {
 			}
 		}
 		ENG_idea_jones_plan_2 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			cancel = { has_idea = law_trench_infantry }
 
 			picture = chi_army_corruption3
@@ -719,12 +451,6 @@ ideas = {
 			}
 		}
 		ENG_idea_cardwell_reforms = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			cancel = {
 				has_completed_focus = ENG_focus_create_new_military_offices
 				has_completed_focus = ENG_focus_new_service_weapons
@@ -740,12 +466,6 @@ ideas = {
 			}
 		}
 		ENG_idea_army_reforms = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_army_war_college
 
 			modifier = {
@@ -753,12 +473,6 @@ ideas = {
 			}
 		}
 		ENG_idea_army_reforms_2 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_army_war_college
 
 			modifier = {
@@ -766,12 +480,6 @@ ideas = {
 			}
 		}
 		ENG_idea_army_reforms_3 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_army_war_college
 
 			modifier = {
@@ -780,12 +488,6 @@ ideas = {
 			}
 		}
 		ENG_idea_army_reforms_4 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_army_war_college
 
 			modifier = {
@@ -796,12 +498,6 @@ ideas = {
 			}
 		}
 		ENG_idea_army_reforms_5 = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_army_war_college
 
 			modifier = {
@@ -813,12 +509,6 @@ ideas = {
 			}
 		}
 		ENG_idea_generic_worker_strike = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = FRA_factory_strikes
 
 			modifier = {
@@ -827,12 +517,6 @@ ideas = {
 			}
 		}
 		ENG_idea_generic_worker_concessions = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = FRA_factory_strikes
 
 			modifier = {
@@ -841,12 +525,6 @@ ideas = {
 			}
 		}
 		ENG_idea_generic_worker_protest = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = FRA_scw_intervention_republicans_focus
 
 			modifier = {
@@ -855,12 +533,6 @@ ideas = {
 			}
 		}
 		ENG_idea_irb_ireland = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			cancel = {
 				country_exists = IRE
 				IRE = { is_subject = no }
@@ -873,12 +545,6 @@ ideas = {
 			}
 		}
 		ENG_idea_trade_unions_banned = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = FRA_matignon_agreements
 
 			modifier = {
@@ -889,34 +555,11 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 			}
 		}
-		ENG_TSH_trade = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = JAP_foreign_trade
-
-			modifier = {
-				consumer_goods_factor = -0.02
-			}
-		}
 
 		ENG_reparations_brazil = {
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = money_bad
 
@@ -926,12 +569,6 @@ ideas = {
 		}
 
 		ENG_idea_trip_to_canada	= {
-			allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
 			picture = generic_deal_with_the_devil2
 
 			modifier = {
@@ -940,13 +577,7 @@ ideas = {
         }
 
 		ENG_idea_swedish_lumber_imports	= {
-            allowed = {
-				original_tag = ENG
-			}
-
-			removal_cost = -1
-
-			picture = generic_deal_with_the_devil2
+            picture = generic_deal_with_the_devil2
 
 			modifier = {
 				consumer_goods_factor = -0.02
@@ -954,18 +585,11 @@ ideas = {
 		}
 
 		ENG_idea_dockyard_output = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
 
-			removal_cost = -1
-
-			picture = money_bad
+			picture = generic_production_bonus
 
 			modifier = {
 				industrial_capacity_dockyard  = 0.25
@@ -973,16 +597,9 @@ ideas = {
 
 		}
 		ENG_marriage_costs = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = money_bad
 
@@ -992,37 +609,22 @@ ideas = {
 		}
 
 		ENG_esteemed_veterans_awarded = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			modifier = {
 				war_support_factor = 0.02
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
-				air_ace_generation_chance_factor = 0.10
 			}
 
 		}
 
 		ENG_nature_scientific_journal = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			modifier = {
 				research_speed_factor = 0.02
@@ -1031,16 +633,9 @@ ideas = {
 		}
 
 		ENG_unrest_in_ireland = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = ENG_ireland
 
@@ -1051,16 +646,9 @@ ideas = {
 		}
 
 		ENG_state_funeral = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = FRA_matignon_agreements
 
@@ -1070,16 +658,9 @@ ideas = {
 			}
 		}
 		ENG_corck_riots = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = FRA_matignon_agreements
 
@@ -1089,18 +670,11 @@ ideas = {
 			}
 		}
 		ENG_new_monitors = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
 
-			removal_cost = -1
-
-			picture = FRA_matignon_agreements
+			picture = generic_navy_bonus
 
 			modifier = {
 			    navy_capital_ship_attack_factor = 0.05
@@ -1109,18 +683,11 @@ ideas = {
 			}
 		}
 		ENG_ericssons_monitors = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
 
-			removal_cost = -1
-
-			picture = FRA_matignon_agreements
+			picture = generic_navy_bonus
 
 			modifier = {
                 experience_gain_navy = 0.05
@@ -1129,18 +696,11 @@ ideas = {
 			}
 		}
 		ENG_new_ideal_warship = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
 
-			removal_cost = -1
-
-			picture = FRA_matignon_agreements
+			picture = generic_navy_bonus
 
 			modifier = {
 				naval_speed_factor = 0.05
@@ -1149,18 +709,11 @@ ideas = {
 			}
 		}
 		ENG_robinsons_warship = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
 
-			removal_cost = -1
-
-			picture = FRA_matignon_agreements
+			picture = generic_navy_bonus
 
 			modifier = {
                    experience_gain_navy = 0.05
@@ -1170,15 +723,9 @@ ideas = {
 		}
 
 		ENG_idea_treaty_of_washington = {
-			allowed = {
-				always = yes
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = SWE_government_intervention_judicial
 
@@ -1189,15 +736,9 @@ ideas = {
 		}
 
 		ENG_idea_act_coal_mine_regulation = {
-			allowed = {
-				always = yes
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = generic_constitutional_guarantees
 
@@ -1207,15 +748,9 @@ ideas = {
 		}
 
 		ENG_idea_act_food_drink_adulteration = {
-			allowed = {
-				always = yes
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = generic_constitutional_guarantees
 
@@ -1225,15 +760,9 @@ ideas = {
 		}
 
 		ENG_idea_act_medical_1 = {
-			allowed = {
-				always = yes
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = generic_constitutional_guarantees
 
@@ -1243,15 +772,9 @@ ideas = {
 		}
 
 		ENG_idea_act_elementary_education = {
-			allowed = {
-				always = yes
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = generic_constitutional_guarantees
 
@@ -1261,15 +784,9 @@ ideas = {
 		}
 		
 		ENG_idea_inclosure_act = {
-			allowed = {
-				always = yes
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
-			removal_cost = -1
 
 			picture = generic_constitutional_guarantees
 
@@ -1280,11 +797,6 @@ ideas = {
 		}
 		
 		ENG_equatorial_guinea_purchase = {
-
-			allowed = {
-				tag = ENG
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1297,17 +809,11 @@ ideas = {
 		}
 		
 		ENG_idea_britannia_rules_the_waves = {
-			allowed = {
-				always = yes
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
 
-			removal_cost = -1
-
-			picture = generic_constitutional_guarantees
+			picture = ENG_sun_never_sets
 
 			modifier = {
 				experience_gain_navy = 0.05
@@ -1315,276 +821,49 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 			}
 		}
+
+		ENG_idea_tea_shortage = {
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_reform
+
+			modifier = {
+				political_power_factor = -0.05
+				stability_weekly = -0.025
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		ENG_idea_indian_tea1 = {
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_agrarian_reform
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		ENG_idea_indian_tea2 = {
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_agrarian_reform
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor= 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
 	}
-	political_advisor = {
-		ENG_political_advisor_crawshay_bailey = {
 
-			allowed = {
-				tag = ENG
-			}
-
-			traits = { captain_of_industry_1 traditional_conservatism_alignment }
-		}
-		ENG_political_advisor_sir_john_brown = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			traits = { railroad_tycoon }
-
-			modifier = { local_resources_factor = 0.10 political_power_factor = 0.02 }
-		}
-		ENG_political_advisor_isambard_kingdom_brunel = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			traits = { railroad_tycoon }
-
-			modifier = { industrial_capacity_dockyard = 0.05 political_power_factor = 0.02 }
-		}
-		ENG_political_advisor_charles_darwin = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			available = {
-				has_country_flag = charles_darwin_book
-			}
-
-			traits = { ingenious_scientist }
-		}
-		ENG_political_advisor_sir_john_thwaites = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			traits = { great_urbanizer clever_buisnessman }
-
-			modifier = { political_power_factor = -0.05 }
-		}
-		ENG_political_advisor_sir_pwpw = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			traits = { war_veteran }
-		}
-		ENG_political_advisor_edward_cardwell = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			traits = { efficient_administrator eoanb_trait_warmonger }
-		}
-		ENG_political_advisor_lydia_becker = {
-
-			allowed = {
-				tag = ENG
-			}
-			picture = ENG_political_advisor_lydia_becker_prt1
-			available = {
-				has_country_flag = lydia_becker_suffragist
-			}
-
-			traits = { suffragist }
-		}
-		ENG_political_advisor_william_gladstone = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_gladstone
-
-			visible = {
-			   has_country_flag = goverment_of_1859_liberals
-			   date < 1882.12.16
-			}
-
-			available = {
-				has_country_flag = goverment_of_1859_liberals
-				date < 1882.12.16
-			}
-
-			traits = { centrism_alignment eoanb_trait_chancellor_of_exchequer }
-		}
-		ENG_political_advisor_thomas_gibson = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_gibson
-
-			visible = {
-			   has_country_flag = goverment_of_1859_liberals
-			   date < 1866.6.26
-			}
-
-			available = {
-				has_country_flag = goverment_of_1859_liberals
-				date < 1866.6.26
-			}
-
-			traits = { centrism_alignment eoanb_trait_president_of_the_board_of_trade }
-		}
-		ENG_political_advisor_john_russell = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_russel
-
-			visible = {
-			   has_country_flag = goverment_of_1859_liberals
-			   date < 1875.8.3
-			}
-
-			available = {
-				has_country_flag = goverment_of_1859_liberals
-				date < 1875.8.3
-			}
-
-			traits = { centrism_alignment eoanb_trait_foreign_secretary }
-		}
-		ENG_political_advisor_edward_stanley = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_earl_of_derby
-
-			visible = {
-			   has_country_flag = goverment_of_1859_conservatives
-			}
-
-			available = {
-				has_country_flag = goverment_of_1859_conservatives
-			}
-
-			traits = { traditional_conservatism_alignment eoanb_trait_chancellor_of_exchequer }
-		}
-		ENG_political_advisor_j_w_henley = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_j_w_henley
-
-			visible = {
-			   has_country_flag = goverment_of_1859_conservatives
-			   date < 1878.1.1
-			}
-
-			available = {
-				has_country_flag = goverment_of_1859_conservatives
-				date < 1878.1.1
-			}
-
-			traits = { traditional_conservatism_alignment eoanb_trait_president_of_the_board_of_trade }
-		}
-		ENG_political_advisor_benjamin_disraeli = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_benjamin_disraeli
-
-			visible = {
-			   has_country_flag = goverment_of_1859_conservatives
-			   date < 1881.4.19
-			}
-
-			available = {
-				has_country_flag = goverment_of_1859_conservatives
-				date < 1881.4.19
-			}
-
-			traits = { traditional_conservatism_alignment eoanb_trait_foreign_secretary }
-		}
-		ENG_political_advisor_william_lidderdale = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_william_lidderdale
-
-			available = {
-				date < 1902.6.26
-			}
-
-			traits = { eoanb_successful_merchant }
-		}
-		ENG_political_advisor_samuel_baker = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_samuel_baker
-
-			available = {
-				date < 1893.12.30
-			}
-
-			traits = { explorer }
-		}
-		ENG_political_advisor_gilpin = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_gilpin
-
-			available = {
-				date < 1874.9.8
-			}
-
-			traits = { influencial_writer centrism_alignment }
-		}
-		ENG_political_advisor_ayrton = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_ayrton
-
-			available = {
-				date < 1886.11.30
-			}
-
-			traits = { working_class_figurehead centrism_alignment }
-		}
-		ENG_political_advisor_beresford = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_beresford
-
-			available = {
-				date < 1890.08.1
-			}
-
-			traits = { friend_of_capitalism traditional_conservatism_alignment }
-		}
-		
-	}
 #	high_command = {
 #		ENG_hc_thomas_jones  = {
 #
@@ -1899,15 +1178,14 @@ ideas = {
 #		}
 #	}
 	naval_manufacturer = {
-
 		designer = yes
 
 		ENG_naval_company_thames_iwsb = {
 
-			picture = generic_naval_manufacturer_3
+			picture = TIW_company
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -1924,7 +1202,7 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -1936,6 +1214,23 @@ ideas = {
 
 			traits = { ENG_trait_naval_whitworth }
 		}
+		ENG_naval_company_cammell_laird = {
+
+			picture = cammell_laird
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+
+			cost = 150
+			removal_cost = 10
+			
+			traits = { eoanb_naval_manufacturer_light }
+		}
 	}
 	industrial_concern = {
 		ENG_industrial_concern_bic = {
@@ -1943,7 +1238,7 @@ ideas = {
 			picture = generic_industrial_concern_1
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -1960,7 +1255,7 @@ ideas = {
 			picture = generic_electronics_concern_2
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -1977,7 +1272,7 @@ ideas = {
 			picture = generic_electronics_concern_1
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -1994,7 +1289,7 @@ ideas = {
 			picture = generic_electronics_concern_3
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -2013,10 +1308,10 @@ ideas = {
 
 		ENG_materiel_manufacturer_webley_scott = {
 
-			picture = generic_infantry_equipment_manufacturer_3
+			picture = WS_company
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -2033,7 +1328,7 @@ ideas = {
 			picture = generic_infantry_equipment_manufacturer_2
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -2050,7 +1345,7 @@ ideas = {
 			picture = generic_artillery_manufacturer_1
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -2064,10 +1359,10 @@ ideas = {
 		}
 		ENG_materiel_manufacturer_royal_arsenal = {
 
-			picture = generic_artillery_manufacturer_2
+			picture = royal_arsenal
 
 			allowed = {
-				tag = ENG
+				original_tag = ENG
 			}
 
 			cost = 150
@@ -2081,60 +1376,8 @@ ideas = {
 		}
 	}
 
-	theorist = {
-		ENG_charles_william_pasley = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_military_theorist_charles_pasley_prt1
-
-			available = {
-				date < 1861.4.19
-			}
-
-			visible = {
-				date < 1861.4.19
-			}
-
-
-			research_bonus = {
-				land_doctrine = -0.07
-			}
-
-			traits = { military_theorist }
-		}
-
-		ENG_george_tomkyns_chesney = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_military_theorist_george_chesney_prt1
-
-			available = {
-				AND = { date > 1861.4.19 }
-				AND = { date < 1895.4.31 }
-			}
-
-			visible = {
-				AND = { date > 1861.4.19 }
-				AND = { date < 1895.4.31 }
-			}
-
-			research_bonus = {
-				land_doctrine = -0.07
-			}
-
-			traits = { military_theorist }
-		}
-	}
 	hidden_ideas = {
 		ENG_idea_the_medical_act = {
-            allowed = {
-                always = yes
-            }
-            removal_cost = 0
             picture = generic_pp_unity_bonus
             modifier = {
                 MONTHLY_POPULATION = 0.05
@@ -2142,17 +1385,12 @@ ideas = {
             }
         }
 		ENG_fenian_uprising_ireland = {
-
-			allowed = {
-				always = no
-			}
-
 			allowed_civil_war = {
 				always = yes
 			}
 			
-			cancel={
-				IRE={exists = yes}
+			cancel = {
+				IRE = { exists = yes }
 			}
 
 			removal_cost = 0

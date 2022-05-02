@@ -42,7 +42,7 @@ focus_tree = {
 	# focus for Tewodros industrial reforms
 	focus = {
 		id = ETH_begin_tewodros_industrial_reforms
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		x = 29
 		y = 1
 		cost = 75
@@ -54,11 +54,6 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			#custom_effect_tooltip = afr_prosperity_mechanic_add_50
-			#add_to_variable = {
-			#	var = afr_prosperity_mechanic_value
-			#	value = 50
-			#}
 			add_tech_bonus = { bonus = 0.75 uses = 1 technology = manufactories }
 			swap_ideas = { add_idea = very_high_taxes remove_idea = high_taxes }
 			add_ideas = ETH_idea_heavily_taxed_peasantry
@@ -394,7 +389,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_reforming_regional_power_regional_infrastructure_completed
-		icon = GFX_goal_focus_railroad_development
+		icon = GFX_Focus_transport_railroad_development
 		x = 2
 		y = 3
 		relative_position_id = ETH_clear_space_for_industry
@@ -427,7 +422,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_an_industrializing_nation
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		x = 29
 		y = 6
 		cost = 105
@@ -452,7 +447,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_victorian_inspiration
-		icon = GFX_goal_focus_railroad_development
+		icon = GFX_Focus_transport_railroad_development
 		x = 29
 		y = 4
 		cost = 70
@@ -499,7 +494,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.75 uses = 1 category = land_doctrine }
 			swap_ideas = { add_idea = five_percent remove_idea = two_percent }
 
 		}
@@ -585,7 +580,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_tradition_doctrine
-		icon = GFX_goal_focus_conscription
+		icon = GFX_Focus_conscription
 		cost = 70
 		ai_will_do = { 
 			factor = 1 
@@ -610,7 +605,7 @@ focus_tree = {
 		x = 15
 		y = 4
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_traditional_tech }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = doctrine_victorian_traditional_tech }
 			
 			if = { 
 				limit = {
@@ -677,7 +672,7 @@ focus_tree = {
 		x = 19
 		y = 4
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_innovative_tech }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = doctrine_victorian_innovative_tech }
 			
 			if = { 
 				limit = {
@@ -768,7 +763,7 @@ focus_tree = {
 		x = 13
 		y = 4
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_artillery_tech }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = doctrine_victorian_artillery_tech }
 		}
 	}
 	
@@ -794,7 +789,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_foreign_artillery_instructors
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 70
 		available = {
 				has_country_leader = { 
@@ -978,7 +973,7 @@ focus_tree = {
 		x = 21
 		y = 4
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = doctrine_victorian_industry_tech }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = doctrine_victorian_industry_tech }
 		}
 	}
 	
@@ -1050,7 +1045,7 @@ focus_tree = {
 	
 	#focus = {
 	#	id = ETH_purchase_old_portugese_guns
-	#	icon = GFX_goal_focus_merchants_portugese
+	#	icon = GFX_Focus_Diplomacy_POR
 	#	x = 17
 	#	y = 8
 	#	cost = 120
@@ -1094,7 +1089,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_our_neighbors
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 6
 		y = 1
@@ -1303,7 +1298,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ETH_expand_south
-		icon = GFX_focus_Colonial_Troops
+		icon = GFX_Focus_Colonial_Troops
 		cost = 70
 		ai_will_do = { factor = 1 }
 		available={
@@ -1315,12 +1310,12 @@ focus_tree = {
 		x = 8
 		y = 4
 		completion_reward = {
-			add_state_claim = 820
+			add_state_claim = 1302
 		}
 	}
 	focus = {
 		id = ETH_expand_east
-		icon = GFX_focus_Colonial_Troops
+		icon = GFX_Focus_Colonial_Troops
 		cost = 70
 		ai_will_do = { factor = 1 }
 		available={
@@ -1332,7 +1327,7 @@ focus_tree = {
 		x = 10
 		y = 4
 		completion_reward = {
-			add_state_claim = 271
+			add_state_claim = 820
 		}
 	}
 	focus = {
@@ -1347,14 +1342,14 @@ focus_tree = {
 			focus = ETH_expand_east
 		}
 		available={
-			owns_state = 271
+			owns_state = 1302
 			owns_state = 820
 		}
 		x = 9
 		y = 5
 		completion_reward = {
 			ETH = {
-				add_state_core = 271
+				add_state_core = 1302
 				add_state_core = 820
 			}
 			custom_effect_tooltip = afr_colonial_effect_tooltip
@@ -1367,7 +1362,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_prepare_to_annex_somalia
-		icon = GFX_focus_Colonial_Troops
+		icon = GFX_Focus_Colonial_Troops
 		cost = 70
 		ai_will_do = { factor = 1 }	
 		prerequisite = {
@@ -1383,6 +1378,7 @@ focus_tree = {
 		completion_reward = {
 			add_state_claim = 269
 			add_state_claim = 559
+			add_state_claim = 914
 			add_state_claim = 821
 		}
 	}
@@ -1411,8 +1407,8 @@ focus_tree = {
 						820 = { owner = { is_subject_of = ETH } }
 					}
 					OR = {
-						owns_state = 271
-						271 = { owner = { is_subject_of = ETH } }
+						owns_state = 1302
+						1302 = { owner = { is_subject_of = ETH } }
 					}
 					OR = {
 						owns_state = 819
@@ -1422,6 +1418,14 @@ focus_tree = {
 						owns_state = 818
 						818 = { owner = { is_subject_of = ETH } }
 					}
+					OR = {
+						owns_state = 271
+						271 = { owner = { is_subject_of = ETH } }
+					}
+					OR = {
+						owns_state = 1300
+						1300 = { owner = { is_subject_of = ETH } }
+					}
 				}
 			}
 		}
@@ -1430,6 +1434,9 @@ focus_tree = {
 		completion_reward = {
 			add_state_claim = 818
 			add_state_claim = 819
+			add_state_claim = 817
+			add_state_claim = 1300
+			add_state_claim = 271
 			if = {
 				limit = { has_idea = afr_imperial_decline }
 				remove_ideas = afr_imperial_decline
@@ -1692,7 +1699,7 @@ focus_tree = {
 			}
 			has_stability > 0.25
 			num_divisions > 6
-			ETH = { NOT = { owns_state = 550 } }
+			ETH = { NOT = { owns_state = 815 } }
 			
 		}	
 		prerequisite = { 
@@ -1702,7 +1709,7 @@ focus_tree = {
 		x = 6
 		y = 4
 		completion_reward = {
-			550 = {
+			815 = {
 				add_claim_by = ETH
 			}
 			declare_war_on = {
@@ -2101,7 +2108,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_exploit_egyption_economic_crises
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		cost = 70
 		ai_will_do = { 
 			factor = 1000 
@@ -2257,7 +2264,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_sudan_truce
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		cost = 70
 		ai_will_do = { factor = 1 }
 		prerequisite = {
@@ -2292,7 +2299,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_begin_tewodros_social_reforms
-		icon = GFX_goal_focus_reform_government
+		icon = GFX_Focus_Government_Reform
 		x = 8
 		y = 9
 		cost = 70
@@ -2316,7 +2323,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_adress_religion
-		icon = GFX_goal_focus_religious_prayers
+		icon = GFX_Focus_Religious_Prayers
 		x = 12
 		y = 10
 		cost = 70
@@ -2336,7 +2343,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_keep_the_missionaries
-		icon = GFX_goal_focus_christianity_state_religion
+		icon = GFX_Focus_Catholic_Religion
 		x = 10
 		y = 11
 		cost = 70
@@ -2597,7 +2604,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_embrace_islamic_surge
-		icon = GFX_focus_islam_state_religion
+		icon = GFX_Focus_Islam_Religion
 		x = 15
 		y = 12
 		cost = 70
@@ -2730,7 +2737,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_keep_privileged_education
-		icon = GFX_goal_focus_the_elite
+		icon = GFX_Focus_Elite
 		x = 5
 		y = 11
 		cost = 70
@@ -2752,7 +2759,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_western_inspired_university
-		icon = GFX_goal_school_investment_focus
+		icon = GFX_Focus_school_investment
 		x = 1
 		y = 11
 		cost = 70
@@ -2847,7 +2854,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_learn_german_language
-		icon = GFX_goal_focus_ally_PRS
+		icon = GFX_Focus_Diplomatic_Ally_PRS
 		cost = 70
 		ai_will_do = { factor = 1 }
 		available = {
@@ -2894,8 +2901,8 @@ focus_tree = {
 				reverse_add_opinion_modifier = { target = SAX modifier = eoanb_om_africa_language_focus }
 				add_opinion_modifier = { target = WUR modifier = eoanb_om_africa_language_focus }
 				reverse_add_opinion_modifier = { target = WUR modifier = eoanb_om_africa_language_focus }
-				add_opinion_modifier = { target = GER modifier = eoanb_om_africa_language_focus }
-				reverse_add_opinion_modifier = { target = GER modifier = eoanb_om_africa_language_focus }
+				# add_opinion_modifier = { target = GER modifier = eoanb_om_africa_language_focus }
+				# reverse_add_opinion_modifier = { target = GER modifier = eoanb_om_africa_language_focus }
 			}
 		}
 	}
@@ -2903,7 +2910,7 @@ focus_tree = {
 	# Languages give a small bonus to all nations that speak the respective language
 	focus = {
 		id = ETH_learn_english_language
-		icon = GFX_goal_focus_ally_ENG
+		icon = GFX_Focus_Diplomatic_Ally_ENG
 		cost = 70
 		ai_will_do = { factor = 1 }
 		available = {
@@ -2949,7 +2956,7 @@ focus_tree = {
 	# Languages give a small bonus to all nations that speak the respective language
 	focus = {
 		id = ETH_learn_french_language
-		icon = GFX_goal_focus_ally_FRA
+		icon = GFX_Focus_Diplomatic_Ally_FRA
 		cost = 70
 		ai_will_do = { factor = 1 }
 		available = {
@@ -2988,8 +2995,6 @@ focus_tree = {
 				reverse_add_opinion_modifier = { target = BEL modifier = eoanb_om_africa_language_focus }
 				add_opinion_modifier = { target = CAN modifier = eoanb_om_africa_language_focus }
 				reverse_add_opinion_modifier = { target = CAN modifier = eoanb_om_africa_language_focus }
-				add_opinion_modifier = { target = GBS modifier = eoanb_om_africa_language_focus }
-				reverse_add_opinion_modifier = { target = GBS modifier = eoanb_om_africa_language_focus }
 			}
 		}
 	}
@@ -2997,7 +3002,7 @@ focus_tree = {
 	# Languages give a small bonus to all nations that speak the respective language
 	focus = {
 		id = ETH_learn_portugese_language
-		icon = goal_focus_ally_POR
+		icon = GFX_Focus_Diplomatic_Ally_POR
 		cost = 70
 		ai_will_do = { factor = 1 }
 		available = {
@@ -3448,7 +3453,7 @@ focus_tree = {
 	
 	focus = {
 		id = ETH_open_trading_post
-		icon = GFX_goal_focus_international_investments
+		icon = GFX_Focus_Trade_International
 		cost = 70
 		ai_will_do = { 
 			factor = 1 

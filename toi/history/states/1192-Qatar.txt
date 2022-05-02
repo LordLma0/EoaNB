@@ -1,15 +1,17 @@
 
-state={
-	id=1192
-	name="STATE_1192"
+state = {
+	id = 1192
+	name = "STATE_1192"
+
+	local_supplies=0.0 
 	manpower = 26234
-	resources={
+	resources = {
 		
 	}
 
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = TCS
 		add_core_of = TCS
 
@@ -29,7 +31,7 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		8051
 	}
 }

@@ -24,7 +24,7 @@ technologies = {
 			tribal_guilds_trade = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = humanities_folder
@@ -53,6 +53,7 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	
@@ -62,7 +63,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		drift_defence_factor = -0.1
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1855
 		folder = {
 			name = humanities_folder
@@ -101,6 +102,7 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	
@@ -108,7 +110,7 @@ technologies = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = humanities_folder
@@ -137,13 +139,15 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
+
 	tech_humanities_anti_trust_laws = {
 		
 		production_speed_industrial_complex_factor = 0.1
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1900
 		folder = {
 			name = humanities_folder
@@ -172,6 +176,7 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	
@@ -180,7 +185,7 @@ technologies = {
 		industrial_capacity_factory = 0.02
 		political_power_factor = 0.04
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = humanities_folder
@@ -209,14 +214,16 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			art_tech
 		}
 	}
+
 	tech_humanities_neo_kantianism = {
 		
 		industrial_capacity_factory = 0.02
 		political_power_factor = 0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = humanities_folder
@@ -249,14 +256,16 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			art_tech
 		}
 	}
+
 	tech_humanities_impressionism = {
 		
 		industrial_capacity_factory = 0.02
 		political_power_factor = 0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = humanities_folder
@@ -280,14 +289,16 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			art_tech
 		}
 	}
+
 	tech_humanities_existentialism = {
 		
 		industrial_capacity_factory = 0.02
 		political_power_factor = 0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1885
 		folder = {
 			name = humanities_folder
@@ -316,6 +327,7 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			art_tech
 		}
 	}
 	
@@ -334,7 +346,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = humanities_folder
@@ -364,7 +376,7 @@ technologies = {
 	tech_humanities_workers_rights = {
 		
 		industrial_capacity_factory = -0.02
-		industrial_capacity_dockyard -0.02
+		industrial_capacity_dockyard = -0.02
 		local_resources_factor = -0.02
 		production_speed_buildings_factor = -0.02
 		economic_mobilization_cost_factor = -0.2
@@ -375,7 +387,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = humanities_folder
@@ -403,12 +415,11 @@ technologies = {
 	}
 	
 	tech_humanities_trade_unions = {
-		
 		production_factory_efficiency_gain_factor  = -0.05
 		drift_defence_factor = -0.05
 		trade_laws_cost_factor = -0.2
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = humanities_folder
@@ -439,15 +450,15 @@ technologies = {
 			humanities_tech
 		}
 	}
+
 	tech_humanities_socialism = {
-		
 		production_factory_efficiency_gain_factor  = -0.05
 		drift_defence_factor = -0.05
 		trade_laws_cost_factor = -0.2
 		consumer_goods_factor = -0.03
 		production_speed_buildings_factor = 0.05
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = humanities_folder
@@ -486,8 +497,8 @@ technologies = {
 			humanities_tech
 		}
 	}
+
 	tech_humanities_communism = {
-		
 		production_factory_efficiency_gain_factor  = -0.075
 		drift_defence_factor = -0.075
 		land_property_cost_factor = -0.2
@@ -505,7 +516,7 @@ technologies = {
 		}
 		
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = humanities_folder
@@ -536,12 +547,12 @@ technologies = {
 			humanities_tech
 		}
 	}
+
 	tech_humanities_fin_de_siecle = {
-		
 		drift_defence_factor = 0.025
 		mobilization_speed = 0.05
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = humanities_folder
@@ -572,13 +583,13 @@ technologies = {
 			humanities_tech
 		}
 	}
+
 	tech_humanities_womens_suffrage = {
-		
 		#unlocks true suffrage
 		
 		conscription_factor = 0.12
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1890
 		folder = {
 			name = humanities_folder
@@ -609,9 +620,8 @@ technologies = {
 			humanities_tech
 		}
 	}
-	
+
 	tech_humanities_industrial_society = {
-		
 		political_power_gain = 0.1
 		MONTHLY_POPULATION = 0.06
 		encryption = 0.5
@@ -622,10 +632,10 @@ technologies = {
 		}
 		
 		allow = {
-		 	NOT = {
+			NOT = {
 				has_idea = agrarian
 			}
-        }
+		}
 		
 		path = {
 			leads_to_tech = tech_humanities_social_stratification
@@ -646,7 +656,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = humanities_folder
@@ -668,7 +678,7 @@ technologies = {
 		political_power_factor = -0.02
 		
 		path = {
-			leads_to_tech = mass_transit_early
+			leads_to_tech = tech_humanities_neon_signage
 			research_cost_coeff = 1
 		}
 		
@@ -682,7 +692,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = humanities_folder
@@ -714,7 +724,7 @@ technologies = {
 		MONTHLY_POPULATION = 0.04
 		consumer_goods_factor = -0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1855
 		folder = {
 			name = humanities_folder
@@ -741,194 +751,12 @@ technologies = {
 		}
 	}
 	
-	tech_humanities_roadworks = {
-		
-		production_speed_infrastructure_factor = 0.1
-		army_speed_factor = 0.05
-		
-		path = {
-			leads_to_tech = tech_humanities_asphalt_roads
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 1
-		start_year = 1855
-		folder = {
-			name = humanities_folder
-			position = { x = 8 y = 4 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-	
-		}
-		
-		categories = {
-			humanities_tech
-		}
-	}
-	
-	tech_humanities_metropolitan = {
-		
-		consumer_goods_factor = 0.01
-		production_factory_efficiency_gain_factor = 0.04
-		line_change_production_efficiency_factor = 0.02
-		
-		research_cost = 1
-		start_year = 1860
-		folder = {
-			name = humanities_folder
-			position = { x = 10 y = 6 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-	
-		}
-		
-		categories = {
-			humanities_tech
-		}
-	}
-	
-	tech_humanities_asphalt_roads = {
-		
-		global_building_slots_factor = 0.05
-		production_speed_infrastructure_factor = 0.05
-		mobilization_speed = 0.1
-		
-		research_cost = 1
-		start_year = 1865
-		folder = {
-			name = humanities_folder
-			position = { x = 8 y = 8 }
-		}
-		
-		path = {
-			leads_to_tech = tech_humanities_traffic_signals
-			research_cost_coeff = 1
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
-			}
-	
-		}
-		
-		categories = {
-			humanities_tech
-		}
-	}
-	
-	tech_humanities_traffic_signals = {
-		
-		global_building_slots_factor = 0.05
-		production_speed_infrastructure_factor = 0.05
-		mobilization_speed = 0.1
-		
-		research_cost = 1
-		start_year = 1875
-		folder = {
-			name = humanities_folder
-			position = { x = 8 y = 12 }
-		}
-		
-		path = {
-			leads_to_tech = tech_humanities_petrol_stations
-			research_cost_coeff = 1
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
-			}
-	
-		}
-		
-		categories = {
-			humanities_tech
-		}
-	}
-	tech_humanities_petrol_stations = {
-		
-		global_building_slots_factor = 0.05
-		production_speed_infrastructure_factor = 0.05
-		mobilization_speed = 0.1
-		
-		research_cost = 1
-		start_year = 1890
-		folder = {
-			name = humanities_folder
-			position = { x = 8 y = 22 }
-		}
-		
-		path = {
-			leads_to_tech = tech_humanities_neon_signage
-			research_cost_coeff = 1
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1870.1.1"
-			}
-	
-		}
-		
-		categories = {
-			humanities_tech
-		}
-	}
 	tech_humanities_neon_signage = {
 		
 		production_speed_infrastructure_factor = 0.05
 		mobilization_speed = 0.15
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1910
 		folder = {
 			name = humanities_folder
@@ -964,7 +792,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.04
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = humanities_folder
@@ -1012,7 +840,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.04
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = humanities_folder
@@ -1061,7 +889,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.04
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1910
 		folder = {
 			name = humanities_folder
@@ -1112,7 +940,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		production_factory_efficiency_gain_factor = 0.05
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1855
 		folder = {
 			name = humanities_folder
@@ -1149,59 +977,6 @@ technologies = {
 		}
 	}
 	
-	mass_transit_early = {
-		
-		industrial_capacity_factory = 0.1
-		industrial_capacity_dockyard = 0.1
-		local_resources_factor = -0.05
-		
-		path = {
-			leads_to_tech = tech_humanities_roadworks
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = tech_humanities_metropolitan
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 1.5
-		start_year = 1850
-		folder = {
-			name = humanities_folder
-			position = { x = 10 y = 2 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.5
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1855.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1860.1.1"
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > "1865.1.1"
-			}
-		}
-		
-		categories = {
-			humanities_tech
-			transport_tech
-		}
-	}
-	
 	tech_humanities_colonialism = {
 
 		#allow_branch = {
@@ -1219,7 +994,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = humanities_folder
@@ -1249,7 +1024,7 @@ technologies = {
 		
 		production_speed_buildings_factor = 0.05
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = humanities_folder
@@ -1321,7 +1096,7 @@ technologies = {
 			}
         }
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = humanities_folder
@@ -1369,7 +1144,7 @@ technologies = {
 			add_to_variable = { colonial_power_factory_mod = 2 }
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = humanities_folder
@@ -1402,7 +1177,7 @@ technologies = {
 		}
 		xor = { tech_humanities_native_cooperation }
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = humanities_folder
@@ -1444,7 +1219,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = humanities_folder
@@ -1481,7 +1256,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = humanities_folder
@@ -1516,7 +1291,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = humanities_folder
@@ -1545,7 +1320,7 @@ technologies = {
 	tech_humanities_colonial_administration = {
 		
 		political_power_gain = 0.05
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1885
 		folder = {
 			name = humanities_folder
@@ -1583,7 +1358,7 @@ technologies = {
 		#navy_max_range_factor = 0.5
 		subversive_activites_upkeep = -0.05
 		max_command_power = 20
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = humanities_folder
@@ -1624,7 +1399,7 @@ technologies = {
 		allow={
 			has_global_flag = scramble_for_africa
 		}
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = humanities_folder
@@ -1656,7 +1431,7 @@ technologies = {
 			custom_effect_tooltip = afr_increase_max_colonial_power_50
 			add_to_variable = {colonial_power_max_add = 50}
 		}
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1885
 		folder = {
 			name = humanities_folder
@@ -1685,7 +1460,7 @@ technologies = {
 	}
 	tech_humanities_colonial_settlements = {
 		MONTHLY_POPULATION = 0.01
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = humanities_folder
@@ -1720,7 +1495,7 @@ technologies = {
 	}
 	tech_humanities_colonial_forts = {
 		MONTHLY_POPULATION = 0.01
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = humanities_folder
@@ -1748,7 +1523,7 @@ technologies = {
 	}
 	tech_humanities_colonial_drafts = {
 		non_core_manpower = 0.005
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1890
 		folder = {
 			name = humanities_folder
@@ -1778,7 +1553,7 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = afr_increase_overseas_development_effect
 		}
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1890
 		folder = {
 			name = humanities_folder
@@ -1861,7 +1636,7 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1910
 		folder = {
 			name = humanities_folder
@@ -1892,7 +1667,7 @@ technologies = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1930
 		folder = {
 			name = humanities_folder
@@ -1921,6 +1696,7 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	
@@ -1928,7 +1704,7 @@ technologies = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = humanities_folder
@@ -1965,13 +1741,14 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	tech_humanities_monetarism = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1960
 		folder = {
 			name = humanities_folder
@@ -2004,13 +1781,14 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	tech_humanities_containerization = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1950
 		folder = {
 			name = humanities_folder
@@ -2039,13 +1817,14 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	tech_humanities_new_keynesian_macroeconomics = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1970
 		folder = {
 			name = humanities_folder
@@ -2074,13 +1853,14 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	tech_humanities_globalization = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1960
 		folder = {
 			name = humanities_folder
@@ -2109,13 +1889,14 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	tech_humanities_corporate_capitalism = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1970
 		folder = {
 			name = humanities_folder
@@ -2144,13 +1925,14 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	tech_humanities_neoliberalism = {
 		
 		production_factory_start_efficiency_factor = 0.075
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1970
 		folder = {
 			name = humanities_folder
@@ -2179,6 +1961,7 @@ technologies = {
 		
 		categories = {
 			humanities_tech
+			economics_tech
 		}
 	}
 	
@@ -2232,7 +2015,7 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1990
 		folder = {
 			name = humanities_folder

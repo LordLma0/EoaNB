@@ -1,13 +1,15 @@
-state={
-	id=848
-	name="STATE_848"
+state = {
+	id =848
+	name = "STATE_848"
 
+
+	local_supplies=0.0 
 	state_category = wasteland
-	resources={
-		rubber=2
+	resources = {
+		rubber =2
 	}
 
-	history={
+	history = {
 		buildings = {
 			10803 = {
 				naval_base = 1
@@ -17,11 +19,24 @@ state={
 		owner = FRA
 		add_claim_by = FRA
 		add_claim_by = AKA
+
+		add_to_array = { state_culture_array = 351 } 
+		add_to_array = { state_culture_array = 32 } 
+				
+		add_to_array = { state_culture_array_num = 0.99 }
+		add_to_array = { state_culture_array_num = 0.01 }
+
+		add_to_array = { state_religion_array = 20 } 
+		add_to_array = { state_religion_array_num = 0.69}
+
+		add_to_array = { state_religion_array = 2 } 
+		add_to_array = { state_religion_array_num = 0.31}
 	}
 
-	provinces={
+	provinces = {
 		10803
 	}
-	manpower=12333
+	manpower = 42333
+
 	
 }

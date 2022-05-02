@@ -1,14 +1,16 @@
-state={
-	id=1083
-	name="STATE_1083"
+state = {
+	id = 1083
+	name = "STATE_1083"
 	manpower = 3500
-	
+
+	local_supplies=0.0 
+
 	state_category = wasteland
-	
-	resources={
-	iron=1
+
+	resources = {
+	iron= 1
 	}
-	history={
+	history = {
 		owner = WLL
 		buildings = {
 			infrastructure = 2
@@ -16,11 +18,13 @@ state={
 		add_core_of = WLL
 		add_claim_by = CHL
 		
+		add_to_array = { state_religion_array = 22 } #Shamanism
+		add_to_array = { state_religion_array_num = 1 }
 
 	}
 
-	provinces={
-    11009
+	provinces = {
+		11009
 	}
 
 	}

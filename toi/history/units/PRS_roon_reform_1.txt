@@ -1,9 +1,13 @@
 ﻿units = {
 	### INFANTERIE ###
 	## Liniennfanterie ##
-	#24. Infanterie-Division          
+	#24. Infanterie-Division
 	division = {
-		name = "24. Preußische Infanterie-Division"
+		#24. Preußische Infanterie-Division
+		division_name = {
+			is_name_ordered	= yes
+			name_order = 24
+		}
 		location = 9570
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.15
@@ -11,17 +15,25 @@
 	}
 	#25. Infanterie-Division
 	division = {
-		name = "25. Preußische Infanterie-Division"
+		#25. Preußische Infanterie-Division
+		division_name = {
+			is_name_ordered	= yes
+			name_order = 25
+		}
 		location = 11494
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.1
 	}
-	
+
 	## Jäger/Füsiliere ##
 	#3. Füsilier-Regiment
 	division = {
-		name = "3. Preußisches Füsilier-Regiment"
+		#3. Preußisches Füsilier-Regiment
+		division_name = {
+			is_name_ordered	= yes
+			name_order = 3
+		}
 		location = 9570
 		division_template = "Füsilier-Regiment"
 		start_experience_factor = 0.1
@@ -29,18 +41,26 @@
 	}
 	#4. Füsilier-Regiment
 	division = {
-		name = "4. Preußisches Füsilier-Regiment"
+		#4. Preußisches Füsilier-Regiment
+		division_name = {
+			is_name_ordered	= yes
+			name_order = 4
+		}
 		location = 9388
 		division_template = "Füsilier-Regiment"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.1
 	}
-	
+
 	### KAVALLERIE ###
 	## Dragoner ##
 	#4. Dragoner-Regiment
 	division = {
-		name = "4. Preußisches Dragoner-Regiment"
+		#4. Preußisches Dragoner-Regiment
+		division_name = {
+			is_name_ordered	= yes
+			name_order = 4
+		}
 		location = 3444
 		division_template = "Dragoner-Regiment"
 		start_experience_factor = 0.15
@@ -48,7 +68,11 @@
 	}
 	#5. Dragoner-Regiment
 	division = {
-		name = "5. Preußisches Dragoner-Regiment"
+		#5. Preußisches Dragoner-Regiment
+		division_name = {
+			is_name_ordered	= yes
+			name_order = 5
+		}
 		location = 506
 		division_template = "Dragoner-Regiment"
 		start_experience_factor = 0.15

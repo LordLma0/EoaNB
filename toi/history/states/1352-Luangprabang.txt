@@ -1,7 +1,9 @@
-state={
+state = {
 	id = 1352
-	name="STATE_1352"
+	name = "STATE_1352"
 	manpower = 478524
+
+	local_supplies=0.0 
  
 	resources = {
 		coal = 4
@@ -12,10 +14,10 @@ state={
 
 	
 
-	provinces={
+	provinces = {
 		4339 4568 4613 7075 7103 7218 9961 12392 12433
 	}
-	history={
+	history = {
 		owner = LUA
 		add_core_of = LUA
 		add_claim_by = VIN
@@ -43,7 +45,7 @@ state={
 		add_to_array = { state_culture_array = 213 } # Lao
 		add_to_array = { state_culture_array_num = 0.41 }
 		add_to_array = { state_culture_array = 216 } # Northern Thai
-		add_to_array = { state_culture_array_num = 0.16 }
+		add_to_array = { state_culture_array_num = 0.26 }
 		add_to_array = { state_culture_array = 221 } # Chinese Thai
 		add_to_array = { state_culture_array_num = 0.10 }
 		add_to_array = { state_culture_array = 212 } # Isan

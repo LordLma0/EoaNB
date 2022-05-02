@@ -1,81 +1,5 @@
 ﻿add_namespace = news
 
-#EVENTS FOR TAG 'PIE' (Sardinia-Piedemonte)
-
-#PIE wins 2nd Independence war
-news_event = {
-	id = news.1
-	title = news.1.t
-	desc = news.1.d
-	picture = GFX_news_event_king_speech
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.1.a
-		trigger = {
-			NOT = {
-				TAG = PIE
-			}
-		}
-	}
-	option = {
-		name = news.1.b
-		trigger = { TAG = PIE }
-	}
-}
-
-#Count of Cavour assasinated
-news_event = {
-	id = news.6
-	title = news.6.t
-	desc = news.6.d
-	picture = GFX_news_event_ITA_Carvour_Death
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.6.a
-		trigger = {
-			NOT = {
-				TAG = ITA
-			}
-		}
-	}
-	option = {
-		name = news.6.b
-		trigger = { TAG = ITA }
-	}
-}
-
-#News Event 16
-news_event = {
-	id = news.16
-	title = news.16.t
-	desc = news.16.d
-	picture = GFX_news_event_king_speech
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.16.a
-		trigger = {
-			NOT = {
-				TAG = PIE
-			}
-		}
-	}
-	option = {
-		name = news.16.b
-		trigger = { TAG = PIE }
-	}
-}
 
 #EVENTS FOR TAG 'POR' (Portugal)
 
@@ -118,7 +42,7 @@ news_event = {
 	id = news.4
 	title = news.4.t
 	desc = news.4.d
-	picture = GFX_news_event_soldiers_marching
+	picture = GFX_event_news_mexican_civil_war
 	
 	major = yes
 	
@@ -392,12 +316,12 @@ news_event = {
 
 #EVENTS FOR TAG 'AUS' (Austrian Empire)
 
-#Austria-Hungary forms
+#Austria-Hungary Forms
 news_event = {
 	id = news.9
 	title = news.9.t
 	desc = news.9.d
-	picture = GFX_news_event_gathering_protest
+	picture = GFX_news_event_austria_hungary_compromise_coronation
 	
 	major = yes
 	
@@ -408,107 +332,71 @@ news_event = {
 	}
 }
 
-#EVENTS FOR TAG 'TSH' (Tokugawa Shogunate)
-
-#News Event 17
+#Hungarian Revolution
 news_event = {
-	id = news.17
-	title = news.17.t
-	desc = news.17.desc
-	picture = GFX_news_event_generic_sign_treaty3
-
+	id = news.34
+	title = news.34.t
+	desc = news.34.d
+	picture = GFX_news_event_generic_rally2
+	
 	major = yes
-
+	
 	is_triggered_only = yes
-
+	
 	option = {
-		name = news.17.a
-		trigger = {
-			NOT = {
-				TAG = TSH
-				TAG = USA
-				TAG = CHO
-				TAG = SAT
-				TAG = SAG
-				TAG = TOS 
-				TAG = ENG
-				TAG = FRA
-				TAG = RUS
-				TAG = HOL 
-			}
-		}
-	}
-	option = {
-		name = news.17.b
-		trigger = { TAG = TSH }
-		add_timed_idea = {
-			idea = TSH_foreign_trade
-			days = 3650
-		}
-		add_stability = -0.10
-		add_opinion_modifier = { target = USA modifier = small_decrease }
-	}
-	option = {
-		name = news.17.c
-		trigger = { TAG = USA }
-		add_ideas = USA_TSH_trade
-		add_political_power = 50
-		add_opinion_modifier = { target = TSH modifier = small_increase }
-	}
-	option = {
-		name = news.17.d
-		trigger = { TAG = CHO }
-		add_stability = -0.05
-		add_opinion_modifier = { target = TSH modifier = medium_decrease }
-	}
-	option = {
-		name = news.17.e
-		trigger = { TAG = SAT }
-		add_stability = -0.05
-		add_opinion_modifier = { target = TSH modifier = medium_decrease }
-	}
-	option = {
-		name = news.17.f
-		trigger = { TAG = SAG }
-		add_stability = -0.05
-		add_opinion_modifier = { target = TSH modifier = small_decrease }
-	}
-	option = {
-		name = news.17.g
-		trigger = { TAG = TOS }
-		add_stability = -0.05
-		add_opinion_modifier = { target = TSH modifier = small_decrease }
-	}
-	option = {
-		name = news.17.h
-		trigger = {
-			OR = {
-				TAG = ENG
-				TAG = FRA
-				TAG = RUS
-				TAG = HOL
-			}
-		}
-		if = {
-			limit = { tag = ENG }
-			add_ideas = ENG_TSH_trade
-		}
-		if = {
-			limit = { tag = FRA }
-			add_ideas = FRA_TSH_trade
-		}
-		if = {
-			limit = { tag = RUS }
-			add_ideas = RUS_TSH_trade
-		}
-		if = {
-			limit = { tag = HOL }
-			add_ideas = HOL_TSH_trade
-		}
-		add_political_power = 50
-		add_opinion_modifier = { target = TSH modifier = small_increase }
+		name = news.34.a
 	}
 }
+
+#Hungary Wins Independence
+news_event = {
+	id = news.35
+	title = news.35.t
+	desc = news.35.d
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.35.a
+	}
+}
+
+#Savoy and Nice Ceded to France Following Austria's Victory in Italy
+news_event = {
+	id = news.36
+	title = news.36.t
+	desc = news.36.d
+	picture = GFX_news_event_turin_city
+	
+	major = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.36.a
+	}
+}
+
+#Emperor Franz Joseph I Enacts Constitutional Diploma
+news_event = {
+	id = news.37
+	title = news.37.t
+	desc = news.37.d
+	picture = GFX_news_event_franz_joseph_sissi_and_siblings_1855
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.37.a
+	}
+}
+
+#EVENTS FOR TAG 'JAP' (Japan)
 
 #Japan backs down and gives Tsushima to Russia
 news_event = {
@@ -702,5 +590,35 @@ news_event = {
 	
 	option = {
 		name = news.24.a
+	}
+}
+
+##Tunisia related news events 
+news_event = {
+	id = news.32 #fance send the float
+	title = news.32.t
+	desc = news.32.d
+	picture = GFX_news_event_ITA_expedition_thousand
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.32.a
+	}
+}
+news_event = {
+	id = news.33 # france bomb tunisian coasts
+	title = news.33.t
+	desc = news.33.d
+	picture = GFX_tunisia_coastal_bombing
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.33.a
 	}
 }

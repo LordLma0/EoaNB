@@ -133,7 +133,7 @@ focus_tree = {		  #Tree planned by Macintosh#0314, implementation by RandomGuy45
 	}
 	focus = {
 		id = KNS_american_trade_association
-		icon = GFX_focus_increase_civillian_budget
+		icon = GFX_Focus_Economy_Growth
 		x = 2
 		y = 1
 		relative_position_id = KNS_kansas_industry
@@ -168,7 +168,7 @@ focus_tree = {		  #Tree planned by Macintosh#0314, implementation by RandomGuy45
 	}
 	focus = {
 		id = KNS_export_focus
-		icon = GFX_goal_focus_freedom_economy
+		icon = GFX_Focus_freedom_economy
 		x = 0
 		y = 1
 		relative_position_id = KNS_american_trade_association
@@ -188,7 +188,7 @@ focus_tree = {		  #Tree planned by Macintosh#0314, implementation by RandomGuy45
 	}
 	focus = {
 		id = KNS_breadbasket_of_the_states
-		icon = GFX_goal_focus_agriculture
+		icon = GFX_Focus_Agriculture
 		x = 0
 		y = 1
 		relative_position_id = KNS_rail_company_subsidies

@@ -3,6 +3,11 @@ AUS_HUN_dual = {
 	color_ui = rgb { 255 255 255 }
 }
 
+PIE_habsburg_kingdom_of_piedmont = {
+	color = rgb { 78 104 58 }
+	color_ui = rgb { 255 255 255 }
+}
+
 LVN_austrian = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
@@ -22,7 +27,11 @@ PIE_focus_ITA = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 67 127 63 }
 }
-TUS_focus_ITA = {
+TUSCM = {
+	color = rgb { 67 127 63 }
+	color_ui = rgb { 67 127 63 }
+}
+TUSRR = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 67 127 63 }
 }
@@ -104,8 +113,8 @@ ROM_costag_generic_formed = {
 }
 
 RAJ_ENG_british_puppet = {
-	color = rgb { 170  10  10 }
-	color_ui = rgb { 170  10  10 }
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
 }
 
 RAJ_ENG_british_raj = {
@@ -152,6 +161,10 @@ MAN_cosmetic_qing_puppet = {
 	color = rgb { 237  152  18 }
 	color_ui = rgb { 237  152  18 }
 }
+PPG_condominium = {
+	color = rgb { 237  152  18 }
+	color_ui = rgb { 237  152  18 }
+}
 
 KRU_maryland = {
  color = rgb { 152 130 191 }
@@ -183,6 +196,11 @@ ALK_LIE_company={
  color_ui = rgb { 255 217 60 }
 }
 
+USA_free_states_of_america = {
+	color = rgb { 200 200 0 }
+	color_ui = rgb { 160 160 0 }
+}
+
 TEX_CIVWAR_CSA_cosmetic = {
 	color = rgb { 180 180 180  }
 	color_ui = rgb { 180 180 180 }
@@ -193,22 +211,7 @@ LOU_CSA_state = {
 	color_ui = rgb { 180 180 180 }
 }
 
-ARK_CSA_state = {
-	color = rgb { 180 180 180  }
-	color_ui = rgb { 180 180 180 }
-}
-
 MIS_CSA_state = {
-	color = rgb { 180 180 180  }
-	color_ui = rgb { 180 180 180 }
-}
-
-ALA_CSA_state = {
-	color = rgb { 180 180 180  }
-	color_ui = rgb { 180 180 180 }
-}
-
-TEN_CSA_state = {
 	color = rgb { 180 180 180  }
 	color_ui = rgb { 180 180 180 }
 }
@@ -313,6 +316,161 @@ WVG_reformed_virginia = {
 	color_ui = rgb { 135 85 55 }
 }
 
+PHL_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+MHC_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+NEG_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+WVG_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+CSA_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+NCA_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+SCA_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+USG_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+KTY_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+GRL_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+FLO_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+MIS_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+LOU_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+MIO_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+TEX_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+OKL_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+KNS_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+SHO_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+DAK_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+SIX_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+NMX_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+CHY_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+CRW_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+CRW_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+BFT_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+APA_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+UTA_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+NEZ_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+NAV_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+CAL_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+ORE_USA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
 SKT_DSS_vassal = {
 	color = rgb { 142 151 87 }
 	color_ui = rgb { 180 180 180 }
@@ -392,7 +550,124 @@ EASTER_EGG_BTS_Cosmetic = {
 	color_ui = rgb { 26  53  177 }
 }
 
+TSH_Ouetsu_Alliance_Cosmetic = {
+	color = rgb { 255  200  200 }
+	color_ui = rgb { 255  200  200 }
+}
+TSH_Daimyo_Republic_Cosmetic = {
+	color = rgb { 255  100  25 }
+	color_ui = rgb { 255  100  25 }
+}
+
 BDY_SS_ordenstat = {
 	color = rgb { 90 0 0 }
 	color_ui = rgb { 255 255 122 }
+}
+PRS_vicky_ii = {
+	color = rgb { 255 221 34 }
+	color_ui = rgb { 255 221 34 }
+}
+USA_ih = {
+	color = rgb { 23 27 235 }
+	color_ui = rgb { 23 27 235 }
+}
+SAX_ih = {
+	color = rgb { 84 88 91 }
+	color_ui = rgb { 84 88 91 }
+}
+RUS_ih = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+SOV_ih = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+SWE_ih = {
+	color = rgb { 36 132 247 }
+	color_ui = rgb { 47 172 255 }
+}
+CIR_ih = {
+	color = rgb { 250 167 42 }
+	color_ui = rgb { 250 167 42 }
+}
+FRA_ih = {
+	color = rgb { 0 0 153 }
+	color_ui = rgb { 0 0 153 }
+}
+ENG_ih = {
+	color = rgb { 38 79 24 }
+	color_ui = rgb { 38 79 24 }
+}
+
+UPC_MPSC = {
+	color = rgb { 237  152  18 }
+	color_ui = rgb { 237  152  18 }
+}
+
+TAW_formosan_republic = {
+	color = rgb { 40  83  127 }
+	color_ui = rgb { 40  83  127 }
+}
+
+KYR = {
+	color = rgb { 153  76  0 }
+	color_ui = rgb { 153  76  0 }
+}
+
+JAP_meiji_rebellion_cosmetic = {
+	color = rgb { 230 230 70 }
+	color_ui = rgb { 230 230 70 }
+}
+SPC = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}
+DOM_SPC_cosmetic = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}
+BCO_Hudson_Bay_Columbia_Cosmetic = {
+	color = rgb { 73 32 27 }
+	color_ui = rgb { 73 32 27 }
+}
+NWT_Northwest_Territories_Cosmetic = {
+	color = rgb { 73 32 27 }
+	color_ui = rgb { 73 32 27 }
+}
+NFL_Newfoundland_Colony_Cosmetic = {
+	color = rgb { 165 24 24 }
+	color_ui = rgb { 165 24 24 }
+}
+BRK_New_Brunswick_Colony_Cosmetic = {
+	color = rgb { 176 0 0  }
+	color_ui = rgb { 176 0 0  }
+}
+NVS_Nova_Scotia_Colony_Cosmetic = {
+	color = rgb { 145  37  50 }
+	color_ui = rgb { 145  37  50 }
+}
+SAF_CC = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+NAT_UK = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+TRV_ENG_dominated = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+SAF_union = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+OFS_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+ENG_British_Empire = {
+	color = rgb { 165 24 24 }
+	color_ui = rgb { 165 24 24 }
 }

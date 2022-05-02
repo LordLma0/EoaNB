@@ -55,13 +55,6 @@ GER_decision_category_unite_liberal_republic = {
 					remove_ideas = PRS_idea_ngc_judiciary_3
 					remove_ideas = PRS_german_national_movement_2
 					remove_ideas = PRS_trade_and_economic_law_4
-					clr_country_flag = PRS_ernst_moritz_arndt_dead
-					clr_country_flag = PRS_friedrich_dahlmann_dead
-					clr_country_flag = PRS_friedrich_stahl_dead
-					clr_country_flag = PRS_ferdinand_lassalle_dead
-					clr_country_flag = bismarck_cabinet_enabled
-					clr_country_flag = PRS_krupp_support_flag
-					clr_country_flag = PRS_siemens_support_flag
 				}
 				#remove_ideas = PRS_Zollverein_3
 				#if = {
@@ -166,13 +159,6 @@ GER_decision_category_unite_liberal_monarchy = {
 					remove_ideas = PRS_idea_ngc_judiciary_3
 					remove_ideas = PRS_german_national_movement_2
 					remove_ideas = PRS_trade_and_economic_law_4
-					clr_country_flag = PRS_ernst_moritz_arndt_dead
-					clr_country_flag = PRS_friedrich_dahlmann_dead
-					clr_country_flag = PRS_friedrich_stahl_dead
-					clr_country_flag = PRS_ferdinand_lassalle_dead
-					clr_country_flag = bismarck_cabinet_enabled
-					clr_country_flag = PRS_krupp_support_flag
-					clr_country_flag = PRS_siemens_support_flag
 				}
 				#remove_ideas = PRS_Zollverein_3
 				#if = {
@@ -274,13 +260,6 @@ GER_decision_category_unite_bismarck = {
 					remove_ideas = PRS_idea_ngc_judiciary_3
 					remove_ideas = PRS_german_national_movement_2
 					remove_ideas = PRS_trade_and_economic_law_4
-					clr_country_flag = PRS_ernst_moritz_arndt_dead
-					clr_country_flag = PRS_friedrich_dahlmann_dead
-					clr_country_flag = PRS_friedrich_stahl_dead
-					clr_country_flag = PRS_ferdinand_lassalle_dead
-					clr_country_flag = bismarck_cabinet_enabled
-					clr_country_flag = PRS_krupp_support_flag
-					clr_country_flag = PRS_siemens_support_flag
 				}
 				#remove_ideas = PRS_Zollverein_3
 				#if = {
@@ -384,13 +363,6 @@ GER_decision_category_unite_bismarck = {
 #					remove_ideas = PRS_idea_ngc_judiciary_3
 #					remove_ideas = PRS_german_national_movement_2
 #					remove_ideas = PRS_trade_and_economic_law_4
-#					clr_country_flag = PRS_ernst_moritz_arndt_dead
-#					clr_country_flag = PRS_friedrich_dahlmann_dead
-#					clr_country_flag = PRS_friedrich_stahl_dead
-#					clr_country_flag = PRS_ferdinand_lassalle_dead
-#					clr_country_flag = bismarck_cabinet_enabled
-#					clr_country_flag = PRS_krupp_support_flag
-#					clr_country_flag = PRS_siemens_support_flag
 #				}
 #				#remove_ideas = PRS_Zollverein_3
 #				#if = {
@@ -853,7 +825,6 @@ political_actions = {
 						owns_state = 949
 						owns_state = 938
 						owns_state = 61
-						owns_state = 1034
 						owns_state = 60
 						owns_state = 65
 						owns_state = 64
@@ -1002,6 +973,21 @@ GER_category_kiel_canal = {
 		visible = {
 			date > 1878.1.1
 			PRS_trigger_formed_germany = yes
+			NOT={has_country_flag = eoanb_flag_PRS_kiel_canal_preparations_finished}
+			OR={
+				owns_state = 58
+				owns_state = 949
+				58={
+					owner={
+						is_subject_of = ROOT
+					}
+				}
+				949={
+					owner={
+						is_subject_of = ROOT
+					}
+				}
+			}
 		}
 
 		fire_only_once = yes
@@ -1403,7 +1389,7 @@ GER_category_war_in_sight = {
 			}
 		}
 		
-		#AI will always avoid the crisis if possible, unless historical mode is off in which case it is still likely to do so
+		#AI will always avoid the crisis if possible
 		ai_will_do = {
 			base = 1000
 			modifier = {
@@ -1422,14 +1408,14 @@ GER_category_war_in_sight = {
 	eoanb_decision_GER_defuse_warinsight = {
 		
 		icon = generic_decision
+		
+		allowed = { tag = PRS }
 
 		available = {
 			has_active_mission = eoanb_decision_GER_crisis_warinsight
 		}
 
 		visible = {
-			TAG = PRS
-			PRS_trigger_formed_germany = yes
 			has_active_mission = eoanb_decision_GER_crisis_warinsight
 		}
 
@@ -1477,7 +1463,7 @@ GER_category_southern_generals = {
 			army_experience = -10
 			create_corps_commander = {
 				name = "Karl von Heygendorff"
-				portrait_path = "gfx/leaders/Europe/Portrait_Europe_generic_military_general_1.dds"
+				picture = "gfx/leaders/Europe/Portrait_Europe_generic_military_general_1.png"
 				skill = 2
 				attack_skill = 2
 				defense_skill = 2
@@ -1517,7 +1503,7 @@ GER_category_southern_generals = {
 			army_experience = -10
 			create_corps_commander = {
 				name = "Alfred Ludwig von Degenfeld"
-				picture = "Portrait_BAD_Alfred_Ludwig_von_Degenfeld.dds"
+				picture = "Portrait_BAD_Alfred_Ludwig_von_Degenfeld.png"
 				traits = { }
 				skill = 3
 				attack_skill = 1
@@ -1593,7 +1579,7 @@ GER_category_southern_generals = {
 			army_experience = -10
 			create_corps_commander = {
 				name = "Jakob von Hartmann"
-				picture = "Portrait_BAV_Jakob_von_Hartmann.dds"
+				picture = "Portrait_BAV_Jakob_von_Hartmann.png"
 				traits = { }
 				skill = 3
 				attack_skill = 1
@@ -1631,7 +1617,7 @@ GER_category_southern_generals = {
 			army_experience = -10
 			create_corps_commander = {
 				name = "Karl Krazeisen"
-				picture = "Portrait_BAV_Karl_Krazeisen.dds"
+				picture = "Portrait_BAV_Karl_Krazeisen.png"
 				traits = { }
 				skill = 3
 				attack_skill = 1

@@ -349,10 +349,10 @@ NA_B_Add_State_Effect = {
 					OWNER = { is_first_nations_tribe = yes }
 				}
 			}
+			add_core_of = ROOT
 		}
 		if = {
 			limit = { is_owned_by = ROOT }
-			FROM = { state_event = { id = NA_B_statehood.1 } }
 			add_to_variable = {
 				var = usa_congress_senate_total_seats
 				value = 2
@@ -361,9 +361,11 @@ NA_B_Add_State_Effect = {
 				var = usa_congress_house_total_seats
 				value = 1
 			}
-			OWNER = { 
+			ROOT = {
 				USA_admit_state_add_stars = yes
-				eoanb_add_1_prestige_score = yes
+				USA_check_and_update_stars = yes
+				set_temp_variable = { eoanb_prestige_change = 1 }
+				eoanb_change_prestige_score = yes
 			}
 		}
 	}
@@ -374,7 +376,10 @@ NA_B_Add_State_Effect = {
 USA_Buchanan_Cabinet_Modify = {
 	if = {
 		limit = {
-			date < 1860.11.6
+			has_country_leader = {
+				name = "James Buchanan"
+				ruling_only = yes
+			}
 			USA = {
 				has_completed_focus = USA_covode_committee
 			}
@@ -387,254 +392,257 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_2_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl2}
-			add_ideas = {USA_doughface_2_lvl1}
+			remove_ideas = { USA_doughface_2_lvl2 }
+			add_ideas = { USA_doughface_2_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_2_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl3}
-			add_ideas = {USA_doughface_2_lvl1}
+			remove_ideas = { USA_doughface_2_lvl3 }
+			add_ideas = { USA_doughface_2_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_2_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl4}
-			add_ideas = {USA_doughface_2_lvl1}
+			remove_ideas = { USA_doughface_2_lvl4 }
+			add_ideas = { USA_doughface_2_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_2_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl5}
-			add_ideas = {USA_doughface_2_lvl1}
+			remove_ideas = { USA_doughface_2_lvl5 }
+			add_ideas = { USA_doughface_2_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_2_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl1}
-			add_ideas = {USA_doughface_2_lvl2}
+			remove_ideas = { USA_doughface_2_lvl1 }
+			add_ideas = { USA_doughface_2_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_2_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl3}
-			add_ideas = {USA_doughface_2_lvl2}
+			remove_ideas = { USA_doughface_2_lvl3 }
+			add_ideas = { USA_doughface_2_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_2_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl4}
-			add_ideas = {USA_doughface_2_lvl2}
+			remove_ideas = { USA_doughface_2_lvl4 }
+			add_ideas = { USA_doughface_2_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_2_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl5}
-			add_ideas = {USA_doughface_2_lvl2}
+			remove_ideas = { USA_doughface_2_lvl5 }
+			add_ideas = { USA_doughface_2_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_2_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl1}
-			add_ideas = {USA_doughface_2_lvl3}
+			remove_ideas = { USA_doughface_2_lvl1 }
+			add_ideas = { USA_doughface_2_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_2_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl2}
-			add_ideas = {USA_doughface_2_lvl3}
+			remove_ideas = { USA_doughface_2_lvl2 }
+			add_ideas = { USA_doughface_2_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_2_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl4}
-			add_ideas = {USA_doughface_2_lvl3}
+			remove_ideas = { USA_doughface_2_lvl4 }
+			add_ideas = { USA_doughface_2_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_2_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl5}
-			add_ideas = {USA_doughface_2_lvl3}
+			remove_ideas = { USA_doughface_2_lvl5 }
+			add_ideas = { USA_doughface_2_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_2_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl1}
-			add_ideas = {USA_doughface_2_lvl4}
+			remove_ideas = { USA_doughface_2_lvl1 }
+			add_ideas = { USA_doughface_2_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_2_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl2}
-			add_ideas = {USA_doughface_2_lvl4}
+			remove_ideas = { USA_doughface_2_lvl2 }
+			add_ideas = { USA_doughface_2_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_2_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl3}
-			add_ideas = {USA_doughface_2_lvl4}
+			remove_ideas = { USA_doughface_2_lvl3 }
+			add_ideas = { USA_doughface_2_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_2_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl5}
-			add_ideas = {USA_doughface_2_lvl4}
+			remove_ideas = { USA_doughface_2_lvl5 }
+			add_ideas = { USA_doughface_2_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_2_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl1}
-			add_ideas = {USA_doughface_2_lvl5}
+			remove_ideas = { USA_doughface_2_lvl1 }
+			add_ideas = { USA_doughface_2_lvl5 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_2_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl2}
-			add_ideas = {USA_doughface_2_lvl5}
+			remove_ideas = { USA_doughface_2_lvl2 }
+			add_ideas = { USA_doughface_2_lvl5 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_2_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl3}
-			add_ideas = {USA_doughface_2_lvl5}
+			remove_ideas = { USA_doughface_2_lvl3 }
+			add_ideas = { USA_doughface_2_lvl5 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_2_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_2_lvl4}
-			add_ideas = {USA_doughface_2_lvl5}
+			remove_ideas = { USA_doughface_2_lvl4 }
+			add_ideas = { USA_doughface_2_lvl5 }
 		}
 	}
 	else_if = {
 		limit = {
-			date < 1860.11.6
+			has_country_leader = {
+				name = "James Buchanan"
+				ruling_only = yes
+			}
 			USA = {
 				has_completed_focus = USA_doughface_cabinet
 			}
@@ -647,254 +655,257 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_1_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl2}
-			add_ideas = {USA_doughface_1_lvl1}
+			remove_ideas = { USA_doughface_1_lvl2 }
+			add_ideas = { USA_doughface_1_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_1_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl3}
-			add_ideas = {USA_doughface_1_lvl1}
+			remove_ideas = { USA_doughface_1_lvl3 }
+			add_ideas = { USA_doughface_1_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_1_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl4}
-			add_ideas = {USA_doughface_1_lvl1}
+			remove_ideas = { USA_doughface_1_lvl4 }
+			add_ideas = { USA_doughface_1_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_doughface_1_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl5}
-			add_ideas = {USA_doughface_1_lvl1}
+			remove_ideas = { USA_doughface_1_lvl5 }
+			add_ideas = { USA_doughface_1_lvl1 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_1_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl1}
-			add_ideas = {USA_doughface_1_lvl2}
+			remove_ideas = { USA_doughface_1_lvl1 }
+			add_ideas = { USA_doughface_1_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_1_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl3}
-			add_ideas = {USA_doughface_1_lvl2}
+			remove_ideas = { USA_doughface_1_lvl3 }
+			add_ideas = { USA_doughface_1_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_1_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl4}
-			add_ideas = {USA_doughface_1_lvl2}
+			remove_ideas = { USA_doughface_1_lvl4 }
+			add_ideas = { USA_doughface_1_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_doughface_1_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl5}
-			add_ideas = {USA_doughface_1_lvl2}
+			remove_ideas = { USA_doughface_1_lvl5 }
+			add_ideas = { USA_doughface_1_lvl2 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_1_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl1}
-			add_ideas = {USA_doughface_1_lvl3}
+			remove_ideas = { USA_doughface_1_lvl1 }
+			add_ideas = { USA_doughface_1_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_1_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl2}
-			add_ideas = {USA_doughface_1_lvl3}
+			remove_ideas = { USA_doughface_1_lvl2 }
+			add_ideas = { USA_doughface_1_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_1_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl4}
-			add_ideas = {USA_doughface_1_lvl3}
+			remove_ideas = { USA_doughface_1_lvl4 }
+			add_ideas = { USA_doughface_1_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_doughface_1_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl5}
-			add_ideas = {USA_doughface_1_lvl3}
+			remove_ideas = { USA_doughface_1_lvl5 }
+			add_ideas = { USA_doughface_1_lvl3 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_1_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl1}
-			add_ideas = {USA_doughface_1_lvl4}
+			remove_ideas = { USA_doughface_1_lvl1 }
+			add_ideas = { USA_doughface_1_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_1_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl2}
-			add_ideas = {USA_doughface_1_lvl4}
+			remove_ideas = { USA_doughface_1_lvl2 }
+			add_ideas = { USA_doughface_1_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_1_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl3}
-			add_ideas = {USA_doughface_1_lvl4}
+			remove_ideas = { USA_doughface_1_lvl3 }
+			add_ideas = { USA_doughface_1_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_doughface_1_lvl5
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl5}
-			add_ideas = {USA_doughface_1_lvl4}
+			remove_ideas = { USA_doughface_1_lvl5 }
+			add_ideas = { USA_doughface_1_lvl4 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_1_lvl1
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl1}
-			add_ideas = {USA_doughface_1_lvl5}
+			remove_ideas = { USA_doughface_1_lvl1 }
+			add_ideas = { USA_doughface_1_lvl5 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_1_lvl2
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl2}
-			add_ideas = {USA_doughface_1_lvl5}
+			remove_ideas = { USA_doughface_1_lvl2 }
+			add_ideas = { USA_doughface_1_lvl5 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_1_lvl3
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl3}
-			add_ideas = {USA_doughface_1_lvl5}
+			remove_ideas = { USA_doughface_1_lvl3 }
+			add_ideas = { USA_doughface_1_lvl5 }
 		}
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_doughface_1_lvl4
 				}
 			}
-			remove_ideas = {USA_doughface_1_lvl4}
-			add_ideas = {USA_doughface_1_lvl5}
+			remove_ideas = { USA_doughface_1_lvl4 }
+			add_ideas = { USA_doughface_1_lvl5 }
 		}
 	}
 	else_if = {
 		limit = {
-			date < 1860.11.6
+			has_country_leader = {
+				name = "James Buchanan"
+				ruling_only = yes
+			}
 			USA = {
 				has_completed_focus = USA_close_ranks
 			}
@@ -907,7 +918,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_2_lvl2
@@ -920,7 +931,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_2_lvl3
@@ -933,7 +944,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_2_lvl4
@@ -946,7 +957,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_2_lvl5
@@ -959,7 +970,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_2_lvl1
@@ -972,7 +983,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_2_lvl3
@@ -985,7 +996,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_2_lvl4
@@ -998,7 +1009,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_2_lvl5
@@ -1011,7 +1022,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_2_lvl1
@@ -1024,7 +1035,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_2_lvl2
@@ -1037,7 +1048,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_2_lvl4
@@ -1050,7 +1061,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_2_lvl5
@@ -1063,7 +1074,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_2_lvl1
@@ -1076,7 +1087,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_2_lvl2
@@ -1089,7 +1100,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_2_lvl3
@@ -1102,7 +1113,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_2_lvl5
@@ -1114,7 +1125,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_2_lvl1
 				}
 			}
@@ -1124,7 +1135,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_2_lvl2
 				}
 			}
@@ -1134,7 +1145,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_2_lvl3
 				}
 			}
@@ -1144,7 +1155,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_2_lvl4
 				}
 			}
@@ -1154,7 +1165,10 @@ USA_Buchanan_Cabinet_Modify = {
 	}
 	else_if = {
 		limit = {
-			date < 1860.11.6
+			has_country_leader = {
+				name = "James Buchanan"
+				ruling_only = yes
+			}
 			USA = {
 				has_completed_focus = USA_inclusive_cabinet
 			}
@@ -1167,7 +1181,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_1_lvl2
@@ -1180,7 +1194,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_1_lvl3
@@ -1193,7 +1207,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_1_lvl4
@@ -1206,7 +1220,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -75
+						has_political_power > 225
 						# has_political_power = -75
 					}
 					has_idea = USA_inclusive_1_lvl5
@@ -1219,7 +1233,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_1_lvl1
@@ -1232,7 +1246,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_1_lvl3
@@ -1245,7 +1259,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_1_lvl4
@@ -1258,7 +1272,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -150
+						has_political_power > 150
 						# has_political_power = -150
 					}
 					has_idea = USA_inclusive_1_lvl5
@@ -1271,7 +1285,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_1_lvl1
@@ -1284,7 +1298,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_1_lvl2
@@ -1297,7 +1311,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_1_lvl4
@@ -1310,7 +1324,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -225
+						has_political_power > 75
 						# has_political_power = -225
 					}
 					has_idea = USA_inclusive_1_lvl5
@@ -1323,7 +1337,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_1_lvl1
@@ -1336,7 +1350,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_1_lvl2
@@ -1349,7 +1363,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_1_lvl3
@@ -1362,7 +1376,7 @@ USA_Buchanan_Cabinet_Modify = {
 			limit = {
 				USA = {
 					OR = {
-						has_political_power > -300
+						has_political_power > 0
 						# has_political_power = -300
 					}
 					has_idea = USA_inclusive_1_lvl5
@@ -1374,7 +1388,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_1_lvl1
 				}
 			}
@@ -1384,7 +1398,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_1_lvl2
 				}
 			}
@@ -1394,7 +1408,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_1_lvl3
 				}
 			}
@@ -1404,7 +1418,7 @@ USA_Buchanan_Cabinet_Modify = {
 		else_if = {
 			limit = {
 				USA = {
-					has_political_power < -300
+					has_political_power < 0
 					has_idea = USA_inclusive_1_lvl4
 				}
 			}
@@ -1746,6 +1760,7 @@ ACW_Weapons_Count_Get = {
 				has_global_flag = ACW_American_Civil_War_Start
 				has_global_flag = ACW_American_Civil_War
 				has_country_flag = USA_Slavery_Debate_Ongoing
+				has_country_flag = ACW_golden_imperium
 			}
 		}
 		custom_effect_tooltip = ACW_Weapons_Count_Get_tt
@@ -1758,6 +1773,7 @@ ACW_Weapons_Count_Use = {
 			OR = {
 				has_global_flag = ACW_American_Civil_War_Start
 				has_global_flag = ACW_American_Civil_War
+				has_country_flag = ACW_golden_imperium
 			}
 			OR = {
 				has_war_with = CSA
@@ -1777,6 +1793,7 @@ ACW_Draft_Count_Get = {
 				has_global_flag = ACW_American_Civil_War_Start
 				has_global_flag = ACW_American_Civil_War
 				has_country_flag = USA_Slavery_Debate_Ongoing
+				has_country_flag = ACW_golden_imperium
 			}
 		}
 		custom_effect_tooltip = ACW_Draft_Count_Get_tt
@@ -1789,6 +1806,7 @@ ACW_Draft_Count_Use = {
 			OR = {
 				has_global_flag = ACW_American_Civil_War_Start
 				has_global_flag = ACW_American_Civil_War
+				has_country_flag = ACW_golden_imperium
 			}
 			OR = {
 				has_war_with = CSA
@@ -1864,6 +1882,8 @@ USAROD_Reconstruction_Zone_Setup = {
 					CSA = { owns_state = 366 }
 					CSA = { owns_state = 367 }
 					CSA = { owns_state = 1211 }
+					CSA = { owns_state = 315 } #Cuba
+					CSA = { owns_state = 1370 } #Cuba
 				}
 			}
 			USG = {
@@ -1882,6 +1902,14 @@ USAROD_Reconstruction_Zone_Setup = {
 				if = {
 					limit = { CSA = { owns_state = 1211 } }
 					transfer_state = 1211
+				}
+				if = {
+					limit = { CSA = { owns_state = 315 } }
+					transfer_state = 315
+				}
+				if = {
+					limit = { CSA = { owns_state = 1370 } }
+					transfer_state = 1370
 				}
 				USAROD_Reconstruction_Zone_Setup1 = yes
 			}
@@ -2000,9 +2028,7 @@ USAROD_Reconstruction_Zone_Setup = {
 					OR = {
 						CSA = { owns_state = 371 }
 						CSA = { owns_state = 375 }
-						CSA = { owns_state = 1303 }
 						CSA = { owns_state = 1304 }
-						CSA = { owns_state = 1305 }
 						CSA = { owns_state = 1306 }
 					}
 				}
@@ -2016,16 +2042,8 @@ USAROD_Reconstruction_Zone_Setup = {
 						transfer_state = 375
 					}
 					if = {
-						limit = { CSA = { owns_state = 1303 } }
-						transfer_state = 1303
-					}
-					if = {
 						limit = { CSA = { owns_state = 1304 } }
 						transfer_state = 1304
-					}
-					if = {
-						limit = { CSA = { owns_state = 1305 } }
-						transfer_state = 1305
 					}
 					if = {
 						limit = { CSA = { owns_state = 1306 } }
@@ -2036,17 +2054,380 @@ USAROD_Reconstruction_Zone_Setup = {
 			}
 		}
 	}
-	if = {
-		limit = { NEG = { is_subject_of = USA } }
-		# Maine
-
-		# Massachussetts
-
-		# New York
-
-		# Pennsylvania
-
-		# Ohio
+	# New England
+	WVG = {
+		if = {
+			limit = {
+				AND = {
+					961 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 961
+					}
+				}
+			}
+			transfer_state = 961
+		}
+		if = {
+			limit = {
+				AND = {
+					960 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 960
+					}
+				}
+			}
+			transfer_state = 960
+		}
+		if = {
+			limit = {
+				AND = {
+					959 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 959
+					}
+				}
+			}
+			transfer_state = 959
+		}
+		if = {
+			limit = {
+				AND = {
+					357 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 357
+					}
+				}
+			}
+			transfer_state = 357
+		}
+		if = {
+			limit = {
+				AND = {
+					1031 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 1031
+					}
+				}
+			}
+			transfer_state = 1031
+		}
+		if = {
+			limit = {
+				AND = {
+					958 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 958
+					}
+				}
+			}
+			transfer_state = 958
+		}
+		USAROD_Reconstruction_Zone_Setup1 = yes
+	}
+	# Mid-Atlantic
+	MIS = {
+		if = {
+			limit = {
+				AND = {
+					659 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 659
+					}
+				}
+			}
+			transfer_state = 659
+		}
+		if = {
+			limit = {
+				AND = {
+					954 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 954
+					}
+				}
+			}
+			transfer_state = 954
+		}
+		if = {
+			limit = {
+				AND = {
+					359 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 359
+					}
+				}
+			}
+			transfer_state = 359
+		}
+		if = {
+			limit = {
+				AND = {
+					358 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 358
+					}
+				}
+			}
+			transfer_state = 358
+		}
+		if = {
+			limit = {
+				AND = {
+					954 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 954
+					}
+				}
+			}
+			transfer_state = 954
+		}
+		if = {
+			limit = {
+				AND = {
+					360 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 360
+					}
+				}
+			}
+			transfer_state = 360
+		}
+		if = {
+			limit = {
+				AND = {
+					1385 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 1385
+					}
+				}
+			}
+			transfer_state = 1385
+		}
+		USAROD_Reconstruction_Zone_Setup1 = yes
+	}
+	# Eastern Great Lakes
+	USG = {
+		if = {
+			limit = {
+				AND = {
+					261 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 261
+					}
+				}
+			}
+			transfer_state = 261
+		}
+		if = {
+			limit = {
+				AND = {
+					393 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 393
+					}
+				}
+			}
+			transfer_state = 393
+		}
+		if = {
+			limit = {
+				AND = {
+					396 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 396
+					}
+				}
+			}
+			transfer_state = 396
+		}
+		USAROD_Reconstruction_Zone_Setup1 = yes
+	}
+	# Western Great Lakes
+	LOU = {
+		if = {
+			limit = {
+				AND = {
+					1358 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 1358
+					}
+				}
+			}
+			transfer_state = 1358
+		}
+		if = {
+			limit = {
+				AND = {
+					394 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 394
+					}
+				}
+			}
+			transfer_state = 394
+		}
+		if = {
+			limit = {
+				AND = {
+					395 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 395
+					}
+				}
+			}
+			transfer_state = 395
+		}
+		USAROD_Reconstruction_Zone_Setup1 = yes
+	}
+	# Upper Mississipppi
+	LOU = {
+		if = {
+			limit = {
+				AND = {
+					391 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 391
+					}
+				}
+			}
+			transfer_state = 391
+		}
+		if = {
+			limit = {
+				AND = {
+					392 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 392
+					}
+				}
+			}
+			transfer_state = 392
+		}
+		USAROD_Reconstruction_Zone_Setup1 = yes
+	}
+	# Kansas-Nebraska
+	KNS = {
+		if = {
+			limit = {
+				AND = {
+					384 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 384
+					}
+				}
+			}
+			transfer_state = 384
+		}
+		if = {
+			limit = {
+				AND = {
+					1046 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 1046
+					}
+				}
+			}
+			transfer_state = 1046
+		}
+		if = {
+			limit = {
+				AND = {
+					1050 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 1050
+					}
+				}
+			}
+			transfer_state = 1050
+		}
+		if = {
+			limit = {
+				AND = {
+					1052 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 1052
+					}
+				}
+			}
+			transfer_state = 1052
+		}
+		if = {
+			limit = {
+				AND = {
+					1296 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 1296
+					}
+				}
+			}
+			transfer_state = 1296
+		}
+		if = {
+			limit = {
+				AND = {
+					383 = {
+						has_state_flag = ACW_free_state_flag
+					}
+					USA = {
+						controls_state = 383
+					}
+				}
+			}
+			transfer_state = 383
+		}
+		USAROD_Reconstruction_Zone_Setup1 = yes
 	}
 	if = {
 		limit = { CAL = { is_subject_of = USA } }
@@ -2086,108 +2467,270 @@ USAROD_Reconstruction_Zone_Setup1 = {
 	if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_1 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_1
-		create_country_leader = {
-			name = "John McAllister Schofield"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Oliver_O_Howard.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment 
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "John McAllister Schofield"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_Oliver_O_Howard.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment 
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Robert E. Lee"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_Robert_Lee.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment 
+				traits = {}
+			}
 		}
 	}
 	else_if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_2 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_2
-		create_country_leader = {
-			name = "Daniel Edgar Sickles"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Daniel_Edgar_Sickles.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Daniel Edgar Sickles"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_Daniel_Edgar_Sickles.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "George B. McClellan"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_George_McClellan.dds"
+				expire = "1900.1.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 	else_if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_3 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_3
-		create_country_leader = {
-			name = "George Gordan Meade"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_George_Meade.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "George Gordan Meade"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_George_Meade.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Nathan Bedford Forrest"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_CSA_Nathan_Bedford_Forrest.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 	else_if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_4 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_4
-		create_country_leader = {
-			name = "Edward Ord"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Edward_Ord.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Edward Ord"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_Edward_Ord.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "P.T. Beauregard"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_CSA_PGT_Beauregard.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 	else_if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_5 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_5
-		create_country_leader = {
-			name = "Philip Sheridan"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Philip_Sheridan.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Philip Sheridan"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_Philip_Sheridan.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Albert Sidney Johnson"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_CSA_Albert_Johnson.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 	else_if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_6 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_6
-		create_country_leader = {
-			name = "George B. McClellan"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_George_McClellan.dds"
-			expire = "1900.1.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "George B. McClellan"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_George_McClellan.dds"
+				expire = "1900.1.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Joseph E. Jonston"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_CSA_Joseph_Jonston.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 	else_if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_7 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_7
-		create_country_leader = {
-			name = "William T. Sherman"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_William_Sherman.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "William T. Sherman"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_William_Sherman.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Edmund Kirby"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_CSA_Edmund_Kirby.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 	else_if = {
 		limit = { NOT = { any_country = { has_cosmetic_tag = USA_unintegrated_seceded_zone_8 } } }
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_8
-		create_country_leader = {
-			name = "Irvin McDowell"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Irvin_McDowell.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Irvin McDowell"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_Irvin_McDowell.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Leonidas Polk"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_CSA_Leonidas_Polk.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 	else = {
 		set_cosmetic_tag = USA_unintegrated_seceded_zone_9
-		create_country_leader = {
-			name = "Henry Halleck"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Henry_Halleck.dds"
-			expire = "1900.7.1"
-			ideology = military_goverment
-			traits = {}
+		if = {
+			limit = {
+				has_global_flag = ACW_Confederate_States_Rebelled
+			}
+			create_country_leader = {
+				name = "Henry Halleck"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_Henry_Halleck.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ACW_Free_States_Rebelled
+			}
+			create_country_leader = {
+				name = "George H. Thomas"
+				desc = ""
+				picture = "gfx/leaders/USA/Portrait_USA_George_H_Thomas.dds"
+				expire = "1900.7.1"
+				ideology = military_goverment
+				traits = {}
+			}
 		}
 	}
 
@@ -2376,6 +2919,14 @@ USAROD_reconstruction_progress_admit = {
 				}
 			}
 			if = {
+				limit = { OWNER = { owns_state = 1305 } }
+				ROOT = {
+					transfer_state = 1305
+					remove_state_claim = 1305
+					add_state_core = 1305
+				}
+			}
+			if = {
 				limit = { OWNER = { owns_state = 1342 } }
 				ROOT = {
 					transfer_state = 1342
@@ -2396,7 +2947,7 @@ USAROD_reconstruction_progress_admit = {
 		if = {
 			limit = { state = 315 }
 			if = {
-				limit {
+				limit = {
 					OWNER = { owns_state = 1022 }
 				}
 				ROOT = {
@@ -2490,27 +3041,11 @@ USAROD_reconstruction_progress_admit = {
 				}
 			}
 			if = {
-				limit = { OWNER = { owns_state = 1305 } }
-				ROOT = {
-					transfer_state = 1305
-					remove_state_claim = 1305
-					add_state_core = 1305
-				}
-			}
-			if = {
 				limit = { OWNER = { owns_state = 1304 } }
 				ROOT = {
 					transfer_state = 1304
 					remove_state_claim = 1304
 					add_state_core = 1304
-				}
-			}
-			if = {
-				limit = { OWNER = { owns_state = 1303 } }
-				ROOT = {
-					transfer_state = 1303
-					remove_state_claim = 1303
-					add_state_core = 1303
 				}
 			}
 			if = {

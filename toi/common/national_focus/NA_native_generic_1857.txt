@@ -1,7 +1,7 @@
 shared_focus = {
 	id = NA_N_the_frontier
 	icon = GFX_focus_na_n_the_frontier
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available={
 		
@@ -20,7 +20,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_statehood_of_our_own
 	icon = GFX_focus_na_n_statehood_of_our_own
-	cost = 70
+	cost = 100
 	#available_if_capitulated = no
 	available = {
 		has_war = no
@@ -37,13 +37,13 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_the_frontier
-	x = -4
+	x = -6
 	y = 1
 }
 shared_focus = {
 	id = NA_N_invest_in_roads
-	icon = GFX_focus_na_n_invest_in_roads
-	cost = 70
+	icon = GFX_Focus_transport_tarmac_roads
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		has_tech = tribal_roads
@@ -118,13 +118,13 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = 0
+	x = 2
 	y = 1
 }
 shared_focus = {
 	id = NA_N_invest_in_trading_post
-	icon = GFX_focus_na_n_invest_in_trading_post
-	cost = 70
+	icon = GFX_Focus_invest_in_trading_post
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		has_tech = tribal_guilds_trade
@@ -187,14 +187,14 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = 0
+	x = 2
 	y = 2
 }
 
 shared_focus = {
 	id = NA_N_money_in_an_uneconomic_state
-	icon = GFX_focus_na_n_money_in_an_uneconomic_state
-	cost = 70
+	icon = GFX_Focus_money_in_an_uneconomic_state
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		has_tech = tribal_natral_economics
@@ -208,24 +208,24 @@ shared_focus = {
 				popup = yes
 			}
 		}
-		custom_effect_tooltip = afr_prosperity_mechanic_add_5
-		add_to_variable = {
-			var = afr_prosperity_mechanic_value
+		set_temp_variable = {
+			var = prosperity_change
 			value = 5
 		}
+		afr_prosperity_mechanic_change = yes
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = -2
+	x = 0
 	y = 1
 }
 shared_focus = {
 	id = NA_N_financial_easternisation
-	icon = GFX_focus_na_n_financial_easternisation
-	cost = 70
+	icon = GFX_Focus_financial_westernisation
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		has_tech = tribal_guilds_trade
 	}
 	prerequisite = { focus = NA_N_money_in_an_uneconomic_state }
 	completion_reward = {
@@ -253,22 +253,22 @@ shared_focus = {
 				technology = tribal_chemistry
 			}
 		}
-		custom_effect_tooltip = afr_prosperity_mechanic_add_10
-		add_to_variable = {
-			var = afr_prosperity_mechanic_value
+		set_temp_variable = {
+			var = prosperity_change
 			value = 10
 		}
+		afr_prosperity_mechanic_change = yes
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = -2
+	x = 0
 	y = 2
 }
 
 shared_focus = {
 	id = NA_N_the_matter_of_slaves
-	icon = GFX_focus_na_n_the_matter_of_slaves
-	cost = 70
+	icon = GFX_Focus_Slavery_question
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -279,13 +279,13 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = -4
+	x = -3
 	y = 1
 }
 shared_focus = {
 	id = NA_N_no_man_a_slave
-	icon = GFX_focus_na_n_no_man_a_slave
-	cost = 70
+	icon = GFX_Focus_Slavery_freedom
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		custom_trigger_tooltip = {
@@ -304,13 +304,13 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = -4
+	x = -2
 	y = 2
 }
 shared_focus = {
 	id = NA_N_maintain_the_status_quo
-	icon = GFX_focus_na_n_maintain_the_status_quo
-	cost = 70
+	icon = GFX_Focus_maintain_the_status_quo
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		custom_trigger_tooltip = {
@@ -329,15 +329,15 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = -6
+	x = -4
 	y = 2
 }
 
 
 shared_focus = {
 	id = NA_N_authority
-	icon = GFX_focus_na_n_authority
-	cost = 70
+	icon = GFX_Focus_Government_authority
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -354,13 +354,13 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = -3
+	x = -1
 	y = 3
 }
 shared_focus = {
 	id = NA_N_council_as_oligarchy
-	icon = GFX_focus_na_n_council_as_oligarchy
-	cost = 70
+	icon = GFX_Focus_Ideology_oligarchy
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -380,8 +380,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_the_new_administration
-	icon = GFX_focus_na_n_the_new_administration
-	cost = 70
+	icon = GFX_Focus_Diplomatic_foreign
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -400,8 +400,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_advance_of_the_populist
-	icon = GFX_focus_na_n_advance_of_the_populist
-	cost = 70
+	icon = GFX_Focus_Government_populist
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -419,7 +419,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_one_chief_one_mandate
 	icon = GFX_focus_na_n_one_chief_one_mandate
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -439,8 +439,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_consolidate_power
-	icon = GFX_focus_na_n_consolidate_power
-	cost = 70
+	icon = GFX_Focus_consolidate_power
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -456,8 +456,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_total_control
-	icon = GFX_focus_na_n_total_control
-	cost = 70
+	icon = GFX_Focus_Tactics_Blood_And_Iron
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -480,8 +480,8 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_democracy
-	icon = GFX_focus_na_n_democracy
-	cost = 70
+	icon = GFX_Focus_freedom_democracy
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -501,13 +501,13 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = -1
+	x = 1
 	y = 3
 }
 shared_focus = {
 	id = NA_N_the_fate_of_the_council
 	icon = GFX_focus_na_n_the_fate_of_the_council
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -527,8 +527,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_centralized_democracy
-	icon = GFX_focus_na_n_centralized_democracy
-	cost = 70
+	icon = GFX_Focus_Freedom_broken
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -547,8 +547,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_the_new_administrative_service
-	icon = GFX_focus_na_n_the_new_adminstrative_service
-	cost = 70
+	icon = GFX_Focus_Diplomatic_foreign
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -568,13 +568,13 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_redefinition
-	icon = GFX_focus_na_n_redefinition
-	cost = 70
+	icon = GFX_Focus_Law_Education
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
-	prerequisite = { focus = NA_N_authority }
+	prerequisite = { focus = NA_N_democracy }
 	mutually_exclusive = { focus = NA_N_the_fate_of_the_council }
 	completion_reward = {
 		swap_ideas = {
@@ -589,8 +589,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_reformation_of_power
-	icon = GFX_focus_na_n_reformation_of_power
-	cost = 70
+	icon = GFX_Focus_Law_plebicite
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -609,8 +609,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_restructuring_of_administration
-	icon = GFX_focus_na_n_restructuring_of_administration
-	cost = 70
+	icon = GFX_Focus_restructuring_of_administration
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -635,7 +635,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_the_encroachment_of_the_east
 	icon = GFX_focus_na_n_the_encroachment_of_the_east
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		if = {
@@ -667,8 +667,8 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_prepare_for_the_invaders
-	icon = GFX_focus_na_n_prepare_for_the_invaders
-	cost = 70
+	icon = GFX_Focus_Army_General_Mobilization_Generic_1
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -676,6 +676,26 @@ shared_focus = {
 	mutually_exclusive = { focus = NA_N_peaceful_co_existance }
 	prerequisite = { focus = NA_N_the_encroachment_of_the_east }
 	completion_reward = {
+		if = {
+			limit = { TAG = NEZ }
+			if = {
+				limit = { NOT = { has_country_leader = { name = "Chief Joseph" ruling_only = yes } } }
+				retire_country_leader = yes
+				custom_effect_tooltip = NEZ_replace_chief_hallalhotsoot_tooltip
+				hidden_effect = {
+					create_country_leader = {
+						name = "Chief Joseph"
+						desc = ""
+						picture = "Portrait_NEZ_Chief_Joseph.dds"
+						expire = "1953.3.1"
+						ideology = shamanism
+						traits = {
+						}
+					}
+				}
+			}
+			else = { custom_effect_tooltip = NEZ_keep_chief_joseph_tooltip }
+		}
 		if = {
 			limit = { has_idea = AFR_history_of_colonial_resistance }
 			swap_ideas = {
@@ -688,8 +708,45 @@ shared_focus = {
 			add_ideas = AFR_history_of_colonial_resistance_1
 		}
 		else = { show_ideas_tooltip = AFR_history_of_colonial_resistance_1 }
+		if = {
+			limit = { 
+				USA = { exists = yes }
+				has_opinion_modifier = NA_N_cooperative_tribe_opinion_modifier
+			}
+			USA = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = NA_N_cooperative_tribe_opinion_modifier
+				}
+			}
+			hidden_effect = { 
+				remove_opinion_modifier = {
+					target = USA
+					modifier = NA_N_cooperative_tribe_opinion_modifier
+				}
+			}
+		}
 	}
-	ai_will_do = { base = 10 }
+	ai_will_do = { 
+		base = 10 
+		modifier = {
+			add = 80 
+			TAG = SIX
+		}
+		modifier = {
+			add = 80 
+			TAG = COM
+		}
+		modifier = {
+			factor = 0 
+			TAG = CRW
+		}
+		modifier = {
+			factor = 0 
+			TAG = CHY
+			is_historical_focus_on = yes
+		}
+	}
 	relative_position_id = NA_N_the_encroachment_of_the_east
 	x = -1
 	y = 1
@@ -697,7 +754,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_manufacture_weapons
 	icon = GFX_focus_na_n_manufacture_weapons
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		has_tech = tribal_forging
@@ -725,8 +782,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_recruit_warriors
-	icon = GFX_focus_na_n_recruit_warriors
-	cost = 70
+	icon = GFX_Focus_Soldier_Victorian_USA
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		has_war_support > 0.60
@@ -751,8 +808,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_rudimentary_defenses
-	icon = GFX_focus_na_n_rudimentary_defenses
-	cost = 70
+	icon = GFX_Focus_rudimentary_defences
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		num_divisions > 0
@@ -777,14 +834,16 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_war
 	icon = GFX_focus_na_n_war
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
 	prerequisite = { focus = NA_N_rudimentary_defenses }
 	completion_reward = {
-		
+		hidden_effect = {
+			set_country_flag = NA_N_native_military_flag_1
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_the_encroachment_of_the_east
@@ -794,15 +853,38 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_peaceful_co_existance
-	icon = GFX_focus_na_n_peaceful_co_existance
-	cost = 70
+	icon = GFX_Focus_Diplomatic_Deal
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-
+		if = {
+			limit = { TAG = NEZ }
+			NOT = { has_country_leader = { name = "Chief Joseph" ruling_only = yes } }
+		}
 	}
 	mutually_exclusive = { focus = NA_N_prepare_for_the_invaders }
 	prerequisite = { focus = NA_N_the_encroachment_of_the_east }
 	completion_reward = {
+		if = {
+			limit = { TAG = NEZ }
+			if = {
+				limit = { NOT = { has_country_leader = { name = "Chief Hallalhotsoot" ruling_only = yes } } }
+				retire_country_leader = yes
+				custom_effect_tooltip = NEZ_replace_replace_chief_joseph_tooltip
+				hidden_effect = {
+					create_country_leader = {
+						name = "Chief Hallalhotsoot"
+						desc = ""
+						picture = "Portrait_NEZ_Chief_Joseph.dds"
+						expire = "1953.3.1"
+						ideology = shamanism
+						traits = {
+						}
+					}
+				}
+			}
+			else = { custom_effect_tooltip = NEZ_keep_chief_hallalhotsoot_tooltip }
+		}
 		custom_effect_tooltip = NA_N_peaceful_co_existance_tooltip
 		hidden_effect = {
 			set_country_flag = NA_N_peaceful_co_existance_flag
@@ -811,15 +893,52 @@ shared_focus = {
 			limit = { USA = { exists = yes } }
 			USA = { country_event = { id = NA_N_event.1 } }
 		}
+		if = {
+			limit = { 
+				USA = { exists = yes }
+				NOT = { has_opinion_modifier = NA_N_cooperative_tribe_opinion_modifier }
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = NA_N_cooperative_tribe_opinion_modifier
+				}
+			}
+			hidden_effect = { 
+				add_opinion_modifier = {
+					target = USA
+					modifier = NA_N_cooperative_tribe_opinion_modifier
+				}
+			}
+		}
 	}
 	ai_will_do = { 
 		base = 10 
+		modifier = {
+			add = 90 
+			TAG = CRW
+		}
+		modifier = {
+			add = 10
+			TAG = NEZ
+		}
 		modifier = {
 			factor = 0 
 			has_war = yes
 		}
 		modifier = {
 			factor = 0 
+			TAG = NEZ
+			is_historical_focus_on = yes
+		}
+		modifier = {
+			factor = 0 
+			TAG = SIX
+			is_historical_focus_on = yes
+		}
+		modifier = {
+			factor = 0 
+			TAG = COM
 			is_historical_focus_on = yes
 		}
 	}
@@ -830,7 +949,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_diplomatic_ties_with_the_us
 	icon = GFX_focus_na_n_diplomatic_ties_with_the_us
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -851,12 +970,32 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_frontier_trade_delegations
 	icon = GFX_focus_na_n_frontier_trade_delegations
-	cost = 70
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		has_stability > 0.65
+	}
+	prerequisite = { focus = NA_N_diplomatic_ties_with_the_us }
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = NA_N_economic_integration_flag
+		}
+		custom_effect_tooltip = NA_N_remove_resource_rights_tooltip
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_encroachment_of_the_east
+	x = 1
+	y = 3
+}
+shared_focus = {
+	id = NA_N_economic_integration
+	icon = GFX_Focus_refugee_management
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
-	prerequisite = { focus = NA_N_diplomatic_ties_with_the_us }
+	prerequisite = { focus = NA_N_frontier_trade_delegations }
 	completion_reward = {
 		every_neighbor_country = {
 			limit = { 
@@ -904,32 +1043,12 @@ shared_focus = {
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_the_encroachment_of_the_east
 	x = 1
-	y = 3
-}
-shared_focus = {
-	id = NA_N_economic_integration
-	icon = GFX_focus_na_n_economic_integration
-	cost = 70
-	#available_if_capitulated = no
-	available = {
-		has_stability > 0.65
-	}
-	prerequisite = { focus = NA_N_frontier_trade_delegations }
-	completion_reward = {
-		hidden_effect = {
-			set_country_flag = NA_N_economic_integration_flag
-		}
-		custom_effect_tooltip = NA_N_remove_resource_rights_tooltip
-	}
-	ai_will_do = { base = 10 }
-	relative_position_id = NA_N_the_encroachment_of_the_east
-	x = 1
 	y = 4
 }
 shared_focus = {
 	id = NA_N_peace
 	icon = GFX_focus_na_n_peace
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -946,14 +1065,16 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_the_future_with_our_neighbours
-	icon = GFX_focus_na_n_the_future_with_our_neighbours
-	cost = 70
+	icon = GFX_Focus_future_with_our_neighbours
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
-	prerequisite = { focus = NA_N_peace }
-	prerequisite = { focus = NA_N_war }
+	prerequisite = { 
+		focus = NA_N_peace
+		focus = NA_N_war
+	}
 	completion_reward = {
 		
 	}
@@ -968,8 +1089,8 @@ shared_focus = {
 #################
 shared_focus = {
 	id = NA_N_the_war_in_the_east
-	icon = GFX_focus_na_n_the_war_in_the_east
-	cost = 70
+	icon = GFX_Focus_War_American_Civil_War
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		acw_has_started_scripted_trigger = yes
@@ -996,8 +1117,8 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_support_the_confederacy
-	icon = GFX_focus_na_n_support_the_confederacy
-	cost = 70
+	icon = GFX_Focus_Diplomatic_Ally_CSA_2
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		custom_trigger_tooltip = {
@@ -1029,7 +1150,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_support_the_union
 	icon = GFX_focus_na_n_support_the_union
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		custom_trigger_tooltip = {
@@ -1060,14 +1181,16 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_send_supplies
-	icon = GFX_focus_na_n_send_supplies
-	cost = 70
+	icon = GFX_Focus_Diplomatic_foreign_economy
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
-	prerequisite = { focus = NA_N_support_the_confederacy }
-	prerequisite = { focus = NA_N_support_the_union }
+	prerequisite = { 
+				focus = NA_N_support_the_confederacy
+				focus = NA_N_support_the_union
+					}
 	completion_reward = {
 		if = { 
 			limit = {
@@ -1106,7 +1229,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_shelter_allied_troops
 	icon = GFX_focus_na_n_shelter_allied_troops
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1132,8 +1255,8 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_send_volunteers
-	icon = GFX_focus_na_n_send_volunteers
-	cost = 70
+	icon = GFX_Focus_Diplomatic_foreign_military
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1160,7 +1283,7 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_lege_nativa
 	icon = GFX_focus_na_n_lege_nativa
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1173,33 +1296,39 @@ shared_focus = {
 		focus = NA_N_restructuring_of_administration
 	}
 	completion_reward = {
-		custom_effect_tooltip = NA_N_lege_nativa_tooltip
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_variable = has_afr_empire_mechanic_system } }
-				set_variable = { has_afr_empire_mechanic_system = 1 }
+		country_event = { id = NA_N_event.14 }
+		if = {
+			limit = { NOT = { has_variable = has_afr_empire_mechanic_system } }
+			hidden_effect = { set_variable = { has_afr_empire_mechanic_system = 1 } }
+		}
+		if = {
+			limit = { has_idea = FN_T_nomadic_tribal_nation }
+			hidden_effect = { 
+				swap_ideas = {
+					remove_idea = FN_T_nomadic_tribal_nation
+					add_idea = FN_T_settled_regional_power
+				}
 			}
-			country_event = { id = NA_N_event.14 }
+			custom_effect_tooltip = NA_N_lege_nativa_tooltip
 		}
-		swap_ideas = {
-			remove_idea = FN_T_nomadic_tribal_nation
-			add_idea = FN_T_settled_regional_power
-		}
-		swap_ideas = {
-			remove_idea = manpower_tribal_everyone
-			add_idea = manpower_tribal_every_fifth
+		if = {
+			limit = { has_idea = manpower_tribal_everyone }
+			swap_ideas = {
+				remove_idea = manpower_tribal_everyone
+				add_idea = manpower_tribal_every_fifth
+			}
 		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_statehood_of_our_own
-	x = 0
+	x = 4
 	y = 7
 }
 
 shared_focus = {
 	id = NA_N_economic_reform
-	icon = GFX_focus_na_n_economic_reform
-	cost = 70
+	icon = GFX_Focus_Economy_Reforms
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1219,8 +1348,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_decentralized_economy
-	icon = GFX_focus_na_n_localized_tax_reforms
-	cost = 70
+	icon = GFX_Focus_Government_Decentralized
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		always = no
@@ -1245,8 +1374,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_local_credit_unions
-	icon = GFX_focus_na_n_local_credit_unions
-	cost = 70
+	icon = GFX_Focus_Economy_Growth
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1265,8 +1394,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_localized_tax_reforms
-	icon = GFX_focus_na_n_decentralized_economy
-	cost = 70
+	icon = GFX_Focus_Economy_Liberalism
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1282,8 +1411,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_local_sheriffs
-	icon = GFX_focus_na_n_local_sheriffs
-	cost = 70
+	icon = GFX_Focus_Justice_local_sherrifs
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1299,8 +1428,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_centralized_economy
-	icon = GFX_focus_na_n_centralized_economy
-	cost = 70
+	icon = GFX_Focus_Government_Centralized
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		always = no
@@ -1334,8 +1463,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_a_national_bank
-	icon = GFX_focus_na_n_a_national_bank
-	cost = 70
+	icon = GFX_Focus_Industrial_Complex
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1355,8 +1484,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_anti_trust_laws
-	icon = GFX_goal_focus_banks
-	cost = 70
+	icon = GFX_Focus_banks
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1372,8 +1501,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_national_police_force
-	icon = GFX_focus_na_n_national_police_force
-	cost = 70
+	icon = GFX_Focus_Justice_police_force
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1392,8 +1521,8 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_military_reform
-	icon = GFX_focus_na_n_military_reform
-	cost = 70
+	icon = GFX_Focus_Army_Reformed
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1409,8 +1538,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_centralized_military
-	icon = GFX_focus_na_n_centralized_military
-	cost = 70
+	icon = GFX_focus_Generic_Political_Pressure_Blue
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1418,7 +1547,19 @@ shared_focus = {
 	mutually_exclusive = { focus = NA_N_decentralized_military }
 	prerequisite = { focus = NA_N_military_reform }
 	completion_reward = {
-		
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = afr_chose_decentralized_command_structure_flag
+					has_country_flag = afr_chose_centralized_command_structure_flag
+				}
+			}
+			add_ideas = afr_centralized_command_structure_3
+			set_country_flag = afr_chose_centralized_command_structure_flag
+		}
+		else = {
+			army_experience = 10
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_military_reform
@@ -1427,8 +1568,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_modern_officer_corps
-	icon = GFX_focus_na_n_modern_officer_corps
-	cost = 70
+	icon = GFX_Focus_conscription
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1444,8 +1585,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_central_command
-	icon = GFX_focus_na_n_central_command
-	cost = 70
+	icon = GFX_Focus_Army_Staff
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1461,15 +1602,28 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_military_industrial_complex
-	icon = GFX_focus_na_n_military_industrial_complex
-	cost = 70
+	icon = GFX_Focus_military_industrial_complex
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
 	prerequisite = { focus = NA_N_central_command }
 	completion_reward = {
-		
+		if = {
+			limit = { has_idea = afr_vast_forces_3 }
+			swap_ideas = {
+				remove_idea = afr_vast_forces_3
+				add_idea = afr_vast_forces_4
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = afr_centralized_command_structure_3
+				add_idea = afr_centralized_command_structure_4
+			}
+		}
+		custom_effect_tooltip = NA_N_military_industrial_complex_tooltip
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_military_reform
@@ -1478,8 +1632,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_decentralized_military
-	icon = GFX_focus_na_n_decentralized_military
-	cost = 70
+	icon = GFX_Focus_decentrailized_militia
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1487,7 +1641,23 @@ shared_focus = {
 	mutually_exclusive = { focus = NA_N_centralized_military }
 	prerequisite = { focus = NA_N_military_reform }
 	completion_reward = {
-		
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = afr_chose_decentralized_command_structure_flag
+					has_country_flag = afr_chose_centralized_command_structure_flag
+				}
+			}
+			add_ideas = afr_decentralized_command_structure
+			set_country_flag = afr_chose_decentralized_command_structure_flag
+		}
+		hidden_effect = {
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.01
+			}
+		}
+		custom_effect_tooltip = afr_anarchism_popularity_plus_1
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_military_reform
@@ -1496,8 +1666,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_local_militias
-	icon = GFX_focus_na_n_local_militias
-	cost = 70
+	icon = GFX_Focus_Soldier_Victorian_USA
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1513,15 +1683,15 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_improved_communications
-	icon = GFX_focus_na_n_improved_communications
-	cost = 70
+	icon = GFX_Focus_improved_communications
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
 	prerequisite = { focus = NA_N_local_militias }
 	completion_reward = {
-		
+		add_command_power = 50
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_military_reform
@@ -1530,15 +1700,25 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_local_weapons_production
-	icon = GFX_focus_na_n_local_weapons_production
-	cost = 70
+	icon = GFX_Focus_Colonial_Troops
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
 	prerequisite = { focus = NA_N_improved_communications }
 	completion_reward = {
-		
+		if = {
+			limit = { has_idea = afr_superor_weaponry }
+			swap_ideas = {
+				remove_idea = afr_superor_weaponry
+				add_idea = afr_superor_weaponry_2
+			}
+		}
+		else = {
+			add_ideas = afr_superor_weaponry_2
+		}
+		custom_effect_tooltip = afr_inward_regional_power_superior_weaponry_tooltip
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_military_reform
@@ -1550,14 +1730,14 @@ shared_focus = {
 shared_focus = {
 	id = NA_N_neo_nativism
 	icon = GFX_focus_na_n_neo_nativism
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
 	}
 	prerequisite = { focus = NA_N_lege_nativa }
 	completion_reward = {
-		
+		add_stability = 0.1
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_lege_nativa
@@ -1566,15 +1746,37 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_construct_schools
-	icon = GFX_focus_na_n_construct_schools
-	cost = 70
+	icon = GFX_Focus_construct_schools
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		has_tech = tribal_artisan
+		has_tech = tribal_chemistry
+		has_tech = tribal_electrical_theory
+		has_tech = tribal_steam_experiments
 	}
 	prerequisite = { focus = NA_N_neo_nativism }
 	completion_reward = {
-		
+		if = {
+			limit = { NOT = { has_tech = iron_railways } }
+			add_tech_bonus = { bonus = 0.50 uses = 1 technology = iron_railways }
+		}
+		if = {
+			limit = { NOT = { has_tech = steam_engine } }
+			add_tech_bonus = { bonus = 0.50 uses = 1 technology = steam_engine }
+		}
+		if = {
+			limit = { NOT = { has_tech = steam_locomotive } }
+			add_tech_bonus = { bonus = 0.50 uses = 1 technology = steam_locomotive }
+		}
+		if = {
+			limit = { NOT = { has_tech = manufactories } }
+			add_tech_bonus = { bonus = 0.50 uses = 1 technology = manufactories }
+		}
+		if = {
+			limit = { NOT = { has_tech = industrial_era_tools_1 } }
+			add_tech_bonus = { bonus = 0.50 uses = 1 technology = industrial_era_tools_1 }
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_neo_nativism
@@ -1583,15 +1785,34 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_invest_in_infrastructure
-	icon = GFX_focus_na_n_invest_in_infrastructure
-	cost = 70
+	icon = GFX_Focus_transport_prefecture_lines
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		has_tech = steam_locomotive
+		custom_trigger_tooltip = {
+			tooltip = afr_prosperity_mechanic_greater_than_10
+			check_variable = {
+				afr_prosperity_mechanic_value > 9
+			}
+		}
 	}
 	prerequisite = { focus = NA_N_construct_schools }
+	select_effect = {
+		set_country_flag = afr_prosperity_mechanic_dont_select_flag
+	}
 	completion_reward = {
-		
+		hidden_effect = { clr_country_flag = afr_prosperity_mechanic_dont_select_flag }
+		custom_effect_tooltip = afr_prosperity_mechanic_minus_10_investment_tooltip
+		add_to_variable = {
+			var = afr_prosperity_mechanic_value
+			value = -10
+		}
+		custom_effect_tooltip = afr_reforming_regional_power_regional_infrastructure_tooltip
+		hidden_effect = {
+			set_country_flag = afr_reforming_regional_power_regional_infrastructure_decision_mission
+			set_country_flag = afr_reforming_regional_power_regional_infrastructure_focus
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_neo_nativism
@@ -1600,15 +1821,34 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_invest_in_logging
-	icon = GFX_focus_na_n_invest_in_logging
-	cost = 70
+	icon = GFX_Focus_invest_in_logging
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		has_tech = industrial_era_tools_1
+		custom_trigger_tooltip = {
+			tooltip = afr_prosperity_mechanic_greater_than_10
+				check_variable = {
+				afr_prosperity_mechanic_value > 9
+			}
+		}
 	}
 	prerequisite = { focus = NA_N_invest_in_infrastructure }
+	select_effect = {
+		set_country_flag = afr_prosperity_mechanic_dont_select_flag
+	}
 	completion_reward = {
-		
+		hidden_effect = { clr_country_flag = afr_prosperity_mechanic_dont_select_flag }
+		custom_effect_tooltip = afr_prosperity_mechanic_minus_10_investment_tooltip
+		add_to_variable = {
+			var = afr_prosperity_mechanic_value
+			value = -10
+		}
+		custom_effect_tooltip = afr_reforming_regional_power_regional_resources_tooltip
+		hidden_effect = {
+			set_country_flag = afr_reforming_regional_power_regional_resources_decision_mission
+			set_country_flag = afr_reforming_regional_power_regional_resources_focus
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_neo_nativism
@@ -1617,15 +1857,26 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_social_investments
-	icon = GFX_focus_na_n_social_investments
-	cost = 70
+	icon = GFX_Focus_social_investments
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		has_tech = tribal_crop_rotation
 	}
 	prerequisite = { focus = NA_N_invest_in_logging }
 	completion_reward = {
-		
+		if = {
+			limit = { NOT = { has_tech = pre_industrial_farms } }
+			add_tech_bonus = { bonus = 0.75 uses = 1 technology = pre_industrial_farms }
+		}
+		if = {
+			limit = { NOT = { has_tech = mechanized_farming } }
+			add_tech_bonus = { bonus = 0.50 uses = 1 technology = mechanized_farming }
+		}
+		if = {
+			limit = { NOT = { has_tech = agricultural_engineering } }
+			add_tech_bonus = { bonus = 0.25 uses = 1 technology = agricultural_engineering }
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_neo_nativism
@@ -1634,15 +1885,30 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_invest_in_the_military_complex
-	icon = GFX_focus_na_n_invest_in_the_military_complex
-	cost = 70
+	icon = GFX_focus_ITA_Schools
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		has_tech = tribal_healing_herbs
 	}
 	prerequisite = { focus = NA_N_social_investments }
+	prerequisite = {
+		focus = NA_N_national_police_force 
+		focus = NA_N_local_sheriffs
+	}
+	prerequisite = {
+		focus = NA_N_military_industrial_complex 
+		focus = NA_N_local_weapons_production
+	}
 	completion_reward = {
-		
+		if = {
+			limit = { NOT = { has_tech = tribal_leching } }
+			add_tech_bonus = { bonus = 0.75 uses = 1 technology = tribal_leching }
+		}
+		if = {
+			limit = { NOT = { has_tech = early_medicine } }
+			add_tech_bonus = { bonus = 0.25 uses = 1 technology = early_medicine }
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_neo_nativism
@@ -1651,15 +1917,38 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_invest_in_civilian_goods
-	icon = GFX_focus_na_n_invest_in_civilian_goods
-	cost = 70
+	icon = GFX_Focus_Industry_Construction
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		has_tech = manufactories
+		custom_trigger_tooltip = {
+			tooltip = afr_prosperity_mechanic_greater_than_10
+				check_variable = {
+				afr_prosperity_mechanic_value > 9
+			}
+		}
 	}
 	prerequisite = { focus = NA_N_social_investments }
+	prerequisite = {
+		focus = NA_N_national_police_force 
+		focus = NA_N_local_sheriffs
+	}
+	prerequisite = {
+		focus = NA_N_military_industrial_complex 
+		focus = NA_N_local_weapons_production
+	}
 	completion_reward = {
-		
+		custom_effect_tooltip = afr_prosperity_mechanic_minus_10_investment_tooltip
+		add_to_variable = {
+			var = afr_prosperity_mechanic_value
+			value = -10
+		}
+		custom_effect_tooltip = afr_reforming_regional_power_regional_industry_tooltip
+		hidden_effect = {
+			set_country_flag = afr_reforming_regional_power_regional_industry_decision_mission
+			set_country_flag = afr_reforming_regional_power_regional_industry_focus
+		}
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_neo_nativism
@@ -1668,8 +1957,8 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_open_a_university
-	icon = GFX_focus_na_n_open_a_university
-	cost = 70
+	icon = GFX_Focus_open_a_university
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		NOT = { has_idea = oral_tradition }
@@ -1684,30 +1973,978 @@ shared_focus = {
 	x = 0
 	y = 6
 }
+###BEGIN CUT
+shared_focus = {
+	id = NA_N_the_fall
+	icon = GFX_focus_na_n_the_fall
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_open_a_university 
+	}
+	prerequisite = {
+		focus = NA_N_local_weapons_production
+		focus = NA_N_military_industrial_complex
+	}
+	prerequisite = {
+		focus = NA_N_local_sheriffs
+		focus = NA_N_national_police_force
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_open_a_university
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_welcome_new_immigrants
+	icon = GFX_focus_na_n_welcome_new_immigrants
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	mutually_exclusive = {focus = NA_N_close_the_borders}
+	prerequisite = {
+		focus = NA_N_the_fall
+	}
+	completion_reward = {
+		country_event = { 
+			id = nativecrisis.7 
+			days = 20
+		}
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_fall
+	x = -1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_take_direct_control
+	icon = GFX_focus_na_n_take_direct_control
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	mutually_exclusive = {focus = NA_N_lassez_faire}
+	prerequisite = {
+		focus = NA_N_the_fall
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_fall
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_close_the_borders
+	icon = GFX_focus_na_n_close_the_borders
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	mutually_exclusive = {focus = NA_N_welcome_new_immigrants}
+	prerequisite = {
+		focus = NA_N_the_fall
+	}
+	completion_reward = {
+		country_event = { 
+			id = nativecrisis.1 
+			days = 20
+		}
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_fall
+	x = -3
+	y = 1
+}
+shared_focus = {
+	id = NA_N_lassez_faire
+	icon = GFX_focus_na_n_lassez_faire
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	mutually_exclusive = {focus = NA_N_take_direct_control}
+	prerequisite = {
+		focus = NA_N_the_fall
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_fall
+	x = 3
+	y = 1
+}
+shared_focus = {
+	id = NA_N_ellis_island_policies
+	icon = GFX_focus_na_n_ellis_island_policies
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_welcome_new_immigrants
+	}
+	completion_reward = {
+			country_event = {
+				id = native_crisis.10
+				days = 20
+			}
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_welcome_new_immigrants
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_anti_immigration_stance
+	icon = GFX_focus_na_n_anti_immigration_stance
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_close_the_borders
+	}
+	completion_reward = {
+		country_event = { 
+			id = nativecrisis.2 
+			days = 20
+		}
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_close_the_borders
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_introduce_temporary_measures
+	icon = GFX_focus_na_n_introduce_temporary_measures
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_take_direct_control
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_take_direct_control
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_incentivise_business
+	icon = GFX_focus_na_n_incentivise_business
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_lassez_faire
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_lassez_faire
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_dealing_with_mass_migration
+	icon = GFX_focus_na_n_dealing_with_mass_migration
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_ellis_island_policies
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_ellis_island_policies
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_nobody_enters_nobody_leaves
+	icon = GFX_focus_na_n_nobody_enters_nobody_leaves
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_anti_immigration_stance
+	}
+	completion_reward = {
+		country_event = { 
+			id = nativecrisis.6 
+			days = 20
+		}
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_anti_immigration_stance
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_full_intervention
+	icon = GFX_focus_na_n_full_intervention
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_introduce_temporary_measures
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_introduce_temporary_measures
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_embrace_the_invisible_hand
+	icon = GFX_focus_na_n_embrace_the_invisible_hand
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_incentivise_business
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_incentivise_business
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_the_atlantic_panic
+	icon = GFX_focus_na_n_the_atlantic_panic
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_dealing_with_mass_migration
+		focus = NA_N_nobody_enters_nobody_leaves
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_dealing_with_mass_migration
+	x = -1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_coming_to_terms
+	icon = GFX_focus_na_n_coming_to_terms
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_dealing_with_mass_migration
+		focus = NA_N_nobody_enters_nobody_leaves
+		focus = NA_N_embrace_the_invisible_hand
+		focus = NA_N_full_intervention
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_nobody_enters_nobody_leaves
+	x = 3
+	y = 1
+}
+shared_focus = {
+	id = NA_N_try_to_avert_further_economic_issues
+	icon = GFX_focus_na_n_try_to_avert
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_embrace_the_invisible_hand
+		focus = NA_N_full_intervention
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_full_intervention
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_attempt_quasi_integration
+	icon = GFX_focus_na_n_attempt_quasi_integration
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_the_atlantic_panic
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_atlantic_panic
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_debt_and_taxes
+	icon = GFX_focus_na_n_debt_and_taxes
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_coming_to_terms
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_coming_to_terms
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_how_hard_can_this_be
+	icon = GFX_focus_na_n_how_hard_can_this_be
+	cost = 100
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_try_to_avert_further_economic_issues
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_try_to_avert_further_economic_issues
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_the_panic_attack_ceases
+	icon = GFX_focus_na_n_the_panic_attack_ceases
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+	}
+	prerequisite = {
+		focus = NA_N_attempt_quasi_integration
+	}
+	prerequisite = {
+		focus = NA_N_debt_and_taxes
+	}
+	prerequisite = {
+		focus = NA_N_how_hard_can_this_be
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_debt_and_taxes
+	x = 0
+	y = 1
+}
+###END CUT
+###START CUT 2
+shared_focus = {
+	id = NA_N_the_other_tribes
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_open_a_university }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_fall
+	x = 12
+	y = 0
+}
+shared_focus = {
+	id = NA_N_solidarity_among_natives
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_the_other_tribes }
+	mutually_exclusive = { focus = NA_N_us_alone }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = -1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_us_alone
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_the_other_tribes }
+	mutually_exclusive = { focus = NA_N_solidarity_among_natives }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_placeholder1
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_solidarity_among_natives }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = -1
+	y = 2
+}
+shared_focus = {
+	id = NA_N_placeholder2
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_solidarity_among_natives }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = -3
+	y = 2
+}
+shared_focus = {
+	id = NA_N_placeholder3
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_solidarity_among_natives }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = -5
+	y = 2
+}
+shared_focus = {
+	id = NA_N_placeholder4
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_solidarity_among_natives }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = -7
+	y = 2
+}
+shared_focus = {
+	id = NA_N_reinforce_the_coasts
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_us_alone }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = 1
+	y = 2
+}
+shared_focus = {
+	id = NA_N_build_military_strength
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_us_alone }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = 3
+	y = 2
+}
+shared_focus = {
+	id = NA_N_correct_the_media
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_us_alone }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = 5
+	y = 2
+}
+shared_focus = {
+	id = NA_N_coerce_local_leaders
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_us_alone }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_the_other_tribes
+	x = 7
+	y = 2
+}
+shared_focus = {
+	id = NA_N_placeholder9
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_placeholder4 }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_placeholder4
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_placeholder10
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_placeholder3 }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_placeholder3
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_placeholder11
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_placeholder2 }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_placeholder2
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_placeholder12
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_placeholder1 }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_placeholder1
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_prevent_foreign_intervention
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_reinforce_the_coasts }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_reinforce_the_coasts
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_push_west
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_build_military_strength }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_build_military_strength
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_subdue_local_resistance
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_correct_the_media }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_correct_the_media
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_root_them_out
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { focus = NA_N_coerce_local_leaders }
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_coerce_local_leaders
+	x = 0
+	y = 1
+}
+shared_focus = {
+	id = NA_N_united_heart
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { 
+		focus = NA_N_placeholder9
+		focus = NA_N_placeholder10 
+	}
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_placeholder9
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_united_mind
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { 
+		focus = NA_N_placeholder11
+		focus = NA_N_placeholder12 
+	}
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_placeholder11
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_captive_mind
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { 
+		focus = NA_N_prevent_foreign_intervention
+		focus = NA_N_push_west 
+	}
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_prevent_foreign_intervention
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_captive_heart
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { 
+		focus = NA_N_subdue_local_resistance
+		focus = NA_N_root_them_out 
+	}
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_subdue_local_resistance
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_form_the_confederacy
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { 
+		focus = NA_N_united_heart
+	}
+	prerequisite = {
+		focus = NA_N_united_mind 
+	}
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_united_mind
+	x = 1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_tidy_up_the_ashes
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { 
+		focus = NA_N_captive_mind
+	}
+	prerequisite = {
+		focus = NA_N_captive_heart 
+	}
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_captive_mind
+	x = -1
+	y = 1
+}
+shared_focus = {
+	id = NA_N_your_ultimate_fate
+	icon = GFX_Focus_open_a_university
+	cost = 75
+	#available_if_capitulated = no
+	available = {
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
+	}
+	prerequisite = { 
+		focus = NA_N_form_the_confederacy
+	}
+	prerequisite = {
+		focus = NA_N_tidy_up_the_ashes 
+	}
+	completion_reward = {
+		
+	}
+	ai_will_do = { base = 10 }
+	relative_position_id = NA_N_form_the_confederacy
+	x = 1
+	y = 1
+}
+
+###END CUT 2
 shared_focus = {
 	id = NA_N_happy_new_year_1890
 	icon = GFX_focus_na_n_happy_new_year_1890
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		date > 1890.01.01
+		is_subject = no
+		has_country_flag = afr_reforming_regional_power_regional_resources_completed
+		has_country_flag = afr_reforming_regional_power_regional_industry_completed
+		has_country_flag = afr_reforming_regional_power_regional_infrastructure_completed
 	}
-	prerequisite = { focus = NA_N_open_a_university }
-	prerequisite = {
-		focus = NA_N_national_police_force 
-		focus = NA_N_local_sheriffs
-	}
-	prerequisite = {
-		focus = NA_N_military_industrial_complex 
-		focus = NA_N_local_weapons_production
-	}
+	prerequisite = { focus = NA_N_the_panic_attack_ceases }
 	completion_reward = {
 		
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_neo_nativism
 	x = 0
-	y = 7
+	y = 14
 }
 
 
@@ -1716,11 +2953,14 @@ shared_focus = {
 ####################
 shared_focus = {
 	id = NA_N_the_fate_of_the_outsiders
-	icon = GFX_focus_na_n_the_fate_of_the_outsiders
-	cost = 70
+	icon = GFX_Focus_Justice_fate_of_outsiders
+	cost = 75
 	#available_if_capitulated = no
 	available = {
-		
+		custom_trigger_tooltip = {
+			tooltip = USA_FN_focus_unlock_by_event
+			always = no
+		}
 	}
 	prerequisite = { focus = NA_N_the_future_with_our_neighbours }
 	prerequisite = { 
@@ -1733,15 +2973,15 @@ shared_focus = {
 		
 	}
 	ai_will_do = { base = 10 }
-	relative_position_id = NA_N_the_frontier
-	x = 2
-	y = 8
+	relative_position_id = NA_N_the_future_with_our_neighbours
+	x = 4
+	y = 1
 }
 
 shared_focus = {
 	id = NA_N_integration
-	icon = GFX_focus_na_n_integration
-	cost = 70
+	icon = GFX_Focus_refugee_management
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1753,14 +2993,14 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_the_fate_of_the_outsiders
-	x = 0
+	x = -1
 	y = 1
 }
 
 shared_focus = {
 	id = NA_N_the_eviction_notice
 	icon = GFX_focus_na_n_the_eviction_notice
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1768,18 +3008,20 @@ shared_focus = {
 	mutually_exclusive = { focus = NA_N_integration }
 	prerequisite = { focus = NA_N_the_fate_of_the_outsiders }
 	completion_reward = {
-		
-	}
+        country_event = {
+            id = nativepolitical.8
+        }
+    }
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_the_fate_of_the_outsiders
-	x = 2
+	x = 1
 	y = 1
 }
 
 shared_focus = {
 	id = NA_N_give_us_back_our_land
 	icon = GFX_focus_na_n_give_us_back_our_land
-	cost = 70
+	cost = 75
 	#available_if_capitulated = no
 	available = {
 		
@@ -1793,7 +3035,7 @@ shared_focus = {
 	}
 	ai_will_do = { base = 10 }
 	relative_position_id = NA_N_the_fate_of_the_outsiders
-	x = 1
+	x = 0
 	y = 2
 }
 
@@ -1801,14 +3043,14 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_appointing_industry_leaders
-	icon = GFX_focus_na_n_appointing_industry_leaders
+	icon = GFX_Focus_Industry
 	relative_position_id = NA_N_happy_new_year_1890
-	x = 10
+	x = 3
 	y = 1
 	cost = 120
 	#available_if_capitulated = no
 	available = {
-		has_war = no
+		NOT = { has_idea = agrarian }
 	}
 	prerequisite = {
 		focus = NA_N_happy_new_year_1890
@@ -1824,7 +3066,7 @@ shared_focus = {
 	
 shared_focus = {
 	id = NA_N_machine_concern
-	icon = GFX_focus_na_n_machine_concern
+	icon = GFX_Focus_machine_concern
 	relative_position_id = NA_N_appointing_industry_leaders
 	x = -2
 	y = 1
@@ -1844,7 +3086,7 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_electronics_concern
-	icon = GFX_focus_na_n_electronics_concern
+	icon = GFX_Focus_electronics_concern
 	relative_position_id = NA_N_appointing_industry_leaders
 	x = 0
 	y = 1
@@ -1884,7 +3126,7 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_vocational_education
-	icon = GFX_focus_na_n_vocational_education
+	icon = GFX_Focus_vocational_education
 	relative_position_id = NA_N_machine_concern
 	x = 0
 	y = 1
@@ -2071,7 +3313,7 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_the_future_of_transport
-	icon = GFX_focus_na_n_the_future_of_transport
+	icon = GFX_Focus_transport_trucks
 	relative_position_id = NA_N_cherokee_machine_works
 	x = 0
 	y = 1
@@ -2109,7 +3351,7 @@ shared_focus = {
 
 shared_focus = {
 	id = NA_N_aviation_experimentation
-	icon = GFX_focus_na_n_aviation_experimentation
+	icon = GFX_Focus_aviation_experimentation
 	relative_position_id = NA_N_cherokee_machine_works
 	x = -2
 	y = 1
@@ -2148,6 +3390,7 @@ shared_focus = {
 	#available_if_capitulated = no
 	available = {
 		has_war = no
+		num_of_factories > 10
 	}
 	prerequisite = {
 		focus = NA_N_cherokee_machine_works
@@ -2209,12 +3452,17 @@ shared_focus = {
 	id = NA_N_the_end_of_the_old_world
 	icon = GFX_focus_na_n_the_end_of_the_old_world
 	relative_position_id = NA_N_happy_new_year_1890
-	x = 0
+	x = -5
 	y = 1
 	cost = 120
 	#available_if_capitulated = no
 	available = {
-		has_war = no
+		NOT = { 
+			custom_trigger_tooltip = {
+				tooltip = has_afr_empire_mechanic_system
+				has_variable = has_afr_empire_mechanic_system
+			}
+		}
 	}
 	prerequisite = {
 		focus = NA_N_happy_new_year_1890
@@ -2226,7 +3474,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_intellectual_modernization
-	icon = GFX_focus_na_n_intellectual_modernization
+	icon = GFX_Focus_intellectual_modernization
 	relative_position_id = NA_N_the_end_of_the_old_world
 	x = -2
 	y = 1
@@ -2245,7 +3493,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_consumer_economy
-	icon = GFX_focus_na_n_consumer_economy
+	icon = GFX_Focus_consumer_economy
 	relative_position_id = NA_N_the_end_of_the_old_world
 	x = 0
 	y = 1
@@ -2264,7 +3512,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_diplomatic_advancement
-	icon = GFX_focus_na_n_diplomatic_advancement
+	icon = GFX_Focus_the_new_wisdom
 	relative_position_id = NA_N_the_end_of_the_old_world
 	x = 2
 	y = 1
@@ -2307,7 +3555,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_production_of_goods
-	icon = GFX_focus_na_n_production_of_goods
+	icon = GFX_Focus_production_of_goods
 	relative_position_id = NA_N_consumer_economy
 	x = 0
 	y = 1
@@ -2329,7 +3577,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_the_world_stage
-	icon = GFX_focus_na_n_the_world_stage
+	icon = GFX_Focus_the_world_stage
 	relative_position_id = NA_N_diplomatic_advancement
 	x = 0
 	y = 1
@@ -2348,7 +3596,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_the_new_wisdom
-	icon = GFX_focus_na_n_the_new_wisdom
+	icon = GFX_Focus_the_new_wisdom
 	relative_position_id = NA_N_shedding_superstition
 	x = 0
 	y = 1
@@ -2370,7 +3618,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_an_open_market
-	icon = GFX_focus_na_n_an_open_market
+	icon = GFX_Focus_open_market
 	relative_position_id = NA_N_production_of_goods
 	x = 0
 	y = 1
@@ -2392,7 +3640,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = NA_N_self_image
-	icon = GFX_focus_na_n_self_image
+	icon = GFX_Focus_Government_self_image
 	relative_position_id = NA_N_the_world_stage
 	x = 0
 	y = 1
@@ -2419,6 +3667,7 @@ shared_focus = {
 	#available_if_capitulated = no
 	available = {
 		has_war = no
+		date > 1895.01.01
 	}
 	prerequisite = {
 		focus = NA_N_the_new_wisdom
@@ -2426,7 +3675,966 @@ shared_focus = {
 		focus = NA_N_self_image
 	}
 	completion_reward = {
+		country_event = { id = nativepolitical.7 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+
+###solidarity/superiority###
+
+shared_focus = {
+	id = NA_N_superiority
+	icon = GFX_focus_na_n_superiority
+	relative_position_id = NA_N_a_neo_native_society
+	x = -2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	mutually_exclusive = { focus = NA_N_solidarity }
+	prerequisite = {
+		focus = NA_N_a_neo_native_society
+	}
+	completion_reward = {
 		##add event here
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_solidarity
+	icon = GFX_focus_na_n_solidarity
+	relative_position_id = NA_N_a_neo_native_society
+	x = 2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	mutually_exclusive = { focus = NA_N_superiority }
+	prerequisite = {
+		focus = NA_N_a_neo_native_society
+	}
+	completion_reward = {
+		##add event here
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_projectionism
+	icon = GFX_Focus_projectionism
+	relative_position_id = NA_N_superiority
+	x = -2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_superiority
+	}
+	completion_reward = {
+		##add event here
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_standardization
+	icon = GFX_Focus_standardization
+	relative_position_id = NA_N_superiority
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_superiority
+	}
+	completion_reward = {
+		country_event = { id = nativemilitary.1 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_democratic_reform
+	icon = GFX_Focus_Vote_democratic_reform
+	relative_position_id = NA_N_solidarity
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_solidarity
+	}
+	completion_reward = {
+		##add event here
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_social_benefits
+	icon = GFX_Focus_social_benefits
+	relative_position_id = NA_N_solidarity
+	x = 2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_solidarity
+	}
+	completion_reward = {
+		country_event = { id = nativepolitical.1 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_propaganda
+	icon = GFX_Focus_Espionage_propaganda
+	relative_position_id = NA_N_projectionism
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_projectionism
+	}
+	completion_reward = {
+		##add event here
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_militarism
+	icon = GFX_Focus_militarism
+	relative_position_id = NA_N_standardization
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_standardization
+	}
+	completion_reward = {
+		country_event = { id = nativemilitary.2 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_political_accountability
+	icon = GFX_Focus_political_accountability
+	relative_position_id = NA_N_democratic_reform
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_democratic_reform
+	}
+	completion_reward = {
+		add_political_power = 25
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_the_rights_of_workers
+	icon = GFX_Focus_social_workers_rights
+	relative_position_id = NA_N_social_benefits
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_social_benefits
+	}
+	completion_reward = {
+		country_event = { id = nativepolitical.2 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_centralized_authority
+	icon = GFX_Focus_Government_centralized_authority
+	relative_position_id = NA_N_propaganda
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_propaganda
+	}
+	completion_reward = {
+		add_political_power = 100
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_technological_superiority
+	icon = GFX_Focus_technological_supremacy
+	relative_position_id = NA_N_militarism
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_militarism
+	}
+	completion_reward = {
+		country_event = { id = nativemilitary.3 days = 3 }
+		add_tech_bonus = {
+			name = army_doctrine_bonus
+			bonus = 0.5
+			ahead_reduction = 1
+			uses = 3
+			category = land_doctrine
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_universal_suffrage
+	icon = GFX_focus_Vote_universal_suffrage
+	relative_position_id = NA_N_political_accountability
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_political_accountability
+	}
+	completion_reward = {
+		##add event here
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_basic_working_regulation
+	icon = GFX_Focus_basic_working_regulation
+	relative_position_id = NA_N_the_rights_of_workers
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_the_rights_of_workers
+	}
+	completion_reward = {
+		country_event = { id = nativepolitical.3 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_a_modern_native_society
+	icon = GFX_focus_na_n_a_modern_native_society
+	relative_position_id = NA_N_technological_superiority
+	x = 2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_centralized_authority
+		focus = NA_N_basic_working_regulation
+	}
+	prerequisite = {
+		focus = NA_N_universal_suffrage
+		focus = NA_N_technological_superiority
+	}
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = NA_N_political_flag_1
+		}
+		country_event = { id = nativepolitical.4 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+
+###SHAMAN OF NOW###
+
+shared_focus = {
+	id = NA_N_the_shaman_of_now
+	icon = GFX_focus_na_n_the_shaman_of_now
+	relative_position_id = NA_N_national_industrial_laboratory
+	x = 0
+	y = 6
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+		date > 1915.01.01
+	}
+	prerequisite = {
+		focus = NA_N_national_industrial_laboratory
+	}
+	completion_reward = {
+		country_event = { id = nativepolitical.6 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_military_research
+	icon = GFX_Focus_military_research
+	relative_position_id = NA_N_the_shaman_of_now
+	x = -1
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_the_shaman_of_now
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_university_research
+	icon = GFX_Focus_university_research
+	relative_position_id = NA_N_the_shaman_of_now
+	x = 1
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+		has_tech = diodes
+		has_tech = polymer_synthesis
+	}
+	prerequisite = {
+				focus = NA_N_the_shaman_of_now
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_office_of_strategic_planning
+	icon = GFX_focus_office_of_strategic_planning
+	relative_position_id = NA_N_military_research
+	x = -2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_military_research
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_small_arms_investments
+	icon = GFX_Focus_small_arms_investments
+	relative_position_id = NA_N_military_research
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+		has_tech = factory_industry_4
+	}
+	prerequisite = {
+		focus = NA_N_military_research
+	}
+	completion_reward = {
+		country_event = { id = nativeindustrial.7 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_electronic_thinking
+	icon = GFX_focus_na_n_electronic_thinking
+	relative_position_id = NA_N_university_research
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+		has_tech = triodes
+	}
+	prerequisite = {
+		focus = NA_N_university_research
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_tactical_thinking_training
+	icon = GFX_Focus_tactical_thinking_training
+	relative_position_id = NA_N_office_of_strategic_planning
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_office_of_strategic_planning
+	}
+	prerequisite = {
+		focus = NA_N_small_arms_investments
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_artillery_manufacturing_techniques
+	icon = GFX_Focus_artillery_manufacturing_investments
+	relative_position_id = NA_N_small_arms_investments
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_small_arms_investments
+	}
+	completion_reward = {
+		country_event = { id = nativeindustrial.8 days = 3 }
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_opportunistic_research
+	icon = GFX_focus_na_n_opportunistic_research
+	relative_position_id = NA_N_electronic_thinking
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_electronic_thinking
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_modern_command_structure
+	icon = GFX_Focus_modern_command_structure
+	relative_position_id = NA_N_tactical_thinking_training
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_tactical_thinking_training
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_motorization_effort
+	icon = GFX_Focus_transport_motorization_effort
+	relative_position_id = NA_N_artillery_manufacturing_techniques
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_artillery_manufacturing_techniques
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_science_and_spirituality
+	icon = GFX_focus_na_n_science_and_spirituality
+	relative_position_id = NA_N_opportunistic_research
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_opportunistic_research
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_establish_sabre
+	icon = GFX_focus_na_n_establish_sabre
+	relative_position_id = NA_N_modern_command_structure
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_modern_command_structure
+	}
+	completion_reward = {
+		country_event = {id = nativeintelligence.1}
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_the_future_of_war
+	icon = GFX_Focus_the_future_of_war
+	relative_position_id = NA_N_motorization_effort
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_motorization_effort
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_bending_nature
+	icon = GFX_Focus_bending_nature
+	relative_position_id = NA_N_science_and_spirituality
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_science_and_spirituality
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_spectre_institutions
+	icon = GFX_Focus_spectre_institutions
+	relative_position_id = NA_N_the_future_of_war
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_the_future_of_war
+	}
+	prerequisite = {
+		focus = NA_N_bending_nature
+	}
+	prerequisite = {
+		focus = NA_N_establish_sabre
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+###THE MODERN MAN###
+shared_focus = {
+	id = NA_N_the_modern_man
+	icon = GFX_Focus_modern_man
+	relative_position_id = NA_N_a_modern_native_society
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+		date > 1915.01.01
+	}
+	prerequisite = {
+		focus = NA_N_a_modern_native_society
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_native_kultur
+	icon = GFX_focus_na_n_native_kultur
+	relative_position_id = NA_N_the_modern_man
+	x = -2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_the_modern_man
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_consumerism
+	icon = GFX_Focus_consumerism
+	relative_position_id = NA_N_the_modern_man
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_the_modern_man
+	}
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = NA_N_political_flag_2
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_indigenous_media
+	icon = GFX_Focus_Freedom_Press_media
+	relative_position_id = NA_N_the_modern_man
+	x = 2
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_the_modern_man
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_reform_social_outlook
+	icon = GFX_Focus_reform_social_outlook
+	relative_position_id = NA_N_native_kultur
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_native_kultur
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_new_housing_plans
+	icon = GFX_focus_na_n_new_housing_plans
+	relative_position_id = NA_N_consumerism
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_consumerism
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = NA_N_political_flag_3
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_journalistic_legislation
+	icon = GFX_Focus_Law_protections
+	relative_position_id = NA_N_indigenous_media
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_indigenous_media
+	}
+	prerequisite = {
+		focus = NA_N_military_research
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_encourage_youth_culture
+	icon = GFX_Focus_Electorate_youth_culture
+	relative_position_id = NA_N_reform_social_outlook
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_reform_social_outlook
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_public_transport
+	icon = GFX_Focus_transport_public_transport
+	relative_position_id = NA_N_new_housing_plans
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_new_housing_plans
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = NA_N_political_flag_4
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_spirit_of_the_press
+	icon = GFX_Focus_Freedom_Press_spirit
+	relative_position_id = NA_N_journalistic_legislation
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_journalistic_legislation
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_you_and_your_neighbours
+	icon = GFX_Focus_you_and_your_neighbours
+	relative_position_id = NA_N_encourage_youth_culture
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_encourage_youth_culture
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_metropolitan_communities
+	icon = GFX_Focus_metropolitan_communities
+	relative_position_id = NA_N_public_transport
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_public_transport
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+				set_country_flag = NA_N_political_flag_5
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_spirit_of_the_airwaves
+	icon = GFX_Focus_spirit_of_the_airwaves
+	relative_position_id = NA_N_spirit_of_the_press
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_spirit_of_the_press
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_address_inequality
+	icon = GFX_Focus_Government_Reform_3
+	relative_position_id = NA_N_you_and_your_neighbours
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_you_and_your_neighbours
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_consumer_appliances
+	icon = GFX_Focus_consumer_appliances
+	relative_position_id = NA_N_metropolitan_communities
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		focus = NA_N_metropolitan_communities
+	}
+	prerequisite = {
+		focus = NA_N_spirit_of_the_airwaves
+	}
+	prerequisite = {
+		focus = NA_N_modern_command_structure
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = NA_N_political_flag_6
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+shared_focus = {
+	id = NA_N_greater_community
+	icon = GFX_focus_na_n_greater_community
+	relative_position_id = NA_N_address_inequality
+	x = 0
+	y = 1
+	cost = 120
+	#available_if_capitulated = no
+	available = {
+		has_war = no
+	}
+	prerequisite = {
+		#focus = NA_N_subtle_exclusion_policies #end focus for authoritarian branch
+		focus = NA_N_address_inequality
+	}
+	prerequisite = {
+		focus = NA_N_consumer_appliances
+	}
+	completion_reward = {
+		country_event = { id = nativepolitical.5 days = 3 }
 	}
 	ai_will_do = { base = 10 }
 }

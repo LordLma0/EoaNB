@@ -12,8 +12,9 @@ on_actions = {
 				mhc_lower_power_collector = yes
  				mhc_get_results_collector = yes
 				mhc_get_results_effects_collector = yes
-
 				mhc_junta_collector = yes
+				
+				mhc_alerts_collector = yes
                 
 				if = {
 					limit = {
@@ -45,8 +46,36 @@ on_actions = {
 		}        
 	}
 	
+	#on_monthly_AUS = {
+	#	effect = {
+	#		if = {
+	#			limit = {
+	#				army_manpower_in_state = {
+	#					amount > 20000
+	#					state = 159
+	#				}
+	#				army_manpower_in_state = {
+	#					amount > 20000
+	#					state = 160
+	#				}
+	#			}
+	#			add_to_variable = {
+	#				AUS_ITA_Unrest_risk_change = -0.01
+	#			}
+	#		}
+	#		if = {
+	#			limit = {
+	#				has_variable = AUS_ITA_Unrest_risk_change
+	#			}
+	#			add_to_variable = {
+	#				ITA_UPROAR_RISK = modifier@AUS_Italian_Uproar_Risk_Modifier
+	#			}
+	#		}
+	#	}
+	#}
+	
 	on_monthly_PIE = {
-        	effect = {
+		effect = {
 			if = {
 				limit = {
 					has_idea = ITA_Brigandage
@@ -61,6 +90,22 @@ on_actions = {
 	on_monthly_KOR = {
 		effect = {
 			add_to_variable = { andong_kim_power = modifier@KOR_Angdon_Kim_Modifier }
+		}
+	}
+
+	on_monthly_GRE = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { 
+						has_idea = GRE_idea_minor_foreign_influence
+						has_idea = GRE_idea_shared_foreign_influence
+						has_idea = GRE_idea_major_foreign_influence
+					}
+				}
+				set_variable = { influenced_by = GRE.id }
+				set_variable = { influenced_by2 = GRE.id }
+			}
 		}
 	}
 

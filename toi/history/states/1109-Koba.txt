@@ -1,14 +1,16 @@
-state={
-	id=1109
-	name="STATE_1109"
+state = {
+	id = 1109
+	name = "STATE_1109"
 	state_category = enclave
-	provinces={
+
+	local_supplies=0.0 
+	provinces = {
 		13667
 	}
 	
-	manpower=4293
+	manpower =4293
 	
-	history={
+	history = {
 		owner = KAB
 		buildings = {
 			infrastructure = 1

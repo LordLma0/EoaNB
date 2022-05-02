@@ -1,22 +1,24 @@
 
-state={
-	id=619
-	name="STATE_619" # Yarkand
+state = {
+	id =619
+	name = "STATE_619" # Yarkand
+
+	local_supplies=0.0 
 	manpower = 730700
 
 	state_category = pastoral
 
-	resources={
-		wood=2
+	resources = {
+		wood =2
 	}
 
-	history={
+	history = {
 		owner = QNG
 		add_core_of = QNG
 		buildings = {
 			infrastructure = 2
 		}
-		add_to_array = { state_culture_array = 252}
+		add_to_array = { state_culture_array = 139}
 		add_to_array = { state_culture_array = 144}
 		add_to_array = { state_culture_array = 265}
 
@@ -33,7 +35,7 @@ state={
 		
 	}
 
-	provinces={
+	provinces = {
 		1766 1970 2015 4828 5016 5087 7790 7949 8112 12119
 	}
 }

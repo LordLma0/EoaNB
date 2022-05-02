@@ -1,11 +1,12 @@
 state = {
 	id = 52
-	name="STATE_52"
+	name = "STATE_52"
 	manpower = 1660728
 	state_category = large_town
 
 	resources = {
-		wood = 6
+		iron = 1
+		wood = 4
 		coal = 1
 	}
 
@@ -15,21 +16,21 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = BAV
 		1857.1.1 = {
-			owner = BAV
 			add_core_of = BAV
 
 			buildings = {
 				infrastructure = 6
-				arms_factory = 1
 				industrial_complex = 1
 			}
 
 			victory_points = { 692 30 } #Munich
 			victory_points = { 707 1 } #Berchtesgaden
 			victory_points = { 3705 5 } #Augsburg
-			victory_points = { 9666 3 } #Memmingen
-			
+			victory_points = { 9652 1 } #Rosenheim
+			victory_points = { 9666 1 } #Memmingen
+
 			add_to_array = { state_culture_array = 1 } # Austro-Bavarian
 			add_to_array = { state_culture_array_num = 0.838 }
 			add_to_array = { state_culture_array = 5 } # Swabian
@@ -45,4 +46,5 @@ state = {
 			add_to_array = { state_religion_array_num = 0.01 }
 		}
 	}
+	local_supplies=0.0 
 }

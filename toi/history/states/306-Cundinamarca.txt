@@ -1,7 +1,9 @@
 
-state={
-	id=306
-	name="STATE_306" # Cundinamarca
+state = {
+	id =306
+	name = "STATE_306" # Cundinamarca
+
+	local_supplies=0.0 
 	manpower = 2108532
 
 	resources = {
@@ -13,7 +15,7 @@ state={
 	
 	state_category = town
 	
-	history={
+	history = {
 		owner = COL
 		buildings = {
 			infrastructure = 3
@@ -28,10 +30,18 @@ state={
 		victory_points = {
 			10747 10
 		}
+		
+		add_to_array = { state_culture_array = 422 } #Columbian
+		add_to_array = { state_culture_array_num = 0.6 }
+		add_to_array = { state_culture_array = 479 } #Montubio
+		add_to_array = { state_culture_array_num = 0.4 }
+		
+		add_to_array = { state_religion_array = 2 } #Catholic
+		add_to_array = { state_religion_array_num = 1 }
 
 	}
 
-	provinces={
+	provinces = {
 		2079 7936 7991 7993 10747 10790 10846 
 	}
 }

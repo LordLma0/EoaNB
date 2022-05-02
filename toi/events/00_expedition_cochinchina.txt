@@ -1,4 +1,4 @@
-﻿add_namespace = cochinchina_expedition 
+﻿add_namespace = cochinchina_expedition
 
 #-----------------------------------------
 #Ask France To Protect Churches
@@ -57,8 +57,8 @@ country_event = {
 			limit = { TAG = SPR }
 			set_country_flag = SPR_cochinchina_intervention_flag
 			set_global_flag = SPR_cochinchina_intervention_flag
-					
-			complete_national_focus = SPR_conchinchina_expedition
+			hidden_effect = { SPR = { set_country_flag = SPR_cochinchina_expedition_focus_flag } }
+			#complete_national_focus = SPR_cochinchina_expedition
 		}
 		if = {
 			limit = { TAG = FRA }
@@ -143,7 +143,8 @@ country_event = {
 			limit = { TAG = SPR }
 			set_country_flag = SPR_cochinchina_intervention_flag
 			set_global_flag = SPR_cochinchina_intervention_flag
-			complete_national_focus = SPR_cochinchina_expedition
+			hidden_effect = { SPR = { set_country_flag = SPR_cochinchina_expedition_focus_flag } }
+			#complete_national_focus = SPR_cochinchina_expedition
 			hidden_effect = { FRA = { country_event = { id = cochinchina_expedition.6 days = 1 } } }
 		}
 		if = {
@@ -265,6 +266,7 @@ country_event = {
 						id = 75
 						value = 100
 					}
+					
 					#add_ai_strategy = {
 					#	type = naval_mission_threshold
 					#	id = MISSION_PATROL
@@ -292,6 +294,26 @@ country_event = {
 						type = invade
 						id = VIN
 						value = 100
+					}
+					add_ai_strategy = {
+						type = front_control
+					
+						#you can define a target in following ways. you can define more than one
+						
+						tag = VIN 							# target against a specific country
+						state = 1386 						# target on a state
+						strategic_region = 142				# target on a strategic region
+						#area = caribbean					# target on a specific ai area
+						country_trigger = { SPR = { has_country_flag = SPR_cochinchina_intervention_flag } } 	# a trigger to check agaisnt a specific country. scope is enemy country from scope is our country
+						#state_trigger = { always = no } 	# a trigger to check agaisnt a state. scope is state. from scope is enemy country from.from scope is our country
+						
+						ratio = 0.0 						# the strategy is enabled only if ratio of the front covered by this strat's targets greater than this ratio
+						
+						priority = 200 						# default 0, higher prio strats will override lower
+						ordertype = invasion 				# front or invasion. if set this strategy will only apply to that specific order type
+						execution_type = balanced 			# one of careful balanced rush rush_weak. if set will override the execution type of front (only for front orders)
+						execute_order = yes 				# yes or no. if set will override execute or not decision of front
+						manual_attack = yes 				# default yes. if no ai will not do manual pokes at enemy (only for front orders)
 					}
 				}
 				if = {
@@ -332,6 +354,26 @@ country_event = {
 							type = invade
 							id = VIN
 							value = 100
+						}
+						add_ai_strategy = {
+							type = front_control
+						
+							#you can define a target in following ways. you can define more than one
+							
+							tag = VIN 							# target against a specific country
+							state = 1386 						# target on a state
+							strategic_region = 142				# target on a strategic region
+							#area = caribbean					# target on a specific ai area
+							country_trigger = { SPR = { has_country_flag = SPR_cochinchina_intervention_flag } } 	# a trigger to check agaisnt a specific country. scope is enemy country from scope is our country
+							#state_trigger = { always = no } 	# a trigger to check agaisnt a state. scope is state. from scope is enemy country from.from scope is our country
+							
+							ratio = 0.0 						# the strategy is enabled only if ratio of the front covered by this strat's targets greater than this ratio
+							
+							priority = 200 						# default 0, higher prio strats will override lower
+							ordertype = invasion 				# front or invasion. if set this strategy will only apply to that specific order type
+							execution_type = balanced 			# one of careful balanced rush rush_weak. if set will override the execution type of front (only for front orders)
+							execute_order = yes 				# yes or no. if set will override execute or not decision of front
+							manual_attack = yes 				# default yes. if no ai will not do manual pokes at enemy (only for front orders)
 						}
 					}
 				}
@@ -389,6 +431,26 @@ country_event = {
 						id = VIN
 						value = 100
 					}
+					add_ai_strategy = {
+						type = front_control
+					
+						#you can define a target in following ways. you can define more than one
+						
+						tag = VIN 							# target against a specific country
+						state = 1386 						# target on a state
+						strategic_region = 142				# target on a strategic region
+						#area = caribbean					# target on a specific ai area
+						country_trigger = { FRA = { has_country_flag = FRA_cochinchina_intervention_flag } } 	# a trigger to check agaisnt a specific country. scope is enemy country from scope is our country
+						#state_trigger = { always = no } 	# a trigger to check agaisnt a state. scope is state. from scope is enemy country from.from scope is our country
+						
+						ratio = 0.0 						# the strategy is enabled only if ratio of the front covered by this strat's targets greater than this ratio
+						
+						priority = 200 						# default 0, higher prio strats will override lower
+						ordertype = invasion 				# front or invasion. if set this strategy will only apply to that specific order type
+						execution_type = balanced 			# one of careful balanced rush rush_weak. if set will override the execution type of front (only for front orders)
+						execute_order = yes 				# yes or no. if set will override execute or not decision of front
+						manual_attack = yes 				# default yes. if no ai will not do manual pokes at enemy (only for front orders)
+					}
 				}
 				if = {
 					limit = { SPR = { has_country_flag = SPR_cochinchina_intervention_flag } }
@@ -434,11 +496,29 @@ country_event = {
 			limit = { TAG = SPR }
 			clr_country_flag = SPR_cochinchina_intervention_flag
 			clr_global_flag = SPR_cochinchina_intervention_flag
+			hidden_effect = { 
+				every_country = {
+					limit = { OR = { TAG = SPR is_subject_of = SPR } }
+					every_country = { 
+						limit = { OR = { TAG = VIN is_subject_of = VIN } }
+						white_peace = PREV
+					}
+				}
+			}
 		}
 		if = {
 			limit = { TAG = FRA }
 			clr_country_flag = FRA_cochinchina_intervention_flag
 			clr_global_flag = FRA_cochinchina_intervention_flag
+			hidden_effect = { 
+				every_country = {
+					limit = { OR = { TAG = FRA is_subject_of = FRA } }
+					every_country = { 
+						limit = { OR = { TAG = VIN is_subject_of = VIN } }
+						white_peace = PREV
+					}
+				}
+			}
 		}
 	}
 }
@@ -867,119 +947,55 @@ country_event = {
 							SPR = { has_country_flag = SPR_cochinchina_intervention_flag }
 							FRA = { has_country_flag = FRA_cochinchina_intervention_flag }
 						}
-						if = { 
+						if = {
 							limit = { SPR = { has_completed_focus = SPR_spanish_victory_cochinchina } }
-							if = {
-								limit = {
-									OR = {
-										has_dlc = "Together for Victory"
-										has_dlc = "Waking the Tiger"
-										has_dlc = "Death or Dishonor"
+							CCH = {
+								transfer_state = 1386
+								set_cosmetic_tag = FRA_cochin_protect
+								if = {
+									limit = {
+										eoanb_enable_autonomy = yes
+									}
+									FRA = {
+										set_autonomy = {
+											target = PREV
+											autonomy_state = autonomy_afr_colony
+										}
 									}
 								}
-								FRA = { 
-									set_autonomy = {
-										target = CCH
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
+								else = {
+									FRA = {
+										puppet = PREV
 									}
-								}
-								CCH = {
-									annex_country = {
-										target = VIN
-										transfer_troops = no
-									}
-									annex_country = {
-										target = JAI
-										transfer_troops = no
-									}
-									annex_country = {
-										target = PHU
-										transfer_troops = no
-									}
-									
 								}
 							}
-							else = {
-								FRA = { puppet = CCH }
-								CCH = {
-									annex_country = {
-										target = VIN
-										transfer_troops = no
-									}
-									annex_country = {
-										target = JAI
-										transfer_troops = no
-									}
-									annex_country = {
-										target = PHU
-										transfer_troops = no
-									}
-									
-								}
-							}
-							if = {
-								limit = { 
-									country_exists = SPH
-									SPH = { is_subject_of = SPR } 
-								}
-								SPH = { transfer_state = 1386 }
-								SPH = { transfer_state = 998 }
-							}
-							else = {
-								SPR = { transfer_state = 1386 }
-								SPR = { transfer_state = 998 }
+							SPH = {
+								transfer_state = 998
 							}
 						}
 						else = {
-							if = {
-								limit = {
-									OR = {
-										has_dlc = "Together for Victory"
-										has_dlc = "Waking the Tiger"
-										has_dlc = "Death or Dishonor"
+							CCH = {
+								transfer_state = 1386
+								set_cosmetic_tag = FRA_cochin_protect
+								if = {
+									limit = {
+										eoanb_enable_autonomy = yes
+									}
+									FRA = {
+										set_autonomy = {
+											target = PREV
+											autonomy_state = autonomy_afr_colony
+										}
 									}
 								}
-								FRA = { 
-									set_autonomy = {
-										target = CCH
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
+								else = {
+									FRA = {
+										puppet = PREV
 									}
-								}
-								CCH = {
-									annex_country = {
-										target = VIN
-										transfer_troops = no
-									}
-									annex_country = {
-										target = JAI
-										transfer_troops = no
-									}
-									annex_country = {
-										target = PHU
-										transfer_troops = no
-									}
-									
 								}
 							}
-							else = {
-								FRA = { puppet = CCH }
-								CCH = {
-									annex_country = {
-										target = VIN
-										transfer_troops = no
-									}
-									annex_country = {
-										target = JAI
-										transfer_troops = no
-									}
-									annex_country = {
-										target = PHU
-										transfer_troops = no
-									}
-									
-								}
+							998 = {
+								set_demilitarized_zone = yes
 							}
 						}
 					}
@@ -988,48 +1004,25 @@ country_event = {
 							SPR = { has_country_flag = SPR_cochinchina_intervention_flag }
 							FRA = { NOT = { has_country_flag = FRA_cochinchina_intervention_flag } }
 						}
-						if = {
-							limit = {
-								OR = {
-									has_dlc = "Together for Victory"
-									has_dlc = "Waking the Tiger"
-									has_dlc = "Death or Dishonor"
+						CCH = {
+							transfer_state = 1386
+							transfer_state = 998
+							set_cosmetic_tag = SPR_cochin_protect
+							if = {
+								limit = {
+									eoanb_enable_autonomy = yes
+								}
+								SPR = {
+									set_autonomy = {
+										target = PREV
+										autonomy_state = autonomy_afr_colony
+									}
 								}
 							}
-							SPR = { 
-								set_autonomy = {
-									target = CCH
-									autonomous_state = autonomy_colony
-									freedom_level = 0.1
+							else = {
+								SPR = {
+									puppet = PREV
 								}
-							}
-							CCH = {
-								annex_country = {
-									target = VIN
-									transfer_troops = no
-								}
-								set_autonomy = {
-									target = JAI
-									autonomous_state = autonomy_colony
-									freedom_level = 0.1
-								}
-								set_autonomy = {
-									target = PHU
-									autonomous_state = autonomy_colony
-									freedom_level = 0.1
-								}
-								
-							}
-						}
-						else = {
-							SPR = { puppet = CCH }
-							CCH = {
-								annex_country = {
-									target = VIN
-									transfer_troops = no
-								}
-								puppet = JAI
-								puppet = PHU
 							}
 						}
 					}
@@ -1038,54 +1031,28 @@ country_event = {
 							SPR = { NOT = { has_country_flag = SPR_cochinchina_intervention_flag } }
 							FRA = { has_country_flag = FRA_cochinchina_intervention_flag }
 						}
-						if = {
-							limit = {
-								OR = {
-									has_dlc = "Together for Victory"
-									has_dlc = "Waking the Tiger"
-									has_dlc = "Death or Dishonor"
+						CCH = {
+							transfer_state = 1386
+							set_cosmetic_tag = FRA_cochin_protect
+							if = {
+								limit = {
+									eoanb_enable_autonomy = yes
+								}
+								FRA = {
+									set_autonomy = {
+										target = PREV
+										autonomy_state = autonomy_afr_colony
+									}
 								}
 							}
-							FRA = { 
-								set_autonomy = {
-									target = CCH
-									autonomous_state = autonomy_colony
-									freedom_level = 0.1
+							else = {
+								FRA = {
+									puppet = PREV
 								}
-							}
-							CCH = {
-								annex_country = {
-									target = VIN
-									transfer_troops = no
-								}
-								annex_country = {
-									target = JAI
-									transfer_troops = no
-								}
-								annex_country = {
-									target = PHU
-									transfer_troops = no
-								}
-								
 							}
 						}
-						else = {
-							FRA = { puppet = CCH }
-							CCH = {
-								annex_country = {
-									target = VIN
-									transfer_troops = no
-								}
-								annex_country = {
-									target = JAI
-									transfer_troops = no
-								}
-								annex_country = {
-									target = PHU
-									transfer_troops = no
-								}
-								
-							}
+						998 = {
+							set_demilitarized_zone = yes
 						}
 					}
 				}
@@ -1103,91 +1070,55 @@ country_event = {
 							SPR = { has_country_flag = SPR_cochinchina_intervention_flag }
 							FRA = { has_country_flag = FRA_cochinchina_intervention_flag }
 						}
-						if = { 
+						if = {
 							limit = { SPR = { has_completed_focus = SPR_spanish_victory_cochinchina } }
-							if = {
-								limit = {
-									OR = {
-										has_dlc = "Together for Victory"
-										has_dlc = "Waking the Tiger"
-										has_dlc = "Death or Dishonor"
+							CCH = {
+								transfer_state = 1386
+								set_cosmetic_tag = FRA_cochin_protect
+								if = {
+									limit = {
+										eoanb_enable_autonomy = yes
+									}
+									FRA = {
+										set_autonomy = {
+											target = PREV
+											autonomy_state = autonomy_afr_colony
+										}
 									}
 								}
-								FRA = { 
-									set_autonomy = {
-										target = VIN
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-								}
-								VIN = {
-									set_autonomy = {
-										target = JAI
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-									set_autonomy = {
-										target = PHU
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
+								else = {
+									FRA = {
+										puppet = PREV
 									}
 								}
 							}
-							else = {
-								FRA = { puppet = VIN }
-								VIN = {
-									puppet = JAI
-									puppet = PHU
-								}
-							}
-							if = {
-								limit = { 
-									country_exists = SPH
-									SPH = { is_subject_of = SPR } 
-								}
-								SPH = { transfer_state = 1386 }
-								SPH = { transfer_state = 998 }
-							}
-							else = {
-								SPR = { transfer_state = 1386 }
-								SPR = { transfer_state = 998 }
+							SPH = {
+								transfer_state = 998
 							}
 						}
 						else = {
-							if = {
-								limit = {
-									OR = {
-										has_dlc = "Together for Victory"
-										has_dlc = "Waking the Tiger"
-										has_dlc = "Death or Dishonor"
+							CCH = {
+								transfer_state = 1386
+								set_cosmetic_tag = FRA_cochin_protect
+								if = {
+									limit = {
+										eoanb_enable_autonomy = yes
+									}
+									FRA = {
+										set_autonomy = {
+											target = PREV
+											autonomy_state = autonomy_afr_colony
+										}
 									}
 								}
-								FRA = { 
-									set_autonomy = {
-										target = VIN
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-								}
-								VIN = {
-									set_autonomy = {
-										target = JAI
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-									set_autonomy = {
-										target = PHU
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
+								else = {
+									FRA = {
+										puppet = PREV
 									}
 								}
 							}
-							else = {
-								FRA = { puppet = VIN }
-								VIN = {
-									puppet = JAI
-									puppet = PHU
-								}
+							998 = {
+								set_demilitarized_zone = yes
 							}
 						}
 					}
@@ -1196,66 +1127,25 @@ country_event = {
 							SPR = { has_country_flag = SPR_cochinchina_intervention_flag }
 							FRA = { NOT = { has_country_flag = FRA_cochinchina_intervention_flag } }
 						}
-						if = {
-							limit = {
-								OR = {
-									has_dlc = "Together for Victory"
-									has_dlc = "Waking the Tiger"
-									has_dlc = "Death or Dishonor"
-								}
-							}
+						CCH = {
+							transfer_state = 1386
+							transfer_state = 998
+							set_cosmetic_tag = SPR_cochin_protect
 							if = {
-								limit = { 
-									country_exists = SPH
-									SPH = { is_subject_of = SPR }
+								limit = {
+									eoanb_enable_autonomy = yes
 								}
-								SPH = { 
+								SPR = {
 									set_autonomy = {
-										target = VIN
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-								}
-								VIN = {
-									set_autonomy = {
-										target = JAI
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-									set_autonomy = {
-										target = PHU
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
+										target = PREV
+										autonomy_state = autonomy_afr_colony
 									}
 								}
 							}
 							else = {
-								SPR = { 
-									set_autonomy = {
-										target = VIN
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
+								SPR = {
+									puppet = PREV
 								}
-								VIN = {
-									set_autonomy = {
-										target = JAI
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-									set_autonomy = {
-										target = PHU
-										autonomous_state = autonomy_colony
-										freedom_level = 0.1
-									}
-								}
-							}
-						}
-						else = {
-							SPR = { puppet = VIN }
-							VIN = {
-								puppet = JAI
-								puppet = PHU
 							}
 						}
 					}
@@ -1264,40 +1154,28 @@ country_event = {
 							SPR = { NOT = { has_country_flag = SPR_cochinchina_intervention_flag } }
 							FRA = { has_country_flag = FRA_cochinchina_intervention_flag }
 						}
-						if = {
-							limit = {
-								OR = {
-									has_dlc = "Together for Victory"
-									has_dlc = "Waking the Tiger"
-									has_dlc = "Death or Dishonor"
+						CCH = {
+							transfer_state = 1386
+							set_cosmetic_tag = FRA_cochin_protect
+							if = {
+								limit = {
+									eoanb_enable_autonomy = yes
+								}
+								FRA = {
+									set_autonomy = {
+										target = PREV
+										autonomy_state = autonomy_afr_colony
+									}
 								}
 							}
-							FRA = { 
-								set_autonomy = {
-									target = VIN
-									autonomous_state = autonomy_colony
-									freedom_level = 0.1
-								}
-							}
-							VIN = {
-								set_autonomy = {
-									target = JAI
-									autonomous_state = autonomy_colony
-									freedom_level = 0.1
-								}
-								set_autonomy = {
-									target = PHU
-									autonomous_state = autonomy_colony
-									freedom_level = 0.1
+							else = {
+								FRA = {
+									puppet = PREV
 								}
 							}
 						}
-						else = {
-							FRA = { puppet = VIN }
-							VIN = {
-								puppet = JAI
-								puppet = PHU
-							}
+						998 = {
+							set_demilitarized_zone = yes
 						}
 					}
 				}

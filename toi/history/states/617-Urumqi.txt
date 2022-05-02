@@ -1,12 +1,14 @@
 
-state={
-	id=617
-	name="STATE_617" # Urumqi
+state = {
+	id =617
+	name = "STATE_617" # Urumqi
+
+	local_supplies=0.0 
 	manpower = 780500
 
 	state_category = town
 
-	history={
+	history = {
 		owner = QNG
 		add_core_of = QNG
 		buildings = {
@@ -15,7 +17,7 @@ state={
 		victory_points = {
 			4709 3
 		}
-		add_to_array = { state_culture_array = 252}
+		add_to_array = { state_culture_array = 139}
 		add_to_array = { state_culture_array = 270}
 		add_to_array = { state_culture_array = 265}
 
@@ -31,7 +33,7 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1703 4682 4709 4770 7702 7792 7850 10545 10614 12526 12601 12656
 	}
 }

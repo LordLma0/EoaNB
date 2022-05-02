@@ -1,8 +1,10 @@
-state={
-	id=738
-	name="STATE_738"
+state = {
+	id =738
+	name = "STATE_738"
 
-	history={
+
+	local_supplies=0.0 
+	history = {
 		owner = INS
 		add_core_of = INS
 		buildings = {
@@ -13,12 +15,18 @@ state={
 
 			}
 		}
+
+		add_to_array = { state_culture_array = 526 } # Maluku
+		add_to_array = { state_culture_array_num = 1.0 }
+
+		add_to_array = { state_religion_array = 20 } # Animist
+		add_to_array = { state_religion_array_num = 1.00 }
 	}
 
-	provinces={
+	provinces = {
 		4579 
 	}
-	manpower=21146
-	buildings_max_level_factor=1	
-	state_category="small_island"
+	manpower =21146
+	buildings_max_level_factor = 1	
+	state_category = "small_island"
 }

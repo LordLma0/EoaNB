@@ -358,6 +358,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_strategicair_mission_categories"
+		textureFile = "gfx/interface/strategicair/grouped_mission_types.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
 		name = "GFX_strategicair_mission_cancel"
 		textureFile = "gfx/interface/strategicair/mission_cancel.dds"
 	}
@@ -402,7 +408,7 @@ spriteTypes = {
 		colortwo = { 1.0 0.0 0.0 }
 		textureFile1 = "gfx/interface/strategicair/progress_good.dds"
 		textureFile2 = "gfx/interface/strategicair/progress_bad.dds"
-		size = {x=250 y=14}
+		size = { x = 250 y = 14 }
 		effectFile = "gfx/FX/progress.lua"
 		horizontal = yes
 	}
@@ -452,7 +458,7 @@ spriteTypes = {
 
 	LineChartType = {
 		name = "GFX_strategicair_linechart"
-		size = {x=224 y=150}
+		size = { x = 224 y = 150 }
 		linewidth = 1
 	}
 

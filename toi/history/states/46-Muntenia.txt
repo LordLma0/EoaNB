@@ -15,8 +15,8 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = ROM
 		1857.1.1 = {
-			owner = ROM
 			add_core_of = ROM
 
 			buildings = {
@@ -34,11 +34,11 @@ state = {
 			add_to_array = { state_culture_array = 99 } # Romanian
 			add_to_array = { state_culture_array_num = 0.991 }
 			add_to_array = { state_culture_array = 106 } # Turkish
-			add_to_array = { state_culture_array_num = 0.005  }
+			add_to_array = { state_culture_array_num = 0.005	}
 			add_to_array = { state_culture_array = 121 } # Ashkenazi
-			add_to_array = { state_culture_array_num = 0.002  }
+			add_to_array = { state_culture_array_num = 0.002	}
 			add_to_array = { state_culture_array = 101 } # Transylvanian
-			add_to_array = { state_culture_array_num = 0.002  }
+			add_to_array = { state_culture_array_num = 0.002	}
 
 			add_to_array = { state_religion_array = 1 } # Orthodox
 			add_to_array = { state_religion_array_num = 0.993 }
@@ -48,4 +48,5 @@ state = {
 			add_to_array = { state_religion_array_num = 0.002 }
 		}
 	}
+	local_supplies=0.0 
 }

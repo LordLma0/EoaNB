@@ -3,7 +3,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1885
 		folder = {
 			name = projects_folder
@@ -36,13 +36,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_lorentz_theory_of_electrons = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1895
 		folder = {
 			name = projects_folder
@@ -71,13 +72,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_theory_of_relativity = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1905
 		folder = {
 			name = projects_folder
@@ -106,13 +108,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	quantum_theory = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1900
 		folder = {
 			name = projects_folder
@@ -145,13 +148,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_photon_theory = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1905
 		folder = {
 			name = projects_folder
@@ -185,13 +189,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_rutherford_model = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1910
 		folder = {
 			name = projects_folder
@@ -228,13 +233,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_quantum_mechanics = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1920
 		folder = {
 			name = projects_folder
@@ -269,7 +275,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1925
 		folder = {
 			name = projects_folder
@@ -304,7 +310,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = projects_folder
@@ -339,7 +345,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1960
 		folder = {
 			name = projects_folder
@@ -374,7 +380,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1975
 		folder = {
 			name = projects_folder
@@ -405,7 +411,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1915
 		folder = {
 			name = projects_folder
@@ -434,13 +440,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_electron_wavefunction_theory = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1925
 		folder = {
 			name = projects_folder
@@ -469,13 +476,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_neutron = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1930
 		folder = {
 			name = projects_folder
@@ -504,13 +512,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	tech_projects_nuclear_fission = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = projects_folder
@@ -539,6 +548,8 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
+			nuclear
 		}
 	}
 	tech_projects_atomic_refineries = {
@@ -550,7 +561,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = projects_folder
@@ -579,13 +590,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear
 		}
 	}
 	tech_projects_atomic_bomb = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = projects_folder
@@ -616,13 +628,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear
 		}
 	}
 	tech_projects_hydrogen_bomb = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1950
 		folder = {
 			name = projects_folder
@@ -646,6 +659,7 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear
 		}
 	}
 	
@@ -653,7 +667,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1920
 		folder = {
 			name = projects_folder
@@ -681,6 +695,7 @@ technologies = {
 		
 		categories = {
 			project_tech
+			nuclear_particle_tech
 		}
 	}
 	
@@ -688,7 +703,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1950
 		folder = {
 			name = projects_folder
@@ -728,13 +743,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_launch_vechicle_designs = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1955
 		folder = {
 			name = projects_folder
@@ -763,13 +779,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_modular_design = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1960
 		folder = {
 			name = projects_folder
@@ -798,6 +815,7 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	
@@ -805,7 +823,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1955
 		folder = {
 			name = projects_folder
@@ -834,6 +852,7 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	
@@ -841,7 +860,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1955
 		folder = {
 			name = projects_folder
@@ -870,13 +889,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_space_suits = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1960
 		folder = {
 			name = projects_folder
@@ -905,13 +925,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_manned_orbital_vehicles = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1965
 		folder = {
 			name = projects_folder
@@ -946,13 +967,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_permanent_space_mission_planning = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1975
 		folder = {
 			name = projects_folder
@@ -981,13 +1003,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_permanent_space_station = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1985
 		folder = {
 			name = projects_folder
@@ -1016,13 +1039,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_space_habitats = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2015
 		folder = {
 			name = projects_folder
@@ -1051,13 +1075,14 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	tech_projects_planetary_colonisation = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2030
 		folder = {
 			name = projects_folder
@@ -1081,6 +1106,7 @@ technologies = {
 		
 		categories = {
 			project_tech
+			spaceflight_tech
 		}
 	}
 	
@@ -1106,7 +1132,7 @@ technologies = {
 			custom_effect_tooltip = eoanb_tt_technology_kiel_canal_preparations
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1880
 		folder = {
 			name = projects_folder
@@ -1142,7 +1168,7 @@ technologies = {
 			custom_effect_tooltip = eoanb_tt_technology_kiel_canal_section1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = projects_folder
@@ -1173,7 +1199,7 @@ technologies = {
 			custom_effect_tooltip = eoanb_tt_technology_kiel_canal_section2
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = projects_folder

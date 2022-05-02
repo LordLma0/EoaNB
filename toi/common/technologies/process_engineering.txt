@@ -9,7 +9,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -26,7 +26,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 0
@@ -77,7 +77,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = process_engineering_folder
@@ -94,7 +94,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -123,7 +123,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -135,7 +135,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -164,7 +164,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -176,7 +176,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -195,7 +195,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = process_engineering_folder
@@ -207,7 +207,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -221,7 +221,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -233,7 +233,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -260,7 +260,7 @@ technologies = {
 			internal_combustion_engine = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = process_engineering_folder
@@ -272,7 +272,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -296,7 +296,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -308,7 +308,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -332,7 +332,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -344,7 +344,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -368,7 +368,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = process_engineering_folder
@@ -380,7 +380,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -399,7 +399,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -411,7 +411,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -430,7 +430,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -442,7 +442,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -461,11 +461,15 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
 			position = { x = 16 y = 44 }
+		}
+		
+		dependencies={
+			tungsten_wire_production = 1
 		}
 		
 		ai_will_do = {
@@ -473,7 +477,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -492,7 +496,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -504,7 +508,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -523,7 +527,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = process_engineering_folder
@@ -538,7 +542,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -557,7 +561,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1995
 		folder = {
 			name = process_engineering_folder
@@ -569,7 +573,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -588,7 +592,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = process_engineering_folder
@@ -600,7 +604,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -619,7 +623,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = process_engineering_folder
@@ -631,7 +635,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -645,7 +649,7 @@ technologies = {
 		
 		local_resources_factor = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		folder = {
 			name = process_engineering_folder
@@ -661,7 +665,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -675,7 +679,7 @@ technologies = {
 		
 		local_resources_factor = 2.00
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2045
 		folder = {
 			name = process_engineering_folder
@@ -687,7 +691,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -711,7 +715,7 @@ technologies = {
 			tribal_steel_tools = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -728,12 +732,12 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 10
 				afr_is_tribal = yes
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 0
@@ -771,9 +775,9 @@ technologies = {
 	
 	early_oil_refining = {
 		
-		production_oil_factor = 0.05
+		fuel_gain_factor_from_states = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -815,7 +819,7 @@ technologies = {
 		
 		production_oil_factor = 0.1
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -832,7 +836,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -845,9 +849,9 @@ technologies = {
 	
 	oil_refinery_2 = {
 		
-		production_oil_factor = 0.1
+		fuel_gain_factor_from_states = 0.1
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = process_engineering_folder
@@ -864,7 +868,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -877,14 +881,14 @@ technologies = {
 	
 	oil_refinery_3 = {
 		
-		production_oil_factor = 0.1
+		fuel_gain_factor_from_states = 0.1
 		
 		path = {
 			leads_to_tech = oil_extraction
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -896,7 +900,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -920,7 +924,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -936,7 +940,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -955,7 +959,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1890
 		folder = {
 			name = process_engineering_folder
@@ -967,7 +971,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -986,7 +990,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -998,7 +1002,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1017,7 +1021,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -1029,7 +1033,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1048,7 +1052,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -1060,7 +1064,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1078,7 +1082,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -1095,7 +1099,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1112,7 +1116,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -1132,7 +1136,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1149,7 +1153,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -1165,7 +1169,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1182,7 +1186,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -1198,7 +1202,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1206,6 +1210,7 @@ technologies = {
 		categories = {
 			resource_extraction_tech
 			process_engineering_tech
+			synth_resources
 		}
 	}
 	bergius_process = {
@@ -1218,7 +1223,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1915
 		folder = {
 			name = process_engineering_folder
@@ -1234,7 +1239,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1242,13 +1247,14 @@ technologies = {
 		categories = {
 			resource_extraction_tech
 			process_engineering_tech
+			synth_resources
 		}
 	}
 	dubbs_process = {
 		
 		production_oil_factor = 0.1
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1915
 		folder = {
 			name = process_engineering_folder
@@ -1264,7 +1270,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1272,6 +1278,7 @@ technologies = {
 		categories = {
 			resource_extraction_tech
 			process_engineering_tech
+			synth_resources
 		}
 	}
 	
@@ -1282,7 +1289,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -1313,7 +1320,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1327,7 +1334,7 @@ technologies = {
 		
 		production_oil_factor = 0.15
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1935
 		folder = {
 			name = process_engineering_folder
@@ -1343,12 +1350,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1357,7 +1365,7 @@ technologies = {
 		
 		production_oil_factor = 0.15
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -1373,12 +1381,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1387,7 +1396,7 @@ technologies = {
 		
 		production_oil_factor = 0.15
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -1403,7 +1412,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1411,6 +1420,7 @@ technologies = {
 		categories = {
 			resource_extraction_tech
 			process_engineering_tech
+			synth_resources
 		}
 	}
 	rubber_processing = {
@@ -1420,7 +1430,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1935
 		folder = {
 			name = process_engineering_folder
@@ -1436,12 +1446,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1456,7 +1467,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -1472,12 +1483,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1492,7 +1504,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -1508,12 +1520,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1525,7 +1538,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1955
 		folder = {
 			name = process_engineering_folder
@@ -1541,12 +1554,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1565,7 +1579,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1965
 		folder = {
 			name = process_engineering_folder
@@ -1577,12 +1591,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1595,7 +1610,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = process_engineering_folder
@@ -1612,7 +1627,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1626,7 +1641,7 @@ technologies = {
 		
 		fuel_gain_factor = 0.15
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = process_engineering_folder
@@ -1643,7 +1658,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1657,7 +1672,7 @@ technologies = {
 		
 		production_oil_factor = 0.1
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -1674,7 +1689,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1691,7 +1706,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -1708,7 +1723,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1726,7 +1741,7 @@ technologies = {
 		}
 		production_oil_factor = 0.25
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1965
 		folder = {
 			name = process_engineering_folder
@@ -1743,7 +1758,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1760,7 +1775,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1975
 		folder = {
 			name = process_engineering_folder
@@ -1781,7 +1796,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1798,7 +1813,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1990
 		folder = {
 			name = process_engineering_folder
@@ -1815,7 +1830,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1830,7 +1845,7 @@ technologies = {
 		fuel_gain_factor = 0.15
 		production_oil_factor = 0.1
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1995
 		folder = {
 			name = process_engineering_folder
@@ -1847,7 +1862,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1864,7 +1879,7 @@ technologies = {
 			level = 5
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2000
 		folder = {
 			name = process_engineering_folder
@@ -1881,7 +1896,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1896,7 +1911,7 @@ technologies = {
 		fuel_gain_factor = 0.2
 		fuel_gain_factor_from_states = 0.2
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2010
 		folder = {
 			name = process_engineering_folder
@@ -1913,7 +1928,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1928,7 +1943,7 @@ technologies = {
 		fuel_gain_factor = 0.5
 		fuel_gain_factor_from_states = 0.2
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2010
 		folder = {
 			name = process_engineering_folder
@@ -1940,7 +1955,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -1955,7 +1970,7 @@ technologies = {
 		
 		production_oil_factor = 0.33
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1985
 		folder = {
 			name = process_engineering_folder
@@ -1974,12 +1989,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -1988,7 +2004,7 @@ technologies = {
 		
 		production_oil_factor = 0.66
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 2035
 		folder = {
 			name = process_engineering_folder
@@ -2003,12 +2019,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
 		
 		categories = {
+			synth_resources
 			resource_extraction_tech
 			process_engineering_tech
 		}
@@ -2018,7 +2035,7 @@ technologies = {
 		
 		research_speed_factor = 0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2040,26 +2057,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 1000
+				add = 10
 				TAG = TAI
 			}
 			modifier = {
-				factor = 10000
+				factor = 10
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
 			}
 			modifier = {
-				factor = 1
-				date > 1850.1.1
-			}
-			modifier = {
-				factor = 100
+				factor = 10
 				afr_is_tribal = yes
-				date > 1850.1.1
 			}
 			
 		}
@@ -2074,7 +2086,7 @@ technologies = {
 		
 		production_factory_max_efficiency_factor = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2091,18 +2103,14 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 10000
+				add = 100
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
 				date > 1860.1.1
-			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
 			}
 			modifier = {
 				factor = 0
@@ -2152,7 +2160,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2165,18 +2173,14 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 10000
+				add = 100
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
 				date > 1860.1.1
-			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
 			}
 			modifier = {
 				factor = 0
@@ -2202,7 +2206,7 @@ technologies = {
 		
 		line_change_production_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2215,18 +2219,14 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 10000
+				add = 100
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
 				date > 1860.1.1
-			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
 			}
 			modifier = {
 				factor = 0
@@ -2253,7 +2253,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2270,17 +2270,13 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 10000
+				add = 100
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
-			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
 			}
 			modifier = {
 				factor = 0
@@ -2311,7 +2307,7 @@ technologies = {
 			modifier = {
 				factor = 30
 				afr_is_tribal = yes
-				date > 1867.1.1
+				date > "1867.1.1"
 			}
 			
 		}
@@ -2328,7 +2324,7 @@ technologies = {
 		production_factory_efficiency_gain_factor = 0.05
 		global_building_slots_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2341,17 +2337,13 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 10000
+				add = 10
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
-			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
 			}
 			modifier = {
 				factor = 0
@@ -2379,7 +2371,7 @@ technologies = {
 		navy_screen_defence_factor = 0.05
 		army_defence_factor = 0.02
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2392,22 +2384,18 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 10000
+				add = 10
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
-				date > 1860.1.1
+				date > "1860.1.1"
 			}
 			modifier = {
-				factor = 1000
+				factor = 10
 				TAG = TAI
-			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
 			}
 			modifier = {
 				factor = 0
@@ -2436,7 +2424,7 @@ technologies = {
 				}
 			}
 			modifier = {
-				factor = 45
+				factor = 4.5
 				afr_is_tribal = yes
 				date > 1865.1.1
 			}
@@ -2453,11 +2441,29 @@ technologies = {
 	
 		production_factory_efficiency_gain_factor = 0.05
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1855
 		folder = {
 			name = process_engineering_folder
 			position = { x = 4 y = 4 }
+		}
+		
+		on_research_complete = {
+			if={
+				limit={
+					check_variable = {ROOT.innovation_progress < 100}
+					OR = { 
+						has_idea = afr_reforming_kingdom
+						has_country_flag = Oceania_industrializing
+						has_country_flag = afr_colony_industrializing
+						has_country_flag = afr_an_african_industrializing
+					}
+				}
+				custom_effect_tooltip = eoanb_tech_add_industrialisation
+				hidden_effect = {
+					add_to_variable = { ROOT.innovation_progress = 5 }
+				}
+			}
 		}
 		
 		dependencies = {
@@ -2472,18 +2478,14 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5
 			modifier = {
-				factor = 10000
+				add = 100
 				OR = {
 					has_country_flag = Oceania_industrializing
 					has_idea = afr_reforming_kingdom
 				}
 				date > 1860.1.1
-			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
 			}
 			modifier = {
 				factor = 0
@@ -2492,7 +2494,7 @@ technologies = {
 				date < 1880.1.1
 			}
 			modifier = {
-				factor = 80
+				factor = 8.0
 				afr_is_tribal = yes
 				date > 1880.1.1
 			}
@@ -2515,7 +2517,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = process_engineering_folder
@@ -2532,7 +2534,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -2547,7 +2549,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1865
 		folder = {
 			name = process_engineering_folder
@@ -2580,7 +2582,6 @@ technologies = {
 				factor = 0
 				date < 1865.1.1
 			}
-			
 		}
 		
 		categories = {
@@ -2594,7 +2595,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		industrial_capacity_factory = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = process_engineering_folder
@@ -2621,12 +2622,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 30
 				afr_is_tribal = yes
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 0
@@ -2668,7 +2669,7 @@ technologies = {
 		production_factory_efficiency_gain_factor = 0.05
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = process_engineering_folder
@@ -2685,7 +2686,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -2701,7 +2702,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05
 		production_factory_efficiency_gain_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -2733,7 +2734,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -2770,7 +2771,7 @@ technologies = {
 		global_building_slots_factor = 0.025
 		production_speed_buildings_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = process_engineering_folder
@@ -2807,7 +2808,7 @@ technologies = {
 			custom_effect_tooltip = ALUMINIUM_UNLOCKED
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -2835,7 +2836,7 @@ technologies = {
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder
@@ -2871,7 +2872,7 @@ technologies = {
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -2903,7 +2904,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = process_engineering_folder
@@ -2940,7 +2941,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = process_engineering_folder
@@ -2975,7 +2976,7 @@ technologies = {
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -3009,7 +3010,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = process_engineering_folder
@@ -3040,7 +3041,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = process_engineering_folder
@@ -3078,7 +3079,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -3104,7 +3105,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1944
 		folder = {
 			name = process_engineering_folder
@@ -3116,7 +3117,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3135,7 +3136,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = process_engineering_folder
@@ -3173,7 +3174,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -3185,7 +3186,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3199,7 +3200,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -3233,7 +3234,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = process_engineering_folder
@@ -3271,7 +3272,7 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = process_engineering_folder
@@ -3287,7 +3288,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3305,7 +3306,7 @@ technologies = {
 		}
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = process_engineering_folder
@@ -3325,7 +3326,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3343,7 +3344,7 @@ technologies = {
 		}
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1985
 		folder = {
 			name = process_engineering_folder
@@ -3363,7 +3364,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3378,7 +3379,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = process_engineering_folder
@@ -3394,7 +3395,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3409,7 +3410,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = process_engineering_folder
@@ -3425,7 +3426,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3440,7 +3441,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = process_engineering_folder
@@ -3456,7 +3457,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3471,7 +3472,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = process_engineering_folder
@@ -3491,7 +3492,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3506,7 +3507,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = process_engineering_folder
@@ -3522,7 +3523,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3537,7 +3538,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = process_engineering_folder
@@ -3553,7 +3554,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3568,7 +3569,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = process_engineering_folder
@@ -3584,7 +3585,7 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > 1850.1.1
+ 
 			}
 			
 		}
@@ -3601,7 +3602,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = process_engineering_folder
@@ -3646,7 +3647,7 @@ technologies = {
 		
 		local_resources_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
@@ -3696,7 +3697,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = process_engineering_folder

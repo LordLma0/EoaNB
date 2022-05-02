@@ -1,12 +1,14 @@
 
-state={
-	id=677
-	name="STATE_677"
+state = {
+	id =677
+	name = "STATE_677"
+
+	local_supplies=0.0 
 	manpower = 545219
 	
 	state_category = town
 	
-	history={
+	history = {
 		owner = OTO
 		victory_points = {
 			12473 3
@@ -17,7 +19,7 @@ state={
 		add_core_of = OTO 
 		
 		add_to_array = { state_culture_array = 159 }
-		add_to_array = { state_culture_array_num = 0.76 }
+		add_to_array = { state_culture_array_num = 0.75 }
 		add_to_array = { state_culture_array = 172 }
 		add_to_array = { state_culture_array_num = 0.10 }
 		add_to_array = { state_culture_array = 141 }
@@ -39,7 +41,7 @@ state={
 	}
 
 	
-	provinces={
+	provinces = {
 		1056 1072 1088 7140 7671 10087 12473 
 	}
 }

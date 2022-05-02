@@ -1,38 +1,13 @@
 ideas = {
 	country = {
 		QNG_idea_arrow_incident = {
-			allowed = {
-				original_tag = QNG
-			}
-			
-			removal_cost = -1
-			
 			picture = ast_volunteer_defence_corps
 			
 			modifier = {
 				opinion_gain_monthly_factor = -0.25
 			}
 		}
-		QNG_idea_sow_humiliation = {
-			allowed = {
-				original_tag = QNG
-			}
-			
-			removal_cost = -1
-			
-			picture = ast_volunteer_defence_corps
-			
-			modifier = {
-				political_power_factor = -0.25
-			}
-		}
 		QNG_idea_TAI_defense = {
-			allowed = {
-				original_tag = TAI
-			}
-			
-			removal_cost = -1
-			
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
@@ -41,12 +16,6 @@ ideas = {
 			}
 		}
 		QNG_idea_TAI_shi_dakai = {
-			allowed = {
-				original_tag = TAI
-			}
-			
-			removal_cost = -1
-			
 			picture = shi_dakais_offensive
 			
 			modifier = {
@@ -58,12 +27,6 @@ ideas = {
 			}
 		}
 		QNG_idea_TAI_shi_dakai_2 = {
-			allowed = {
-				original_tag = TAI
-			}
-			
-			removal_cost = -1
-			
 			picture = shi_dakais_offensive
 			
 			modifier = {
@@ -75,12 +38,6 @@ ideas = {
 			}
 		}
 		QNG_idea_TAI_shi_dakai_3 = {
-			allowed = {
-				original_tag = TAI
-			}
-			
-			removal_cost = -1
-			
 			picture = shi_dakais_offensive
 			
 			modifier = {
@@ -91,12 +48,6 @@ ideas = {
 			}
 		}
 		QNG_idea_TAI_tianjing_incident = {
-			allowed = {
-				original_tag = TAI
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_incompetent_officers
 			
 			modifier = {
@@ -105,19 +56,11 @@ ideas = {
 			}
 		}
 		QNG_rebel_uprising= {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = generic_intel_bonus
 			
 			modifier = {
 				surrender_limit = 1.00
 				no_supply_grace = 220
-				out_of_supply_factor = -0.5
-				supply_consumption_factor = -0.15
 			}
 			targeted_modifier = { 
 				tag = QNG
@@ -126,33 +69,18 @@ ideas = {
 			}
 		}
 		QNG_rebel_uprising_lost= {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = generic_intel_bonus
 			
 			modifier = {
-				surrender_limit = 0.70
 				no_supply_grace = 220
-				out_of_supply_factor = -0.5
-				supply_consumption_factor = -0.15
 			}
 			targeted_modifier = { 
 				tag = QNG
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.08
+				defense_bonus_against = 0.05
 			}
 		}
 		QNG_idea_banner_armies = {
-			allowed = {
-				original_tag = QNG
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_banner_system
 			
 			modifier = {
@@ -162,12 +90,6 @@ ideas = {
 			}
 		}
 		QNG_idea_nian_cavalry = {
-			allowed = {
-				original_tag = NIE
-			}
-			
-			removal_cost = -1
-			
 			picture = FRA_national_mobilization_focus
 			
 			modifier = {
@@ -176,12 +98,6 @@ ideas = {
 			}
 		}
 		CHI_idea_new_mandate = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_war_of_resistance3
 			
 			modifier = {
@@ -192,12 +108,6 @@ ideas = {
 			}
 		}
 		CHI_idea_new_mandate_2 = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_war_of_resistance2
 			
 			modifier = {
@@ -208,12 +118,6 @@ ideas = {
 			}
 		}
 		CHI_idea_new_mandate_3 = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_war_of_resistance1
 			
 			modifier = {
@@ -224,12 +128,6 @@ ideas = {
 			}
 		}
 		CHI_idea_new_mandate_4 = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_chinese_unity
 			
 			modifier = {
@@ -237,12 +135,6 @@ ideas = {
 			}
 		}
 		CHI_idea_new_mandate_d1 = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_war_of_resistance1
 			
 			modifier = {
@@ -253,12 +145,6 @@ ideas = {
 			}
 		}
 		CHI_idea_new_mandate_d2 = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_chinese_unity
 			
 			modifier = {
@@ -266,12 +152,6 @@ ideas = {
 			}
 		}
 		CHI_idea_insufficient_army = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = FRA_national_mobilization_focus
 			
 			modifier = {
@@ -280,12 +160,6 @@ ideas = {
 			}
 		}
 		CHI_idea_insufficient_army_2 = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = FRA_national_mobilization_focus
 			
 			modifier = {
@@ -294,12 +168,6 @@ ideas = {
 			}
 		}
 		CHI_idea_paying_tribute = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = chi_chinese_unity
 			
 			modifier = {
@@ -307,12 +175,6 @@ ideas = {
 			}
 		}
 		CHI_idea_military_bureau = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = generic_war_preparation
 			
 			modifier = {
@@ -320,14 +182,7 @@ ideas = {
 				army_org_factor = 0.02
 			}
 		}
-		
 		CHI_idea_settling_internal_affairs = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = generic_political_support
 			
 			modifier = {
@@ -336,12 +191,6 @@ ideas = {
 			}
 		}
 		CHI_idea_settling_foreign_affairs = {
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
 			picture = generic_flexible_foreign_policy2
 			
 			modifier = {
@@ -349,19 +198,164 @@ ideas = {
 				min_export = -0.05
 			}
 		}
+		MNG_idea_chosen_men = {
+			picture = generic_flexible_foreign_policy2
+			
+			modifier = {
+				political_power_gain = -0.1
+				research_speed_factor = 0.1
+			}
+		}
+		MNG_idea_chosen_men_2 = {
+			picture = generic_flexible_foreign_policy2
+			
+			modifier = {
+				political_power_gain = -0.1
+				research_speed_factor = 0.1
+				local_manpower = 0.2
+			}
+		}
+		CHI_idea_of_factories = {
+			picture = BAD_rise_of_industry
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		CHI_xinghai_rebellion= {
+			picture = generic_intel_bonus
+			
+			modifier = {
+				surrender_limit = 1.00
+				no_supply_grace = 1020
+				out_of_supply_factor = -0.5
+				supply_consumption_factor = -0.15
+			}
+			targeted_modifier = { 
+				tag = QNG
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.22
+			}
+		}
+		CHI_idea_infratructure_development = {
+			picture = generic_build_infrastructure
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		CHI_idea_tongwen_guan = {
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		CHI_idea_unequal_treaties = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+				min_export = 0.1
+			}
+		}
+		CHI_idea_tianjin_treaty = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_factor = -0.1
+			}
+		}
+		CHI_idea_tianjin_treaty_euro = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		CHI_idea_army_defeated = {
+			picture = generic_political_support
+			
+			modifier = {
+				army_morale_factor = -0.15
+				army_org_factor = -0.15
+				max_planning_factor = -0.15
+				planning_speed = -0.15
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+			}
+		}
+		CHI_idea_army_destroyed = {
+			picture = generic_political_support
+			
+			modifier = {
+				army_morale_factor = -0.3
+				army_org_factor = -0.3
+				max_planning_factor = -0.3
+				planning_speed = -0.3
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+			}
+		}
+		CHI_idea_bejing_convention = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		CHI_idea_bejing_convention_euro = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
+		CHI_idea_summer_palace_burned = {
+			picture = generic_political_support
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+		CHI_idea_summer_palace_burned_euro = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
 	}
 	materiel_manufacturer = {
-	
 		TAI_infantry_equipment_manufacturer = {
 			
 			picture = generic_infantry_equipment_manufacturer_2
 
 			allowed = {
-				tag = TAI
+				original_tag = TAI
 			}
-			
+			visible = {
+				has_completed_focus = CHI_rse_TAI_obtain_arms_makers
+			}
+
+			equipment_bonus={
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+			}
 			cost = 150
-			removal_cost = -1
+			removal_cost = 10
 			
 			traits = { infantry_equipment_manufacturer }
 		}

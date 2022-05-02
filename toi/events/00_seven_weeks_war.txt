@@ -151,17 +151,22 @@ country_event = {
 	id = sevenweekswar.6
 	title = sevenweekswar.6.t
 	desc = sevenweekswar.6.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	trigger = {
+		has_idea = egy_vic_debt
+		check_variable = { debt_level > 15 }
+	}
 	
 	timeout_days = 2
 	
 	option = {
 		name = sevenweekswar.6.a
 		ai_chance = { base = 100 }
-		add_timed_idea = { idea = AUS_idea_financial_crisis  days = 365 }
+		add_political_power = -75
 		hidden_effect = {
 			AUS = { country_event = { days = 21 id = sevenweekswar.8 } }
 		}
@@ -805,7 +810,7 @@ country_event = {
 	id = sevenweekswar.29
 	title = sevenweekswar.29.t
 	desc = sevenweekswar.29.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -838,7 +843,7 @@ country_event = {
 	id = sevenweekswar.30
 	title = sevenweekswar.30.t
 	desc = sevenweekswar.30.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1094,7 +1099,7 @@ country_event = {
 	id = sevenweekswar.40
 	title = sevenweekswar.40.t
 	desc = sevenweekswar.40.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1104,8 +1109,8 @@ country_event = {
 		ai_chance = { base = 90 }
 		custom_effect_tooltip = AUS_FRA_convention_1866_2
 		add_political_power = 25
-		add_opinion_modifier = { target = FRA modifier = AUS_FRA_ARRANGEMENTS_REL }
-		reverse_add_opinion_modifier = { target = FRA modifier = AUS_FRA_ARRANGEMENTS_REL }
+		add_opinion_modifier = { target = FRA modifier = AUS_POL_ARRANGEMENTS_REL }
+		reverse_add_opinion_modifier = { target = FRA modifier = AUS_POL_ARRANGEMENTS_REL }
 		FRA = { country_event = { days = 1 id = sevenweekswar.42 } }
 		hidden_effect = {
 			AUS = { set_country_flag = AUS_FRA_convention_1866_signed }
@@ -1131,7 +1136,7 @@ country_event = {
 	id = sevenweekswar.41
 	title = sevenweekswar.41.t
 	desc = sevenweekswar.41.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1149,7 +1154,7 @@ country_event = {
 	id = sevenweekswar.42
 	title = sevenweekswar.42.t
 	desc = sevenweekswar.42.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1169,7 +1174,7 @@ country_event = {
 	id = sevenweekswar.43
 	title = sevenweekswar.43.t
 	desc = sevenweekswar.43.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1293,6 +1298,12 @@ country_event = {
 			}
 			PRS = { country_event = { id = sevenweekswar.47 } }
 		}
+		if = {
+			limit = {
+				tag = SAX
+			}
+			complete_national_focus = SAX_focus_conflict_in_german_confederation
+		}
 	}
 }
 
@@ -1302,6 +1313,31 @@ country_event = {
 	title = sevenweekswar.47.t
 	desc = sevenweekswar.47.d
 	picture = GFX_event_german_confederation_inner_circle
+	
+	immediate = {
+		hidden_effect = {
+			AUS = {
+				if = {
+					limit = {
+						has_idea = GEC_idea_polizeiverein_leader_1
+					}
+					remove_ideas = GEC_idea_polizeiverein_leader_1
+				}
+				else_if = {
+					limit = {
+						has_idea = GEC_idea_polizeiverein_leader_2
+					}
+					remove_ideas = GEC_idea_polizeiverein_leader_2
+				}
+			}
+			PRS = { remove_ideas = GEC_idea_polizeiverein_leader_1 }
+			BAD = { remove_ideas = GEC_idea_polizeiverein_member }
+			BAV = { remove_ideas = GEC_idea_polizeiverein_member }
+			HAN = { remove_ideas = GEC_idea_polizeiverein_member }
+			SAX = { remove_ideas = GEC_idea_polizeiverein_member }
+			WUR = { remove_ideas = GEC_idea_polizeiverein_member }
+		}
+	}
 	
 	timeout_days = 2
 	
@@ -1743,6 +1779,8 @@ country_event = {
 		add_stability = -0.15
 		add_war_support = -0.5
 		custom_effect_tooltip = AUS_german_war_sue_for_peace
+		custom_effect_tooltip = AUS_increase_hungarian_nationalism_by_two_tt
+		custom_effect_tooltip = AUS_increase_west_slavic_nationalism_by_one_tt
 		hidden_effect = {
 			white_peace = PRS
 			white_peace = ITA
@@ -1754,12 +1792,22 @@ country_event = {
 				remove_ideas = PRS_idea_weakened_sww
                 add_to_variable = {
                     var = HUN_REVOLT_RISK
-                    value = 2  
+                    value = 0.02
                 }
+				clamp_variable = {
+					var = HUN_REVOLT_RISK
+					min = 0
+					max = 1
+				}
                 add_to_variable = {
-                    var = SLA_REVOLT_RISK
-                    value = 1 
+                    var = CZE_REVOLT_RISK
+                    value = 0.01
                 }
+				clamp_variable = {
+					var = CZE_REVOLT_RISK
+					min = 0
+					max = 1
+				}
 			}
 			PRS = { country_event = { id = sevenweekswar.60 } }
 			every_other_country = {
@@ -1856,6 +1904,7 @@ country_event = {
 		add_stability = -0.15
 		add_war_support = -0.5
 		custom_effect_tooltip = PRS_german_war_sue_for_peace
+		custom_effect_tooltip = PRS_disband_mobilized_divisions_7WW_effect_tt
 		hidden_effect = {
 			white_peace = AUS
 			ITA = { white_peace = AUS }
@@ -1867,6 +1916,80 @@ country_event = {
 			PRS = { if = { limit = { has_idea = hidden_idea_historical_PRS_victory } remove_ideas = hidden_idea_historical_PRS_victory } }
 			PRS = { if = { limit = { has_idea = PRS_war_preparations_5 } remove_ideas = PRS_war_preparations_5 } }
 			PRS = { if = { limit = { has_idea = PRS_war_preparations_6 } remove_ideas = PRS_war_preparations_6 } }
+			PRS = {
+				if = {
+					limit = {
+						has_template = "Landsturm-Regiment"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Landsturm-Regiment"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Infanterie-Division (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Infanterie-Division (mob.)"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Landwehr-Regiment (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Landwehr-Regiment (mob.)"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Füsilier-Regiment (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Füsilier-Regiment (mob.)"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Husaren-Regiment (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Husaren-Regiment (mob.)"
+					}
+				}
+				set_division_template_lock = {
+					division_template = "Gardeinfanterie-Division"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Infanterie-Division"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Landwehr-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Füsilier-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Dragoner-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Husaren-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Kürassier-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Ulanen-Regiment"
+					is_locked = no
+				}
+			}
 			AUS = { country_event = { id = sevenweekswar.63 } }
 			every_other_country = {
 				limit = {
@@ -2076,6 +2199,13 @@ country_event = {
 		custom_effect_tooltip = PRS_ngc_alliance_treaties
 		hidden_effect = {
 			PRS = { annex_country = { target = ROOT transfer_troops = yes } }
+			if = {
+				limit = {
+					tag = SAX
+					950 = { is_claimed_by = SAX }
+				}
+				950 = { remove_claim_by = SAX }
+			}
 		}
 	}
 }
@@ -2157,6 +2287,7 @@ country_event = {
 		custom_effect_tooltip = AUS_prague_peace_treaty_effect_tt
 		hidden_effect = {
 			AUS = { set_variable = { rival_country = OTO.id } }
+			AUS = { country_event = { days = 120 id = austria.2001 } }
 		}
 	}
 }
@@ -2195,9 +2326,50 @@ country_event = {
 				add_state_core = 1060
 				add_state_core = 745
 			}
-			SAX = { 
-				transfer_state = 950
-				add_state_core = 950
+			if = {
+				limit = {
+					OR = {
+						950 = { is_claimed_by = SAX }
+						SAX = { has_country_flag = eoanb_flag_AUS_ally_sww }
+					}
+				}
+				SAX = { 
+					transfer_state = 950
+					add_state_core = 950
+				}
+			}
+			if = {
+				limit = {
+					SCH = { exists = no }
+					PRS = {
+						owns_state = 58
+						owns_state = 949
+						owns_state = 1032
+					}
+				}
+				SCH = {
+					transfer_state = 58
+					transfer_state = 949
+					transfer_state = 1032
+					give_military_access = AUS
+					load_oob = "SCH_free_GC_member"
+					set_politics = { ruling_party = autocracy }
+					set_party_name = { ideology = autocracy name = SCH_autocracy_party_augustenburg }
+					SCH_friedrich_von_augustenburg = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								expire = "1950.1.1"
+								desc = "POLITICS_GENERIC_EOANB_DESC"
+								ideology = constit_monarch
+								traits = {
+									#
+								}
+							}
+						}
+					}
+					country_event = { days = 14 id = secschwar.54 }
+				}
 			}
 			AUS = { set_country_flag = AUS_flag_won_sww }
 			PRS = { country_event = { id = sevenweekswar.74 } }
@@ -2495,6 +2667,14 @@ country_event = {
 				clr_country_flag = PRS_ITA_alliance_1866_5
 				clr_country_flag = PRS_ITA_alliance_1866_6
 			}
+			AUS = {
+				remove_dynamic_modifier = { modifier = AUS_Italian_Unrest_Modifier }
+				clear_variable = AUS_ITA_Unrest_ppf
+				clear_variable = AUS_ITA_Unrest_ddf
+				clear_variable = AUS_ITA_Unrest_sf
+				clear_variable = AUS_ITA_Unrest_risk_change
+				clear_variable = ITA_UPROAR_RISK
+			}
 		}
 	}
 }
@@ -2521,8 +2701,86 @@ country_event = {
 		add_political_power = -50
 		add_stability = -0.1
 		add_war_support = -0.5
-		hidden_effect = {
-			PRS = { country_event = { days = 5 id = sevenweekswar.88 } }
+		if = {
+			limit = {
+				tag = PRS
+			}
+			custom_effect_tooltip = PRS_disband_mobilized_divisions_7WW_effect_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_template = "Landsturm-Regiment"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Landsturm-Regiment"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Infanterie-Division (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Infanterie-Division (mob.)"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Landwehr-Regiment (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Landwehr-Regiment (mob.)"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Füsilier-Regiment (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Füsilier-Regiment (mob.)"
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Husaren-Regiment (mob.)"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Husaren-Regiment (mob.)"
+					}
+				}
+				set_division_template_lock = {
+					division_template = "Gardeinfanterie-Division"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Infanterie-Division"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Landwehr-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Füsilier-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Dragoner-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Husaren-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Kürassier-Regiment"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "Ulanen-Regiment"
+					is_locked = no
+				}
+				PRS = { country_event = { days = 5 id = sevenweekswar.88 } }
+			}
 		}
 	}
 }
@@ -2580,7 +2838,7 @@ country_event = {
 	id = sevenweekswar.89
 	title = sevenweekswar.89.t
 	desc = sevenweekswar.89.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2686,7 +2944,7 @@ country_event = {
 	id = sevenweekswar.94
 	title = sevenweekswar.94.t
 	desc = sevenweekswar.94.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2734,7 +2992,7 @@ country_event = {
 	id = sevenweekswar.96
 	title = sevenweekswar.96.t
 	desc = sevenweekswar.96.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3236,15 +3494,15 @@ country_event = {
 country_event = {
 	id = sevenweekswar.115
 	title = sevenweekswar.115.t
-	desc =  {
+	desc = {
 		trigger = { has_global_flag = PRS_propose_smaller_Germany_flag }
 		text = sevenweekswar.115.d_smaller_Germany
 	}
-	desc =  {
+	desc = {
 		trigger = { has_global_flag = PRS_propose_greater_Germany_flag }
 		text = sevenweekswar.115.d_greater_Germany
 	}
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes

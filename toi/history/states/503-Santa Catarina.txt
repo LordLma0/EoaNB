@@ -1,7 +1,9 @@
-state={
-	id=503
-	name="STATE_503"
+state = {
+	id =503
+	name = "STATE_503"
 	manpower = 137112
+
+	local_supplies=0.0 
 	
 	state_category = pastoral
 
@@ -9,7 +11,7 @@ state={
 		cotton = 5
 	}
 
-	history={
+	history = {
 		owner = BRA
 		buildings = {
 			infrastructure = 3
@@ -33,7 +35,7 @@ state={
 		wood = 3
 	}
 
-	provinces={
+	provinces = {
 		1529 4533 4548 10405 14015 14022 14023 14052 14053 
 	}
 }

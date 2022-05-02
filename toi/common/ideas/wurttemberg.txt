@@ -141,7 +141,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = unemployment
+			picture = unemployment_2
 			
 			modifier = {
 				local_resources_factor = -0.15
@@ -160,7 +160,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = unemployment
+			picture = unemployment_1
 			
 			modifier = {
 				local_resources_factor = -0.05
@@ -758,173 +758,13 @@ ideas = {
 			}
 		}
 	}
-	
-	political_advisor = {
-		WUR_advisor_friedrich_von_roemer = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			available = { has_completed_focus = WUR_friedrich_von_roemer }
-			
-			visible = { has_completed_focus = WUR_friedrich_von_roemer }
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-				}
-			}
-		
-			traits = { 
-				administrative_genius
-			}
-		}
-		
-		WUR_advisor_karl_von_varnbueler = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			available = { has_completed_focus = WUR_karl_von_varnbueler }
-			
-			visible = { has_completed_focus = WUR_karl_von_varnbueler }
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-					has_government = autocracy
-					has_government = traditional_conservatism
-				}
-			}
-		
-			traits = { 
-				tax_collector
-			}
-		}
-		
-		WUR_advisor_joseph_von_linden = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			available = { has_completed_focus = WUR_joseph_von_linden }
-			
-			visible = { has_completed_focus = WUR_joseph_von_linden }
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-					has_government = autocracy
-					has_government = traditional_conservatism
-				}
-			}
-		
-			traits = { 
-				efficient_administrator
-			}
-		}
-		
-		WUR_advisor_johannes_von_kuhn = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-					has_government = autocracy
-					has_government = traditional_conservatism
-				}
-			}
-		
-			traits = { 
-				influencial_writer
-			}
-		}
-		
-		WUR_advisor_theodor_von_gessler = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-					has_government = autocracy
-					has_government = traditional_conservatism
-				}
-			}
-		
-			traits = { 
-				influencial_writer
-			}
-		}
-		
-		WUR_advisor_fidel_von_baur_breitenfeld = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-					has_government = autocracy
-					has_government = traditional_conservatism
-				}
-			}
-		
-			traits = { 
-				eoanb_trait_military_leader
-			}
-		}
-		
-		WUR_advisor_adolph_gottlieb_ferdinand_schoder = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			available = { has_completed_focus = WUR_aftermath_of_the_rumpfparlament }
-			
-			visible = { has_completed_focus = WUR_aftermath_of_the_rumpfparlament }
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-					has_government = autocracy
-					has_government = traditional_conservatism
-				}
-			}
-		
-			traits = { 
-				controversial_figure
-			}
-		}
-		
-		WUR_advisor_gottlob_tafel = {
-			allowed = {
-				original_tag = WUR
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = centrism
-					has_government = autocracy
-					has_government = traditional_conservatism
-				}
-			}
-		
-			traits = { 
-				friend_of_capitalism
-			}
-		}
-	}
    
     materiel_manufacturer = {
 		
 		designer = yes
 		
-		WUR_gewehrfabrik = {
-
+		wurttembergische_gewehrfabrik = {
+			
 			allowed = {
 				original_tag = WUR
 			}
@@ -933,14 +773,14 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = -0.10
+				infantry_weapons = 0.1
 			}
 
-			traits = { infantry_equipment_manufacturer_1 } 
+			traits = { infantry_equipment_manufacturer_1 }
 			
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.05		
+					build_cost_ic = -0.05
 		        }
 	        }
 		}
@@ -948,7 +788,30 @@ ideas = {
 	
 	industrial_concern = {
 		
-		WUR_wurttembergische_cattunmanufaktur  = {
+		WUR_maschinenfabrik_esslingen = {
+
+            picture = idea_WUR_maschinenfabrik_esslingen
+
+			allowed = {
+				original_tag = WUR
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			modifier = {
+			    production_speed_machine_parts_factory_factor = 0.1
+		    }
+
+			research_bonus = {
+				mechanical_engineering_tech = 0.04
+				process_engineering_tech = 0.04
+			}
+
+			traits = { industrial_concern_1 }
+		}
+		
+		WUR_wurttembergische_cattunmanufaktur = {
 
             picture = idea_WUR_wurttembergische_cattunmanufaktur
 
@@ -960,11 +823,11 @@ ideas = {
 			removal_cost = 10
 			
 			modifier = {
-			    production_speed_fabric_weavery_factor = 0.05
+			    production_speed_fabric_weavery_factor = 0.1
 		    }
 
 			research_bonus = {
-				mechanical_engineering_tech = 0.10
+				mechanical_engineering_tech = 0.05
 			}
 
 			traits = { industrial_concern_1 }
@@ -972,6 +835,8 @@ ideas = {
 		
 		WUR_c_deffner = {
 
+			picture = idea_WUR_c_deffner
+			
 			allowed = {
 				original_tag = WUR
 			}
@@ -980,7 +845,7 @@ ideas = {
 			removal_cost = 10
 
             modifier = {
-			    production_speed_steel_mill_factor = 0.05
+			    production_speed_steel_mill_factor = 0.1
 		    }
 
 			research_bonus = {
@@ -992,22 +857,8 @@ ideas = {
 		
 		WUR_konigliche_huttenwerk_wasseralfingen = {
 
-			allowed = {
-				original_tag = WUR
-			}
+			picture = idea_WUR_konigliche_huttenwerk_wasseralfingen
 			
-			cost = 150
-			removal_cost = 10
-
-			research_bonus = {
-				process_engineering_tech = 0.10
-			}
-
-			traits = { electronics_concern_2 }
-		}
-		
-		WUR_tiefer_stollen_bergwerk  = {
-
 			allowed = {
 				original_tag = WUR
 			}
@@ -1016,31 +867,36 @@ ideas = {
 			removal_cost = 10
 			
 			modifier = {
-			    production_speed_coal_mine_factor = 0.05
+			    production_speed_steel_mill_factor = 0.1
 		    }
 
 			research_bonus = {
-				resource_extraction_tech = 0.10
+				process_engineering_tech = 0.05
 			}
 
 			traits = { industrial_concern_1 }
 		}
-	}
-	
-	theorist = {
-		WUR_theodor_von_wundt = {
+		
+		WUR_tiefer_stollen_bergwerk = {
 
+			picture = idea_WUR_tiefer_stollen_bergwerk
+			
 			allowed = {
 				original_tag = WUR
 			}
-
-			cost = 250
+			
+			cost = 150
+			removal_cost = 10
+			
+			modifier = {
+			    production_speed_coal_mine_factor = 0.1
+		    }
 
 			research_bonus = {
-				land_doctrine = -0.1
+				resource_extraction_tech = 0.1
 			}
 
-			traits = { military_theorist }
+			traits = { industrial_concern_1 }
 		}
 	}
 }

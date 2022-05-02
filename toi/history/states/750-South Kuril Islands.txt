@@ -1,8 +1,10 @@
-state={
-	id=750
-	name="STATE_750"
+state = {
+	id =750
+	name = "STATE_750"
 
-	history={
+
+	local_supplies=0.0 
+	history = {
 		owner = TSH
 		add_claim_by = TSH
 		buildings = {
@@ -21,10 +23,10 @@ state={
 		}
 	}
 	
-	provinces={
+	provinces = {
 		13037 
 	}
-	manpower=245
+	manpower =245
 	
-	state_category=tiny_island
+	state_category =tiny_island
 }

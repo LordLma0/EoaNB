@@ -1,11 +1,13 @@
-state={
-	id=728
-	name="STATE_728"
+state = {
+	id =728
+	name = "STATE_728"
 	manpower = 117924
+
+	local_supplies=0.0 
 
 	state_category = rural
 
-	history={
+	history = {
 		owner = QNG
 		add_core_of = QNG
 		buildings = {
@@ -34,7 +36,7 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		11981
 	}
 }

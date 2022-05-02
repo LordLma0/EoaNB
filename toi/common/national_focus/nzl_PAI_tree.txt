@@ -30,7 +30,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PAI_divine_mission
-		icon = GFX_goal_focus_christianity_state_religion
+		icon = GFX_Focus_Catholic_Religion
 		cost = 40
 		prerequisite = {
 			focus = PAI_arrival_of_the_faithful
@@ -270,6 +270,25 @@ focus_tree = {
 		}
 		x = 15
 		y = 4
+		completion_reward={
+			
+		}
+	}
+	focus = {
+		id = PAI_rua_kenana_hepetipa_guidence
+		icon = GFX_goal_unknown
+		cost = 70
+		prerequisite = {
+			focus = PAI_influence_taranaki
+		}
+		prerequisite = {
+			focus = PAI_influence_waikato
+		}
+		available={
+			TAA = {exists = yes}
+		}
+		x = 14
+		y = 5
 		completion_reward={
 			
 		}

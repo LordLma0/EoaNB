@@ -1,5 +1,13 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_decision_cat_rom_agriculture_icon"
+		texturefile = "gfx/interface/decisions/decision_category_ROM_agriculture.png"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_rom_agriculture_picture"
+		texturefile = "gfx/interface/decisions/decision_category_ROM_agriculture_picture.png"
+	}
+	spriteType = {
 		name = "GFX_decision_tribal_cavalry"
 		texturefile = "gfx/interface/decisions/decision_tribal_cavalry.dds"
 	}
@@ -56,6 +64,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_cat_ireland.dds"
 	}
 	spriteType = {
+		name = "GFX_decision_cat_opium_war"
+		texturefile = "gfx/interface/decisions/decision_cat_opium_war.dds"
+	}
+	spriteType = {
 		name = "ita_brigindage"
 		texturefile = "gfx/interface/decisions/decision_cat_ita_brigindage.dds"
 	}
@@ -75,6 +87,20 @@ spriteTypes = {
 		name = "GFX_decision_cat_ita_monaco"
 		texturefile = "gfx/interface/decisions/decision_cat_ita_monaco.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_ita_wars_and_conflicts"
+		texturefile = "gfx/interface/decisions/decision_cat_ita_wars_and_conflicts.png"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_ita_legislative_actions"
+		texturefile = "gfx/interface/decisions/decision_cat_ita_legislative_actions.png"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_ita_artisans"
+		texturefile = "gfx/interface/decisions/decision_cat_ita_artisans.png"
+	}
+	
+	
 	spriteType = {
 		name = "GFX_decision_cat_PRS_Friedrich_III"
 		texturefile = "gfx/interface/decisions/decision_cat_PRS_Friedrich_III.dds"
@@ -143,4 +169,13 @@ spriteTypes = {
 		name = "GFX_decision_volkerschlachtdenkmal"
 		texturefile = "gfx/interface/decisions/decision_volkerschlachtdenkmal.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_japanese_industrialization"
+		texturefile = "gfx/interface/decisions/decision_japanese_industrialization.png" 
+	}
+	spriteType = {
+		name = "GFX_decision_jap_banks"
+		texturefile = "gfx/interface/decisions/decision_jap_banks.png" 
+	}
 }
+

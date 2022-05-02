@@ -1,10 +1,12 @@
-state={
-	id=734
-	name="STATE_734"
+state = {
+	id =734
+	name = "STATE_734"
 	manpower = 3167
+
+	local_supplies=0.0 
 	state_category = tiny_island
 
-	history={
+	history = {
 		owner = UCT
 		add_core_of = UCT
 		buildings = {
@@ -13,11 +15,16 @@ state={
 				naval_base = 1 
 			}
 		}
+		add_to_array = { state_culture_array = 399 } # Melanesian
+		add_to_array = { state_culture_array_num = 1 }
+
+		add_to_array = { state_religion_array = 20 } # Animist
+		add_to_array = { state_religion_array_num = 1 }
 	}
 
 	
 
-	provinces={
+	provinces = {
 		7390 
 	}
 }

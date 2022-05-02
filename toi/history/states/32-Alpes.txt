@@ -7,22 +7,22 @@ state = {
 	resources = {
 		iron = 10
 	}
-	
+
 	provinces = {
-		764 3762 3764 3768 6784 6975 9736 
+		764 3762 3764 3768 6784 6975 9736
 	}
 
 	history = {
 		# End of a New Beginning
+		owner = FRA
 		1857.1.1 = {
-			owner = FRA
 			add_core_of = FRA
 
 			buildings = {
-				infrastructure = 3
+				infrastructure = 4
 			}
 
-			victory_points = { 3768 1 } #Grenoble
+			victory_points = { 3768 3 } #Grenoble
 
 			add_to_array = { state_culture_array = 32 } # French
 			add_to_array = { state_culture_array_num = 0.55 }
@@ -33,4 +33,5 @@ state = {
 			add_to_array = { state_religion_array_num = 1.0 }
 		}
 	}
+	local_supplies=0.0 
 }

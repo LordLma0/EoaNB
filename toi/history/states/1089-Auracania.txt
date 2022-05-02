@@ -1,11 +1,11 @@
-state={
-	id=1089
-	name="STATE_1089"
+state = {
+	id = 1089
+	name = "STATE_1089"
 	manpower = 30605
 	
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = WLL
 		buildings = {
 			infrastructure = 2
@@ -19,13 +19,17 @@ state={
 		victory_points = {
 			13656 5
 		}
+		
+		add_to_array = { state_religion_array = 22 } #Shamanism
+		add_to_array = { state_religion_array_num = 1 }
 	}
 	
 	resources = {
-		wood=1
+		wood = 1
 	}
 
-	provinces={
-	13655 8229 12984 8251 13656 13657
-}
+	provinces = {
+		13655 8229 12984 8251 13656 13657
+	}
+	local_supplies=0.0 
 }

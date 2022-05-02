@@ -1,10 +1,11 @@
-state={
-	id=1149
-	name="STATE_1149"
-	resources={
+state = {
+	id = 1149
+	name = "STATE_1149"
+	local_supplies=0.0 
+	resources = {
 	}
 
-	history={
+	history = {
 		owner = OFS ##change to 
 		buildings = {
 			infrastructure = 1
@@ -14,12 +15,26 @@ state={
 		victory_points = {
 			13716 1
 		}
+		
+		add_to_array = { state_culture_array = 342 } 
+		add_to_array = { state_culture_array_num = 0.46 }
+		add_to_array = { state_culture_array = 345 } 
+		add_to_array = { state_culture_array_num = 0.32 }
+		add_to_array = { state_culture_array = 344 } 
+		add_to_array = { state_culture_array_num = 0.13 }
+		add_to_array = { state_culture_array = 22 } #boer
+		add_to_array = { state_culture_array_num = 0.09 }
+		
+		add_to_array = { state_religion_array = 20 } 
+		add_to_array = { state_religion_array_num = 0.91}
+		add_to_array = { state_religion_array = 3 } 
+		add_to_array = { state_religion_array_num = 0.09}
 	}
 
-	provinces={
+	provinces = {
 		13713 13716
 	}
-	manpower=1974
+	manpower = 1974
 	
-	state_category=rural
+	state_category =rural
 }

@@ -1,16 +1,11 @@
 ﻿add_namespace = russia
-add_namespace = russiabook
-add_namespace = russiapolitical
-add_namespace = russiamisc
 add_namespace = russiaforeign
 add_namespace = russiaalas
 add_namespace = russiageorgia
 add_namespace = russiacaucasus
 add_namespace = russiavicfocus
-add_namespace = russiagreece
 add_namespace = russiacommander
 add_namespace = russiasiberiancolonization
-add_namespace = russiasiberia
 
 	country_event = {  #German Immigration (Volga)
 		id = russiavicfocus.1
@@ -174,7 +169,7 @@ add_namespace = russiasiberia
             RUS = {
                 effect_tooltip = {
                     navy_experience = 10
-			        add_tech_bonus = { bonus = 2 uses = 2 category = naval_doctrine }
+			        add_doctrine_cost_reduction = { cost_reduction = 2 uses = 2 category = naval_doctrine }
                 }
                 country_event = {
                     id = russiavicfocus.11
@@ -213,7 +208,7 @@ add_namespace = russiasiberia
 			    reverse_add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_increase_small }
 			}
             navy_experience = 10
-			add_tech_bonus = { bonus = 2 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 2 uses = 2 category = naval_doctrine }
 		}
 	}
 
@@ -363,12 +358,13 @@ add_namespace = russiasiberia
 
 		option = {
 			name = russiavicfocus.20.a # Replace
+			ai_chance = { base = 90 }
 			FIN = {
 			    retire_country_leader = yes
 			    create_country_leader = {
 	                name = "Platon Rokassowski"
 	                desc = ""
-	                picture = "gfx/leaders/FIN/Portrait_Finland_Platon_Rokasovsky.dds"
+	                picture = "gfx/leaders/FIN/Portrait_Finland_Platon_Rokasovsky.png"
 	                expire = "1965.1.1"
 	                ideology = despotism
                 }
@@ -388,6 +384,13 @@ add_namespace = russiasiberia
 
 		option = {
 			name = russiavicfocus.20.b # Keep the old one
+			ai_chance = { 
+				base = 10 
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+			}
 			FIN = { set_country_flag = FIN_vic_Berg_Governor }
 		}
 	}
@@ -407,7 +410,7 @@ add_namespace = russiasiberia
 			    create_country_leader = {
 	                name = "Platon Rokassowski"
 	                desc = ""
-	                picture = "gfx/leaders/FIN/Portrait_Finland_Platon_Rokasovsky.dds"
+	                picture = "gfx/leaders/FIN/Portrait_Finland_Platon_Rokasovsky.png"
 	                expire = "1965.1.1"
 	                ideology = despotism
                 }
@@ -484,6 +487,81 @@ add_namespace = russiasiberia
 			name = russiavicfocus.23.b # Leave Lithuanians 
 			ai_chance = { base = 30 }
 			
+		}
+	}
+
+	country_event = {  # Finland - Russian Integration
+		id = russiavicfocus.24
+		title = russiavicfocus.24.t
+		desc = russiavicfocus.24.d
+		picture = GFX_GEO_report_event_Dadiani_Palace
+		
+		fire_only_once = yes
+	    is_triggered_only = yes
+
+		option = {
+			name = russiavicfocus.24.a # Accept
+			RUS = {
+				add_stability = -0.07
+				add_political_power = -20
+				activate_decision = RUS_mission_vic_Annex_FIN
+			}
+		}
+
+		option = {
+			name = russiavicfocus.24.b # Reject (War is declared)
+			RUS = { 
+				add_stability = -0.03 
+				end_puppet = FIN
+			}
+			declare_war_on = {
+    			target = RUS
+    			type = independence_wargoal
+			}
+		}
+	}
+	
+	#Milytuin Army Reform
+	
+	country_event = {  #Pedagogicheskii Sbomik
+		id = russiavicfocus.25 
+		title = russiavicfocus.25.t
+		desc = russiavicfocus.25.d
+		picture = GFX_report_event_alex_II
+		
+		fire_only_once = yes
+	    is_triggered_only = yes
+
+		option = {
+			name = russiavicfocus.25.a
+		}
+	}
+	
+	country_event = {  #Russian Gatlings
+		id = russiavicfocus.26 
+		title = russiavicfocus.26.t
+		desc = russiavicfocus.26.d
+		picture = GFX_report_event_alex_II
+		
+		fire_only_once = yes
+	    is_triggered_only = yes
+
+		option = {
+			name = russiavicfocus.26.a
+		}
+	}
+	
+	country_event = {  #Second Italian War of Independence 
+		id = russiavicfocus.27 
+		title = russiavicfocus.27.t
+		desc = russiavicfocus.27.d
+		picture = GFX_report_event_alex_II
+		
+		fire_only_once = yes
+	    is_triggered_only = yes
+
+		option = {
+			name = russiavicfocus.27.a
 		}
 	}
 
@@ -730,13 +808,100 @@ add_namespace = russiasiberia
   				1127 = { set_compliance = 85 }
   				791 = { set_compliance = 85 }
   				78 = { set_compliance = 85 }
-
   				12 = { set_compliance = 90 }
   				13 = { set_compliance = 90 }
   				190 = { set_compliance = 90 }
   				191 = { set_compliance = 90 }
   				191 = { set_compliance = 90 }
   				1134 = { set_compliance = 90 }
+			}
+			add_ai_strategy = {
+				type = front_control
+
+				tag = CIR
+				state = 233
+				strategic_region = 134
+				country_trigger = { RUS = { has_war_with = CIR } }
+
+				ratio = 0.0
+
+				priority = 20000
+				ordertype = invasion
+				execution_type = careful
+				execute_order = yes
+				manual_attack = yes
+			}
+			add_ai_strategy = {
+				type = invasion_unit_request
+
+				tag = CIR
+				state = 233
+				strategic_region = 134
+				country_trigger = { RUS = { has_war_with = CIR } }
+
+				value = 40000
+			}
+			add_ai_strategy = {
+				type = front_control
+
+				tag = CAU
+				state = 232
+				strategic_region = 135
+				country_trigger = { RUS = { has_war_with = CAU } }
+
+				ratio = 0.0
+
+				priority = 30000
+				ordertype = invasion
+				execution_type = careful
+				execute_order = yes
+				manual_attack = yes
+			}
+			add_ai_strategy = {
+				type = invasion_unit_request
+
+				tag = CAU
+				state = 232
+				strategic_region = 135
+				country_trigger = { RUS = { has_war_with = CAU } }
+
+				value = 60000
+			}
+			CIR = {
+				add_ai_strategy = {
+					type = front_control
+
+					tag = RUS
+					state = 233
+					strategic_region = 134
+					country_trigger = { CIR = { has_war_with = RUS } }
+
+					ratio = 0.0
+
+					priority = 20000
+					ordertype = front
+					execution_type = careful
+					execute_order = no
+					manual_attack = yes
+				}
+			}
+			CAU = {
+				add_ai_strategy = {
+					type = front_control
+
+					tag = RUS
+					state = 232
+					strategic_region = 135
+					country_trigger = { CAU = { has_war_with = RUS } }
+
+					ratio = 0.0
+
+					priority = 20000
+					ordertype = front
+					execution_type = careful
+					execute_order = no
+					manual_attack = yes
+				}
 			}
 		}
 		
@@ -780,7 +945,7 @@ add_namespace = russiasiberia
 		}		
 		option = {
 			name = russia.12.a
-            add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+            add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = land_doctrine }
             army_experience = 7
 		}
 	}
@@ -971,12 +1136,302 @@ add_namespace = russiasiberia
 		}
 	}
 	
-	### russiapolitical
+	country_event = {  #Russian Technical Society
+		id = russia.21
+		title = russia.21.t
+		desc = russia.21.d	
+		picture = GFX_report_event_krenholm_manufacture
+		
+		fire_only_once = yes	
+		
+	    is_triggered_only = yes	
+				
+		option = {
+			name = russia.21.a
+				add_ideas = RUS_idea_russian_technical_society
+				swap_ideas = { remove_idea = sfund_private_ventures_only add_idea = sfund_limited_state_sponsorship } 
+				set_temp_variable = { eoanb_prestige_change = 5 }
+		}
+		
+		option = {
+			name = russia.21.b
+        
+		}
+	}
+	
+	country_event = { #Publishing of Fathers and Sons
+		id = russia.22
+		title = russia.22.t
+		desc = russia.22.d
+		picture = GFX_report_event_krenholm_manufacture	
+		
+		fire_only_once = yes 
+	    is_triggered_only = yes
+		
+		trigger = {
+		#date > 1862.03.05 
+			tag = RUS    
+		}
+		
+		option = { #Mild censoring (cosmetic things)
+			name = russia.22.a
+			ai_chance = { factor = 90 }
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.01
+			}
+			add_timed_idea = {
+			    idea = RUS_idea_successful_book
+				days = 120
+			}
+	    }
+        option = { #Harsh censoring (nihilism banned)
+	        name = russia.22.b
+	        ai_chance = { factor = 10 }
+		    add_popularity = {
+				ideology = autocracy 
+				popularity = -0.03
+			}
+			add_political_power = 20
+			set_country_flag = harsh_censoring
+		}
+	}
+
+	country_event = {
+		id = russia.23
+		title = russia.23.t
+		desc = russia.23.d
+		picture = GFX_report_event_krenholm_manufacture	
+		
+		fire_only_once = yes 
+	    is_triggered_only = yes
+		
+		trigger = {
+			has_country_flag = harsh_censoring
+			NOT = { 
+				has_idea = state_controlled_press 
+				has_idea = censored_press 
+			}
+			tag = RUS
+		}
+		
+		option = { #Censorship broke and the real book was revealed
+			name = russia.23.a
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.02
+				}
+			add_political_power = -20
+			add_timed_idea = {
+			    idea = RUS_idea_censor_broke_FaS
+				days = 60
+			}
+	    }
+	}
+	
+	country_event = {
+		id = russia.24
+		title = russia.24.t
+		desc = russia.24.d
+		picture = GFX_report_event_krenholm_manufacture	
+		
+		fire_only_once = yes 
+	    is_triggered_only = yes
+		
+		trigger = {
+			#date > 1866.1.31
+			tag = RUS
+		}
+		
+		option = {
+			name = russia.24.a
+			add_political_power = 10
+	    }
+	}
+	
+	#Russian Misc Events
+        
+    country_event = {  #State bank
+		id = russia.25
+		title = russia.25.t
+		desc = russia.25.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		is_triggered_only = yes	
+		option = {
+			name = russia.25.a
+		}
+	}
+    
+    country_event = {  #Tsushima Incident
+		id = russia.26
+		title = russia.26.t
+		desc = russia.26.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes	
+	    is_triggered_only = yes	
+		trigger = {
+			#date > 1861.03.13
+		    tag = RUS
+		}		
+		option = {
+			name = russia.26.a
+		}
+	}
+    
+    country_event = {  #Tsushima Incident 2
+		id = russia.27
+		title = russia.27.t
+		desc = russia.27.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes	
+	    is_triggered_only = yes	
+		trigger = {
+			#date > 1861.05.21
+		    tag = RUS
+		}		
+		option = {
+			name = russia.27.a
+		}
+	}
+    
+    country_event = {  #St Isaac
+		id = russia.28
+		title = russia.28.t
+		desc = russia.28.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes	
+	    is_triggered_only = yes	
+		trigger = {
+			#date > 1858.06.25
+		    tag = RUS
+		}		
+		option = {
+			name = russia.28.a
+		}
+	}
+    
+    country_event = {  #Red Cross
+		id = russia.29
+		title = russia.29.t
+		desc = russia.29.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes
+	    is_triggered_only = yes		
+		trigger = {
+			#date > 1863.10.29
+		    tag = RUS
+		}		
+		option = {
+			name = russia.29.a
+		}
+	}
+           
+    country_event = {  #Moscow zoo
+		id = russia.30
+		title = russia.30.t
+		desc = russia.30.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes
+	    is_triggered_only = yes		
+		trigger = {
+			#date > 1864.06.01
+		    tag = RUS
+		}		
+		option = {
+			name = russia.30.a
+		}
+	}
+    
+    country_event = {  #Epoch
+		id = russia.31
+		title = russia.31.t
+		desc = russia.31.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes
+	    is_triggered_only = yes		
+		trigger = {
+			#date > 1864.03.01
+		    tag = RUS
+		}		
+		option = {
+			name = russia.31.a
+		}
+	}
+    
+    country_event = {  #Michael palace
+		id = russia.32
+		title = russia.32.t
+		desc = russia.32.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes	
+	    is_triggered_only = yes	
+		trigger = {
+			#date > 1862.07.01
+		    tag = RUS
+		}		
+		option = {
+			name = russia.32.a
+		}
+	}
+    
+    country_event = {  #Heir dies
+		id = russia.33
+		title = russia.33.t
+		desc = russia.33.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes	
+	    is_triggered_only = yes	
+		trigger = {
+			#date > 1865.04.24
+		    tag = RUS
+		}		
+		option = {
+			name = russia.33.a
+		}
+	}
+	
+	country_event = {  #Alexander II marries Catherine Dolgokurov
+		id = russia.34
+		title = russia.34.t
+		desc = russia.34.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes	
+	    is_triggered_only = yes	
+		trigger = {
+			#date > 1880.07.18
+		    tag = RUS
+		}		
+		option = {
+			name = russia.34.a
+			add_stability = -0.05
+		}
+	}
+
+	country_event = {  #Alexander III marries Maria Feodorovna
+		id = russia.35
+		title = russia.35.t
+		desc = russia.35.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes	
+	    is_triggered_only = yes	
+		trigger = {
+			#date > 1866.11.01
+			#date < 1866.11.18
+		    tag = RUS
+		}		
+		option = {
+			name = russia.35.a
+			add_political_power = 25
+		}
+	}
+	
+	#Russian Political Events
     
     country_event = {  #Geneva
-		id = russiapolitical.1
-		title = russiapolitical.1.t
-		desc = russiapolitical.1.d		
+		id = russia.36
+		title = russia.36.t
+		desc = russia.36.d		
 		picture = GFX_report_event_krenholm_manufacture		
 		fire_only_once = yes		
 	    is_triggered_only = yes
@@ -985,17 +1440,17 @@ add_namespace = russiasiberia
 		    tag = RUS
 		}		
 		option = {
-			name = russiapolitical.1.a
+			name = russia.36.a
             add_stability = 0.03
             add_timed_idea = { idea = RUS_idea_geneva_signed days = 180 }
 		}
         option = {
-			name = russiapolitical.1.b
+			name = russia.36.b
             add_stability = 0.01
             add_timed_idea = { idea = RUS_idea_geneva_notsigned days = 180 }
 		}
         option = {
-			name = russiapolitical.1.c
+			name = russia.36.c
             hidden_effect = {
                 SWI = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
                 BAD = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
@@ -1018,53 +1473,53 @@ add_namespace = russiasiberia
 	}
     
     #country_event = {  #Demand Karachi
-	#	id = russiapolitical.2
-	#	title = russiapolitical.2.t
-	#	desc = russiapolitical.2.d		
+	#	id = russia.37
+	#	title = russia.37.t
+	#	desc = russia.37.d		
 	#	picture = GFX_report_event_krenholm_manufacture		
 	#	fire_only_once = yes		
     #    is_triggered_only = yes
 	#	option = {
-	#		name = russiapolitical.2.a
+	#		name = russia.37.a
     #        RUS = { transfer_state = 1000 }
 	#	}
     #    option = {
-	#		name = russiapolitical.2.b
+	#		name = russia.37.b
     #        1000 = { add_claim_by = RUS }
 	#	}
 	#}
     
     country_event = {  #Demand Pass Denmark
-		id = russiapolitical.3
-		title = russiapolitical.3.t
-		desc = russiapolitical.3.d		
+		id = russia.38
+		title = russia.38.t
+		desc = russia.38.d		
 		picture = GFX_report_event_krenholm_manufacture		
 		fire_only_once = yes		
         is_triggered_only = yes
 		option = {
-			name = russiapolitical.3.a
+			name = russia.38.a
             ai_chance = { factor = 50 }
             DEN = { give_military_access = RUS }
 		}
         option = {
-			name = russiapolitical.3.b
+			name = russia.38.b
             ai_chance = { factor = 50 }
             RUS = { add_opinion_modifier = { target = DEN modifier = eoanb_om_RUS_denmarkdeniedaccess } }
 		}
 	}
 
 	country_event = {	#The Emperor's Safety (Alexander II Abdication event)
-		id = russiapolitical.4
-		title = russiapolitical.4.t
-		desc = russiapolitical.4.d
+		id = russia.39
+		title = russia.39.t
+		desc = russia.39.d
 		picture = GFX_report_event_krenholm_manufacture
 	
-		immediate = {log = "[GetDateText]: [Root.GetName]: event russiapolitical.4"}
+		immediate = {log = "[GetDateText]: [Root.GetName]: event russia.39"}
 	
 		is_triggered_only = yes
 	
 		option = {	#Our Emperor will hold strong!
-			name = russiapolitical.4.a
+			name = russia.39.a
 			add_stability = 0.05
 			add_popularity = {
 				ideology = autocracy
@@ -1073,17 +1528,26 @@ add_namespace = russiasiberia
 		}
 
 		option = {	#This is a great deal
-			name = russiapolitical.4.b
+			name = russia.39.b
 			set_country_flag = rus_flag_alexander_ii_abdicated	
-			retire_country_leader = yes
-			create_country_leader = {
-  				name = "Alexander III"
-  				desc = "POLITICS_GEORGI_PLEKHANOV_DESC"
-  				picture = "Portrait_RUS_Alexander_III.dds"
-  				expire = "1900.1.1"
-  				ideology = despotism
-  				traits = {
- 				}	
+			RUS_alexander_iii = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						expire = "1900.1.1"
+						desc = "POLITICS_GENERIC_EOANB_DESC"
+						ideology = despotism
+						traits = {
+							RUS_trait_Staunch_Authoritarian
+							RUS_trait_Iron_Fist
+						}
+					}
+				}
+			}
+			retire_character = RUS_alexander_ii
+			swap_ideas = { 
+				remove_idea = RUS_Alexander_II
+				add_idea = RUS_Alexander_III
 			}
 			add_popularity = {
 				ideology = collectivist_socialism
@@ -1093,183 +1557,6 @@ add_namespace = russiasiberia
 				ideology = anarchism
 				popularity = 0.01
 			}
-		}
-	}
-
-	### russiamisc
-        
-    country_event = {  #State bank
-		id = russiamisc.1
-		title = russiamisc.1.t
-		desc = russiamisc.1.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes		
-		is_triggered_only = yes	
-		option = {
-			name = russiamisc.1.a
-		}
-	}
-    
-    country_event = {  #Tsushima Incident
-		id = russiamisc.2
-		title = russiamisc.2.t
-		desc = russiamisc.2.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes	
-	    is_triggered_only = yes	
-		trigger = {
-			#date > 1861.03.13
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.2.a
-		}
-	}
-    
-    country_event = {  #Tsushima Incident 2
-		id = russiamisc.3
-		title = russiamisc.3.t
-		desc = russiamisc.3.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes	
-	    is_triggered_only = yes	
-		trigger = {
-			#date > 1861.05.21
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.3.a
-		}
-	}
-    
-    country_event = {  #St Isaac
-		id = russiamisc.4
-		title = russiamisc.4.t
-		desc = russiamisc.4.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes	
-	    is_triggered_only = yes	
-		trigger = {
-			#date > 1858.06.25
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.4.a
-		}
-	}
-    
-    country_event = {  #Red Cross
-		id = russiamisc.5
-		title = russiamisc.5.t
-		desc = russiamisc.5.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes
-	    is_triggered_only = yes		
-		trigger = {
-			#date > 1863.10.29
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.5.a
-		}
-	}
-           
-    country_event = {  #Moscow zoo
-		id = russiamisc.6
-		title = russiamisc.6.t
-		desc = russiamisc.6.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes
-	    is_triggered_only = yes		
-		trigger = {
-			#date > 1864.06.01
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.6.a
-		}
-	}
-    
-    country_event = {  #Epoch
-		id = russiamisc.7
-		title = russiamisc.7.t
-		desc = russiamisc.7.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes
-	    is_triggered_only = yes		
-		trigger = {
-			#date > 1864.03.01
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.8.a
-		}
-	}
-    
-    country_event = {  #Michael palace
-		id = russiamisc.8
-		title = russiamisc.8.t
-		desc = russiamisc.8.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes	
-	    is_triggered_only = yes	
-		trigger = {
-			#date > 1862.07.01
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.8.a
-		}
-	}
-    
-    country_event = {  #Heir dies
-		id = russiamisc.9
-		title = russiamisc.9.t
-		desc = russiamisc.9.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes	
-	    is_triggered_only = yes	
-		trigger = {
-			#date > 1865.04.24
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.9.a
-		}
-	}
-	
-	country_event = {  #Alexander II marries Catherine Dolgokurov
-		id = russiamisc.10
-		title = russiamisc.10.t
-		desc = russiamisc.10.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes	
-	    is_triggered_only = yes	
-		trigger = {
-			#date > 1880.07.18
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.10.a
-			add_stability = -0.05
-		}
-	}
-
-	country_event = {  #Alexander III marries Maria Feodorovna
-		id = russiamisc.11
-		title = russiamisc.11.t
-		desc = russiamisc.11.d		
-		picture = GFX_report_event_krenholm_manufacture		
-		fire_only_once = yes	
-	    is_triggered_only = yes	
-		trigger = {
-			#date > 1866.11.01
-			#date < 1866.11.18
-		    tag = RUS
-		}		
-		option = {
-			name = russiamisc.11.a
-			add_political_power = 25
 		}
 	}
 
@@ -1602,22 +1889,32 @@ add_namespace = russiasiberia
 						limit={
 							PREV = {has_country_leader = {name = "Aloys II" ruling_only = yes}}
 						}
-						create_country_leader = {
-							name = "Aloys II"
-							desc = "POLITICS_TEMP_DESC"
-							picture = "gfx/leaders/LIE/AloysII.dds"
-							expire = 1900.1.1
-							ideology = despotism
+						ALK_aloys_ii = {
+							add_country_leader_role = {
+								promote_leader = yes
+								country_leader={
+									desc="POLITICS_TEMP_DESC"
+									ideology=despotism
+									expire="1900.1.1.1"
+									#id=-1
+								}
+							}
 						}
+						retire_character = ALK_grand_duke_konstantin
 					}
 					else={
-						create_country_leader = {
-							name = "Johann II"
-							desc = "POLITICS_TEMP_DESC"
-							picture = "johann_ii_prt1.dds"
-							expire = 1929.02.11
-							ideology = despotism 
+						ALK_johann_ii = {
+							add_country_leader_role = {
+								promote_leader = yes
+								country_leader={
+									desc="POLITICS_TEMP_DESC"
+									ideology=despotism
+									expire="1929.2.11"
+									#id=-1
+								}
+							}
 						}
+						retire_character = ALK_grand_duke_konstantin
 					}
 		            # load_oob = "ALK_Licthenstien_Troops" ##LIE has 80 troops historically, where would it get a army?
 		        }
@@ -1646,7 +1943,7 @@ add_namespace = russiasiberia
 		}
 		desc = {
 			text = russiaforeign.18.d_a
-			trigger = { NOT { has_global_flag = LIEAlaska_Purchased } }
+			trigger = { NOT ={ has_global_flag = LIEAlaska_Purchased } }
 		}
 
 		fire_only_once = yes
@@ -1704,7 +2001,7 @@ country_event = {	# The sale of alaska, USA responds
 		}
 		desc = {
 			text = russiaforeign.20.d_a
-			trigger = { NOT { has_global_flag = USAAlaska_Purchased } }
+			trigger = { NOT ={ has_global_flag = USAAlaska_Purchased } }
 		}
 
 		fire_only_once = yes
@@ -2057,7 +2354,7 @@ country_event = {	# The sale of alaska, USA responds
 
 		option = {	#We should be concirned about the Emperor's safety
 			name = russiaalas.7.b
-			country_event = { id = russiapolitical.4 days = 5 }
+			country_event = { id = russia.39 days = 5 }
 			ai_chance = {
 				factor = 10
 			}
@@ -2131,22 +2428,29 @@ country_event = {	# The sale of alaska, USA responds
 				days = 180
 			}
 			set_country_flag = rus_flag_alexander_ii_dead	
-			kill_country_leader = yes
-			create_country_leader = {
-  				name = "Alexander III"
-  				desc = "POLITICS_GEORGI_PLEKHANOV_DESC"
-  				picture = "Portrait_RUS_Alexander_III.dds"
-  				expire = "1900.1.1"
-  				ideology = despotism
-  				traits = {
-					  RUS_trait_Staunch_Authoritarian
-					  RUS_trait_Iron_Fist
- 				}	
+			RUS_alexander_iii = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						expire = "1900.1.1"
+						desc = "POLITICS_GENERIC_EOANB_DESC"
+						ideology = despotism
+						traits = {
+							RUS_trait_Staunch_Authoritarian
+							RUS_trait_Iron_Fist
+						}
+					}
+				}
+			}
+			retire_character = RUS_alexander_ii
+			swap_ideas = { 
+				remove_idea = RUS_Alexander_II
+				add_idea = RUS_Alexander_III
 			}
 			add_popularity = {
 				ideology = collectivist_socialism
 				popularity = 0.05
-			}		
+			}
 			add_popularity = {
 				ideology = anarchism
 				popularity = 0.03
@@ -2374,7 +2678,8 @@ country_event = {	# The sale of alaska, USA responds
 		}
 		option = {	#Intervene anyways - effectively annex them 
 			name = russiageorgia.6.b
-			eoanb_add_10_prestige_score = yes 
+			set_temp_variable = { eoanb_prestige_change = 10 }
+			eoanb_change_prestige_score = yes 
 			hidden_effect = {
 	    		increase_ps_by_one = yes
 			}
@@ -2533,7 +2838,7 @@ country_event = {	# The sale of alaska, USA responds
 		option = {	 
 			name = russiageorgia.11.a #kill Abkhazia 	
             add_political_power = -50 
-            ABK = { country_event { id = russiageorgia.12 days = 20 } }		
+            ABK = { country_event = { id = russiageorgia.12 days = 20 } }		
 			custom_effect_tooltip = eoanb_tt_RUS_Abkhazia_Annexation
 		}
 	}
@@ -2584,44 +2889,22 @@ country_event = {	# The sale of alaska, USA responds
 	} 
 	
 	
-	###Resume Caucasus War
+	### Caucasus War Starting Event
 	country_event = {
 		id = russiacaucasus.1
 		title = russiacaucasus.1.t
 		desc = russiacaucasus.1.d
 		
-		fire_only_once = yes
-		
-		trigger = {
-			tag = RUS
-			date > 1857.07.15
-			CAU = { exists = yes }
-		}
+		is_triggered_only = yes
 		
 		picture = GFX_report_event_second_opium_war_tianjin_treaty
 		
 		option = {
 			name = russiacaucasus.1.a
-			create_wargoal = {
- 			   	type = annex_everything
-    			target = CAU
-			}
-			activate_mission = RUS_mission_vic_cau_war
-			hidden_effect = {
-                if = { 
-	    			limit = { CAU = { is_ai = yes } }
-    				CAU = { add_ideas = CAU_fighters }
-    			}
-                else = { 
-    				CAU = { add_ideas = CAU_fighters_a }
-     			}
-     			CAU = { add_ideas = CAU_fierce_resistance }
-				set_country_flag = RUS_flag_war_with_caucasus
-            }			
-		} 				
+		}
     }
 	
-	country_event = { #Attack Circassia after Caucasus Surrenders  
+	country_event = { # The Imamate Defeated
 		id = russiacaucasus.2
 		title = russiacaucasus.2.t
 		desc = russiacaucasus.2.d
@@ -2636,49 +2919,27 @@ country_event = {	# The sale of alaska, USA responds
             OR = {
             	NOT = { country_exists = CAU }
             	CAU = { is_subject_of = RUS }
+            }			
+		}
+
+		immediate = {
+			add_stability = 0.05
+			hidden_effect = {
+				CAU = { 
+					remove_ideas = { 
+						CAU_fighters
+						CAU_fierce_resistance
+						CAU_fierce_resistance_weak
+					}
+				}
+				retire_character = CAU_teofil_lapinski
             }
-            country_exists = CIR 				
 		}
 		
 		option = {
 			name = russiacaucasus.2.a
 			add_political_power = 100
-			create_wargoal = {
- 			   	type = annex_everything
-    			target = CIR
-			}
-			activate_mission = RUS_mission_vic_cir_war
-			hidden_effect = {
-				CAU = {
-					remove_ideas = {
-						CAU_fighters
-						CAU_fighters_a
-					}
-				}
-                if = { 
-	    			limit = { 
-	    				CIR = { is_ai = yes } 
-	    		    }
-    				CIR = { add_ideas = CAU_fighters }
-                    else = { 
-    					CIR = { add_ideas = CAU_fighters_a }
-     				}
-	    		}
-				increase_ps_by_one = yes 
-				CIR = {
-					create_corps_commander = {
-  						name = "Magomet-Amin"
-  						picture = "Portrait_Magomet_Amin.dds"
- 						traits = { ambusher hill_fighter trait_mountaineer }
-  						skill = 2
-  						attack_skill = 2
-  						defense_skill = 3
-  						planning_skill = 2
-  						logistics_skill = 3
-					}
-					add_ideas = CAU_fierce_resistance
-				}
-            }
+			hidden_effect = { country_event = { id = imamate.3 days = 400 } }
 	    }
     }
 	
@@ -2695,25 +2956,17 @@ country_event = {	# The sale of alaska, USA responds
 		    tag = RUS 
             has_country_flag = RUS_flag_war_with_caucasus
             OR = {
-            	NOT = { 
+            	NOT = {
 			    	country_exists = CAU
-                	country_exists = CIR 				
+                	country_exists = CIR
 				}
 				CAU = { is_subject_of = RUS }
 				CIR = { is_subject_of = RUS }
 			}
 		}
-		
-		option = {
-			name = russiacaucasus.3.a
-			hidden_effect = {
-				CIR = {
-					remove_ideas = {
-						CAU_fighters
-						CAU_fighters_a
-					}
-				}
-			}
+
+		immediate = {
+			increase_ps_by_one = yes
 			if = {
 			    limit = { 
 	    			country_exists = CAU
@@ -2726,323 +2979,81 @@ country_event = {	# The sale of alaska, USA responds
 			if = {
 			    limit = { 
 	    			country_exists = CIR
+	    			CIR = {	### This is a check to see if CIR decided to become a puppet of RUS
+	    				has_idea = CAU_fighters
+	    				has_idea = CAU_fierce_resistance
+	    				has_idea = CAU_fierce_resistance_weak
+	    			}
 	    		}
 	    		annex_country = {
     				target = CIR
     				transfer_troops = no
 				}
 			}
-			add_stability = 0.05 
+			hidden_effect = {
+				CIR = { 
+					remove_ideas = { 
+						CAU_fighters
+						CAU_fierce_resistance
+						CAU_fierce_resistance_weak
+					}
+				}
+				clr_country_flag = RUS_flag_war_with_caucasus
+			}
+			RUS = {
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Together for Victory"
+							has_dlc = "Waking the Tiger"
+							has_dlc = "Death or Dishonor"
+						}
+					}
+					set_autonomy = {
+						target = GEO
+						autonomous_state = autonomy_dominion
+						freedom_level = 0.2
+					}
+				}
+				else = { puppet = GEO }
+			}
+			RUS = {
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Together for Victory"
+							has_dlc = "Waking the Tiger"
+							has_dlc = "Death or Dishonor"
+						}
+					}
+					set_autonomy = {
+						target = ABK
+						autonomous_state = autonomy_dominion
+						freedom_level = 0.2
+					}
+				}
+				else = { puppet = ABK }
+			}
+		}
+		
+		option = {
+			name = russiacaucasus.3.a
 			add_political_power = 200
 			custom_effect_tooltip = eoanb_tt_RUS_Caucasian_War_Ends
 	    }
     }
 	
-	country_event = { #Circassia victorious 
+	country_event = {
 		id = russiacaucasus.4
 		title = russiacaucasus.4.t
 		desc = russiacaucasus.4.d
-        picture = GFX_report_event_second_opium_war_tianjin_treaty
-		fire_only_once = yes
 		
-		trigger = {
-			tag = CIR 
-			RUS = { has_country_flag = RUS_flag_war_with_caucasus }
-			CIR = { 
-			    has_full_control_of_state = 233
-                has_full_control_of_state = 1115	
-			}	
-		} 	
+        is_triggered_only = yes 
 		
-		option = {
+		picture = GFX_report_event_second_opium_war_tianjin_treaty	
+		
+		option = {  
 			name = russiacaucasus.4.a
-            hidden_effect = { RUS = { country_event = russiacaucasus.6 } }
- 			custom_effect_tooltip = caucasus_war_3
- 			CIR = {
-				remove_ideas = {
-					CAU_fighters
-					CAU_fighters_a
-				}
-			}
-		}
-	}
-		
-	country_event = { #Caucasus victorious 
-		id = russiacaucasus.5
-		title = russiacaucasus.5.t
-		desc = russiacaucasus.5.d
-		
-		fire_only_once = yes
-		
-		trigger = {
-			tag = CAU  
-			RUS = { has_country_flag = RUS_flag_war_with_caucasus }
-			CAU = { 
-			    has_full_control_of_state = 1216  
-                has_full_control_of_state = 229   				
-			}			
-		} 	
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {
-			name = russiacaucasus.5.a
-            hidden_effect = {
-			    RUS = { country_event = russiacaucasus.7 }	
-				set_country_flag = caucasus_win
-			}
- 			custom_effect_tooltip = caucasus_war_4
- 			CAU = {
-				remove_ideas = {
-					CAU_fighters
-					CAU_fighters_a
-				}
-			}
-		}
-	}
-		
-	country_event = { #Circassia victorious - Russian event
-		id = russiacaucasus.6
-		title = russiacaucasus.6.t
-		desc = russiacaucasus.6.d
-		
-        is_triggered_only = yes  
-		
-		immediate = {
-            hidden_effect = { 		
-			    every_other_country = { 
-				    limit = {
-					    NOT = { has_idea = pre_industrial_era }
-					}
-				    news_event = { id = russiacaucasus.8 } 
-				} 
-			}
-		}
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {
-			name = russiacaucasus.6.a
-            white_peace = CIR
-			decrease_ps_by_one = yes 
-			add_stability = -0.05 
-			CIR = {
-                transfer_state = 1123			
-			    annex_country = { target = ABK }
-            }					
-	    }
-	}
-	
-	country_event = { #Caucasus victorious - Russian event
-		id = russiacaucasus.7
-		title = russiacaucasus.7.t
-		desc = russiacaucasus.7.d
-		
-        is_triggered_only = yes  
-		
-		immediate = {
-            hidden_effect = { 		
-			    every_other_country = { 
-				    limit = {
-					    NOT = { has_idea = pre_industrial_era }
-					}
-				    news_event = { id = russiacaucasus.9 } 
-				} 
-			}
-		}
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty
-		
-		option = {
-			name = russiacaucasus.7.a
-	        white_peace = CAU
-			decrease_ps_by_one = yes 
-			add_stability = -0.05 
-			CAU = {
-                transfer_state = 1216	
-                transfer_state = 229	
-                transfer_state = 1121 
-                transfer_state = 1008  				
-			}
-	    }
-	}
-		
-	news_event = { #Circassia victorious - News
-	    id = russiacaucasus.8
-		title = russiacaucasus.8.t
-		desc = russiacaucasus.8.d
-		
-		is_triggered_only = yes
-		
-	    option = {
-	        name = russiacaucasus.8.a
-        }	
-	}
-	
-	news_event = { #Caucasus victorious - News
-	    id = russiacaucasus.9
-		title = russiacaucasus.9.t
-		desc = russiacaucasus.9.d
-		
-		is_triggered_only = yes
-		
-	    option = {
-	        name = russiacaucasus.9.a
-        }	
-	}
-	
-	country_event = { #Persia demands Lankaran 
-		id = russiacaucasus.10
-		title = russiacaucasus.10.t
-		desc = russiacaucasus.10.d
-		
-		fire_only_once = yes
-		
-		trigger = {
-			tag = PER  
-		    CAU = { 
-			    has_country_flag = caucasus_win 
-				owns_state = 1008 
-			}
-		} 
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {
-			name = russiacaucasus.10.a
-			
-			ai_chance = { factor = 60 }
-            hidden_effect = {
-			    CAU = { 
-				    country_event = { id = russiacaucasus.11 days = 25 }	
-				}
-			}
- 			custom_effect_tooltip = caucasus_war_5	
-		}
-		
-		option = {
-			name = russiacaucasus.10.b
-			ai_chance = { factor = 40 }
-			
-			add_stability = -0.05 
-			add_political_power = -50 
-		}
-	}
-		
-	country_event = { #Persia demands Lankaran - 2
-		id = russiacaucasus.11
-		title = russiacaucasus.11.t
-		desc = russiacaucasus.11.d
-		
-        is_triggered_only = yes 
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {  #Accept
-			name = russiacaucasus.11.a 
-			ai_chance = { factor = 70 }
-			
-			decrease_ps_by_one = yes 
-			add_stability = -0.05 
-            hidden_effect = {
-			    PER = { 
-				    country_event = { id = russiacaucasus.12 days = 25 } 
-				} 	
-			}	
-		}
-		
-		option = { #Refuse
-			name = russiacaucasus.11.b
-			ai_chance = { factor = 30 }
-			
-	    	hidden_effect = {
-	  	        PER = { 
-				    country_event = { id = russiacaucasus.13 days = 25 } 
-				} 
-		    } 
-		}
-	}
-	
-	country_event = { #Persia demands Lankaran - 3 - Caucasus Accepts 
-		id = russiacaucasus.12
-		title = russiacaucasus.12.t
-		desc = russiacaucasus.12.d
-		
-        is_triggered_only = yes 
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {  
-			name = russiacaucasus.12.a
-			PER = { transfer_state = 1008 }	
-		}
-	}
-	
-	country_event = { #Persia demands Lankaran - 3 - Caucasus Denies 
-		id = russiacaucasus.13
-		title = russiacaucasus.13.t
-		desc = russiacaucasus.13.d
-		
-        is_triggered_only = yes 
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {  
-			name = russiacaucasus.13.a 
-			PER = {
-				declare_war_on = {
-    				target = CAU
-    				type = take_claimed_state
-				}
-			}
-		}
-	}
-
-	country_event = {
-		id = russiacaucasus.14
-		title = russiacaucasus.14.t
-		desc = russiacaucasus.14.d
-		
-		fire_only_once = yes 
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		trigger = {
-            OR = {
-            	tag = CIR
-            	tag = CAU
-            }
-            NOT = { has_idea = CAU_fighters }
-            NOT = { has_idea = CAU_fighters_a }
-            RUS = { has_war_with = ROOT }
-            date < 1880.01.01
-		}
-		
-		mean_time_to_happen = { days = 2 }
-		
-		option = {
-			name = russiacaucasus.14.a
-            if = { 
-	    		limit = { ROOT = { is_ai = yes } }
-    			ROOT = { add_ideas = CAU_fighters }
-                else = { 
-    				ROOT = { add_ideas = CAU_fighters_a }
-     			}
-	    	}
-	    }
-    }
-	
-	country_event = {
-		id = russiacaucasus.15
-		title = russiacaucasus.15.t
-		desc = russiacaucasus.15.d
-		
-        is_triggered_only = yes 
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {  
-			name = russiacaucasus.15.a 
 			swap_ideas = {
     			remove_idea = CAU_fierce_resistance
     			add_idea = CAU_fierce_resistance_weak
@@ -3052,9 +3063,58 @@ country_event = {	# The sale of alaska, USA responds
 			}
 		}
 	}
+
+	country_event = {
+		id = russiacaucasus.5
+		title = russiacaucasus.5.t
+		desc = russiacaucasus.5.d
+		
+        is_triggered_only = yes
+		
+		picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+		immediate = {
+			add_manpower = -9748
+			CIR = { add_manpower = 3228 }
+			CAU = { add_manpower = 3753 }
+		}
+		
+		option = {
+			name = russiacaucasus.5.a
+		}
+	}
+
+	country_event = {
+		id = russiacaucasus.6
+		title = russiacaucasus.6.t
+		desc = russiacaucasus.6.d
+		
+        is_triggered_only = yes
+		
+		picture = GFX_report_event_second_opium_war_tianjin_treaty
+
+		option = {
+			name = russiacaucasus.6.a
+			effect_tooltip = {
+				CIR = {
+					add_manpower = 87
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_rifle_1
+						amount = 200
+						producer = ENG
+					}
+					add_equipment_to_stockpile = {
+						type = uniform_equipment_1
+						amount = 200
+						producer = ENG
+					}
+				}
+			}
+		}
+	}
+
+
 	
-
-
 
 	country_event = { #Commanders' deaths events
 		id = russiacommander.1
@@ -4440,96 +4500,6 @@ country_event = {	# The sale of alaska, USA responds
 		}
 	}
 
-	country_event = { #Publishing of Fathers and Sons
-		id = russiabook.1
-		title = russiabook.1.t
-		desc = russiabook.1.d
-		picture = GFX_report_event_krenholm_manufacture	
-		
-		fire_only_once = yes 
-	    is_triggered_only = yes
-		
-		trigger = {
-		#date > 1862.03.05 
-			tag = RUS    
-		}
-		
-		option = { #Mild censoring (cosmetic things)
-			name = russiabook.1.a
-			ai_chance = { factor = 90 }
-			add_popularity = {
-				ideology = anarchism
-				popularity = 0.01
-			}
-			add_timed_idea = {
-			    idea = RUS_idea_successful_book
-				days = 120
-			}
-	    }
-        option = { #Harsh censoring (nihilism banned)
-	        name = russiabook.1.b
-	        ai_chance = { factor = 10 }
-		    add_popularity = {
-				ideology = autocracy 
-				popularity = -0.03
-			}
-			add_political_power = 20
-			set_country_flag = harsh_censoring
-		}
-	}
-
-	country_event = {
-		id = russiabook.2
-		title = russiabook.2.t
-		desc = russiabook.2.d
-		picture = GFX_report_event_krenholm_manufacture	
-		
-		fire_only_once = yes 
-	    is_triggered_only = yes
-		
-		trigger = {
-			has_country_flag = harsh_censoring
-			NOT { 
-				has_idea = state_controlled_press 
-				has_idea = censored_press 
-			}
-			tag = RUS
-		}
-		
-		option = { #Censorship broke and the real book was revealed
-			name = russiabook.2.a
-			add_popularity = {
-				ideology = anarchism
-				popularity = 0.02
-				}
-			add_political_power = -20
-			add_timed_idea = {
-			    idea = RUS_idea_censor_broke_FaS
-				days = 60
-			}
-	    }
-	}
-	
-	country_event = {
-		id = russiabook.3
-		title = russiabook.3.t
-		desc = russiabook.3.d
-		picture = GFX_report_event_krenholm_manufacture	
-		
-		fire_only_once = yes 
-	    is_triggered_only = yes
-		
-		trigger = {
-			#date > 1866.1.31
-			tag = RUS
-		}
-		
-		option = {
-			name = russiabook.3.a
-			add_political_power = 1
-	    }
-	}
-
 ### SIBERIAN COLONIZATION ###
 
 #Yearly: New colonists arriving in Siberia
@@ -4931,19 +4901,19 @@ country_event = {
   				add_dynamic_modifier = { modifier = oblastnik_tensions }
 			}
 		}
-}
+	}
 
 #Lena Goldfields
 country_event = {
-	id = russiasiberia.1
-	title = russiasiberia.1.t
-	desc = russiasiberia.1.d
+	id = russiasiberiancolonization.6
+	title = russiasiberiancolonization.6.t
+	desc = russiasiberiancolonization.6.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = russiasiberia.1.a
+		name = russiasiberiancolonization.6.a
 			add_timed_idea = { idea = RUS_idea_lena_goldfields days = 720 }
 		}
-}
+	}

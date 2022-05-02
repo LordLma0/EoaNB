@@ -10,6 +10,25 @@ on_actions = {
 				}
 				set_country_flag = eoanb_startup_event_marker
 			}
+			every_country = {
+				limit = {
+					has_idea = religion_catholic
+					NOT = { TAG = PAP }
+				}
+				add_opinion_modifier = {
+					target = PAP
+					modifier = PAP_catholic_ties
+				}
+				reverse_add_opinion_modifier = {
+					target = PAP
+					modifier = PAP_catholic_ties
+				}
+			}
+			UCT = {
+				set_global_flag = eoanb_gamerule_pandemic_disabled
+				set_global_flag = eoanb_gamerule_rebel_disabled
+				set_global_flag = eoanb_gamerule_economy_disabled
+			}
 			if = {
 				limit = {
 					has_start_date < 1858.05.11
@@ -30,14 +49,23 @@ on_actions = {
 						is_locked = yes
 					}
 				}
-				ENG = { country_event = { id = system.1 } } # 3% threat and init events
+				AUS = { country_event = { id = austria.1 } } #German Renaming
+				AUS = { country_event = { id = austria.2 } } #Starting Situation
+				HOL = { country_event = { id = holland_oog.1 } } #Starting Situation
 				PRS = { country_event = { id = prussia.29 } } #German Renaming
+				PIE = { country_event = { id = sardinia.11 } }
+				LVN = { country_event = { id = sardinia.11 } }
+				PRM = { country_event = { id = sardinia.11 } }
+				MOD = { country_event = { id = sardinia.11 } }
+				PAP = { country_event = { id = sardinia.11 } }
+				TUS = { country_event = { id = sardinia.11 } }
+				NSC = { country_event = { id = sardinia.11 } }
 				SAX = { country_event = { id = saxonyforeign.1 } } #Starting Situation: Foreign Affairs
 				SAX = { country_event = { id = saxony.1 } } #Starting Situation: Domestic Policy
-				TSH = { country_event = { id = shogunate_japan.0 days = 1 } }
-				HOL = { country_event = { id = holland_oog.1 } }
+				SWE = { country_event = { id = eoanb_sweden.57 } } #Starting Situation: Railway Concessions
 				GEO = { country_event = { id = russiageorgia.1 days = 1 } }
 				SER = { country_event = { id = SERmisc.5 days = 1 } }
+				BRA = { country_event = {id = brazil.minister.actions.0 days = 2 } }
 				#FRA = { country_event = { id = nap_france.21 } }
 				every_country = {
 					country_event = { id = pssystem.16 days = 365 }
@@ -260,33 +288,19 @@ on_actions = {
 	#}
 
 	#FROM is war target
-#	on_declare_war = {
-#		effect = {
-#            hidden_effect = {
-#                if = {
-#                    limit = {
-#                        OR = {
-#                            tag = AUS
-#                            tag = PIE
-#                        }
-#                        FROM = {
-#                            OR = {
-#                                tag = AUS
-#                                tag = PIE
-#                            }
-#                        }
-#                    }
-#                    every_country = {
-#                        limit = {
-#                            has_idea = GER_general_idea_ger_confed
-#                        }
-#                        activate_mission = eoanb_decision_ALL_gerconfed_war1
-#                    }
-#                }
-#            }
-#		}
-#	}
-
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = rival_country
+						value = FROM.id
+					}
+				}
+				add_ideas = eoanbdiplomacy_rival_war
+			}
+		}
+	}
 	# When a new faction is formed
 	#on_faction_formed = {
 	#	effect = {
@@ -294,7 +308,7 @@ on_actions = {
 	#	}
 	#}
 
-	 #ROOT is winner #FROM is loser
+	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
 			if = {
@@ -322,34 +336,6 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					ROOT = { tag = FRA }
-					FROM = { tag = BAB }
-				}
-				country_event = { id = nap_france.153 }
-			}
-			if = {
-				limit = {
-					ROOT = { tag = FRA }
-					FROM = { tag = KBY }
-				}
-				country_event = { id = nap_france.154 }
-			}
-			#if = {
-			#	limit = {
-			#		ROOT = { tag = FRA }
-			#		FROM = { tag = MEX }
-			#	}
-			#	MXE = { country_event = { id = nap_france.3635 } }
-			#}
-			#if = {
-			#	limit = {
-			#		ROOT = { tag = MXE }
-			#		FROM = { tag = MEX }
-			#	}
-			#	country_event = { id = nap_france.3635 }
-			#}
-			if = {
-				limit = {
 					tag = NEG
 					USA = { has_country_flag = USA_Radical_Coup }
 					CAL = { exists = no }
@@ -358,35 +344,35 @@ on_actions = {
 				ROOT = { drop_cosmetic_tag = yes }
 				CAL = { drop_cosmetic_tag = yes }
 				country_event = { id = acw.47 hours = 1 }
-				news_event = { id = acw_news.13 }
+				#news_event = { id = acw_news.13 }#event not found
 				every_state = {
 					remove_core_of = MHC
 	                remove_core_of = CAL
 	                remove_core_of = NEG
 	            }
 			}
-			if = {
-				limit = {
-					tag = NEG
-					USA = { has_country_flag = USA_Radical_Coup }
-					CAL = { exists = yes }
-				}
-				declare_war_on = {
-					target = CAL
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					tag = NEG
-					USA = { has_country_flag = USA_Radical_Coup }
-					MHC = { exists = yes }
-				}
-				declare_war_on = {
-					target = MHC
-					type = annex_everything
-				}
-			}
+			# if = { ##FIX VIA EVENT OR MISSION
+				# limit = {
+					# tag = NEG
+					# USA = { has_country_flag = USA_Radical_Coup }
+					# CAL = { exists = yes }
+				# }
+				# declare_war_on = {
+					# target = CAL
+					# type = annex_everything
+				# }
+			# }
+			# if = {
+				# limit = {
+					# tag = NEG
+					# USA = { has_country_flag = USA_Radical_Coup }
+					# MHC = { exists = yes }
+				# }
+				# declare_war_on = {
+					# target = MHC
+					# type = annex_everything
+				# }
+			# }
 			if = {
 				limit = {
 					tag = CAL
@@ -397,35 +383,35 @@ on_actions = {
 				ROOT = { drop_cosmetic_tag = yes }
 				NEG = { drop_cosmetic_tag = yes }
 				country_event = { id = acw.55 hours = 1 }
-				news_event = { id = acw_news.15 }
+				#news_event = { id = acw_news.15 }#does not exist
 				every_state = {
 					remove_core_of = MHC
 	                remove_core_of = CAL
 	                remove_core_of = NEG
 	            }
 			}
-			if = {
-				limit = {
-					tag = CAL
-					USA = { has_country_flag = USA_Radical_Coup }
-					NEG = { exists = yes }
-				}
-				declare_war_on = {
-					target = NEG
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					tag = CAL
-					USA = { has_country_flag = USA_Radical_Coup }
-					MHC = { exists = yes }
-				}
-				declare_war_on = {
-					target = MHC
-					type = annex_everything
-				}
-			}
+			# if = {
+				# limit = {
+					# tag = CAL
+					# USA = { has_country_flag = USA_Radical_Coup }
+					# NEG = { exists = yes }
+				# }
+				# declare_war_on = {
+					# target = NEG
+					# type = annex_everything
+				# }
+			# }
+			# if = {
+				# limit = {
+					# tag = CAL
+					# USA = { has_country_flag = USA_Radical_Coup }
+					# MHC = { exists = yes }
+				# }
+				# declare_war_on = {
+					# target = MHC
+					# type = annex_everything
+				# }
+			# }
 			if = {
 				limit = {
 					tag = MHC
@@ -443,28 +429,28 @@ on_actions = {
 	                remove_core_of = NEG
 	            }
 			}
-			if = {
-				limit = {
-					tag = MHC
-					USA = { has_country_flag = USA_Radical_Coup }
-					NEG = { exists = yes }
-				}
-				declare_war_on = {
-					target = NEG
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					tag = MHC
-					USA = { has_country_flag = USA_Radical_Coup }
-					CAL = { exists = yes }
-				}
-				declare_war_on = {
-					target = CAL
-					type = annex_everything
-				}
-			}
+			# if = {
+				# limit = {
+					# tag = MHC
+					# USA = { has_country_flag = USA_Radical_Coup }
+					# NEG = { exists = yes }
+				# }
+				# declare_war_on = {
+					# target = NEG
+					# type = annex_everything
+				# }
+			# }
+			# if = {
+				# limit = {
+					# tag = MHC
+					# USA = { has_country_flag = USA_Radical_Coup }
+					# CAL = { exists = yes }
+				# }
+				# declare_war_on = {
+					# target = CAL
+					# type = annex_everything
+				# }
+			# }
 			if = {
 				limit = {
 					FROM = {
@@ -511,7 +497,7 @@ on_actions = {
 					}
 				}
 			}
-			if = {
+			if = { #liberal mexico victory
 				limit = {
 					tag = MEX
 					FROM = { tag = MEC }
@@ -554,12 +540,12 @@ on_actions = {
 					increase_ps_by_one = yes
 					country_event = { days = 1 id = mexico.12 }
 					delete_unit_template_and_units = { division_template = "Local Militia" }
-					set_capital = 277
+					set_capital = { state = 277 }
 					set_global_flag = MEX_reform_war_end
 					load_focus_tree = mexico_liberal_tree
 				}
 			}
-			if = {
+			if = { # conservitive mexico victory
 				limit = {
 					tag = MEC
 					FROM = { tag = MEX }
@@ -601,9 +587,29 @@ on_actions = {
 					increase_ps_by_one = yes
 					country_event = { days = 1 id = mexico.12 }
 					delete_unit_template_and_units = { division_template = "Light Infantry" }
-					set_capital = 277
+					set_capital = { state = 277 }
 					set_global_flag = MEX_reform_war_end
 				}
+			}
+			if = {
+				limit={
+					FROM={has_country_flag = true_china}
+					ROOT={
+						tag = QNG 
+						tag = ROC 
+						tag = PRC 
+						tag = TAI 
+						tag = GXC 
+						tag = TAW 
+						tag = PTH 
+						tag = SIC 
+						tag = YAL 
+						tag = NIE 
+						tag = BEI
+					}
+				}
+				FROM={clr_country_flag = true_china}
+				ROOT={set_country_flag = true_china}
 			}
 		}
 	}
@@ -692,7 +698,7 @@ on_actions = {
 				}
 			if = {
                 limit = {
-					FROM = { tag = PIE }
+					FROM = { OR = { tag = PIE tag = TUS } }
 					ROOT = { tag = NSC }
 					NSC = {
 						has_country_flag = NSC_Southern_rebellion_on_capitulation
@@ -704,6 +710,7 @@ on_actions = {
 					remove_state_core = 997
 					remove_state_core = 156
 					remove_state_core = 115
+					clr_country_flag = NSC_Southern_rebellion_on_capitulation
 				}
                 FROM = {
 					annex_country = {
@@ -711,37 +718,37 @@ on_actions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					ROOT = { tag = PAP }
-					PAP = {
-						has_government = fundamentalism
-					}
-				}
-				FROM = {
-					PAP = {
-						every_owned_state = {
-							limit = {
-								NOT = {
-									state = 785
-								}
-							}
-							FROM = {
-								transfer_state = PREV
-							}	
+			# if = {
+				# limit = {
+					# ROOT = { tag = PAP }
+					# PAP = {
+						# has_government = fundamentalism
+					# }
+				# }
+				# FROM = {
+					# PAP = {
+						# every_owned_state = {
+							# limit = {
+								# NOT = {
+									# state = 785
+								# }
+							# }
+							# FROM = {
+								# transfer_state = PREV
+							# }	
 							
-						}
-					}
-				}
+						# }
+					# }
+				# }
 
-			}
-	        if = {
-                limit = {
-					FROM = { tag = RUS }
-				    ROOT = { tag = CIR }
-                }
-                    FROM = { country_event = { id = caucasus.2 } }
-            }
+			# }
+	        # if = {
+                # limit = {
+					# FROM = { tag = RUS }
+				    # ROOT = { tag = CIR }
+                # }
+                # FROM = { country_event = { id = caucasus.2 } } #event does not exist
+            # }
 	        #if = {
                 #limit = {
 					#ROOT = { tag = AUS }
@@ -749,20 +756,21 @@ on_actions = {
                 #}
                 #AUS = { country_event = AUSitalypolitics.1  }
             #}
-			if = {
+			if = {#British win the Sepoy rebellion
                 limit = {
 					FROM = { tag = RAJ }
 					ROOT = { tag = SRS }
                 }
                 FROM = { country_event = { id = britishindia.1 } }
             }
-			if = {
+			if = {#spain wins, dom is annexed
 				limit = {
 					TAG = DOM
 					FROM = { TAG = SPR }
 				}
 				SPR = {
 					transfer_state = 319
+					transfer_state = 1318
 					set_country_flag = SPR_won_restoration
 				}
 				DOM = {
@@ -770,7 +778,7 @@ on_actions = {
 					remove_ideas = DOM_restoration_war
 				}
 			}
-			if = {
+			if = {#the USV wins vs venezuela
 				limit = {
 					TAG = VEN
 					FROM = { TAG = USV }
@@ -790,25 +798,40 @@ on_actions = {
 					FROM = {
 						OR = {
 							tag = BRA
-							tag = ARG
 							tag = URC
 							tag = URG
+							tag = BOL
+							tag = ARG	
 						}
 					}
+					FROM = { controls_state = 1068 }
 					PAR = { has_country_flag = Paraguayan_War }
 				}
+				FROM = { set_country_flag = Occupation_of_Asuncion }
 				ROOT = { white_peace = FROM }
 				PAR = { country_event = { id = par.15 } }
 			}
+			
 			if = {
 				limit = {
 					tag = BRA
-					FROM = { tag = PAR }
+					FROM = {
+						OR = {
+							tag = PAR
+							tag = ARG
+							tag = URC
+							tag = URG
+							tag = BOL
+						}
+					}
+					FROM = { controls_state = 1037 }
 					PAR = { has_country_flag = Paraguayan_War }
 				}
+				FROM = { set_country_flag = Occupation_of_Rio }
 				ROOT = { white_peace = FROM }
 				PAR = { country_event = { id = par.16 } }
 			}
+			
 			if = {
 				limit = {
 					TAG = ECU
@@ -865,6 +888,32 @@ on_actions = {
 					}
 				}
 				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			if = {#BUE wins civil war
+				limit = {
+					ROOT = { tag = ARG }
+					FROM = { 
+						tag = BUE
+					}
+				}
+				ROOT = { white_peace = FROM }
+				FROM = {
+					puppet = ARG
+				}
+			}
+			if = {#ARG wins civil war
+				limit = {
+					ROOT = { tag = BUE }
+					FROM = { 
+						tag = ARG
+					}
+				}
+				FROM = {
+					country_event = {id=arg.1}
 					annex_country = {
 						target = ROOT
 					}
@@ -1090,11 +1139,11 @@ on_actions = {
 	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
 	#ROOT = nation being released, FROM = overlord
 
-	#on_release_as_puppet = {
-	#	effect = {
-	#
-	#	}
-	#}
+	on_release_as_puppet = {
+		effect = {
+			compute_national_vote = yes
+		}
+	}
 
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
 	#on_annex = {
@@ -1141,89 +1190,24 @@ on_actions = {
 	#
 	#	}
 	#}
-
-	on_state_control_changed = {
+	
+	#On state control change triggers whenever a province exchanges hands. Very laggy!
+	on_state_control_changed = { 
 		effect = {
-			if = {
-				limit = {
-					OR = {
-						FROM.FROM = { is_owned_by = USA }
-						FROM.FROM = { is_owned_by = CSA }
-						FROM.FROM = { is_owned_by = CAL }
-						FROM.FROM = { is_owned_by = NEG }
-						FROM.FROM = { is_owned_by = MHC }
-					}
-					has_global_flag = ACW_American_Civil_War
-				}
-		        random_list = {
-		        	25 = {
-		        		FROM.FROM = { remove_building = { type = infrastructure level = 1 } }
-		        	}
-		        	25 = {
-		        		FROM.FROM = { remove_building = { type = industrial_complex level = 1 } }
-		        	}
-		        	25 = {
-		        		FROM.FROM = { remove_building = { type = arms_factory level = 1 } }
-		        	}
-		        	25 = {
-		        		FROM.FROM = { remove_building = { type = arms_factory level = 1 } }
-		        		FROM.FROM = { remove_building = { type = industrial_complex level = 1 } }
-		        		FROM.FROM = { remove_building = { type = infrastructure level = 1 } }
-		        	}
-		        }
-		        FROM.FROM = { damage_building = { type = infrastructure damage = 0.9 } }
-		        FROM.FROM = { damage_building = { type = industrial_complex damage = 0.7 } }
-		        FROM.FROM = { damage_building = { type = arms_factory damage = 0.5 } }
-		        ROOT = { add_equipment_to_stockpile = { type = infantry_equipment amount = 500 } }
-		        ROOT = { add_equipment_to_stockpile = { type = uniform_equipment amount = 500 } }
-		        ROOT = { add_equipment_to_stockpile = { type = cavalry_equipment amount = 50 } }
-		        FROM = { add_stability = -0.05 }
-        		FROM = { add_war_support = -0.05 }
-			}
-			if = {
-				limit = {
-					OR = {
-						ROOT = { tag = CSA }
-						ROOT = { tag = MEX }
-						AND = {
-							ROOT = { tag = ENG }
-							CSA = { has_country_flag = CSA_UK_second_mexican_war }
-						}
-						AND = {
-							ROOT = { tag = CSA }
-							CSA = { has_country_flag = CSA_UK_second_mexican_war }
-						}
-						ROOT = { tag = FRA }
-					}
-					FROM.FROM = { is_owned_by = USA }
-					has_global_flag = ACW_second_mexican_war
-					USA = { surrender_progress > 0.2 }
-					CSA = { has_war_with = USA }
-				}
-				CSA = { country_event = { id = csa.31 } }
-			}
-			if = {
-				limit = {
-					FROM.FROM = { is_owned_by = CSA }
-					has_global_flag = ACW_second_mexican_war
-					CSA = { surrender_progress > 0.2 }
-					CSA = { has_war_with = USA }
-				}
-				USA = { country_event = { id = csa.31 } }
-			}
+            #This has no conditions and can trigger in 2050 even... Please rework (to reduce lag)
+			#if = {
+            #    limit = {
+            #        tag = SWE
+            #        FROM.FROM = {
+            #            state = 104
+            #        }
+            #    }
+            #    country_event = { id = eoanb_sweden.13 days = 1 }
+            #}
             if = {
                 limit = {
-                    tag = SWE
-                    FROM.FROM = {
-                        state = 104
-                    }
-                }
-                country_event = { id = eoanb_sweden.13 days = 1 }
-            }
-            if = {
-                limit = {
-                    tag = FRA
                     has_global_flag = eoanb_flag_franco_prussian_war_ongoing
+					tag = FRA
                     FROM.FROM = {
                         is_owned_by = PRS
                     }
@@ -1232,14 +1216,14 @@ on_actions = {
             }
             if = {
                 limit = {
+					FROM.FROM = {
+						state = 18
+                    }
                     OR = {
                         tag = PRS
                         tag = BAD
                         tag = WUR
                         tag = BAV
-                    }
-                    FROM.FROM = {
-						state = 18
                     }
                 }
                 FRA = {
@@ -1249,4 +1233,15 @@ on_actions = {
 		}
 	}
 	
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					tag = DEN
+					DEN = { has_country_flag = DEN_wartime_battalion_duplication_flag }
+				}
+				DEN = { add_ideas = DEN_idea_wartime_battalion_duplication }
+			}
+		}
+	}
 }

@@ -1,23 +1,201 @@
 technologies = {
-
-	iron_railways = {
+	mass_transit_early = {#moved from socio-economics
 		
-		production_speed_infrastructure_factor = 0.05
+		enable_building = {
+			building = infrastructure
+			level = 8
+		}
+		# enable_building = {
+			# building = rail_way
+			# level = 1
+		# }
+		
+		path = {
+			leads_to_tech = tech_humanities_roadworks
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = iron_railways
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_humanities_metropolitan
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 0.15
+		start_year = 1850
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = 1 y = -2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1855.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			transport_tech
+		}
+	}
+	tech_humanities_roadworks = {
 		
 		enable_building = {
 			building = infrastructure
 			level = 9
 		}
 		
+		path = {
+			leads_to_tech = tech_humanities_asphalt_roads
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 0.1
+		start_year = 1850
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = -2 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1860.1.1"
+			}
+	
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			transport_tech
+		}
+	}
+	
+	tech_humanities_metropolitan = {
+		
+		consumer_goods_factor = 0.01
+		production_factory_efficiency_gain_factor = 0.04
+		line_change_production_efficiency_factor = 0.02
+		
+		research_cost = 0.1
+		start_year = 1855
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1865.1.1"
+			}
+	
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			transport_tech
+		}
+	}
+	
+	tech_humanities_asphalt_roads = {
+		
+		enable_building = {
+			building = infrastructure
+			level = 10
+		}
+		
+		research_cost = 0.1
+		start_year = 1865
+		folder = {
+			name = mechanical_engineering_folder
+			position = { x = -2 y = 10 }
+		}
+		
+		path = {
+			leads_to_tech = tarmac_roads
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.5
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1870.1.1"
+			}
+	
+		}
+		
+		categories = {
+			mechanical_engineering_tech
+			transport_tech
+		}
+	}
+
+	iron_railways = {
+		
+		production_speed_infrastructure_factor = 0.05
+		
+		on_research_complete = {
+			set_temp_variable = { eoanb_tech_score_change = 1 }
+			eoanb_change_tech_score = yes
+		}
+		
+		enable_building = {
+			building = rail_way
+			level = 2
+		}
+		
 		dependencies = {
 			tribal_steam_experiments = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 0 y = -2 }
+			position = { x = 3 y = 0 }
 		}
 		
 		path = {
@@ -87,6 +265,7 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -95,11 +274,11 @@ technologies = {
 		production_speed_infrastructure_factor = 0.05
 		
 		enable_building = {
-			building = infrastructure
-			level = 10
+			building = rail_way
+			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = mechanical_engineering_folder
@@ -168,6 +347,7 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -175,11 +355,15 @@ technologies = {
 		
 		line_change_production_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = mechanical_engineering_folder
 			position = { x = 0 y = 10 }
+		}
+		enable_building = {
+			building = rail_way
+			level = 4
 		}
 		
 		path = {
@@ -248,6 +432,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	
@@ -255,11 +440,15 @@ technologies = {
 		
 		line_change_production_efficiency_factor = 0.05
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
 			position = { x = 20 y = -2 }
+		}
+		on_research_complete = {
+			set_temp_variable = { eoanb_tech_score_change = 1 }
+			eoanb_change_tech_score = yes
 		}
 		
 		dependencies = {
@@ -280,7 +469,7 @@ technologies = {
 			factor = 10
 			modifier = {
 				factor = 5
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 0
@@ -320,7 +509,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
@@ -344,7 +533,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 20
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 1000
@@ -370,6 +559,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -379,7 +569,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
@@ -389,6 +579,23 @@ technologies = {
 		path = {
 			leads_to_tech = mechanical_production_2
 			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			if={
+				limit={
+					check_variable = {ROOT.innovation_progress < 100}
+					OR = { 
+						has_idea = afr_reforming_kingdom
+						has_country_flag = Oceania_industrializing
+						has_country_flag = afr_colony_industrializing
+						has_country_flag = afr_an_african_industrializing
+					}
+				}
+				custom_effect_tooltip = eoanb_tech_add_industrialisation
+				hidden_effect = {
+					add_to_variable = { ROOT.innovation_progress = 5 }
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -403,7 +610,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 20
-				date > 1850.1.1
+ 
 			}
 			modifier = {
 				factor = 1000
@@ -438,7 +645,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = mechanical_engineering_folder
@@ -473,7 +680,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = mechanical_engineering_folder
@@ -520,7 +727,7 @@ technologies = {
 			level = 6
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
@@ -598,8 +805,25 @@ technologies = {
 			building = industrial_complex
 			level = 8
 		}
+		on_research_complete = {
+			if={
+				limit={
+					check_variable = {ROOT.innovation_progress < 100}
+					OR = { 
+						has_idea = afr_reforming_kingdom
+						has_country_flag = Oceania_industrializing
+						has_country_flag = afr_colony_industrializing
+						has_country_flag = afr_an_african_industrializing
+					}
+				}
+				custom_effect_tooltip = eoanb_tech_add_industrialisation
+				hidden_effect = {
+					add_to_variable = { ROOT.innovation_progress = 5 }
+				}
+			}
+		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = mechanical_engineering_folder
@@ -646,7 +870,7 @@ technologies = {
 			level = 9
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = mechanical_engineering_folder
@@ -694,7 +918,7 @@ technologies = {
 			level = 10
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = mechanical_engineering_folder
@@ -742,7 +966,7 @@ technologies = {
 			level = 11
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = mechanical_engineering_folder
@@ -794,7 +1018,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = mechanical_engineering_folder
@@ -836,7 +1060,7 @@ technologies = {
 			level = 13
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = mechanical_engineering_folder
@@ -883,7 +1107,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		
 		XOR = {
 			dispersed_industry
@@ -943,9 +1167,6 @@ technologies = {
 			concentrated_industry_category
 		}
 		
-		ai_research_weights = {
-			offensive = -1.0
-		}
 	}
 	
 	concentrated_industry2 = {
@@ -959,7 +1180,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1937
 		
 		folder = {
@@ -991,9 +1212,6 @@ technologies = {
 			concentrated_industry_category
 		}
 		
-		ai_research_weights = {
-			offensive = -1.0
-		}
 	}
 	
 	concentrated_industry3 = {
@@ -1007,7 +1225,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1939
 		
 		folder = {
@@ -1043,9 +1261,6 @@ technologies = {
 			concentrated_industry_category
 		}
 		
-		ai_research_weights = {
-			offensive = -1.0
-		}
 	}
 	
 	dispersed_industry = {
@@ -1063,7 +1278,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		
 		XOR = {
 			concentrated_industry
@@ -1118,9 +1333,6 @@ technologies = {
 			dispersed_industry_category
 		}
 		
-		ai_research_weights = {
-			defensive = -1.0
-		}
 	}
 	
 	dispersed_industry2 = {
@@ -1137,7 +1349,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1937
 		
 		folder = {
@@ -1168,9 +1380,6 @@ technologies = {
 			dispersed_industry_category
 		}
 		
-		ai_research_weights = {
-			defensive = -1.0
-		}
 	}
 	
 	dispersed_industry3 = {
@@ -1187,7 +1396,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1939
 		
 		folder = {
@@ -1218,9 +1427,6 @@ technologies = {
 			dispersed_industry_category
 		}
 		
-		ai_research_weights = {
-			defensive = -1.0
-		}
 	}
 	combined_industry = {
 
@@ -1239,7 +1445,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1939
 		
 		folder = {
@@ -1270,9 +1476,6 @@ technologies = {
 			dispersed_industry_category
 		}
 		
-		ai_research_weights = {
-			defensive = -1.0
-		}
 	}
 
 	
@@ -1286,7 +1489,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = mechanical_engineering_folder
@@ -1335,7 +1538,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = mechanical_engineering_folder
@@ -1389,7 +1592,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = mechanical_engineering_folder
@@ -1436,7 +1639,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = mechanical_engineering_folder
@@ -1483,7 +1686,7 @@ technologies = {
 			level = 5
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = mechanical_engineering_folder
@@ -1529,7 +1732,7 @@ technologies = {
 			level = 6
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = mechanical_engineering_folder
@@ -1571,7 +1774,7 @@ technologies = {
 			level = 7
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1936
 		folder = {
 			name = mechanical_engineering_folder
@@ -1613,7 +1816,7 @@ technologies = {
 			level = 8
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = mechanical_engineering_folder
@@ -1655,7 +1858,7 @@ technologies = {
 			level = 9
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = mechanical_engineering_folder
@@ -1701,7 +1904,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = mechanical_engineering_folder
@@ -1729,7 +1932,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = mechanical_engineering_folder
@@ -1757,7 +1960,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = mechanical_engineering_folder
@@ -1790,7 +1993,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1985
 		folder = {
 			name = mechanical_engineering_folder
@@ -1827,7 +2030,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1995
 		folder = {
 			name = mechanical_engineering_folder
@@ -1860,7 +2063,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.15
 		production_factory_efficiency_gain_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = mechanical_engineering_folder
@@ -1885,7 +2088,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = mechanical_engineering_folder
@@ -1918,7 +2121,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1995
 		folder = {
 			name = mechanical_engineering_folder
@@ -1947,7 +2150,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = mechanical_engineering_folder
@@ -1984,7 +2187,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = mechanical_engineering_folder
@@ -2012,7 +2215,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.005
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = mechanical_engineering_folder
@@ -2040,7 +2243,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = mechanical_engineering_folder
@@ -2073,7 +2276,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = mechanical_engineering_folder
@@ -2100,7 +2303,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = mechanical_engineering_folder
@@ -2130,7 +2333,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = mechanical_engineering_folder
@@ -2158,7 +2361,7 @@ technologies = {
 		
 		MONTHLY_POPULATION = 0.25
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2040
 		folder = {
 			name = mechanical_engineering_folder
@@ -2185,7 +2388,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = mechanical_engineering_folder
@@ -2212,7 +2415,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = mechanical_engineering_folder
@@ -2241,7 +2444,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = mechanical_engineering_folder
@@ -2270,7 +2473,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = mechanical_engineering_folder
@@ -2299,7 +2502,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = mechanical_engineering_folder
@@ -2328,7 +2531,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2050
 		folder = {
 			name = mechanical_engineering_folder
@@ -2354,7 +2557,7 @@ technologies = {
 		global_building_slots_factor = 0.075
 		industrial_capacity_factory = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = mechanical_engineering_folder
@@ -2384,7 +2587,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
@@ -2414,7 +2617,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
@@ -2448,7 +2651,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
@@ -2482,7 +2685,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = mechanical_engineering_folder
@@ -2506,6 +2709,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			rocketry
 		}
 	}
 	experimental_rockets = {
@@ -2520,7 +2724,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1938
 		
 		folder = {
@@ -2569,7 +2773,7 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1942
 		
 		folder = {
@@ -2616,7 +2820,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		
 		folder = {
@@ -2661,7 +2865,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		
 		folder = {
@@ -2708,7 +2912,7 @@ technologies = {
 			leads_to_tech = tains
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		
 		folder = {
@@ -2755,7 +2959,7 @@ technologies = {
 			leads_to_tech = dsmac
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		
 		folder = {
@@ -2797,7 +3001,7 @@ technologies = {
 		#dependencies={
 		#	unmanned_satellites = 1
 		#}
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		
 		folder = {
@@ -2820,7 +3024,7 @@ technologies = {
 		naval_speed_factor = 0.05
 		navy_max_range_factor = 0.05
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1875
 		folder = {
 			name = mechanical_engineering_folder
@@ -2842,6 +3046,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -2849,7 +3054,7 @@ technologies = {
 	
 		navy_max_range_factor = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = mechanical_engineering_folder
@@ -2876,6 +3081,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -2885,7 +3091,7 @@ technologies = {
 		naval_speed_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = mechanical_engineering_folder
@@ -2907,6 +3113,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -2923,7 +3130,7 @@ technologies = {
 			tribal_artisan = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = mechanical_engineering_folder
@@ -2976,7 +3183,7 @@ technologies = {
 	
 		production_factory_max_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = mechanical_engineering_folder
@@ -3034,7 +3241,7 @@ technologies = {
 			level = 8
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = mechanical_engineering_folder
@@ -3082,7 +3289,7 @@ technologies = {
 	
 		production_factory_max_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = mechanical_engineering_folder
@@ -3135,7 +3342,7 @@ technologies = {
 			level = 10
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = mechanical_engineering_folder
@@ -3182,7 +3389,7 @@ technologies = {
 	
 		production_factory_max_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = mechanical_engineering_folder
@@ -3207,7 +3414,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3219,7 +3426,7 @@ technologies = {
 	
 		production_factory_max_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1935
 		folder = {
 			name = mechanical_engineering_folder
@@ -3239,7 +3446,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3251,7 +3458,7 @@ technologies = {
 	
 		production_factory_max_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = mechanical_engineering_folder
@@ -3283,7 +3490,7 @@ technologies = {
 	
 		production_factory_max_efficiency_factor = 0.15
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = mechanical_engineering_folder
@@ -3338,7 +3545,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = mechanical_engineering_folder
@@ -3391,7 +3598,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = mechanical_engineering_folder
@@ -3447,7 +3654,7 @@ technologies = {
 			level = 6
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = mechanical_engineering_folder
@@ -3490,7 +3697,7 @@ technologies = {
 			level = 8
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = mechanical_engineering_folder
@@ -3540,7 +3747,7 @@ technologies = {
 			level = 10
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = mechanical_engineering_folder
@@ -3555,7 +3762,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3584,7 +3791,7 @@ technologies = {
 			level = 12
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = mechanical_engineering_folder
@@ -3599,7 +3806,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3628,7 +3835,7 @@ technologies = {
 			level = 13
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1935
 		folder = {
 			name = mechanical_engineering_folder
@@ -3643,7 +3850,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3672,7 +3879,7 @@ technologies = {
 			level = 14
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = mechanical_engineering_folder
@@ -3687,7 +3894,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3716,7 +3923,7 @@ technologies = {
 			level = 15
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = mechanical_engineering_folder
@@ -3731,7 +3938,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3760,7 +3967,7 @@ technologies = {
 			level = 16
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
@@ -3775,7 +3982,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3804,7 +4011,7 @@ technologies = {
 			level = 17
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = mechanical_engineering_folder
@@ -3819,7 +4026,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3848,7 +4055,7 @@ technologies = {
 			level = 18
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = mechanical_engineering_folder
@@ -3863,7 +4070,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3892,7 +4099,7 @@ technologies = {
 			level = 19
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = mechanical_engineering_folder
@@ -3907,7 +4114,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3936,7 +4143,7 @@ technologies = {
 			level = 20
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = mechanical_engineering_folder
@@ -3951,7 +4158,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -3980,7 +4187,7 @@ technologies = {
 			level = 21
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = mechanical_engineering_folder
@@ -3995,7 +4202,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -4024,7 +4231,7 @@ technologies = {
 			level = 23
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		folder = {
 			name = mechanical_engineering_folder
@@ -4039,7 +4246,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -4068,7 +4275,7 @@ technologies = {
 			level = 25
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2040
 		folder = {
 			name = mechanical_engineering_folder
@@ -4079,7 +4286,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -4093,7 +4300,7 @@ technologies = {
 		local_resources_factor = 0.05
 		out_of_supply_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
@@ -4111,11 +4318,6 @@ technologies = {
 		
 		path = {
 			leads_to_tech = high_speed_steam_engine
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = steam_locomotive
 			research_cost_coeff = 1
 		}
 		
@@ -4168,6 +4370,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -4176,11 +4379,16 @@ technologies = {
 		local_resources_factor = 0.05
 		out_of_supply_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
 			position = { x = 10 y = 0 }
+		}
+		
+		on_research_complete = {
+			set_temp_variable = { eoanb_tech_score_change = 1 }
+			eoanb_change_tech_score = yes
 		}
 		
 		folder = {
@@ -4198,11 +4406,16 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		path = {
+			leads_to_tech = steam_locomotive
+			research_cost_coeff = 1
+		}
+		
 		ai_will_do = {
 			factor = 10
 			modifier = {
 				add = 1
-				date > "1850.1.1"
+ 
 			}
 			modifier = {
 				factor = 0
@@ -4218,6 +4431,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -4226,7 +4440,7 @@ technologies = {
 		local_resources_factor = 0.05
 		out_of_supply_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = mechanical_engineering_folder
@@ -4247,7 +4461,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 			modifier = {
 				factor = 0
@@ -4263,6 +4477,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -4271,11 +4486,15 @@ technologies = {
 		local_resources_factor = 0.05
 		out_of_supply_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = mechanical_engineering_folder
 			position = { x = 10 y = 18 }
+		}
+		on_research_complete = {
+			set_temp_variable = { eoanb_tech_score_change = 1 }
+			eoanb_change_tech_score = yes
 		}
 		
 		folder = {
@@ -4308,6 +4527,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -4316,7 +4536,7 @@ technologies = {
 		local_resources_factor = 0.05
 		out_of_supply_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = mechanical_engineering_folder
@@ -4348,6 +4568,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -4355,7 +4576,7 @@ technologies = {
 	
 		naval_speed_factor = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = mechanical_engineering_folder
@@ -4376,7 +4597,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -4392,7 +4613,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = mechanical_engineering_folder
@@ -4412,12 +4633,13 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	v8_engines = {
@@ -4427,7 +4649,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = mechanical_engineering_folder
@@ -4452,6 +4674,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	fuel_direct_injection = {
@@ -4461,7 +4684,7 @@ technologies = {
 		air_interception_agility_factor = 0.08
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = mechanical_engineering_folder
@@ -4492,6 +4715,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	v6_engines = {
@@ -4501,7 +4725,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = mechanical_engineering_folder
@@ -4523,6 +4747,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	turbocharger = {
@@ -4532,7 +4757,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
@@ -4559,6 +4784,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	wankel_engines = {
@@ -4568,7 +4794,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = mechanical_engineering_folder
@@ -4595,6 +4821,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	early_cylinder_deactivation = {
@@ -4604,7 +4831,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = mechanical_engineering_folder
@@ -4629,6 +4856,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	cylinder_deactivation = {
@@ -4638,7 +4866,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = mechanical_engineering_folder
@@ -4660,6 +4888,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	hybrid_engines = {
@@ -4669,7 +4898,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = mechanical_engineering_folder
@@ -4691,6 +4920,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	improved_compression_ratios = {
@@ -4700,7 +4930,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = mechanical_engineering_folder
@@ -4722,6 +4952,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	improved_hybrid_engines = {
@@ -4731,7 +4962,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2020
 		folder = {
 			name = mechanical_engineering_folder
@@ -4753,6 +4984,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	full_power_electric_engines = {
@@ -4762,7 +4994,7 @@ technologies = {
 		air_interception_agility_factor = 0.04
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2020
 		folder = {
 			name = mechanical_engineering_folder
@@ -4784,6 +5016,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			engine_tech
 		}
 	}
 	
@@ -4791,7 +5024,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = mechanical_engineering_folder
@@ -4816,7 +5049,7 @@ technologies = {
 			factor = 1000
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
@@ -4830,7 +5063,7 @@ technologies = {
 		local_resources_factor = 0.05
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = mechanical_engineering_folder
@@ -4869,15 +5102,15 @@ technologies = {
 		line_change_production_efficiency_factor = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 6 y = 0 }
+			position = { x = 6 y = 2 }
 		}
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 0 }
+			position = { x = -3 y = 0 }
 		}
 		
 		path = {
@@ -4901,6 +5134,7 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -4909,11 +5143,11 @@ technologies = {
 		line_change_production_efficiency_factor = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 6 y = 2 }
+			position = { x = 6 y = 4 }
 		}
 		
 		path = {
@@ -4930,13 +5164,14 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -4944,18 +5179,18 @@ technologies = {
 	
 		industrial_capacity_factory = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 4 y = 4 }
+			position = { x = 4 y = 6 }
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 			modifier = {
 				factor = 25
@@ -4975,7 +5210,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = mechanical_engineering_folder
@@ -4991,7 +5226,7 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 			modifier = {
 				factor = 0
@@ -5008,6 +5243,7 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -5016,7 +5252,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = mechanical_engineering_folder
@@ -5044,6 +5280,7 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -5052,7 +5289,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = mechanical_engineering_folder
@@ -5072,13 +5309,14 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -5088,11 +5326,11 @@ technologies = {
 		conversion_cost_civ_to_mil_factor = -0.05
 		production_speed_buildings_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 2 }
+			position = { x = 2 y = 4 }
 		}
 		
 		path = {
@@ -5104,18 +5342,19 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 			modifier = {
 				factor = 30
 				afr_is_tribal = yes
-				date > "1850.1.1"
+ 
 			}
 		}
 		
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	
@@ -5125,7 +5364,7 @@ technologies = {
 		conversion_cost_civ_to_mil_factor = -0.05
 		production_speed_buildings_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = mechanical_engineering_folder
@@ -5134,6 +5373,11 @@ technologies = {
 		path = {
 			leads_to_tech = subway_construction
 			research_cost_coeff = 1
+		}
+		
+		enable_building = {
+			building = rail_way
+			level = 5
 		}
 		
 		ai_will_do = {
@@ -5161,20 +5405,21 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	subway_construction = {
-
+	
 		enable_building = {
-			building = infrastructure
-			level = 11
+			building = rail_way
+			level = 7
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 0 y = 24 }
+			position = { x = 2 y = 24 }
 		}
 		path = {
 			leads_to_tech = intergrated_tram_and_bus_ways
@@ -5200,17 +5445,18 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	intergrated_tram_and_bus_ways = {
 
 		production_speed_infrastructure_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 0 y = 26 }
+			position = { x = 2 y = 26 }
 		}
 		path = {
 			leads_to_tech = early_highway_introduction
@@ -5246,22 +5492,22 @@ technologies = {
 	}
 	tarmac_roads = {
 
-		global_building_slots_factor = 0.05
-		production_speed_infrastructure_factor = 0.05
-		mobilization_speed = 0.1
+		enable_building = {
+			building = infrastructure
+			level = 11
+		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 26 }
+			position = { x = -2 y = 26 }
 		}
 		path = {
 			leads_to_tech = early_highway_introduction
 			research_cost_coeff = 1
 		}
 		dependencies={
-			tech_humanities_asphalt_roads = 1
 			construction_4 = 1
 		}
 		
@@ -5295,11 +5541,11 @@ technologies = {
 			level = 12
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 30 }
+			position = { x = -2 y = 30 }
 		}
 		path = {
 			leads_to_tech = mass_highspeed_highways
@@ -5345,11 +5591,11 @@ technologies = {
 			level = 13
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 34 }
+			position = { x = -2 y = 34 }
 		}
 		
 		path = {
@@ -5389,11 +5635,11 @@ technologies = {
 
 		production_speed_infrastructure_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 36 }
+			position = { x = -2 y = 36 }
 		}
 		path = {
 			leads_to_tech = automatic_level_crossings
@@ -5432,11 +5678,11 @@ technologies = {
 
 		production_speed_infrastructure_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 44 }
+			position = { x = -2 y = 44 }
 		}
 		path = {
 			leads_to_tech = high_speed_rail
@@ -5472,13 +5718,16 @@ technologies = {
 	}
 	modern_roundabouts = {
 
-		global_building_slots_factor = 0.025
+		enable_building = {
+			building = infrastructure
+			level = 14
+		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 2 y = 48 }
+			position = { x = -2 y = 48 }
 		}
 		path = {
 			leads_to_tech = combined_transportation_networks
@@ -5511,15 +5760,15 @@ technologies = {
 	high_speed_rail = {
 
 		enable_building = {
-			building = infrastructure
-			level = 14
+			building = rail_way
+			level = 8
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 0 y = 48 }
+			position = { x = 2 y = 48 }
 		}
 		dependencies={
 			automatic_level_crossings = 1
@@ -5552,6 +5801,7 @@ technologies = {
 		categories = {
 			mechanical_engineering_tech
 			transport_tech
+			trains_tech
 		}
 	}
 	diesel_locomotive_2 = {
@@ -5559,7 +5809,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = mechanical_engineering_folder
@@ -5590,6 +5840,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	diesel_locomotive_3 = {
@@ -5597,7 +5848,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = mechanical_engineering_folder
@@ -5622,12 +5873,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	diesel_locomotive_4 = {
@@ -5635,7 +5887,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = mechanical_engineering_folder
@@ -5665,12 +5917,13 @@ technologies = {
 			
 			modifier = {
 				factor = 1
-				date > "1850.1.1"
+ 
 			}
 		}
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	diesel_locomotive_5 = {
@@ -5678,7 +5931,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = mechanical_engineering_folder
@@ -5714,6 +5967,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	long_haul_designs = {
@@ -5721,7 +5975,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = mechanical_engineering_folder
@@ -5752,6 +6006,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	full_electric_locomotives = {
@@ -5759,7 +6014,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = mechanical_engineering_folder
@@ -5790,6 +6045,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	high_speed_designs = {
@@ -5797,7 +6053,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = mechanical_engineering_folder
@@ -5835,6 +6091,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	high_speed_locomotives = {
@@ -5842,7 +6099,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = mechanical_engineering_folder
@@ -5873,19 +6130,21 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	tilting_cornering_designs = {
 	
-		production_factory_efficiency_gain_factor = 0.05
-		conversion_cost_civ_to_mil_factor = -0.05
-		production_speed_buildings_factor = 0.025
+		enable_building = {
+			building = rail_way
+			level = 9
+		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = mechanical_engineering_folder
-			position = { x = 0 y = 52 }
+			position = { x = 2 y = 52 }
 		}
 		dependencies={
 			high_speed_rail = 1
@@ -5916,6 +6175,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	combined_transportation_networks = {
@@ -5924,8 +6184,12 @@ technologies = {
 			building = infrastructure
 			level = 15
 		}
+		enable_building = {
+			building = rail_way
+			level = 10
+		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = mechanical_engineering_folder
@@ -5962,6 +6226,7 @@ technologies = {
 		
 		categories = {
 			mechanical_engineering_tech
+			trains_tech
 		}
 	}
 	centralized_traffic_controls = {
@@ -5971,7 +6236,7 @@ technologies = {
 			level = 16
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = mechanical_engineering_folder
@@ -6014,8 +6279,12 @@ technologies = {
 			building = infrastructure
 			level = 17
 		}
+		enable_building = {
+			building = rail_way
+			level = 11
+		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = mechanical_engineering_folder
@@ -6056,7 +6325,7 @@ technologies = {
 			level = 18
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = mechanical_engineering_folder
@@ -6096,8 +6365,12 @@ technologies = {
 			building = infrastructure
 			level = 20
 		}
+		enable_building = {
+			building = rail_way
+			level = 12
+		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		folder = {
 			name = mechanical_engineering_folder

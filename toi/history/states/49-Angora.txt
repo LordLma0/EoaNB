@@ -15,13 +15,13 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = OTO
 		1857.1.1 = {
-			owner = OTO
 			add_core_of = OTO
 
 			buildings = {
 				infrastructure = 3
-				cotton_farm=1
+				cotton_farm = 1
 			}
 			
 			victory_points = { 11747 10 } # Angora
@@ -39,4 +39,5 @@ state = {
 			add_to_array = { state_religion_array_num = 0.04 }
 		}
 	}
+	local_supplies=0.0 
 }

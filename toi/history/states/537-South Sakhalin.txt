@@ -1,14 +1,16 @@
-state= {
-	id=537
-	name="STATE_537"
+state = {
+	id =537
+	name = "STATE_537"
 	manpower = 135196
-	resources={
-		wood=1
+
+	local_supplies=0.0 
+	resources = {
+		wood = 1
 	}
 
 	state_category = rural
 
-	history= {
+	history = {
 		owner = UCT
 		add_claim_by = TSH
 		add_claim_by = RUS
@@ -22,9 +24,10 @@ state= {
 		victory_points = {
 			12446 1
 		}
-
+		add_to_array = { state_culture_array = 183 }
+		add_to_array = { state_culture_array_num = 1.00 }
 	}
-	provinces=
+	provinces =
 	{
 1322 1820 12446 	}
 }

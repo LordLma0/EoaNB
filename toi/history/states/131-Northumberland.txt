@@ -11,17 +11,17 @@ state = {
 	}
 
 	provinces = {
-		219 351 6399 9285 11270 11299 11332 
+		219 351 6399 9285 11270 11299 11332
 	}
 
 	history = {
 		# End of a New Beginning
+		owner = ENG
 		1857.1.1 = {
-			owner = ENG
 			add_core_of = ENG
 
 			buildings = {
-				infrastructure = 5
+				infrastructure = 6
 				industrial_complex = 1
 				fabric_weavery = 1
 				dockyard = 1
@@ -32,16 +32,17 @@ state = {
 
 			victory_points = { 351 10 } # Newcastle
 			victory_points = { 11332 3 } # Carlisle
-			
+
 			add_to_array = { state_culture_array = 16 } # English
 			add_to_array = { state_culture_array_num = 0.89 }
 			add_to_array = { state_culture_array = 17 } # Irish
 			add_to_array = { state_culture_array_num = 0.11 }
 
-			add_to_array = { state_religion_array = 3 } # Protestant
+			add_to_array = { state_religion_array = 25 } # Protestant
 			add_to_array = { state_religion_array_num = 0.88 }
 			add_to_array = { state_religion_array = 2 } # Catholic
 			add_to_array = { state_religion_array_num = 0.12 }
 		}
 	}
+	local_supplies=0.0 
 }

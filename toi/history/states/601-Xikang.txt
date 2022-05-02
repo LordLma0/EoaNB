@@ -1,17 +1,19 @@
 
-state={
-	id=601
-	name="STATE_601" # Xikang
+state = {
+	id =601
+	name = "STATE_601" # Xikang
+
+	local_supplies=0.0 
 	manpower = 250100
 
 	state_category = pastoral
 
-	resources={
-		wood=1
+	resources = {
+		wood = 1
 		iron = 3
 	}
 
-	history={
+	history = {
 		owner = QNG
 		add_core_of = QNG
 		buildings = {
@@ -30,14 +32,14 @@ state={
 		add_to_array = { state_religion_array = 14}
 		add_to_array = { state_religion_array = 16}
 
-		add_to_array = { state_religon_array_num = 0.79}
-		add_to_array = { state_religon_array_num = 0.11}
-		add_to_array = { state_religon_array_num = 0.10}
+		add_to_array = { state_religion_array_num = 0.79}
+		add_to_array = { state_religion_array_num = 0.11}
+		add_to_array = { state_religion_array_num = 0.10}
 
 
 	}
 
-	provinces={
+	provinces = {
 		1999 2067 4999 7294 10726 10841
 	}
 }

@@ -1,7 +1,9 @@
 
-state={
-	id=392
-	name="STATE_392"
+state = {
+	id =392
+	name = "STATE_392"
+
+	local_supplies=0.0 
 	manpower = 674911
 	resources = {
 		wood = 8
@@ -10,7 +12,7 @@ state={
 
 	state_category = rural
 
-	history={
+	history = {
 		owner = USA
 		buildings = {
 			infrastructure = 5

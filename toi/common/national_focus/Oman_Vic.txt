@@ -74,7 +74,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_reign_ZAN_in
-		icon = GFX_focus_Usurp_Throne
+		icon = GFX_Focus_Monarchy_Usurp_Throne
 		cost = 140
 		x = 2
 		y = 1
@@ -163,7 +163,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_begin_to_enforce_old_colonial_borders
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 2
 		y = 2
@@ -220,7 +220,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_ZAN_industrialisation
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		cost = 70
 		x = 0
 		y = 4
@@ -254,7 +254,6 @@ focus_tree = {
 				add_state_claim = 911
 				add_state_claim = 912
 				add_state_claim = 547
-				add_state_claim = 914
 				add_state_claim = 913
 				add_state_claim = 915
 				add_state_claim = 910
@@ -281,7 +280,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_MOM_industrialisation
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		cost = 70
 		x = 4
 		y = 4
@@ -302,7 +301,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_remind_SOM_of_place
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 2
 		y = 3
@@ -325,7 +324,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_our_colonial_strength
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 2
 		y = 4
@@ -353,7 +352,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_enforce_will_on_mahra
-		icon = GFX_focus_Colonial_Troops
+		icon = GFX_Focus_Colonial_Troops
 		cost = 70
 		x = 2
 		y = 5
@@ -430,7 +429,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_intergrate_TCS
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		cost = 140
 		x = 0
 		y = 6
@@ -465,7 +464,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_western_question
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 70
 		x = 15
 		y = 0
@@ -492,7 +491,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_western_inspirations
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 70
 		x = 11
 		y = 1
@@ -640,7 +639,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_economic_reforms
-		icon = GFX_goal_focus_stimulate_economy
+		icon = GFX_Focus_stimulate_economy
 		cost = 120
 		x = 12
 		y = 2
@@ -660,7 +659,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_invest_in_steamships
-		icon = GFX_goal_focus_mass_produce_ships
+		icon = GFX_Focus_Production_Mass
 		cost = 70
 		x = 12
 		y = 3
@@ -683,7 +682,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_expand_personal_trade_fleet
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Victorian_Gunboat
 		cost = 120
 		x = 12
 		y = 4
@@ -693,7 +692,13 @@ focus_tree = {
 		completion_reward={
 			custom_effect_tooltip= OMA_steamships_for_personal_fleet
 			hidden_effect={
-				load_oob = "OMA_Steamboat_1"
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					load_oob = "OMA_Steamboat_1"
+				}
+				else = {
+					load_oob = "OMA_Steamboat_1_legacy"
+				}
 			}
 			swap_ideas={
 				add_idea = OMA_economic_irrelevence_3
@@ -707,7 +712,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_military_reforms
-		icon = GFX_goal_focus_military_reforms
+		icon = GFX_Focus_Army_Reforms
 		cost = 120
 		x = 15
 		y = 2
@@ -778,10 +783,11 @@ focus_tree = {
 			focus = oma_vic_western_rifles
 		}
 		completion_reward={
-			add_tech_bonus = {
-				bonus = 0.25
-				uses = 2
+			add_doctrine_cost_reduction = {
+				name = OMA_increased_training
 				category = doctrine_victorian_innovative_tech
+				uses = 2
+				cost_reduction = 0.25
 			}
 		}
 		available_if_capitulated = no
@@ -791,7 +797,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_victorianization
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		cost = 120
 		x = 12
 		y = 6
@@ -820,7 +826,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_industrial_research
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 120
 		x = 10
 		y = 7
@@ -837,7 +843,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_national_schools
-		icon = GFX_goal_school_investment_focus
+		icon = GFX_Focus_school_investment
 		cost = 80
 		x = 10
 		y = 8
@@ -940,7 +946,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_fund_industrialsion
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 120
 		x = 14
 		y = 7
@@ -974,7 +980,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_continue_isolation
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 70
 		x = 18
 		y = 1
@@ -1004,7 +1010,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_ibadi_fanatic_integration
-		icon = GFX_goal_focus_religious_prayers
+		icon = GFX_Focus_Religious_Prayers
 		cost = 120
 		x = 18
 		y = 2
@@ -1042,7 +1048,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_fund_government_with_ship_sales
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Victorian_Gunboat
 		cost = 120
 		x = 20
 		y = 2
@@ -1063,7 +1069,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_refute_economic_stagnation
-		icon = GFX_goal_focus_bankruptcy
+		icon = GFX_Focus_Bankruptcy
 		cost = 270
 		x = 20
 		y = 3
@@ -1103,7 +1109,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_attempt_economic_diversifaction
-		icon = GFX_goal_focus_foreign_diplomacy_economy
+		icon = GFX_Focus_Diplomatic_foreign_economy
 		cost = 270
 		x = 16
 		y = 5
@@ -1123,7 +1129,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_invigorate_indian_trade
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		cost = 70
 		x = 16
 		y = 6
@@ -1174,10 +1180,11 @@ focus_tree = {
 			focus = oma_vic_court_indian_merchants
 		}
 		completion_reward={
-			add_tech_bonus = {
-				bonus = 0.25
-				uses = 2
+			add_doctrine_cost_reduction = {
+				name = OMA_military_theory
 				category = doctrine_victorian_traditional_tech
+				uses = 2
+				cost_reduction = 0.25
 			}
 		}
 		available_if_capitulated = no
@@ -1187,7 +1194,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_military_command
-		icon = GFX_goal_focus_traditional_army
+		icon = GFX_Focus_Army_Victorian_Traditional
 		cost = 70
 		x = 23
 		y = 0
@@ -1204,7 +1211,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_obtain_rifles
-		icon = GFX_goal_focus_foreign_diplomacy_military
+		icon = GFX_Focus_Diplomatic_foreign_military
 		cost = 70
 		x = 22
 		y = 1
@@ -1258,7 +1265,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_improved_military_training
-		icon = GFX_goal_focus_traditional_army
+		icon = GFX_Focus_Army_Victorian_Traditional
 		cost = 70
 		x = 23
 		y = 2
@@ -1278,7 +1285,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_reduce_reliance_on_large_forces
-		icon = GFX_goal_focus_reformed_army
+		icon = GFX_Focus_Army_Reformed
 		cost = 70
 		x = 22
 		y = 3
@@ -1301,7 +1308,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_improve_conscription_laws
-		icon = GFX_goal_focus_conscription
+		icon = GFX_Focus_conscription
 		cost = 70
 		x = 24
 		y = 3
@@ -1429,7 +1436,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_encorage_economic_growth_in_oman
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		cost = 70
 		x = 8
 		y = 4
@@ -1466,7 +1473,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_encorage_economic_growth_in_muscat
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		cost = 70
 		x = 6
 		y = 4
@@ -1507,7 +1514,7 @@ focus_tree = {
 	
 	focus = {
 		id = oma_vic_death_of_thuwaini
-		icon = GFX_focus_state_funeral
+		icon = GFX_Focus_Health_Funerals
 		cost = 35
 		x = 15
 		y = 10
@@ -1545,7 +1552,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_gain_foreign_interest
-		icon = GFX_goal_focus_foreign_diplomacy_military
+		icon = GFX_Focus_Diplomatic_foreign_military
 		cost = 35
 		x = 12
 		y = 11
@@ -1679,7 +1686,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_paying_owned
-		icon = GFX_goal_focus_foreign_diplomacy_economy
+		icon = GFX_Focus_Diplomatic_foreign_economy
 		cost = 140
 		x = 9
 		y = 15
@@ -1736,7 +1743,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_continue_fathers_policy
-		icon = GFX_focus_sunni_catholic_friendship
+		icon = GFX_Focus_Friendship_Sunni_Catholic
 		cost = 140
 		x = 11
 		y = 15
@@ -1770,7 +1777,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_rail_invest
-		icon = GFX_goal_focus_railroad_development
+		icon = GFX_Focus_transport_railroad_development
 		cost = 140
 		x = 11
 		y = 17
@@ -1810,7 +1817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_entertaining_brits
-		icon = GFX_goal_focus_ally_ENG
+		icon = GFX_Focus_Diplomatic_Ally_ENG
 		cost = 140
 		x = 11
 		y = 19
@@ -1849,7 +1856,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_compromise
-		icon = GFX_goal_focus_reform_government
+		icon = GFX_Focus_Government_Reform
 		cost = 140
 		x = 15
 		y = 15
@@ -1883,7 +1890,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_liberism_to_interior
-		icon = GFX_goal_focus_support_liberalism
+		icon = GFX_Focus_Ideology_Support_Liberalism
 		cost = 140
 		x = 14
 		y = 17
@@ -1899,7 +1906,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_conserve_coast
-		icon = GFX_goal_focus_support_conservatism
+		icon = GFX_Focus_Ideology_Support_Liberty
 		cost = 140
 		x = 16
 		y = 17
@@ -1935,7 +1942,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_nation_of_stability
-		icon = GFX_goal_focus_government_icon
+		icon = GFX_Focus_Government
 		cost = 140
 		x = 15
 		y = 19
@@ -2050,7 +2057,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_ideals_ibadi
-		icon = GFX_goal_focus_religious_prayers
+		icon = GFX_Focus_Religious_Prayers
 		cost = 140
 		x = 19
 		y = 15
@@ -2109,7 +2116,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_influence_ghafiri
-		icon = GFX_goal_generic_political_pressure_green
+		icon = GFX_focus_Generic_Political_Pressure_Green
 		cost = 140
 		x = 20
 		y = 17
@@ -2128,7 +2135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_subdue_minor_tribes
-		icon = GFX_goal_focus_suppress_liberalism
+		icon = GFX_Focus_Partisans_Suppress_Liberalism
 		cost = 140
 		x = 19
 		y = 18
@@ -2146,7 +2153,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_vic_dealing_uprising
-		icon = GFX_focus_violent_revolution
+		icon = GFX_Focus_Monarchy_Violent_Revolution
 		cost = 140
 		x = 19
 		y = 19

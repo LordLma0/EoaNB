@@ -1,16 +1,18 @@
 
-state={
-	id=459
-	name="Oran"
+state = {
+	id =459
+	name = "Oran"
+
+	local_supplies=0.0 
 	manpower = 1144104
 	state_category = town
 	
-	resources={
-		wood=2
+	resources = {
+		wood =2
 		cotton=6
 	}
 
-	history={
+	history = {
 		owner = FRA
 		add_core_of = ALG
 		victory_points = {
@@ -24,7 +26,7 @@ state={
 		add_to_array = { state_culture_array = 416 }
 		add_to_array = { state_culture_array = 380 }
 		add_to_array = { state_culture_array = 123 }
-		add_to_array = { state_culture_array_num = 0.911 }
+		add_to_array = { state_culture_array_num = 0.931 }
 		add_to_array = { state_culture_array_num = 0.03 }
 		add_to_array = { state_culture_array_num = 0.02 }
 		add_to_array = { state_culture_array_num = 0.011 }
@@ -35,10 +37,10 @@ state={
 		add_to_array = { state_religion_array = 9 }
 		add_to_array = { state_religion_array = 7 }
 		
-       	add_to_array = { state_religion_array_num = 0.93 } 
-       	add_to_array = { state_religion_array_num = 0.05 } 
+			 	add_to_array = { state_religion_array_num = 0.93 } 
+			 	add_to_array = { state_religion_array_num = 0.05 } 
 		add_to_array = { state_religion_array_num = 0.012 } 
-       	add_to_array = { state_religion_array_num = 0.008 }
+			 	add_to_array = { state_religion_array_num = 0.008 }
 		buildings = {
 			infrastructure = 2
 
@@ -47,7 +49,7 @@ state={
 			}
 			}
 	}
-	provinces={
+	provinces = {
 		1013 4116 4146 7132 9964 11923 12760 
 	}
 }

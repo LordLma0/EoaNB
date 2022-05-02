@@ -1,13 +1,14 @@
-state={
-	id=1322
-	name="STATE_1322"
-	resources={
-		iron=1
+state = {
+	id = 1322
+	name = "STATE_1322"
+	local_supplies=0.0 
+	resources = {
+		iron= 1
 	}
 	
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = BOL
 		buildings = {
 			infrastructure = 2
@@ -22,11 +23,17 @@ state={
 		victory_points = {
 			14007 1 
 		}
+		
+		add_to_array = { state_culture_array = 426 } #Bolivian
+		add_to_array = { state_culture_array_num = 1 }
+		
+		add_to_array = { state_religion_array = 2 } #Catholic
+		add_to_array = { state_religion_array_num = 1 }
 
 	}
 
-	provinces={
+	provinces = {
 		5179 10987 2174 10952 13134 14006 14007 
 	}
-	manpower=173201
+	manpower = 173201
 }

@@ -1,5 +1,181 @@
-war_measures = {
-	
+war_planning = {
+	south_america_civil_war_purchase_spanish_support = {
+		icon = power_struggle
+		available = { 
+			debt_not_bankrupt_trigger = yes 
+			SPR = { debt_not_bankrupt_trigger = yes }
+			custom_trigger_tooltip = {
+				tooltip = SPR_loan_support_limit_tooltip
+				check_variable = { var = SPR_debt_repayments_level value = 15 compare = less_than_or_equals }
+			}
+		}
+		custom_cost_trigger = { check_variable = { debt_level < 50 } }
+		custom_cost_text = eoanb_decision_cost_1_debt_loc
+		visible = { 
+			if = { 
+				limit = { TAG = MEC }
+				has_country_flag = SPR_gives_loan_support_flag
+			}
+			else = { has_civil_war = yes }
+			if = {
+				limit = { 
+					OR = {
+						TAG = D01
+						TAG = D02
+						TAG = D03
+						TAG = D04
+					}
+				}
+				OR = {
+					#has_war_with = GUA
+					#has_war_with = ELS
+					#has_war_with = HON
+					#has_war_with = NIC
+					#has_war_with = COS
+					has_war_with = COL
+					has_war_with = VEN
+					has_war_with = ECU
+					has_war_with = PRU
+					has_war_with = CHL
+					has_war_with = BOL
+					has_war_with = URG
+					has_war_with = BUE
+					has_war_with = ARG
+				}
+			}
+		}
+		allowed = {
+			OR = {
+				TAG = D01
+				TAG = D02
+				TAG = D03
+				TAG = D04
+				#TAG = GUA
+				#TAG = ELS
+				#TAG = HON
+				#TAG = NIC
+				#TAG = COS
+				TAG = COL
+				TAG = VEN
+				TAG = ECU
+				TAG = PRU
+				TAG = CHL
+				TAG = BOL
+				TAG = URG
+				TAG = BUE
+				TAG = ARG
+				TAG = MEC
+			}
+		}
+		fire_only_once = no
+		days_re_enable = 45
+		days_remove = 7
+		complete_effect = {
+			debt_level_increase_by_1 = yes
+			if = {
+				limit = { NOT = { OR = { TAG = D01 TAG = D02 TAG = D03 TAG = D04 } } }
+				SPR_foreign_debt_repayments_increase_by_1 = yes
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_1
+				amount = 500
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_1
+				amount = 500
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = cavalry_equipment_0
+				amount = 250
+				producer = SPR
+			}
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				check_variable = { debt_level > 44 }
+			}
+		}
+	}
+}
+
+eoanb_category_war_measures = {
+
+	BOL_1857_civil_war_decision = {
+		icon = generic_prepare_civil_war
+		ai_will_do = { factor = 1 }
+		available = {
+			controls_province = 8240
+			controls_province = 5230
+		}
+
+		allowed = {
+			OR = {
+				TAG = D01
+				TAG = D02
+				TAG = D03
+				TAG = D04
+				TAG = BOL
+			}
+		}
+		activation = { 
+			date < 1858.1.1
+			has_civil_war = yes 
+			if = {
+				limit = { 
+					OR = {
+						TAG = D01
+						TAG = D02
+						TAG = D03
+						TAG = D04
+					}
+				}
+				has_war_with = BOL
+			}
+		}
+		selectable_mission = no
+		is_good = no
+
+		fire_only_once = yes
+
+		#cost = 0
+
+		days_mission_timeout = 7200
+
+		highlight_states = {
+			highlight_state_targets = {
+				STATE = 1325
+				STATE = 302
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = BOL_1857_civil_war_decision_win_war_tooltip
+			hidden_effect = {
+				ROOT = {
+					set_state_controller = 1418
+					set_state_controller = 753
+					set_state_controller = 1082
+					set_state_controller = 302
+					set_state_controller = 487
+					set_state_controller = 1071
+					set_state_controller = 688
+					set_state_controller = 1325
+					set_state_controller = 1095
+					set_state_controller = 1322
+					set_state_controller = 924
+					set_state_controller = 1100
+				}
+			}
+		}
+	}
+
 	PAR_Paraguayan_War_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 100 }
@@ -14,17 +190,17 @@ war_measures = {
 				}
 			}
 		}
-		
+
 		highlight_states = {
-			state = 1036
-			state = 503
-			state = 502
+			state = 301
+			state = 1064
+			state = 1072
 		}
-		
-		allowed = { 
-			TAG = PAR 
+
+		allowed = {
+			TAG = PAR
 		}
-		activation = { 
+		activation = {
 			hidden_trigger = {
 				has_government = chauvinist_populism
 				OR = {
@@ -32,30 +208,30 @@ war_measures = {
 					BRA = { has_completed_focus	= BRA_the_second_cisplatine_war }
 				}
 				has_war = no
-				URG = { surrender_progress > 0 }
+				URG = { surrender_progress > 0.2 }
 				NOT = { has_country_flag = Paraguayan_War }
 			}
 		}
 		selectable_mission = no
 		is_good = yes
-		
+
 		fire_only_once = no
 
 		#cost = 0
-		
+
 		days_mission_timeout = 100
-		
+
 		cancel_trigger = {
 			URG = { has_war = no }
 		}
-		
+
 		complete_effect = {
 			hidden_effect = {
-				if = { 
+				if = {
 					limit = { BRA = { has_completed_focus = BRA_direct_intervention } }
 					PAR = { country_event = { id = par.6 } }
 				}
-				if = { 
+				if = {
 					limit = { BRA = { has_completed_focus = BRA_the_second_cisplatine_war } }
 					PAR = { country_event = { id = par.18 } }
 				}
@@ -65,51 +241,51 @@ war_measures = {
 			hidden_effect = { activate_mission = PAR_Paraguayan_War_decision }
 		}
 	}
-	
+
 	BRA_triple_alliance_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 100 }
 		available = {
-			BRA = { is_in_faction = no }
-			URC = { is_in_faction = no }
+			BRA = { is_in_faction_with = URC }
 			ARG = { is_in_faction = no }
 			hidden_trigger = {
 				BRA = { has_war_with = PAR }
-				ARG = { has_war_with = PAR }
 				URC = { has_war_with = PAR }
+				ARG = { has_war_with = PAR }
+				NOT = { ARG = { has_war_with = BRA } }
 			}
 		}
-		
+
 		highlight_states = {
-			state = capital_scope
+			highlight_state_targets = {
+				state = capital_scope
+			}
 		}
-		
+
 		allowed = {
-			TAG = BRA 
+			original_tag = BRA
 		}
-		activation = { 
-			hidden_trigger = {
-				BRA = { is_in_faction = no }
-				URC = { is_in_faction = no }
+		activation = {
+				BRA = { is_in_faction_with = URC }
 				ARG = { is_in_faction = no }
+				NOT = { ARG = { has_war_with = BRA } }
 				BRA = { has_war_with = PAR }
 				ARG = { has_war_with = PAR }
 				URC = { has_war_with = PAR }
-			}
 		}
 		selectable_mission = no
 		is_good = yes
-		
+
 		fire_only_once = no
 
 		#cost = 0
-		
+
 		days_mission_timeout = 100
-		
+
 		cancel_trigger = {
 			PAR = { has_war = no }
 		}
-		
+
 		complete_effect = {
 			BRA = { country_event = { id = par.12 } }
 		}
@@ -117,51 +293,55 @@ war_measures = {
 			hidden_effect = { activate_mission = BRA_triple_alliance_decision }
 		}
 	}
-	
+
 	PAR_triple_alliance_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 100 }
 		available = {
 			BRA = { is_in_faction = no }
-			URG = { is_in_faction = no }
+			#URG = { is_in_faction = no }
 			ARG = { is_in_faction = no }
 			hidden_trigger = {
 				PAR = { has_war_with = BRA }
 				ARG = { has_war_with = BRA }
+				NOT = { ARG = { has_war_with = PAR } }
 				URG = { has_war_with = URC }
 			}
 		}
-		
+
 		highlight_states = {
-			state = capital_scope
+			highlight_state_targets = {
+				state = capital_scope
+			}
 		}
-		
+
 		allowed = {
-			TAG = PAR 
+			TAG = PAR
 		}
-		activation = { 
+		activation = {
 			hidden_trigger = {
 				PAR = { has_war_with = BRA }
 				ARG = { has_war_with = BRA }
 				URG = { has_war_with = URC }
 				BRA = { is_in_faction = no }
-				URG = { is_in_faction = no }
+				#URG = { is_in_faction = no }
 				ARG = { is_in_faction = no }
+				NOT = { ARG = { has_war_with = PAR } }
 			}
 		}
 		selectable_mission = no
 		is_good = yes
-		
+
 		fire_only_once = no
 
 		#cost = 0
-		
+
 		days_mission_timeout = 100
-		
+
 		cancel_trigger = {
 			BRA = { has_war = no }
 		}
-		
+
 		complete_effect = {
 			PAR = { country_event = { id = par.13 } }
 		}
@@ -170,8 +350,8 @@ war_measures = {
 		}
 	}
 
-	
-	
+
+
 	HAI_spain_war_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 1 }
@@ -184,7 +364,7 @@ war_measures = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					OR = {
 						TAG = DOM
 						TAG = SPR
@@ -193,11 +373,11 @@ war_measures = {
 					}
 				}
 				OR = {
-					any_country = { 
+					any_country = {
 						NOT = { TAG = HAI }
 						318 = { is_fully_controlled_by = PREV }
 					}
-					HAI = { 
+					HAI = {
 						OR = {
 							has_capitulated = yes
 							exists = no
@@ -208,36 +388,39 @@ war_measures = {
 				}
 			}
 		}
-		
-		allowed = { 
+
+		allowed = {
 			OR = {
-				TAG = HAI 
+				TAG = HAI
 				TAG = DOM
-				TAG = SPR 
-				TAG = USA 
-				TAG = FRA 
+				TAG = SPR
+				TAG = USA
+				TAG = FRA
 			}
 		}
 		activation = { has_country_flag = HAI_spain_war }
+		cancel_trigger = { NOT = { has_country_flag = HAI_spain_war } }
 		selectable_mission = no
 		is_good = no
-		
+
 		fire_only_once = yes
 
 		#cost = 0
-		
+
 		days_mission_timeout = 720
-		
+
 		highlight_states = {
-			if = {
-				limit = { ROOT = { TAG = HAI } }
-				STATE = 1318
+			highlight_state_targets = {
+				#if = {
+				#	limit = { ROOT = { TAG = HAI } }
+					STATE = 1318
+				#}
+				#else = {
+					STATE = 318
+				#}
 			}
-			else = {
-				STATE = 318
-			}	
 		}
-		
+
 		complete_effect = {
 			if = {
 				limit = {
@@ -253,7 +436,7 @@ war_measures = {
 			else_if = {
 				limit = {
 					OR = {
-						any_country = { 
+						any_country = {
 							NOT = { TAG = HAI }
 							318 = { is_fully_controlled_by = PREV }
 						}
@@ -265,7 +448,7 @@ war_measures = {
 				}
 				if = {
 					limit = {
-						DOM = { 
+						DOM = {
 							OR = {
 								is_subject_of = SPR
 								is_subject_of = USA
@@ -278,7 +461,7 @@ war_measures = {
 				else = { 1318 = { OWNER = { country_event = { id = hispaniola.5 } } } }
 			}
 			if = {
-				limit = { 
+				limit = {
 					OR = {
 						TAG = DOM
 						TAG = SPR
@@ -297,7 +480,7 @@ war_measures = {
 			if = {
 				limit = {
 					OR = {
-						any_country = { 
+						any_country = {
 							NOT = { TAG = HAI }
 							318 = { is_fully_controlled_by = PREV }
 						}
@@ -307,7 +490,7 @@ war_measures = {
 				}
 				if = {
 					limit = {
-						DOM = { 
+						DOM = {
 							OR = {
 								is_subject_of = SPR
 								is_subject_of = USA
@@ -321,13 +504,13 @@ war_measures = {
 			}
 			else = {
 				every_country = {
-					limit = { 
-						has_war_with = HAI 
+					limit = {
+						has_war_with = HAI
 						NOT = { original_tag = HAI }
 					}
 					white_peace = HAI
 				}
-				hidden_effect = { 
+				hidden_effect = {
 					HAI = {
 						remove_ideas = HAI_liberation_of_hispaniola
 						clr_country_flag = HAI_spain_war
@@ -336,7 +519,7 @@ war_measures = {
 			}
 		}
 	}
-	
+
 	DOM_spain_war_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 1 }
@@ -353,41 +536,43 @@ war_measures = {
 				}
 			}
 		}
-		
-		allowed = { 
+
+		allowed = {
 			OR = {
-				TAG = DOM 
-				TAG = SPR 
+				TAG = DOM
+				TAG = SPR
 			}
 		}
-		activation = { 
+		activation = {
 			DOM = {
 				OR = {
 					has_idea = DOM_restoration_war2
 					has_idea = DOM_restoration_war
 				}
-			} 
+			}
 		}
 		selectable_mission = no
 		is_good = no
-		
+
 		fire_only_once = no
 
 		#cost = 0
-		
+
 		days_mission_timeout = 720
-		
+
 		highlight_states = {
-			if = {
-				limit = { ROOT = { TAG = DOM } }
-				STATE = 1318
+			highlight_state_targets = {
+				#if = {
+				#	limit = { ROOT = { TAG = DOM } }
+					STATE = 1318
+				#}
+				#else_if = {
+				#	limit = { ROOT = { TAG = SPR } }
+					STATE = 319
+				#}
 			}
-			else_if = {
-				limit = { ROOT = { TAG = SPR } }
-				STATE = 319
-			}	
 		}
-		
+
 		complete_effect = {
 			if = {
 				limit = {
@@ -405,7 +590,7 @@ war_measures = {
 				SPR = { country_event = { id = hispaniola.12 } }
 				hidden_effect = {
 					remove_ideas = DOM_restoration_war
-					remove_ideas = DOM_restoration_war2	
+					remove_ideas = DOM_restoration_war2
 				}
 			}
 			if = {
@@ -421,7 +606,7 @@ war_measures = {
 			activate_mission = DOM_spain_war_decision
 		}
 	}
-	
+
 	JAM_english_war_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 1 }
@@ -439,32 +624,34 @@ war_measures = {
 				}
 			}
 		}
-		
-		allowed = { 
+
+		allowed = {
 			OR = {
-				TAG = JAM 
-				TAG = ENG 
+				TAG = JAM
+				TAG = ENG
 			}
 		}
-		activation = { 
+		activation = {
 			JAM = {
-				has_war_with = ENG 
+				has_war_with = ENG
 				has_country_flag = JAM_KINGSTON_1
-			} 
+			}
 		}
 		selectable_mission = no
 		is_good = no
-		
+
 		fire_only_once = no
 
 		#cost = 0
-		
+
 		days_mission_timeout = 720
-		
+
 		highlight_states = {
-			STATE = 689	
+			highlight_state_targets = {
+				STATE = 689
+			}
 		}
-		
+
 		complete_effect = {
 			if = {
 				limit = {
@@ -496,7 +683,7 @@ war_measures = {
 			hidden_effect = { activate_mission = JAM_english_war_decision }
 		}
 	}
-	
+
 	PRT_spain_war_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 1 }
@@ -506,25 +693,27 @@ war_measures = {
 				NOT = { country_exists = PRT }
 			}
 		}
-		
+
 		allowed = { TAG = SPR }
-		activation = { 
+		activation = {
 			SPR = { has_war_with = PRT }
 			PRT = { has_country_flag = PRT_Lares }
 		}
 		selectable_mission = no
 		is_good = no
-		
+
 		fire_only_once = no
 
 		#cost = 0
-		
+
 		days_mission_timeout = 900
-		
+
 		highlight_states = {
-			STATE = 686
+			highlight_state_targets = {
+				STATE = 686
+			}
 		}
-		
+
 		complete_effect = {
 			hidden_effect = {
 				SPR = { transfer_state = 686 }
@@ -538,7 +727,7 @@ war_measures = {
 			activate_mission = PRT_spain_war_decision
 		}
 	}
-	
+
 	BRA_guyana_war_1857_decision = {
 		icon = generic_prepare_civil_war
 		ai_will_do = { factor = 1 }
@@ -555,37 +744,39 @@ war_measures = {
 				}
 			}
 		}
-		
+
 		highlight_states = {
-			if = {
-				limit = { ROOT = { TAG = BRA } }
-				STATE = 310
+			highlight_state_targets = {
+				#if = {
+				#	limit = { ROOT = { TAG = BRA } }
+					STATE = 310
+				#}
+				#else_if = {
+					# limit = { ROOT = { TAG = FRA } }
+				#	STATE = 1323
+				#}
 			}
-			else_if = {
-				limit = { ROOT = { TAG = FRA } }
-				STATE = 1323
-			}	
 		}
-		
-		allowed = { 
+
+		allowed = {
 			OR = {
-				TAG = BRA 
-				TAG = FRA 
+				TAG = BRA
+				TAG = FRA
 			}
 		}
-		activation = { 
-			BRA = { has_country_flag = BRA_guyana_war_1857 } 
-			FRA = { has_country_flag = BRA_guyana_war_1857 } 
+		activation = {
+			BRA = { has_country_flag = BRA_guyana_war_1857 }
+			FRA = { has_country_flag = BRA_guyana_war_1857 }
 		}
 		selectable_mission = no
 		is_good = no
-		
+
 		fire_only_once = no
 
 		#cost = 0
-		
+
 		days_mission_timeout = 300
-		
+
 		complete_effect = {
 			if = {
 				limit = {

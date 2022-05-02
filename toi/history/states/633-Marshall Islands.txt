@@ -1,12 +1,14 @@
 
-state={
-	id=633
-	name="STATE_633"
-	manpower=22517
+state = {
+	id =633
+	name = "STATE_633"
+
+	local_supplies=0.0 
+	manpower =22517
 	
 	state_category = small_island
 
-	history={
+	history = {
 		owner = UCT
 		add_core_of = UCT
 		buildings = {
@@ -44,10 +46,16 @@ state={
 		victory_points = {
 			13046 1 
 		}
+		
+		add_to_array = { state_culture_array = 400 } # Micronesian
+		add_to_array = { state_culture_array_num = 1 }
+
+		add_to_array = { state_religion_array = 20 } # Animist
+		add_to_array = { state_religion_array_num = 1 }
 
 	}
 
-	provinces={
+	provinces = {
 		1002 13039 13040 13041 13042 13043 13044 13045 13046 
 	}
 }

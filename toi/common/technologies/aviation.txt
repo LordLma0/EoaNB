@@ -13,7 +13,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -25,7 +25,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 NOT={ has_country_flag = eoanb_decision_pursue_dream_flight_flag } }
+		ai_will_do = { 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+				NOT={ has_country_flag = eoanb_decision_pursue_dream_flight_flag } 
+			}
 			factor = 1
 			modifier = {
 				factor = 0
@@ -35,13 +41,10 @@ technologies = {
 			}
 			modifier = {
 				factor = 5
-				date > 1850.1.1
+				
 				has_country_flag = eoanb_decision_pursue_dream_flight_flag
 			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
-			}
+			
 		}
 		
 		categories = {
@@ -53,7 +56,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -65,7 +68,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 NOT={ has_country_flag = eoanb_decision_pursue_dream_flight_flag } }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 NOT={ has_country_flag = eoanb_decision_pursue_dream_flight_flag } }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -75,13 +78,10 @@ technologies = {
 			}
 			modifier = {
 				factor = 5
-				date > 1850.1.1
+				
 				has_country_flag = eoanb_decision_pursue_dream_flight_flag
 			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
-			}
+			
 		}
 		
 		categories = {
@@ -96,7 +96,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = aviation_folder
@@ -108,7 +108,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 NOT={ has_country_flag = eoanb_decision_pursue_dream_flight_flag } }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 NOT={ has_country_flag = eoanb_decision_pursue_dream_flight_flag } }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -136,7 +136,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = aviation_folder
@@ -148,7 +148,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 5
@@ -175,7 +175,7 @@ technologies = {
 			level = 5
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1875
 		folder = {
 			name = aviation_folder
@@ -187,7 +187,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 5
@@ -210,14 +210,14 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1885
 		folder = {
 			name = aviation_folder
 			position = { x = -2 y = 18 }
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -235,7 +235,7 @@ technologies = {
 		
 		air_night_penalty = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -266,7 +266,7 @@ technologies = {
 			modifier = { 
 				factor = 0 
 				afr_is_tribal = yes 
-				date > 1850.1.1 
+				 
 				date < 1875.1.1 
 			}
 		}
@@ -280,7 +280,7 @@ technologies = {
 		
 		air_accidents_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -297,13 +297,10 @@ technologies = {
 			modifier = { 
 				factor = 0 
 				afr_is_tribal = yes 
-				date > 1850.1.1 
+				 
 				date < 1875.1.1 
 			}
-			modifier = {
-				factor = 1
-				date > 1850.1.1
-			}
+			
 			modifier = {
 				factor = 10
 				date > 1890.1.1
@@ -319,7 +316,7 @@ technologies = {
 		
 		navy_max_range_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -341,7 +338,7 @@ technologies = {
 			modifier = { 
 				factor = 0 
 				afr_is_tribal = yes 
-				date > 1850.1.1 
+				 
 				date < 1875.1.1 
 			}
 			modifier = {
@@ -359,7 +356,7 @@ technologies = {
 		
 		enemy_army_bonus_air_superiority_factor = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = aviation_folder
@@ -381,7 +378,7 @@ technologies = {
 			modifier = { 
 				factor = 0 
 				afr_is_tribal = yes 
-				date > 1850.1.1 
+				 
 				date < 1875.1.1 
 			}
 			modifier = {
@@ -410,7 +407,7 @@ technologies = {
 		air_close_air_support_agility_factor = 0.03
 		air_strategic_bomber_agility_factor = 0.03
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = aviation_folder
@@ -422,7 +419,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -448,7 +445,7 @@ technologies = {
 		naval_strike_agility_factor = 0.05
 		army_bonus_air_superiority_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = aviation_folder
@@ -460,7 +457,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -485,7 +482,7 @@ technologies = {
 		
 		experience_gain_air = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = aviation_folder
@@ -502,7 +499,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -527,7 +524,7 @@ technologies = {
 		
 		experience_gain_air = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = aviation_folder
@@ -544,7 +541,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -565,14 +562,14 @@ technologies = {
 		
 		air_ace_generation_chance_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = aviation_folder
 			position = { x = 6 y = 20 }
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 0
@@ -593,7 +590,7 @@ technologies = {
 		
 		experience_gain_air = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = aviation_folder
@@ -605,7 +602,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -622,7 +619,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = aviation_folder
@@ -634,7 +631,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 20
 			modifier = {
 				factor = 1
@@ -651,14 +648,14 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = aviation_folder
 			position = { x = 2 y = 26 }
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 30
 			modifier = {
 				factor = 1
@@ -683,7 +680,7 @@ technologies = {
 		army_bonus_air_superiority_factor = 0.04
 		air_range_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = aviation_folder
@@ -702,7 +699,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -718,7 +715,7 @@ technologies = {
 		
 		air_range_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = aviation_folder
@@ -732,7 +729,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -748,7 +745,7 @@ technologies = {
 		
 		air_accidents_factor = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = aviation_folder
@@ -759,7 +756,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -778,7 +775,7 @@ technologies = {
 		air_close_air_support_agility_factor = 0.03
 		air_strategic_bomber_agility_factor = 0.03
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = aviation_folder
@@ -793,7 +790,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -809,7 +806,7 @@ technologies = {
 		
 		air_air_superiority_attack_factor = 0.06
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = aviation_folder
@@ -820,7 +817,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -836,7 +833,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = aviation_folder
@@ -847,7 +844,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -863,7 +860,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1917
 		folder = {
 			name = aviation_folder
@@ -880,7 +877,7 @@ technologies = {
 			hall_heroult_process = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -896,7 +893,7 @@ technologies = {
 		
 		air_weather_penalty = -0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = aviation_folder
@@ -907,7 +904,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -923,7 +920,7 @@ technologies = {
 		
 		air_range_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = aviation_folder
@@ -934,7 +931,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -948,7 +945,7 @@ technologies = {
 	}
 	jet_engines = {
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = aviation_folder
@@ -965,7 +962,7 @@ technologies = {
 			custom_effect_tooltip = JET_ENGINES_RESEARCHED
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -981,7 +978,7 @@ technologies = {
 		
 		experience_gain_air_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = aviation_folder
@@ -996,7 +993,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1012,7 +1009,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = aviation_folder
@@ -1023,7 +1020,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1040,7 +1037,7 @@ technologies = {
 		air_air_superiority_agility_factor = 0.02
 		air_interception_agility_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = aviation_folder
@@ -1051,7 +1048,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1067,7 +1064,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = aviation_folder
@@ -1078,7 +1075,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1094,7 +1091,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = aviation_folder
@@ -1105,7 +1102,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1121,7 +1118,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = aviation_folder
@@ -1132,7 +1129,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1148,7 +1145,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = aviation_folder
@@ -1159,7 +1156,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1175,7 +1172,7 @@ technologies = {
 		
 		air_range_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = aviation_folder
@@ -1186,7 +1183,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1202,7 +1199,7 @@ technologies = {
 		
 		air_range_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = aviation_folder
@@ -1213,7 +1210,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1229,7 +1226,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.075
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = aviation_folder
@@ -1243,7 +1240,7 @@ technologies = {
 			integrated_circuits = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1259,7 +1256,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = aviation_folder
@@ -1270,7 +1267,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1286,7 +1283,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = aviation_folder
@@ -1301,7 +1298,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1317,7 +1314,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = aviation_folder
@@ -1328,7 +1325,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1344,7 +1341,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = aviation_folder
@@ -1355,7 +1352,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1371,7 +1368,7 @@ technologies = {
 		
 		encryption = 1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = aviation_folder
@@ -1386,7 +1383,7 @@ technologies = {
 			combat_effective_stealth_integration = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1402,7 +1399,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = aviation_folder
@@ -1413,7 +1410,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1429,7 +1426,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = aviation_folder
@@ -1440,7 +1437,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1456,7 +1453,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = aviation_folder
@@ -1467,7 +1464,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1483,7 +1480,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = aviation_folder
@@ -1494,7 +1491,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1510,7 +1507,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2020
 		folder = {
 			name = aviation_folder
@@ -1521,7 +1518,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1537,7 +1534,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = aviation_folder
@@ -1549,7 +1546,7 @@ technologies = {
 		}
 		
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1565,7 +1562,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		folder = {
 			name = aviation_folder
@@ -1580,7 +1577,7 @@ technologies = {
 			adaptive_drone_compensation_ai = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1596,7 +1593,7 @@ technologies = {
 		
 		air_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = aviation_folder
@@ -1610,7 +1607,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1626,7 +1623,7 @@ technologies = {
 		
 		encryption = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2040
 		folder = {
 			name = aviation_folder
@@ -1640,7 +1637,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1656,14 +1653,14 @@ technologies = {
 		
 		air_defence_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2045
 		folder = {
 			name = aviation_folder
 			position = { x = 4 y = 82 }
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1680,7 +1677,7 @@ technologies = {
 		
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = aviation_folder
@@ -1691,7 +1688,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1708,7 +1705,7 @@ technologies = {
 		
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = aviation_folder
@@ -1719,7 +1716,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1
@@ -1735,14 +1732,14 @@ technologies = {
 		
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = aviation_folder
 			position = { x = -2 y = 46 }
 		}
 		
-		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = { modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			modifier = {
 				factor = 1

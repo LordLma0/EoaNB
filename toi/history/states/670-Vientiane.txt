@@ -1,24 +1,26 @@
-state={
-	id=670
-	name="STATE_670"
+state = {
+	id =670
+	name = "STATE_670"
 	manpower = 571222
+
+	local_supplies=0.0 
  
 	resources = {
-		coal=4
-		wood=10
-		rubber=2
+		coal =4
+		wood = 10
+		rubber =2
 	} 
 
 	state_category = rural
 
 	
 
-	provinces={
+	provinces = {
 		1362 1390 1464 1507 1520 4260 7356 10326 10496 12332 
 	}
-	history={
+	history = {
 		owner = SIA
-		add_claim_by=SIA
+		add_claim_by =SIA
 		add_core_of=LAO
 		add_claim_by = VIN
 		victory_points = {
@@ -27,7 +29,7 @@ state={
 		buildings = {
 			infrastructure = 3
 		}
-		add_to_array = { state_religion_array = 11 } # Theravada
+		add_to_array = { state_religion_array = 13 } # Theravada
 		add_to_array = { state_religion_array_num = 0.59 }
 		add_to_array = { state_religion_array = 22 } # Shamanist
 		add_to_array = { state_religion_array_num = 0.19 }

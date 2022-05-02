@@ -1,9 +1,11 @@
 
-state={
-	id=551
-	name="STATE_551"
+state = {
+	id =551
+	name = "STATE_551"
 
-	history={
+	local_supplies=0.0 
+
+	history = {
 		owner = EGY
 		buildings = {
 			infrastructure = 1
@@ -29,14 +31,15 @@ state={
 		add_to_array = { state_culture_array_num = 0.13 }
 
 		add_to_array = { state_religion_array = 8 }
-		add_to_array = { state_religion_array_num = 1.00 }
-
+		add_to_array = { state_religion_array_num = 0.89 }
+		add_to_array = { state_religion_array = 4 }
+		add_to_array = { state_religion_array_num = 0.11 }
 	}
 
-	provinces={
+	provinces = {
 		1977 2003 2088 12725 
 	}
-	manpower=893507
+	manpower =893507
 	
-	state_category=rural
+	state_category =rural
 }

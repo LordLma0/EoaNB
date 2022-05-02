@@ -1,11 +1,10 @@
 eoanb_category_formables = {
-	
 	eoanb_decision_ROM_form_romania = {
-		
 		icon = generic_form_nation
 		
 		available = {
-			date > 1881.03.23
+			#has_completed_focus= ROM_the_kingdom_of_romania
+			#date > 1881.03.23
 			if={
 				limit={has_dlc = "Together for Victory"}
 				is_subject = no
@@ -17,7 +16,7 @@ eoanb_category_formables = {
 			owns_state = 79
 			owns_state = 81
 			if={
-				limit = {NOT={has_cosmetic_tag = ROM_united_principalities}}
+				limit = { NOT = { has_cosmetic_tag = ROM_united_principalities } }
 				OR = {
 					AND = {
 						TAG = ROM
@@ -32,10 +31,6 @@ eoanb_category_formables = {
 		}
 		
 		visible = {
-			OR = {
-				TAG = ROM
-				TAG = MOL
-			}
 			ROM={
 				OR={
 					has_cosmetic_tag = WAL
@@ -43,10 +38,10 @@ eoanb_category_formables = {
 				}
 			}
 		}
-		allowed = { 
+		allowed = {
 			OR = {
-				TAG = ROM 
-				TAG = MOL 
+				TAG = ROM
+				TAG = MOL
 			}
 		}
 		
@@ -55,6 +50,7 @@ eoanb_category_formables = {
 		cost = 50
 		
 		complete_effect = {
+			load_focus_tree = generic
 			if = {
 				limit = {
 					has_idea = ROM_idea_sentiment_of_unity
@@ -76,24 +72,21 @@ eoanb_category_formables = {
 		#Only ahistorical AI can form it this way
 		ai_will_do = {
 			base = 1000
-			# modifier = {
-				# factor = 0
-				# is_historical_focus_on = yes
-			# }
+			 modifier = {
+				 factor = 0
+				 is_historical_focus_on = yes
+			}
 		}
 		
 	}
 	ROM_form_romanian_union={
-	
 		icon = generic_form_nation
-		allowed={
-			always = yes
-		}
-		available = {  
+
+		available = {
 			tag = ROM
 			OR={
 				has_country_flag = ROM_union_allowed
-				date > 1870.1.1
+				date > 1861.1.1
 			}
 			MOL = {
 				OR = {
@@ -108,15 +101,15 @@ eoanb_category_formables = {
 			MOL = {
 				OR = {
 					has_autonomy_state = autonomy_personal_union
-					is_subject_of = ROM
+					#is_subject_of = ROM
 				}
 			}
 		}
 		allowed = { TAG = ROM }
 		
-        cost = 100
-        fire_only_once = yes
-        complete_effect = {
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
 			inherit_technology = MOL
 			annex_country = {
 				target = MOL
@@ -151,81 +144,279 @@ eoanb_category_formables = {
 		ai_will_do = {
 			factor = 100
 		}
-	}	
+	}
 }
 
+
+
 ROM_economy_descision_wallachia = {
-
-    ROM_start_industralization = {
-	
-		allowed = { tag = ROM }
-
-		available = {
-			always = no
-		}
+	ROM_mission_fix_agriculture = {
 		
-		visible = {
-		    tag = ROM
-		}
-
-		activation = { always = no }
+		icon = generic_industry
 		
-		fire_only_once = yes
-
-		days_mission_timeout = 350
-
-		timeout_effect = {
-		   hidden_effect = {
-				country_event = { id = wallachia_focustree.3 days = 5 }
-			}
-		}
-	}
-	
-	ROM_repair_agriculture = {
-	
-		allowed = { tag = ROM }
-
-		available = {
-			always = no
-		}
-		
-		visible = {
-		    tag = ROM
-		}
-
-		activation = { always = no }
-		
-		fire_only_once = yes
-
-		days_mission_timeout = 350
-
-		timeout_effect = {
-		   hidden_effect = {
-				country_event = { id = wallachia_focustree.4 days = 5 }
-			}
-		}
-	}
-	
-	ROM_decision_secularize_land = { 
-
-        icon = generic_construction
-
-		available = {
-			has_completed_focus = ROM_secularize_land
-		}
-
 		allowed = {
-		    tag = ROM
+			tag = ROM
+		}
+		
+		available = { 
+			has_completed_focus = ROM_a_perfect_mess
+		}
+		
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			has_completed_focus = ROM_ever_burning_fields
 		}
 
-		fire_only_once = yes
 		is_good = yes
+		
+		days_mission_timeout = 365
+		
+		timeout_effect = {
+			add_political_power = -100
+			decrease_ps_by_one = yes
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_timed_idea = {
+				idea = ROM_failed_to_fix_agriculture
+				days = 365
+			}
+		}
+		complete_effect = {
+			add_political_power = +100
+			increase_ps_by_one = yes
+			add_stability = +0.1
+			add_war_support = +0.2
+			remove_ideas = { ROM_ruined_agriculture }
+		}
+	}
+	ROM_decision_repair_countryside = {
 
-		cost = 50
-		days_remove = 120
+		icon = generic_construction
+
+		fire_only_once = yes
+
+		available = {
+			  has_completed_focus = ROM_repair_the_countryside
+                          tag = ROM
+		}
+
+		visible = {
+                        tag = ROM
+			has_completed_focus = ROM_ever_burning_fields
+		}
+		
+		cost = 35
 
 		modifier = {
-		    consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.1
+			production_speed_buildings_factor = -0.05
+		}
+		
+		complete_effect = {
+			46 = { add_extra_state_shared_building_slots = 2 }
+			add_stability = 0.03
+		}
+		
+		days_remove = 100
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	ROM_decision_mobilize_the_peasantry = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		available = {
+			  has_completed_focus = ROM_mobilize_the_peasantry
+                          tag = ROM
+		}
+
+		visible = {
+                        tag = ROM
+			has_completed_focus = ROM_ever_burning_fields
+		}
+		
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+		
+		complete_effect = {
+			46 = {
+			add_manpower = -1000
+			}
+			81 = {
+			add_manpower = -1500
+			}
+		}
+
+		remove_effect = {
+			add_stability = 0.01
+			add_political_power = 50
+			add_timed_idea={
+				idea = eoanb_random_event_22_idea
+				days = 180
+			}
+                }
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	ROM_decision_contiunue_reparation_efforts = {
+
+		icon = generic_decision
+
+		fire_only_once = yes
+
+		available = {
+			  has_completed_focus = ROM_contiunue_reparation_efforts
+                          tag = ROM
+		}
+
+		visible = {
+                        tag = ROM
+			has_completed_focus = ROM_ever_burning_fields
+		}
+		
+		cost = 25
+
+		modifier = {
+			civilian_factory_use = 1
+			consumer_goods_factor = 0.1
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			add_stability = 0.01
+			add_political_power = 35
+			81 = { add_extra_state_shared_building_slots = 1 }
+                }
+		
+		days_remove = 70
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	ROM_decision_finishing_touches = {
+
+		icon = generic_operation
+
+		fire_only_once = yes
+
+		available = {
+			  has_completed_focus = ROM_finishing_touches
+                          tag = ROM
+		}
+
+		visible = {
+                        tag = ROM
+			has_completed_focus = ROM_ever_burning_fields
+		}
+		
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+		
+		complete_effect = {
+			add_stability = 0.01
+		}
+
+		remove_effect = {
+				46 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			46 = { add_extra_state_shared_building_slots = 1 }
+                }
+		
+		days_remove = 100
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	ROM_decision_seek_chruch_assistance = {
+
+		icon = hol_exchange_intelligence_data
+
+		fire_only_once = yes
+
+		available = {
+			  has_completed_focus = ROM_speak_with_the_church
+                          tag = ROM
+		}
+
+		visible = {
+                        tag = ROM
+			has_completed_focus = ROM_ever_burning_fields
+		}
+		
+		cost = 75
+
+		modifier = {
+			political_power_factor = 0.1
+			drift_defence_factor = 0.25
+			stability_weekly = 0.0025
+		}
+		
+		complete_effect = {
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			add_stability = 0.02
+
+                }
+		
+		days_remove = 180
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	ROM_decision_speak_with_the_landowners = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		available = {
+			  has_completed_focus = ROM_speak_with_the_landowners
+                          tag = ROM
+		}
+
+		visible = {
+                        tag = ROM
+			has_completed_focus = ROM_ever_burning_fields
+		}
+		
+		cost = 50
+
+		modifier = {
+			political_power_factor = -0.15
+			drift_defence_factor = 0.15
+		}
+		
+		complete_effect = {
+			add_stability = -0.01
 		}
 
 		remove_effect = {
@@ -242,7 +433,7 @@ ROM_economy_descision_wallachia = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
-										building =farm
+										building = farm
 										size > 0
 										include_locked = no
 									}
@@ -259,206 +450,55 @@ ROM_economy_descision_wallachia = {
 					instant_build = yes
 				}
 			}
-		}
+			hidden_effect = {
+				clr_country_flag = SAX_industry_development_ongoing_flag
+			}
 
-		ai_will_do = {
-			base = 1000
-		}
-    }
-
-    ROM_decision_jiu_valley = { 
-
-        icon = generic_operation
+                }
 		
+		days_remove = 100
+		
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	ROM_decision_bribe_politicians = {
+
+		icon = hol_attract_foreign_investors
+
+		fire_only_once = yes
+
 		available = {
-		    has_completed_focus = ROM_jiu_valley 
-			owns_state = 46
-			controls_state = 46
+			  has_completed_focus = ROM_a_perfectly_broken_system
+                          tag = ROM
 		}
 
 		visible = {
+                        tag = ROM
+			has_completed_focus = ROM_ever_burning_fields
 		}
-
-		fire_only_once = yes
-		is_good = yes
-
+		
 		cost = 50
-		days_remove = 80
 
 		modifier = {
-			civilian_factory_use = 1
-			political_power_gain = -0.1
+			political_power_factor = -0.1
+			stability_weekly = -0.0010
 		}
-
-		remove_effect = { 
-			46 = {
-				add_resource = {
-					type = coal
-					amount = 5
-				}
-				add_resource = {
-					type = iron
-					amount = 2
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 1000
-		    }
-        }
 		
-	ROM_decision_construction_university = { 
-
-        icon = generic_operation
-		
-		available = {
-		    has_completed_focus = ROM_construction_university 
-		}
-
-		visible = {
-		}
-
-		fire_only_once = yes
-		is_good = yes
-
-		cost = 75
-		days_remove = 180
-
-		modifier = {
-			political_power_gain = -0.2
+		complete_effect = {
+			add_stability = -0.01
 		}
 
 		remove_effect = {
-			country_event = { id = wallachia_focustree.2 days = 10 }
-		}
+			add_political_power = 100
+			add_stability = 0.1
 
-		ai_will_do = {
-			base = 1
-		    }
-        }
+                }
 		
-	ROM_decision_bucharest_craiova_railway = { 
-
-        icon = generic_construction
-
-		highlight_states = {
-			state = 46
-		}
-
-		available = {
-		    has_completed_focus = ROM_bucharest_craiova_railway
-			num_of_civilian_factories_available_for_projects > 1
-			owns_state = 46
-			controls_state = 46
-			owns_state = 81
-			controls_state = 81
-		}
-
-		allowed = {
-		    tag = ROM
-		}
-
-		fire_only_once = yes
-		is_good = yes
-
-		cost = 25
 		days_remove = 180
-
-		modifier = {
-		    consumer_goods_factor = 0.01
-		}
-
-		remove_effect = { 
-			46 = {
-			    add_building_construction = { type = infrastructure level = 1 instant_build = yes } 
-			}
-			46 = { add_extra_state_shared_building_slots = 1 }
-			81 = {
-			    add_building_construction = { type = infrastructure level = 1 instant_build = yes } 
-			}
-			81 = { add_extra_state_shared_building_slots = 1 }
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = transport_tech }
-		}
-
+		
 		ai_will_do = {
-			base = 1000
+			factor = 15
 		}
-    }
-	ROM_decision_bucharest_braila_railway = { 
-
-        icon = generic_construction
-
-		highlight_states = {
-			state = 46
-		}
-
-		available = {
-		    has_completed_focus = ROM_bucharest_braila_railway
-			num_of_civilian_factories_available_for_projects > 1
-			owns_state = 46
-			controls_state = 46
-		}
-
-		allowed = {
-		    tag = ROM
-		}
-
-		fire_only_once = yes
-		is_good = yes
-
-		cost = 25
-		days_remove = 180
-
-		modifier = {
-		    consumer_goods_factor = 0.01
-		}
-
-		remove_effect = { 
-			46 = {
-			    add_building_construction = { type = infrastructure level = 1 instant_build = yes } 
-			}
-			46 = { add_extra_state_shared_building_slots = 1 }
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = transport_tech }
-		}
-
-		ai_will_do = {
-			base = 1000
-		}
-    }
-	
-	ROM_decision_reparing_countryside = { 
-
-        icon = generic_construction
-
-		available = {
-			has_completed_focus = ROM_reparing_the_countryside
-		}
-
-		allowed = {
-		    tag = ROM
-		}
-
-		fire_only_once = yes
-		is_good = yes
-
-		cost = 50
-		days_remove = 180
-
-		modifier = {
-		    consumer_goods_factor = 0.05
-		}
-
-		remove_effect = {
-            random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes } 
-				}
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = transport_tech }
-			}
-
-		ai_will_do = {
-			base = 1000
-		}
-    }
+	}
 }

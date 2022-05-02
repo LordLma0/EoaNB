@@ -1,20 +1,22 @@
-state={
-	id=1290
-	name="STATE_1290"
-	provinces={
-		6722 12566
+state = {
+	id = 1290
+	name = "STATE_1290"
+	local_supplies=0.0 
+	provinces = {
+		6722 7877 12566
 	}
 	state_category = pastoral
-	resources={
+	resources = {
 		wood = 2
 	}
 
-	history={
+	history = {
 		owner = SIX
 		buildings = {
 			infrastructure = 1
 		}
 		add_core_of = SIX
+		#add_claim_by = USA
 		victory_points = {
 			6722 1
 		}

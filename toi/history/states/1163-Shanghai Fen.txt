@@ -1,12 +1,14 @@
 
-state={
-	id=1163
-	name="STATE_1163"
+state = {
+	id = 1163
+	name = "STATE_1163"
+
+	local_supplies=0.0 
 	manpower = 2476
 	
 	state_category = enclave
 
-	history={
+	history = {
 		owner = QNG
 		victory_points = {
 			13733 1
@@ -18,9 +20,17 @@ state={
 			}
 		}
 		add_core_of = QNG
+		
+		add_to_array = { state_culture_array = 511 }
+		
+		add_to_array = { state_culture_array = 1 }
+
+		add_to_array = { state_religion_array = 50 }
+		
+		add_to_array = { state_religion_array_num = 1 }
 	}
 
-	provinces={
+	provinces = {
 		13733 
 	}
 }

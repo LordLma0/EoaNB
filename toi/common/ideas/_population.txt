@@ -64,7 +64,7 @@ ideas = {
 			}
 
 			modifier = {
-				monthly_population = 0.15
+				MONTHLY_POPULATION = 0.15
 				consumer_goods_factor = 0.05
 				political_power_factor = -0.05
 			}
@@ -588,6 +588,12 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						tag = SAX
+					}
+					has_completed_focus = SAX_focus_conserve_the_status_quo
+				}
 				hidden_trigger = {
 					always = no
 				}
@@ -604,62 +610,6 @@ ideas = {
 			removal_cost = -1
 			level = 2
 			
-			modifier = {
-				stability_factor = -0.05
-				MONTHLY_POPULATION = -0.02
-				conscription_factor = -0.1
-			}
-			
-			cancel_if_invalid = no
-		}
-
-		southern_menace = {
-			
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = eoanb_law_tt_southern_menace
-				}
-				custom_trigger_tooltip = {
-					tooltip = eoanb_law_reform_tip
-					always = no
-				}
-				hidden_trigger = {
-					always = no
-				}
-			}
-
-			visible = {
-				OR = {
-					original_tag = TUS
-					original_tag = PIE
-				}
-				has_country_flag = is_literally_italy
-				NOT = {
-					has_country_flag = ITA_idea_southern_menace_fixed
-				}
-			}
-
-			
-			
-			cost = 0
-			removal_cost = -1
-			level = 2
-			on_add = {
-				117 = {
-					add_dynamic_modifier = { modifier = dynmod_ITA_resistance_southern_menace }
-				}
-				115 = {
-					add_dynamic_modifier = { modifier = dynmod_ITA_resistance_southern_menace }
-				}
-				156 = {
-					add_dynamic_modifier = { modifier = dynmod_ITA_resistance_southern_menace }
-				}
-				997 = {
-					add_state_modifier = {
-						modifier = { resistance_growth = 0.1 }
-					}
-				}
-			}
 			modifier = {
 				stability_factor = -0.05
 				MONTHLY_POPULATION = -0.02
@@ -723,6 +673,12 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						tag = SAX
+					}
+					has_completed_focus = SAX_focus_thorough_reforms
+				}
 				hidden_trigger = {
 					always = no
 				}
@@ -763,25 +719,7 @@ ideas = {
 					has_idea = one_percent
 					has_idea = two_percent
 				}
-				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_army_normal_notribe
-				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
+				#custom_trigger_tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -795,24 +733,7 @@ ideas = {
 					always = no
 				}
 			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
-				}
-			}
-			
+
 			visible = {
 				NOT = {
 					OR = {
@@ -849,22 +770,6 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -878,24 +783,6 @@ ideas = {
 					always = no
 				}
 			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
-				}
-			}
-			
 			visible = {
 				NOT = {
 					OR = {
@@ -943,22 +830,6 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -972,24 +843,7 @@ ideas = {
 					always = no
 				}
 			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
-				}
-			}
-			
+
 			visible = {
 				NOT = {
 					OR = {
@@ -1032,6 +886,10 @@ ideas = {
 			removal_cost = -1
 			level = 6
 
+			allowed = {
+				original_tag = SWE
+			}
+
 			available = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
@@ -1039,13 +897,6 @@ ideas = {
 				}
 				hidden_trigger = {
 					always = no
-				}
-			}
-
-			visible = {
-				OR = {
-					original_tag = SWE
-					original_tag = FIN
 				}
 			}
 
@@ -1081,22 +932,6 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -1110,24 +945,7 @@ ideas = {
 					always = no
 				}
 			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
-				}
-			}
-			
+
 			visible = {
 				NOT = {
 					OR = {
@@ -1179,22 +997,6 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -1206,23 +1008,6 @@ ideas = {
 				}
 				hidden_trigger = {
 					always = no
-				}
-			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
 				}
 			}
 			
@@ -1291,22 +1076,6 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -1318,23 +1087,6 @@ ideas = {
 				}
 				hidden_trigger = {
 					always = no
-				}
-			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
 				}
 			}
 			
@@ -1418,22 +1170,6 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -1445,23 +1181,6 @@ ideas = {
 				}
 				hidden_trigger = {
 					always = no
-				}
-			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
 				}
 			}
 			
@@ -1542,22 +1261,6 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_notribe
 				}
-				hidden_trigger = {
-					NOT = {
-						OR = {
-							has_idea = FN_T_nomadic_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation
-							has_idea = AF_T_unorganized_tribal_nation_2
-							has_idea = AF_T_unorganized_tribal_nation_3
-							has_idea = AF_T_unorganized_tribal_nation_4
-							has_idea = AF_T_unorganized_tribal_nation_5
-							has_idea = AF_T_organized_tribal_nation
-							has_idea = AF_T_organized_tribal_nation_2
-							has_idea = AF_T_organized_tribal_nation_3
-							has_idea = AF_T_small_kingdom					
-						}
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = eoanb_law_reform_tip
 					AND = {
@@ -1569,23 +1272,6 @@ ideas = {
 				}
 				hidden_trigger = {
 					always = no
-				}
-			}
-			
-			allowed = {
-				NOT = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-					}
 				}
 			}
 			
@@ -1648,40 +1334,8 @@ ideas = {
 			level = 10
 
 			available = {
-				always = yes
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_yestribe
-				}
-				hidden_trigger = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom	
-						has_idea = afr_large_kingdom						
-					}
-				}
-			}
-			
-			allowed = {
-				OR = {
-					has_idea = FN_T_nomadic_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation_2
-					has_idea = AF_T_unorganized_tribal_nation_3
-					has_idea = AF_T_unorganized_tribal_nation_4
-					has_idea = AF_T_unorganized_tribal_nation_5
-					has_idea = AF_T_organized_tribal_nation
-					has_idea = AF_T_organized_tribal_nation_2
-					has_idea = AF_T_organized_tribal_nation_3
-					has_idea = AF_T_small_kingdom	
-					has_idea = afr_large_kingdom
 				}
 			}
 			
@@ -1723,42 +1377,8 @@ ideas = {
 
 			available = {
 				has_war_support > 0.1
-				custom_trigger_tooltip = {
-					tooltip = eoanb_trigger_tt_law_army_normal_yestribe
-				}
-				hidden_trigger = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom
-						has_idea = afr_large_kingdom						
-					}
-				}
 			}
-			
-			allowed = {
-				OR = {
-					has_idea = FN_T_nomadic_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation_2
-					has_idea = AF_T_unorganized_tribal_nation_3
-					has_idea = AF_T_unorganized_tribal_nation_4
-					has_idea = AF_T_unorganized_tribal_nation_5
-					has_idea = AF_T_organized_tribal_nation
-					has_idea = AF_T_organized_tribal_nation_2
-					has_idea = AF_T_organized_tribal_nation_3
-					has_idea = AF_T_small_kingdom	
-					has_idea = afr_large_kingdom
-				}
-			}
-			
+
 			visible = {
 				OR = {
 					has_idea = FN_T_nomadic_tribal_nation
@@ -1799,37 +1419,6 @@ ideas = {
 				has_war_support > 0.2
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_yestribe
-				}
-				hidden_trigger = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom		
-						has_idea = afr_large_kingdom				
-					}
-				}
-			}
-			
-			allowed = {
-				OR = {
-					has_idea = FN_T_nomadic_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation_2
-					has_idea = AF_T_unorganized_tribal_nation_3
-					has_idea = AF_T_unorganized_tribal_nation_4
-					has_idea = AF_T_unorganized_tribal_nation_5
-					has_idea = AF_T_organized_tribal_nation
-					has_idea = AF_T_organized_tribal_nation_2
-					has_idea = AF_T_organized_tribal_nation_3
-					has_idea = AF_T_small_kingdom	
-					has_idea = afr_large_kingdom
 				}
 			}
 			
@@ -1872,40 +1461,8 @@ ideas = {
 
 			available = {
 				has_war_support > 0.5
-				has_idea = FN_T_nomadic_tribal_nation
 				custom_trigger_tooltip = {
 					tooltip = eoanb_trigger_tt_law_army_normal_yestribe
-				}
-				hidden_trigger = {
-					OR = {
-						has_idea = FN_T_nomadic_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation
-						has_idea = AF_T_unorganized_tribal_nation_2
-						has_idea = AF_T_unorganized_tribal_nation_3
-						has_idea = AF_T_unorganized_tribal_nation_4
-						has_idea = AF_T_unorganized_tribal_nation_5
-						has_idea = AF_T_organized_tribal_nation
-						has_idea = AF_T_organized_tribal_nation_2
-						has_idea = AF_T_organized_tribal_nation_3
-						has_idea = AF_T_small_kingdom		
-						has_idea = afr_large_kingdom				
-					}
-				}
-			}
-			
-			allowed = {
-				OR = {
-					has_idea = FN_T_nomadic_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation
-					has_idea = AF_T_unorganized_tribal_nation_2
-					has_idea = AF_T_unorganized_tribal_nation_3
-					has_idea = AF_T_unorganized_tribal_nation_4
-					has_idea = AF_T_unorganized_tribal_nation_5
-					has_idea = AF_T_organized_tribal_nation
-					has_idea = AF_T_organized_tribal_nation_2
-					has_idea = AF_T_organized_tribal_nation_3
-					has_idea = AF_T_small_kingdom	
-					has_idea = afr_large_kingdom
 				}
 			}
 			

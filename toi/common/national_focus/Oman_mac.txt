@@ -25,7 +25,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_issues_of_the_past
-		icon = GFX_focus_holy_quran
+		icon = GFX_Focus_Islam_Holy_Quran
 		cost = 70
 		x = 8
 		y = 1
@@ -186,7 +186,7 @@ focus_tree = {
 	
 	focus = {
 		id = oma_mac_shadow_of_the_great_game
-		icon = GFX_goal_focus_leave_continent_alone
+		icon = GFX_Focus_leave_continent_alone
 		cost = 70
 		x = 8
 		y = 5
@@ -204,7 +204,7 @@ focus_tree = {
 	
 	focus = {
 		id = oma_mac_administrating_an_empire
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 2
 		y = 6
@@ -212,7 +212,11 @@ focus_tree = {
 			add_political_power = 75
 		}
 		allow_branch={
-			
+			OR={
+				has_country_flag = BC_Granted_Zanzabar
+				has_country_flag = BC_Granted_Kenya
+				ZAN = {is_subject_of = OMA}
+			}
 		}
 		prerequisite = {
 			focus=oma_mac_shadow_of_the_great_game
@@ -467,10 +471,123 @@ focus_tree = {
 			factor = 1
 		}
 	}
+
+	focus = {
+		id = oma_mac_coffers_ZAN
+		icon = GFX_Focus_imperialism
+		cost = 70
+		x = 2
+		y = 6
+		completion_reward = {
+			add_political_power = 75
+		}
+		allow_branch={
+			NOT={
+				has_country_flag = BC_Granted_Zanzabar
+				has_country_flag = BC_Granted_Kenya
+				ZAN = {is_subject_of = OMA}
+			}
+		}
+		prerequisite = {
+			focus=oma_mac_shadow_of_the_great_game
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_mac_use_remaining_funds
+		icon = GFX_Focus_Government_Reform
+		cost = 70
+		x = 2
+		y = 7
+		completion_reward = {
+			add_stability = 0.05
+		}
+		prerequisite = {
+			focus=oma_mac_coffers_ZAN
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_mac_funding_political_clout
+		icon = GFX_Focus_Government_Reform
+		cost = 70
+		x = 2
+		y = 8
+		completion_reward = {
+			add_political_power = 250
+		}
+		prerequisite = {
+			focus=oma_mac_use_remaining_funds
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_mac_keeping_oma_happy
+		icon = GFX_Focus_Government_Reform
+		cost = 70
+		x = 1
+		y = 9
+		completion_reward = {
+			add_political_power = 100
+		}
+		prerequisite = {
+			focus=oma_mac_funding_political_clout
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_mac_keeping_mus_happy
+		icon = GFX_Focus_Government_Reform
+		cost = 70
+		x = 3
+		y = 9
+		completion_reward = {
+			add_political_power = 100
+		}
+		prerequisite = {
+			focus=oma_mac_funding_political_clout
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_mac_peace_for_now
+		icon = GFX_Focus_Government_Reform
+		cost = 70
+		x = 2
+		y = 10
+		completion_reward = {
+			add_political_power = 100
+		}
+		prerequisite = {
+			focus=oma_mac_keeping_mus_happy
+		}
+		prerequisite = {
+			focus=oma_mac_keeping_oma_happy
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	focus = {
 		id = oma_mac_internal_politics
-		icon = GFX_goal_focus_reform_government
+		icon = GFX_Focus_Government_Reform
 		cost = 70
 		x = 8
 		y = 6
@@ -487,7 +604,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_reforms
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		cost = 70
 		x = 7
 		y = 7
@@ -507,7 +624,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_isolated
-		icon = GFX_goal_focus_gerrymandering
+		icon = GFX_Focus_Map_Gerrymandering
 		cost = 70
 		x = 9
 		y = 7
@@ -527,7 +644,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_keeping_europe_out
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 10
 		y = 8
@@ -544,7 +661,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_building_modern_economy
-		icon = GFX_goal_focus_urbanization
+		icon = GFX_Focus_Urbanization
 		cost = 70
 		x = 6
 		y = 8
@@ -561,7 +678,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_miracles_trade
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 6
 		y = 9
@@ -582,7 +699,7 @@ focus_tree = {
 	
 	focus = {
 		id = oma_mac_appoint_regional_admin
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 8
 		y = 8
@@ -600,7 +717,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_forging_new_government_systems
-		icon = GFX_goal_focus_government_icon
+		icon = GFX_Focus_Government
 		cost = 70
 		x = 8
 		y = 9
@@ -617,7 +734,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_reaping_benfits_of_modernity
-		icon = GFX_goal_focus_stimulate_economy
+		icon = GFX_Focus_stimulate_economy
 		cost = 70
 		x = 8
 		y = 10
@@ -634,7 +751,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_stay_the_course
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 7
 		y = 11
@@ -651,7 +768,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_take_new_path
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 9
 		y = 11
@@ -668,7 +785,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_rasing_funds
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 8
 		y = 12
@@ -686,7 +803,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_completing_obligations
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 8
 		y = 13
@@ -704,7 +821,7 @@ focus_tree = {
 	
 	focus = {
 		id = oma_mac_external_politics
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 14
 		y = 6
@@ -721,7 +838,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_a_pledge_to_ENG
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 14
 		y = 7
@@ -738,7 +855,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_opening_diplomatic_channels
-		icon = GFX_goal_focus_foreign_diplomacy
+		icon = GFX_Focus_Diplomatic_foreign
 		cost = 70
 		x = 14
 		y = 8
@@ -755,7 +872,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_british_consulate
-		icon = GFX_goal_focus_merchants_british
+		icon = GFX_Focus_Diplomacy_UK
 		cost = 70
 		x = 13
 		y = 9
@@ -772,7 +889,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_french_consulate
-		icon = GFX_goal_focus_merchants_french
+		icon = GFX_Focus_Diplomacy_FRA
 		cost = 70
 		x = 15
 		y = 9
@@ -810,7 +927,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_a_worthy_steward
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 2
 		y = 1
@@ -827,7 +944,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_seeking_treatment
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 2
 		y = 2
@@ -844,7 +961,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_western_medicine
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 1
 		y = 3
@@ -861,7 +978,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_eastern_medicine
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 3
 		y = 3
@@ -878,7 +995,7 @@ focus_tree = {
 	}
 	focus = {
 		id = oma_mac_recovery
-		icon = GFX_goal_focus_imperialism
+		icon = GFX_Focus_imperialism
 		cost = 70
 		x = 2
 		y = 4

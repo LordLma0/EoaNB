@@ -485,7 +485,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		    add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }
+		    add_doctrine_cost_reduction = { cost_reduction = 0.75 uses = 1 category = land_doctrine }
 	        }
 	    }
 		
@@ -1089,7 +1089,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		add_ideas = DEN_the_scanidavian_monatry_union
+		add_ideas = SDN_idea_scandinavian_monetary_union_1
 		add_political_power = 25
             add_opinion_modifier = {
 				target = SWE 

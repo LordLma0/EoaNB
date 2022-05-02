@@ -1,4 +1,4 @@
-defined_text = {
+﻿defined_text = {
 	name = MHC_SELECTOR_ENTRY_NAME_ARMY_AUS_PROXY
 	
 	text = {
@@ -18,6 +18,36 @@ defined_text = {
 			check_variable = { v = 3 }
 		}
 		localization_key = "AUS_Ludwig_von_Benedek"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = "AUS_August_von_Degenfeld"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = "AUS_Heinrich_von_Hess"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = "AUS_Franz_von_Wimpffen"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 7 }
+		}
+		localization_key = "AUS_Franz_von_Schlik"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 8 }
+		}
+		localization_key = "AUS_Franz_von_Hauslab"
 	}
 	###Army Replacement Marker###
 }
@@ -48,6 +78,18 @@ defined_text = {
 			check_variable = { v = 4 }
 		}
 		localization_key = "AUS_Maximilian_Daublebsky_von_Sterneck"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = "AUS_Josef_von_Romako"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = "AUS_August_von_Jilek"
 	}
 	###Navy Replacement Marker###
 }

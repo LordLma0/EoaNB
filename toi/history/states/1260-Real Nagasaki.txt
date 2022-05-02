@@ -1,16 +1,13 @@
 
-state={
-	id=1260
-	name="STATE_1260" # Nagasaki
-	manpower = 31000
-	state_category = town
-	resources={
-		chromium=2
-		iron=2
-		wood=1
-	}
+state = {
+	id = 1260
+	name = "STATE_1260" # Nagasaki
 
-	history={
+	local_supplies=0.0 
+	manpower = 31050
+	state_category = town
+
+	history = {
 		owner = TSH
 		add_core_of = TSH
 		buildings = {
@@ -23,10 +20,10 @@ state={
 
 		add_to_array = { state_culture_array = 285 }
 		add_to_array = { state_culture_array_num = 1 }
-        add_to_array = { state_religion_array = 15 }
+				add_to_array = { state_religion_array = 15 }
 		add_to_array = { state_religion_array_num = 0.97 }
-        add_to_array = { state_religion_array = 2 }
-        add_to_array = { state_religion_array_num = 0.03 }
+				add_to_array = { state_religion_array = 2 }
+				add_to_array = { state_religion_array_num = 0.03 }
 
 		# Blood and Iron
 		1870.1.1 = {
@@ -35,14 +32,14 @@ state={
 			remove_core_of = TSH
 		}
 
-          
+					
 		
 		victory_points = {
-			9950 5
+			9950 2
 		}
 	}
 
-	provinces={
+	provinces = {
 		9950
 		
 	}

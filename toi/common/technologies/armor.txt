@@ -1,5 +1,104 @@
 technologies = {
 
+	basic_train = {
+		enable_equipments = {
+			train_equipment_1
+		}
+
+		research_cost = 0.15
+		start_year = 1850
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 0 }
+		}
+		
+		dependencies={
+			steam_locomotive = 1
+			mass_transit_early = 1
+		}
+
+		path = {
+			leads_to_tech = train_1855
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			armor
+			trains_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				num_of_factories > 15
+				factor = 100 #might wanna get on that
+			}
+		}
+	}
+
+	train_1855 = {
+		enable_equipments = {
+			train_equipment_2
+		}
+
+		research_cost = 0.15
+		start_year = 1855
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 2 }
+		}
+		dependencies={
+			steam_locomotive_2 = 1
+		}
+		categories = {
+			armor
+			trains_tech
+		}
+		
+		path = {
+			leads_to_tech = armor_train_experiment
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = train_1865
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				has_war = yes
+				factor = 20
+			}
+		}
+	}
+	train_1865 = {
+		enable_equipments = {
+			train_equipment_3
+		}
+
+		research_cost = 0.15
+		start_year = 1865
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			armor
+			trains_tech
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				has_war = yes
+				factor = 20
+			}
+		}
+	}
 	armor_train_experiment = {
 	
 		category_all_armor = {
@@ -11,29 +110,39 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		path = {
-			leads_to_tech = armor_train_battery
-			research_cost_coeff = 1
-		}
-		dependencies={
-			steam_locomotive = 1
-		}
-		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1860
 		folder = {
 			name = armour_folder
 			position = { x = 0 y = 4 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  
 			factor = 1
 			
 			modifier = {
 				factor = 1.5
 				is_major = yes
 			}
-			
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			} 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			}
 			modifier = {
 				factor = 0
 				date < 1860.1.1
@@ -42,17 +151,14 @@ technologies = {
 					has_tech_bonus = { category = trains_tech }  
 				}
 			}
-			
 			modifier = {
 				factor = 1.25
 				date > "1865.1.1"
 			}
-			
 			modifier = {
 				factor = 1.25
 				date > "1870.1.1"
 			}
-			
 			modifier = {
 				factor = 1.25
 				date > "1875.1.1"
@@ -78,15 +184,19 @@ technologies = {
 			leads_to_tech = armor_train_2
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = armor_train_battery
+			research_cost_coeff = 1
+		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1865
 		folder = {
 			name = armour_folder
 			position = { x = 0 y = 6 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -130,7 +240,7 @@ technologies = {
 			armor_train_1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1880
 		folder = {
 			name = armour_folder
@@ -141,7 +251,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -185,7 +295,7 @@ technologies = {
 			armor_train_2
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1890
 		folder = {
 			name = armour_folder
@@ -200,7 +310,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -244,7 +354,7 @@ technologies = {
 			armor_train_3
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1910
 		folder = {
 			name = armour_folder
@@ -255,7 +365,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -299,7 +409,7 @@ technologies = {
 			armor_train_4
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -310,7 +420,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -354,7 +464,7 @@ technologies = {
 			armor_train_5
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -365,7 +475,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -409,14 +519,14 @@ technologies = {
 			hard_attack = 0.2
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = armour_folder
 			position = { x = 0 y = 30 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -445,14 +555,14 @@ technologies = {
 			hardness = 0.02
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = armour_folder
 			position = { x = 2 y = 18 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -481,18 +591,18 @@ technologies = {
 			soft_attack = 0.08
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = armour_folder
-			position = { x = 4 y = 6 }
+			position = { x = 1 y = 8 }
 		}
 		path = {
 			leads_to_tech = armor_train_battery_2
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -536,14 +646,14 @@ technologies = {
 			soft_attack = 0.08
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = armour_folder
-			position = { x = 4 y = 8 }
+			position = { x = 1 y = 10 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -638,7 +748,7 @@ technologies = {
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
-				date > "1850.1.1"
+				
 				date < "1864.1.1"
 			}
 			modifier = {
@@ -700,14 +810,14 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1865
 		folder = {
 			name = armour_folder
 			position = { x = 22 y = 6 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -752,14 +862,14 @@ technologies = {
 			bicycle_infantry
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = armour_folder
 			position = { x = 19 y = 6 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -819,7 +929,7 @@ technologies = {
 			position = { x = 22 y = 14 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -872,14 +982,14 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1890
 		folder = {
 			name = armour_folder
 			position = { x = 22 y = 16 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -923,7 +1033,7 @@ technologies = {
 			armor_equipment_motorcycle_1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -934,7 +1044,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -978,7 +1088,7 @@ technologies = {
 			armor_equipment_motorcycle_2
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -989,7 +1099,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1044,14 +1154,14 @@ technologies = {
 			high_speed_steam_engine = 1
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1865
 		folder = {
 			name = armour_folder
 			position = { x = 6 y = 6 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1109,7 +1219,7 @@ technologies = {
 			position = { x = 6 y = 8 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1158,7 +1268,7 @@ technologies = {
 			steam_car_support_company
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1880
 		folder = {
 			name = armour_folder
@@ -1169,7 +1279,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1219,7 +1329,7 @@ technologies = {
 			hard_attack = 0.02
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1890
 		folder = {
 			name = armour_folder
@@ -1231,7 +1341,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1271,7 +1381,7 @@ technologies = {
 	}
 	armor_tech_early_military_truck = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1900
 		folder = {
 			name = armour_folder
@@ -1306,7 +1416,7 @@ technologies = {
 			modifier = { 
 				factor = 0 
 				afr_is_tribal = yes 
-				date > 1850.1.1 
+				 
 				date < 1875.1.1 
 			}
 			modifier = {
@@ -1341,7 +1451,7 @@ technologies = {
 	}
 	armor_tech_early_trucks = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1910
 		folder = {
 			name = armour_folder
@@ -1366,7 +1476,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1403,7 +1513,7 @@ technologies = {
 	}
 	armor_tech_tank_prototypes = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -1417,7 +1527,7 @@ technologies = {
 			defense = 0.05
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1450,7 +1560,7 @@ technologies = {
 	}
 	armor_tech_trench_tanks = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1917
 		folder = {
 			name = armour_folder
@@ -1494,7 +1604,7 @@ technologies = {
 			}
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1527,7 +1637,7 @@ technologies = {
 	}
 	armor_tech_interwar_tanks = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -1545,7 +1655,7 @@ technologies = {
 			iw_tank_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1578,7 +1688,7 @@ technologies = {
 	}
 	basic_light_tank = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1932
 		folder = {
 			name = armour_folder
@@ -1600,7 +1710,7 @@ technologies = {
 			fuel_direct_injection = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1643,7 +1753,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1934
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0.5
 			
 			modifier = {
@@ -1708,7 +1818,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1934
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0.25
 			modifier = {
 				has_template_containing_unit = light_sp_artillery_brigade
@@ -1742,7 +1852,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1934
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 			
 			modifier = {
@@ -1774,7 +1884,7 @@ technologies = {
 
 	improved_light_tank = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1936
 		folder = {
 			name = armour_folder
@@ -1801,7 +1911,7 @@ technologies = {
 			improved_light_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -1841,7 +1951,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1936
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 			
 			modifier = {
@@ -1895,7 +2005,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1936
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 			
 			modifier = {
@@ -1934,7 +2044,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1936
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 			
 			modifier = {
@@ -1962,7 +2072,7 @@ technologies = {
 
 	advanced_light_tank= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1941
 		folder = {
 			name = armour_folder
@@ -1981,7 +2091,7 @@ technologies = {
 			advanced_light_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2021,7 +2131,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 			
 			modifier = {
@@ -2063,7 +2173,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 	
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0.1
 			
 			modifier = {
@@ -2088,7 +2198,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 		}
 		
@@ -2099,7 +2209,7 @@ technologies = {
 
 	light_tank_4= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1945
 		folder = {
 			name = armour_folder
@@ -2113,7 +2223,7 @@ technologies = {
 			light_tank_equipment_4
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2146,7 +2256,7 @@ technologies = {
 	}
 	light_tank_5= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1955
 		folder = {
 			name = armour_folder
@@ -2160,7 +2270,7 @@ technologies = {
 			light_tank_equipment_5
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2193,7 +2303,7 @@ technologies = {
 	}
 	amphibious_tank= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1940
 		folder = {
 			name = armour_folder
@@ -2211,7 +2321,7 @@ technologies = {
 			amphibious_armor
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2244,7 +2354,7 @@ technologies = {
 	}
 	amphibious_tank_2= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1942
 		folder = {
 			name = armour_folder
@@ -2261,7 +2371,7 @@ technologies = {
 			tungsten_wire_production = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2294,7 +2404,7 @@ technologies = {
 	}
 	amphibious_tank_3= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1950
 		folder = {
 			name = armour_folder
@@ -2308,7 +2418,7 @@ technologies = {
 			amphibious_tank_equipment_3
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2341,7 +2451,7 @@ technologies = {
 	}
 	armor_tech_armored_car = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -2358,7 +2468,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2393,7 +2503,7 @@ technologies = {
 	}
 	armor_tech_armored_car_2 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -2407,7 +2517,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2442,7 +2552,7 @@ technologies = {
 	}
 	armor_tech_armored_car_3 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1930
 		folder = {
 			name = armour_folder
@@ -2460,7 +2570,7 @@ technologies = {
 			fuel_direct_injection = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2495,7 +2605,7 @@ technologies = {
 	}
 	armor_tech_armored_car_4 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1939
 		folder = {
 			name = armour_folder
@@ -2509,7 +2619,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2544,7 +2654,7 @@ technologies = {
 	}
 	armor_tech_armored_car_5 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1941
 		folder = {
 			name = armour_folder
@@ -2554,7 +2664,7 @@ technologies = {
 			armored_car_equipment_3
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2589,7 +2699,7 @@ technologies = {
 	}
 	armor_tech_early_motorized = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1918
 		folder = {
 			name = armour_folder
@@ -2603,7 +2713,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2640,7 +2750,7 @@ technologies = {
 	}
 	motorised_infantry = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1930
 		folder = {
 			name = armour_folder
@@ -2666,7 +2776,7 @@ technologies = {
 			motorized_rocket_unit
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2710,10 +2820,10 @@ technologies = {
 			motorized_rocket_equipment_1
 		}
 	
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1939
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 		}
@@ -2724,7 +2834,7 @@ technologies = {
 	}
 	early_technicals = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1935
 		folder = {
 			name = armour_folder
@@ -2744,7 +2854,7 @@ technologies = {
 			gatling_gun = 1
 		}
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2781,7 +2891,7 @@ technologies = {
 	}
 	simple_technicals = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1943
 		folder = {
 			name = armour_folder
@@ -2795,7 +2905,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2832,7 +2942,7 @@ technologies = {
 	}
 	technicals = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1955
 		folder = {
 			name = armour_folder
@@ -2846,7 +2956,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2883,7 +2993,7 @@ technologies = {
 	}
 	technicals_2 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -2897,7 +3007,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2934,7 +3044,7 @@ technologies = {
 	}
 	technicals_3 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 2010
 		folder = {
 			name = armour_folder
@@ -2944,7 +3054,7 @@ technologies = {
 			technical_equipment_5
 		}
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -2981,7 +3091,7 @@ technologies = {
 	}
 	armor_tech_motorized_2 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1935
 		folder = {
 			name = armour_folder
@@ -2995,7 +3105,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -3062,7 +3172,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1940
 		folder = {
 			name = armour_folder
@@ -3075,7 +3185,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 2
 			
 			modifier = {
@@ -3114,7 +3224,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1941
 		folder = {
 			name = armour_folder
@@ -3128,7 +3238,7 @@ technologies = {
 			tp_tech
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 2
 			
 			modifier = {
@@ -3157,7 +3267,7 @@ technologies = {
 
 		
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1943
 		folder = {
 			name = armour_folder
@@ -3171,7 +3281,7 @@ technologies = {
 			tp_tech
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 2
 			
 			modifier = {
@@ -3199,7 +3309,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1942
 		folder = {
 			name = armour_folder
@@ -3212,7 +3322,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -3244,7 +3354,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1945
 		folder = {
 			name = armour_folder
@@ -3257,7 +3367,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -3278,7 +3388,7 @@ technologies = {
 			mechanized_equipment_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1955
 		folder = {
 			name = armour_folder
@@ -3303,7 +3413,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3313,7 +3423,7 @@ technologies = {
 			ifv_equipment_1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -3335,7 +3445,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3345,7 +3455,7 @@ technologies = {
 			ifv_equipment_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1990
 		folder = {
 			name = armour_folder
@@ -3362,7 +3472,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3372,7 +3482,7 @@ technologies = {
 			ifv_equipment_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2010
 		folder = {
 			name = armour_folder
@@ -3389,7 +3499,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3399,7 +3509,7 @@ technologies = {
 			ifv_equipment_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2015
 		folder = {
 			name = armour_folder
@@ -3416,7 +3526,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3426,7 +3536,7 @@ technologies = {
 			ifv_equipment_5
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2020
 		folder = {
 			name = armour_folder
@@ -3443,7 +3553,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3453,7 +3563,7 @@ technologies = {
 			apc_equipment_1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -3470,7 +3580,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3480,7 +3590,7 @@ technologies = {
 			apc_equipment_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1990
 		folder = {
 			name = armour_folder
@@ -3497,7 +3607,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3507,7 +3617,7 @@ technologies = {
 			apc_equipment_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2010
 		folder = {
 			name = armour_folder
@@ -3524,7 +3634,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3534,7 +3644,7 @@ technologies = {
 			apc_equipment_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2015
 		folder = {
 			name = armour_folder
@@ -3551,7 +3661,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3561,7 +3671,7 @@ technologies = {
 			apc_equipment_5
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2020
 		folder = {
 			name = armour_folder
@@ -3578,7 +3688,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3588,7 +3698,7 @@ technologies = {
 			apc_equipment_6
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2030
 		folder = {
 			name = armour_folder
@@ -3605,7 +3715,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3615,7 +3725,7 @@ technologies = {
 			apc_equipment_7
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -3632,7 +3742,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3642,7 +3752,7 @@ technologies = {
 			apc_equipment_8
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2045
 		folder = {
 			name = armour_folder
@@ -3655,7 +3765,7 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 		}
 	}
@@ -3706,7 +3816,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1930
 		
 		folder = {
@@ -3720,7 +3830,7 @@ technologies = {
 			basic_heavy_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0.8
 			
 			modifier = {
@@ -3770,7 +3880,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1934
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -3797,7 +3907,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1934
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -3825,7 +3935,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1934
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -3867,7 +3977,7 @@ technologies = {
 			industrial_chrome_electroplating = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1941
 		
 		folder = {
@@ -3881,7 +3991,7 @@ technologies = {
 			improved_heavy_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0.8
 			modifier = {
 				tag = JAP
@@ -3926,7 +4036,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -3953,7 +4063,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -3981,7 +4091,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -4014,7 +4124,7 @@ technologies = {
 			research_cost_coeff = 0.9
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1943
 		
 		dependencies={
@@ -4032,7 +4142,7 @@ technologies = {
 			advanced_heavy_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0.8
 			
 			modifier = {
@@ -4066,7 +4176,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -4093,7 +4203,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -4120,7 +4230,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -4148,7 +4258,7 @@ technologies = {
 			super_heavy_armor
 		}
 	
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1943
 		folder = {
 			name = armour_folder
@@ -4161,7 +4271,7 @@ technologies = {
 			super_heavy_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0 # Hitler cries on the inside
 		}
 		
@@ -4184,7 +4294,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 		}
 		
@@ -4206,7 +4316,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 		}
 		
@@ -4228,7 +4338,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 		}
 		
@@ -4252,7 +4362,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1939
 
 		folder = {
@@ -4270,7 +4380,7 @@ technologies = {
 			basic_medium_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 2
 			
 			modifier = {
@@ -4324,7 +4434,7 @@ technologies = {
 		start_year = 1939
 
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 			
 			modifier = {
@@ -4382,7 +4492,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1939
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 
 			modifier = {
@@ -4428,7 +4538,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1939
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 
 			modifier = {
@@ -4469,7 +4579,7 @@ technologies = {
 			tungsten_wire_production = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1941
 		
 		folder = {
@@ -4483,7 +4593,7 @@ technologies = {
 			improved_medium_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 3
 			
 			modifier = {
@@ -4539,7 +4649,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 			
 			modifier = {
@@ -4602,7 +4712,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 
 			modifier = {
@@ -4647,7 +4757,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1941
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 
 			modifier = {
@@ -4688,7 +4798,7 @@ technologies = {
 			tungsten_wire_production = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1943
 		
 		folder = {
@@ -4703,7 +4813,7 @@ technologies = {
 		}
 		
 
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -4737,7 +4847,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -4799,7 +4909,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 
 			modifier = {
@@ -4845,7 +4955,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1943
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 
 			modifier = {
@@ -4873,7 +4983,7 @@ technologies = {
 			modern_armor
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1945
 		
 		folder = {
@@ -4895,7 +5005,7 @@ technologies = {
 			modern_spaa
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -4933,7 +5043,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1945
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -4970,7 +5080,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1945
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5007,7 +5117,7 @@ technologies = {
 		research_cost = 0.5
 		start_year = 1945
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 0
 		}
 		
@@ -5022,7 +5132,7 @@ technologies = {
 			modern_tank_equipment_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1950
 		
 		folder = {
@@ -5035,7 +5145,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5070,7 +5180,7 @@ technologies = {
 			modern_ceramics = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1960
 		
 		folder = {
@@ -5086,7 +5196,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5112,7 +5222,7 @@ technologies = {
 	}
 	nbc_protections = { #
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1970
 		
 		folder = {
@@ -5120,7 +5230,7 @@ technologies = {
 			position = { x = 9 y = 50 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5150,7 +5260,7 @@ technologies = {
 			mtb_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1970
 		
 		folder = {
@@ -5162,7 +5272,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5196,7 +5306,7 @@ technologies = {
 			integrated_circuits = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1980
 		
 		folder = {
@@ -5208,7 +5318,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5238,7 +5348,7 @@ technologies = {
 			mtb_4
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2000
 		
 		folder = {
@@ -5250,7 +5360,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5280,7 +5390,7 @@ technologies = {
 			mtb_5
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2010
 		
 		folder = {
@@ -5292,7 +5402,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5322,7 +5432,7 @@ technologies = {
 			mtb_6
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2015
 		
 		folder = {
@@ -5334,7 +5444,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5368,7 +5478,7 @@ technologies = {
 			kroll_process = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2020
 		
 		folder = {
@@ -5380,7 +5490,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5410,7 +5520,7 @@ technologies = {
 			future_tank_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2025
 		
 		folder = {
@@ -5426,7 +5536,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5456,7 +5566,7 @@ technologies = {
 			future_tank_3
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2030
 		
 		folder = {
@@ -5468,7 +5578,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5498,7 +5608,7 @@ technologies = {
 			future_tank_4
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2035
 		
 		folder = {
@@ -5510,7 +5620,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5540,7 +5650,7 @@ technologies = {
 			future_tank_5
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2040
 		
 		folder = {
@@ -5552,7 +5662,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5582,7 +5692,7 @@ technologies = {
 			future_tank_6
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2045
 		
 		folder = {
@@ -5590,7 +5700,7 @@ technologies = {
 			position = { x = 6 y = 72 }
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5620,7 +5730,7 @@ technologies = {
 			# future_tank_2
 		# }	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2030
 		
 		folder = {
@@ -5635,7 +5745,7 @@ technologies = {
 			walking_cycles = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5668,7 +5778,7 @@ technologies = {
 			armor_walker
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2035
 		
 		folder = {
@@ -5685,7 +5795,7 @@ technologies = {
 		}
 		
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5715,7 +5825,7 @@ technologies = {
 			walking_battle_platform_equipment_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2040
 		
 		folder = {
@@ -5728,7 +5838,7 @@ technologies = {
 		}
 		
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5758,7 +5868,7 @@ technologies = {
 			walking_battle_platform_equipment_3
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2050
 		
 		folder = {
@@ -5767,7 +5877,7 @@ technologies = {
 		}
 		
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5793,11 +5903,11 @@ technologies = {
 	}
 	long_range_walking_battle_platform_1 = { #
 
-		# enable_equipments = {
-			# long_range_walking_battle_platform_equipment_1
-		# }	
+		enable_equipments = {
+			walking_battle_platform_artillery_equipment_1
+		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2040
 		
 		folder = {
@@ -5810,7 +5920,7 @@ technologies = {
 		}
 		
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5836,11 +5946,11 @@ technologies = {
 	}
 	long_range_walking_battle_platform_2 = { #
 
-		# enable_equipments = {
-			# long_range_walking_battle_platform_equipment_2
-		# }	
+		enable_equipments = {
+			walking_battle_platform_artillery_equipment_2
+		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2050
 		
 		folder = {
@@ -5848,7 +5958,7 @@ technologies = {
 			position = { x = -2 y = 74 }
 		}		
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
@@ -5892,7 +6002,7 @@ technologies = {
 			kroll_process = 1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2030
 		folder = {
 			name = armour_folder
@@ -5944,7 +6054,7 @@ technologies = {
 			l_robot_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -5988,7 +6098,7 @@ technologies = {
 			l_robot_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2040
 		folder = {
 			name = armour_folder
@@ -6032,7 +6142,7 @@ technologies = {
 			l_robot_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2050
 		folder = {
 			name = armour_folder
@@ -6076,7 +6186,7 @@ technologies = {
 			medium_robots
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -6120,7 +6230,7 @@ technologies = {
 			m_robot_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2040
 		folder = {
 			name = armour_folder
@@ -6164,7 +6274,7 @@ technologies = {
 			m_robot_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2050
 		folder = {
 			name = armour_folder
@@ -6204,7 +6314,7 @@ technologies = {
 			h_robot_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -6248,7 +6358,7 @@ technologies = {
 			h_robot_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2040
 		folder = {
 			name = armour_folder
@@ -6292,7 +6402,7 @@ technologies = {
 			h_robot_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2045
 		folder = {
 			name = armour_folder
@@ -6328,7 +6438,7 @@ technologies = {
 	
 	attack_heli_1 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1960
 		folder = {
 			name = armour_folder
@@ -6350,7 +6460,7 @@ technologies = {
 			pratical_helicopter_applications = 1
 		}
 		
-		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes date > 1850.1.1 date < 1875.1.1 }
+		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 			factor = 1
 			
 			modifier = {
