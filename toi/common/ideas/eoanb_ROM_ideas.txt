@@ -1,5 +1,36 @@
 ideas = {
 	country = {
+
+		ROM_failed_to_fix_agriculture = {
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = failed_to_fix_agriculture
+			
+			modifier = {
+				centrism_drift = 0.1
+                                consumer_goods_factor = 0.5
+				political_power_gain = -0.3
+				production_speed_buildings_factor = -0.45 
+				stability_factor = -0.35
+			}
+		}
+
+		ROM_a_perfect_mess_idea = {
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ROM_a_perfect_mess
+			
+			modifier = {
+                                consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.1 
+			}
+		}
+
 		ROM_idea_sentiment_of_unity = {
 			allowed_civil_war = {
 				always = yes
@@ -95,9 +126,9 @@ ideas = {
 			picture = ROM_idea_ruined_agriculture
 
 			modifier = {
-                consumer_goods_factor = 0.2
-				political_power_gain = -0.1
-				production_speed_buildings_factor = -0.05 
+                consumer_goods_factor = 0.4
+				political_power_gain = -0.2
+				production_speed_buildings_factor = -0.2 
 			}
 		}
 		
@@ -109,8 +140,93 @@ ideas = {
 			picture = ROM_idea_ruined_agriculture
 
 			modifier = {
-                consumer_goods_factor = 0.05
+                consumer_goods_factor = 0.35
 				political_power_gain = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		
+		ROM_ruined_agriculture2 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ROM_idea_ruined_agriculture
+
+			modifier = {
+                consumer_goods_factor = 0.35
+				political_power_gain = -0.2
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+		ROM_ruined_agriculture3 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ROM_idea_ruined_agriculture
+
+			modifier = {
+                consumer_goods_factor = 0.30
+				political_power_gain = -0.2
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+		ROM_ruined_agriculture4 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ROM_idea_ruined_agriculture
+
+			modifier = {
+                consumer_goods_factor = 0.2
+				political_power_gain = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+		ROM_ruined_agriculture5 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ROM_idea_ruined_agriculture
+
+			modifier = {
+                consumer_goods_factor = 0.15
+				political_power_gain = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+		ROM_ruined_agriculture6 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ROM_idea_ruined_agriculture
+
+			modifier = {
+                consumer_goods_factor = 0.1
+				political_power_gain = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		
+		ROM_ruined_agriculture7 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ROM_idea_ruined_agriculture
+
+			modifier = {
+                consumer_goods_factor = 0.1
+				political_power_gain = -0.06
+				production_speed_buildings_factor = -0.05
 			}
 		}
 		
@@ -164,6 +280,9 @@ ideas = {
 		}
 		
 		ROM_incompetent_officers = {
+
+	         picture = SWE_Inept_Army
+
 		    allowed_civil_war = {
 				always = yes
 			}
@@ -179,105 +298,26 @@ ideas = {
 				always = yes
 			}
 
+			picture = ROM_idea_Romanul_Newspaper
+
 			modifier = {
                 autonomy_gain = 0.1
 				stability_factor = 0.05
 				political_power_gain = -0.05
 			}
 		}
-	}
-	
-	political_advisor = {
-		ROM_gheroghe_costraforu = {
-			allowed = {
-				original_tag = ROM
-			}
-			available = {
-				has_country_flag = costaforu_active
+		
+		ROM_bulgarian_refugees = {
+		    allowed_civil_war = {
+				always = yes
 			}
 
-			traits = { 
-				friend_of_capitalism				
-				ROM_trait_Unionist
-			}
-		}
-		
-		ROM_christian_tell = {
-		
-			allowed = {
-				original_tag = ROM
-			}
-			
-			picture = ROM_christian_tell
-			
-			available = { }
+			picture = ROM_idea_bulgarian_refugee_in_romania
 
-			traits = { ROM_trait_Unionist ROM_trait_Christian_Tell }
-			
-		}
-		
-		ROM_Ion_Ghica = {
-			allowed = {
-				original_tag = ROM
+			modifier = {
+				monthly_population	 = 0.05
+				political_power_gain = -0.05
 			}
-			available = {
-			}
-
-			traits = { ROM_trait_Ion_Ghica }
-		}
-		
-		ROM_Constantin_Rosetti = {
-			allowed = {
-				original_tag = ROM
-			}
-			available = {
-			}
-
-			traits = { ROM_trait_Unionist political_dancer }
-		}
-		
-		ROM_Nicolae_Kretzulescu = {
-			allowed = {
-				original_tag = ROM
-			}
-			available = {
-			}
-
-			traits = { eoanb_trait_experienced_diplomat }
-		}
-		
-		ROM_Ion_Heliade_Radulescu = {
-			allowed = {
-				original_tag = ROM
-			}
-			available = {
-			}
-
-			traits = { ROM_trait_Ion_Heliade_Radulescu }
-		}
-		
-		ROM_Ion_Ionescu_Brad = {
-		
-			picture = ROM_Ion_Ionescu_Brad
-		
-			allowed = {
-				original_tag = ROM
-			}
-			
-			available = {
-			}
-
-			traits = { ROM_trait_Ion_Ionescu_Brad }
-		}
-		
-		ROM_Constantin_Robescu = {
-			allowed = {
-				original_tag = ROM
-			}
-			available = {
-			}
-
-			traits = { ROM_trait_Constantin_Robescu }
 		}
 	}
 }

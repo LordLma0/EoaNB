@@ -2,6 +2,8 @@ state = {
 	id = 1074
 	name = "STATE_1074"
 	manpower = 18749
+
+	local_supplies=0.0 
 	resources = {
 		wood = 4
 	}
@@ -17,7 +19,7 @@ state = {
 		}
 
 		victory_points = {
-			10687 1
+			4778 1
 		}
 
 		add_to_array = { state_culture_array = 454 } #Penutian
@@ -35,6 +37,6 @@ state = {
 	}
 
 	provinces = {
-		3781 4778 7845 10687 12553
+		3781 4778 7845
 	}
 }

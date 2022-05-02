@@ -1,5 +1,104 @@
 technologies = {
 
+	basic_train = {
+		enable_equipments = {
+			train_equipment_1
+		}
+
+		research_cost = 0.15
+		start_year = 1850
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 0 }
+		}
+		
+		dependencies={
+			steam_locomotive = 1
+			mass_transit_early = 1
+		}
+
+		path = {
+			leads_to_tech = train_1855
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			armor
+			trains_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				num_of_factories > 15
+				factor = 100 #might wanna get on that
+			}
+		}
+	}
+
+	train_1855 = {
+		enable_equipments = {
+			train_equipment_2
+		}
+
+		research_cost = 0.15
+		start_year = 1855
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 2 }
+		}
+		dependencies={
+			steam_locomotive_2 = 1
+		}
+		categories = {
+			armor
+			trains_tech
+		}
+		
+		path = {
+			leads_to_tech = armor_train_experiment
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = train_1865
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				has_war = yes
+				factor = 20
+			}
+		}
+	}
+	train_1865 = {
+		enable_equipments = {
+			train_equipment_3
+		}
+
+		research_cost = 0.15
+		start_year = 1865
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			armor
+			trains_tech
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				has_war = yes
+				factor = 20
+			}
+		}
+	}
 	armor_train_experiment = {
 	
 		category_all_armor = {
@@ -11,15 +110,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		path = {
-			leads_to_tech = armor_train_battery
-			research_cost_coeff = 1
-		}
-		dependencies={
-			steam_locomotive = 1
-		}
-		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1860
 		folder = {
 			name = armour_folder
@@ -93,8 +184,12 @@ technologies = {
 			leads_to_tech = armor_train_2
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = armor_train_battery
+			research_cost_coeff = 1
+		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1865
 		folder = {
 			name = armour_folder
@@ -145,7 +240,7 @@ technologies = {
 			armor_train_1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1880
 		folder = {
 			name = armour_folder
@@ -200,7 +295,7 @@ technologies = {
 			armor_train_2
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1890
 		folder = {
 			name = armour_folder
@@ -259,7 +354,7 @@ technologies = {
 			armor_train_3
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1910
 		folder = {
 			name = armour_folder
@@ -314,7 +409,7 @@ technologies = {
 			armor_train_4
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -369,7 +464,7 @@ technologies = {
 			armor_train_5
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -424,7 +519,7 @@ technologies = {
 			hard_attack = 0.2
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = armour_folder
@@ -460,7 +555,7 @@ technologies = {
 			hardness = 0.02
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = armour_folder
@@ -496,11 +591,11 @@ technologies = {
 			soft_attack = 0.08
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = armour_folder
-			position = { x = 4 y = 6 }
+			position = { x = 1 y = 8 }
 		}
 		path = {
 			leads_to_tech = armor_train_battery_2
@@ -551,11 +646,11 @@ technologies = {
 			soft_attack = 0.08
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = armour_folder
-			position = { x = 4 y = 8 }
+			position = { x = 1 y = 10 }
 		}
 		
 		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
@@ -715,7 +810,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1865
 		folder = {
 			name = armour_folder
@@ -767,7 +862,7 @@ technologies = {
 			bicycle_infantry
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = armour_folder
@@ -887,7 +982,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1890
 		folder = {
 			name = armour_folder
@@ -938,7 +1033,7 @@ technologies = {
 			armor_equipment_motorcycle_1
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -993,7 +1088,7 @@ technologies = {
 			armor_equipment_motorcycle_2
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -1059,7 +1154,7 @@ technologies = {
 			high_speed_steam_engine = 1
 		}
 		
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1865
 		folder = {
 			name = armour_folder
@@ -1173,7 +1268,7 @@ technologies = {
 			steam_car_support_company
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1880
 		folder = {
 			name = armour_folder
@@ -1234,7 +1329,7 @@ technologies = {
 			hard_attack = 0.02
 		}
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1890
 		folder = {
 			name = armour_folder
@@ -1286,7 +1381,7 @@ technologies = {
 	}
 	armor_tech_early_military_truck = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1900
 		folder = {
 			name = armour_folder
@@ -1356,7 +1451,7 @@ technologies = {
 	}
 	armor_tech_early_trucks = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1910
 		folder = {
 			name = armour_folder
@@ -1418,7 +1513,7 @@ technologies = {
 	}
 	armor_tech_tank_prototypes = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -1465,7 +1560,7 @@ technologies = {
 	}
 	armor_tech_trench_tanks = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1917
 		folder = {
 			name = armour_folder
@@ -1542,7 +1637,7 @@ technologies = {
 	}
 	armor_tech_interwar_tanks = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -1593,7 +1688,7 @@ technologies = {
 	}
 	basic_light_tank = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1932
 		folder = {
 			name = armour_folder
@@ -1789,7 +1884,7 @@ technologies = {
 
 	improved_light_tank = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1936
 		folder = {
 			name = armour_folder
@@ -1977,7 +2072,7 @@ technologies = {
 
 	advanced_light_tank= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1941
 		folder = {
 			name = armour_folder
@@ -2114,7 +2209,7 @@ technologies = {
 
 	light_tank_4= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1945
 		folder = {
 			name = armour_folder
@@ -2161,7 +2256,7 @@ technologies = {
 	}
 	light_tank_5= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1955
 		folder = {
 			name = armour_folder
@@ -2208,7 +2303,7 @@ technologies = {
 	}
 	amphibious_tank= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1940
 		folder = {
 			name = armour_folder
@@ -2259,7 +2354,7 @@ technologies = {
 	}
 	amphibious_tank_2= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1942
 		folder = {
 			name = armour_folder
@@ -2309,7 +2404,7 @@ technologies = {
 	}
 	amphibious_tank_3= {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1950
 		folder = {
 			name = armour_folder
@@ -2356,7 +2451,7 @@ technologies = {
 	}
 	armor_tech_armored_car = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = armour_folder
@@ -2408,7 +2503,7 @@ technologies = {
 	}
 	armor_tech_armored_car_2 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = armour_folder
@@ -2457,7 +2552,7 @@ technologies = {
 	}
 	armor_tech_armored_car_3 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1930
 		folder = {
 			name = armour_folder
@@ -2510,7 +2605,7 @@ technologies = {
 	}
 	armor_tech_armored_car_4 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1939
 		folder = {
 			name = armour_folder
@@ -2559,7 +2654,7 @@ technologies = {
 	}
 	armor_tech_armored_car_5 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1941
 		folder = {
 			name = armour_folder
@@ -2604,7 +2699,7 @@ technologies = {
 	}
 	armor_tech_early_motorized = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1918
 		folder = {
 			name = armour_folder
@@ -2655,7 +2750,7 @@ technologies = {
 	}
 	motorised_infantry = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1930
 		folder = {
 			name = armour_folder
@@ -2725,7 +2820,7 @@ technologies = {
 			motorized_rocket_equipment_1
 		}
 	
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1939
 		
 		ai_will_do = {  modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
@@ -2739,7 +2834,7 @@ technologies = {
 	}
 	early_technicals = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1935
 		folder = {
 			name = armour_folder
@@ -2796,7 +2891,7 @@ technologies = {
 	}
 	simple_technicals = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1943
 		folder = {
 			name = armour_folder
@@ -2847,7 +2942,7 @@ technologies = {
 	}
 	technicals = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1955
 		folder = {
 			name = armour_folder
@@ -2898,7 +2993,7 @@ technologies = {
 	}
 	technicals_2 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -2949,7 +3044,7 @@ technologies = {
 	}
 	technicals_3 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 2010
 		folder = {
 			name = armour_folder
@@ -2996,7 +3091,7 @@ technologies = {
 	}
 	armor_tech_motorized_2 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1935
 		folder = {
 			name = armour_folder
@@ -3077,7 +3172,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1940
 		folder = {
 			name = armour_folder
@@ -3129,7 +3224,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1941
 		folder = {
 			name = armour_folder
@@ -3172,7 +3267,7 @@ technologies = {
 
 		
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1943
 		folder = {
 			name = armour_folder
@@ -3214,7 +3309,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1942
 		folder = {
 			name = armour_folder
@@ -3259,7 +3354,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1945
 		folder = {
 			name = armour_folder
@@ -3293,7 +3388,7 @@ technologies = {
 			mechanized_equipment_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1955
 		folder = {
 			name = armour_folder
@@ -3328,7 +3423,7 @@ technologies = {
 			ifv_equipment_1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -3360,7 +3455,7 @@ technologies = {
 			ifv_equipment_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1990
 		folder = {
 			name = armour_folder
@@ -3387,7 +3482,7 @@ technologies = {
 			ifv_equipment_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2010
 		folder = {
 			name = armour_folder
@@ -3414,7 +3509,7 @@ technologies = {
 			ifv_equipment_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2015
 		folder = {
 			name = armour_folder
@@ -3441,7 +3536,7 @@ technologies = {
 			ifv_equipment_5
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2020
 		folder = {
 			name = armour_folder
@@ -3468,7 +3563,7 @@ technologies = {
 			apc_equipment_1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -3495,7 +3590,7 @@ technologies = {
 			apc_equipment_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 1990
 		folder = {
 			name = armour_folder
@@ -3522,7 +3617,7 @@ technologies = {
 			apc_equipment_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2010
 		folder = {
 			name = armour_folder
@@ -3549,7 +3644,7 @@ technologies = {
 			apc_equipment_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2015
 		folder = {
 			name = armour_folder
@@ -3576,7 +3671,7 @@ technologies = {
 			apc_equipment_5
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2020
 		folder = {
 			name = armour_folder
@@ -3603,7 +3698,7 @@ technologies = {
 			apc_equipment_6
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2030
 		folder = {
 			name = armour_folder
@@ -3630,7 +3725,7 @@ technologies = {
 			apc_equipment_7
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -3657,7 +3752,7 @@ technologies = {
 			apc_equipment_8
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2045
 		folder = {
 			name = armour_folder
@@ -3721,7 +3816,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1930
 		
 		folder = {
@@ -3882,7 +3977,7 @@ technologies = {
 			industrial_chrome_electroplating = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1941
 		
 		folder = {
@@ -4029,7 +4124,7 @@ technologies = {
 			research_cost_coeff = 0.9
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1943
 		
 		dependencies={
@@ -4163,7 +4258,7 @@ technologies = {
 			super_heavy_armor
 		}
 	
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1943
 		folder = {
 			name = armour_folder
@@ -4267,7 +4362,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1939
 
 		folder = {
@@ -4484,7 +4579,7 @@ technologies = {
 			tungsten_wire_production = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1941
 		
 		folder = {
@@ -4703,7 +4798,7 @@ technologies = {
 			tungsten_wire_production = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1943
 		
 		folder = {
@@ -4888,7 +4983,7 @@ technologies = {
 			modern_armor
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1945
 		
 		folder = {
@@ -5037,7 +5132,7 @@ technologies = {
 			modern_tank_equipment_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1950
 		
 		folder = {
@@ -5085,7 +5180,7 @@ technologies = {
 			modern_ceramics = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1960
 		
 		folder = {
@@ -5127,7 +5222,7 @@ technologies = {
 	}
 	nbc_protections = { #
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1970
 		
 		folder = {
@@ -5165,7 +5260,7 @@ technologies = {
 			mtb_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1970
 		
 		folder = {
@@ -5211,7 +5306,7 @@ technologies = {
 			integrated_circuits = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1980
 		
 		folder = {
@@ -5253,7 +5348,7 @@ technologies = {
 			mtb_4
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2000
 		
 		folder = {
@@ -5295,7 +5390,7 @@ technologies = {
 			mtb_5
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2010
 		
 		folder = {
@@ -5337,7 +5432,7 @@ technologies = {
 			mtb_6
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2015
 		
 		folder = {
@@ -5383,7 +5478,7 @@ technologies = {
 			kroll_process = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2020
 		
 		folder = {
@@ -5425,7 +5520,7 @@ technologies = {
 			future_tank_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2025
 		
 		folder = {
@@ -5471,7 +5566,7 @@ technologies = {
 			future_tank_3
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2030
 		
 		folder = {
@@ -5513,7 +5608,7 @@ technologies = {
 			future_tank_4
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2035
 		
 		folder = {
@@ -5555,7 +5650,7 @@ technologies = {
 			future_tank_5
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2040
 		
 		folder = {
@@ -5597,7 +5692,7 @@ technologies = {
 			future_tank_6
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2045
 		
 		folder = {
@@ -5635,7 +5730,7 @@ technologies = {
 			# future_tank_2
 		# }	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2030
 		
 		folder = {
@@ -5683,7 +5778,7 @@ technologies = {
 			armor_walker
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2035
 		
 		folder = {
@@ -5730,7 +5825,7 @@ technologies = {
 			walking_battle_platform_equipment_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2040
 		
 		folder = {
@@ -5773,7 +5868,7 @@ technologies = {
 			walking_battle_platform_equipment_3
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2050
 		
 		folder = {
@@ -5812,7 +5907,7 @@ technologies = {
 			walking_battle_platform_artillery_equipment_1
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2040
 		
 		folder = {
@@ -5855,7 +5950,7 @@ technologies = {
 			walking_battle_platform_artillery_equipment_2
 		}	
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 2050
 		
 		folder = {
@@ -5907,7 +6002,7 @@ technologies = {
 			kroll_process = 1
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2030
 		folder = {
 			name = armour_folder
@@ -5959,7 +6054,7 @@ technologies = {
 			l_robot_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -6003,7 +6098,7 @@ technologies = {
 			l_robot_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2040
 		folder = {
 			name = armour_folder
@@ -6047,7 +6142,7 @@ technologies = {
 			l_robot_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2050
 		folder = {
 			name = armour_folder
@@ -6091,7 +6186,7 @@ technologies = {
 			medium_robots
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -6135,7 +6230,7 @@ technologies = {
 			m_robot_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2040
 		folder = {
 			name = armour_folder
@@ -6179,7 +6274,7 @@ technologies = {
 			m_robot_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2050
 		folder = {
 			name = armour_folder
@@ -6219,7 +6314,7 @@ technologies = {
 			h_robot_2
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2035
 		folder = {
 			name = armour_folder
@@ -6263,7 +6358,7 @@ technologies = {
 			h_robot_3
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2040
 		folder = {
 			name = armour_folder
@@ -6307,7 +6402,7 @@ technologies = {
 			h_robot_4
 		}
 
-		research_cost = 3
+		research_cost = 0.3
 		start_year = 2045
 		folder = {
 			name = armour_folder
@@ -6343,7 +6438,7 @@ technologies = {
 	
 	attack_heli_1 = {
 		
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1960
 		folder = {
 			name = armour_folder

@@ -7,13 +7,6 @@ ideas = {
 				opinion_gain_monthly_factor = -0.25
 			}
 		}
-		QNG_idea_sow_humiliation = {
-			picture = ast_volunteer_defence_corps
-			
-			modifier = {
-				political_power_factor = -0.25
-			}
-		}
 		QNG_idea_TAI_defense = {
 			picture = ast_naval_auxiliary_patrol
 			
@@ -68,8 +61,6 @@ ideas = {
 			modifier = {
 				surrender_limit = 1.00
 				no_supply_grace = 220
-				out_of_supply_factor = -0.5
-				supply_consumption_factor = -0.15
 			}
 			targeted_modifier = { 
 				tag = QNG
@@ -81,15 +72,12 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				surrender_limit = 0.70
 				no_supply_grace = 220
-				out_of_supply_factor = -0.5
-				supply_consumption_factor = -0.15
 			}
 			targeted_modifier = { 
 				tag = QNG
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.08
+				defense_bonus_against = 0.05
 			}
 		}
 		QNG_idea_banner_armies = {
@@ -232,6 +220,7 @@ ideas = {
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.15
+			}
 		}
 		CHI_xinghai_rebellion= {
 			picture = generic_intel_bonus
@@ -248,92 +237,99 @@ ideas = {
 				defense_bonus_against = 0.22
 			}
 		}
-		CHI_rebel_administration = {
-			picture = generic_intel_bonus
-
-			modifier = {
-				stability_weekly = -0.03
-				stability_factor = -0.3
-				political_power_factor = -0.2
-			}
-		
-		}
-		CHI_rebel_administration_2 = {
-			picture = generic_intel_bonus
-
-			modifier = {
-				stability_weekly = -0.02
-				stability_factor = -0.2
-				political_power_factor = -0.2
-			}
-		
-		}
-		CHI_rebel_administration_3 = {
-			picture = generic_intel_bonus
-
-			modifier = {
-				stability_weekly = -0.01
-				stability_factor = -0.1
-				political_power_factor = -0.2
-			}
-		
-		}
-		CHI_rebel_administration_4 = {
-			picture = generic_intel_bonus
+		CHI_idea_infratructure_development = {
+			picture = generic_build_infrastructure
 			
 			modifier = {
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		CHI_idea_tongwen_guan = {
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		CHI_idea_unequal_treaties = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+				min_export = 0.1
+			}
+		}
+		CHI_idea_tianjin_treaty = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = 0.1
 				political_power_factor = -0.1
 			}
-		
 		}
-		
-		CHI_white_lotus = {
-			picture = white_lotus
-
-			modifier = {
-				drift_defence_factor = 0.1
-			}
-		}
-		CHI_white_lotus_2 = {
-			picture = white_lotus
-			
-			removal_cost = -1
-			modifier = {
-				drift_defence_factor = 0.1
-				stability_factor = 0.05
-			}
-		}
-		CHI_white_lotus_3 = {
-			picture = white_lotus
+		CHI_idea_tianjin_treaty_euro = {
+			picture = generic_political_support
 			
 			modifier = {
-				drift_defence_factor = 0.1
-				stability_factor = 0.05
-				political_power_gain = 0.1
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
 			}
 		}
-		CHI_bandit_state = {
-			picture = ITA_Brigandage
-
-			modifier = {
-				political_power_gain = -0.3
-				stability_factor = -0.075
-			}
-		}
-		CHI_bandit_state_2 = {
-			picture = ITA_Brigandage
+		CHI_idea_army_defeated = {
+			picture = generic_political_support
 			
 			modifier = {
-				political_power_gain = -0.2
+				army_morale_factor = -0.15
+				army_org_factor = -0.15
+				max_planning_factor = -0.15
+				planning_speed = -0.15
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+			}
+		}
+		CHI_idea_army_destroyed = {
+			picture = generic_political_support
+			
+			modifier = {
+				army_morale_factor = -0.3
+				army_org_factor = -0.3
+				max_planning_factor = -0.3
+				planning_speed = -0.3
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+			}
+		}
+		CHI_idea_bejing_convention = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		CHI_idea_bejing_convention_euro = {
+			picture = generic_political_support
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
+		CHI_idea_summer_palace_burned = {
+			picture = generic_political_support
+			
+			modifier = {
 				stability_factor = -0.05
+				political_power_factor = -0.05
 			}
 		}
-		CHI_bandit_state_3 = {
-			picture = ITA_Brigandage
-
+		CHI_idea_summer_palace_burned_euro = {
+			picture = generic_political_support
+			
 			modifier = {
-				political_power_gain = -0.1
-				stability_factor = -0.025
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
 			}
 		}
 	}

@@ -1,7 +1,9 @@
 state = {
 	id = 1133
 	name = "STATE_1133"
+	local_supplies=0.0 
 	resources = {
+
 	}
 	
 	state_category = large_town
@@ -17,6 +19,9 @@ state = {
 		victory_points = {
 			13687 5 
 		}
+		
+		add_to_array = { state_religion_array = 2 } #Catholic
+		add_to_array = { state_religion_array_num = 1 }
 	}
 
 	provinces = {

@@ -4,19 +4,17 @@ state = {
 	name = "STATE_76"
 
 	resources = {
-		wood = 15
-		iron=2
+		wood = 4
+		iron = 2
 	}
 
 	history = {
 		owner = AUS
 		buildings = {
-			infrastructure = 3
-
+			infrastructure = 5
 		}
-		victory_points = {
-			6711 5 
-		}
+		victory_points = { 3696 1 } # Oradea/Großwardein
+		victory_points = { 6711 5 } # Cluj/Klausenburg
 		add_core_of = AUS
 		add_core_of = HUN
 		
@@ -45,4 +43,5 @@ state = {
 	manpower = 1121700
 	
 	state_category =town
+	local_supplies=0.0 
 }

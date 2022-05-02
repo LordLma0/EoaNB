@@ -1,6 +1,7 @@
 state = {
 	id = 1144
 	name = "STATE_1144"
+	local_supplies=0.0 
 	resources = {
 	}
 
@@ -14,6 +15,15 @@ state = {
 		victory_points = {
 			2171 2
 		}
+		add_to_array = { state_culture_array = 306 }
+		add_to_array = { state_culture_array_num = 0.94 }
+		add_to_array = { state_culture_array = 22 }
+		add_to_array = { state_culture_array_num = 0.06 }
+
+		add_to_array = { state_religion_array = 20 }
+		add_to_array = { state_religion_array_num = 0.94 }
+		add_to_array = { state_religion_array = 3 }
+		add_to_array = { state_religion_array_num = 0.06 }
 	}
 
 	provinces = {

@@ -3,12 +3,14 @@ state = {
 	name = "STATE_1076"
 	manpower = 2046
 
+	local_supplies=0.0 
+
 	state_category = wasteland
 
 	resources = {
 	}
- 
-	history = {
+
+history = {
 		controller = USA
 		buildings = {
 			infrastructure = 1
@@ -40,7 +42,7 @@ state = {
 	}
 
 	provinces = {
-		1832 1854 12124 4838 12676 
+		1832 12124
 	}
 
 }

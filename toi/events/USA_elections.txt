@@ -122,18 +122,20 @@ country_event = {
 		
 		option = {
 			name = usa_election.2.a
-			retire_country_leader = yes
-			create_country_leader = {
-    				name = "Ulysses S. Grant"
-    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    				picture = "Portrait_USA_Ulysses_grant.dds"
-    				expire = "1947.1.1"
-    				ideology = liberal_social
-    				traits = {
-    					war_veteran
-  						eoanb_trait_military_leader
-    				}
-  				}
+			retire_ideology_leader = social_egalitarianism
+			USA_character_ulysses_s_grant = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = liberal_social
+						expire = "1885.7.23.1"
+						traits = {
+							war_veteran
+							eoanb_trait_military_leader
+						}
+					}
+				}
+			}
 			set_politics = {
 				ruling_party = social_egalitarianism
 				election_frequency = 48
@@ -166,14 +168,17 @@ country_event = {
 		
 		option = {
 			name = usa_election.2.a
-			retire_country_leader = yes
-			create_country_leader = {
-    				name = "Horatio Seymour"
-    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    				picture = "Portrait_USA_Horatio_Seymour.dds"
-    				expire = "1947.1.1"
-    				ideology = conserv
-  				}
+			retire_ideology_leader = traditional_conservatism
+			USA_character_horatio_seymour = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = federal
+						expire = "1886.2.12.1"
+						traits = { }
+					}
+				}
+			}
 			set_politics = {
 				ruling_party = traditional_conservatism
 				election_frequency = 48
@@ -206,14 +211,17 @@ country_event = {
 		
 		option = {
 			name = usa_election.4.a
-			retire_country_leader = yes
-			create_country_leader = {
-    				name = "Schuyler Colfax"
-    				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    				picture = "Portrait_USA_Schuyler_Colfax.dds"
-    				expire = "1947.1.1"
-    				ideology = market_liberal
-  				}
+			retire_ideology_leader = centrism
+			USA_character_schuyler_colfax = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = market_liberal
+						expire = "1885.1.13.1"
+						traits = { }
+					}
+				}
+			}
 			set_politics = {
 				ruling_party = centrism
 				election_frequency = 48
@@ -441,14 +449,17 @@ country_event = {
 		
 		option = {
 			name = usa_election.9.a
-			retire_country_leader = yes
-			create_country_leader = {
-    			name = "Horace Greeley"
-    			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    			picture = "Portrait_Europe_generic_leader_politician_17.png"
-    			expire = "1947.1.1"
-    			ideology = market_liberal
-  			}
+			retire_ideology_leader = centrism
+			USA_character_horace_greeley = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = market_liberal
+						expire = "1872.11.29.1"
+						traits = { }
+					}
+				}
+			}
 			set_politics = {
 				ruling_party = centrism
 				election_frequency = 48
@@ -656,7 +667,7 @@ country_event = {
 				limit = {
 					has_country_flag = USA_1876_hayes_win
 				}
-				retire_country_leader = yes
+				retire_ideology_leader = centrism
 				create_country_leader = {
 	    			name = "Rutherford B. Hayes"
 	    			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"

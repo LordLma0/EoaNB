@@ -1,12 +1,19 @@
 ideas = {
 	country = { 
-		AST_gold_rush_aftermath = { 
+		AST_The_Stain = {
+			picture = The_Stain
+
+			modifier = {
+				stability_factor = -0.01
+			}
+		}	
+		AST_gold_rush = { 
 			picture = australian_gold_rush
 
 			modifier = {
-				stability_factor = -0.10
-				MONTHLY_POPULATION = 0.2
-				local_resources_factor = 0.10
+				stability_factor = -0.05
+				MONTHLY_POPULATION = 0.16
+				local_resources_factor = 0.14
 			}
 		}
 		AST_minor_gold_rush = {
@@ -30,43 +37,78 @@ ideas = {
 				local_resources_factor = 0.10
 				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.10
+				conscription_factor = 0.15
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.10
 			}
 		}
 		AST_Protected_by_the_Royal_Navy_and_Army = {
-			picture = generic_manpower_bonus
+			picture = guarded_by_britain
 
 			modifier = {
-				army_org_factor = -0.50
-				army_speed_factor = -0.50
-				army_attack_factor = -0.50
-				army_defence_factor = -0.50
-				conscription_factor = -0.50
-				Mobilization_speed = -0.50
-				command_power_gain_mult = -0.50
+				army_org_factor = -0.90
+				army_speed_factor = -0.90
+				army_attack_factor = -0.90
+				army_defence_factor = -0.90
+				Mobilization_speed = -0.90
+				command_power_gain_mult = -0.90
 			}
 		}
-		AST_last_prisoners_britain = {
+		AST_Convict_Labour = {
 			picture = generic_manpower_bonus
 
 			modifier = {
 				stability_factor = -0.05
-				MONTHLY_POPULATION = 0.02
+				monthly_population = 0.02
 				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		AST_Squatter_Issue = {
+			picture = Worker_strikes
+
+			Modifier = {
+			political_power_gain = -0.05
+			local_resources_factor = -0.05
+			}
+		}
+		AST_Divided_Administration = {
+			#picture = ADD ONE HERE BEFORE YOU DO SOMETHING STUPID
+
+			modifier = {
+			political_power_gain = -0.30
+			stability_factor = -0.05
+			}
+		}
+		AST_Brand_New_Government = {
+			#picture = ADD ON HERE ALSO!
+
+			modifier = {
+			political_power_gain = -0.30
+			stability_factor = -0.20
 			}
 		}
 		AST_eureka = {
-			picture = generic_war_preparation
+			picture = eureka_stockade
 
 			modifier = {
 				local_resources_factor = 0.05
 				political_power_gain = -0.1
 			}
 		}
+
+		AST_highly_unexplored_lands = {
+			picture = unexplored_region
+
+			modifier = {
+				local_resources_factor = -0.40
+				army_speed_factor = -0.15
+				production_speed_buildings_factor = -0.30
+			}
+		}
 		AST_unexplored_lands = {
 		
-			picture = generic_manpower_bonus
+			picture = unexplored_region
 
 			modifier = {
 				local_resources_factor = -0.10
@@ -106,7 +148,7 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.10
 				production_speed_buildings_factor = 0.12
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = -0.02
 			}
 		}
 		AST_Broad_Gauge_railroad = {

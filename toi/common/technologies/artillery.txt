@@ -14,9 +14,10 @@ technologies = {
 			cannon_artillery
 			cannon_artillery_support
 			cannon_artillery_towed
+			cannon_artillery_towed_support
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1840
 		folder = {
 			name = artillery_folder
@@ -25,18 +26,22 @@ technologies = {
 
 		path = {
 			leads_to_tech = rml_field_gun
+			research_cost_coeff = 1
 		}
 
 		path = {
 			leads_to_tech = early_howitzer
+			research_cost_coeff = 1
 		}
 
 		path = {
 			leads_to_tech = improved_smoothbore
+			research_cost_coeff = 1
 		}
 
 		path = {
 			leads_to_tech = early_rockets
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -94,7 +99,7 @@ technologies = {
 			cannon_equipment_1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
@@ -125,9 +130,10 @@ technologies = {
 			howitzer_artillery
 			howitzer_artillery_support
 			howitzer_artillery_towed
+			howitzer_artillery_towed_support
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
@@ -136,6 +142,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = rifled_howitzer
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -173,7 +180,7 @@ technologies = {
 			howitzer_equipment_1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
@@ -182,6 +189,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = heavier_design
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -200,7 +208,7 @@ technologies = {
 
 	heavier_design = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = artillery_folder
@@ -213,6 +221,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_fortification
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -231,7 +240,7 @@ technologies = {
 
 	anti_fortification = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = artillery_folder
@@ -244,6 +253,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = howitzer_1880
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -266,7 +276,7 @@ technologies = {
 			howitzer_equipment_2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = artillery_folder
@@ -275,6 +285,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = howitzer_1890
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -296,7 +307,7 @@ technologies = {
 			howitzer_equipment_3
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1890
 		folder = {
 			name = artillery_folder
@@ -305,6 +316,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = lining-plane_sights
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -327,7 +339,7 @@ technologies = {
 			rifled_cannon_equipment_0
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
@@ -336,6 +348,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = rbl_field_gun
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -353,7 +366,7 @@ technologies = {
 			rifled_cannon_equipment_1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
@@ -362,10 +375,12 @@ technologies = {
 
 		path = {
 			leads_to_tech = studded_shells
+			research_cost_coeff = 1
 		}
 
 		path = {
 			leads_to_tech = siege_gun
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -384,7 +399,7 @@ technologies = {
 
 	studded_shells = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = artillery_folder
@@ -393,6 +408,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = improved_artillery
+			research_cost_coeff = 1
 		}
 
 		category_artillery = {
@@ -420,7 +436,7 @@ technologies = {
 			rifled_cannon_equipment_2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = artillery_folder
@@ -429,6 +445,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = breech_blocks
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -447,7 +464,7 @@ technologies = {
 
 	breech_blocks = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = artillery_folder
@@ -460,9 +477,11 @@ technologies = {
 
 		path = {
 		 	leads_to_tech = gw_infantry_0
+			research_cost_coeff = 1
 		}
 		path = {
 		 	leads_to_tech = hydraulic_recoil_mechanism
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -480,7 +499,7 @@ technologies = {
 	}
 	hydraulic_recoil_mechanism = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1890
 		folder = {
 			name = artillery_folder
@@ -493,9 +512,11 @@ technologies = {
 
 		path = {
 		 	leads_to_tech = field_gun_1895
+			research_cost_coeff = 1
 		}
 		path = {
 		 	leads_to_tech = lining-plane_sights
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -517,7 +538,7 @@ technologies = {
 			rifled_cannon_equipment_3
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1895
 		folder = {
 			name = artillery_folder
@@ -526,6 +547,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = combined_artillery_battalions
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -543,7 +565,7 @@ technologies = {
 	}
 	lining-plane_sights = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1895
 		folder = {
 			name = artillery_folder
@@ -556,6 +578,7 @@ technologies = {
 
 		path = {
 		 	leads_to_tech = combined_artillery_battalions
+			research_cost_coeff = 1
 		}
 		dependencies={
 			hydraulic_recoil_mechanism = 1
@@ -581,7 +604,7 @@ technologies = {
 			artillery_brigade
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1900
 		folder = {
 			name = artillery_folder
@@ -595,6 +618,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = artillery_2
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -612,7 +636,7 @@ technologies = {
 			howitzer_equipment_5
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1905
 		folder = {
 			name = artillery_folder
@@ -621,6 +645,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = artillery_3
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -638,7 +663,7 @@ technologies = {
 			howitzer_equipment_6
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1910
 		folder = {
 			name = artillery_folder
@@ -647,6 +672,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = predicted_fire_sights
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -659,7 +685,7 @@ technologies = {
 	}
 	predicted_fire_sights = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1915
 		folder = {
 			name = artillery_folder
@@ -673,9 +699,11 @@ technologies = {
 
 		path = {
 		 	leads_to_tech = artillery_4
+			research_cost_coeff = 1
 		}
 		path = {
 		 	leads_to_tech = anti_air_1
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -693,7 +721,7 @@ technologies = {
 			howitzer_equipment_7
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1920
 		folder = {
 			name = artillery_folder
@@ -702,6 +730,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = artillery_5
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -719,7 +748,7 @@ technologies = {
 			howitzer_equipment_8
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1925
 		folder = {
 			name = artillery_folder
@@ -728,6 +757,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = artillery_6
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -745,7 +775,7 @@ technologies = {
 			howitzer_equipment_9
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = artillery_folder
@@ -754,6 +784,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = artillery_muzzle_breaks
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -766,7 +797,7 @@ technologies = {
 	}
 	artillery_muzzle_breaks = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = artillery_folder
@@ -779,6 +810,7 @@ technologies = {
 
 		path = {
 		 	leads_to_tech = artillery_7
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -796,7 +828,7 @@ technologies = {
 			howitzer_equipment_9
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1942
 		folder = {
 			name = artillery_folder
@@ -805,6 +837,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = artillery_8
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -822,7 +855,7 @@ technologies = {
 			howitzer_equipment_10
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = artillery_folder
@@ -858,15 +891,20 @@ technologies = {
 			siege_artillery_towed
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = artillery_folder
-			position = { x = 6 y = 6}
+			position = { x = 7 y = 6}
 		}
 
 		categories = {
 			artillery
+		}
+		
+		path = {
+			leads_to_tech = railway_gun
+			research_cost_coeff = 1
 		}
 
 		ai_will_do = {
@@ -898,6 +936,43 @@ technologies = {
 			}
 		}
 	}
+	railway_gun = {
+		enable_equipments = {
+			railway_gun_equipment_1
+		}
+
+		research_cost = 0.15
+		start_year = 1890
+		folder = {
+			name = artillery_folder
+			position = { x = 10 y = 12 }
+		}
+		dependencies = {
+			train_1855 = 1
+		}
+		
+		categories = {
+			trains_tech
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				is_major = yes
+				factor = 2
+			}
+
+			modifier = {
+				OR = {
+					TAG = PRS
+					tag = SOV
+				}
+				factor = 1.5
+			}
+		}
+	}
 
 	early_rockets = {
 
@@ -905,7 +980,7 @@ technologies = {
 			rocket_artillery_equipment_0
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1840
 		folder = {
 			name = artillery_folder
@@ -914,6 +989,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = spin_stabilised_rockets
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -922,7 +998,26 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+			factor = 20
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
 		}
 	}
 
@@ -932,7 +1027,7 @@ technologies = {
 			rocket_artillery_equipment_1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
@@ -941,6 +1036,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = staged_rockets
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -961,9 +1057,10 @@ technologies = {
 		
 		path = {
 			leads_to_tech = spin_stabilzation
+			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1865
 
@@ -1008,7 +1105,7 @@ technologies = {
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1865
 
@@ -1019,6 +1116,7 @@ technologies = {
 		
 		path = {
 			leads_to_tech = rocket_artillery
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1069,7 +1167,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 
 		start_year = 1940
 		
@@ -1111,7 +1209,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1942
 		
@@ -1158,7 +1256,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1945
 		
@@ -1201,7 +1299,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1955
 		
@@ -1247,7 +1345,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1960
 		
@@ -1290,7 +1388,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1965
 		
@@ -1333,7 +1431,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1975
 		
@@ -1376,7 +1474,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1990
 		
@@ -1419,7 +1517,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2000
 		
@@ -1462,7 +1560,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2015
 		
@@ -1505,7 +1603,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2025
 		
@@ -1548,7 +1646,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2035
 		
@@ -1586,7 +1684,7 @@ technologies = {
 		#	soft_attack = 0.15
 		#}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2050
 		
@@ -1619,8 +1717,12 @@ technologies = {
 			anti_air
 			anti_air_brigade
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 1
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1920
 		folder = {
 			name = artillery_folder
@@ -1629,6 +1731,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_2
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1664,8 +1767,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_1
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 2
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1930
 		folder = {
 			name = artillery_folder
@@ -1674,6 +1781,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_3
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1710,7 +1818,7 @@ technologies = {
 			anti_air_equipment_2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = artillery_folder
@@ -1719,6 +1827,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = antiair3
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1768,7 +1877,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1940
 		
@@ -1803,8 +1912,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_3
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 4
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1942
 		folder = {
 			name = artillery_folder
@@ -1816,6 +1929,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_5
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1852,7 +1966,7 @@ technologies = {
 			anti_air_equipment_4
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = artillery_folder
@@ -1861,6 +1975,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_6
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1896,8 +2011,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_5
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 5
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1955
 		folder = {
 			name = artillery_folder
@@ -1906,6 +2025,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_7
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1941,8 +2061,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_6
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 6
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1965
 		folder = {
 			name = artillery_folder
@@ -1951,6 +2075,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_8
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -1986,8 +2111,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_7
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 7
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1970
 		folder = {
 			name = artillery_folder
@@ -1996,6 +2125,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_9
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -2031,8 +2161,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_8
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 8
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1980
 		folder = {
 			name = artillery_folder
@@ -2041,6 +2175,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_10
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -2076,8 +2211,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_9
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 9
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1995
 		folder = {
 			name = artillery_folder
@@ -2086,6 +2225,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_11
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -2121,8 +2261,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_10
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 10
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2010
 		folder = {
 			name = artillery_folder
@@ -2131,6 +2275,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_12
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -2167,7 +2312,7 @@ technologies = {
 			anti_air_equipment_11
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2025
 		folder = {
 			name = artillery_folder
@@ -2176,6 +2321,7 @@ technologies = {
 
 		path = {
 			leads_to_tech = anti_air_13
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -2212,7 +2358,7 @@ technologies = {
 			anti_air_equipment_12
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2040
 		folder = {
 			name = artillery_folder

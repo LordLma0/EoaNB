@@ -12,15 +12,8 @@ eoanb_category_economic = {
 		available = { hidden_trigger = { always = no } }
 		visible = { has_country_flag = manhattan_connecticut_railroad_started_flag }
 		highlight_states = {
-			if = {
-				limit = {
-					ROOT = {
-						TAG = NEG
-					}
-				}
+			highlight_state_targets = {
 				state = 958
-			}
-			else = {
 				state = 954
 			}
 		}

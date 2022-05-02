@@ -2,6 +2,8 @@
 state = {
 	id =464
 	name = "STATE_464"
+
+	local_supplies=0.0 
 	manpower = 400001
 
 	state_category = rural
@@ -20,9 +22,9 @@ state = {
 		}
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
 			7361 = {
 				naval_base = 4
-
 			}
 		}
 		add_core_of = NVS

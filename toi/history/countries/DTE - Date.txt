@@ -48,37 +48,11 @@
 		DTE_vic_strained_finances
 		DTE_hermit_mountain
 		TSH_spirit_vic_fudai_domain
-		TSH_spirit_vic_han_sankin_kotai_obligations
+
 	}
 
 	# Technology
-	set_technology = {
-		vic_army_cloth = 1
-		infantry_weapons = 1
-		traditional_mixed_arms = 1
-		tribal_carrier_birds = 1
-		tribal_electrical_theory = 1
-		tribal_steel_tools = 1
-		tribal_tatics = 1
-		tribal_gunpowder = 1
-		tribal_riding = 1
-		tribal_steam_experiments = 1
-		tribal_forging = 1
-		tribal_artisan = 1
-		tribal_chemistry = 1
-		tribal_guilds_trade = 1
-		tribal_crop_planting = 1
-		tribal_irrigation = 1
-		tribal_crop_rotation = 1
-		tribal_salted_smoked_goods = 1
-		tribal_leching = 1
-		tech_infantry_napoleonic_uniform = 1
-		start_build_tech = 1
-		basic_cavalry = 1
-		hot_blast_furnaces = 1
-		industrial_blast_furnace = 1
-		industrial_finery_forge = 1
-	}
+	eoanbsys_technology_setup_developed_asia_1857 = yes
 
 	# Army & Equipment
 	DTE = {
@@ -90,15 +64,6 @@
 
 		if = {
 			limit = { has_dlc = "Man the Guns" }
-				set_technology = {
-					tech_naval_early_frigate = 1
-					tech_naval_1850_frigate = 1
-					tech_naval_mtg_early_frigate = 1
-					tech_naval_mtg_simple_corvette_hull = 1
-					tech_naval_mtg_24_pounder_battery = 1
-					tech_naval_mtg_sails = 1
-					tech_naval_mtg_crows_nest = 1
-				}
 				create_equipment_variant = {
 				name = "Early Gunboat Class"
 				type = ship_hull_gunboat_0
@@ -128,9 +93,9 @@
 			social_egalitarianism = 0
 			centrism = 0
 			traditional_conservatism = 0
-			radical_democracy = 0
+			radical_democracy = 80
 			chauvinist_populism = 0
-			autocracy = 100
+			autocracy = 20
 			fundamentalism = 0
 		}
 
@@ -144,26 +109,14 @@
 			name = TSH_han_domain_date_party
 			long_name = TSH_han_domain_date_party_long
 		}
-
-		create_country_leader = {
-			name = "Date Yoshikuni"
-			desc = "POLITICS_TEMP_DESC"
-			picture = "Portrait_DTE_Date_Yoshikuni.png"
-			expire = "1900.1.1"
-			ideology = despotism
-		}
-
-		create_corps_commander = {
-			name = "Date Yoshikuni"
-			picture = "Portrait_DTE_Date_Yoshikuni.png"
-			id = 2900
-			traits = { }
-
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
-		}
+    # Daimyos
+  		recruit_character = DTE_character_date_yoshikuni
+  		recruit_character = DTE_character_date_yoshikuni_daimyo
+  		recruit_character = DTE_character_date_munemoto
+  		recruit_character = DTE_character_date_munemoto_daimyo
+			recruit_character = DTE_character_date_muneatsu_daimyo
+		# Advisors
+  		recruit_character = DTE_character_date_muneatsu
+  		recruit_character = DTE_character_date_munenari
 	}
 }

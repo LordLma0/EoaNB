@@ -5,13 +5,13 @@ state = {
 	state_category = city
 
 	provinces = {
-		542 3552 3758 6536 6548 6572 9495 9510 9525 11508 
+		542 3552 3758 6536 6548 6572 9495 9510 9525 11508
 	}
 
 	history = {
 		# End of a New Beginning
+		owner = FRA
 		1857.1.1 = {
-			owner = FRA
 			add_core_of = FRA
 
 			buildings = {
@@ -25,9 +25,9 @@ state = {
 				}
 			}
 
-			victory_points = { 3552 15 } # Brest
-			victory_points = { 6536 5 } # Lorient
-			victory_points = { 9495 1 } # Rennes
+			victory_points = { 3552 6 } # Brest
+			victory_points = { 6536 3 } # Lorient
+			victory_points = { 9495 4 } # Rennes
 
 			add_to_array = { state_culture_array = 32 } # French
 			add_to_array = { state_culture_array_num = 0.62 }
@@ -40,4 +40,5 @@ state = {
 			add_to_array = { state_religion_array_num = 0.002 }
 		}
 	}
+	local_supplies=0.0 
 }

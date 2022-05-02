@@ -1,6 +1,77 @@
 eoanb_category_revolution = {
 
-BWR_raise_welsh_workers= {
+	BWR_victory = {
+
+		icon= generic_civil_support
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			controls_state = 123
+			controls_state = 127
+			controls_state = 952
+			controls_state = 125
+			controls_state = 122
+			controls_state = 129
+			controls_state = 131
+			#controls_state = 126
+			controls_state = 128
+			controls_state = 130
+			controls_state = 132
+		}
+
+		days_mission_timeout = 460
+
+		activation = {
+			BWR={exists = yes}
+			has_war_with = ENG
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_war_with = ENG
+			}
+		}
+
+		visible = {
+			tag = BWR
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			ENG = {
+				annex_country = {
+   					target = BWR
+    				transfer_troops = no
+				}
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 50
+		    add_stability = 0.05
+			add_war_support = 0.05
+			country_event = {id=britain.116}
+			ENG={
+				transfer_state = 123
+				transfer_state = 127
+				transfer_state = 952
+				transfer_state = 125
+				transfer_state = 122
+				transfer_state = 129
+				transfer_state = 131
+				transfer_state = 121
+				transfer_state = 136
+				transfer_state = 120
+				#transfer_state = 1152
+				white_peace = ENG
+			}
+        }
+	}
+
+	BWR_raise_welsh_workers= {
 		allowed = {			
 			tag = BWR
 		}
@@ -92,99 +163,25 @@ BWR_raise_welsh_workers= {
 			add_stability = -0.03
 		}
 		remove_effect = {
-				120 = {
-					create_unit = {
-						division = "name = \"1st Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
-						owner = ENG
-					}
-					create_unit = {
-						division = "name = \"2nd Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
-						owner = ENG
-					}
-					create_unit = {
-						division = "name = \"3rd Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
-						owner = ENG
-					}
-					create_unit = {
-						division = "name = \"4th Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
-						owner = ENG
-					}
+			120 = {
+				create_unit = {
+					division = "name = \"1st Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"2nd Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"3rd Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"4th Scottish Royalist Regiment\" division_template = \"Colonial Garrison\"	start_experience_factor = 0.0"
+					owner = ENG
 				}
 			}
 		}
-		
-	BWR_hire_proffesional_officers = {
-		allowed = {			
-			tag = BWR
-		}
-
-		icon = GFX_decision_generic_political_discourse
-
-		available = {
-			has_war_with = ENG
-			surrender_progress < 0.6
-		}
-		visible = {
-			has_war_with = ENG
-		}
-
-		cancel_trigger = {
-			BWR = { surrender_progress > 0.6 }
-		}
-
-		fire_only_once = yes
-		days_remove = 1
-		cost = 50
-
-		ai_will_do = {
-			factor = 100
-		}
-		
-		remove_effect = {
-		ENG = {
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 167910 
-						}
-					}
-				set_nationality = BWR
-			    }
-		    }
-			
-		create_corps_commander = {
-		    name = "John Talbot Coke"
-		    traits = {
-		    }
-		    skill = 1
-			    attack_skill = 2
-			    defense_skill = 1
-			    planning_skill = 2
-			    logistics_skill = 1
-	    }
-		
-		create_corps_commander = {
-		    name = "Hugh Rose"
-		    traits = {
-		    }
-		    skill = 1
-			    attack_skill = 2
-			    defense_skill = 1
-			    planning_skill = 1
-			    logistics_skill = 2
-	    }
-		
-	    create_corps_commander = {
-		    name = "Evelyn Wood"
-		    traits = {
-		    }
-		    skill = 1
-			    attack_skill = 2
-			    defense_skill = 1
-			    planning_skill = 1
-			    logistics_skill = 2
-	        }
-	    }
 	}
 		
 	BWR_Revolution_Treaty_Mission = {
@@ -311,7 +308,7 @@ BWR_raise_welsh_workers= {
 			}
 		}
 
-		days_mission_timeout = 4
+		days_mission_timeout = 2
 
 		activation = {
 			TAG = BWR
@@ -321,8 +318,10 @@ BWR_raise_welsh_workers= {
 		#
 		#}
 
-		highlight_state_targets = {
-			state = 952
+		highlight_states = {
+			highlight_state_targets = {
+				state = 952
+			}
 		}
 
 		#visible = {
@@ -333,7 +332,7 @@ BWR_raise_welsh_workers= {
 		is_good = no
 
 		timeout_effect = {
-			country_event = {id=bwrrevolution.6}
+			country_event = bwr.17
 		}
 
 		complete_effect = {
@@ -351,19 +350,19 @@ BWR_raise_welsh_workers= {
 			}
 		    add_stability = 0.05
 			add_war_support = 0.05
-			country_event = {id=bwrrevolution.7}
+			country_event = bwr.18
         }
     }
 }
 
 eoanb_category_projects = {
 	
-	eoanb_decision_BWR_improving_infastructure = {
+	eoanb_decision_BWR_improving_infrastructure = {
 	
 		icon = generic_construction
 		
 		available = {
-			has_completed_focus = BWR_improving_infastructure
+			has_completed_focus = BWR_improving_infrastructure
 		}
 		
 		allowed = { TAG = BWR }
@@ -380,7 +379,7 @@ eoanb_category_projects = {
 		remove_effect = {
 			130 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }  }
 			129 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }  }
-			126 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }  }
+			#126 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }  }
 			122 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }  }
 			131 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }  }
 			121 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes }  }

@@ -1,10 +1,12 @@
 state = {
-	id =967
+	id = 967
 	name = "STATE_967"
 
+
+	local_supplies=0.0 
 	resources = {
-		iron=4
-		wood =8
+		iron = 4
+		wood = 3
 	}
 
 	history = {
@@ -13,7 +15,7 @@ state = {
 		add_core_of = HUN
 
 		buildings = {
-			infrastructure =2 
+			infrastructure = 4
 		}
 		
 			 	add_to_array = { state_culture_array = 87 }

@@ -57,8 +57,10 @@
 
 		#NATIONAL SPIRITS
 		GER_general_idea_ger_confed
-		BRE_dissolved_city_guard
-		GER_hanseaten
+		BRE_idea_dissolved_city_guard
+		GEC_idea_hanseaten
+		GEC_idea_zunftwesen
+		NA_B_early_scale_railways
 	}
 
 	set_politics = {
@@ -122,24 +124,7 @@
 
 	# POLITICAL LEADERS
 
-	create_country_leader = {
-		name = "Fraktion der Kaufleute"
-		desc = "POLITICS_GENERIC_EOANB_DESC"
-		picture = "Portrait_BRE_Centrism.png"
-		expire = "1900.1.1"
-		ideology = parlia_repub
-		traits = {
-		}
-	}
-
-	create_country_leader = {
-		name = "Fraktion der Gelehrten"
-		desc = "POLITICS_GENERIC_EOANB_DESC"
-		picture = "Portrait_BRE_TradCon.png"
-		expire = "1900.1.1"
-		ideology = conserv
-		traits = {
-		}
-	}
+	recruit_character = BRE_fraktion_der_kaufleute
+	recruit_character = BRE_fraktion_der_gelehrten
 
 }

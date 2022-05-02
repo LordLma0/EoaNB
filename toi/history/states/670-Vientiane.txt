@@ -2,6 +2,8 @@ state = {
 	id =670
 	name = "STATE_670"
 	manpower = 571222
+
+	local_supplies=0.0 
  
 	resources = {
 		coal =4
@@ -27,7 +29,7 @@ state = {
 		buildings = {
 			infrastructure = 3
 		}
-		add_to_array = { state_religion_array = 11 } # Theravada
+		add_to_array = { state_religion_array = 13 } # Theravada
 		add_to_array = { state_religion_array_num = 0.59 }
 		add_to_array = { state_religion_array = 22 } # Shamanist
 		add_to_array = { state_religion_array_num = 0.19 }

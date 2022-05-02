@@ -1,8 +1,9 @@
 state = {
 	id = 1290
 	name = "STATE_1290"
+	local_supplies=0.0 
 	provinces = {
-		6722 12566
+		6722 7877 12566
 	}
 	state_category = pastoral
 	resources = {

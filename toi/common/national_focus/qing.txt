@@ -28,7 +28,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_emperors_illness
-		icon = GFX_focus_generic_self_management
+		icon = GFX_Focus_Health_Herbs
 		relative_position_id = QNG_dealing_with_our_issues
 		x = 0
 		y = 1
@@ -68,7 +68,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_rasing_funds
-		icon = GFX_goal_generic_tax_raise
+		icon = GFX_Focus_Economy_Tax
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -4
 		y = 2
@@ -85,7 +85,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_tax_opium
-		icon = GFX_goal_focus_opium_war_lost
+		icon = GFX_Focus_War_Opium_Lost
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -4
 		y = 3
@@ -102,7 +102,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_tax_west
-		icon = GFX_goal_focus_leave_continent_alone
+		icon = GFX_Focus_leave_continent_alone
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -4
 		y = 4
@@ -119,7 +119,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_tax_businesses
-		icon = GFX_goal_focus_the_elite
+		icon = GFX_Focus_Elite
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -4
 		y = 5
@@ -170,7 +170,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_reforming_army
-		icon = GFX_goal_focus_reformed_army
+		icon = GFX_Focus_Army_Reformed
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -2
 		y = 2
@@ -233,7 +233,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_increase_wage
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -2
 		y = 5
@@ -275,7 +275,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_new_army_code
-		icon = GFX_goal_focus_military_reforms
+		icon = GFX_Focus_Army_Reforms
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -2
 		y = 7
@@ -297,7 +297,7 @@ focus_tree = {
 
 	focus = {
 		id = QNG_army_to_fight_barbarians
-		icon = GFX_goal_focus_military_reforms
+		icon = GFX_Focus_Army_Reforms
 		relative_position_id = QNG_dealing_with_our_issues
 		x = -3
 		y = 8
@@ -341,7 +341,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_manage_tributaries
-		icon = GFX_goal_foreign_investments_focus
+		icon = GFX_Foreign_investments_focus
 		relative_position_id = QNG_dealing_with_our_issues
 		x = 2
 		y = 2
@@ -380,7 +380,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_VIN_investments
-		icon = GFX_focus_qing_invest_VIN
+		icon = GFX_Focus_invest_VIN
 		relative_position_id = QNG_dealing_with_our_issues
 		x = 1
 		y = 3
@@ -401,7 +401,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_KOR_investments
-		icon = GFX_focus_qing_invest_KOR
+		icon = GFX_Focus_invest_KOR
 		relative_position_id = QNG_dealing_with_our_issues
 		x = 3
 		y = 3
@@ -421,7 +421,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_european_issues
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		relative_position_id = QNG_dealing_with_our_issues
 		x = 6
 		y = 2
@@ -472,7 +472,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_fighting_the_opium_war
-		icon = GFX_goal_focus_opium_war
+		icon = GFX_Focus_War_Opium
 		relative_position_id = QNG_dealing_with_our_issues
 		x = 6
 		y = 4
@@ -491,7 +491,7 @@ focus_tree = {
 	##1861-1861 transition tree
 	focus = {
 		id = QNG_death_of_xianfeng
-		icon = GFX_focus_state_funeral
+		icon = GFX_Focus_Health_Funerals
 		x = 4
 		y = 0
 		cost = 22
@@ -545,7 +545,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_sushans_party
-		icon = GFX_goal_focus_the_elite
+		icon = GFX_Focus_Elite
 		relative_position_id = QNG_death_of_xianfeng
 		x = 0
 		y = 3
@@ -562,7 +562,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_xinyou_coup
-		icon = GFX_focus_assassination
+		icon = GFX_Focus_Partisans_Elimination
 		relative_position_id = QNG_death_of_xianfeng
 		x = -1
 		y = 4
@@ -584,7 +584,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_countering_the_coup
-		icon = GFX_focus_Usurp_Throne
+		icon = GFX_Focus_Monarchy_Usurp_Throne
 		relative_position_id = QNG_death_of_xianfeng
 		x = 1
 		y = 4
@@ -608,7 +608,7 @@ focus_tree = {
 	###1861 fixing the xinyou coup
 	focus = {
 		id = QNG_aftermath_xinyou_coup
-		icon = GFX_focus_state_funeral
+		icon = GFX_Focus_Health_Funerals
 		x = 5
 		y = 0
 		cost = 70
@@ -644,7 +644,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_execute_opposition
-		icon = GFX_focus_assassination
+		icon = GFX_Focus_Partisans_Elimination
 		relative_position_id = QNG_aftermath_xinyou_coup
 		x = -1
 		y = 2
@@ -744,7 +744,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_remnants_sushan_party
-		icon = GFX_focus_stamp_out_corruption
+		icon = GFX_Focus_Electorate_stomp_aristocracy
 		relative_position_id = QNG_aftermath_xinyou_coup
 		x = 1
 		y = 1
@@ -764,7 +764,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_reorg_ministry_revenue
-		icon = GFX_goal_generic_tax_raise
+		icon = GFX_Focus_Economy_Tax
 		relative_position_id = QNG_aftermath_xinyou_coup
 		x = 1
 		y = 2
@@ -805,7 +805,7 @@ focus_tree = {
 
 	focus = {
 		id = QNG_reorg_grand_council
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		relative_position_id = QNG_aftermath_xinyou_coup
 		x = 0
 		y = 7
@@ -831,7 +831,7 @@ focus_tree = {
 	###1861 council survives the coup WIP
 	focus = {
 		id = QNG_a_plot_reveled
-		icon = GFX_focus_state_funeral
+		icon = GFX_Focus_Health_Funerals
 		x = 5
 		y = 0
 		cost = 70
@@ -847,7 +847,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_council_fortify_country
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		relative_position_id = QNG_a_plot_reveled
 		x = 0
 		y = 1
@@ -864,7 +864,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_purging_empresses_support
-		icon = GFX_focus_violent_revolution
+		icon = GFX_Focus_Monarchy_Violent_Revolution
 		relative_position_id = QNG_a_plot_reveled
 		x = 0
 		y = 2
@@ -873,7 +873,10 @@ focus_tree = {
 			focus = QNG_council_fortify_country
 		}
 		completion_reward = {
-
+			swap_ideas={
+				remove_idea = QNG_empresses_support
+				add_idea = QNG_empresses_support_2
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -890,7 +893,9 @@ focus_tree = {
 			focus = QNG_purging_empresses_support
 		}
 		completion_reward = {
-
+			country_event={
+				id = qing.24
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -907,7 +912,9 @@ focus_tree = {
 			focus = QNG_purging_empresses_support
 		}
 		completion_reward = {
-
+			country_event={
+				id = qing.23
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -944,7 +951,10 @@ focus_tree = {
 			focus = QNG_council_fortify_position
 		}
 		completion_reward = {
-			add_stability = 0.05
+			swap_ideas ={
+				add_idea = QNG_burecratic_issues_2
+				remove_idea = QNG_burecratic_issues
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -952,7 +962,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_strengthing_sushans_party
-		icon = GFX_goal_focus_the_elite
+		icon = GFX_Focus_Elite
 		relative_position_id = QNG_a_plot_reveled
 		x = -2
 		y = 5
@@ -961,7 +971,10 @@ focus_tree = {
 			focus = QNG_council_fortify_position
 		}
 		completion_reward = {
-			add_stability = 0.05
+			swap_ideas ={
+				add_idea = QNG_sushans_party_2
+				remove_idea = QNG_sushans_party
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -969,7 +982,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_building_on_sushans_plan
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		relative_position_id = QNG_a_plot_reveled
 		x = -2
 		y = 6
@@ -978,7 +991,10 @@ focus_tree = {
 			focus = QNG_strengthing_sushans_party
 		}
 		completion_reward = {
-			add_stability = 0.05
+			swap_ideas ={
+				add_idea = QNG_sushans_party_3
+				remove_idea = QNG_sushans_party_2
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -1012,7 +1028,7 @@ focus_tree = {
 			focus = QNG_return_to_traditional_politics
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_political_power = 150
 		}
 		ai_will_do = {
 			factor = 20
@@ -1035,10 +1051,170 @@ focus_tree = {
 			focus = QNG_reorganizing_bureaucracy
 		}
 		completion_reward = {
-			add_stability = 0.05
+			remove_ideas = {QNG_burecratic_issues_2}
+			clr_country_flag = QNG_eight_council_rebuilds_tree
+			set_country_flag = QNG_tongzhi_sushsan_tree
+			mark_focus_tree_layout_dirty = yes
 		}
 		ai_will_do = {
 			factor = 20
+		}
+	}
+	
+	###1863-1872 tongzhi under sushan tree
+	focus = {
+		id = QNG_council_stands_strong
+		icon = GFX_focus_qing_glory
+		x = 5
+		y = 0
+		cost = 70
+		ai_will_do = {
+			factor = 20
+		}
+		allow_branch={
+			has_country_flag = QNG_tongzhi_sushsan_tree
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = QNG_continue_isolation
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_council_stands_strong
+		x = 0
+		y = 1
+		cost = 140
+		prerequisite = {
+			focus = QNG_council_stands_strong
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = QNG_insuring_banknotes
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_continue_isolation
+		x = -1
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = QNG_continue_isolation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = QNG_growth_through_inflation
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_insuring_banknotes
+		x = 0
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = QNG_insuring_banknotes
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = QNG_increase_meritocracy
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_growth_through_inflation
+		x = 0
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = QNG_growth_through_inflation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = QNG_reigning_in_banners
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_continue_isolation
+		x = 1
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = QNG_continue_isolation
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = QNG_encouraging_chinese_nationalism
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_reigning_in_banners
+		x = 0
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = QNG_reigning_in_banners
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = QNG_neither_han_or_manchu
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_encouraging_chinese_nationalism
+		x = 0
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = QNG_encouraging_chinese_nationalism
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = QNG_united_under_one_china
+		icon = GFX_Focus_Elite
+		relative_position_id = QNG_neither_han_or_manchu
+		x = -1
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = QNG_neither_han_or_manchu
+		}
+		prerequisite = {
+			focus = QNG_increase_meritocracy
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -1061,7 +1237,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_politics_behind_curtain
-		icon = GFX_goal_focus_the_elite
+		icon = GFX_Focus_Elite
 		relative_position_id = QNG_tongzhi_restoration
 		x = 0
 		y = 1
@@ -1363,7 +1539,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_marrying_the_emperor
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_royal_wedding
 		relative_position_id = QNG_fate_of_rengency
 		x = 0
 		y = 4
@@ -1371,6 +1547,7 @@ focus_tree = {
 		prerequisite = {
 			focus = QNG_attempting_reformations
 			focus = QNG_under_steady_hand
+			focus = QNG_united_under_one_china
 		}
 		completion_reward = {
 			add_political_power = 150
@@ -1390,9 +1567,7 @@ focus_tree = {
 			focus = QNG_marrying_the_emperor
 		}
 		completion_reward = {
-			clr_country_flag = QNG_tongzhi_restoration_tree
-			set_country_flag = QNG_tongzhi_ruling_tree
-			mark_focus_tree_layout_dirty = yes
+			country_event = {id = qing.25}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1401,7 +1576,7 @@ focus_tree = {
 	###1873-1875 tongzhi ruling tree
 	focus = {
 		id = QNG_request_for_audience
-		icon = GFX_focus_qing_glory
+		icon = GFX_Focus_Government_adminstrative_service
 		x = 5
 		y = 0
 		cost = 70
@@ -1417,7 +1592,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_splendor_of_the_emperor
-		icon = GFX_focus_generic_self_management
+		icon = GFX_Focus_Monarchy
 		relative_position_id = QNG_request_for_audience
 		x = 0
 		y = 1
@@ -1426,7 +1601,8 @@ focus_tree = {
 			focus = QNG_request_for_audience
 		}
 		completion_reward = {
-			add_political_power = 100
+			set_temp_variable = { eoanb_prestige_change = 2 }
+			eoanb_change_prestige_score = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -1434,7 +1610,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_pavilion_purple_light
-		icon = GFX_focus_generic_self_management
+		icon = GFX_Focus_Diplomatic_foreign_central
 		relative_position_id = QNG_request_for_audience
 		x = -1
 		y = 2
@@ -1443,7 +1619,7 @@ focus_tree = {
 			focus = QNG_splendor_of_the_emperor
 		}
 		completion_reward = {
-			add_political_power = 100
+			country_event = {id = qing.22}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1451,7 +1627,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_dealing_mudan_incident
-		icon = GFX_focus_generic_self_management
+		icon = GFX_Focus_Diplomatic_foreign_military
 		relative_position_id = QNG_request_for_audience
 		x = 1
 		y = 2
@@ -1460,7 +1636,7 @@ focus_tree = {
 			focus = QNG_splendor_of_the_emperor
 		}
 		completion_reward = {
-			add_political_power = 100
+			country_event = {id = qing.1}#temperory for now
 		}
 		ai_will_do = {
 			factor = 1
@@ -1468,7 +1644,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_putting_westerners_in_place
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_diplomacy_against_british_french
 		relative_position_id = QNG_request_for_audience
 		x = 0
 		y = 3
@@ -1477,7 +1653,21 @@ focus_tree = {
 			focus = QNG_pavilion_purple_light
 		}
 		completion_reward = {
-			add_political_power = 100
+			every_country={
+				limit={
+					OR={
+						tag= ENG
+						tag= FRA
+						tag= RUS
+						tag= ENG
+						tag= ENG
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = QNG_insulting_audience
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1502,7 +1692,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QNG_rule_of_tongzhi
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_qing_glory
 		relative_position_id = QNG_request_for_audience
 		x = 0
 		y = 4
@@ -1524,14 +1714,21 @@ focus_tree = {
   focus = {
 		id = QNG_Self_Strengthening_Movement
 		icon = GFX_focus_generic_self_management
-		x = 26
+		x = 29
 		y = 0
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		available={
-			NOT={has_country_flag = QNG_xianjing_transition_tree}
+			custom_trigger_tooltip = {
+				tooltip = QNG_xianjing_transition_tree		
+				NOT={
+					has_country_flag = QNG_xianjing_transition_tree
+					has_country_flag = QNG_eight_council_rebuilds_tree
+					has_country_flag = QNG_tongzhi_transition_tree
+				}
+			}
 		}
 		allow_branch={
 			has_country_flag = QNG_self_strengthening_movement
@@ -1545,25 +1742,35 @@ focus_tree = {
 	}
   focus = {
 		id = QNG_A_Modern_Army
-		icon = GFX_goal_generic_axis_build_infantry
-    relative_position_id = QNG_Self_Strengthening_Movement
-		x = -9
+		icon = GFX_focus_qing_forces
+		relative_position_id = QNG_Self_Strengthening_Movement
+		available={
+			custom_trigger_tooltip = {
+				tooltip = QNG_xianjing_transition_tree		
+				NOT={
+					has_country_flag = QNG_xianjing_transition_tree
+					has_country_flag = QNG_eight_council_rebuilds_tree
+					has_country_flag = QNG_tongzhi_transition_tree
+				}
+			}
+		}
+		x = -10
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Self_Strengthening_Movement
-    }
+		  focus = QNG_Self_Strengthening_Movement
+		}
 		completion_reward = {
-      army_experience = 25
+			army_experience = 25
 		}
 	}
   focus = {
 		id = QNG_An_Industry_to_Support_the_Army
 		icon = GFX_goal_generic_build_tank
-    relative_position_id = QNG_A_Modern_Army
+		relative_position_id = QNG_A_Modern_Army
 		x = 3
 		y = 1
 		cost = 70
@@ -1571,19 +1778,22 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_A_Modern_Army
-    }
+			focus = QNG_A_Modern_Army
+		}
+		prerequisite = {
+			focus = QNG_Our_Industry
+		}
 		completion_reward = {
-      add_tech_bonus = {
-        bonus = 0.5
-        uses = 1
-        category = industry
-      }
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
 		}
 	}
   focus = {
 		id = QNG_Our_First_Steam_Engine
-		icon = GFX_goal_focus_railroad_development
+		icon = GFX_Focus_transport_railroad_development
 		relative_position_id = QNG_An_Industry_to_Support_the_Army
 		x = 1
 		y = 1
@@ -1685,20 +1895,14 @@ focus_tree = {
 		prerequisite = {
       focus = QNG_Buy_Western_Manufacturing_Machines
     }
-    available = {
-			QNG = {
+		available = {
+			#QNG = {
 				controls_state = 1056
-			}
+				num_of_civilian_factories_available_for_projects > 1
+			#}
 		}
 		completion_reward = {
-    1056 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = arms_factory
-  level = 1
-  instant_build = yes
-}
-}
+			activate_decision = QNG_jin_ling_arsenal_mission
 		}
 	}
   focus = {
@@ -1712,83 +1916,68 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Jin_Ling_Arsenal
-    }
-    available = {
+			focus = QNG_Jin_Ling_Arsenal
+		}
+		available = {
 			QNG = {
 				controls_state = 1056
 			}
 		}
 		completion_reward = {
 		add_tech_bonus = {
-    bonus = 0.5
-    uses = 1
-    category = industry
-}
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
 		}
 	}
-  focus = {
+	focus = {
 		id = QNG_Jiangnan_Arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-    relative_position_id = QNG_Buy_Western_Manufacturing_Machines
+		relative_position_id = QNG_Buy_Western_Manufacturing_Machines
 		x = 0
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
-    available = {
-			QNG = {
-				controls_state = 596
-			}
+		available = {
+			controls_state = 613
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		prerequisite = {
-      focus = QNG_Buy_Western_Manufacturing_Machines
-    }
+		  focus = QNG_Buy_Western_Manufacturing_Machines
+		}
 		completion_reward = {
-    596 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = arms_factory
-  level = 1
-  instant_build = yes
-}
-}
+			activate_decision = QNG_jiangnan_arsenal_mission
 		}
 	}
   focus = {
 		id = QNG_Expand_the_Jiangnan_Arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-    relative_position_id = QNG_Jiangnan_Arsenal
+		relative_position_id = QNG_Jiangnan_Arsenal
 		x = -1
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
-    available = {
-			QNG = {
-				controls_state = 596
-			}
+		available = {
+			controls_state = 613
+			num_of_civilian_factories_available_for_projects > 1
+			NOT={has_decision = QNG_jiangnan_arsenal_naval_mission}
 		}
 		prerequisite = {
-      focus = QNG_Jiangnan_Arsenal
-    }
-		completion_reward = {
-    596 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = arms_factory
-  level = 1
-  instant_build = yes
-}
+			focus = QNG_Jiangnan_Arsenal
 		}
-	}
+		completion_reward = {
+			activate_decision = QNG_jiangnan_arsenal_2_mission
+		}
   }
   focus = {
 		id = QNG_Lanzhou_Factory
 		icon = GFX_goal_generic_army_artillery2
-    relative_position_id = QNG_Expand_the_Jiangnan_Arsenal
+		relative_position_id = QNG_Expand_the_Jiangnan_Arsenal
 		x = 1
 		y = 1
 		cost = 70
@@ -1796,25 +1985,25 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Expand_the_Jiangnan_Arsenal
-    }
-    available = {
+		  focus = QNG_Expand_the_Jiangnan_Arsenal
+		}
+		available = {
 			QNG = {
 				controls_state = 604
 			}
 		}
 		completion_reward = {
-		add_tech_bonus = {
-    bonus = 0.5
-    uses = 1
-    category = artillery
-}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
 		}
 	}
   focus = {
 		id = QNG_Xian_Machine_Factory
 		icon = GFX_goal_generic_construction
-    relative_position_id = QNG_Expand_the_Jiangnan_Arsenal
+		relative_position_id = QNG_Expand_the_Jiangnan_Arsenal
 		x = -1
 		y = 1
 		cost = 70
@@ -1822,26 +2011,27 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Expand_the_Jiangnan_Arsenal focus = QNG_Jin_Ling_Machine_Factory
-    }
-    available = {
+		  focus = QNG_Expand_the_Jiangnan_Arsenal 
+		  focus = QNG_Jin_Ling_Machine_Factory
+		}
+		available = {
 			QNG = {
 				controls_state = 622
 			}
 		}
 		completion_reward = {
 		add_tech_bonus = {
-    bonus = 0.5
-    uses = 1
-    category = industry
-}
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
 		}
     }
 
   focus = {
 		id = QNG_Jiangnan_Arsenal_Naval_Factory
 		icon = GFX_goal_generic_construct_naval_dockyard
-    relative_position_id = QNG_Jiangnan_Arsenal
+		relative_position_id = QNG_Jiangnan_Arsenal
 		x = 1
 		y = 1
 		cost = 70
@@ -1849,28 +2039,21 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Jiangnan_Arsenal
-    }
-    available = {
-			QNG = {
-				controls_state = 596
-			}
+		  focus = QNG_Jiangnan_Arsenal
+		}
+		available = {
+			controls_state = 613
+			num_of_civilian_factories_available_for_projects > 1
+			NOT={has_decision = QNG_jiangnan_arsenal_2_mission}
 		}
 		completion_reward = {
-    622 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = dockyard
-  level = 1
-  instant_build = yes
-}
-    }
+			activate_decision = QNG_jiangnan_arsenal_naval_mission
 		}
 	}
   focus = {
 		id = QNG_Beiyang_Machine_Factory
 		icon = GFX_goal_generic_construct_civ_factory
-    relative_position_id = QNG_Buy_Western_Manufacturing_Machines
+		relative_position_id = QNG_Buy_Western_Manufacturing_Machines
 		x = 2
 		y = 1
 		cost = 70
@@ -1878,28 +2061,21 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Buy_Western_Manufacturing_Machines
-    }
-    available = {
-			QNG = {
-				controls_state = 608
-			}
+			focus = QNG_Buy_Western_Manufacturing_Machines
+		}
+		available = {
+			controls_state = 608
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		completion_reward = {
-    608 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = industrial_complex
-  level = 1
-  instant_build = yes
-}
-    }
+			activate_decision = QNG_beiyang_machine_factory_mission
+		
 		}
 	}
   focus = {
 		id = QNG_Beiyang_Machine_Factory_Dockyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-    relative_position_id = QNG_Beiyang_Machine_Factory
+		relative_position_id = QNG_Beiyang_Machine_Factory
 		x = 1
 		y = 1
 		cost = 70
@@ -1907,27 +2083,19 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Beiyang_Machine_Factory
-    }
-    available = {
-			QNG = {
-				controls_state = 1432
-			}
+			focus = QNG_Beiyang_Machine_Factory
+		}
+		available = {
+			controls_state = 126
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		completion_reward = {
-    1432 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-  type = dockyard
-  level = 1
-  instant_build = yes
-}
-    }
+			activate_decision = QNG_beiyang_machine_factory_dockyard_mission
 		}
 	}
   focus = {
 		id = QNG_Steel_Factories
-		icon = GFX_goal_steel_production_focus
+		icon = GFX_Focus_Production_Iron
     relative_position_id = QNG_Beiyang_Machine_Factory_Dockyards
 		x = -1
 		y = 1
@@ -1936,43 +2104,43 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Beiyang_Machine_Factory_Dockyards
-    }
-    prerequisite = {
-      focus = QNG_Jiangnan_Arsenal_Naval_Factory
-    }
-    available = {
+		  focus = QNG_Beiyang_Machine_Factory_Dockyards
+		}
+		prerequisite = {
+		  focus = QNG_Jiangnan_Arsenal_Naval_Factory
+		}
+		available = {
 			QNG = {
 				controls_state = 608
 			}
-      QNG = {
+			QNG = {
 				controls_state = 596
 			}
 		}
 		completion_reward = {
 			add_resource = { type = steel amount = 7 state = 596 }
-      add_resource = { type = steel amount = 4 state = 608 }
+			add_resource = { type = steel amount = 4 state = 608 }
 		}
 	}
   focus = {
 		id = QNG_Chonghou_Training_Guideline
 		icon = GFX_focus_secret_rearmament
     relative_position_id = QNG_A_Modern_Army
-		x = -3
+		x = -4
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_A_Modern_Army
-    }
+      		focus = QNG_A_Modern_Army
+    	}
 		completion_reward = {
-    add_tech_bonus = {
-  bonus = 0.5
-  uses = 2
-  category = land_doctrine
-}
+    		add_doctrine_cost_reduction = {
+  				cost_reduction = 0.5
+  				uses = 2
+  				category = land_doctrine
+			}
 		}
 	}
   focus = {
@@ -2015,7 +2183,7 @@ focus_tree = {
 		id = QNG_Employ_Western_Training_Officers
 		icon = GFX_focus_generic_military_academy
     relative_position_id = QNG_Chonghou_Training_Guideline
-		x = 1
+		x = 2
 		y = 1
 		cost = 70
 		ai_will_do = {
@@ -2034,7 +2202,7 @@ focus_tree = {
 		id = QNG_Equipment_from_the_West
 		icon = GFX_goal_generic_positive_trade_relations
     relative_position_id = QNG_Employ_Western_Training_Officers
-		x = 2
+		x = 1
 		y = 1
 		cost = 70
 		ai_will_do = {
@@ -2097,7 +2265,7 @@ focus_tree = {
 		id = QNG_Employ_Translators
 		icon = GFX_focus_generic_treaty
     relative_position_id = QNG_Employ_Western_Training_Officers
-		x = 0
+		x = -1
 		y = 1
 		cost = 70
 		ai_will_do = {
@@ -2110,33 +2278,136 @@ focus_tree = {
 			army_experience = 50
 		}
 	}
-  focus = {
-		id = QNG_Form_the_Huai_Army
-		icon = GFX_goal_generic_defence
-    relative_position_id = QNG_Employ_Translators
+	focus = {
+		id = QNG_using_yong_ying
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = QNG_Employ_Translators
 		x = -1
+		y = 1
+		cost = 70
+		ai_will_do = {
+			factor = 3 #preferred historical outcome
+		}
+		prerequisite = {
+		  focus = QNG_Employ_Translators
+		}
+		prerequisite = {
+		  focus = QNG_Train_Local_Officers
+		}
+		completion_reward = {
+			clear_variable = QNG_army_funding_level_lp
+			clear_variable = QNG_army_funding_level_cg
+			clear_variable = QNG_army_funding_level_ao
+			remove_dynamic_modifier = { modifier = QNG_army_funding_balance }
+			remove_ideas={QNG_army_funding_6 QNG_idea_banner_armies}
+			hidden_effect = {
+				remove_ideas = {QNG_army_funding_7}
+			}
+			add_ideas = {QNG_yong_ying}
+		}
+	}
+	focus = {
+		id = QNG_dealing_with_xiang_army
+		icon = GFX_focus_qing_forces
+		relative_position_id = QNG_using_yong_ying
+		x = 2
+		y = 1
+		cost = 70
+		ai_will_do = {
+			factor = 1
+		}
+		allow_branch={
+
+		}
+		available={
+			OR={
+				has_war = no
+				TAI={exists = no}
+			}
+			OR={
+				has_completed_focus = QNG_army_to_fight_barbarians
+				NOT={has_country_flag = QNG_xianjing_tree}
+			}
+		}
+		prerequisite = {
+			focus = QNG_using_yong_ying
+		}
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = QNG_new_standard_army
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = QNG_dealing_with_xiang_army
+		x = 0
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Employ_Translators
-    }
-    prerequisite = {
-      focus = QNG_Train_Local_Officers
-    }
+			focus = QNG_dealing_with_xiang_army
+		}
 		completion_reward = {
-    create_corps_commander = {
-name = "Li Hongzhang"
-picture = "Portrait_China_Li_Hongzhang.dds"
-traits = { brilliant_strategist }
-skill = 4
-attack_skill = 2
-defense_skill = 1
-planning_skill = 1
-logistics_skill = 3
-}
+			country_event = {id=qing.10}
+		}
+	}
+	focus = {
+		id = QNG_local_armies
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = QNG_using_yong_ying
+		x = 0
+		y = 1
+		cost = 70
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = QNG_using_yong_ying
+		}
+		completion_reward = {
+			country_event = { id = qing.11}
+		}
+	}
+	
+  focus = {
+		id = QNG_Form_the_Huai_Army
+		icon = GFX_goal_generic_defence
+		relative_position_id = QNG_using_yong_ying
+		x = -2
+		y = 1
+		cost = 70
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+		  focus = QNG_using_yong_ying
+		}
+		completion_reward = {
+			generate_character = {
+				token_base = QNG_Li_Hongzhang
+				name = "Li Hongzhang"
+			}
+			QNG_Li_Hongzhang={
+				add_corps_commander_role = {
+				  skill = 4
+				  attack_skill = 2
+				  defense_skill = 1
+				  planning_skill = 1
+				  logistics_skill = 3
+				}
+			}
+			create_corps_commander = {
+				name = "Li Hongzhang"
+				picture = "Portrait_China_Li_Hongzhang.dds"
+				traits = { brilliant_strategist }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 3
+			}
 		}
 	}
   focus = {
@@ -2198,52 +2469,41 @@ logistics_skill = 3
 			add_manpower = 40000
 		}
 	}
-  focus = {
-		id = QNG_Studying_Wars
-		icon = GFX_goal_generic_position_armies
-    relative_position_id = QNG_Extensive_Conscription
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-      focus = QNG_Extensive_Conscription
-    }
-		completion_reward = {
-    add_tech_bonus = {
-  bonus = 0.5
-  uses = 2
-  category = land_doctrine
-}
-		}
-	}
 	focus = {
 		id = QNG_The_Imperial_Navy
 		icon = GFX_goal_generic_amphibious_assault
-    relative_position_id = QNG_Self_Strengthening_Movement
-		x = 9
+		relative_position_id = QNG_Self_Strengthening_Movement
+		available={
+			custom_trigger_tooltip = {
+				tooltip = QNG_xianjing_transition_tree		
+				NOT={
+					has_country_flag = QNG_xianjing_transition_tree
+					has_country_flag = QNG_eight_council_rebuilds_tree
+					has_country_flag = QNG_tongzhi_transition_tree
+				}
+			}
+		}
+		x = 4
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Self_Strengthening_Movement
-    }
+		  focus = QNG_Self_Strengthening_Movement
+		}
 		completion_reward = {
-		add_tech_bonus = {
-	bonus = 0.5
-	uses = 1
-	category = naval_doctrine
-}
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = naval_doctrine
+			}
 		}
 	}
 	focus = {
 		id = QNG_The_Foochow_Arsenal
 		icon = GFX_goal_generic_build_tank
-    relative_position_id = QNG_The_Imperial_Navy
+		relative_position_id = QNG_The_Imperial_Navy
 		x = -3
 		y = 1
 		cost = 70
@@ -2251,10 +2511,13 @@ logistics_skill = 3
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_The_Imperial_Navy
-    }
-	 completion_reward = {
-				add_ideas = QNG_foochow_arsenal
+		  focus = QNG_The_Imperial_Navy
+		}
+		available={
+			controls_state = 595
+		}
+		completion_reward = {
+			add_ideas = QNG_foochow_arsenal
 		}
 	}
 	focus = {
@@ -2280,7 +2543,7 @@ logistics_skill = 3
 	focus = {
 		id = QNG_Mawei_Shipyard
 		icon = GFX_goal_generic_construct_naval_dockyard
-    relative_position_id = QNG_The_Foochow_Arsenal
+		relative_position_id = QNG_The_Foochow_Arsenal
 		x = 1
 		y = 1
 		cost = 70
@@ -2288,22 +2551,22 @@ logistics_skill = 3
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_The_Foochow_Arsenal
-    }
+			focus = QNG_The_Foochow_Arsenal
+		}
 		available = {
-		QNG = {
-			controls_state = 595
+			QNG = {
+				controls_state = 595
+			}
 		}
-		}
-	 completion_reward = {
-	 595 = {
-	 add_extra_state_shared_building_slots = 1
-	 add_building_construction = {
- type = dockyard
- level = 1
- instant_build = yes
-}
-	 }
+		completion_reward = {
+			1159 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2319,12 +2582,12 @@ logistics_skill = 3
 		prerequisite = {
       focus = QNG_Foochow_Shipbuilding_Institution
     }
-	 completion_reward = {
-	 add_tech_bonus = {
- bonus = 0.5
- uses = 2
- category = naval_doctrine
-}
+	 	completion_reward = {
+			add_doctrine_cost_reduction = {
+ 				cost_reduction = 0.5
+ 				uses = 2
+ 				category = naval_doctrine
+			}
 		}
 	}
 	focus = {
@@ -2368,7 +2631,7 @@ logistics_skill = 3
 						equipment = {
 							type = ship_hull_frigate_0
 						}
-						cost_factor = 10
+						cost_factor = 0
 					}
 
 				}
@@ -2388,18 +2651,23 @@ logistics_skill = 3
 		ai_will_do = {
 			factor = 1
 		}
+		available={
+			controls_state = 593
+		}
 		prerequisite = {
 			focus = QNG_Buy_Foreign_Steamers
 		}
 		completion_reward = {
 	 		hidden_effect = {
 				puppet = GUN
+				add_manpower = -50000
 				GUN={
 					transfer_state= 1158
 					add_state_core = 1158
 					set_cosmetic_tag = GUN_fleet
 					set_research_slots = 0
 					add_ideas = {QNG_autonomus_navy}
+					add_manpower = 50000
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }
@@ -2428,7 +2696,7 @@ logistics_skill = 3
 	}
 	focus = {
 		id = QNG_Build_Wooden_Gunboats
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Victorian_Gunboat
 		relative_position_id = QNG_Hire_Foreign_Teachers
 		x = 1
 		y = 1
@@ -2500,6 +2768,7 @@ logistics_skill = 3
 		}
 		hidden_effect = {
 				puppet = FUJ
+				add_manpower = -50000
 				FUJ={
 					transfer_state= 1159
 					add_state_core = 1159
@@ -2507,6 +2776,7 @@ logistics_skill = 3
 					set_research_slots = 0
 					add_offsite_building = { type = dockyard level = 1 }
 					add_ideas = {QNG_autonomus_navy}
+					add_manpower = 50000
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }
@@ -2534,37 +2804,17 @@ logistics_skill = 3
 		}
 	}
 	focus = {
-		id = QNG_The_Japanese_in_Taiwan
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-    relative_position_id = QNG_The_Imperial_Navy
-		x = 3
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-      focus = QNG_The_Imperial_Navy
-    }
-	 completion_reward = {
-				add_political_power = 50
-				country_event = {
-    id = qing.1
-}
-		}
-	}
-	focus = {
 		id = QNG_Form_the_Nanyang_Fleet
 		icon = GFX_goal_generic_navy_cruiser
-		relative_position_id = QNG_The_Japanese_in_Taiwan
-		x = -1
+		relative_position_id = QNG_The_Imperial_Navy
+		x = 2
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		prerequisite = {
-			focus = QNG_The_Japanese_in_Taiwan
+			focus = QNG_The_Imperial_Navy
 		}
 		available = {
 			OR={
@@ -2581,7 +2831,7 @@ logistics_skill = 3
 			}
 		}
 		completion_reward = {
-				hidden_effect = {
+			hidden_effect = {
 				if={
 					limit={
 						is_ai = yes
@@ -2592,6 +2842,7 @@ logistics_skill = 3
 					}
 				}
 				puppet = NAY
+				add_manpower = -50000
 				NAY={
 					transfer_state= 1160
 					add_state_core = 1160
@@ -2599,6 +2850,7 @@ logistics_skill = 3
 					set_research_slots = 0
 					add_offsite_building = { type = dockyard level = 1 }
 					add_ideas = {QNG_autonomus_navy}
+					add_manpower = 50000
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }
@@ -2622,7 +2874,7 @@ logistics_skill = 3
 					}
 				}
 			}
-				custom_effect_tooltip = QNG_Form_Nanyang_Fleet_tooltip
+			custom_effect_tooltip = QNG_Form_Nanyang_Fleet_tooltip
 		}
 	}
 	focus = {
@@ -2681,15 +2933,15 @@ logistics_skill = 3
 	focus = {
 		id = QNG_Form_the_Beiyang_Fleet
 		icon = GFX_goal_generic_navy_cruiser
-		relative_position_id = QNG_The_Japanese_in_Taiwan
-		x = 1
+		relative_position_id = QNG_The_Imperial_Navy
+		x = 4
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		prerequisite = {
-			focus = QNG_The_Japanese_in_Taiwan
+			focus = QNG_The_Imperial_Navy
 		}
 		available = {
 			OR={
@@ -2709,6 +2961,7 @@ logistics_skill = 3
 			
 			hidden_effect = {
 				puppet = BEI
+				add_manpower = -50000
 				BEI={
 					transfer_state= 1168
 					add_state_core = 1168
@@ -2716,6 +2969,7 @@ logistics_skill = 3
 					set_research_slots = 0
 					add_offsite_building = { type = dockyard level = 1 }
 					add_ideas = {QNG_autonomus_navy}
+					add_manpower = 50000
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }
@@ -2744,7 +2998,7 @@ logistics_skill = 3
 	}
 	focus = {
 		id = QNG_Foreign_Ironclads
-		icon = GFX_goal_focus_generic_navy_ironclad
+		icon = GFX_Goal_ironclad_focus
 		relative_position_id = QNG_Form_the_Beiyang_Fleet
 		x = 0
 		y = 1
@@ -2763,7 +3017,7 @@ logistics_skill = 3
 	}
 	focus = {
 		id = QNG_A_Trade_of_Gunboats
-		icon = GFX_goal_gunboat_focus
+		icon = GFX_Focus_Victorian_Gunboat
 		relative_position_id = QNG_Boats_from_Jiangnan
 		x = 1
 		y = 1
@@ -2798,6 +3052,12 @@ logistics_skill = 3
 			focus = QNG_A_Trade_of_Gunboats
 		}
 		completion_reward = {
+			BEI={
+				add_ideas = QNG_patrolling_the_eastern_seas
+			}
+			NAY={
+				add_ideas = QNG_patrolling_the_eastern_seas
+			}
 			add_ideas = QNG_patrolling_the_eastern_seas
 		}
 	}
@@ -2805,7 +3065,17 @@ logistics_skill = 3
 		id = QNG_Our_Industry
 		icon = GFX_goal_generic_production
 		relative_position_id = QNG_Self_Strengthening_Movement
-		x = 0
+		available={
+			custom_trigger_tooltip = {
+				tooltip = QNG_xianjing_transition_tree		
+				NOT={
+					has_country_flag = QNG_xianjing_transition_tree
+					has_country_flag = QNG_eight_council_rebuilds_tree
+					has_country_flag = QNG_tongzhi_transition_tree
+				}
+			}
+		}
+		x = -4
 		y = 1
 		cost = 70
 		ai_will_do = {
@@ -2816,17 +3086,17 @@ logistics_skill = 3
 		}
 		completion_reward = {
 			custom_effect_tooltip = EDC_afr.5.t
-		hidden_effect = {
-			country_event = { id = EDC_afr.5 hours = 1 }
-		}
+			hidden_effect = {
+				country_event = { id = EDC_afr.5 hours = 1 }
+			}
 
 		}
 	}
 	focus = {
 		id = QNG_Civilian_Industry
-		icon = GFX_focus_increase_civillian_budget
+		icon = GFX_Focus_Economy_Growth
 		relative_position_id = QNG_Our_Industry
-		x = -2
+		x = 1
 		y = 1
 		cost = 70
 		ai_will_do = {
@@ -2841,7 +3111,7 @@ logistics_skill = 3
 	}
 	focus = {
 		id = QNG_China_Merchants_Steam_Navigation_Company
-		icon = GFX_focus_exploration
+		icon = GFX_Focus_Exploration
 		relative_position_id = QNG_Civilian_Industry
 		x = -1
 		y = 1
@@ -2881,7 +3151,7 @@ add_idea = QNG_civilian_industry_improvements3
 	}
 	focus = {
 		id = QNG_Lanzhou_Fabric_Factory
-		icon = GFX_goal_focus_textile
+		icon = GFX_Focus_Resource_Textile
     relative_position_id = QNG_Civilian_Industry
 		x = 1
 		y = 1
@@ -2903,7 +3173,7 @@ add_idea = QNG_civilian_industry_improvements3
 	}
 	focus = {
 		id = QNG_Hubei_Fabric_Factory
-		icon = GFX_goal_fabric_production_focus
+		icon = GFX_Focus_Production_Fabric
 		relative_position_id = QNG_Lanzhou_Fabric_Factory
 		x = 0
 		y = 1
@@ -2925,7 +3195,7 @@ add_idea = QNG_civilian_industry_improvements3
 	}
 	focus = {
 		id = QNG_Trading_with_the_West
-		icon = GFX_goal_focus_international_investments
+		icon = GFX_Focus_Trade_International
 		relative_position_id = QNG_Chinese_Engineering_and_Mining_Company
 		x = 0
 		y = 1
@@ -2945,7 +3215,7 @@ add_idea = QNG_civilian_industry_improvements3
 	}
 	focus = {
 		id = QNG_Expanding_Local_Industry
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
     relative_position_id = QNG_Hubei_Fabric_Factory
 		x = 0
 		y = 1
@@ -2967,7 +3237,7 @@ add_idea = QNG_civilian_industry_improvements3
 		id = QNG_Infrastructure_Plans
 		icon = GFX_goal_generic_construct_civilian
 		relative_position_id = QNG_Our_Industry
-		x = 2
+		x = -1
 		y = 1
 		cost = 70
 		ai_will_do = {
@@ -2977,139 +3247,42 @@ add_idea = QNG_civilian_industry_improvements3
 			focus = QNG_Our_Industry
 		}
 		completion_reward = {
-				#
-		}
-	}
-	focus = {
-		id = QNG_Suzhou_Shanghai_Railroad_Proposal
-		icon = GFX_goal_generic_construct_infrastructure
-    relative_position_id = QNG_Infrastructure_Plans
-		x = -1
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-      focus = QNG_Infrastructure_Plans
-    }
-	 completion_reward = {
-			country_event = {id = qing.19}
-		}
-	}
-	focus = {
-		id = QNG_Hankou_to_Shanghai_Proposal
-		icon = GFX_goal_generic_construct_infrastructure
-    relative_position_id = QNG_Suzhou_Shanghai_Railroad_Proposal
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-      focus = QNG_Suzhou_Shanghai_Railroad_Proposal
-    }
-	 completion_reward = {
-			country_event = {id = qing.20}
-		}
-	}
-	focus = {
-		id = QNG_Fixing_and_Ugrading_our_Railroads
-		icon = GFX_goal_generic_construct_infrastructure
-    relative_position_id = QNG_Infrastructure_Plans
-		x = 1
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-      focus = QNG_Infrastructure_Plans
-    }
-	 completion_reward = {
-				#
-		}
-	}
-	focus = {
-		id = QNG_Shanghai_to_Wuhao_Proposal
-		icon = GFX_goal_generic_construct_infrastructure
-    relative_position_id = QNG_Fixing_and_Ugrading_our_Railroads
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-      focus = QNG_Fixing_and_Ugrading_our_Railroads
-    }
-	 completion_reward = {
-			country_event = {id = qing.21}
-		}
-	}
-	focus = {
-		id = QNG_Plans_Approved
-		icon = GFX_focus_hol_the_foundations_of_defense
-    relative_position_id = QNG_Shanghai_to_Wuhao_Proposal
-		x = -2
-		y = 1
-		cost = 70
-		available = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = { focus = QNG_Plans_Rejected }
-		prerequisite = {
-      focus = QNG_Shanghai_to_Wuhao_Proposal focus = QNG_Hankou_to_Shanghai_Proposal
-    }
-	 completion_reward = {
-				#
-		}
-	}
-	focus = {
-		id = QNG_Plans_Rejected
-		icon = GFX_focus_renounce_the_treaty_of_trianon
-    relative_position_id = QNG_Shanghai_to_Wuhao_Proposal
-		x = 0
-		y = 1
-		cost = 70
-		available = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = { focus = QNG_Plans_Approved }
-		prerequisite = {
-      focus = QNG_Shanghai_to_Wuhao_Proposal focus = QNG_Hankou_to_Shanghai_Proposal
-    }
-	 completion_reward = {
-				#
+			add_timed_idea={
+				idea = CHI_idea_infratructure_development
+				days = 720
+			}
 		}
 	}
 	focus = {
 		id = QNG_Set_up_Zongli_Yamen
-		icon = GFX_goal_focus_foreign_diplomacy_central
-    relative_position_id = QNG_Self_Strengthening_Movement
-		x = 16
+		icon = GFX_Focus_Diplomatic_foreign_central
+		relative_position_id = QNG_Self_Strengthening_Movement
+		available={
+			custom_trigger_tooltip = {
+				tooltip = QNG_xianjing_transition_tree		
+				NOT={
+					has_country_flag = QNG_xianjing_transition_tree
+					has_country_flag = QNG_eight_council_rebuilds_tree
+					has_country_flag = QNG_tongzhi_transition_tree
+				}
+			}
+		}
+		x = 11
 		y = 1
 		cost = 70
 		ai_will_do = {
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Self_Strengthening_Movement
-    }
+		  focus = QNG_Self_Strengthening_Movement
+		}
 	 completion_reward = {
 				#
 		}
 	}
 	focus = {
 		id = QNG_Chinese_Maritime_Custom_Service
-		icon = GFX_goal_focus_foreign_diplomacy_economy
+		icon = GFX_Focus_Diplomatic_foreign_economy
     relative_position_id = QNG_Set_up_Zongli_Yamen
 		x = -1
 		y = 1
@@ -3127,7 +3300,7 @@ add_idea = QNG_civilian_industry_improvements3
 	focus = {
 		id = QNG_Build_Tongwen_Guan
 		icon = GFX_goal_generic_scientific_exchange
-    relative_position_id = QNG_Set_up_Zongli_Yamen
+		relative_position_id = QNG_Set_up_Zongli_Yamen
 		x = 1
 		y = 1
 		cost = 70
@@ -3135,15 +3308,15 @@ add_idea = QNG_civilian_industry_improvements3
 			factor = 1
 		}
 		prerequisite = {
-      focus = QNG_Set_up_Zongli_Yamen
-    }
-	 completion_reward = {
-				#
+		  focus = QNG_Set_up_Zongli_Yamen
+		}
+		completion_reward = {
+			add_ideas = CHI_idea_tongwen_guan
 		}
 	}
 	focus = {
 		id = QNG_Naval_Defence_Department
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Victorian_Gunboat
     relative_position_id = QNG_Chinese_Maritime_Custom_Service
 		x = 0
 		y = 1
@@ -3155,1490 +3328,7 @@ add_idea = QNG_civilian_industry_improvements3
       focus = QNG_Chinese_Maritime_Custom_Service
     }
 	 completion_reward = {
-				#
-		}
-	}
-
-	focus = {
-		id = QNG_dealing_with_xiang_army
-		icon = GFX_focus_qing_forces
-		relative_position_id = QNG_A_Modern_Army
-		x = 0
-		y = 9
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		allow_branch={
-
-		}
-		available={
-			OR={
-				has_war = no
-				TAI={exists = no}
-			}
-		}
-		# prerequisite = {
-			# focus = QNG_Self_Strengthening_Movement
-		# }
-		completion_reward = {
-			army_experience = 25
-		}
-	}
-	focus = {
-		id = QNG_new_standard_army
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = -2
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = QNG_dealing_with_xiang_army
-		}
-		completion_reward = {
-			country_event = {id=qing.10}
-		}
-	}
-	focus = {
-		id = QNG_using_yong_ying
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = -2
-		y = 2
-		cost = 70
-		ai_will_do = {
-			factor = 3 #preferred historical outcome
-		}
-		mutually_exclusive={
-			focus=QNG_traditional_ga
-			focus=QNG_professional_reforms_ga
-		}
-		prerequisite = {
-			focus = QNG_new_standard_army
-		}
-		completion_reward = {
-			clear_variable = QNG_army_funding_level_lp
-			clear_variable = QNG_army_funding_level_cg
-			clear_variable = QNG_army_funding_level_ao
-			remove_dynamic_modifier = { modifier = QNG_army_funding_balance }
-			remove_ideas={QNG_army_funding_6 QNG_idea_banner_armies}
-			add_ideas = {QNG_yong_ying}
-		}
-	}
-	focus = {
-		id = QNG_focus_inf
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = -1
-		y = 3
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = QNG_using_yong_ying
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.33
-				uses = 3
-				category = infantry_weapons
-			}
-		}
-	}
-	focus = {
-		id = QNG_delegated_command
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = -3
-		y = 3
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = QNG_using_yong_ying
-		}
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = QNG_local_armies
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = -2
-		y = 4
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = QNG_focus_inf
-		}
-		prerequisite = {
-			focus = QNG_delegated_command
-		}
-		completion_reward = {
-			country_event = { id = qing.11}
-		}
-	}
-
-	focus = {
-		id = QNG_keeping_green_army
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = 2
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = QNG_dealing_with_xiang_army
-		}
-		completion_reward = {
-			army_experience = 25
-		}
-	}
-	focus = {
-		id = QNG_professional_reforms_ga
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = 1
-		y = 2
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive={
-			focus=QNG_traditional_ga
-			focus=QNG_using_yong_ying
-		}
-		prerequisite = {
-			focus = QNG_keeping_green_army
-		}
-		completion_reward = {
-			clear_variable = QNG_army_funding_level_lp
-			clear_variable = QNG_army_funding_level_cg
-			clear_variable = QNG_army_funding_level_ao
-			remove_dynamic_modifier = { modifier = QNG_army_funding_balance }
-			remove_ideas={QNG_army_funding_6 QNG_idea_banner_armies}
-			add_ideas ={QNG_idea_professional_attempts}
-		}
-	}
-	focus = {
-		id = QNG_quality_over_quanty_ga
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = 1
-		y = 3
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = QNG_professional_reforms_ga
-		}
-		completion_reward = {
-			add_manpower = -500000
-			swap_ideas={
-				add_idea = QNG_idea_professional_attempts_2
-				remove_idea = QNG_idea_professional_attempts
-			}
-		}
-	}
-	focus = {
-		id = QNG_creating_modern_force_ga
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = 1
-		y = 4
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = QNG_quality_over_quanty_ga
-		}
-		completion_reward = {
-			swap_ideas={
-				add_idea = QNG_idea_professional_attempts_2
-				remove_idea = QNG_idea_professional_attempts
-			}
-		}
-	}
-	focus = {
-		id = QNG_traditional_ga
-		icon = GFX_goal_generic_axis_build_infantry
-		relative_position_id = QNG_dealing_with_xiang_army
-		x = 3
-		y = 2
-		cost = 70
-		ai_will_do = {
-			factor = 0#not a good idea
-		}
-		mutually_exclusive={
-			focus=QNG_professional_reforms_ga
-			focus=QNG_using_yong_ying
-		}
-		prerequisite = {
-			focus = QNG_keeping_green_army
-		}
-		completion_reward = {
-			army_experience = 25
-		}
-	}
-
-	########################################################################################
-	########################################################################################
-	################################ THE BOILING PLOT ######################################
-	########################################################################################
-	########################################################################################
-
-
-	########################################################################################
-	########################################################################################
-	############################### NEW GENGZI POLICIES ####################################
-	########################################################################################
-	########################################################################################
-
-	focus = {
-		id = QNG_new_gengzi_policies
-		icon = GFX_Focus_Government_Reform
-		x = 10
-		y = 0
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		completion_reward = {
-			add_political_power = 100
-		}
-	}
-
-	########################################################################################
-	########################################################################################
-	############################ NEW GENZI MILITARY BRANCH #################################
-	########################################################################################
-	########################################################################################
-
-	focus = {
-		id = QNG_focus_on_military
-		icon = GFX_Focus_Army_Reforms
-		relative_position_id = QNG_new_gengzi_policies
-		x = -4
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_new_gengzi_policies
-		}
-
-		completion_reward = {
-			army_experience = 20
-		}
-	}
-
-	focus = {
-		id = QNG_abolish_traditional_test
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_focus_on_military
-		x = -2
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_focus_on_military
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_establish_hanyang_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		relative_position_id = QNG_abolish_traditional_test
-		x = -2
-		y = 1
-		cost = 20
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_abolish_traditional_test
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_establish_shanghai_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		relative_position_id = QNG_abolish_traditional_test
-		x = 0
-		y = 1
-		cost = 20
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_abolish_traditional_test
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_establish_guangzhou_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		relative_position_id = QNG_abolish_traditional_test
-		x = 2
-		y = 1
-		cost = 20
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_abolish_traditional_test
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_reorg_beiyang_army
-		icon = GFX_Focus_Army_Reformed
-		relative_position_id = QNG_establish_shanghai_arsenal
-		x = 0
-		y = 1
-		cost = 100
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_establish_guangzhou_arsenal
-		}
-		prerequisite = {
-			focus = QNG_establish_hanyang_arsenal
-		}
-		prerequisite = {
-			focus = QNG_establish_shanghai_arsenal
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_revive_the_navy
-		icon = GFX_Focus_Naval_Supplies
-		relative_position_id = QNG_focus_on_military
-		x = 2
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_focus_on_military
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_send_naval_officer_to_japan
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_revive_the_navy
-		x = 0
-		y = 1
-		cost = 35
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_revive_the_navy
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_build_jiangying_naval_school
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_send_naval_officer_to_japan
-		x = 0
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_send_naval_officer_to_japan
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_build_mawei_shipyard
-		icon = GFX_goal_generic_construct_naval_dockyard
-		relative_position_id = QNG_build_jiangying_naval_school
-		x = 0
-		y = 1
-		cost = 20
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_build_jiangying_naval_school
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = QNG_establish_naval_guard_town
-		icon = GFX_goal_generic_navy_cruiser
-		relative_position_id = QNG_build_mawei_shipyard
-		x = 0
-		y = 1
-		cost = 20
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_build_mawei_shipyard
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-	########################################################################################
-	########################################################################################
-	########################### NEW GENGZI POLICIES BRANCH #################################
-	########################################################################################
-	########################################################################################
-
-	focus = {
-		id = QNG_send_minister_abroad
-		icon = GFX_Focus_Diplomacy_Generic
-		relative_position_id = QNG_new_gengzi_policies
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_new_gengzi_policies
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_studying_report
-		icon = GFX_Focus_Government_Reform_2
-		relative_position_id = QNG_send_minister_abroad
-		x = 0
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_send_minister_abroad
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_prepare_constitutionism
-		icon = GFX_Focus_Government_Reform_4
-		relative_position_id = QNG_studying_report
-		x = 0
-		y = 1
-		cost = 60
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_studying_report
-		}
-
-		completion_reward = {
-
-		}
-	}	
-
-	focus = {
-		id = QNG_prepare_constitutional_outline
-		icon = GFX_Focus_Government_Reform_4
-		relative_position_id = QNG_prepare_constitutionism
-		x = 0
-		y = 1
-		cost = 100
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_prepare_constitutionism
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_issue_principles_of_constitution
-		icon = GFX_Focus_Freedom_Press_2
-		relative_position_id = QNG_prepare_constitutional_outline
-		x = 0
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_prepare_constitutional_outline
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_arrange_provincial_assembly_election
-		icon = GFX_Focus_Election
-		relative_position_id = QNG_issue_principles_of_constitution
-		x = 0
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_issue_principles_of_constitution
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	########################################################################################
-	########################################################################################
-	######################## NEW GENGZI ADMINISTRATION BRANCH ##############################
-	########################################################################################
-	########################################################################################
-
-	focus = {
-		id = QNG_focus_on_administration
-		icon = GFX_Focus_Government_Reform_Administration
-		relative_position_id = QNG_new_gengzi_policies
-		x = 3
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_new_gengzi_policies
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_examine_imperial_exam
-		icon = GFX_Focus_Government_Reform_2
-		relative_position_id = QNG_focus_on_administration
-		x = -1
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_focus_on_administration
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_westernize_schools
-		icon = GFX_Focus_Elementary_School_0
-		relative_position_id = QNG_examine_imperial_exam
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_examine_imperial_exam
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_provincial_military_academy
-		icon = GFX_focus_generic_military_academy
-		relative_position_id = QNG_westernize_schools
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_westernize_schools
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_organized_police_force
-		icon = GFX_Focus_Government_Military
-		relative_position_id = QNG_focus_on_administration
-		x = 1
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_focus_on_administration
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_establish_regional_force
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_organized_police_force
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_organized_police_force
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_establish_local_districts
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_establish_regional_force
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_establish_regional_force
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_open_model_prisons
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_establish_local_districts
-		x = 0
-		y = 1
-		cost = 70
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_establish_local_districts
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	########################################################################################
-	########################################################################################
-	############################ NEW GENGZI ECONOMY BRANCH #################################
-	########################################################################################
-	########################################################################################
-
-	focus = {
-		id = QNG_focus_on_economy
-		icon = GFX_Focus_Economy_Reforms
-		relative_position_id = QNG_new_gengzi_policies
-		x = 7
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_new_gengzi_policies
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-
-	focus = {
-		id = QNG_expand_tax_system
-		icon = GFX_Focus_Economy
-		relative_position_id = QNG_focus_on_economy
-		x = -1
-		y = 1
-		cost = 60
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_focus_on_economy
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_increase_fiscal_regulation
-		icon = GFX_Focus_Economy_Chain
-		relative_position_id = QNG_expand_tax_system
-		x = 0
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_expand_tax_system
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_greater_fiscal_control
-		icon = GFX_Focus_Economy_Chain
-		relative_position_id = QNG_increase_fiscal_regulation
-		x = 0
-		y = 1
-		cost = 50
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_increase_fiscal_regulation
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_railway_construction
-		icon = GFX_goal_focus_railroad_development
-		relative_position_id = QNG_focus_on_economy
-		x = 1
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_focus_on_economy
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_encourage_foreign_investment
-		icon = GFX_goal_foreign_investments_focus
-		relative_position_id = QNG_railway_construction
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_railway_construction
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_expand_investments
-		icon = GFX_goal_foreign_investments_focus_2
-		relative_position_id = QNG_encourage_foreign_investment
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_encourage_foreign_investment
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	########################################################################################
-	########################################################################################
-	################################### A NEW ERA ##########################################
-	########################################################################################
-	########################################################################################	
-
-	focus = {
-		id = QNG_a_new_era
-		icon = GFX_Focus_Freedom
-		x = 23
-		y = 0
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_open_zizheng_institute
-		icon = GFX_Focus_Education_School_Opening
-		relative_position_id = QNG_a_new_era
-		x = -3
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_a_new_era
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_establish_tsing_hua_uni
-		icon = GFX_Focus_Education_Gifted_Students
-		relative_position_id = QNG_open_zizheng_institute
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_open_zizheng_institute
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_provincial_advisory_council
-		icon = GFX_Focus_Government
-		relative_position_id = QNG_a_new_era
-		x = -1
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_a_new_era
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_constitutional_outline
-		icon = GFX_Focus_Law
-		relative_position_id = QNG_provincial_advisory_council
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_provincial_advisory_council
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_civil_right_and_obligation
-		icon = GFX_Focus_Freedom_Association
-		relative_position_id = QNG_constitutional_outline
-		x = -2
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_constitutional_outline
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_essential_of_parliment
-		icon = GFX_Focus_Government
-		relative_position_id = QNG_constitutional_outline
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_constitutional_outline
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_election_law_essentials
-		icon = GFX_Focus_Election
-		relative_position_id = QNG_constitutional_outline
-		x = 2
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_constitutional_outline
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_pardon_yuan_shi_kai
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_a_new_era
-		x = 1
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_a_new_era
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_continue_army_reorg
-		icon = GFX_Focus_Army_Reforms
-		relative_position_id = QNG_pardon_yuan_shi_kai
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_pardon_yuan_shi_kai
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_continuing_fiscal_reform
-		icon = GFX_Focus_Economy_Reforms
-		relative_position_id = QNG_a_new_era
-		x = 3
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_a_new_era
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_first_national_budget
-		icon = GFX_Focus_Economy
-		relative_position_id = QNG_continuing_fiscal_reform
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_continuing_fiscal_reform
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_unification_of_curreny_weights
-		icon = GFX_Focus_Economy
-		relative_position_id = QNG_first_national_budget
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_first_national_budget
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_royal_cabinet
-		icon = GFX_focus_placeholder_get_rick_rolled_meme
-		relative_position_id = QNG_a_new_era
-		x = 0
-		y = 4
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_civil_right_and_obligation
-		}
-		prerequisite = {
-			focus = QNG_essential_of_parliment
-		}
-		prerequisite = {
-			focus = QNG_election_law_essentials
-		}
-		prerequisite = {
-			focus = QNG_unification_of_curreny_weights
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = QNG_new_administration
-		icon = GFX_Focus_Freedom
-		relative_position_id = QNG_royal_cabinet
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			factor = 0
-		}
-
-		allow_branch={
-			#always = no
-			has_country_flag = QNG_boiling_pot_tree
-		}
-
-		prerequisite = {
-			focus = QNG_royal_cabinet
-		}
-
-		completion_reward = {
-
+			#
 		}
 	}
 

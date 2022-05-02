@@ -3,6 +3,8 @@ state = {
 	id = 1298
 	name = "STATE_1298"
 
+	local_supplies=0.0 
+
 	history = {
 
 		buildings = {
@@ -31,7 +33,7 @@ state = {
 	}
 
 	provinces = {
-		12627
+		868 12627 13829
 	}
 	manpower = 1250
 	

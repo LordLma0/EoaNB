@@ -9,8 +9,7 @@ state = {
 	history = {
 		owner = AUS
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 5
 		}
 		victory_points = {
 			6682 1
@@ -38,4 +37,5 @@ state = {
 	provinces = {
 		696 6682 6697 9640
 	}
+	local_supplies=0.0 
 }

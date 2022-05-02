@@ -208,7 +208,7 @@ ideas = {
 			
 			modifier = {
 				radical_democracy_drift = -0.0035
-				political_power_gain = -0.90
+				political_power_gain = -0.9
 			}
 		}
 		USA_doughface_1_lvl2 = {
@@ -328,7 +328,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.002
-				political_power_gain = -0.75
+				political_power_gain = -0.7
 			}
 		}
 		USA_inclusive_1_lvl2 = {
@@ -340,7 +340,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.004
-				political_power_gain = -0.8
+				political_power_gain = -0.75
 			}
 		}
 		USA_inclusive_1_lvl3 = {
@@ -352,7 +352,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.006
-				political_power_gain = -0.85
+				political_power_gain = -0.8
 			}
 		}
 		USA_inclusive_1_lvl4 = {
@@ -364,7 +364,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.008
-				political_power_gain = -0.9
+				political_power_gain = -0.85
 			}
 		}
 		USA_inclusive_1_lvl5 = {
@@ -376,7 +376,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.01
-				political_power_gain = -0.95
+				political_power_gain = -0.9
 			}
 		}
 		USA_inclusive_2_lvl1 = {
@@ -388,7 +388,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.0015
-				political_power_gain = -0.5
+				political_power_gain = -0.85
 			}
 		}
 		USA_inclusive_2_lvl2 = {
@@ -400,7 +400,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.003
-				political_power_gain = -0.55
+				political_power_gain = -0.9
 			}
 		}
 		USA_inclusive_2_lvl3 = {
@@ -412,7 +412,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.0045
-				political_power_gain = -0.6
+				political_power_gain = -0.95
 			}
 		}
 		USA_inclusive_2_lvl4 = {
@@ -424,7 +424,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.006
-				political_power_gain = -0.65
+				political_power_gain = -1.0
 			}
 		}
 		USA_inclusive_2_lvl5 = {
@@ -436,7 +436,7 @@ ideas = {
 
 			modifier = {
 				radical_democracy_drift = -0.0075
-				political_power_gain = -0.7
+				political_power_gain = -1.05
 			}
 		}
 		
@@ -479,9 +479,10 @@ ideas = {
 				political_power_factor = 0.10
 				stability_factor = 0.05
 				experience_gain_army = -0.03
+				experience_gain_army_factor = -0.9
 				army_org_regain = -0.15
 				max_command_power = 25
-				command_power_gain = -0.15
+				command_power_gain = -0.10
 				conscription_factor = -0.3
 				ai_focus_naval_factor = -0.15
 			}
@@ -498,7 +499,7 @@ ideas = {
 				stability_factor = -0.05
 				army_org_regain = -0.1
 				max_command_power = 15
-				command_power_gain = -0.25
+				command_power_gain = -0.15
 				conscription_factor = -0.225
 				ai_focus_naval_factor = -0.15
 			}
@@ -507,7 +508,7 @@ ideas = {
 			allowed = { tag = USA }
 			allowed_civil_war = { always = no }
 			cancel = { NOT = { OR = { has_idea = victorian_era has_idea = machine_era } } }
-			picture = USA_westpoint_napoleonic_thought
+			picture = GFX_idea_usa_improved_west_point_idea
 			removal_cost = -1
 
 			modifier = {
@@ -515,13 +516,12 @@ ideas = {
 				experience_gain_army = 0.01
 				army_org_regain = -0.15
 				max_command_power = 5
-				command_power_gain = -0.075
+				command_power_gain = -0.05
 				conscription_factor = -0.10
 				ai_focus_naval_factor = -0.1
 				training_time_army_factor = 0.05
 			}
 		}
-
 		USA_Spirit_Anti_Irish = {
 			allowed = { tag = USA }
 			allowed_civil_war = { always = no }
@@ -624,7 +624,7 @@ ideas = {
 				industrial_capacity_factory = 0.15
 
 				# Military
-				command_power_gain = -0.6
+				# command_power_gain = -0.2
 				conscription_factor = 0.15
 
 				# Land
@@ -1272,7 +1272,6 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 				local_resources_factor = -0.1
 				conscription = -0.009
-				command_power_gain = -0.35
 			}
 		}
 		USA_civil_war_political_reform_1 = {

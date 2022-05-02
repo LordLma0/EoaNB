@@ -2,6 +2,8 @@
 state = {
 	id =964
 	name = "STATE_964"
+
+	local_supplies=0.0 
 	resources = {
 		iron= 1.000
 		wood =2.000
@@ -15,6 +17,18 @@ state = {
 			infrastructure = 1
 
 		}
+		
+		add_to_array = { state_culture_array = 69 }	#Bulgarian
+		add_to_array = { state_culture_array_num = 0.75 }
+		add_to_array = { state_culture_array = 106 } #Thracian Turks
+		add_to_array = { state_culture_array_num = 0.23 }
+		add_to_array = { state_culture_array = 55 }	#Greek
+		add_to_array = { state_culture_array_num = 0.02 }
+
+		add_to_array = { state_religion_array = 1 }
+		add_to_array = { state_religion_array_num = 0.77 }
+		add_to_array = { state_religion_array = 8 }
+		add_to_array = { state_religion_array_num = 0.23 }
 
 	}
 

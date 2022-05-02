@@ -59,6 +59,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_mhk_button"
 		texturefile = "gfx/interface/topbar/toolbar/mhk_button.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_mhk_activate_button"
+		texturefile = "gfx/interface/mhk_activate_button.dds"
+		noOfFrames = 2
 	}
 	
 	spriteType = {

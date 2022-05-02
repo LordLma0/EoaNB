@@ -2,6 +2,8 @@
 state = {
 	id = 531
 	name = "STATE_531" # Harima
+
+	local_supplies=0.0 
 	manpower = 1198983
 	state_category = town
 	resources = {
@@ -34,6 +36,6 @@ state = {
 	}
 
 	provinces = {
-		 1136 9985 12031 13922 13923
+		 1136 9985 12031 13921 13922 13923
 	}
 }

@@ -4,27 +4,25 @@ state = {
 	manpower = 324562 # 35% of RB Frankfurt
 	state_category = rural
 
-	resources = {
-		wood = 4
-		coal = 3
-	}
-
 	provinces = {
-		444 537 3473 6236 9387 11478 
+		444 537 3473 6236 9387 11478
 	}
 
 	history = {
 		# End of a New Beginning
+		owner = PRS
 		1857.1.1 = {
-			owner = PRS
 			add_core_of = PRS
-			
+
 			buildings = {
-				infrastructure = 6
-				537 = {	bunker = 2 }
+				infrastructure = 5
+				537 = {
+					bunker = 2 #Festung Küstrin
+				}
 			}
-			
+
 			victory_points = { 537 1 } # Landsberg
+			victory_points = { 9387 1 } # Kreuz
 
 			add_to_array = { state_culture_array = 13 } # Prussian
 			add_to_array = { state_culture_array_num = 0.872 }
@@ -38,12 +36,13 @@ state = {
 			add_to_array = { state_religion_array = 2 } # Catholic
 			add_to_array = { state_religion_array_num = 0.168 }
 			add_to_array = { state_religion_array = 7 } # Jewish
-			add_to_array = { state_religion_array_num = 0.01 }	
+			add_to_array = { state_religion_array_num = 0.01 }
 		}
-		
+
 		# Blood and Iron
 		1870.1.1 = {
-			
+
 		}
 	}
+	local_supplies=0.0
 }

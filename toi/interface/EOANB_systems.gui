@@ -467,6 +467,7 @@ guiTypes = {
 			background = {
 				name = "Background"
 				quadTextureSprite = "GFX_tiled_nuke_background_bg"
+				alwaystransparent = yes
 			}
 		}
 
@@ -1568,7 +1569,7 @@ guiTypes = {
 guiTypes = {
 	containerWindowType = {
 		name = "dci_state_majority"
-		position = { x = 20 y = 140 }
+		position = { x = 353 y = 70 }
 
 		buttonType = {
 			name = "dci_bg"

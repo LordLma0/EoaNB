@@ -2,6 +2,8 @@ state = {
 	id = 1416
 	name = "STATE_1416" # Pahang
 	manpower = 395122
+
+	local_supplies=0.0 
 	state_category = rural
 
 	resources = {
@@ -16,8 +18,8 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = PHG
 		1857.1.1 = {
-			owner = PHG
 			add_core_of = PHG
 			add_core_of = JOH
 			add_claim_by = ACE
@@ -31,17 +33,20 @@ state = {
 
 			victory_points = { 12271 1 } # Pekan
 
-		# 	add_to_array = { state_culture_array = 46 } # Corsican
-		# 	add_to_array = { state_culture_array_num = 0.70 }
-		# 	add_to_array = { state_culture_array = 32 } # French
-		# 	add_to_array = { state_culture_array_num = 0.29 }
-		# 	add_to_array = { state_culture_array = 55 } # Greek
-		# 	add_to_array = { state_culture_array_num = 0.01 }
-		
-		# 	add_to_array = { state_religion_array = 2 } # Catholic	
-		# 	add_to_array = { state_religion_array_num = 0.99 }
-		# 	add_to_array = { state_religion_array = 1 } # Orthodox
-		# 	add_to_array = { state_religion_array_num = 0.01 }
+			add_to_array = { state_culture_array = 229 } # Malay
+			add_to_array = { state_culture_array_num = 0.86 }
+			add_to_array = { state_culture_array = 507 } # Aslaian
+			add_to_array = { state_culture_array_num = 0.12 }
+			add_to_array = { state_culture_array = 249 } # Hakka
+			add_to_array = { state_culture_array_num = 0.02 }
+
+			add_to_array = { state_religion_array = 8 } # Sunni
+			add_to_array = { state_religion_array_num = 0.88 }
+			add_to_array = { state_religion_array = 20 } # Animist
+			add_to_array = { state_religion_array_num = 0.10 }
+			add_to_array = { state_religion_array = 15 } # Mahayana
+			add_to_array = { state_religion_array_num = 0.02 }
+
 			afr_state_setup_scripted_effect = yes
 		}
 	}

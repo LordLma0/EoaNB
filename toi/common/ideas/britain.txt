@@ -196,12 +196,14 @@ ideas = {
 			}
 		}
 		ENG_idea_european_isolationism = {
-			picture = FRA_fortification_focus
+			picture = ENG_pax_britannica
 
 			modifier = {
+				stability_factor = 0.10
 				drift_defence_factor = 0.25
 				join_faction_tension = 1.00
-				#ai_get_ally_desire_factor = -100
+				justify_war_goal_time = 0.1
+				trade_opinion_factor = 0.25
 			}
 		}
 		ENG_idea_defend_RAJ = {
@@ -819,301 +821,49 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 			}
 		}
-	}
-	political_advisor = {
-		ENG_political_advisor_crawshay_bailey = {
-			allowed = {
-				original_tag = ENG
+
+		ENG_idea_tea_shortage = {
+			allowed_civil_war = {
+				always = yes
 			}
 
-			traits = { captain_of_industry_1 traditional_conservatism_alignment }
+			picture = generic_agrarian_reform
+
+			modifier = {
+				political_power_factor = -0.05
+				stability_weekly = -0.025
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
 		}
-		ENG_political_advisor_sir_john_brown = {
 
-			allowed = {
-				original_tag = ENG
+		ENG_idea_indian_tea1 = {
+			allowed_civil_war = {
+				always = no
 			}
 
-			traits = { railroad_tycoon }
+			picture = generic_agrarian_reform
 
-			modifier = { local_resources_factor = 0.10 political_power_factor = 0.02 }
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
 		}
-		ENG_political_advisor_isambard_kingdom_brunel = {
 
-			allowed = {
-				original_tag = ENG
+		ENG_idea_indian_tea2 = {
+			allowed_civil_war = {
+				always = no
 			}
 
-			traits = { railroad_tycoon }
+			picture = generic_agrarian_reform
 
-			modifier = { industrial_capacity_dockyard = 0.05 political_power_factor = 0.02 }
-		}
-		ENG_political_advisor_charles_darwin = {
-
-			allowed = {
-				original_tag = ENG
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor= 0.05
+				consumer_goods_factor = 0.05
 			}
-
-			available = {
-				has_country_flag = charles_darwin_book
-			}
-
-			traits = { ingenious_scientist }
-		}
-		ENG_political_advisor_sir_john_thwaites = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			traits = { great_urbanizer clever_buisnessman }
-
-			modifier = { political_power_factor = -0.05 }
-		}
-		ENG_political_advisor_sir_pwpw = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			traits = { war_veteran }
-		}
-		ENG_political_advisor_edward_cardwell = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			traits = { efficient_administrator eoanb_trait_warmonger }
-		}
-		ENG_political_advisor_lydia_becker = {
-
-			allowed = {
-				original_tag = ENG
-			}
-			picture = ENG_political_advisor_lydia_becker_prt1
-			available = {
-				has_country_flag = lydia_becker_suffragist
-			}
-
-			traits = { suffragist }
-		}
-		ENG_political_advisor_william_gladstone = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_gladstone
-
-			visible = {
-			   has_country_flag = goverment_of_1859_liberals
-			   date < 1882.12.16
-			}
-
-			traits = { centrism_alignment eoanb_trait_chancellor_of_exchequer }
-		}
-		ENG_political_advisor_thomas_gibson = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_gibson
-
-			visible = {
-			   has_country_flag = goverment_of_1859_liberals
-			   date < 1866.6.26
-			}
-
-			traits = { centrism_alignment eoanb_trait_president_of_the_board_of_trade }
-		}
-		ENG_political_advisor_john_russell = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_russel
-
-			visible = {
-			   has_country_flag = goverment_of_1859_liberals
-			   date < 1875.8.3
-			}
-
-			traits = { centrism_alignment eoanb_trait_foreign_secretary }
-		}
-		ENG_political_advisor_edward_stanley = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_earl_of_derby
-
-			visible = {
-			   has_country_flag = goverment_of_1859_conservatives
-			}
-			
-			traits = { traditional_conservatism_alignment eoanb_trait_chancellor_of_exchequer }
-		}
-		ENG_political_advisor_j_w_henley = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_j_w_henley
-
-			visible = {
-			   has_country_flag = goverment_of_1859_conservatives
-			   date < 1878.1.1
-			}
-
-			traits = { traditional_conservatism_alignment eoanb_trait_president_of_the_board_of_trade }
-		}
-		ENG_political_advisor_benjamin_disraeli = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_benjamin_disraeli
-
-			visible = {
-			   has_country_flag = goverment_of_1859_conservatives
-			   date < 1881.4.19
-			}
-
-			traits = { traditional_conservatism_alignment eoanb_trait_foreign_secretary }
-		}
-		ENG_political_advisor_william_lidderdale = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_william_lidderdale
-
-			visible = {
-				date < 1902.6.26
-			}
-
-			traits = { eoanb_successful_merchant }
-		}
-		ENG_political_advisor_samuel_baker = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_samuel_baker
-
-			visible = {
-				date < 1893.12.30
-			}
-
-			traits = { explorer }
-		}
-		ENG_political_advisor_gilpin = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_gilpin
-
-			available = {
-				visible < 1874.9.8
-			}
-
-			traits = { influencial_writer centrism_alignment }
-		}
-		ENG_political_advisor_ayrton = {
-
-			allowed = {
-				tag = ENG
-			}
-
-			picture = ENG_political_advisor_ayrton
-
-			visible = {
-				date < 1886.11.30
-			}
-
-			traits = { working_class_figurehead centrism_alignment }
-		}
-		ENG_political_advisor_beresford = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_beresford
-
-			visible = {
-				date < 1890.8.1
-			}
-
-			traits = { friend_of_capitalism traditional_conservatism_alignment }
-		}
-		ENG_political_advisor_nightingale = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = placeholder
-
-			visible = {
-				date < 1910.8.13
-			}
-
-			traits = { working_class_figurehead centrism_alignment }
-		}
-		ENG_political_advisor_dickens = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = placeholder
-
-			visible = {
-				date < 1870.6.9
-			}
-
-			traits = { influencial_writer social_egalitarian }
-		}
-		ENG_political_advisor_barnardo = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = placeholder
-
-			visible = {
-				date < 1905.9.19
-			}
-
-			traits = { eoanb_philanthropist traditional_conservatism_alignment }
-		}
-		ENG_political_advisor_prince_albert = {
-
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_political_advisor_consort_albert
-
-			visible = {
-				date < 1861.11.30
-			}
-
-			traits = { ENG_trait_royal_family centrism_alignment }
 		}
 	}
+
 #	high_command = {
 #		ENG_hc_thomas_jones  = {
 #
@@ -1432,7 +1182,7 @@ ideas = {
 
 		ENG_naval_company_thames_iwsb = {
 
-			picture = generic_naval_manufacturer_3
+			picture = TIW_company
 
 			allowed = {
 				original_tag = ENG
@@ -1463,6 +1213,23 @@ ideas = {
 			}
 
 			traits = { ENG_trait_naval_whitworth }
+		}
+		ENG_naval_company_cammell_laird = {
+
+			picture = cammell_laird
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+
+			cost = 150
+			removal_cost = 10
+			
+			traits = { eoanb_naval_manufacturer_light }
 		}
 	}
 	industrial_concern = {
@@ -1541,7 +1308,7 @@ ideas = {
 
 		ENG_materiel_manufacturer_webley_scott = {
 
-			picture = generic_infantry_equipment_manufacturer_3
+			picture = WS_company
 
 			allowed = {
 				original_tag = ENG
@@ -1592,7 +1359,7 @@ ideas = {
 		}
 		ENG_materiel_manufacturer_royal_arsenal = {
 
-			picture = generic_artillery_manufacturer_2
+			picture = royal_arsenal
 
 			allowed = {
 				original_tag = ENG
@@ -1609,45 +1376,6 @@ ideas = {
 		}
 	}
 
-	theorist = {
-		ENG_charles_william_pasley = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_military_theorist_charles_pasley_prt1
-
-			visible = {
-				date < 1861.4.19
-			}
-
-
-			research_bonus = {
-				land_doctrine = -0.07
-			}
-
-			traits = { military_theorist }
-		}
-
-		ENG_george_tomkyns_chesney = {
-			allowed = {
-				original_tag = ENG
-			}
-
-			picture = ENG_military_theorist_george_chesney_prt1
-
-			visible = {
-				AND = { date > 1861.4.19 }
-				AND = { date < 1895.4.31 }
-			}
-
-			research_bonus = {
-				land_doctrine = -0.07
-			}
-
-			traits = { military_theorist }
-		}
-	}
 	hidden_ideas = {
 		ENG_idea_the_medical_act = {
             picture = generic_pp_unity_bonus

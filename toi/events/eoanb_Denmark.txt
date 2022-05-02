@@ -1,8 +1,9 @@
-﻿add_namespace = denmark_secschwar
+﻿add_namespace = denmark_secschwar	#move to secschwar?
 add_namespace = denmark_event
 add_namespace = denmark_economy
 add_namespace = denmark_military
 add_namespace = denmark_foreign
+add_namespace = denmark_succession
 
 ### DENMARK SECOND SCHLESWIG WAR EVENTS ###
 
@@ -105,6 +106,45 @@ country_event = {  #Prussian loose
 		}
     }
 
+country_event = {  #Victory
+	id = denmark_secschwar.90
+	title = denmark_secschwar.90.t
+	desc = denmark_secschwar.90.d
+		
+	is_triggered_only = yes
+	fire_only_once = yes
+		
+	option = { 
+		name = denmark_secschwar.90.a
+	}
+}
+
+country_event = {  #Stalemate
+	id = denmark_secschwar.91
+	title = denmark_secschwar.91.t
+	desc = denmark_secschwar.91.d
+		
+	is_triggered_only = yes
+	fire_only_once = yes
+		
+	option = { 
+		name = denmark_secschwar.91.a
+	}
+}
+
+country_event = {  #Defeat
+	id = denmark_secschwar.92
+	title = denmark_secschwar.92.t
+	desc = denmark_secschwar.92.d
+		
+	is_triggered_only = yes
+	fire_only_once = yes
+		
+	option = { 
+		name = denmark_secschwar.92.a
+	}
+}
+
 ### DENMARK GENERAL EVENTS ###
 
 #Prime Minister Carl Christoffer Georg Andræ Retires
@@ -121,18 +161,22 @@ country_event = {
 		name = denmark_event.1.a
 		ai_chance = { base = 80 }
 		custom_effect_tooltip = historical_option
-		retire_country_leader = yes
 		set_politics = { ruling_party = centrism }
 		complete_national_focus = DEN_focus_liberal_party
 		hidden_effect = {
-			create_country_leader = {
-				name = "Christian Emil Frijs"
-				desc = "POLITICS_GENERIC_EOANB_DESC"
-				picture = "gfx/leaders/DEN/Portrait_DEN_Christian_Emil_Frijs.dds"
-				expire = "1920.1.1"
-				ideology = conserv
-				traits = {}
+			DEN_christian_emil_frijs = {
+				add_country_leader_role = {
+					country_leader = {
+						desc = "DEN_CHRISTIAN_EMIL_FRIJS_LEADER_DESC"
+						ideology = conserv
+						expire = "1920.1.1"
+						#id = -1
+					}
+				}
+				promote_character = yes
+				promote_character = conserv
 			}
+			retire_character = DEN_carl_christoffer_georg_andrae
 		}
 	}
 	
@@ -146,16 +190,19 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		retire_country_leader = yes
 		complete_national_focus = DEN_focus_conservative_party
-		create_country_leader = {
-			name = "Christian Emil Frijs"
-			desc = "POLITICS_GENERIC_EOANB_DESC"
-			picture = "gfx/leaders/DEN/Portrait_DEN_Christian_Emil_Frijs.dds"
-			expire = "1920.1.1"
-			ideology = conserv
-			traits = {}
+		DEN_christian_emil_frijs = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					desc = "DEN_CHRISTIAN_EMIL_FRIJS_LEADER_DESC"
+					ideology = conserv
+					expire = "1920.1.1"
+					#id = -1
+				}
+			}
 		}
+		retire_character = DEN_carl_christoffer_georg_andrae
 	}
 }
 
@@ -684,18 +731,16 @@ country_event = {
 		
 	option = {
 		name = denmark_military.1.a
-		create_corps_commander = {
-			name = "Carl Lundbye" #Reigning War Minister
-			picture = "Portrait_DEN_Carl_Christian_Lundbye.png"
-			traits = { 
-				bearer_of_artillery
+		DEN_carl_lundbye = {
+			add_corps_commander_role = {
+				traits = { bearer_of_artillery }
+				skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 1
+				legacy_id = 3605
 			}
-			skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 1
-			id = 3605
 		}
 	}
 }
@@ -1289,3 +1334,232 @@ country_event = {
 	}
 }
 
+#Danish Colonies
+
+#DEN - State of the Danish Colonies
+country_event = {
+	id = denmark_foreign.17
+	title = denmark_foreign.17.t
+	desc = {
+		trigger = { owns_state = 1307 }
+		text = denmark_foreign.17.d_nicobars
+	}
+	desc = {
+		trigger = { NOT = { owns_state = 1307 } }
+		text = denmark_foreign.17.d_no_nicobars
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = denmark_foreign.17.a
+		ai_chance = { base = 100 }
+	}
+}
+
+### DENMARK SUCCESSION EVENTS ###
+
+#Death of Frederick VII
+country_event = {
+	id = denmark_succession.1
+	title = denmark_succession.1.t
+	desc = denmark_succession.1.d
+		
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		#date > 1863.11.15
+		has_idea = DEN_Frederick_VII
+	}
+		
+	option = {
+		name = denmark_succession.1.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = eoanb_tt_event_denmark_succession_1
+		hidden_effect = {
+			swap_ideas = { 
+				remove_idea = DEN_Frederick_VII 
+				add_idea = DEN_Christian_IX 
+			}
+			DEN_christian_ix = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1907.1.1"
+						desc = "POLITICS_GENERIC_EOANB_DESC"
+						ideology = constit_monarch
+						traits = {
+							#
+						}
+					}
+				}
+				promote_character = yes
+				promote_character = constit_monarch
+			}
+			retire_character = DEN_frederick_vii
+			if = {
+				limit = {
+					SCH = {
+						is_puppet_of = DEN
+						has_country_leader = {
+							name = "Frederick VII"
+							ruling_only = yes
+						}
+					}
+				}
+				SCH = {
+					SCH_christian_ix = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								expire = "1907.1.1"
+								desc = "POLITICS_GENERIC_EOANB_DESC"
+								ideology = constit_monarch
+								traits = {
+									#
+								}
+							}
+						}
+						add_country_leader_role = {
+							country_leader = {
+								expire = "1907.1.1"
+								desc = "POLITICS_GENERIC_EOANB_DESC"
+								ideology = conserv
+								traits = {
+									#
+								}
+							}
+						}
+						promote_character = yes
+						promote_character = conserv
+					}
+					retire_character = SCH_frederick_vii
+				}
+			}
+			else_if = {
+				limit = {
+					SCH = {
+						is_puppet_of = DEN
+						has_country_leader = {
+							name = "Frederick VII"
+							ruling_only = no
+						}
+					}
+				}
+				SCH = {
+					SCH_christian_ix = {
+						add_country_leader_role = {
+							country_leader = {
+								expire = "1907.1.1"
+								desc = "POLITICS_GENERIC_EOANB_DESC"
+								ideology = constit_monarch
+								traits = {
+									#
+								}
+							}
+						}
+						add_country_leader_role = {
+							country_leader = {
+								expire = "1907.1.1"
+								desc = "POLITICS_GENERIC_EOANB_DESC"
+								ideology = conserv
+								traits = {
+									#
+								}
+							}
+						}
+						promote_character = yes
+						promote_character = constit_monarch
+						promote_character = conserv
+					}
+					retire_character = SCH_frederick_vii
+				}
+			}
+		}
+	}
+}
+
+#Death of Christian IX
+country_event = {
+	id = denmark_succession.2
+	title = denmark_succession.2.t
+	desc = denmark_succession.2.d
+		
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		#date > 1906.01.29
+		has_idea = DEN_Christian_IX
+	}
+		
+	option = {
+		name = denmark_succession.2.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = eoanb_tt_event_denmark_succession_2
+		hidden_effect = {
+			swap_ideas = { 
+				remove_idea = DEN_Christian_IX 
+				add_idea = DEN_Frederick_VIII 
+			}
+			DEN_frederick_viii = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1913.1.1"
+						desc = "POLITICS_GENERIC_EOANB_DESC"
+						ideology = constit_monarch
+						traits = {
+							#
+						}
+					}
+				}
+				promote_character = yes
+				promote_character = constit_monarch
+			}
+			retire_character = DEN_christian_ix
+		}
+	}
+}
+
+#Death of Frederick VIII
+country_event = {
+	id = denmark_succession.3
+	title = denmark_succession.3.t
+	desc = denmark_succession.3.d
+		
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		#date > 1912.05.14
+		has_idea = DEN_Frederick_VIII
+	}
+		
+	option = {
+		name = denmark_succession.3.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = eoanb_tt_event_denmark_succession_3
+		hidden_effect = {
+			swap_ideas = { 
+				remove_idea = DEN_Frederick_VIII 
+				add_idea = DEN_Christian_X 
+			}
+			DEN_christian_x = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1948.1.1"
+						desc = "POLITICS_GENERIC_EOANB_DESC"
+						ideology = constit_monarch
+						traits = {
+							#
+						}
+					}
+				}
+				promote_character = yes
+				promote_character = constit_monarch
+			}
+			retire_character = DEN_frederick_viii
+		}
+	}
+}

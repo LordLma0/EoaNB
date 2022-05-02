@@ -1,42 +1,3 @@
-eoanb_category_diplomatic_actions={
-	OTO_grant_romanian_union={
-		available = {  
-			tag = OTO
-			MOL={
-				has_autonomy_state = autonomy_personal_union
-				is_subject_of = ROM
-			}
-		}
-		allowed = { 
-			TAG = OTO
-		}
-		visible={
-			tag = OTO
-			MOL={has_autonomy_state = autonomy_personal_union}
-			NOT={
-				ROM={
-					has_country_flag = ROM_union_allowed
-				}
-			}
-		}
-        cost = 25
-        fire_only_once = yes
-        complete_effect = {
-			ROM={
-				set_country_flag = ROM_union_allowed
-			}
-		}
-		ai_will_do = {
-			factor = 100
-			modifier = {#not before historical date
-				factor = 0
-				date > 1861.12.23
-			}
-		}
-	
-	}
-	
-}
 
 afr_berlin_conference={
 	ber_voting_decision={
@@ -164,7 +125,7 @@ afr_berlin_conference={
 			base = 16
 			##encorage ai to vote historically
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -174,7 +135,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -184,7 +145,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -194,7 +155,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = ENG
@@ -204,7 +165,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -213,8 +174,8 @@ afr_berlin_conference={
 					}
 				}
 			}
-			modifier = { 
-				add = 2.5
+			modifier = {
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = ENG
@@ -224,7 +185,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = PRS
@@ -234,7 +195,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -244,7 +205,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = ENG
@@ -254,7 +215,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = PRS
@@ -264,7 +225,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -274,7 +235,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 20
+				add = 60
 				is_historical_focus_on = no
 				FROM = {
 					TAG = POR
@@ -284,7 +245,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = PRS
@@ -294,7 +255,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = PRS
@@ -304,7 +265,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = ENG
@@ -314,7 +275,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					OR={
@@ -327,7 +288,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = ENG
@@ -337,7 +298,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = ENG
@@ -347,7 +308,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -357,7 +318,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -367,7 +328,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -377,7 +338,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -387,7 +348,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { 
-				add = 2.5
+				add = 20
 				is_historical_focus_on = no
 				FROM = {
 					TAG = FRA
@@ -397,7 +358,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #spain is in no posistion to colonise
-				add = -3
+				add = -10
 				is_historical_focus_on = no
 				FROM = {
 					TAG = SPR
@@ -407,7 +368,7 @@ afr_berlin_conference={
 			
 			#encorage ai to vote for historical claims 
 			modifier = { #germany wants gabon
-				add = 1
+				add = 8
 				is_historical_focus_on = no
 				FROM = {
 					TAG = PRS
@@ -417,7 +378,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #belgium wants guinea
-				add = 1
+				add = 8
 				is_historical_focus_on = no
 				FROM = {
 					TAG = BEL
@@ -427,7 +388,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #portugal pink map
-				add = 1
+				add = 12
 				is_historical_focus_on = no
 				FROM = {
 					TAG = POR
@@ -437,7 +398,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #A-H wants the horn
-				add = 1
+				add = 8
 				is_historical_focus_on = no
 				FROM = {
 					TAG = AUS
@@ -447,7 +408,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #Russia wants the horn
-				add = 1
+				add = 8
 				is_historical_focus_on = no
 				FROM = {
 					TAG = RUS
@@ -457,7 +418,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #Sweden kinda wants ghana
-				add = 0.5
+				add = 4
 				is_historical_focus_on = no
 				FROM = {
 					TAG = SWE
@@ -467,7 +428,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #Sweden wants congo
-				add = 2 #note add is doubled because BEL gets a factor rather than a add
+				add = 16 #note add is doubled because BEL gets a factor rather than a add
 				is_historical_focus_on = no
 				FROM = {
 					TAG = SWE
@@ -477,7 +438,7 @@ afr_berlin_conference={
 				}
 			}
 			modifier = { #germany wants congo
-				add = 1 #note add is doubled because BEL gets a factor rather than a add
+				add = 8 #note add is doubled because BEL gets a factor rather than a add
 				is_historical_focus_on = no
 				FROM = {
 					TAG = RUS

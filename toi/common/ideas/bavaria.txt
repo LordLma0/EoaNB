@@ -109,7 +109,7 @@ ideas = {
 			}
 			
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = agrarian
 			
 			modifier = {
 				production_speed_industrial_complex_factor = 0.02
@@ -122,7 +122,7 @@ ideas = {
 			}
 			
 			removal_cost = -1
-			picture = generic_production_bonus
+			picture = agrarian
 			
 			modifier = {
 				production_speed_industrial_complex_factor = 0.02
@@ -327,11 +327,32 @@ ideas = {
 			picture = ara_der_reaktion
 		
 			modifier = {
-				    traditional_conservatism_drift = 0.1
-					centrism_drift = 0.05
-			    }
+				traditional_conservatism_drift = 0.1
+				centrism_drift = 0.05
 			}
-	    }
+		}
+		
+		BAV_idea_railway_concessions = {
+
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = generic_build_infrastructure
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				political_power_factor = -0.05
+				production_speed_rail_way_factor = 0.25
+			}
+		}
+	}
 	
 	hidden_ideas = {
 		BAV_boost_infra = {
@@ -732,163 +753,11 @@ ideas = {
 		}
 	}
 	
-	political_advisor = {
-		BAV_advisor_friedrich_von_hegnenberg_dux = {
-			allowed = {
-				original_tag = BAV
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-
-			traits = { 
-				clever_buisnessman 
-			}
-		}
-		
-		BAV_advisor_joseph_poezl = {
-			allowed = {
-				original_tag = BAV
-			}
-
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-			
-			traits = { 
-				working_class_figurehead 
-			}
-		}
-		
-		BAV_advisor_august_schenk_von_stauffenberg = {
-			allowed = {
-				original_tag = BAV
-			}
-
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-			
-			traits = { 
-				efficient_administrator 
-			}
-		}
-		
-		BAV_advisor_gustav_von_schloer = {
-			allowed = {
-				original_tag = BAV
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-
-			traits = { 
-				railroad_tycoon 
-			}
-		}
-		
-		BAV_advisor_siegmund_von_pranckh = {
-			allowed = {
-				original_tag = BAV
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-
-			traits = { 
-				war_industrialist_1 
-			}
-		}
-		
-		BAV_advisor_hans_von_und_zu_aufsess = {
-			allowed = {
-				original_tag = BAV
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-
-			traits = { 
-				ingenious_scientist 
-			}
-		}
-		
-		BAV_advisor_ludwig_feuerbach = {
-			allowed = {
-				original_tag = BAV
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-
-			traits = { 
-				influencial_writer 
-			}
-		}
-		
-		BAV_advisor_ludwig_von_der_pfordten = {
-			allowed = {
-				original_tag = BAV
-			}
-			
-			allowed_civil_war = {
-				OR = {
-					has_government = autocracy
-					has_government = centrism
-					has_government = traditional_conservatism
-				}
-			}
-			
-			available = {
-				has_country_flag = BAV_triaspolitik_maximilian_ii
-			}
-
-			traits = { 
-				autocrat  
-			}
-		}
-	}
-	
 	materiel_manufacturer = {
 		
 		designer = yes
 		
-		BAV_gewehrfabrik = {
-		
-		    picture = idea_BAV_gewehrfabrik
+		bayerische_gewehrfabrik = {
 
 			allowed = {
 				original_tag = BAV
@@ -898,14 +767,14 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = -0.10
+				infantry_weapons = 0.1
 			}
 
-			traits = { infantry_equipment_manufacturer_1 } 
+			traits = { infantry_equipment_manufacturer_1 }
 			
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.05		
+					build_cost_ic = -0.05
 		        }
 	        }
 		}
@@ -915,42 +784,27 @@ ideas = {
 		
 		BAV_chemische_fabrik_marktredwitz = {
 
+			picture = idea_BAV_chemische_fabrik_marktredwitz
+			
 			allowed = {
 				original_tag = BAV
 			}
 			
 			cost = 150
 			removal_cost = 10
-			
-			modifier = {
-			    production_speed_steel_mill_factor = 0.05
-		    }
 
 			research_bonus = {
-				chemistry_tech = 0.10
+				biochemistry_tech = 0.02
+				chemistry_tech = 0.1
 			}
 
-			traits = { electronics_concern_2 }
+			traits = { BAV_trait_concern_chemische_fabrik_marktredwitz }
 		}
 		
 		BAV_eisenwerk_maximilianshutte  = {
 
-			allowed = {
-				original_tag = BAV
-			}
+			picture = idea_BAV_eisenwerk_maximilianshutte
 			
-			cost = 150
-			removal_cost = 10
-
-			research_bonus = {
-				process_engineering_tech = 0.10
-			}
-
-			traits = { electronics_concern_2 }
-		}
-		
-		BAV_mechanische_baumwoll_spinnerei  = {
-
 			allowed = {
 				original_tag = BAV
 			}
@@ -959,11 +813,33 @@ ideas = {
 			removal_cost = 10
 			
 			modifier = {
-			    production_speed_fabric_weavery_factor = 0.05
+			    production_speed_steel_mill_factor = 0.1
 		    }
 
 			research_bonus = {
-				mechanical_engineering_tech = 0.10
+				process_engineering_tech = 0.05
+			}
+
+			traits = { industrial_concern_1 }
+		}
+		
+		BAV_mechanische_baumwoll_spinnerei  = {
+
+			picture = idea_BAV_mechanische_baumwoll_spinnerei
+			
+			allowed = {
+				original_tag = BAV
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			modifier = {
+			    production_speed_fabric_weavery_factor = 0.1
+		    }
+
+			research_bonus = {
+				mechanical_engineering_tech = 0.05
 			}
 
 			traits = { industrial_concern_1 }
@@ -985,29 +861,10 @@ ideas = {
 		    }
 
 			research_bonus = {
-				resource_extraction_tech = 0.10
+				resource_extraction_tech = 0.1
 			}
 
 			traits = { industrial_concern_1 }
-		}
-	}
-	
-	theorist = {
-		BAV_ferdinand_malaise = {
-		
-		    picture = BAV_Ferdinand_Malaise
-
-			allowed = {
-				original_tag = BAV
-			}
-
-			cost = 250
-
-			research_bonus = {
-				land_doctrine = -0.1
-			}
-
-			traits = { military_theorist }
 		}
 	}
 }
