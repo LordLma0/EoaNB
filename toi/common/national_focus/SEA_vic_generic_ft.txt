@@ -1,0 +1,52 @@
+focus_tree = {
+	id = southeast_asia_vic_generic_ft
+	country = {
+		base = 0
+		modifier = {
+			add = 12
+			OR = {
+				tag = BRM
+			}
+		}
+	}
+
+
+	focus = {
+		id = southeast_asia_vic_a_changing_reality
+		icon = placeholder
+
+		x = 24
+		y = 0
+
+		cost = 105
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+	focus = {
+		id = southeast_asia_vic_invite_western_influence
+		icon = placeholder
+
+		relative_position_id = southeast_asia_vic_a_changing_reality
+		x = -13
+		y = 1
+
+		cost = 70
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					is_subject_of = ENG
+					is_subject_of = FRA
+					is_subject_of = POR
+					is_subject_of = SPR
+					is_subject_of = USA
+					is_subject_of = PRS
+					is_subject_of = HOL
+				}
+			}
+		}
+
+		mutually_exclusive = {
+			focus = southeast_asia_invite

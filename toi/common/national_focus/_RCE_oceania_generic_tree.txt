@@ -18,7 +18,6 @@ focus_tree = {
 				tag = HAW
 				tag = TAH
 				tag = SUL
-				tag = BRM
 				tag = LAO
 				tag = LUA
 				tag = SVN
@@ -41,7 +40,7 @@ focus_tree = {
 			set_country_flag = Oceania_Regional_Development_Category_Flag
 		}
 		allow_branch = {
-			always = yes
+			#always = yes
 		}
 	}
 	focus = {
