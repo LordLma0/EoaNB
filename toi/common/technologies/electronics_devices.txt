@@ -4,7 +4,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -58,7 +58,7 @@ technologies = {
 			soft_attack = 0.1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -104,7 +104,7 @@ technologies = {
 			soft_attack = 0.05
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = electronics_devices_folder
@@ -162,7 +162,7 @@ technologies = {
 			soft_attack = 0.025
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = electronics_devices_folder
@@ -194,7 +194,7 @@ technologies = {
 			soft_attack = 0.05
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = electronics_devices_folder
@@ -226,7 +226,7 @@ technologies = {
 			soft_attack = 0.05
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = electronics_devices_folder
@@ -258,7 +258,7 @@ technologies = {
 			soft_attack = 0.075
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = electronics_devices_folder
@@ -290,7 +290,7 @@ technologies = {
 			soft_attack = 0.075
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = electronics_devices_folder
@@ -316,7 +316,7 @@ technologies = {
 		production_speed_buildings_factor = 0.05
 		industry_repair_factor = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -399,7 +399,7 @@ technologies = {
 	
 		production_speed_industrial_complex_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = electronics_devices_folder
@@ -455,7 +455,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = electronics_devices_folder
@@ -492,7 +492,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = electronics_devices_folder
@@ -523,7 +523,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = electronics_devices_folder
@@ -565,7 +565,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = electronics_devices_folder
@@ -603,7 +603,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = electronics_devices_folder
@@ -641,7 +641,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1919
 		folder = {
 			name = electronics_devices_folder
@@ -669,7 +669,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = electronics_devices_folder
@@ -697,7 +697,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1935
 		folder = {
 			name = electronics_devices_folder
@@ -729,7 +729,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = electronics_devices_folder
@@ -757,7 +757,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = electronics_devices_folder
@@ -785,7 +785,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = electronics_devices_folder
@@ -813,7 +813,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = electronics_devices_folder
@@ -845,7 +845,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = electronics_devices_folder
@@ -877,7 +877,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = electronics_devices_folder
@@ -905,7 +905,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = electronics_devices_folder
@@ -933,7 +933,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = electronics_devices_folder
@@ -965,7 +965,7 @@ technologies = {
 			level = 2
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = electronics_devices_folder
@@ -1004,7 +1004,7 @@ technologies = {
 			level = 4
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = electronics_devices_folder
@@ -1035,7 +1035,7 @@ technologies = {
 			level = 5
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = electronics_devices_folder
@@ -1075,7 +1075,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -1106,7 +1106,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = electronics_devices_folder
@@ -1134,7 +1134,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = electronics_devices_folder
@@ -1162,7 +1162,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = electronics_devices_folder
@@ -1194,7 +1194,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = electronics_devices_folder
@@ -1222,7 +1222,7 @@ technologies = {
 	
 		research_speed_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = electronics_devices_folder
@@ -1250,7 +1250,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		
 		dependencies={
@@ -1283,7 +1283,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1985
 		folder = {
 			name = electronics_devices_folder
@@ -1317,7 +1317,7 @@ technologies = {
 		drift_defence_factor = -0.2
 		political_power_factor = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -1346,7 +1346,7 @@ technologies = {
 		research_speed_factor = 0.03
 		drift_defence_factor = -0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = electronics_devices_folder
@@ -1375,7 +1375,7 @@ technologies = {
 		research_speed_factor = 0.03
 		drift_defence_factor = -0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = electronics_devices_folder
@@ -1403,7 +1403,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -1431,7 +1431,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = electronics_devices_folder
@@ -1462,8 +1462,9 @@ technologies = {
 	low_qubit_quantum_computers = {
 	
 		research_speed_factor = 0.03
+		decryption = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = electronics_devices_folder
@@ -1497,8 +1498,9 @@ technologies = {
 	quantum_computing = {
 	
 		research_speed_factor = 0.05
+		decryption = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = electronics_devices_folder
@@ -1529,9 +1531,9 @@ technologies = {
 	quantum_entangled_communication = {
 	
 		encryption = 2
-		decryption = 2
+		#decryption = 2
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = electronics_devices_folder
@@ -1558,8 +1560,9 @@ technologies = {
 	improved_quantum_computers = {
 	
 		research_speed_factor = 0.03
+		decryption = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = electronics_devices_folder
@@ -1586,8 +1589,9 @@ technologies = {
 	advanced_quantum_computers = {
 	
 		research_speed_factor = 0.03
+		decryption = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2045
 		folder = {
 			name = electronics_devices_folder
@@ -1621,7 +1625,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = electronics_devices_folder
@@ -1652,7 +1656,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = electronics_devices_folder
@@ -1680,7 +1684,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2020
 		
 		dependencies={
@@ -1713,7 +1717,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.075
 		production_factory_efficiency_gain_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = electronics_devices_folder
@@ -1743,7 +1747,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = electronics_devices_folder
@@ -1770,7 +1774,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = electronics_devices_folder
@@ -1797,7 +1801,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = electronics_devices_folder
@@ -1827,7 +1831,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = electronics_devices_folder
@@ -1854,7 +1858,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = electronics_devices_folder
@@ -1885,7 +1889,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = electronics_devices_folder
@@ -1908,7 +1912,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = electronics_devices_folder
@@ -1935,7 +1939,7 @@ technologies = {
 	
 		production_factory_start_efficiency_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -1959,7 +1963,7 @@ technologies = {
 	
 		line_change_production_efficiency_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1855
 		folder = {
 			name = electronics_devices_folder
@@ -1988,7 +1992,7 @@ technologies = {
 	
 		recon_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -2027,7 +2031,7 @@ technologies = {
 	
 		recon_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -2061,7 +2065,7 @@ technologies = {
 	
 		recon_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = electronics_devices_folder
@@ -2101,7 +2105,7 @@ technologies = {
 		naval_hit_chance = 0.02
 		naval_strike_targetting_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = electronics_devices_folder
@@ -2130,7 +2134,7 @@ technologies = {
 	
 		production_factory_efficiency_gain_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -2160,7 +2164,7 @@ technologies = {
 		recon_factor = 0.02
 		production_factory_start_efficiency_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = electronics_devices_folder
@@ -2192,7 +2196,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		army_bonus_air_superiority_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = electronics_devices_folder
@@ -2220,7 +2224,7 @@ technologies = {
 	
 		army_morale_factor = 0.08
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -2235,6 +2239,23 @@ technologies = {
 		path = {
 			leads_to_tech = wireless_telegraphy
 			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			if={
+				limit={
+					check_variable = {ROOT.innovation_progress < 100}
+					OR = { 
+						has_idea = afr_reforming_kingdom
+						has_country_flag = Oceania_industrializing
+						has_country_flag = afr_colony_industrializing
+						has_country_flag = afr_an_african_industrializing
+					}
+				}
+				custom_effect_tooltip = eoanb_tech_add_industrialisation
+				hidden_effect = {
+					add_to_variable = { ROOT.innovation_progress = 5 }
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -2296,7 +2317,7 @@ technologies = {
 		army_morale_factor = 0.04
 		experience_gain_army_factor = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = electronics_devices_folder
@@ -2341,7 +2362,7 @@ technologies = {
 		political_power_factor = 0.05
 		recon_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = electronics_devices_folder
@@ -2383,7 +2404,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = electronics_devices_folder
@@ -2418,7 +2439,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = electronics_devices_folder
@@ -2451,7 +2472,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = electronics_devices_folder
@@ -2481,7 +2502,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1935
 		folder = {
 			name = electronics_devices_folder
@@ -2511,7 +2532,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = electronics_devices_folder
@@ -2541,7 +2562,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = electronics_devices_folder
@@ -2571,7 +2592,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = electronics_devices_folder
@@ -2609,7 +2630,7 @@ technologies = {
 			lcd_tv = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -2639,7 +2660,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = electronics_devices_folder
@@ -2672,7 +2693,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2018
 		
 		dependencies={
@@ -2707,7 +2728,7 @@ technologies = {
 		naval_hit_chance = 0.01
 		recon_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = electronics_devices_folder
@@ -2743,7 +2764,7 @@ technologies = {
 			advanced_quantum_computers = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2050
 		folder = {
 			name = electronics_devices_folder
@@ -2773,7 +2794,7 @@ technologies = {
 			physical_chemistry = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = electronics_devices_folder
@@ -2817,7 +2838,7 @@ technologies = {
 		MONTHLY_POPULATION = 0.02
 		army_morale_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = electronics_devices_folder
@@ -2847,7 +2868,7 @@ technologies = {
 		MONTHLY_POPULATION = 0.04
 		army_morale_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = electronics_devices_folder
@@ -2871,7 +2892,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = electronics_devices_folder
@@ -2896,7 +2917,7 @@ technologies = {
 		naval_torpedo_reveal_chance_factor = -0.04
 		navy_max_range_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = electronics_devices_folder
@@ -2926,7 +2947,7 @@ technologies = {
 		production_speed_radar_station_factor = 0.1
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = electronics_devices_folder
@@ -2958,7 +2979,7 @@ technologies = {
 		army_morale_factor = 0.06
 		land_reinforce_rate = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = electronics_devices_folder
@@ -2998,7 +3019,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1910
 		folder = {
 			name = electronics_devices_folder
@@ -3031,7 +3052,7 @@ technologies = {
 			ship_sonar_0
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1920
 		folder = {
 			name = electronics_devices_folder
@@ -3067,7 +3088,7 @@ technologies = {
 		naval_coordination = 0.02
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1930
 		folder = {
 			name = electronics_devices_folder
@@ -3106,7 +3127,7 @@ technologies = {
 		naval_coordination = 0.02
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1935
 		folder = {
 			name = electronics_devices_folder
@@ -3138,6 +3159,10 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_radar_1
 		}
+		enable_building = {
+			building = radar_station
+			level = 1
+		}
 		amphibious_invasion = 0.02
 		land_reinforce_rate = 0.02
 		army_bonus_air_superiority_factor = 0.02
@@ -3145,7 +3170,7 @@ technologies = {
 		naval_coordination = 0.02
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1940
 		folder = {
 			name = electronics_devices_folder
@@ -3177,6 +3202,10 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_radar_2
 		}
+		enable_building = {
+			building = radar_station
+			level = 3
+		}
 		amphibious_invasion = 0.02
 		land_reinforce_rate = 0.02
 		army_bonus_air_superiority_factor = 0.02
@@ -3184,7 +3213,7 @@ technologies = {
 		naval_coordination = 0.02
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1950
 		folder = {
 			name = electronics_devices_folder
@@ -3216,6 +3245,10 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_radar_3
 		}
+		enable_building = {
+			building = radar_station
+			level = 4
+		}
 		amphibious_invasion = 0.02
 		land_reinforce_rate = 0.02
 		army_bonus_air_superiority_factor = 0.02
@@ -3223,7 +3256,7 @@ technologies = {
 		naval_coordination = 0.02
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1960
 		folder = {
 			name = electronics_devices_folder
@@ -3255,6 +3288,10 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_radar_4
 		}
+		enable_building = {
+			building = radar_station
+			level = 5
+		}
 		amphibious_invasion = 0.02
 		land_reinforce_rate = 0.02
 		army_bonus_air_superiority_factor = 0.02
@@ -3262,7 +3299,7 @@ technologies = {
 		naval_coordination = 0.02
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1970
 		folder = {
 			name = electronics_devices_folder
@@ -3294,6 +3331,10 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_radar_5
 		}
+		enable_building = {
+			building = radar_station
+			level = 6
+		}
 		amphibious_invasion = 0.02
 		land_reinforce_rate = 0.02
 		army_bonus_air_superiority_factor = 0.02
@@ -3306,7 +3347,7 @@ technologies = {
 			digital_radar_systems = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1980
 		folder = {
 			name = electronics_devices_folder
@@ -3338,6 +3379,10 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_radar_6
 		}
+		enable_building = {
+			building = radar_station
+			level = 7
+		}
 		amphibious_invasion = 0.02
 		land_reinforce_rate = 0.02
 		army_bonus_air_superiority_factor = 0.02
@@ -3345,7 +3390,7 @@ technologies = {
 		naval_coordination = 0.02
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1985
 		folder = {
 			name = electronics_devices_folder
@@ -3372,7 +3417,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -3439,7 +3484,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = electronics_devices_folder
@@ -3481,7 +3526,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = electronics_devices_folder
@@ -3523,7 +3568,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1900
 		folder = {
 			name = electronics_devices_folder
@@ -3553,7 +3598,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = electronics_devices_folder
@@ -3583,7 +3628,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = electronics_devices_folder
@@ -3613,7 +3658,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = electronics_devices_folder
@@ -3643,7 +3688,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1985
 		folder = {
 			name = electronics_devices_folder
@@ -3673,7 +3718,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = electronics_devices_folder
@@ -3705,7 +3750,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = electronics_devices_folder
@@ -3713,7 +3758,7 @@ technologies = {
 		}
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 136}
+			position = { x = 2 y = 138}
 		}
 		
 		ai_will_do = {
@@ -3734,7 +3779,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = electronics_devices_folder
@@ -3764,7 +3809,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = electronics_devices_folder
@@ -3796,7 +3841,7 @@ technologies = {
 	
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -3873,7 +3918,7 @@ technologies = {
 	
 		production_factory_max_efficiency_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -3939,7 +3984,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.02
 		production_factory_efficiency_gain_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = electronics_devices_folder
@@ -3954,6 +3999,23 @@ technologies = {
 		path = {
 			leads_to_tech = jedliks_dynamo
 			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			if={
+				limit={
+					check_variable = {ROOT.innovation_progress < 100}
+					OR = { 
+						has_idea = afr_reforming_kingdom
+						has_country_flag = Oceania_industrializing
+						has_country_flag = afr_colony_industrializing
+						has_country_flag = afr_an_african_industrializing
+					}
+				}
+				custom_effect_tooltip = eoanb_tech_add_industrialisation
+				hidden_effect = {
+					add_to_variable = { ROOT.innovation_progress = 5 }
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -4012,7 +4074,7 @@ technologies = {
 	
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = electronics_devices_folder
@@ -4057,7 +4119,7 @@ technologies = {
 	
 		production_speed_buildings_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = electronics_devices_folder
@@ -4087,7 +4149,7 @@ technologies = {
 	
 		production_factory_efficiency_gain_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = electronics_devices_folder
@@ -4123,7 +4185,7 @@ technologies = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = electronics_devices_folder
@@ -4154,7 +4216,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.04
 		production_speed_buildings_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = electronics_devices_folder
@@ -4187,7 +4249,7 @@ technologies = {
 		global_building_slots_factor = 0.025
 		consumer_goods_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = electronics_devices_folder
@@ -4233,7 +4295,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = electronics_devices_folder
@@ -4270,7 +4332,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.02
 		production_speed_buildings_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = electronics_devices_folder
@@ -4306,7 +4368,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.06
 		consumer_goods_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = electronics_devices_folder
@@ -4338,7 +4400,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = electronics_devices_folder
@@ -4374,7 +4436,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = electronics_devices_folder
@@ -4403,7 +4465,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = electronics_devices_folder
@@ -4432,7 +4494,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = electronics_devices_folder
@@ -4461,7 +4523,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = electronics_devices_folder
@@ -4490,7 +4552,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = electronics_devices_folder
@@ -4519,7 +4581,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = electronics_devices_folder
@@ -4548,7 +4610,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1965
 		folder = {
 			name = electronics_devices_folder
@@ -4577,7 +4639,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = electronics_devices_folder
@@ -4606,7 +4668,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -4635,7 +4697,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = electronics_devices_folder
@@ -4664,7 +4726,7 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.03
 		consumer_goods_factor = -0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = electronics_devices_folder
@@ -4690,7 +4752,7 @@ technologies = {
 		industrial_capacity_factory = 0.025
 		industrial_capacity_dockyard = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = electronics_devices_folder
@@ -4721,7 +4783,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.02
 		production_speed_buildings_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = electronics_devices_folder
@@ -4748,7 +4810,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = electronics_devices_folder
@@ -4820,7 +4882,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = electronics_devices_folder
@@ -4860,7 +4922,7 @@ technologies = {
         }
 
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1861
 		folder = {
 			name = electronics_devices_folder
@@ -4897,7 +4959,7 @@ technologies = {
         }
 
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1861
 		folder = {
 			name = electronics_devices_folder
@@ -4941,7 +5003,7 @@ technologies = {
         }
 
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1861
 		folder = {
 			name = electronics_devices_folder
@@ -4980,7 +5042,7 @@ technologies = {
         }
 
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1861
 		folder = {
 			name = electronics_devices_folder
@@ -5004,7 +5066,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = electronics_devices_folder
@@ -5041,7 +5103,7 @@ technologies = {
 			physical_chemistry = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1910
 		folder = {
 			name = electronics_devices_folder
@@ -5066,7 +5128,7 @@ technologies = {
 		industry_repair_factor = 0.01
 		production_speed_buildings_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = electronics_devices_folder
@@ -5096,7 +5158,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = electronics_devices_folder
@@ -5126,7 +5188,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = electronics_devices_folder
@@ -5156,7 +5218,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = electronics_devices_folder
@@ -5189,7 +5251,7 @@ technologies = {
 		production_speed_buildings_factor = 0.05
 		consumer_goods_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		dependencies={
 			tech_projects_atomic_refineries = 1
@@ -5229,7 +5291,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = electronics_devices_folder
@@ -5258,7 +5320,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1995
 		folder = {
 			name = electronics_devices_folder
@@ -5286,7 +5348,7 @@ technologies = {
 	
 		research_speed_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = electronics_devices_folder
@@ -5316,7 +5378,7 @@ technologies = {
 		production_speed_buildings_factor = 0.01
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -5344,7 +5406,7 @@ technologies = {
 	
 		research_speed_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = electronics_devices_folder
@@ -5378,7 +5440,7 @@ technologies = {
 			hard_attack = 0.01
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2020
 		folder = {
 			name = electronics_devices_folder
@@ -5386,7 +5448,7 @@ technologies = {
 		}
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = 136}
+			position = { x = -2 y = 138}
 		}
 		
 		ai_will_do = {
@@ -5408,7 +5470,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = electronics_devices_folder
@@ -5442,7 +5504,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = electronics_devices_folder
@@ -5472,7 +5534,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = electronics_devices_folder
@@ -5502,7 +5564,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = electronics_devices_folder
@@ -5532,7 +5594,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -5562,7 +5624,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = electronics_devices_folder
@@ -5592,7 +5654,7 @@ technologies = {
 		production_speed_buildings_factor = 0.025
 		consumer_goods_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = electronics_devices_folder
@@ -5622,7 +5684,7 @@ technologies = {
 		production_speed_buildings_factor = 0.05
 		consumer_goods_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		
 		dependencies={
@@ -5658,7 +5720,7 @@ technologies = {
 			level = 2
 		}
 	
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		dependencies={
 			plasma_based_storage_units = 1
@@ -5694,7 +5756,7 @@ technologies = {
 	
 		research_speed_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = electronics_devices_folder
@@ -5720,7 +5782,7 @@ technologies = {
 			level = 5
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = electronics_devices_folder
@@ -5750,7 +5812,7 @@ technologies = {
 		production_speed_buildings_factor = 0.05
 		consumer_goods_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2040
 		
 		dependencies={
@@ -5785,7 +5847,7 @@ technologies = {
 		production_speed_buildings_factor = 0.075
 		consumer_goods_factor = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2050
 		folder = {
 			name = electronics_devices_folder
@@ -5810,7 +5872,7 @@ technologies = {
 		intel_network_gain_factor = 0.05
 		recon_factor = 0.03
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		
 		dependencies={
@@ -5844,7 +5906,7 @@ technologies = {
 		intel_network_gain_factor = 0.05
 		recon_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = electronics_devices_folder
@@ -5872,7 +5934,7 @@ technologies = {
 		intel_network_gain_factor = 0.05
 		recon_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = electronics_devices_folder
@@ -5900,7 +5962,7 @@ technologies = {
 		intel_network_gain_factor = 0.05
 		recon_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = electronics_devices_folder
@@ -5928,7 +5990,7 @@ technologies = {
 		intel_network_gain_factor = 0.075
 		recon_factor = 0.075
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2040
 		folder = {
 			name = electronics_devices_folder

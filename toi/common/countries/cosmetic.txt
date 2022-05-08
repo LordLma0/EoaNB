@@ -3,6 +3,11 @@ AUS_HUN_dual = {
 	color_ui = rgb { 255 255 255 }
 }
 
+PIE_habsburg_kingdom_of_piedmont = {
+	color = rgb { 78 104 58 }
+	color_ui = rgb { 255 255 255 }
+}
+
 LVN_austrian = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
@@ -22,7 +27,11 @@ PIE_focus_ITA = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 67 127 63 }
 }
-TUS_focus_ITA = {
+TUSCM = {
+	color = rgb { 67 127 63 }
+	color_ui = rgb { 67 127 63 }
+}
+TUSRR = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 67 127 63 }
 }
@@ -104,8 +113,8 @@ ROM_costag_generic_formed = {
 }
 
 RAJ_ENG_british_puppet = {
-	color = rgb { 170  10  10 }
-	color_ui = rgb { 170  10  10 }
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
 }
 
 RAJ_ENG_british_raj = {
@@ -577,6 +586,15 @@ ENG_ih = {
 	color_ui = rgb { 38 79 24 }
 }
 
+TSH_Ouetsu_Alliance_Cosmetic = {
+	color = rgb { 255  200  200 }
+	color_ui = rgb { 255  200  200 }
+}
+TSH_Daimyo_Republic_Cosmetic = {
+	color = rgb { 255  100  25 }
+	color_ui = rgb { 255  100  25 }
+}
+
 BDY_SS_ordenstat = {
 	color = rgb { 90 0 0 }
 	color_ui = rgb { 255 255 122 }
@@ -636,4 +654,44 @@ KYR = {
 JAP_meiji_rebellion_cosmetic = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
+}
+SPC = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}
+DOM_SPC_cosmetic = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}
+BCO_Hudson_Bay_Columbia_Cosmetic = {
+	color = rgb { 73 32 27 }
+	color_ui = rgb { 73 32 27 }
+}
+NWT_Northwest_Territories_Cosmetic = {
+	color = rgb { 73 32 27 }
+	color_ui = rgb { 73 32 27 }
+}
+NFL_Newfoundland_Colony_Cosmetic = {
+	color = rgb { 165 24 24 }
+	color_ui = rgb { 165 24 24 }
+}
+BRK_New_Brunswick_Colony_Cosmetic = {
+	color = rgb { 176 0 0  }
+	color_ui = rgb { 176 0 0  }
+}
+NVS_Nova_Scotia_Colony_Cosmetic = {
+	color = rgb { 145  37  50 }
+	color_ui = rgb { 145  37  50 }
+}
+NAT_UK = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+TCS_UK_P = {
+	color = rgb { 165 24 24 }
+	color_ui = rgb { 165 24 24 }
+}
+ENG_British_Empire = {
+	color = rgb { 165 24 24 }
+	color_ui = rgb { 165 24 24 }
 }

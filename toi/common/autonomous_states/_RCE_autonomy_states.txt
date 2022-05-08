@@ -2,7 +2,7 @@ autonomy_state = {
 	id = autonomy_afr_colonial_company
 	
 	is_puppet = yes
-	
+	#use_overlord_color = yes
 	min_freedom_level = 0.0
 	
 	manpower_influence = 0.1
@@ -88,6 +88,7 @@ autonomy_state = {
 	id = autonomy_afr_colony
 	
 	is_puppet = yes
+	#use_overlord_color = yes
 	
 	min_freedom_level = 0.0
 	
@@ -510,6 +511,8 @@ autonomy_state = {
 	
 	manpower_influence = 0.05
 	
+	use_overlord_color = yes
+
 	rule = {
 		can_not_declare_war = no
 		can_decline_call_to_war = yes

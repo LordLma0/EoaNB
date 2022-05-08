@@ -2,9 +2,9 @@ state = {
 	id = 938
 	name = "STATE_938" # Lübeck
 	manpower = 45250
+	state_category = city
 	buildings_max_level_factor = 1.000
-	state_category = town
-	
+
 	provinces = {
 		11331 
 	}
@@ -15,13 +15,17 @@ state = {
 		
 		buildings = {
 			infrastructure = 6
+			11331 = {
+				naval_base = 2
+				bunker = 1 #Festung Lübeck
+			}
 		}
 		
 		victory_points = { 11331 3 } # Lübeck
 		
-		add_to_array = { state_culture_array = 2 }
+		add_to_array = { state_culture_array = 540 } # Lower Saxon
 		add_to_array = { state_culture_array_num = 0.969 }
-		add_to_array = { state_culture_array = 121 }
+		add_to_array = { state_culture_array = 121 } # Jewish
 		add_to_array = { state_culture_array_num = 0.031 }		
 		
 		add_to_array = { state_religion_array = 3 }
@@ -36,4 +40,5 @@ state = {
 			add_core_of = PRS
 		}
 	}
+	local_supplies=0.0
 }

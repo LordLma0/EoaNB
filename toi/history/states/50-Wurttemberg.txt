@@ -5,9 +5,10 @@ state = {
 	state_category = large_town
 
 	resources = {
-		wood = 10
-		iron= 4
-		coal = 2
+		fabric = 1
+		iron = 1
+		wood = 8
+		coal = 1
 	}
 
 	provinces = {
@@ -22,6 +23,9 @@ state = {
 			infrastructure = 6
 			arms_factory = 2
 			industrial_complex = 2
+			11499 = {
+				bunker = 3 #Bundesfestung Ulm
+			}
 		}
 		
 		victory_points = { 519 10 } # Stuttgart
@@ -40,4 +44,5 @@ state = {
 		add_to_array = { state_religion_array = 7 } # Jewish
 		add_to_array = { state_religion_array_num = 0.005 }
 	}
+	local_supplies=0.0 
 }

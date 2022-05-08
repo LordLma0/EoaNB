@@ -2,6 +2,8 @@
 state = {
 	id =483
 	name = "STATE_483"
+
+	local_supplies=0.0 
 	manpower = 195031
 
 	state_category = pastoral
@@ -35,6 +37,9 @@ state = {
 		# add_to_array = { state_culture_array_num = 0.42 }
 		add_to_array = { state_culture_array = 441 } #Nahua?
 		add_to_array = { state_culture_array_num = 0.14 }
+		
+		add_to_array = { state_religion_array = 2 } #Catholic
+		add_to_array = { state_religion_array_num = 1 }
 	}
 
 	provinces = {

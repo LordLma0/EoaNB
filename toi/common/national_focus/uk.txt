@@ -37,10 +37,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_defend_jewel
-		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		icon = GFX_Focus_Continent_India
 		x = 5
 		y = 1
-		cost = 25
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -55,10 +55,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_cause_of_sepoy
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		x = 3
 		y = 2
-		cost = 30
+		cost = 7
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -79,7 +79,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		x = 2
 		y = 3
-		cost = 10
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -116,7 +116,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_indian_gurkhas
 		x = 4
 		y = 3
-		cost = 10
+		cost = 7
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -124,6 +124,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_focus_cause_of_sepoy }
 		mutually_exclusive = { focus = ENG_focus_blame_muslims }
 		search_filters = {  FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 		
 		completion_reward = {
 			#Add consequences for states with muslim majority later, when religion system is implemented
@@ -157,7 +158,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_indianisation_of_army
 		x = 7
 		y = 2
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -166,7 +167,7 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 20
-			add_tech_bonus = { bonus = 0.2 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.2 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -185,16 +186,9 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_focus_ENG_colin_campbell
 			hidden_effect = {
-				RAJ = {
-					create_corps_commander = {
-						name = "Colin Campbell"
-						picture = "Portrait_ENG_Colin_Campbell.png"
-						traits = { }
-						skill = 3
-						attack_skill = 2
-						defense_skill = 2
-						planning_skill = 3
-						logistics_skill = 2
+				ENG = {
+					ENG_colin_campbell = {
+						set_nationality = RAJ
 					}
 				}
 			}
@@ -206,7 +200,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_two_nation_theory
 		x = 6
 		y = 4
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -222,10 +216,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_restore_peace_india
-		icon = GFX_goal_focus_ally_ENG
+		icon = GFX_Focus_Diplomatic_Ally_ENG
 		x = 6
 		y = 5
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -234,7 +228,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_focus_humiliation_by_sepoy }
 		available = { SRS = { exists = no } }
 		search_filters = {  FOCUS_FILTER_STABILITY }
-		
+		search_filters = { FOCUS_FILTER_HISTORICAL}
 
 		completion_reward = {
 			add_stability = 0.05
@@ -253,7 +247,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_preliminary_suppression
-		icon = GFX_goal_focus_controlled_press
+		icon = GFX_Focus_Freedom_Press_controlled
 		x = 8
 		y = 3
 		cost = 70
@@ -293,10 +287,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_humiliation_by_sepoy
-		icon = GFX_goal_focus_stop_fund_partisans
+		icon = GFX_Focus_Partisans_Stop_Fund
 		x = 8
 		y = 5
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -306,6 +300,7 @@ focus_tree = {
 			always = no
 		}
 		search_filters = {  FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 		
 		completion_reward = {
 			add_stability = -0.05
@@ -326,10 +321,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_repeal_gse_act
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 11
 		y = 1
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -352,7 +347,7 @@ focus_tree = {
 		icon = GFX_goal_focus_question_eic
 		x = 9
 		y = 2
-		cost = 15
+		cost = 7
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -373,10 +368,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_repeal_regulatory_act
-		icon = GFX_goal_focus_support_liberalism
+		icon = GFX_Focus_Ideology_Support_Liberalism
 		x = 11
 		y = 2
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -418,14 +413,15 @@ focus_tree = {
 		icon = GFX_goal_focus_princely_local_governments
 		x = 10
 		y = 4
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 100
+			factor = 20
 		}
 		prerequisite = { focus = ENG_focus_repeal_regulatory_act }
 		mutually_exclusive = { focus = ENG_focus_continue_annex_policy }
 		available = { RAJ = { is_subject_of = ENG } }
+		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			if = {
@@ -471,10 +467,10 @@ focus_tree = {
 		icon = GFX_goal_focus_british_colonial_empire
 		x = 12
 		y = 4
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 100
+			factor = 20
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -519,7 +515,7 @@ focus_tree = {
 			}
 			TRA = { country_event = { id = britainindia.2 days = 1 } }
 		}
-		search_filters = { FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_focus_ENG_continue_annex_policy
@@ -542,19 +538,16 @@ focus_tree = {
 		icon = GFX_goal_focus_british_military_government
 		x = 9
 		y = 6
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
+			factor = 80
 		}
 		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
 		mutually_exclusive = { focus = ENG_focus_the_RAJ_compromise focus = ENG_focus_grant_RAJ_autonomy }
 		available = { RAJ = { is_subject_of = ENG } }
-
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
+		
 		completion_reward = {
 			RAJ = {
 				add_to_variable = {
@@ -630,10 +623,14 @@ focus_tree = {
 		icon = GFX_goal_focus_form_british_raj
 		x = 11
 		y = 6
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
 		mutually_exclusive = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_grant_RAJ_autonomy }
@@ -674,19 +671,16 @@ focus_tree = {
 		icon = GFX_goal_focus_government_glass
 		x = 13
 		y = 6
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
 		}
 		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
 		mutually_exclusive = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_the_RAJ_compromise }
 		available = { RAJ = { is_subject_of = ENG } }
-
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
+		
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_focus_ENG_grant_RAJ_autonomy_rr
 			if = {
@@ -842,7 +836,7 @@ focus_tree = {
 		icon = GFX_goal_focus_develop_canada
 		x = 10
 		y = 7
-		cost = 150
+		cost = 140
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -891,7 +885,7 @@ focus_tree = {
 		icon = GFX_goal_focus_develop_canada
 		x = 12
 		y = 7
-		cost = 150
+		cost = 140
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -995,7 +989,7 @@ focus_tree = {
 		icon = GFX_focus_generic_home_defense
 		x = 16
 		y = 0
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1032,7 +1026,7 @@ focus_tree = {
 		icon = GFX_goal_focus_peel_comission
 		x = 16
 		y = 1
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1071,7 +1065,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_india_regional_recruitment
-		icon = GFX_goal_focus_fund_partisans
+		icon = GFX_Focus_Partisans_Fund
 		x = 15
 		y = 2
 		cost = 70
@@ -1122,7 +1116,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_academy
 		x = 15
 		y = 3
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1142,10 +1136,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_india_nation_law
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 15
 		y = 4
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1191,7 +1185,7 @@ focus_tree = {
 		icon = GFX_goal_focus_form_british_raj
 		x = 15
 		y = 5
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1234,7 +1228,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_india_european_recruitment
-		icon = GFX_goal_focus_colonial_empire_uk
+		icon = GFX_Focus_colonial_empire_ENG
 		x = 17
 		y = 2
 		cost = 70
@@ -1245,6 +1239,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_focus_peel_commission }
 		mutually_exclusive = { focus = ENG_focus_india_regional_recruitment }
 		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 		
 		completion_reward = {
 			RAJ = { add_ideas = ENG_idea_RAJ_army_european }
@@ -1266,7 +1261,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		x = 17
 		y = 3
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1289,7 +1284,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		x = 17
 		y = 4
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1321,7 +1316,7 @@ focus_tree = {
 		icon = GFX_goal_focus_valient_kingdom
 		x = 17
 		y = 5
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1350,10 +1345,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_oriental_uniforms_india
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_Focus_Colonial_Troops
 		x = 16
 		y = 6
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1392,7 +1387,7 @@ focus_tree = {
 		
 		completion_reward = {
 			army_experience = 10
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1401,7 +1396,7 @@ focus_tree = {
 		icon = GFX_goal_focus_britannia_rules_waves
 		x = 20
 		y = 1
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1424,10 +1419,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_strategic_fortifications
-		icon = GFX_goal_focus_napoleonic_tactics
+		icon = GFX_Focus_Weapon_Canon_5_Russian
 		x = 19
 		y = 2
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1446,7 +1441,7 @@ focus_tree = {
 		icon = GFX_focus_generic_coastal_fort
 		x = 19
 		y = 3
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1462,10 +1457,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_coastal_batteries_east
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_ENG_focus_Naval_Forts_East
 		x = 21
 		y = 2
-		cost = 45
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1481,10 +1476,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_coastal_batteries_west
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_ENG_focus_Naval_Forts_West
 		x = 21
 		y = 3
-		cost = 45
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1529,7 +1524,7 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		x = 23
 		y = 2
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1539,20 +1534,20 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_MANPOWER }
 		
 		completion_reward = {
-			custom_effect_tooltip = eoanb_tt_focus_ENG_the_vrc
+			#custom_effect_tooltip = eoanb_tt_focus_ENG_the_vrc
 
-			set_temp_variable = { temp_advisor_frame = 8 }
-			set_temp_variable = { temp_advisor_trait = 45 }
-			mhc_add_army_advisor = yes
+			#set_temp_variable = { temp_advisor_frame = 8 }
+			#set_temp_variable = { temp_advisor_trait = 45 }
+			#mhc_add_army_advisor = yes
 		}
 	}
 
 	focus = {
 		id = ENG_focus_volunteer_regulations
-		icon = GFX_goal_focus_military_reforms
+		icon = GFX_Focus_Army_Reforms
 		x = 23
 		y = 3
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1562,16 +1557,16 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = ENG_focus_consolidate_vrc
-		icon = GFX_goal_focus_support_conservatism
+		icon = GFX_Goal_manpower_duplication
 		x = 23
 		y = 4
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1613,7 +1608,7 @@ focus_tree = {
 		icon = GFX_focus_generic_treaty
 		x = 24
 		y = 5
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1628,7 +1623,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_military_reforms
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_ENG_military_reforms
 		x = 25
 		y = 1
 		cost = 70
@@ -1647,10 +1642,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_new_doctrines_adaptation
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_Focus_adapt_new_doctrines
 		x = 25
 		y = 2
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1660,7 +1655,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1692,7 +1687,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		x = 25
 		y = 4
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1708,10 +1703,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_new_modern_weapons
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_Goal_modernized_army_equipment
 		x = 27
 		y = 2
-		cost = 80
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1727,10 +1722,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_the_gatling_gun
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_Goal_the_gatling_gun
 		x = 27
 		y = 3
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1746,7 +1741,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_artillery_support
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_Focus_artillery_support
 		x = 27
 		y = 4
 		cost = 70
@@ -1765,10 +1760,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_new_army_plan
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_Goal_the_new_army_plan
 		x = 30
 		y = 1
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -1786,7 +1781,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_wolseley_plan
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_ENG_focus_The_Wolseley_Plan
 		x = 29
 		y = 2
 		cost = 70
@@ -1838,7 +1833,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_jones_plan
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_ENG_focus_The_Jones_Plan
 		x = 31
 		y = 2
 		cost = 70
@@ -1859,6 +1854,7 @@ focus_tree = {
 			NOT = { has_idea = law_victorian_army }
 		}
 		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 		
 		completion_reward = {
 			add_ideas = ENG_idea_jones_plan
@@ -1868,7 +1864,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_army_of_citizens
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		x = 31
 		y = 3
 		cost = 70
@@ -1893,7 +1889,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_regiment_training_exercises
-		icon = GFX_goal_focus_napoleonic_tactics
+		icon = GFX_ENG_focus_Regimental_Training_Excercises
 		x = 30
 		y = 4
 		cost = 70
@@ -1912,8 +1908,30 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ENG_focus_regular_exercises
+		icon = GFX_Focus_Tactics_Artillery
+		x = 30
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = ENG_focus_regiment_training_exercises }
+		search_filters = { FOCUS_FILTER_MILITARY }
+
+		available = {
+			has_completed_focus = ENG_focus_overseas_service_focus
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_colonial_train
+		}
+	}
+
+	focus = {
 		id = ENG_focus_initial_military_reforms
-		icon = GFX_goal_focus_military_reforms
+		icon = GFX_Focus_Army_Reforms
 		x = 35
 		y = 1
 		cost = 70
@@ -1959,7 +1977,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_new_military_colonial_policy
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_Focus_Colonial_Troops
 		x = 35
 		y = 2
 		cost = 70
@@ -2091,8 +2109,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ENG_focus_army_enlistment_act
-		icon = GFX_focus_generic_support_the_left_right
+		id = ENG_focus_army_enlistment_act_focus
+		icon = GFX_Focus_army_enlistment_act
 		x = 35
 		y = 4
 		cost = 70
@@ -2112,8 +2130,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ENG_focus_overseas_service
-		icon = GFX_focus_generic_navy_battleship2
+		id = ENG_focus_overseas_service_focus
+		icon = GFX_Focus_overseas_service
 		x = 35
 		y = 5
 		cost = 70
@@ -2121,7 +2139,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-		prerequisite = { focus = ENG_focus_army_enlistment_act }
+		prerequisite = { focus = ENG_focus_army_enlistment_act_focus }
 		available = {
 			has_completed_focus = ENG_focus_create_new_military_offices
 		}
@@ -2138,7 +2156,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_new_service_weapons
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_Focus_Rifle_Production
 		x = 35
 		y = 6
 		cost = 70
@@ -2146,7 +2164,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-		prerequisite = { focus = ENG_focus_overseas_service }
+		prerequisite = { focus = ENG_focus_overseas_service_focus }
 		search_filters = { FOCUS_FILTER_MILITARY }
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -2157,7 +2175,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_minor_structural_reforms
-		icon = GFX_focus_generic_treaty
+		icon = GFX_Focus_Soldier_send_abroad_cadets
 		x = 37
 		y = 4
 		cost = 70
@@ -2172,7 +2190,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.1 uses = 1 category = infantry_weapons }
 			add_tech_bonus = { bonus = 0.1 uses = 1 category = support_tech }
-			add_tech_bonus = { bonus = 0.1 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.1 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -2199,7 +2217,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_regimental_organization
-		icon = GFX_focus_generic_self_management
+		icon = GFX_Focus_Army_Leadership
 		x = 37
 		y = 6
 		cost = 70
@@ -2212,7 +2230,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.3 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.3 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -2222,7 +2240,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_industrial_revolution
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		x = 46
 		y = 0
 		cost = 35
@@ -2242,10 +2260,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_new_technological_developments
-		icon = GFX_focus_research2
+		icon = GFX_Focus_university_research
 		x = 42
 		y = 1
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2261,7 +2279,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_new_farming_equipment
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_Focus_Tractor
 		x = 40
 		y = 2
 		cost = 70
@@ -2331,7 +2349,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_invest_into_biological_sciences
-		icon = GFX_goal_focus_opium_war
+		icon = GFX_Focus_Health_Famine
 		x = 40
 		y = 3
 		cost = 70
@@ -2350,7 +2368,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_invest_into_research
-		icon = GFX_goal_tfv_generic_tech_sharing
+		icon = GFX_Focus_state_sponsorship_of_academics
 		x = 42
 		y = 2
 		cost = 70
@@ -2375,7 +2393,7 @@ focus_tree = {
 		icon = GFX_goal_generic_scientific_exchange
 		x = 42
 		y = 3
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2394,7 +2412,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production2
 		x = 42
 		y = 4
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2410,10 +2428,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_the_military_budget_question
-		icon = GFX_goal_focus_military_reforms
+		icon = GFX_Focus_Army_Budget
 		x = 44
 		y = 1
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2423,7 +2441,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_MILITARY }
 		
 		completion_reward = {
-			country_event = { id = britainfocus.1 random = 12 }
+			country_event = { id = britain.72 random = 12 }
 		}
 	}
 
@@ -2432,7 +2450,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		x = 46
 		y = 1
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2451,10 +2469,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_focus_on_military_industry
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 44
 		y = 2
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2471,10 +2489,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_increase_arms_production
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_Focus_invest_in_the_military_industrial_complex
 		x = 44
 		y = 3
-		cost = 120
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2510,7 +2528,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		x = 44
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2525,7 +2543,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_the_naval_industry
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_Focus_Naval_Industry_Profits
 		x = 46
 		y = 3
 		cost = 70
@@ -2564,7 +2582,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_invest_in_shipbuilding_industry
-		icon = GFX_goal_focus_mass_produce_ships
+		icon = GFX_Focus_Navy_Budget
 		x = 46
 		y = 5
 		cost = 70
@@ -2585,7 +2603,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 48
 		y = 2
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2601,7 +2619,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_develop_urban_centers
-		icon = GFX_goal_focus_banks
+		icon = GFX_Focus_Urbanization
 		x = 48
 		y = 4
 		cost = 70
@@ -2625,14 +2643,14 @@ focus_tree = {
 				}
 				952 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			}
-			126 = { add_manpower = -20000 }
-			952 = { add_manpower = 20000 }
+			#126 = { add_manpower = -20000 }
+			#952 = { add_manpower = 20000 }
 		}
 	}
 
 	focus = {
 		id = ENG_focus_trade_and_logistics_infrastructure
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_Focus_transport_prefecture_lines_railway
 		x = 48
 		y = 5
 		cost = 70
@@ -2644,18 +2662,18 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
-			if = {
-				limit = {
-					126 = {
-						free_building_slots = {
-							building = infrastructure
-							size > 0
-							include_locked = no
-						}
-					}
-				}
-				126 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			}
+		#if = {
+		#	limit = {
+		#		126 = {
+		#			free_building_slots = {
+		#				building = infrastructure
+		#				size > 0
+		#				include_locked = no
+		#			}
+		#		}
+		#	}
+		#	126 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		#}
 			if = {
 				limit = {
 					130 = {
@@ -2685,10 +2703,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_open_steel_foundry
-		icon = GFX_focus_generic_steel
+		icon = GFX_Focus_Production_Iron
 		x = 48
 		y = 6
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2734,7 +2752,7 @@ focus_tree = {
 		icon = GFX_Focus_Agriculture
 		x = 50
 		y = 1
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2801,7 +2819,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_build_more_farms
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_Focus_Agriculture_2
 		x = 50
 		y = 2
 		cost = 35
@@ -2819,7 +2837,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_feed_the_population
-		icon = GFX_goal_focus_support_conservatism
+		icon = GFX_Focus_Ideology_Support_Liberty
 		x = 49
 		y = 3
 		cost = 35
@@ -2845,7 +2863,7 @@ focus_tree = {
 		icon = GFX_focus_generic_treaty
 		x = 52
 		y = 1
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2911,7 +2929,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_forestry_investments
-		icon = GFX_focus_back_to_basics
+		icon = GFX_Focus_invest_in_logging
 		x = 52
 		y = 2
 		cost = 35
@@ -2929,10 +2947,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_the_cotton_issue
-		icon = GFX_goal_focus_cotton
+		icon = GFX_Focus_Resource_Cotton
 		x = 51
 		y = 3
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2948,10 +2966,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_keep_reliance_on_usa
-		icon = GFX_goal_focus_american_civil_war
+		icon = GFX_Focus_War_American_Civil_War
 		x = 50
 		y = 5
-		cost = 15
+		cost = 7
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -2987,7 +3005,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_mining_efforts
-		icon = GFX_goal_generic_production
+		icon = GFX_Focus_Resource_Extraction_Mining
 		x = 54
 		y = 3
 		cost = 50
@@ -3005,10 +3023,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_coal_in_northern_england
-		icon = GFX_goal_focus_coal_mines
+		icon = GFX_Focus_coal_mines
 		x = 53
 		y = 4
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3023,10 +3041,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_coal_in_the_midlands
-		icon = GFX_goal_focus_coal_mines
+		icon = GFX_Focus_coal_mines
 		x = 55
 		y = 4
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3044,7 +3062,7 @@ focus_tree = {
 		icon = GFX_goal_focus_scottish_iron
 		x = 54
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3062,7 +3080,7 @@ focus_tree = {
 		icon = GFX_goal_focus_scottish_bauxite
 		x = 54
 		y = 6
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3080,7 +3098,7 @@ focus_tree = {
 		icon = GFX_goal_focus_british_isolationism
 		x = 58
 		y = 0
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3115,10 +3133,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_british_railways
-		icon = GFX_goal_focus_railroad_development
+		icon = GFX_Focus_transport_railroad_development
 		x = 56
 		y = 1
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3147,7 +3165,7 @@ focus_tree = {
 		icon = GFX_goal_focus_northern_railway
 		x = 56
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3165,7 +3183,7 @@ focus_tree = {
 		icon = GFX_goal_focus_bristol_railway
 		x = 56
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3180,10 +3198,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_the_telegraph
-		icon = GFX_goal_focus_telegraph_lines
+		icon = GFX_Focus_Telegraph_Lines
 		x = 58
 		y = 1
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3199,10 +3217,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_sea_cables
-		icon = GFX_goal_focus_international_investments
+		icon = GFX_Focus_Trade_International
 		x = 58
 		y = 2
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3217,10 +3235,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_embassies_in_london
-		icon = GFX_goal_focus_foreign_diplomacy_central
+		icon = GFX_ENG_focus_London_Embassies
 		x = 58
 		y = 3
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3237,10 +3255,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_public_works_projects
-		icon = GFX_goal_focus_government_icon
+		icon = GFX_Focus_Government
 		x = 60
 		y = 1
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3260,10 +3278,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_build_more_hospitals
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Build_More_Hospitals
 		x = 60
 		y = 2
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3281,10 +3299,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_invest_in_schools
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		x = 60
 		y = 3
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3303,10 +3321,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_global_trade
-		icon = GFX_goal_focus_support_liberalism
+		icon = GFX_Focus_Ideology_Support_Liberalism
 		x = 57
 		y = 4
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3341,10 +3359,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_strengthen_trade_in_the_empire
-		icon = GFX_goal_focus_merchants_british
+		icon = GFX_Focus_Diplomacy_UK
 		x = 56
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3364,7 +3382,7 @@ focus_tree = {
 		icon = GFX_goal_focus_south_india_colony
 		x = 56
 		y = 6
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3385,7 +3403,7 @@ focus_tree = {
 		icon = GFX_goal_focus_develop_cape_colony
 		x = 56
 		y = 7
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3406,7 +3424,7 @@ focus_tree = {
 		icon = GFX_goal_focus_develop_canada
 		x = 56
 		y = 8
-		cost = 75
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3424,10 +3442,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_diplomatic_treaties
-		icon = GFX_goal_focus_foreign_diplomacy
+		icon = GFX_Focus_Diplomatic_foreign
 		x = 59
 		y = 5
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3442,10 +3460,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_trade_treaty_france
-		icon = GFX_goal_focus_ally_FRA
+		icon = GFX_Focus_Diplomatic_Ally_FRA
 		x = 58
 		y = 6
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3465,10 +3483,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_trade_treaty_prussia
-		icon = GFX_goal_focus_ally_PRS
+		icon = GFX_Focus_Diplomatic_Ally_PRS
 		x = 60
 		y = 6
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3491,7 +3509,7 @@ focus_tree = {
 		icon = GFX_goal_focus_us_resolve_pig_war
 		x = 58
 		y = 7
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3511,10 +3529,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_trade_treaty_csa
-		icon = GFX_goal_focus_confederate_collaboration
+		icon = GFX_Focus_Diplomatic_Ally_CSA_2
 		x = 60
 		y = 7
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3534,10 +3552,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_trade_treaty_russia
-		icon = GFX_goal_focus_negotiate_russia
+		icon = GFX_Focus_Diplomatic_Ally_RUS_2
 		x = 58
 		y = 8
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3560,7 +3578,7 @@ focus_tree = {
 		icon = GFX_focus_ottoman_monarchy
 		x = 60
 		y = 8
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3583,7 +3601,7 @@ focus_tree = {
 		icon = GFX_goal_focus_BEL_Emulate_English
 		x = 62
 		y = 6
-		cost = 60
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3605,7 +3623,7 @@ focus_tree = {
 		icon = GFX_goal_SWE_traditionalism
 		x = 62
 		y = 7
-		cost = 60
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3624,10 +3642,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_trade_with_iberia
-		icon = GFX_goal_focus_merchants_portugese
+		icon = GFX_Focus_Diplomacy_POR
 		x = 62
 		y = 8
-		cost = 60
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3650,10 +3668,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_address_political_economic_matters
-		icon = GFX_goal_focus_freedom_press
+		icon = GFX_Focus_Law_economic
 		x = 70
 		y = 0
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3666,50 +3684,29 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ENG_focus_the_isle_of_man_question
-		icon = GFX_goal_focus_government_glass
+		id = ENG_focus_the_calais_question
+		icon = GFX_Focus_colonial_empire_FRA
 		x = 66
 		y = 1
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
 		}
 		prerequisite = { focus = ENG_focus_address_political_economic_matters }
-		available = {
-			owns_state = 1152
-		}
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			country_event = { id = britainfocus.2 random = 12 }
-		}
-	}
-
-	focus = {
-		id = ENG_focus_the_calais_question
-		icon = GFX_goal_focus_colonial_empire_france
-		x = 66
-		y = 2
-		cost = 30
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 40
-		}
-		prerequisite = { focus = ENG_focus_the_isle_of_man_question }
-		search_filters = {  FOCUS_FILTER_POLITICAL }
-		
-		completion_reward = {
-			country_event = { id = britainfocus.3 random = 12 }
+			country_event = { id = britain.73 random = 12 }
 		}
 	}
 
 	focus = {
 		id = ENG_focus_imperialist_economic_interests
-		icon = GFX_focus_Colonial_Troops
+		icon = GFX_focus_por_luso_tropicalism
 		x = 66
-		y = 3
-		cost = 30
+		y = 2
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3724,10 +3721,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_demand_japanese_trade_port
-		icon = GFX_goal_focus_JAP_science_eng_navy
+		icon = GFX_focus_JAP_science_eng_navy
 		x = 66
-		y = 4
-		cost = 30
+		y = 3
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3740,16 +3737,16 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_focus_ENG_demand_japanese_port
-			#TSH = { country_event = { id = britainfocus.4 random = 12 } }
+			#TSH = { country_event = { id = britain.# random = 12 } }
 		}
 	}
 
 	focus = {
 		id = ENG_focus_the_economic_debate
-		icon = GFX_goal_focus_broken_democracy
+		icon = GFX_Focus_Freedom_broken
 		x = 70
 		y = 1
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3778,10 +3775,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_centralize_economy
-		icon = GFX_goal_focus_government_control
+		icon = GFX_Focus_Government_Centralized
 		x = 68
 		y = 2
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		available = { has_war = no has_stability > 0.35 }
 		ai_will_do = {
@@ -3804,7 +3801,7 @@ focus_tree = {
 		icon = GFX_goal_focus_london_underground
 		x = 68
 		y = 3
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3821,10 +3818,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_business_regulation
-		icon = GFX_goal_focus_banks2
+		icon = GFX_Focus_banks2
 		x = 68
 		y = 4
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3843,7 +3840,7 @@ focus_tree = {
 		icon = GFX_goal_focus_valient_kingdom
 		x = 68
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3861,10 +3858,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_decentralize_economy
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		x = 72
 		y = 2
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		available = { has_war = no has_stability > 0.35 }
 		ai_will_do = {
@@ -3884,10 +3881,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_cottage_industry
-		icon = GFX_goal_focus_cotton
+		icon = GFX_Focus_Resource_Cotton
 		x = 73
 		y = 3
-		cost = 35
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3902,10 +3899,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_liberalize_the_economy
-		icon = GFX_goal_focus_freedom_economy
+		icon = GFX_Focus_freedom_economy
 		x = 72
 		y = 4
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3924,7 +3921,7 @@ focus_tree = {
 		icon = GFX_goal_focus_develop_wales
 		x = 71
 		y = 3
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3942,7 +3939,7 @@ focus_tree = {
 		icon = GFX_goal_focus_develop_scotland
 		x = 74
 		y = 4
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3961,7 +3958,7 @@ focus_tree = {
 		icon = GFX_goal_focus_develop_ireland
 		x = 74
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -3984,10 +3981,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_address_workforce_issues
-		icon = GFX_goal_focus_reform_government
+		icon = GFX_Focus_Government_Reform
 		x = 70
 		y = 6
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4005,7 +4002,7 @@ focus_tree = {
 		icon = GFX_Focus_Worker_Appeal
 		x = 67
 		y = 7
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4021,10 +4018,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_mines_regulation_act
-		icon = GFX_goal_focus_coal_mines
+		icon = GFX_Focus_coal_mines
 		x = 65
 		y = 8
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4045,10 +4042,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_further_regulations
-		icon = GFX_goal_focus_government_control
+		icon = GFX_Focus_Government_Centralized
 		x = 65
 		y = 9
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4074,7 +4071,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		x = 65
 		y = 10
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4097,10 +4094,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_establish_trade_union_congress
-		icon = GFX_goal_focus_the_workers
+		icon = GFX_Focus_Worker
 		x = 67
 		y = 8
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4118,10 +4115,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_trade_unions_act
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 67
 		y = 9
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4151,7 +4148,7 @@ focus_tree = {
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 67
 		y = 10
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4175,10 +4172,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_sanitary_act
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 69
 		y = 8
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4201,24 +4198,67 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_reform_act
-		icon = GFX_goal_focus_elections
+		icon = GFX_Focus_Vote_Election
 		x = 69
 		y = 9
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
 		}
 		prerequisite = { focus = ENG_focus_sanitary_act }
-		mutually_exclusive = { } 
-		bypass = { has_idea = universal_male_suffrage }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = parliamentary_suffrage
-				add_idea = universal_male_suffrage
+			if = {
+				limit = {
+					has_idea = absolutism
+				}
+				swap_ideas = {
+					remove_idea = absolutism
+					add_idea = oligarchism
+				}
 			}
-		    add_popularity = { ideology = traditional_conservatism popularity = 0.05 }
+			else_if = {
+				limit = {
+					has_idea = oligarchism
+				}
+				swap_ideas = {
+					remove_idea = oligarchism
+					add_idea = parliamentary_suffrage
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = parliamentary_suffrage
+				}
+				swap_ideas = {
+					remove_idea = parliamentary_suffrage
+					add_idea = property_owners_suffrage
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = property_owners_suffrage
+				}
+				swap_ideas = {
+					remove_idea = property_owners_suffrage
+					add_idea = universal_male_suffrage
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = universal_male_suffrage
+				}
+				swap_ideas = {
+					remove_idea = universal_male_suffrage
+					add_idea = universal_suffrage
+				}
+			}
+			else = {
+				add_political_power = -50
+				add_stability = 0.01
+			}
+			add_popularity = { ideology = traditional_conservatism popularity = 0.05 }
 			custom_effect_tooltip = eoanb_tt_worker_unrest_decrease_5
 			hidden_effect = {
 				ENG = {
@@ -4233,10 +4273,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_master_servant_act
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 69
 		y = 10
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4259,10 +4299,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_factories_workshop_act
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 67
 		y = 11
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4287,10 +4327,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_guarantee_fair_wages
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		x = 67
 		y = 12
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4320,7 +4360,7 @@ focus_tree = {
 		icon = GFX_Focus_Worker_Pact
 		x = 67
 		y = 13
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4378,29 +4418,25 @@ focus_tree = {
 		icon = GFX_ENG_focus_royal_coat_arms
 		x = 70
 		y = 11
-		cost = 30
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
 		}
 		prerequisite = { focus = ENG_focus_address_workforce_issues }
-		mutually_exclusive = { } 
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			add_political_power = 50
-			hidden_effect = {
-				country_event = { id = britainfocus.20 random = 12 }
-			}
+			country_event = { id = britain.76 days= 12 }
 		}
 	}
 	
 	focus = {
 		id = ENG_focus_legislation_on_pensions
-		icon = GFX_goal_focus_reform_government
+		icon = GFX_Focus_Government_Reform
 		x = 69
 		y = 12
-		cost = 60
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4415,17 +4451,17 @@ focus_tree = {
 				add_idea = ENG_idea_working_class_exploitation_4
 			}
 			hidden_effect = {
-				country_event = { id = britainfocus.7 random = 12 }
+				country_event = { id = britain.75 random = 12 }
 			}
 		}
 	}
 	
 	focus = {
 		id = ENG_focus_the_age_of_retirement
-		icon = GFX_goal_focus_reform_government
+		icon = GFX_Focus_Government_Reform
 		x = 71
 		y = 12
-		cost = 60
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4434,7 +4470,7 @@ focus_tree = {
 		mutually_exclusive = { } 
 
 		completion_reward = {
-		    country_event = { id = britainfocus.8 random = 12 }
+		    country_event = { id = britain.77 random = 12 }
 		}
 	}
 	
@@ -4447,13 +4483,14 @@ focus_tree = {
 		icon = GFX_Focus_Worker_Manipulation
 		x = 73
 		y = 7
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 40
+			factor = 20
 		}
 		prerequisite = { focus = ENG_focus_address_workforce_issues }
 		mutually_exclusive = { focus = ENG_focus_royal_commission_working_conditions } 
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 
 		completion_reward = {
 			add_political_power = 100
@@ -4474,7 +4511,7 @@ focus_tree = {
 		icon = GFX_Focus_State_of_the_People
 		x = 71
 		y = 8
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4509,13 +4546,13 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_ignore_the_accidents 
-		icon = GFX_goal_focus_controlled_press
+		icon = GFX_Focus_Freedom_Press_controlled
 		x = 71
 		y = 9
-		cost = 60
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 40
+			factor = 80
 		}
 		prerequisite = { focus = ENG_focus_justify_child_workers }
 		mutually_exclusive = { } 
@@ -4536,10 +4573,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_mines_regulation_act_1
-		icon = GFX_goal_focus_coal_mines
+		icon = GFX_Focus_coal_mines
 		x = 71
 		y = 10
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4558,10 +4595,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_weaken_trade_unions
-		icon = GFX_goal_focus_stop_fund_partisans
+		icon = GFX_Focus_Partisans_Stop_Fund
 		x = 73
 		y = 8
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4581,10 +4618,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_trade_unions_act_1
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 73
 		y = 9
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		available = { has_idea = tu_state_controlled }
 		ai_will_do = {
@@ -4614,13 +4651,13 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_lower_taxes_on_buisnesses
-		icon = GFX_goal_focus_banks
+		icon = GFX_Focus_banks
 		x = 73
 		y = 10
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 40
+			factor = 80
 		}
 		prerequisite = { focus = ENG_focus_trade_unions_act_1 }
 		mutually_exclusive = { } 
@@ -4700,10 +4737,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_producivity_first
-		icon = GFX_goal_focus_industrial_revolution
+		icon = GFX_Focus_industrial_revolution
 		x = 75
 		y = 8
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4725,10 +4762,10 @@ focus_tree = {
 		icon = GFX_Focus_Worker_Strike_2
 		x = 75
 		y = 9
-		cost = 60
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 40
+			factor = 100
 		}
 		prerequisite = { focus = ENG_focus_producivity_first }
 		mutually_exclusive = { } 
@@ -4749,10 +4786,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_master_servant_act_1
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 75
 		y = 10
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4778,7 +4815,7 @@ focus_tree = {
 		icon = GFX_Focus_Refugee_Forced_Labor
 		x = 73
 		y = 11
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4807,7 +4844,7 @@ focus_tree = {
 		icon = GFX_Focus_Working_Hours
 		x = 73
 		y = 12
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4835,13 +4872,13 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_no_more_prudction_delays
-		icon = GFX_goal_focus_the_elite
+		icon = GFX_Focus_Elite
 		x = 73
 		y = 13
-		cost = 60
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 40
+			factor = 100
 		}
 		prerequisite = { focus = ENG_focus_end_worker_rights }
 		mutually_exclusive = { } 
@@ -4860,7 +4897,7 @@ focus_tree = {
 		icon = GFX_ENG_focus_royal_navy_1
 		x = 83
 		y = 0
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4870,17 +4907,17 @@ focus_tree = {
 		
 		completion_reward = {
 		    navy_experience = 20
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = naval_doctrine }
 		}
 	}
 	
 
 	focus = {
 		id = ENG_focus_lessons_from_crimea
-		icon = GFX_focus_generic_treaty
+		icon = GFX_Focus_naval_school
 		x = 83
 		y = 1
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4898,7 +4935,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		x = 83
 		y = 2
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4917,7 +4954,7 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		x = 80
 		y = 3
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4941,7 +4978,7 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		x = 86
 		y = 3
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -4980,10 +5017,10 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_focus_begin_naval_drills
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_Focus_Navy_Tactics
 		x = 83
 		y = 4
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5001,7 +5038,7 @@ focus_tree = {
 		icon = GFX_ENG_focus_best_in_life
 		x = 83
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5035,10 +5072,10 @@ focus_tree = {
 	
     focus = {
 		id = ENG_focus_lesson_acw
-		icon = GFX_goal_focus_american_civil_war
+		icon = GFX_Focus_War_American_Civil_War
 		x = 83
 		y = 6
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		available = { has_global_flag = ACW_American_Civil_War_Happened }
 		ai_will_do = {
@@ -5051,7 +5088,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		completion_reward = {
-		    add_tech_bonus = { bonus = 0.25 uses = 3 category = naval_doctrine }
+		    add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 3 category = naval_doctrine }
 		}
 	}
 
@@ -5060,7 +5097,7 @@ focus_tree = {
 		icon = GFX_goal_generic_amphibious_assault
 		x = 80
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5082,7 +5119,7 @@ focus_tree = {
 		icon = GFX_goal_generic_amphibious_assault
 		x = 86
 		y = 5
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5101,10 +5138,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_commision_monitors
-		icon = GFX_goal_focus_commision_monitors
+		icon = GFX_Focus_commision_monitors
 		x = 80
 		y = 6
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5125,7 +5162,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		x = 86
 		y = 6
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5146,7 +5183,7 @@ focus_tree = {
 		icon = GFX_focus_generic_navy_battleship2
 		x = 80
 		y = 7
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5167,7 +5204,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_cruiser
 		x = 86
 		y = 7
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5188,7 +5225,7 @@ focus_tree = {
 		icon = GFX_goal_focus_cower_coles
 		x = 78
 		y = 8
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5203,10 +5240,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
-			custom_effect_tooltip = available_military_high_command
-			set_temp_variable = { temp_advisor_frame = 5 }
-			set_temp_variable = { temp_advisor_trait = 101 }
-			mhc_add_navy_advisor = yes
+			#custom_effect_tooltip = available_military_high_command
+			#set_temp_variable = { temp_advisor_frame = 5 }
+			#set_temp_variable = { temp_advisor_trait = 101 }
+			#mhc_add_navy_advisor = yes
 		}
 	}
 
@@ -5215,7 +5252,7 @@ focus_tree = {
 		icon = GFX_goal_focus_erricson
 		x = 82
 		y = 8
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5230,10 +5267,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
-			custom_effect_tooltip = available_military_high_command
-			set_temp_variable = { temp_advisor_frame = 6 }
-			set_temp_variable = { temp_advisor_trait = 112 }
-			mhc_add_navy_advisor = yes
+			#custom_effect_tooltip = available_military_high_command
+			#set_temp_variable = { temp_advisor_frame = 6 }
+			#set_temp_variable = { temp_advisor_trait = 112 }
+			#mhc_add_navy_advisor = yes
 		}
 	}
 
@@ -5242,7 +5279,7 @@ focus_tree = {
 		icon = GFX_goal_focus_watts
 		x = 84
 		y = 8
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5257,10 +5294,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
-			custom_effect_tooltip = available_military_high_command
-			set_temp_variable = { temp_advisor_frame = 7 }
-			set_temp_variable = { temp_advisor_trait = 133 }
-			mhc_add_navy_advisor = yes
+			#custom_effect_tooltip = available_military_high_command
+			#set_temp_variable = { temp_advisor_frame = 7 }
+			#set_temp_variable = { temp_advisor_trait = 133 }
+			#mhc_add_navy_advisor = yes
 		}
 	}
 
@@ -5269,7 +5306,7 @@ focus_tree = {
 		icon = GFX_goal_focus_robinson
 		x = 88
 		y = 8
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5284,10 +5321,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
-			custom_effect_tooltip = available_military_high_command
-			set_temp_variable = { temp_advisor_frame = 8 }
-			set_temp_variable = { temp_advisor_trait = 130 }
-			mhc_add_navy_advisor = yes
+			#custom_effect_tooltip = available_military_high_command
+			#set_temp_variable = { temp_advisor_frame = 8 }
+			#set_temp_variable = { temp_advisor_trait = 130 }
+			#mhc_add_navy_advisor = yes
 		}
 	}
 
@@ -5296,7 +5333,7 @@ focus_tree = {
 		icon = GFX_Focus_Turret_Early
 		x = 78
 		y = 9
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5314,10 +5351,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_ericsson_turrets
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_goal_focus_watts_machines
 		x = 82
 		y = 9
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5335,10 +5372,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_watts_machines
-		icon = GFX_goal_focus_watts_machines
+		icon = GFX_Focus_Screw_Engine
 		x = 84
 		y = 9
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5356,10 +5393,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_robinson_hulls
-		icon = GFX_goal_focus_generic_navy_ironclad
+		icon = GFX_Focus_Armor_Plates
 		x = 88
 		y = 9
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5377,10 +5414,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_player_choice_1
-		icon = GFX_goal_focus_commision_monitors
+		icon = GFX_Goal_monitor_focus
 		x = 78
 		y = 10
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5397,10 +5434,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_player_choice_2
-		icon = GFX_goal_focus_mass_produce_ships
+		icon = GFX_Goal_gunboat_focus
 		x = 82
 		y = 10
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5417,10 +5454,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_player_choice_3
-		icon = GFX_focus_battleship_production
+		icon = GFX_Goal_ironclad_focus
 		x = 84
 		y = 10
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5437,10 +5474,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_focus_player_choice_4
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Goal_iron_convoy_focus
 		x = 88
 		y = 10
-		cost = 50
+		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5460,7 +5497,7 @@ focus_tree = {
 		icon = GFX_ENG_focus_royal_navy_2
 		x = 83
 		y = 11
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 40
@@ -5484,7 +5521,7 @@ focus_tree = {
 		icon = GFX_goal_focus_britannia_rules_waves
 		x = 83
 		y = 12
-		cost = 50
+		cost = 35
 		available_if_capitulated = no
 		available = { always = no }
 		ai_will_do = {
@@ -5530,7 +5567,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 0
 		y = 1
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1857_elections
@@ -5558,7 +5595,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 2
 		y = 1
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1857_elections
@@ -5583,7 +5620,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -2
 		y = 1
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1857_elections
@@ -5607,7 +5644,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 1
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1857_elections
@@ -5620,14 +5657,16 @@ focus_tree = {
 			has_completed_focus = ENG_focus_restore_peace_india
 		}
 
+		mutually_exclusive = {
+			focus = ENG_focus_ignore_the_indian_issue
+		}
+
 		prerequisite = {
 			focus = ENG_focus_matrimonial_causes_act 
 		}
-		
 		prerequisite = {
 		    focus = ENG_focus_Obscene_publications_act
 		}
-		
 		prerequisite = {
 		    focus = ENG_focus_Inclosure_act_1857
 		}
@@ -5636,7 +5675,6 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = ENG_decision_government_of_india_act
 		}
-
 	}
 
 	focus = {
@@ -5644,7 +5682,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -1
 		y = 2
-		cost = 70
+		cost = 7
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1857_elections
@@ -5657,14 +5695,16 @@ focus_tree = {
 			has_completed_focus = ENG_focus_restore_peace_india
 		}
 
+		mutually_exclusive = {
+			focus = ENG_focus_government_of_india_act
+		}
+
 		prerequisite = {
 			focus = ENG_focus_matrimonial_causes_act 
 		}
-		
 		prerequisite = {
 		    focus = ENG_focus_Obscene_publications_act
 		}
-		
 		prerequisite = {
 		    focus = ENG_focus_Inclosure_act_1857
 		}
@@ -5672,12 +5712,11 @@ focus_tree = {
 		
 		completion_reward = {
 		}
-
 	}
 
 	focus = {
 		id = ENG_focus_conspiracy_to_murder_bill
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		x = 0
 		y = 3
 		cost = 7
@@ -5690,13 +5729,11 @@ focus_tree = {
 		}
 
 		available = {
-
 			date > 1858.2.1
 			OR = {
 				FRA = { has_country_flag = fra_orsini_success }
 				FRA = { has_country_flag = fra_orsini_failure }
 			}
-
 		}
 
 		prerequisite = {
@@ -5705,9 +5742,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-
-			country_event = britainpolitical.2
-
+			country_event = britain.69
 		}
 	}
 
@@ -5742,8 +5777,8 @@ focus_tree = {
 		
 		completion_reward = {
 
-			ENG = { country_event = { id = britainpolitical.1 days = 10 } }
-			country_event = britainfocus.12
+			country_event = britain.68
+			country_event = britain.81
 		}
 	}
 
@@ -5752,7 +5787,7 @@ focus_tree = {
 	### Will be completed by event
 	focus = {
 		id = ENG_focus_Palmerston_Wins
-		icon = GFX_goal_focus_palmerston_government
+		icon = GFX_ENG_focus_portrait_lord_palmerston
 		x = -3
 		y = 1
 		cost = 7
@@ -5775,8 +5810,8 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			country_event = britainfocus.11
-			country_event = britainfocus.13
+			country_event = britain.80
+			country_event = britain.82
 
 		}
 	}
@@ -5786,7 +5821,7 @@ focus_tree = {
 	### Will be completed by event
 	focus = {
 		id = ENG_focus_Derby_Wins
-		icon = GFX_goal_focus_derby_government
+		icon = GFX_ENG_focus_portrait_edward_smith_stanley
 		x = 3
 		y = 1
 		cost = 7
@@ -5796,7 +5831,7 @@ focus_tree = {
 
 		relative_position_id = ENG_focus_1859_elections
 		mutually_exclusive = { focus = ENG_focus_Palmerston_Wins }
-
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 
 		ai_will_do = {
 			factor = 1
@@ -5808,7 +5843,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-		   	country_event = britainfocus.39
+		   	country_event = britain.103
 		}
 	}
 
@@ -5818,7 +5853,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -3
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -5843,7 +5878,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -1
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -5872,7 +5907,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 1
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -5897,7 +5932,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 3
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -5922,7 +5957,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -3
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -5946,7 +5981,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -1
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -5970,7 +6005,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 1
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -5994,7 +6029,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 3
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -6018,7 +6053,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -3
 		y = 4
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -6037,7 +6072,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			unlock_decision_tooltip = ENG_decision_criminal_law_consolidation_acts
+			unlock_decision_tooltip = ENG_decision_habeas_corpus_act
 		}
 	}
 
@@ -6046,7 +6081,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -1
 		y = 4
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -6070,7 +6105,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 1
 		y = 4
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -6094,7 +6129,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 3
 		y = 4
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1859_elections
@@ -6123,7 +6158,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk
 		x = 25
 		y = 9
-		cost = 70
+		cost = 7
 		available_if_capitulated = no
 
 		ai_will_do = {
@@ -6142,11 +6177,10 @@ focus_tree = {
 		completion_reward = {
 
 			random_list = {
-				20 = {country_event = { id= britainpoliticalflavour.4 days = 10 } }
+				20 = {country_event = { id= britain.56 days = 10 } }
 				80 = {}
-
 			}
-			country_event = britainpolitical.5
+			country_event = britain.119
 		}
 	}
 
@@ -6154,7 +6188,7 @@ focus_tree = {
 	### Will be completed by event
 	focus = {
 		id = ENG_focus_Palmerston_wins2
-		icon = GFX_goal_focus_palmerston_government
+		icon = GFX_ENG_focus_portrait_lord_palmerston
 		x = -2
 		y = 1
 		cost = 7
@@ -6177,9 +6211,10 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			country_event = britainfocus.40
-			country_event = britainfocus.17
-
+			country_event = britain.104
+			hidden_effect = {
+				country_event = { id = britain.84 days = 14 }
+			}
 		}
 	}
 
@@ -6187,7 +6222,7 @@ focus_tree = {
 	### Will be completed by event
 	focus = {
 		id = ENG_focus_Derby_wins2
-		icon = GFX_goal_focus_derby_government
+		icon = GFX_ENG_focus_portrait_edward_smith_stanley
 		x = 2
 		y = 1
 		cost = 7
@@ -6197,7 +6232,7 @@ focus_tree = {
 
 		relative_position_id = ENG_focus_1865_general_elections
 		mutually_exclusive = { focus = ENG_focus_Palmerston_wins2 }
-
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 
 		ai_will_do = {
 			factor = 1
@@ -6209,9 +6244,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			country_event = britainfocus.41
-			country_event = britainfocus.19
-
+			country_event = britain.105
 		}
 	}
 
@@ -6220,7 +6253,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -2
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1865_general_elections
@@ -6236,7 +6269,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-		     unlock_decision_tooltip = ENG_decision_parliamentary_oaths_act_1866
+		    unlock_decision_tooltip = ENG_decision_parliamentary_oaths_act_1866
 		}
 	}
 
@@ -6245,7 +6278,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 2
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1865_general_elections
@@ -6272,7 +6305,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 0
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		available = {
@@ -6295,8 +6328,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			country_event = { id = britainfocus.21 }
-
+			country_event = { id = britain.88 }
 		}
 	}
 
@@ -6305,7 +6337,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 0
 		y = 4
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		available = {
@@ -6329,7 +6361,6 @@ focus_tree = {
 		}
 	}
 
-
 	### 1868 General elections
 	focus = {
 		id = ENG_focus_1868_general_elections
@@ -6350,17 +6381,15 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			country_event = britainpolitical.6
-			country_event = britainfocus.23
-			ENG = { country_event = { id = britainfocus.26 days = 90 } }
-			USA = { country_event = { id = britainfocus.26 days = 90 } }
+			country_event = britain.120
+			country_event = britain.89
 		}
 	}
 
 
 	focus = {
 		id = ENG_focus_Gladstone_wins
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_ENG_focus_portrait_william_ewart_gladstone
 		x = -2
 		y = 1
 		cost = 7
@@ -6385,14 +6414,14 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			country_event = britainfocus.24
-			country_event = britainfocus.42
+			country_event = britain.90
+			country_event = britain.106
 		}
 	}
 
 	focus = {
 		id = ENG_focus_Disraeli_wins
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_ENG_focus_portrait_benjamin_disraeli
 		x = 2
 		y = 1
 		cost = 7
@@ -6414,10 +6443,11 @@ focus_tree = {
 			focus = ENG_focus_1868_general_elections
 		}
 		search_filters = {  FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
 		
 		completion_reward = {
-			ENG = { country_event = { id = britainfocus.25 days = 90 } }
-			ENG = { country_event = { id = britainfocus.43 days = 5 } }
+			country_event = { id = britain.91 days = 90 }
+			country_event = britain.107
 		}
 	}
 
@@ -6426,7 +6456,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -3
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1868_general_elections
@@ -6451,7 +6481,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 0
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1868_general_elections
@@ -6476,7 +6506,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 3
 		y = 2
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1868_general_elections
@@ -6501,7 +6531,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = -3
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1868_general_elections
@@ -6525,7 +6555,7 @@ focus_tree = {
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 0
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1868_general_elections
@@ -6549,11 +6579,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ENG_focus_elementary_education_act
+		id = ENG_focus_tramways_act
 		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
 		x = 3
 		y = 3
-		cost = 70
+		cost = 35
 		available_if_capitulated = no
 
 		relative_position_id = ENG_focus_1868_general_elections
@@ -6568,292 +6598,506 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-		    unlock_decision_tooltip = ENG_decision_elementary_education_act
+		    unlock_decision_tooltip = ENG_decision_tramways_act
 		}
 	}
 	
-###LANCER'S SHIT FUCK OFF##
-	
-focus = {
-	id = UK_SOC_disgruntled_workers
-	icon = GFX_focus_uk_soc_disgruntled_workers
-	cost = 70
-	relative_position_id = ENG_focus_1867_reform_act
-	x = 0
-	y = 1
-	available_if_capitulated = no
-	available={
+	### 1874 General elections
+	focus = {
+		id = ENG_focus_1874_general_elections
+		icon = GFX_idea_ENG_focus_enact_law_uk
+		x = 45
+		y = 9
+		cost = 7
+		available_if_capitulated = no
+
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+			date > 1874.4.30
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 		
+		completion_reward = {
+			country_event = britain.121
+		}
 	}
-	completion_reward = {
 
+
+	focus = {
+		id = ENG_focus_Gladstone_wins2
+		icon = GFX_ENG_focus_portrait_william_ewart_gladstone
+		x = -2
+		y = 1
+		cost = 7
+		available_if_capitulated = no
+
+		available = { always = no }
+
+		relative_position_id = ENG_focus_1874_general_elections
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+			focus = ENG_focus_Disraeli_wins2
+		}
+
+		prerequisite = {
+			focus = ENG_focus_1874_general_elections
+		}
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			country_event = britain.117
+			country_event = { id = britain.129 days = 90 }
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_Disraeli_wins2
+		icon = GFX_ENG_focus_portrait_benjamin_disraeli
+		x = 2
+		y = 1
+		cost = 7
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_marxs_activities_in_london
-	icon = GFX_focus_uk_soc_marxs_activities_in_london
-	cost = 70
-	relative_position_id = UK_SOC_disgruntled_workers
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		available = { always = no }
+
+		relative_position_id = ENG_focus_1874_general_elections
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		mutually_exclusive = {
+			focus = ENG_focus_Gladstone_wins2
+		}
+
+		prerequisite = {
+			focus = ENG_focus_1874_general_elections
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {
+			ENG = { country_event = { id = britain.118 days = 5 } }
+		}
 	}
-	prerequisite = { focus = UK_SOC_disgruntled_workers }
-	completion_reward = {
 
+	focus = {
+		id = ENG_focus_public_health_act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = -3
+		y = 2
+		cost = 35
+		available_if_capitulated = no
 
-		custom_effect_tooltip = UK_SOC_marxs_activities_in_london_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_marxs_activities_in_london }
+		relative_position_id = ENG_focus_1874_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Disraeli_wins2
+			focus = ENG_focus_Gladstone_wins2
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_public_health_act
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_customs_consolidation_act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 3
+		y = 2
+		cost = 35
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_das_kapital_volume_1
-	icon = GFX_focus_uk_soc_das_kapital_volume_1
-	cost = 70
-	relative_position_id = UK_SOC_marxs_activities_in_london
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		relative_position_id = ENG_focus_1874_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Disraeli_wins2
+			focus = ENG_focus_Gladstone_wins2
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_customs_consolidation_act
+		}
 	}
-	prerequisite = { focus = UK_SOC_marxs_activities_in_london }
-	completion_reward = {
 
+	focus = {
+		id = ENG_focus_commons_act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 0
+		y = 2
+		cost = 35
+		available_if_capitulated = no
 
-		custom_effect_tooltip = UK_SOC_das_kapital_volume_1_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_das_kapital_volume_1 }
+		relative_position_id = ENG_focus_1874_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Disraeli_wins2
+			focus = ENG_focus_Gladstone_wins2
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_commons_act
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_cruelty_animals_act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = -3
+		y = 3
+		cost = 35
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_denial_of_reform
-	icon = GFX_focus_uk_soc_denial_of_reform
-	cost = 70
-	relative_position_id = UK_SOC_das_kapital_volume_1
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		relative_position_id = ENG_focus_1874_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_public_health_act
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_cruelty_animals_act
+		}
 	}
-	prerequisite = { focus = UK_SOC_das_kapital_volume_1 }
-	completion_reward = {
 
+	focus = {
+		id = ENG_focus_chelsea_hospital_act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 3
+		y = 3
+		cost = 35
+		available_if_capitulated = no
 
-		custom_effect_tooltip = UK_SOC_denial_of_reform_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_denial_of_reform }
+		relative_position_id = ENG_focus_1874_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_customs_consolidation_act
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_chelsea_hospital_act
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
-
-focus = {
-	id = UK_SOC_international_kapital
-	icon = GFX_focus_uk_soc_international_kapital
-	cost = 70
-	relative_position_id = UK_SOC_denial_of_reform
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+	focus = {
+		id = ENG_focus_ballot_act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 0
+		y = 3
+		cost = 35
+		available_if_capitulated = no
+	
+		relative_position_id = ENG_focus_1874_general_elections
+	
+		ai_will_do = {
+			factor = 60
+		}
+	
+		prerequisite = {
+			focus = ENG_focus_commons_act
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_ballot_act
+		}
 	}
-	prerequisite = { focus = UK_SOC_denial_of_reform }
-	completion_reward = {
+
+	### 1880 General elections
+	focus = {
+		id = ENG_focus_1880_general_elections
+		icon = GFX_idea_ENG_focus_enact_law_uk
+		x = 56
+		y = 9
+		cost = 7
+		available_if_capitulated = no
 
 
-		custom_effect_tooltip = UK_SOC_international_kapital_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_international_kapital }
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+			date > 1880.3.31
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			country_event = britain.122
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_Cavendish_wins
+		icon = GFX_ENG_focus_portrait_spencer_cavendish
+		x = -2
+		y = 1
+		cost = 7
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_the_many_who_work
-	icon = GFX_focus_uk_soc_the_many_who_work
-	cost = 70
-	relative_position_id = UK_SOC_international_kapital
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		available = { always = no }
+
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = {
+			focus = ENG_focus_Disraeli_wins3
+		}
+
+		prerequisite = {
+			focus = ENG_focus_1880_general_elections
+		}
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			country_event = britain.123
+		}
 	}
-	prerequisite = { focus = UK_SOC_international_kapital }
-	completion_reward = {
 
+	focus = {
+		id = ENG_focus_Disraeli_wins3
+		icon = GFX_ENG_focus_portrait_benjamin_disraeli
+		x = 2
+		y = 1
+		cost = 7
+		available_if_capitulated = no
 
-		custom_effect_tooltip = UK_SOC_the_many_who_work_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_the_many_who_work }
+		available = { always = no }
+
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		mutually_exclusive = {
+			focus = ENG_focus_Cavendish_wins
+		}
+
+		prerequisite = {
+			focus = ENG_focus_1880_general_elections
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ALTHISTORY }
+		
+		completion_reward = {
+			ENG = { country_event = { id = britain.125 days = 5 } }
+			country_event = britain.124
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_Newspaper_Libel_Registration_Act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = -3
+		y = 2
+		cost = 35
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_the_first_internationale
-	icon = GFX_focus_uk_soc_the_first_internationale
-	cost = 70
-	relative_position_id = UK_SOC_the_many_who_work
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Disraeli_wins3
+			focus = ENG_focus_Cavendish_wins
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_Newspaper_Libel_Registration_Act
+		}
 	}
-	prerequisite = { focus = UK_SOC_the_many_who_work }
-	completion_reward = {
 
+	focus = {
+		id = ENG_focus_Married_Womens_Property_Act 
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 0
+		y = 2
+		cost = 35
+		available_if_capitulated = no
 
-		custom_effect_tooltip = UK_SOC_the_first_internationale_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_the_first_internationale }
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Disraeli_wins3
+			focus = ENG_focus_Cavendish_wins
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_Married_Womens_Property_Act
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_Conveying_Law_Property_Act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 3
+		y = 2
+		cost = 35
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_first_urban_strikes
-	icon = GFX_focus_uk_soc_first_urban_strikes
-	cost = 70
-	relative_position_id = UK_SOC_the_first_internationale
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Disraeli_wins3
+			focus = ENG_focus_Cavendish_wins
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_Conveying_Law_Property_Act
+		}
 	}
-	prerequisite = { focus = UK_SOC_the_first_internationale }
-	completion_reward = {
 
+	focus = {
+		id = ENG_focus_Electric_Lighting_Act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 3
+		y = 3
+		cost = 35
+		available_if_capitulated = no
 
-		custom_effect_tooltip = UK_SOC_first_urban_strikes_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_first_urban_strikes }
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Conveying_Law_Property_Act
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_Electric_Lighting_Act
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_Municipal_Corporations_Act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = 0
+		y = 3
+		cost = 35
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_socio_industrial_revolution
-	icon = GFX_focus_uk_soc_socio_industrial_revolution
-	cost = 70
-	relative_position_id = UK_SOC_first_urban_strikes
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Married_Womens_Property_Act 
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_Municipal_Corporations_Act
+		}
 	}
-	prerequisite = { focus = UK_SOC_first_urban_strikes }
-	completion_reward = {
 
+	focus = {
+		id = ENG_focus_National_Debt_act
+		icon = GFX_idea_ENG_focus_enact_law_uk_parliament
+		x = -3
+		y = 3
+		cost = 35
+		available_if_capitulated = no
 
-		custom_effect_tooltip = UK_SOC_socio_industrial_revolution_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_socio_industrial_revolution }
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_Newspaper_Libel_Registration_Act
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_decision_National_Debt_act
+		}
 	}
-	ai_will_do = { base = 10 }
 
-}
+	focus = {
+		id = ENG_focus_1885_transfer
+		icon = GFX_Focus_Law_Vote_1
+		x = 0
+		y = 4
+		cost = 7
+		available_if_capitulated = no
 
-focus = {
-	id = UK_SOC_welsh_miners_strike
-	icon = GFX_focus_uk_soc_welsh_miners_strike
-	cost = 70
-	relative_position_id = UK_SOC_socio_industrial_revolution
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
+		relative_position_id = ENG_focus_1880_general_elections
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		prerequisite = {
+			focus = ENG_focus_National_Debt_act
+		}
+		prerequisite = {
+			focus = ENG_focus_Municipal_Corporations_Act
+		}
+		prerequisite = {
+			focus = ENG_focus_Electric_Lighting_Act
+		}
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+			custom_effect_tooltip = CAN_END
+		}
 	}
-	prerequisite = { focus = UK_SOC_socio_industrial_revolution }
-	completion_reward = {
-
-
-		custom_effect_tooltip = UK_SOC_welsh_miners_strike_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_welsh_miners_strike}
-	}
-	ai_will_do = { base = 10 }
-
-}
-
-focus = {
-	id = UK_SOC_the_beginning_of_arms
-	icon = GFX_focus_uk_soc_the_beginning_of_arms
-	cost = 70
-	relative_position_id = UK_SOC_welsh_miners_strike
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
-	}
-	prerequisite = { focus = UK_SOC_welsh_miners_strike }
-	completion_reward = {
-
-
-		custom_effect_tooltip = UK_SOC_the_beginning_of_arms_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_the_beginning_of_arms}
-	}
-	ai_will_do = { base = 10 }
-
-}
-
-focus = {
-	id = UK_SOC_discontent_turns_to_hatred
-	icon = GFX_focus_uk_soc_discontent_turns_to_hatred
-	cost = 70
-	relative_position_id = UK_SOC_the_beginning_of_arms
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
-	}
-	prerequisite = { focus = UK_SOC_the_beginning_of_arms }
-	completion_reward = {
-
-
-		custom_effect_tooltip = UK_SOC_discontent_turns_to_hatred_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_discontent_turns_to_hatred}
-	}
-	ai_will_do = { base = 10 }
-
-}
-
-focus = {
-	id = UK_SOC_red_dawn_over_london
-	icon = GFX_focus_uk_soc_red_dawn_over_london
-	cost = 70
-	relative_position_id = UK_SOC_discontent_turns_to_hatred
-	x = 0
-	y = 1
-	#available_if_capitulated = no
-	available = {
-		has_war = no
-	}
-	prerequisite = { focus = UK_SOC_discontent_turns_to_hatred }
-	completion_reward = {
-
-
-		custom_effect_tooltip = UK_SOC_red_dawn_over_london_tooltip
-		hidden_effect = { set_country_flag = UK_SOC_red_dawn_over_london}
-	}
-	ai_will_do = { base = 10 }
-
-}
-
 }

@@ -51,7 +51,7 @@
 		sfund_private_ventures_only
 
 				 #NATIONAL SPIRITS
-
+					egy_vic_debt
 	}
 
  add_timed_idea = {
@@ -102,61 +102,67 @@ set_popularities = {
 	}
 
 	#How to set up initial debt_level
-	#VEN = {
-	#	add_to_variable = {var = debt_level value = 1} #Venezuela's National Debt amounts to 31.5m Dollars (= 6.55m Pound Sterling) as of 1857; income per year 2.7m Dollar (= 0.56m Pound Sterling) = 11.70 GDP of debt
-	#}
+	VEN = {
+		add_to_variable = {var = debt_level value = 12} #Venezuela's National Debt amounts to 31.5m Dollars (= 6.55m Pound Sterling) as of 1857; income per year 2.7m Dollar (= 0.56m Pound Sterling) = 11.70 GDP of debt
+		add_to_variable = {var = SPR_debt_repayments_level value = 10}
+		set_country_flag = SPR_paying_debt_interest_flag
+	}
 
 	# POLITICAL LEADERS
 
-	create_country_leader = {
-		name = "Jose Tadeo Monagas"
-		desc = "POLITICS_JOSE_TADEO_MONAGAS_DESC"
-		picture = "Portrait_VEN_Jose_Tadeo_Monagas.dds"
-		expire = 1900.1.1
-		ideology = conserv_liberal
-		traits = { }
-	}
+	#create_country_leader = {
+	#	name = "Jose Tadeo Monagas"
+	#	desc = "POLITICS_JOSE_TADEO_MONAGAS_DESC"
+	#	picture = "Portrait_VEN_Jose_Tadeo_Monagas.dds"
+	#	expire = 1900.1.1
+	#	ideology = conserv_liberal
+	#	traits = { }
+	#}
+	recruit_character = VEN_Jose_Tadeo_Monagas
 
- create_country_leader = {
-		name = "Julían Castro"
-		desc = "POLITICS_JOSE_TADEO_MONAGAS_DESC"
-		picture = "Portrait_VEN_Julian_Castro.dds"
-		expire = 1867.9.10
-		ideology = conserv
-		traits = { }
-	}
+	#create_country_leader = {
+	#	name = "Julían Castro"
+	#	desc = "POLITICS_JOSE_TADEO_MONAGAS_DESC"
+	#	picture = "Portrait_VEN_Julian_Castro.dds"
+	#	expire = 1867.9.10
+	#	ideology = conserv
+	#	traits = { }
+	#}
+	recruit_character = VEN_Julian_Castro
 
- create_corps_commander = {
-		name = "José Antonio Paez"
-		picture = "Portrait_VEN_Jose_Paez.dds"
-		traits = { urban_assault_specialist }
-		skill = 3
-		attack_skill = 3
-		defense_skill = 2
-		planning_skill = 2
-		logistics_skill = 2
-	}
+	#create_corps_commander = {
+	#	name = "José Antonio Paez"
+	#	picture = "Portrait_VEN_Jose_Paez.dds"
+	#	traits = { urban_assault_specialist }
+	#	skill = 3
+	#	attack_skill = 3
+	#	defense_skill = 2
+	#	planning_skill = 2
+	#	logistics_skill = 2
+	#}
+	recruit_character = VEN_Jose_Paez
 
-	 create_corps_commander = {
-		name = "Léon de Cordero y Orberto"
-		picture = "Portrait_VEN_Leon_de_Cordero_y_Orberto.dds"
-		skill = 2
-		attack_skill = 1
-		defense_skill = 2
-		planning_skill = 1
-		logistics_skill = 2
-	}
-
-	 create_corps_commander = {
-		name = "Pedro Estanislao Ramos"
-		picture = "Portrait_VEN_Pedro_Estanislao_Ramos.dds"
-		skill = 2
-		attack_skill = 1
-		defense_skill = 2
-		planning_skill = 1
-		logistics_skill = 2
-	}
-
+	#create_corps_commander = {
+	#	name = "Léon de Cordero y Orberto"
+	#	picture = "Portrait_VEN_Leon_de_Cordero_y_Orberto.dds"
+	#	skill = 2
+	#	attack_skill = 1
+	#	defense_skill = 2
+	#	planning_skill = 1
+	#	logistics_skill = 2
+	#}
+	recruit_character = VEN_Leon_de_Cordero_y_Orberto
+	
+	#create_corps_commander = {
+	#	name = "Pedro Estanislao Ramos"
+	#	picture = "Portrait_VEN_Pedro_Estanislao_Ramos.dds"
+	#	skill = 2
+	#	attack_skill = 1
+	#	defense_skill = 2
+	#	planning_skill = 1
+	#	logistics_skill = 2
+	#}
+	recruit_character = VEN_Pedro_Estanislao_Ramos
 
 	if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -179,13 +185,13 @@ set_popularities = {
 
 }
 
-1861.9.10 = {
-	create_country_leader = {
-		name = "José Antonio Paez"
-		desc = "POLITICS_JOSE_TADEO_MONAGAS_DESC"
-		picture = "Portrait_VEN_Jose_Paez.dds"
-		expire = 1880.1.1
-		ideology = federal
-		traits = { }
-	}
-}
+#1861.9.10 = {
+#	create_country_leader = {
+#		name = "José Antonio Paez"
+#		desc = "POLITICS_JOSE_TADEO_MONAGAS_DESC"
+#		picture = "Portrait_VEN_Jose_Paez.dds"
+#		expire = 1880.1.1
+#		ideology = federal
+#		traits = { }
+#	}
+#}

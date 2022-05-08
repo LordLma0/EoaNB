@@ -3,10 +3,15 @@ state = {
 	name = "STATE_1047"
 	manpower = 12841
 
+	local_supplies=0.0 
+
 	state_category = pastoral
 
 	history = {
 		owner = SIX
+		1870.1.1= {
+			owner = DAK
+		}
 		buildings = {
 			infrastructure = 2
 		}

@@ -115,6 +115,36 @@
 		}
 		localization_key = "[GetMHCArmySecImageDEN]"
 	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmySecImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmySecImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmySecImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmySecImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmySecImageAUS]"
+	}
 	###Army Sec Replacement Marker###
 	
 	text = {
@@ -241,6 +271,36 @@ defined_text = {
 			tag = DEN
 		}
 		localization_key = "[GetMHCArmyChiefImageDEN]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyChiefImageAUS]"
 	}
 	###Army Chief Replacement Marker###
 	
@@ -369,6 +429,36 @@ defined_text = {
 		}
 		localization_key = "[GetMHCArmyVChiefImageDEN]"
 	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
 	###Army VChief Replacement Marker###
 	
 	text = {
@@ -495,6 +585,36 @@ defined_text = {
 			tag = DEN
 		}
 		localization_key = "[GetMHCArmyVChiefImageDEN]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyVChiefImageAUS]"
 	}
 	###Army VChief Replacement Marker###
 	
@@ -623,6 +743,36 @@ defined_text = {
 		}
 		localization_key = "[GetMHCArmyQuartImageDEN]"
 	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyQuartImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyQuartImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyQuartImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyQuartImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyQuartImageAUS]"
+	}
 	###Army Quart Replacement Marker###
 	
 	text = {
@@ -750,6 +900,36 @@ defined_text = {
 		}
 		localization_key = "[GetMHCArmyPChiefImageDEN]"
 	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyPChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyPChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyPChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyPChiefImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyPChiefImageAUS]"
+	}
 	###Army PChief Replacement Marker###
 	
 	text = {
@@ -876,6 +1056,36 @@ defined_text = {
 			tag = DEN
 		}
 		localization_key = "[GetMHCArmyInsImageDEN]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyInsImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyInsImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyInsImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyInsImageAUS]"
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = "[GetMHCArmyInsImageAUS]"
 	}
 	###Army Ins Replacement Marker###
 	

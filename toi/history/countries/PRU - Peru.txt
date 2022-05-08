@@ -51,6 +51,7 @@
 		sfund_private_ventures_only
 
 		#NATIONAL SPIRITS
+		egy_vic_debt
 		PRU_BSupport
 	PRU_1856_constitution
 	PRU_the_northern_campaign
@@ -101,83 +102,91 @@ set_popularities = {
 	}
 
 	#How to set up initial debt_level
-	#PRU = {
-	#	add_to_variable = {var = debt_level value = 1} #Peru's National Debt amounts to 46.70m Pesos (= 9.71m Pound Sterling) as of 1856; income per year 16m Pesos (= 2.44m Pound Sterling; 12m Pesos from Guano alone!) = 3.98 GDP of debt
-	#}
+	PRU = {
+		add_to_variable = {var = debt_level value = 4} #Peru's National Debt amounts to 46.70m Pesos (= 9.71m Pound Sterling) as of 1856; income per year 16m Pesos (= 2.44m Pound Sterling; 12m Pesos from Guano alone!) = 3.98 GDP of debt
+		add_to_variable = {var = SPR_debt_repayments_level value = 3}
+		set_country_flag = SPR_paying_debt_interest_flag
+		set_country_flag = PRU_coup_is_original_tag
+	}
 
 	# POLITICAL LEADERS
 
-create_country_leader = {
-		name = "Ramón Castilla"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_PRU_Ramon_Castilla.dds"
-		expire = 1900.1.1
-		ideology = conserv_liberal
-}
+#create_country_leader = {
+#		name = "Ramón Castilla"
+#		desc = "POLITICS_TEMP_DESC"
+#		picture = "Portrait_PRU_Ramon_Castilla.dds"
+#		expire = 1900.1.1
+#		ideology = conserv_liberal
+#}
+#create_field_marshal ={
+#	name = "Ramon Castilla"
+#	picture = "Portrait_PRU_Ramon_Castilla.dds"
+#	traits = { }
+#	skill = 3
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = PRU_Ramon_Castilla
 
-create_country_leader = {
-		name = "Juan Pezet"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_PRU_Juan_Pezet.dds"
-		expire = 1900.1.1
-		ideology = conserv
-}
+#create_country_leader = {
+#		name = "Juan Pezet"
+#		desc = "POLITICS_TEMP_DESC"
+#		picture = "Portrait_PRU_Juan_Pezet.dds"
+#		expire = 1900.1.1
+#		ideology = conserv
+#}
+recruit_character = PRU_Juan_Pezet
 
-create_field_marshal {
-	name = "Ramon Castilla"
-	picture = "Portrait_PRU_Ramon_Castilla.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+#create_field_marshal ={
+#	name = "Francisco Bolognesi"
+#	picture = "Portrait_PRU_Francisco_Bolognesi.dds"
+#	traits = { }
+#	skill = 2
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = PRU_Francisco_Bolognesi
 
-create_field_marshal {
-	name = "Francisco Bolognesi"
-	picture = "Portrait_PRU_Francisco_Bolognesi.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+#create_field_marshal ={
+#	name = "Miguel de San Román"
+#	picture = "Portrait_PRU_Miguel_Roman.dds"
+#	traits = { }
+#	skill = 2
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = PRU_Miguel_Roman
 
-create_field_marshal {
-	name = "Miguel de San Román"
-	picture = "Portrait_PRU_Miguel_Roman.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander {
-	name = "Guillermo Miller"
-	picture = "Portrait_PRU_Guillermo_Miller.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+#create_corps_commander ={
+#	name = "Guillermo Miller"
+#	picture = "Portrait_PRU_Guillermo_Miller.dds"
+#	traits = { }
+#	skill = 2
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = PRU_Guillermo_Miller
 
 
-create_corps_commander {
-	name = "Andrés Avelino Cáceres"
-	picture = "Portrait_PRU_Andres_Caceres.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+#create_corps_commander ={
+#	name = "Andrés Avelino Cáceres"
+#	picture = "Portrait_PRU_Andres_Caceres.dds"
+#	traits = { }
+#	skill = 2
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = PRU_Andres_Caceres
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

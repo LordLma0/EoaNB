@@ -16,6 +16,7 @@
 		agrarian
 		no_heir
 		absolute_monarchy
+                ROM_ghika_hos
 
 		civilian_economy
 		limited_exports
@@ -47,6 +48,7 @@
 	ROM_battleground
 	ROM_ruined_agriculture
 	ROM_mass_illiteracy
+	ROM_bulgarian_refugees
 	}
 		#Rivals
 		set_variable = { rival_country = OTO.id }
@@ -142,7 +144,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Alexandru Dimitrie Ghica"
 	desc = "POLITICS_AD_GHIKA_DESC"
-	picture = "Portrait_ROM_AD_Ghica.dds"
+	picture = "gfx/leaders/ROM/Portrait_ROM_AD_Ghica.dds"
 	expire = "1870.1.1"
 	ideology = absolutism
 	traits = {
@@ -186,7 +188,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ion C. Brătianu"
 	desc = "POLITICS_BRATIANU_DESC"
-	picture = "Portrait_ROM_I.C.Brat.dds"
+	picture = "GFX_Portrait_ROM_I_C_Brat"
 	expire = "1965.1.1"
 	ideology = reactionary # Radical Liberals represented by radical democracy until the foundation of the National Liberal Party
 	traits = {
@@ -194,40 +196,18 @@ create_country_leader = {
 	}
 }
 
-create_corps_commander = {
-		name = "Alexander D. Macedonsky"
-		picture = "Portrait_ROM_A_Macedonski.dds"
-		traits = { }
-		skill = 3
-		attack_skill = 2
-		defense_skill = 2
-		planning_skill = 2
-		logistics_skill = 3
- }
-
-create_corps_commander = {
-		name = "Nicolae Haralambie"
-		picture = "Portrait_ROM_N_HARALAMBIE.dds"
-		traits = { }
-		skill = 1
-		attack_skill = 1
-		defense_skill = 2
-		planning_skill = 1
-		logistics_skill = 3
- }
-
- create_corps_commander = {
-		name = "Nicolae C. Golescu"
-		picture = "Portrait_ROM_N_golescu.dds"
-		traits = { }
-		skill = 1
-		attack_skill = 1
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
- }
-
-
+###Generals
+	recruit_character = ROM_alexander_macedonsky
+	recruit_character = ROM_nicolae_haralambie
+	recruit_character = ROM_nicolae_golescu
+	recruit_character = ROM_gheroghe_costraforu
+	recruit_character = ROM_christian_tell
+	recruit_character = ROM_Ion_Ghica
+	recruit_character = ROM_Constantin_Rosetti
+	recruit_character = ROM_Nicolae_Kretzulescu
+	recruit_character = ROM_Ion_Heliade_Radulescu
+	recruit_character = ROM_Ion_Ionescu_Brad
+	recruit_character = ROM_Constantin_Robescu
 }
 1870.1.1={
 	 set_cosmetic_tag = ROM_united_principalities

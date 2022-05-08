@@ -2,6 +2,8 @@
 state = {
 	id = 1246
 	name = "STATE_1246" # Gilgit
+
+	local_supplies=0.0 
 	manpower = 421694
 	state_category = wasteland
 
@@ -15,8 +17,8 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = KAS
 		1857.1.1 = {
-			owner = KAS
 			add_core_of = KAS
 			add_claim_by = RAJ
 			buildings = {
@@ -36,7 +38,7 @@ state = {
 			add_to_array = { state_culture_array = 190 } # Punjabi
 			add_to_array = { state_culture_array_num = 0.04 }
 	
-			add_to_array = { state_religion_array = 8 } # Sunni	
+			add_to_array = { state_religion_array = 8 } # Sunni
 			add_to_array = { state_religion_array_num = 0.41 }
 			add_to_array = { state_religion_array = 19 } # Sikh
 			add_to_array = { state_religion_array_num = 0.35 }

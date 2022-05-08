@@ -7,7 +7,9 @@ state = {
 	manpower =8430
 	history = {
 		owner = COM
-
+		1870.1.1= {
+			owner = USA
+		}
 		buildings = {
 			infrastructure = 1
 		}
@@ -35,5 +37,5 @@ state = {
 		set_state_flag = NA_B_Disregardable_State
 	}
 	state_category = pastoral
-	
+	local_supplies=0.0 
 }

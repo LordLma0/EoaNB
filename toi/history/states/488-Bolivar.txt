@@ -3,6 +3,8 @@ state = {
 	name = "STATE_488"
 	manpower = 162123
 
+	local_supplies=0.0 
+
 	resources = {
 		wood = 10
 		iron=2
@@ -17,6 +19,12 @@ state = {
 
 		}
 		add_core_of = VEN
+		
+		add_to_array = { state_culture_array = 551 } #Guyanan
+		add_to_array = { state_culture_array_num = 1 }
+		
+		add_to_array = { state_religion_array = 2 } #Catholic
+		add_to_array = { state_religion_array_num = 1 }
 	}
 
 	provinces = {

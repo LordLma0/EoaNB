@@ -2,6 +2,8 @@ state = {
 	id = 396
 	name = "STATE_396"
 	manpower = 1350428
+
+	local_supplies=0.0 
 	state_category = large_town
 	resources = {
 		wood = 18
@@ -17,6 +19,9 @@ state = {
 			infrastructure = 7
 			farm = 2
 			industrial_complex = 1
+			1595 = {
+				supply_node = 1
+			}
 		}
 		victory_points = { 870 2 }
 		victory_points = { 9654 1 }

@@ -2,6 +2,8 @@
 state = {
 	id = 1059
 	name = "STATE_1059"
+
+	local_supplies=0.0 
 	manpower = 413470
 
 	state_category = city
@@ -20,8 +22,12 @@ state = {
 			3735 5
 		}
 		buildings = {
-			infrastructure = 6
+			infrastructure = 5
 			arms_factory = 1
+			dockyard = 1
+			740 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = SPR
 		#add_core_of = BAS

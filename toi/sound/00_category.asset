@@ -48,7 +48,6 @@ category = {
 		#easter egg superevents
 		eoanb_acw_ger_super
 	}
- 
 	compressor = {
 		enabled = yes
 		pregain = 3.0

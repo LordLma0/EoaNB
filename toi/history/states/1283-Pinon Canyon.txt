@@ -1,12 +1,15 @@
 state = {
 	id = 1283
 	name = "STATE_1283"
-	provinces = {
+	local_supplies=0.0 
+	provinces = { 
 		1738
 	}
 	history = {
 		owner = COM
-
+		1870.1.1= {
+			owner = DAK
+		}
 		buildings = {
 			infrastructure = 1
 		}

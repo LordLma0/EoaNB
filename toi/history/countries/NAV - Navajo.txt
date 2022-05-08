@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
-	capital = 1287
+	capital = 1288
 
-	oob = "NAV_1857"
+	#oob = "NAV_1857"
 
 	set_convoys = 0
 
@@ -61,6 +61,7 @@
 	add_opinion_modifier = { target = UTA modifier = first_nations_colonial_encroacher_opinion_modifier }
 	add_opinion_modifier = { target = USA modifier = first_nations_colonial_encroacher_opinion_modifier }
 	give_military_access = USA
+	give_military_access = NMX
 
 	set_politics = {
 		ruling_party = fundamentalism
@@ -99,13 +100,14 @@ set_popularities = {
 
 	# POLITICAL LEADERS
 
-create_country_leader = {
-	name = "Barboncito"
-	desc = ""
-	picture = "Portrait_NAV_Barboncito.dds"
-	expire = "1953.3.1"
-	ideology = shamanism
-	traits = {
-	}
-}
+#create_country_leader = {
+#	name = "Barboncito"
+#	desc = ""
+#	picture = "Portrait_NAV_Barboncito.dds"
+#	expire = "1953.3.1"
+#	ideology = shamanism
+#	traits = {
+#	}
+#}
+recruit_character = NAV_Barboncito
 }

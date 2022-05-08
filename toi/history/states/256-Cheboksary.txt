@@ -1,19 +1,31 @@
-
 state = {
 	id =256
 	name = "STATE_256"
+
+	local_supplies=0.0 
 	manpower = 972061
 	
 	state_category = town
 
 	history = {
+		# End of a New Beginning
 		owner = RUS
+		1857.1.1 = {
+		victory_points = {
+			9259 1
+		}
 		buildings = {
 			infrastructure = 2
 		}
+		
+		add_to_array = { state_culture_array = 115 } # Volga Tatar as Chuvash
+		add_to_array = { state_culture_array_num = 0.70 }
+		add_to_array = { state_culture_array = 89 } # Russian
+		add_to_array = { state_culture_array_num = 0.24 }
+		add_to_array = { state_culture_array = 175 } # Mordvins
+		add_to_array = { state_culture_array_num = 0.06 }
+		
 		add_core_of = RUS
-		victory_points = {
-			9259 1
 		}
 	}
 

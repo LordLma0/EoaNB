@@ -2,6 +2,8 @@
 state = {
 	id =955
 	name = "STATE_955"
+
+	local_supplies=0.0 
 	manpower = 22751
 	
 	
@@ -10,7 +12,7 @@ state = {
 	history = {
 		owner = LIE
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
 		}
 		victory_points = {
 			13683 5

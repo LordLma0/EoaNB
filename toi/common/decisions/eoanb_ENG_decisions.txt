@@ -1,52 +1,49 @@
 political_actions = {
 
 	#Develop the Isle of Man
-	eoanb_decision_ENG_develop_IOM = {
-
-		icon = generic_political_discourse
-
-		available = {
-			date > 1860.1.1
-		}
-
-		allowed = { TAG = ENG }
-
-		visible = {
-			country_exists = IOM
-			OR = {
-				ENG = { owns_state = 1152 }
-				any_country = {
-					is_subject_of = ENG
-					owns_state = 1152
-				}
-			}
-			num_of_civilian_factories_available_for_projects > 5
-		}
-
-		fire_only_once = yes
-
-		days_remove = 365
-
-		cost = 50
-
-		complete_effect = {
-			add_opinion_modifier = { target = IOM modifier = eoanb_om_ENG_developed_IOM }
-			reverse_add_opinion_modifier = { target = IOM modifier = eoanb_om_ENG_developed_IOM }
-		}
-
-		remove_effect = {
-			1152 = { add_extra_state_shared_building_slots = 1 }
-			1152 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes }  }
-		}
-
-		modifier = {
-			civilian_factory_use = 5
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
+	#eoanb_decision_ENG_develop_IOM = {
+	#
+	#	icon = generic_political_discourse
+	#
+	#	available = {
+	#		date > 1860.1.1
+	#	}
+	#
+	#	allowed = { TAG = ENG }
+	#
+	#	visible = {
+	#		OR = {
+	#			ENG = { owns_state = 132 }
+	#			any_country = {
+	#				is_subject_of = ENG
+	#				owns_state = 132
+	#			}
+	#		}
+	#		num_of_civilian_factories_available_for_projects > 5
+	#	}
+	#
+	#	fire_only_once = yes
+	#
+	#	days_remove = 365
+	#
+	#	cost = 50
+	#
+	#	complete_effect = {
+	#	}
+	#
+	#	remove_effect = {
+	#		132 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = 3311}  }
+	#		132 = { add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = 3311}  }
+	#		}
+	#
+	#	modifier = {
+	#		civilian_factory_use = 5
+	#	}
+	#
+	#	ai_will_do = {
+	#		base = 0
+	#	}
+	#}
 }
 eoanb_category_economic = {
 
@@ -171,7 +168,6 @@ eoanb_category_economic = {
 		ai_will_do = {
 			base = 1000
 		}
-
 	}
 
 	#Lay a Sea Cable to USA (FOCUS)
@@ -372,9 +368,109 @@ eoanb_category_economic = {
 		ai_will_do = {
 			base = 1000
 		}
-
 	}
 
+	#Resolve tea shortage
+	eoanb_decision_ENG_resolve_tea_shortage = {
+
+		icon = generic_construction
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+			has_idea = ENG_idea_tea_shortage
+			RAJ = {
+				is_subject_of = ENG
+			}
+		}
+
+		visible = {
+			has_idea = ENG_idea_tea_shortage
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			country_event = britain.128
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	#Continue to invest in Indian tea
+	eoanb_decision_ENG_invest_india_tea = {
+
+		icon = generic_construction
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+			has_idea = ENG_idea_indian_tea1
+			RAJ = {
+				is_subject_of = ENG
+			}
+		}
+
+		visible = {
+			has_idea = ENG_idea_indian_tea1
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+
+		days_remove = 365
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			RAJ = {
+				add_ideas = CAN_idea_Exports_to_Britain
+			}
+			757 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			757 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			432 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			432 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			ENG = {
+				swap_ideas = {
+					remove_idea = ENG_idea_indian_tea1
+					add_idea = ENG_idea_indian_tea2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
 }
 
 eoanb_category_worker_unrest_ENG = {
@@ -556,7 +652,7 @@ eoanb_category_worker_unrest_ENG = {
 			add_ideas = ENG_idea_trade_unions_banned
 			hidden_effect = {
 				add_to_variable = { var = ENG_worker_unrest value = 3 }
-				news_event = { id = britainnews.1 random = 24 }
+				news_event = { id = britain.64 random = 24 }
 			}
 		}
 
@@ -781,7 +877,7 @@ eoanb_category_worker_unrest_ENG = {
 		}
 
 		ai_will_do = {
-			base = 10
+			base = 80
 			modifier = {
 				factor = 0.25
 				check_variable = { ENG_worker_unrest < 20 }
@@ -835,7 +931,7 @@ eoanb_category_worker_unrest_ENG = {
 		}
 
 		ai_will_do = {
-			base = 10
+			base = 20
 			modifier = {
 				factor = 0.25
 				check_variable = { ENG_worker_unrest < 20 }
@@ -889,7 +985,7 @@ eoanb_category_worker_unrest_ENG = {
 		}
 
 		ai_will_do = {
-			base = 10
+			base = 80
 			modifier = {
 				factor = 0.25
 				check_variable = { ENG_worker_unrest < 20 }
@@ -949,7 +1045,146 @@ eoanb_category_worker_unrest_ENG = {
 		}
 
 	}
+	
+	ENG_bwr_looming = {
 
+		icon= generic_civil_support
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 952
+					size > 1
+				}
+			}
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 129
+					size > 1
+				}
+			}
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 133
+					size > 1
+				}
+			}
+		}
+		available = {
+			has_completed_focus = ENG_focus_no_more_prudction_delays
+			custom_trigger_tooltip = {
+				tooltip = "Worker unrest is less than 5"
+				check_variable = { ENG_worker_unrest < 5 }
+			}
+		}
+
+		days_mission_timeout = 720
+		fire_only_once = yes
+		
+		activation = {
+			TAG = ENG
+			OR = {
+				has_idea = ENG_idea_working_class_exploitation
+				has_idea = ENG_idea_working_class_exploitation_2
+				has_idea = ENG_idea_working_class_exploitation_3
+				has_idea = ENG_idea_working_class_exploitation_4
+			}
+			has_completed_focus = ENG_focus_provide_false_promises
+			check_variable = { ENG_worker_unrest > 9 }
+			NOT = {
+				AND = {
+					is_ai = yes
+					is_historical_focus_on = yes
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ENG_focus_provide_false_promises
+		}
+			
+		highlight_states = {
+			highlight_state_targets = {
+				state = 128
+				state = 132
+				#state = 126
+			}
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = {id=britain.114}
+		}
+
+		complete_effect = {
+			add_political_power = 50
+		    add_stability = 0.05
+			add_war_support = 0.05
+        }
+    }
+
+	ENG_defeat_BWR = {
+
+		icon= generic_civil_support
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			#controls_state = 126
+			controls_state = 128
+			controls_state = 130
+			controls_state = 132
+		}
+
+		days_mission_timeout = 720
+
+		activation = {
+			BWR={exists = yes}
+			has_war_with = BWR
+		}
+
+		#cancel_trigger = {
+		#
+		#}
+
+		visible = {
+			tag = ENG
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = {id=britain.116}
+			add_stability = -0.4
+			add_political_power = -400
+			add_war_support = -0.3
+			BWR={
+				transfer_state = 123
+				transfer_state = 127
+				transfer_state = 952
+				transfer_state = 125
+				transfer_state = 122
+				transfer_state = 129
+				transfer_state = 131
+				transfer_state = 121
+				transfer_state = 136
+				transfer_state = 120
+				#transfer_state = 1152
+				white_peace = ENG
+			}
+		}
+
+		complete_effect = {
+		    add_stability = 0.05
+			annex_country = {
+   				target = BWR
+    			transfer_troops = no
+			}
+        }
+	}
 }
 
 eoanb_category_war_measures = {
@@ -1032,6 +1267,234 @@ eoanb_category_war_measures = {
 }
 
 eoanb_category_military = {
+
+	ENG_decision_regular_exercises_1 = {
+	
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = ENG_focus_regular_exercises
+			IF = {
+				CAN = {
+					is_subject_of = ENG
+				}
+			}
+		}
+		allowed = { TAG = ENG }		
+		visible = {
+			has_completed_focus = ENG_focus_regular_exercises
+		}
+		
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 120
+
+		complete_effect = {
+			add_manpower = -500
+			add_opinion_modifier = {
+				target = CAN
+				modifier = improved_relations_light
+			}
+		}
+
+		modifier = {
+			experience_gain_army_factor = 0.15
+		}
+
+		remove_effect = {
+			add_manpower = 500
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	ENG_decision_regular_exercises_2 = {
+	
+		icon = generic_prepare_civil_war
+		allowed = { TAG = ENG }
+		available = {
+			has_completed_focus = ENG_focus_regular_exercises
+			IF = {
+				SAF = {
+					is_subject_of = ENG
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ENG_focus_regular_exercises
+		}
+		
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 120
+
+		complete_effect = {
+			add_manpower = -500
+			add_opinion_modifier = {
+				target = SAF
+				modifier = improved_relations_light
+			}
+		}
+
+		modifier = {
+			experience_gain_army_factor = 0.15
+		}
+
+		remove_effect = {
+			add_manpower = 500
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	ENG_decision_regular_exercises_3 = {
+	
+		icon = generic_prepare_civil_war
+		allowed = { TAG = ENG }
+		available = {
+			has_completed_focus = ENG_focus_regular_exercises
+			OR = {
+				AST = {
+					is_subject_of = ENG
+				}
+				NSW = {
+					is_subject_of = ENG
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ENG_focus_regular_exercises
+		}
+		
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 120
+
+		complete_effect = {
+			add_manpower = -500
+			add_opinion_modifier = {
+				target = NSW
+				modifier = improved_relations_light
+			}
+		}
+
+		modifier = {
+			experience_gain_army_factor = 0.15
+		}
+
+		remove_effect = {
+			add_manpower = 500
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	ENG_decision_regular_exercises_4 = {
+	
+		icon = generic_prepare_civil_war
+		allowed = { TAG = ENG }
+		available = {
+			has_completed_focus = ENG_focus_regular_exercises
+			IF = {
+				RAJ = {
+					is_subject_of = ENG
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ENG_focus_regular_exercises
+		}
+		
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 120
+
+		complete_effect = {
+			add_manpower = -500
+			add_opinion_modifier = {
+				target = RAJ
+				modifier = improved_relations_light
+			}
+		}
+
+		modifier = {
+			experience_gain_army_factor = 0.15
+		}
+
+		remove_effect = {
+			add_manpower = 500
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	ENG_decision_regular_exercises_5 = {
+	
+		icon = generic_prepare_civil_war
+		allowed = { TAG = ENG }
+		available = {
+			has_completed_focus = ENG_focus_regular_exercises
+			IF = {
+				NZL = {
+					is_subject_of = ENG
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ENG_focus_regular_exercises
+		}
+		
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 120
+
+		complete_effect = {
+			add_manpower = -500
+			add_opinion_modifier = {
+				target = NZL
+				modifier = improved_relations_light
+			}
+		}
+
+		modifier = {
+			experience_gain_army_factor = 0.15
+		}
+
+		remove_effect = {
+			add_manpower = 500
+			army_experience = 10
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
 
 	#Send a Royal Commission to the VRC
 	eoanb_decision_ENG_commission_vrc = {
@@ -1574,7 +2037,7 @@ eoanb_category_projects = {
         }
 
 		available = {
-			has_full_control_of_state = 126
+			#has_full_control_of_state = 126
 			has_full_control_of_state = 127
 			num_of_civilian_factories_available_for_projects > 3
 		}
@@ -1592,7 +2055,7 @@ eoanb_category_projects = {
 		remove_effect = {
 			custom_effect_tooltip = eoanb_tt_ENG_decision_strategic_fortifications
 			hidden_effect = {
-				126 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 11374 } }
+				#126 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 11374 } }
 				127 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 3501 } }
 				127 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 507 } }
 			}
@@ -1668,7 +2131,7 @@ eoanb_category_projects = {
         }
 
 		available = {
-			has_full_control_of_state = 126
+			#has_full_control_of_state = 126
 			has_full_control_of_state = 127
 			num_of_civilian_factories_available_for_projects > 5
 		}
@@ -1686,7 +2149,7 @@ eoanb_category_projects = {
 		remove_effect = {
 			custom_effect_tooltip = eoanb_tt_ENG_decision_coastal_batteries_east
 			hidden_effect = {
-				126 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 11374 } }
+				#126 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 11374 } }
 				127 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 9458 } }
 				127 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 11446 } }
 				127 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 3501 } }
@@ -1911,9 +2374,17 @@ ENG_fenian_leader_arrest = {
 			add_manpower = -5
 		}
 
-		timeout_effect = {
+		remove_effect = {
 			add_manpower = 4
-		    add_to_variable = {ENG_IRE_fenian_informants = 1}
+			if={
+				limit={
+					NOT={has_variable = ENG_IRE_fenian_informants}
+				}
+				set_variable = { ENG_IRE_fenian_informants = 1 }
+			}
+			else={
+				add_to_variable = {ENG_IRE_fenian_informants = 1}
+			}
 			custom_effect_tooltip = ENG_IRE_increase_informants
 		}
 
@@ -1991,10 +2462,12 @@ ENG_fenian_leader_arrest = {
 		#
 		#}
 
-		highlight_state_targets = {
-			state = 134
-			state = 135
-			state = 113
+		highlight_states = {
+			highlight_state_targets = {
+				state = 134
+				state = 135
+				state = 113
+			}
 		}
 
 		#visible = {
@@ -2124,11 +2597,13 @@ ENG_fenian_leader_arrest = {
 		#
 		#}
 
-		highlight_state_targets = {
-			state = 134
-			state = 135
-			state = 113
-			state = 119
+		highlight_states = {
+			highlight_state_targets = {
+				state = 134
+				state = 135
+				state = 113
+				state = 119
+			}
 		}
 
 		#visible = {
@@ -2147,14 +2622,17 @@ ENG_fenian_leader_arrest = {
 				transfer_state = 119
 				white_peace = ENG
 			}
+			ENG = {
+				remove_ideas = ENG_irish_unrest
+			}
 		}
 
 		complete_effect = {
 		    hidden_effect = {
-					clr_country_flag = fenian_rising_dublin
-			        set_country_flag = fenian_rising_crushed
-					remove_ideas = { ENG_fenian_uprising_ireland }
+				clr_country_flag = fenian_rising_dublin
+			    set_country_flag = fenian_rising_crushed	
             }
+			remove_ideas = { ENG_fenian_uprising_ireland }
 			if={
 				limit ={
 					divisions_in_state = {
@@ -2923,7 +3401,7 @@ eoanb_category_british_industry = {
 
 eoanb_category_british_parliament_ENG = {
 
-ENG_decision_Inclosure_act_1857 = {
+	ENG_decision_Inclosure_act_1857 = {
 
         icon = eng_trade_unions_support
 
@@ -2951,7 +3429,7 @@ ENG_decision_Inclosure_act_1857 = {
 			base = 1000
 		}
     }
-ENG_decision_Obscene_publications_act = {
+	ENG_decision_Obscene_publications_act = {
 
         icon = eng_trade_unions_support
 
@@ -2972,14 +3450,14 @@ ENG_decision_Obscene_publications_act = {
 		cost = 15
 
 		complete_effect = {
-		    ENG = { country_event = { id = british_votes.2 days = 10 } }
+		    ENG = { country_event = { id = british_votes.3 days = 10 } }
 		}
 
 		ai_will_do = {
 			base = 1000
 		}
     }
-ENG_decision_matrimonial_causes_act = {
+	ENG_decision_matrimonial_causes_act = {
 
         icon = eng_trade_unions_support
 
@@ -3000,14 +3478,14 @@ ENG_decision_matrimonial_causes_act = {
 		cost = 15
 
 		complete_effect = {
-		    ENG = { country_event = { id = british_votes.3 days = 10 } }
+		    ENG = { country_event = { id = british_votes.2 days = 10 } }
 		}
 
 		ai_will_do = {
 			base = 1000
 		}
     }
-ENG_decision_government_of_india_act = {
+	ENG_decision_government_of_india_act = {
 
         icon = eng_trade_unions_support
 
@@ -3035,7 +3513,7 @@ ENG_decision_government_of_india_act = {
 			base = 1000
 		}
     }
-ENG_decision_companies_act = {
+	ENG_decision_companies_act = {
 
         icon = eng_trade_unions_support
 
@@ -3064,7 +3542,7 @@ ENG_decision_companies_act = {
 			base = 1000
 		}
     }
-ENG_decision_molestation_workmen_act = {
+	ENG_decision_molestation_workmen_act = {
 
         icon = eng_trade_unions_support
 
@@ -3093,7 +3571,7 @@ ENG_decision_molestation_workmen_act = {
 			base = 1000
 		}
     }
-ENG_decision_offences_against_person_act = {
+	ENG_decision_offences_against_person_act = {
 
         icon = eng_trade_unions_support
 
@@ -3122,7 +3600,7 @@ ENG_decision_offences_against_person_act = {
 			base = 1000
 		}
     }
-ENG_decision_metro_fire_brigade_act = {
+	ENG_decision_metro_fire_brigade_act = {
 
         icon = eng_trade_unions_support
 
@@ -3151,7 +3629,7 @@ ENG_decision_metro_fire_brigade_act = {
 			base = 1000
 		}
     }
-ENG_decision_criminal_law_consolidation_acts = {
+	ENG_decision_criminal_law_consolidation_acts = {
 
         icon = eng_trade_unions_support
 
@@ -3180,7 +3658,7 @@ ENG_decision_criminal_law_consolidation_acts = {
 			base = 1000
 		}
     }
-ENG_decision_coal_mines_consolidation_act_1860 = {
+	ENG_decision_coal_mines_consolidation_act_1860 = {
 
         icon = eng_trade_unions_support
 
@@ -3209,7 +3687,7 @@ ENG_decision_coal_mines_consolidation_act_1860 = {
 			base = 1000
 		}
     }
-ENG_decision_land_registry_act = {
+	ENG_decision_land_registry_act = {
 
         icon = eng_trade_unions_support
 
@@ -3238,7 +3716,7 @@ ENG_decision_land_registry_act = {
 			base = 1000
 		}
     }
-ENG_decision_locomotives_highway_act = {
+	ENG_decision_locomotives_highway_act = {
 
         icon = eng_trade_unions_support
 
@@ -3267,7 +3745,7 @@ ENG_decision_locomotives_highway_act = {
 			base = 1000
 		}
     }
-ENG_decision_habeas_corpus_act = {
+	ENG_decision_habeas_corpus_act = {
 
         icon = eng_trade_unions_support
 
@@ -3296,7 +3774,7 @@ ENG_decision_habeas_corpus_act = {
 			base = 1000
 		}
     }
-ENG_decision_adulteration_food_drinks_act = {
+	ENG_decision_adulteration_food_drinks_act = {
 
         icon = eng_trade_unions_support
 
@@ -3325,7 +3803,7 @@ ENG_decision_adulteration_food_drinks_act = {
 			base = 1000
 		}
     }
-ENG_decision_poaching_prevention_act = {
+	ENG_decision_poaching_prevention_act = {
 
         icon = eng_trade_unions_support
 
@@ -3354,7 +3832,7 @@ ENG_decision_poaching_prevention_act = {
 			base = 1000
 		}
     }
-ENG_decision_medical_act = {
+	ENG_decision_medical_act = {
 
         icon = eng_trade_unions_support
 
@@ -3383,7 +3861,7 @@ ENG_decision_medical_act = {
 			base = 1000
 		}
     }
-ENG_decision_parliamentary_oaths_act_1866 = {
+	ENG_decision_parliamentary_oaths_act_1866 = {
 
         icon = eng_trade_unions_support
 
@@ -3412,7 +3890,7 @@ ENG_decision_parliamentary_oaths_act_1866 = {
 			base = 1000
 		}
     }
-ENG_decision_1867_reform_act = {
+	ENG_decision_1867_reform_act = {
 
         icon = eng_trade_unions_support
 
@@ -3441,7 +3919,7 @@ ENG_decision_1867_reform_act = {
 			base = 1000
 		}
     }
-ENG_decision_colonial_prisoners_removal_act = {
+	ENG_decision_colonial_prisoners_removal_act = {
 
         icon = eng_trade_unions_support
 
@@ -3470,7 +3948,7 @@ ENG_decision_colonial_prisoners_removal_act = {
 			base = 1000
 		}
     }
-ENG_decision_irish_church_act = {
+	ENG_decision_irish_church_act = {
 
         icon = eng_trade_unions_support
 
@@ -3499,7 +3977,7 @@ ENG_decision_irish_church_act = {
 			base = 1000
 		}
     }
-ENG_decision_metropolitan_public_carriage_act = {
+	ENG_decision_metropolitan_public_carriage_act = {
 
         icon = eng_trade_unions_support
 
@@ -3528,7 +4006,7 @@ ENG_decision_metropolitan_public_carriage_act = {
 			base = 1000
 		}
     }
-ENG_decision_elementary_education_1870_act = {
+	ENG_decision_elementary_education_1870_act = {
 
         icon = eng_trade_unions_support
 
@@ -3557,7 +4035,7 @@ ENG_decision_elementary_education_1870_act = {
 			base = 1000
 		}
     }
-ENG_decision_irish_land_act = {
+	ENG_decision_irish_land_act = {
 
         icon = eng_trade_unions_support
 
@@ -3586,7 +4064,7 @@ ENG_decision_irish_land_act = {
 			base = 1000
 		}
     }
-ENG_decision_elementary_education_act = {
+	ENG_decision_tramways_act = {
 
         icon = eng_trade_unions_support
 
@@ -3595,7 +4073,7 @@ ENG_decision_elementary_education_act = {
         }
 
 		available = {
-		   has_completed_focus = ENG_focus_elementary_education_act
+		   has_completed_focus = ENG_focus_tramways_act
 		   check_variable = { current_reform_id = 0 }
 		}
 
@@ -3615,7 +4093,7 @@ ENG_decision_elementary_education_act = {
 			base = 1000
 		}
     }
-ENG_decision_national_debt_reduction_1866 = {
+	ENG_decision_national_debt_reduction_1866 = {
 
         icon = eng_trade_unions_support
 
@@ -3644,7 +4122,6 @@ ENG_decision_national_debt_reduction_1866 = {
 			base = 1000000
 		}
     }
-
 	ENG_decision_PRS_naval_treaty_approval = {
 
         icon = generic_naval
@@ -3683,6 +4160,354 @@ ENG_decision_national_debt_reduction_1866 = {
 
 		ai_will_do = {
 			base = 1000000
+		}
+    }
+	ENG_decision_public_health_act = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_public_health_act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1874_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.27 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_customs_consolidation_act = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_customs_consolidation_act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1874_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.28 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_commons_act = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_commons_act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1874_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.29 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_cruelty_animals_act = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_cruelty_animals_act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1874_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.30 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_chelsea_hospital_act = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_chelsea_hospital_act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1874_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.31 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_Newspaper_Libel_Registration_Act = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_Newspaper_Libel_Registration_Act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1880_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.32 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_Married_Womens_Property_Act  = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_Married_Womens_Property_Act 
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1880_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.33 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_Conveying_Law_Property_Act  = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_Conveying_Law_Property_Act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1880_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.34 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_ballot_act  = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_Conveying_Law_Property_Act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1874_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.35 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_Electric_Lighting_Act  = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_Electric_Lighting_Act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1880_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.36 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_Municipal_Corporations_Act  = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_Municipal_Corporations_Act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1880_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.37 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	ENG_decision_National_Debt_act  = {
+
+        icon = eng_trade_unions_support
+
+        allowed = {
+            tag = ENG
+        }
+
+		available = {
+		   has_completed_focus = ENG_focus_National_Debt_act
+		   check_variable = { current_reform_id = 0 }
+		}
+
+		visible = {
+		   has_completed_focus = ENG_focus_1880_general_elections
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		complete_effect = {
+		    ENG = { country_event = { id = british_votes.38 days = 10 } }
+		}
+
+		ai_will_do = {
+			base = 1000
 		}
     }
 }
@@ -3765,7 +4590,7 @@ eoanb_category_royal_navy = {
 			    limit = { has_idea = ENG_idea_dockyard_output }
 				    remove_ideas = ENG_idea_dockyard_output
             }
-			complete_national_focus = ENG_focus_maintain_naval_race
+			complete_national_focus = ENG_focus_britannia_rules_the_waves
 		    }
 		}
 

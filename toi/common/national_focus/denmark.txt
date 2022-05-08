@@ -7,7 +7,7 @@ focus_tree = {
 			tag = DEN
 		}
 	}
-	continuous_focus_position = { x = 1800 y = 900 }
+	continuous_focus_position = { x = 1700 y = 1100 }
 	
     default = no
 
@@ -15,7 +15,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_danish_economy
-		icon = GFX_Focus_Economy_Growth_2
+		icon = GFX_Focus_stimulate_economy
 		x = 6
 		y = 0
 		cost = 60
@@ -70,6 +70,27 @@ focus_tree = {
 		    add_ideas = DEN_idea_infrastructure_projects
 			add_tech_bonus = { bonus = 0.75 uses = 1 category = mechanical_engineering_tech }
 			activate_mission_tooltip = DEN_mission_improve_danish_infrastructure
+			DEN_soren_hjorth = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = DEN_advisor_soren_hjorth
+						allowed = {
+							original_tag = DEN
+						}
+						traits = {
+							DEN_trait_Soren_Hjorth
+						}
+						research_bonus = {
+							mechanical_engineering_tech = 0.03
+							electronics_devices_tech = 0.03
+						}
+						ai_will_do = {
+							factor = 5
+						}
+					}
+				}
+			}
 			hidden_effect = {
 				activate_mission = DEN_mission_improve_danish_infrastructure
 			}
@@ -78,7 +99,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_focus_aarhus_randers_railway
-		icon = GFX_goal_focus_berlin_anhalt_rail
+		icon = GFX_Focus_transport_railroad_development
 		relative_position_id = DEN_focus_danish_economy
 		x = -5
 		y = 3
@@ -98,11 +119,32 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = DEN_focus_lille_syd_railway
-		icon = GFX_goal_focus_berlin_anhalt_rail
+		id = DEN_focus_fredericia_aarhus_railway
+		icon = GFX_Focus_transport_railroad_development
 		relative_position_id = DEN_focus_danish_economy
 		x = -5
 		y = 4
+		cost = 70
+		available = {
+			date > 1867.1.1
+		}
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_aarhus_randers_railway }
+		
+		completion_reward = {
+		    unlock_decision_tooltip = DEN_decision_fredericia_aarhus_railway
+	    }
+    }
+	
+	focus = {
+		id = DEN_focus_lille_syd_railway
+		icon = GFX_Focus_transport_railroad_development
+		relative_position_id = DEN_focus_danish_economy
+		x = -5
+		y = 5
 		cost = 70
 		available = {
 			date > 1870.1.1
@@ -111,7 +153,7 @@ focus_tree = {
 			base = 100
 		}
 		
-		prerequisite = { focus = DEN_focus_aarhus_randers_railway }
+		prerequisite = { focus = DEN_focus_fredericia_aarhus_railway }
 
 		completion_reward = {
 		    unlock_decision_tooltip = DEN_decision_lille_syd_railway
@@ -120,10 +162,10 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_odense_svendborg_railway
-		icon = GFX_goal_focus_berlin_anhalt_rail
+		icon = GFX_Focus_transport_railroad_development
 		relative_position_id = DEN_focus_danish_economy
 		x = -5
-		y = 5
+		y = 6
 		cost = 70
 		available = {
 			date > 1875.1.1
@@ -138,27 +180,6 @@ focus_tree = {
             unlock_decision_tooltip = DEN_decision_odense_svendborg_railway
 		}
 	}
-	
-	focus = {
-		id = DEN_focus_aarhus_grenaa_railway
-		icon = GFX_goal_focus_berlin_anhalt_rail
-		relative_position_id = DEN_focus_danish_economy
-		x = -5
-		y = 6
-		cost = 70
-		available = {
-			date > 1876.1.1
-		}
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_odense_svendborg_railway }
-		
-		completion_reward = {
-		    unlock_decision_tooltip = DEN_decision_aarhus_grenaa_railway
-	    }
-    }
 	
 	focus = {
 		id = DEN_focus_infrastructure_bornholm
@@ -324,7 +345,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_population_boom
-		icon = GFX_Focus_Refugee_Management
+		icon = GFX_Focus_refugee_management
 		relative_position_id = DEN_focus_danish_economy
 		x = -1
 		y = 6
@@ -358,7 +379,7 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_abolition_of_the_sound_toll }
 
 		completion_reward = {
-            add_ideas = DEN_idea_industrialization_efforts
+			add_timed_idea = { idea = DEN_idea_industrialization_efforts days = 1825 }
 			add_tech_bonus = { bonus = 0.75 uses = 1 category = mechanical_engineering_tech }
 			add_tech_bonus = { bonus = 0.75 uses = 1 category = process_engineering_tech }
 			add_tech_bonus = { bonus = 0.75 uses = 1 category = electronics_devices_tech }
@@ -379,7 +400,26 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_industrialization_efforts }
 
 		completion_reward = {
-            custom_effect_tooltip = DEN_focus_hassel_teudt_effect_tt
+            DEN_johan_fridolin_hassel = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = DEN_advisor_johan_fridolin_hassel
+						allowed = {
+							original_tag = DEN
+						}
+						traits = {
+							DEN_trait_Johan_Fridolin_Hassel
+						}
+						research_bonus = {
+							mechanical_engineering_tech = 0.03
+						}
+						ai_will_do = {
+							factor = 5
+						}
+					}
+				}
+			}
 			activate_mission_tooltip = DEN_mission_hassel_teudt
 			hidden_effect = {
 				activate_mission = DEN_mission_hassel_teudt
@@ -410,18 +450,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = DEN_focus_build_esbjerg_harbour
-		icon = GFX_goal_generic_amphibious_assault
+		id = DEN_focus_carlsberg_company
+		icon = GFX_focus_denmark_carlsberg
 		relative_position_id = DEN_focus_danish_economy
 		x = 1
 		y = 5
 		cost = 70
-		available = {
-			OR = {
-				has_completed_focus = DEN_focus_danish_defeat
-				has_completed_focus = DEN_focus_danish_victory
-			}
-		}
 		ai_will_do = {
 			base = 100
 		}
@@ -429,9 +463,27 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_hansen_writing_ball }
 
 		completion_reward = {
-            activate_mission_tooltip = DEN_mission_esbjerg_port
+            DEN_jacob_christian_jacobsen = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = DEN_advisor_jacob_christian_jacobsen
+						allowed = {
+							original_tag = DEN
+						}
+						traits = {
+							DEN_trait_Jacob_Christian_Jacobsen
+						}
+						ai_will_do = {
+							factor = 5
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = DEN_focus_carlsberg_company_effect_tt
+			activate_mission_tooltip = DEN_mission_carlsberg_company
 			hidden_effect = {
-				activate_mission = DEN_mission_esbjerg_port
+				activate_mission = DEN_mission_carlsberg_company
 			}
 		}
 	}
@@ -447,10 +499,27 @@ focus_tree = {
 			base = 100
 		}
 		
-		prerequisite = { focus = DEN_focus_build_esbjerg_harbour }
+		prerequisite = { focus = DEN_focus_carlsberg_company }
 
 		completion_reward = {
-            custom_effect_tooltip = DEN_focus_dfds_company_effect_tt
+            DEN_carl_frederik_tietgen = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = DEN_advisor_carl_frederik_tietgen
+						allowed = {
+							original_tag = DEN
+						}
+						traits = {
+							DEN_trait_Carl_Frederik_Tietgen
+						}
+						ai_will_do = {
+							factor = 5
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = DEN_focus_dfds_company_effect_tt
 			activate_mission_tooltip = DEN_mission_dfds_company
 			hidden_effect = {
 				activate_mission = DEN_mission_dfds_company
@@ -526,7 +595,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_scandinavian_monetary_union
-		icon = GFX_focus_trade_scandinavia
+		icon = GFX_Focus_trade_scandinavia
 		relative_position_id = DEN_focus_danish_economy
 		x = 3
 		y = 5
@@ -549,6 +618,8 @@ focus_tree = {
 			country_event = { id = scan_monetary_union.16 }
 			hidden_effect = {
 				clr_country_flag = DEN_Scandinavian_Monetary_Union_flag
+				NOR = { country_event = { id = scan_monetary_union.16 } }
+				SWE = { country_event = { id = scan_monetary_union.16 } }
 			}
 		}
 	}
@@ -560,6 +631,9 @@ focus_tree = {
 		x = 3
 		y = 6
 		cost = 70
+		available = {
+			has_idea = SDN_idea_scandinavian_monetary_union_1
+		}
 		ai_will_do = {
 			base = 100
 		}
@@ -666,7 +740,7 @@ focus_tree = {
 			NOT = { has_idea = agrarian }
 		}
 		
-		prerequisite = { focus = DEN_focus_aarhus_grenaa_railway }
+		prerequisite = { focus = DEN_focus_odense_svendborg_railway }
 		prerequisite = { focus = DEN_focus_infrastructure_greenland }
 		prerequisite = { focus = DEN_focus_population_boom }
 		prerequisite = { focus = DEN_focus_dfds_company }
@@ -680,583 +754,6 @@ focus_tree = {
 				idea = PRS_idea_well_oiled_economy
 				days = 730
 			}
-		}
-	}
-	
-	### DANISH IMPERIALISM ###
-	
-	focus = {
-		id = DEN_focus_danish_imperialism
-		icon = GFX_focus_denmark_imperialism
-		x = 48
-		y = 0
-		cost = 70
-		available = {
-			OR = {
-				has_completed_focus = DEN_focus_liberal_party
-				has_completed_focus = DEN_focus_conservative_party
-			}
-		}
-		ai_will_do = {
-			base = 100
-		}
-
-		completion_reward = {
-            add_political_power = 120
-			unlock_decision_category_tooltip = DEN_decision_category_imperialism
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_deal_with_helstaten
-		icon = GFX_Focus_Government_Struggle
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -2
-		y = 1
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_danish_imperialism }
-
-		completion_reward = {
-            add_political_power = 75
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_schleswig_holstein_question
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -4
-		y = 2
-		cost = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = GENERIC_Triggered_By_Event_tt
-				always = no
-			}
-		}
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_deal_with_helstaten }
-
-		completion_reward = {
-            add_war_support = 0.03
-			add_popularity = {
-				ideology = centrism
-				popularity = 0.03
-			}
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_maintain_status_quo
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -5
-		y = 3
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_schleswig_holstein_question }
-		mutually_exclusive = { focus = DEN_focus_danmark_til_ejderen }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_silence_proponents_of_ejderpolitikken
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -5
-		y = 4
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_maintain_status_quo }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_attempt_containment_of_nationalist_tendencies
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -5
-		y = 5
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_silence_proponents_of_ejderpolitikken }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_defend_the_duchies
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -5
-		y = 6
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_attempt_containment_of_nationalist_tendencies }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_danmark_til_ejderen
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -3
-		y = 3
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_schleswig_holstein_question }
-		mutually_exclusive = { focus = DEN_focus_maintain_status_quo }
-
-		completion_reward = {
-            custom_effect_tooltip = historical_option
-			#country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_approach_danish_intellectuals_in_the_duchies
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -3
-		y = 4
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_danmark_til_ejderen }
-
-		completion_reward = {
-            custom_effect_tooltip = historical_option
-			#country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_prepare_drafts_for_common_constitution
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -3
-		y = 5
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_approach_danish_intellectuals_in_the_duchies }
-
-		completion_reward = {
-            custom_effect_tooltip = historical_option
-			#country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_november_constitution
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -3
-		y = 6
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_prepare_drafts_for_common_constitution }
-
-		completion_reward = {
-            custom_effect_tooltip = historical_option
-			#country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_iceland_question
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 0
-		y = 2
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_deal_with_helstaten }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_resist_against_icelandic_nationalists
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -1
-		y = 3
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_iceland_question }
-		mutually_exclusive = { focus = DEN_focus_appease_icelandic_nationalists }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_suppress_icelandic_nationalists
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -1
-		y = 4
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_resist_against_icelandic_nationalists }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_reestablish_danish_trade_monopoly
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -1
-		y = 5
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_suppress_icelandic_nationalists }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_force_iceland_into_folkekirken
-		icon = GFX_goal_demand_sudetenland
-		relative_position_id = DEN_focus_danish_imperialism
-		x = -1
-		y = 6
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_reestablish_danish_trade_monopoly }
-
-		completion_reward = {
-            #country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_appease_icelandic_nationalists
-		icon = GFX_goal_generic_amphibious_assault
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 1
-		y = 3
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_iceland_question }
-		mutually_exclusive = { focus = DEN_focus_resist_against_icelandic_nationalists }
-
-		completion_reward = {
-            custom_effect_tooltip = historical_option
-			#country_event
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_stooulog_law
-		icon = GFX_Focus_Law_Vote_1
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 1
-		y = 4
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_appease_icelandic_nationalists }
-
-		completion_reward = {
-			hidden_effect = { 
-				100 = { add_core_of = ICE } 
-			}
-            unlock_decision_tooltip = DEN_decision_the_stooulog_law
-			swap_ideas = {
-				remove_idea = DEN_icelandic_independence_movement_1
-				add_idea = DEN_icelandic_independence_movement_2
-			}
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_grant_iceland_home_rule
-		icon = GFX_focus_denmark_iceland_home_rule
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 1
-		y = 5
-		cost = 70
-		available = {
-			date > 1872.1.1
-		}
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_stooulog_law }
-
-		completion_reward = {
-			DEN = { release_puppet = ICE }
-			hidden_effect = {
-		        ICE = {
-		            load_oob = "ICE_1857"
-				}
-		    }
-			remove_ideas = DEN_icelandic_independence_movement_2
-        	add_political_power = 50
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_constitution_for_iceland
-		icon = GFX_focus_denmark_iceland_independence
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 1
-		y = 6
-		cost = 70
-		available = {
-			date > 1874.1.1
-		}
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_grant_iceland_home_rule }
-
-		completion_reward = {
-			#
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_deal_with_colonies
-		icon = GFX_Focus_Colonial_Troops
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 4
-		y = 1
-		cost = 70
-		available = {
-			date > 1868.1.1
-		}
-		ai_will_do = {
-			base = 100
-		}
-		
-		prerequisite = { focus = DEN_focus_danish_imperialism }
-
-		completion_reward = {
-            add_political_power = 75
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_sell_nicobar_islands
-		icon = GFX_Focus_Resource_Gold
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 3
-		y = 2
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_deal_with_colonies }
-		mutually_exclusive = { focus = DEN_focus_keep_nicobar_islands }
-
-		completion_reward = {
-			ENG = { transfer_state = 1307 }
-			add_stability = 0.01
-        	add_political_power = 200
-        	1307 = { add_manpower = -1500 }
-			37 = { add_manpower = 1500 }
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_focus_on_west_indies
-		icon = GFX_focus_ITA_Wheat
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 3
-		y = 3
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_sell_nicobar_islands }
-
-		completion_reward = {
-            #unlock_decision_tooltip = DEN_mission_farm_on_the_islands
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_keep_nicobar_islands
-		icon = GFX_focus_por_luso_tropicalism
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 5
-		y = 2
-		cost = 70
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-
-		prerequisite = { focus = DEN_focus_deal_with_colonies }
-		mutually_exclusive = { focus = DEN_focus_sell_nicobar_islands }
-
-		completion_reward = {
-			add_timed_idea = {
-		    	idea = DEN_kept_our_colony
-		    	days = 100
-		    }
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_develop_ny_danmark
-		icon = GFX_focus_ITA_Wheat
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 5
-		y = 3
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_keep_nicobar_islands }
-
-		completion_reward = {
-            unlock_decision_tooltip = DEN_mission_farm_on_the_islands
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_foothold_in_africa
-		icon = GFX_Focus_Exploration
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 4
-		y = 4
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_focus_on_west_indies focus = DEN_focus_develop_ny_danmark }
-
-		completion_reward = {
-			37 = { add_manpower = -500 }
-			798 = { add_manpower = 500 }
-			add_stability = -0.05
-        	DEN = {
-		    	transfer_state = 798
-			}
-			ARO = {
-		    	add_timed_idea = { idea = DEN_bought_our_land days = 365 }
-			}
-			add_timed_idea = { idea = DEN_idea_colonial_purchases days = 365 }
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_cash_crops_plantations
-		icon = GFX_Focus_Exploration
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 4
-		y = 5
-		cost = 70
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_foothold_in_africa }
-
-		completion_reward = {
-			#unlock_decision_tooltip = 
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_consolidate_colonial_possessions
-		icon = GFX_Focus_Exploration
-		relative_position_id = DEN_focus_danish_imperialism
-		x = 4
-		y = 6
-		cost = 70
-		available = {
-			has_tech = tech_infantry_quinine
-		}
-		ai_will_do = {
-			base = 100
-		}
-
-		prerequisite = { focus = DEN_focus_cash_crops_plantations }
-
-		completion_reward = {
-			# 
 		}
 	}
 
@@ -1657,7 +1154,7 @@ focus_tree = {
 		y = 5
 		cost = 70
 		available = {
-			has_completed_focus = DEN_focus_danish_defeat
+			has_completed_focus = DEN_focus_humiliating_defeat
 			has_war = no
 		}
 		ai_will_do = {
@@ -1711,8 +1208,8 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_danish_military
-		icon = GFX_focus_generic_military_mission
-		x = 34
+		icon = GFX_focus_denmark_military
+		x = 29
 		y = 0
 		cost = 70
 		available = {
@@ -1733,7 +1230,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_lundbyes_acts
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_denmark_lundbye
 		relative_position_id = DEN_focus_danish_military
 		x = 0
 		y = 1
@@ -1763,7 +1260,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_army_modernization_efforts
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_focus_denmark_army
 		relative_position_id = DEN_focus_danish_military
 		x = -4
 		y = 2
@@ -1776,7 +1273,7 @@ focus_tree = {
 
 		completion_reward = {
         	army_experience = 10
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = land_doctrine }
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
 			unlock_decision_tooltip = DEN_decision_military_uniform_exchange
 		}
@@ -1784,14 +1281,14 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_thestrup_army_reforms
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_denmark_thestrup
 		relative_position_id = DEN_focus_danish_military
 		x = -4
 		y = 3
 		cost = 70
 		available = {
 			date > 1859.8.1
-			has_idea = DEN_theorist_army_hans_nikolai_thestrup
+			has_idea = DEN_theorist_army_hans_nicolai_thestrup
 			custom_trigger_tooltip = {
 				tooltip = DEN_focus_thestrup_army_reforms_trigger_tt
 				hidden_trigger = {
@@ -1816,7 +1313,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_artillery_modernization_efforts
-		icon = GFX_focus_generic_manpower
+		icon = GFX_Focus_Weapon_Canon_7
 		relative_position_id = DEN_focus_danish_military
 		x = -6
 		y = 4
@@ -1835,7 +1332,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_espingoles
-		icon = GFX_focus_generic_manpower
+		icon = GFX_focus_denmark_espingole
 		relative_position_id = DEN_focus_danish_military
 		x = -6
 		y = 5
@@ -1855,7 +1352,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_prince_christians_commission
-		icon = GFX_focus_generic_manpower
+		icon = GFX_Focus_Army_Cavalry
 		relative_position_id = DEN_focus_danish_military
 		x = -4
 		y = 4
@@ -1873,7 +1370,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_wartime_battalion_duplication
-		icon = GFX_focus_generic_manpower
+		icon = GFX_Goal_manpower_duplication
 		relative_position_id = DEN_focus_danish_military
 		x = -4
 		y = 5
@@ -1891,7 +1388,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_rifle_modernization_efforts
-		icon = GFX_focus_generic_manpower
+		icon = GFX_Focus_Rifle_Production
 		relative_position_id = DEN_focus_danish_military
 		x = -2
 		y = 4
@@ -1910,7 +1407,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_promote_talented_army_leaders
-		icon = GFX_focus_generic_manpower
+		icon = GFX_Focus_Army_Staff
 		relative_position_id = DEN_focus_danish_military
 		x = -2
 		y = 5
@@ -1928,7 +1425,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_new_conscription_law
-		icon = GFX_focus_generic_manpower
+		icon = GFX_Focus_Army_Conscription
 		relative_position_id = DEN_focus_danish_military
 		x = -5
 		y = 6
@@ -1947,7 +1444,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_frilodsmaend
-		icon = GFX_focus_generic_manpower
+		icon = GFX_focus_denmark_frilodsmaend
 		relative_position_id = DEN_focus_danish_military
 		x = -3
 		y = 6
@@ -1966,7 +1463,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_increase_army_budget
-		icon = GFX_focus_generic_manpower
+		icon = GFX_Focus_Army_Budget
 		relative_position_id = DEN_focus_danish_military
 		x = -4
 		y = 7
@@ -1979,13 +1476,28 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_frilodsmaend }
 
 		completion_reward = {
-			unlock_decision_tooltip = DEN_decision_increase_army_spending
+			if = {
+				limit = {
+					has_active_mission = DEN_mission_thestrups_army_reforms
+					OR = {
+						has_idea = one_percent
+						has_idea = two_percent
+						has_idea = three_percent
+					}
+				}
+				unlock_decision_tooltip = DEN_decision_increase_army_budget
+			}
+			else = {
+				add_political_power = 25
+				army_experience = 25
+				add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			}
 		}
 	}
 	
 	focus = {
 		id = DEN_focus_navy_modernization
-		icon = GFX_focus_denmark_sovaernet
+		icon = GFX_focus_denmark_navy
 		relative_position_id = DEN_focus_danish_military
 		x = 4
 		y = 2
@@ -1997,15 +1509,16 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_lundbyes_acts }
 
 		completion_reward = {
-		    unlock_decision_tooltip = DEN_decision_the_15_april_act
-			add_tech_bonus = { bonus = 0.55 uses = 2 category = naval_doctrine }
-			add_war_support = 0.02
+		    navy_experience = 10
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
+			unlock_decision_tooltip = DEN_decision_move_navy_base_to_holmen
 		}
 	}
 	
 	focus = {
 		id = DEN_focus_study_modern_warships
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Victorian_Gunboat
 		relative_position_id = DEN_focus_danish_military
 		x = 4
 		y = 3
@@ -2017,14 +1530,18 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_navy_modernization }
 
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
-        	add_tech_bonus = { ahead_reduction = 1 uses = 1 category = naval_equipment }
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_equipment }
+        	add_tech_bonus = { ahead_reduction = 0.5 uses = 1 category = naval_equipment }
+			activate_mission_tooltip = DEN_mission_study_modern_warships
+			hidden_effect = {
+				activate_mission = DEN_mission_study_modern_warships
+			}
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_iron_hulls
-		icon = GFX_focus_gunboat_basic
+		id = DEN_focus_reinforced_hulls
+		icon = GFX_Focus_Armor_Plates
 		relative_position_id = DEN_focus_danish_military
 		x = 2
 		y = 4
@@ -2036,37 +1553,60 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_study_modern_warships }
 
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.75 uses = 1 category = naval_mtg_ironclad_hulls_tech }
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
+			navy_experience = 10
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_mtg_gunboat_hulls_tech }
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_ironclad_schooners
-		icon = GFX_focus_gunboat_basic
+		id = DEN_focus_armored_schooners
+		icon = GFX_Goal_gunboat_focus
 		relative_position_id = DEN_focus_danish_military
 		x = 2
 		y = 5
 		cost = 70
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				has_tech = tech_naval_mtg_1860_gunboat
+			}
+			else = {
+				has_tech = tech_naval_1860_gunboat
+			}
+		}
 		ai_will_do = {
 			base = 100
 		}
 
-		prerequisite = { focus = DEN_focus_iron_hulls }
+		prerequisite = { focus = DEN_focus_reinforced_hulls }
 
 		completion_reward = {
-			add_tech_bonus = { bonus = 1 uses = 1 category = naval_mtg_ironclad_tech }
-			#unlock_decision_tooltip =
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_mtg_gunboat_tech }
+			unlock_decision_tooltip = DEN_decision_foreign_armored_schooners
+			unlock_decision_tooltip = DEN_decision_danish_armored_schooners
 		}
 	}
 	
 	focus = {
 		id = DEN_focus_monitor_turrets
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Turret_Early
 		relative_position_id = DEN_focus_danish_military
 		x = 4
 		y = 4
 		cost = 70
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				has_tech = tech_naval_mtg_prototype_ironclad
+			}
+			else = {
+				has_tech = tech_naval_prototype_ironclad
+			}
+		}
 		ai_will_do = {
 			base = 100
 		}
@@ -2081,7 +1621,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_rolf_krake
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Goal_ironclad_focus
 		relative_position_id = DEN_focus_danish_military
 		x = 4
 		y = 5
@@ -2094,13 +1634,14 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = { bonus = 1 uses = 1 category = naval_mtg_capital_ship_tech }
-			#unlock_decision_tooltip =
+			unlock_decision_tooltip = DEN_decision_order_the_rolf_krake
+			unlock_decision_tooltip = DEN_decision_refit_the_dannebrog_to_ironclad
 		}
 	}
 	
 	focus = {
 		id = DEN_focus_modern_engines
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Screw_Engine
 		relative_position_id = DEN_focus_danish_military
 		x = 6
 		y = 4
@@ -2119,7 +1660,7 @@ focus_tree = {
 	
 	focus = {
 		id = DEN_focus_screw_frigates
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Goal_frigate_focus
 		relative_position_id = DEN_focus_danish_military
 		x = 6
 		y = 5
@@ -2132,13 +1673,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = { bonus = 1 uses = 1 category = naval_mtg_frigate_tech }
-			#unlock_decision_tooltip =
+			unlock_decision_tooltip = DEN_decision_danish_screw_frigates
 		}
 	}
 	
 	focus = {
 		id = DEN_focus_atlantic_naval_bases
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Naval_Supplies
 		relative_position_id = DEN_focus_danish_military
 		x = 3
 		y = 6
@@ -2147,17 +1688,17 @@ focus_tree = {
 			base = 100
 		}
 
-		prerequisite = { focus = DEN_focus_ironclad_schooners }
+		prerequisite = { focus = DEN_focus_armored_schooners }
 		prerequisite = { focus = DEN_focus_rolf_krake }
 
 		completion_reward = {
-			#country_event =
+			country_event = { id = denmark_military.8 }
 		}
 	}
 	
 	focus = {
 		id = DEN_focus_modern_naval_tactics
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Navy_Tactics
 		relative_position_id = DEN_focus_danish_military
 		x = 5
 		y = 6
@@ -2170,13 +1711,14 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_screw_frigates }
 
 		completion_reward = {
-			#country_event =
+			navy_experience = 10
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = naval_doctrine }
 		}
 	}
 	
 	focus = {
 		id = DEN_focus_increase_navy_budget
-		icon = GFX_focus_gunboat_basic
+		icon = GFX_Focus_Navy_Budget
 		relative_position_id = DEN_focus_danish_military
 		x = 4
 		y = 7
@@ -2189,7 +1731,21 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_modern_naval_tactics }
 
 		completion_reward = {
-			#unlock_decision_tooltip = 
+			if = {
+				limit = {
+					OR = {
+						has_idea = navinfra_no_naval_infrastructure
+						has_idea = navinfra_low_naval_infrastructure
+						has_idea = navinfra_decent_naval_infrastructure
+					}
+				}
+				unlock_decision_tooltip = DEN_decision_increase_navy_budget
+			}
+			else = {
+				add_political_power = 25
+				navy_experience = 25
+				add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			}
 		}
 	}
 
@@ -2208,17 +1764,59 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_increase_navy_budget }
 
 		completion_reward = {
-        	#add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }
+        	add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 		}
 	}
-
-    ### AFTERMATH OF SSW ###
+	
+	### DANISH IMPERIALISM ###
 	
 	focus = {
-		id = DEN_focus_danish_defeat
-		icon = GFX_focus_spr_crush_the_revolution
-		x = 23
+		id = DEN_focus_danish_imperialism
+		icon = GFX_focus_denmark_imperialism
+		x = 43
 		y = 0
+		cost = 70
+		available = {
+			OR = {
+				has_completed_focus = DEN_focus_liberal_party
+				has_completed_focus = DEN_focus_conservative_party
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+
+		completion_reward = {
+            add_political_power = 120
+			unlock_decision_category_tooltip = DEN_decision_category_imperialism
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_deal_with_helstaten
+		icon = GFX_focus_denmark_helstaten_four_flag
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -2
+		y = 1
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_danish_imperialism }
+
+		completion_reward = {
+            add_political_power = 75
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_schleswig_holstein_question
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -4
+		y = 2
 		cost = 1
 		available = {
 			custom_trigger_tooltip = {
@@ -2227,111 +1825,540 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			base = 1
-			#is_historical_focus_on = yes
+			base = 100
 		}
-
-		mutually_exclusive = { focus = DEN_focus_danish_victory }
+		
+		prerequisite = { focus = DEN_focus_deal_with_helstaten }
 
 		completion_reward = {
-		    remove_ideas = DEN_idea_victors_of_first_schleswig_war	
-		}
-	}
-	
-	focus = {
-		id = DEN_focus_rebuild
-		icon = GFX_goal_generic_construction
-		relative_position_id = DEN_focus_danish_defeat
-		x = 0
-		y = 1
-		cost = 30
-		ai_will_do = {
-			base = 1
-		}
-
-		prerequisite = { focus = DEN_focus_danish_defeat }
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = DEN_idea_lost_second_schleswig_war
-				add_idea = DEN_idea_lost_second_schleswig_war_2
+            add_war_support = 0.03
+			add_popularity = {
+				ideology = centrism
+				popularity = 0.03
 			}
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_spy_on_prussia
-		icon = GFX_Focus_Balloon_Company
-		relative_position_id = DEN_focus_danish_defeat
+		id = DEN_focus_maintain_status_quo
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -5
+		y = 3
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_schleswig_holstein_question }
+		mutually_exclusive = { focus = DEN_focus_danmark_til_ejderen }
+
+		completion_reward = {
+            #country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_silence_proponents_of_ejderpolitikken
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -5
+		y = 4
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_maintain_status_quo }
+
+		completion_reward = {
+            #country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_attempt_containment_of_nationalist_tendencies
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -5
+		y = 5
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_silence_proponents_of_ejderpolitikken }
+
+		completion_reward = {
+            #country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_defend_the_duchies
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -5
+		y = 6
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_attempt_containment_of_nationalist_tendencies }
+
+		completion_reward = {
+            #country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_danmark_til_ejderen
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -3
+		y = 3
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_schleswig_holstein_question }
+		mutually_exclusive = { focus = DEN_focus_maintain_status_quo }
+
+		completion_reward = {
+            custom_effect_tooltip = historical_option
+			#country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_approach_danish_intellectuals_in_the_duchies
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -3
+		y = 4
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_danmark_til_ejderen }
+
+		completion_reward = {
+            custom_effect_tooltip = historical_option
+			#country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_prepare_drafts_for_common_constitution
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -3
+		y = 5
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_approach_danish_intellectuals_in_the_duchies }
+
+		completion_reward = {
+            custom_effect_tooltip = historical_option
+			#country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_november_constitution
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -3
+		y = 6
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_prepare_drafts_for_common_constitution }
+
+		completion_reward = {
+            custom_effect_tooltip = historical_option
+			#country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_iceland_question
+		icon = GFX_focus_denmark_iceland_question
+		relative_position_id = DEN_focus_danish_imperialism
 		x = 0
 		y = 2
-		cost = 30
+		cost = 70
 		ai_will_do = {
-			base = 1
+			base = 100
 		}
-
-		prerequisite = { focus = DEN_focus_rebuild }
+		
+		prerequisite = { focus = DEN_focus_deal_with_helstaten }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = DEN_idea_lost_second_schleswig_war_2
-			   add_idea = DEN_idea_lost_second_schleswig_war_3
-			}
-			99 = { add_building_construction = { type = air_base level = 1 instant_build = yes } }
-			add_tech_bonus = { bonus = 0.75 uses = 2 category = air_equipment }
+            #country_event
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_learn_from_mistakes
-		icon = GFX_focus_generic_military_mission
-		relative_position_id = DEN_focus_danish_defeat
-		x = 0
+		id = DEN_focus_resist_against_icelandic_nationalists
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -1
 		y = 3
-		cost = 30
+		cost = 70
 		ai_will_do = {
-			base = 1
+			base = 100
 		}
-
-		prerequisite = { focus = DEN_focus_spy_on_prussia }
+		
+		prerequisite = { focus = DEN_focus_iceland_question }
+		mutually_exclusive = { focus = DEN_focus_appease_icelandic_nationalists }
 
 		completion_reward = {
-			swap_ideas = {
-			   	remove_idea = DEN_idea_lost_second_schleswig_war_3
-			   	add_idea = DEN_idea_lost_second_schleswig_war_4
-			}
-			add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }
+            #country_event
 		}
 	}
 	
-    focus = {
-		id = DEN_focus_defend_sjaelland
-		icon = GFX_focus_generic_coastal_fort
-		relative_position_id = DEN_focus_danish_defeat
-		x = 0
+	focus = {
+		id = DEN_focus_suppress_icelandic_nationalists
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -1
 		y = 4
-		cost = 30
+		cost = 70
 		ai_will_do = {
-			base = 1
+			base = 100
 		}
-
-		prerequisite = { focus = DEN_focus_learn_from_mistakes }
+		
+		prerequisite = { focus = DEN_focus_resist_against_icelandic_nationalists }
 
 		completion_reward = {
-			remove_ideas = DEN_idea_lost_second_schleswig_war_4
+            #country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_reestablish_danish_trade_monopoly
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -1
+		y = 5
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_suppress_icelandic_nationalists }
+
+		completion_reward = {
+            #country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_force_iceland_into_folkekirken
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = DEN_focus_danish_imperialism
+		x = -1
+		y = 6
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_reestablish_danish_trade_monopoly }
+
+		completion_reward = {
+            #country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_appease_icelandic_nationalists
+		icon = GFX_focus_denmark_iceland_appeasement
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 1
+		y = 3
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_iceland_question }
+		mutually_exclusive = { focus = DEN_focus_resist_against_icelandic_nationalists }
+
+		completion_reward = {
+            custom_effect_tooltip = historical_option
+			#country_event
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_stooulog_law
+		icon = GFX_Focus_Law_Vote_1
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 1
+		y = 4
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_appease_icelandic_nationalists }
+
+		completion_reward = {
+			hidden_effect = { 
+				100 = { add_core_of = ICE } 
+			}
+            unlock_decision_tooltip = DEN_decision_the_stooulog_law
+			swap_ideas = {
+				remove_idea = DEN_icelandic_independence_movement_1
+				add_idea = DEN_icelandic_independence_movement_2
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_grant_iceland_home_rule
+		icon = GFX_focus_denmark_iceland_home_rule
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 1
+		y = 5
+		cost = 70
+		available = {
+			date > 1872.1.1
+		}
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_stooulog_law }
+
+		completion_reward = {
+			DEN = { release_puppet = ICE }
+			hidden_effect = {
+		        ICE = {
+		            load_oob = "ICE_1857"
+				}
+		    }
+			remove_ideas = DEN_icelandic_independence_movement_2
+        	add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_constitution_for_iceland
+		icon = GFX_focus_denmark_iceland_independence
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 1
+		y = 6
+		cost = 70
+		available = {
+			date > 1874.1.1
+		}
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_grant_iceland_home_rule }
+
+		completion_reward = {
+			#
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_deal_with_colonies
+		icon = GFX_Focus_Colonial_Troops
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 4
+		y = 1
+		cost = 70
+		available = {
+			date > 1865.1.1 #swap for after SSW
+		}
+		ai_will_do = {
+			base = 100
+		}
+		
+		prerequisite = { focus = DEN_focus_danish_imperialism }
+
+		completion_reward = {
+            add_political_power = 75
+			country_event = { id = denmark_foreign.17 }
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_sell_nicobar_islands
+		icon = GFX_Focus_Resource_Gold
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 3
+		y = 2
+		cost = 70
+		available = {
+			owns_state = 1307
+		}
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_deal_with_colonies }
+		mutually_exclusive = { focus = DEN_focus_keep_nicobar_islands }
+
+		completion_reward = {
+			ENG = { country_event = { id = denmark_economy.1 } }
+			ENG = { transfer_state = 1307 }
+        	1307 = { add_manpower = -1500 }
+			37 = { add_manpower = 1000 }
+			99 = { add_manpower = 500 }
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_focus_on_west_indies
+		icon = GFX_Focus_Wheat
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 3
+		y = 3
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_sell_nicobar_islands }
+
+		completion_reward = {
+            #unlock_decision_tooltip = DEN_mission_farm_on_the_islands
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_keep_nicobar_islands
+		icon = GFX_focus_por_luso_tropicalism
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 5
+		y = 2
+		cost = 70
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		prerequisite = { focus = DEN_focus_deal_with_colonies }
+		mutually_exclusive = { focus = DEN_focus_sell_nicobar_islands }
+
+		completion_reward = {
 			add_timed_idea = {
-		    	idea = DEN_idea_lost_second_schleswig_war_5
-		    	days = 1095
-			}
+		    	idea = DEN_kept_our_colony
+		    	days = 100
+		    }
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_danish_victory
-		icon = GFX_goal_generic_demand_territory
-		x = 25
+		id = DEN_focus_develop_ny_danmark
+		icon = GFX_Focus_Wheat
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 5
+		y = 3
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_keep_nicobar_islands }
+
+		completion_reward = {
+            unlock_decision_tooltip = DEN_mission_farm_on_the_islands
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_foothold_in_africa
+		icon = GFX_Focus_Exploration
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 4
+		y = 4
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_focus_on_west_indies focus = DEN_focus_develop_ny_danmark }
+
+		completion_reward = {
+			37 = { add_manpower = -500 }
+			798 = { add_manpower = 500 }
+			add_stability = -0.05
+        	DEN = {
+		    	transfer_state = 798
+			}
+			ARO = {
+		    	add_timed_idea = { idea = DEN_bought_our_land days = 365 }
+			}
+			add_timed_idea = { idea = DEN_idea_colonial_purchases days = 365 }
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_cash_crops_plantations
+		icon = GFX_Focus_Exploration
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 4
+		y = 5
+		cost = 70
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_foothold_in_africa }
+
+		completion_reward = {
+			unlock_decision_tooltip = DEN_mission_produce_cotton_in_new_colony
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_consolidate_colonial_possessions
+		icon = GFX_Focus_Exploration
+		relative_position_id = DEN_focus_danish_imperialism
+		x = 4
+		y = 6
+		cost = 70
+		available = {
+			has_tech = tech_infantry_quinine
+		}
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_cash_crops_plantations }
+
+		completion_reward = {
+			# 
+		}
+	}
+	
+	### AFTERMATH OF THE SSW ###
+	
+	focus = {
+		id = DEN_focus_glorious_victory
+		icon = GFX_Focus_Army_General_Mobilization_Generic_1
+		x = 53
 		y = 0
 		cost = 1
+		allow_branch = { always = yes }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GENERIC_Triggered_By_Event_tt
@@ -2342,122 +2369,786 @@ focus_tree = {
 			base = 1
 		}
 
-		mutually_exclusive = { focus = DEN_focus_danish_defeat }
-
 		completion_reward = {
-		    remove_ideas = DEN_idea_victors_of_first_schleswig_war
-        	add_ideas = DEN_idea_won_second_schleswig_war_1
+			country_event = denmark_secschwar.90
+			add_ideas = DEN_unbelievable_triumph
+			add_political_power = 100
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_celebrate_on_the_streets
-		icon = GFX_goal_generic_propaganda
-		relative_position_id = DEN_focus_danish_victory
+		id = DEN_focus_using_victory_to_boost_party_popularity_victory
+		icon = GFX_Focus_Electorate_rally_people
+		relative_position_id = DEN_focus_glorious_victory
+		x = -2
+		y = 1
+		cost = 35
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_glorious_victory }
+
+		completion_reward = {
+			if = {
+       			limit = {
+		        	has_government  = traditional_conservatism
+				}
+	            add_popularity = { ideology = traditional_conservatism popularity = 0.2 }
+    		}
+			if = {
+				limit = {
+					has_government  = centrism
+				}
+				add_popularity = { ideology = centrism popularity = 0.2 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_a_revised_constitution_victory
+		icon = GFX_Focus_Government_Reform_2_blue
+		relative_position_id = DEN_focus_using_victory_to_boost_party_popularity_victory
 		x = 0
 		y = 1
 		cost = 30
+		available = {
+		}
 		ai_will_do = {
 			base = 1
 		}
 
-		prerequisite = { focus = DEN_focus_danish_victory }
+		prerequisite = { focus = DEN_focus_using_victory_to_boost_party_popularity_victory }
 
 		completion_reward = {
-        	swap_ideas = {
-			   	remove_idea = DEN_idea_won_second_schleswig_war_1
-			   	add_idea = DEN_idea_won_second_schleswig_war_2
+			#unlock_decision_tooltip =
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_the_germans_will_come_back_again
+		icon = GFX_Focus_Army_Germany
+		relative_position_id = DEN_focus_glorious_victory
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_glorious_victory }
+
+		completion_reward = {
+			add_ideas = DEN_ger_will_return
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_defenses_at_the_border
+		icon = GFX_Focus_defense_focus
+		relative_position_id = DEN_focus_the_germans_will_come_back_again
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_the_germans_will_come_back_again }
+
+		completion_reward = {
+			unlock_decision_tooltip = eoanb_decision_DEN_fortify_border
+			add_timed_idea = {
+				idea = DEN_defensive_construction
+				days = 365
 			}
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_rebuild_kiel
-		icon = GFX_goal_generic_construction2
-		relative_position_id = DEN_focus_danish_victory
-		x = 0
-		y = 2
+		id = DEN_focus_demobilization_victory
+		icon = GFX_Focus_Soldier_send_abroad_cadets
+		relative_position_id = DEN_focus_glorious_victory
+		x = 2
+		y = 1
 		cost = 30
+		available = {
+		}
 		ai_will_do = {
 			base = 1
 		}
 
-		prerequisite = { focus = DEN_focus_celebrate_on_the_streets }
+		prerequisite = { focus = DEN_focus_glorious_victory }
 
 		completion_reward = {
-        	swap_ideas = {
-			   	remove_idea = DEN_idea_won_second_schleswig_war_2
-			   	add_idea = DEN_idea_won_second_schleswig_war_3
+			if = {
+				limit = {
+					has_idea = early_conscription
+				}
+				swap_ideas = {
+					remove_idea = early_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = service_by_requirement
+				}
+				swap_ideas = {
+					remove_idea = service_by_requirement
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = all_adults_serve
+				}
+				swap_ideas = {
+					remove_idea = all_adults_serve
+					add_idea = volunteer_only
+				}
+			}
+			else = {
+				add_manpower = 5000
 			}
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_let_schleswigians_serve
-		icon = GFX_focus_generic_manpower
-		relative_position_id = DEN_focus_danish_victory
+		id = DEN_focus_build_esbjerg_port_victory
+		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = DEN_focus_demobilization_victory
 		x = 0
-		y = 3
+		y = 1
 		cost = 30
+		available = {
+			date > 1865.2.1
+		}
 		ai_will_do = {
-			base = 1
+			base = 100
 		}
 
-		prerequisite = { focus = DEN_focus_rebuild_kiel }
+		prerequisite = { focus = DEN_focus_demobilization_victory }
 
 		completion_reward = {
-        	add_ideas = DEN_idea_schleswig_is_danish_1
+			activate_mission_tooltip = DEN_mission_esbjerg_port
+			hidden_effect = {
+				activate_mission = DEN_mission_esbjerg_port
+			}
 		}
 	}
 	
 	focus = {
-		id = DEN_focus_north_schleswig_is_danish
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = DEN_focus_danish_victory
+		id = DEN_focus_denmark_will_never_bow_down
+		icon = GFX_focus_denmark_democracy
+		relative_position_id = DEN_focus_defenses_at_the_border
 		x = 0
-		y = 4
+		y = 1
 		cost = 30
+		available = {
+		}
 		ai_will_do = {
 			base = 1
 		}
 
-		prerequisite = { focus = DEN_focus_let_schleswigians_serve }
+		prerequisite = { focus = DEN_focus_a_revised_constitution_victory }
+		prerequisite = { focus = DEN_focus_defenses_at_the_border }
+		prerequisite = { focus = DEN_focus_build_esbjerg_port_victory }
 
 		completion_reward = {
-        	swap_ideas = {
-			   	remove_idea = DEN_idea_schleswig_is_danish_1
-			   	add_idea = DEN_idea_schleswig_is_danish_2
+			add_ideas = DEN_perseverance
+			add_opinion_modifier = { 
+				target = PRS
+				modifier = large_decrease
 			}
+			add_opinion_modifier = { 
+				target = AUS
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = HAN
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = MCK
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = OLD
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = HSD
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = SAX
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = BAV
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = WUR
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = THU
+				modifier = large_decrease
+			}
+			add_opinion_modifier = { 
+				target = BAD
+				modifier = large_decrease
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = DEN_focus_a_region_divided
+		icon = GFX_Focus_consolidate_power
+		x = 53
+		y = 0
+		cost = 1
+		allow_branch = { always = no }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GENERIC_Triggered_By_Event_tt
+				always = no
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = denmark_secschwar.91
+			add_ideas = DEN_costly_victory
 			add_political_power = 50
 		}
 	}
-
+	
 	focus = {
-		id = DEN_focus_quality_over_quantity
-		icon = GFX_focus_secret_rearmament
-		relative_position_id = DEN_focus_danish_victory
-		x = -1
-		y = 5
+		id = DEN_focus_using_victory_to_boost_party_popularity_stalemate
+		icon = GFX_Focus_Electorate_rally_people
+		relative_position_id = DEN_focus_a_region_divided
+		x = -2
+		y = 1
 		cost = 30
+		available = {
+		}
 		ai_will_do = {
 			base = 1
 		}
 
-		prerequisite = { focus = DEN_focus_defend_sjaelland focus = DEN_focus_north_schleswig_is_danish }
+		prerequisite = { focus = DEN_focus_a_region_divided }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = two_percent			
-				add_idea = three_percent
+			if = {
+       			limit = {
+		        	has_government  = traditional_conservatism
+				}
+	            add_popularity = { ideology = traditional_conservatism popularity = 0.1 }
+    		}
+			if = {
+				limit = {
+					has_government  = centrism
+				}
+				add_popularity = { ideology = centrism popularity = 0.1 }
 			}
-        	army_experience = 5
-			navy_experience = 25
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery }
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
 		}
 	}
+	
+	focus = {
+		id = DEN_focus_a_revised_constitution_stalemate
+		icon = GFX_Focus_Government_Reform_agenda
+		relative_position_id = DEN_focus_using_victory_to_boost_party_popularity_stalemate
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
 
+		prerequisite = { focus = DEN_focus_using_victory_to_boost_party_popularity_stalemate }
+
+		completion_reward = {
+			#unlock_decision_tooltip =
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_our_schleswig_is_a_better_schleswig
+		icon = GFX_Focus_Monarchy_Repeal_Exile_Law
+		relative_position_id = DEN_focus_a_region_divided
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_a_region_divided }
+
+		completion_reward = {
+			activate_mission = eoanb_mission_DEN_fortify_schleswig
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_a_danish_north_schleswig
+		icon = GFX_Focus_Partisans_Suppress_Liberalism
+		relative_position_id = DEN_focus_our_schleswig_is_a_better_schleswig
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_our_schleswig_is_a_better_schleswig }
+
+		completion_reward = {
+			#unlock_decision_tooltip =
+			1032 = {
+				add_resistance = 10
+				add_manpower = 5000
+			}
+			37 = {
+				add_manpower = -5000
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_demobilization_stalemate
+		icon = GFX_Focus_Soldier_send_abroad_cadets
+		relative_position_id = DEN_focus_a_region_divided
+		x = 2
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_a_region_divided }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = early_conscription
+				}
+				swap_ideas = {
+					remove_idea = early_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = service_by_requirement
+				}
+				swap_ideas = {
+					remove_idea = service_by_requirement
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = all_adults_serve
+				}
+				swap_ideas = {
+					remove_idea = all_adults_serve
+					add_idea = volunteer_only
+				}
+			}
+			else = {
+				add_manpower = 5000
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_build_esbjerg_port_stalemate
+		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = DEN_focus_demobilization_stalemate
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+			date > 1865.2.1
+		}
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_demobilization_stalemate }
+
+		completion_reward = {
+			activate_mission_tooltip = DEN_mission_esbjerg_port
+			hidden_effect = {
+				activate_mission = DEN_mission_esbjerg_port
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_denmark_will_keep_what_it_has
+		icon = GFX_focus_denmark_democracy
+		relative_position_id = DEN_focus_a_danish_north_schleswig
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_a_revised_constitution_stalemate }
+		prerequisite = { focus = DEN_focus_a_danish_north_schleswig }
+		prerequisite = { focus = DEN_focus_build_esbjerg_port_stalemate }
+
+		completion_reward = {
+			add_ideas = DEN_perseverance2
+			add_opinion_modifier = { 
+				target = PRS
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = AUS
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = HAN
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = MCK
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = OLD
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = HSD
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = SAX
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = BAV
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = WUR
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = THU
+				modifier = medium_decrease
+			}
+			add_opinion_modifier = { 
+				target = BAD
+				modifier = medium_decrease
+			}
+		}
+	}
+	
+
+
+	focus = {
+		id = DEN_focus_humiliating_defeat
+		icon = GFX_Focus_social_oppress_poor
+		x = 53
+		y = 0
+		cost = 0
+		allow_branch = { always = no }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GENERIC_Triggered_By_Event_tt
+				always = no
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = denmark_secschwar.92
+			add_ideas = DEN_embarrassingly_trounced1
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_the_fall_of_the_governing_party
+		icon = GFX_focus_politics_government_chaos
+		relative_position_id = DEN_focus_humiliating_defeat
+		x = -2
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_humiliating_defeat }
+
+		completion_reward = {
+			if = {
+       			limit = {
+		        	has_government  = traditional_conservatism
+				}
+				set_politics = { ruling_party = centrism elections_allowed = no }
+	            add_popularity = { ideology = traditional_conservatism popularity = -0.2 }
+    		}
+			if = {
+				limit = {
+					has_government  = centrism
+				}
+				set_politics = { ruling_party = traditional_conservatism elections_allowed = no }
+				add_popularity = { ideology = centrism popularity = -0.2 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_a_revised_constitution_defeat
+		icon = GFX_Focus_Government_Reform_Administration
+		relative_position_id = DEN_focus_the_fall_of_the_governing_party
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_the_fall_of_the_governing_party }
+
+		completion_reward = {
+			#unlock_decision_tooltip =
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_learning_from_military_failures
+		icon = GFX_Focus_Army_Staff_Reorganization_1
+		relative_position_id = DEN_focus_humiliating_defeat
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_humiliating_defeat }
+
+		completion_reward = {
+			#unlock_decision_tooltip =
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_recovery_from_the_war
+		icon = GFX_Focus_Bankruptcy
+		relative_position_id = DEN_focus_learning_from_military_failures
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_learning_from_military_failures }
+
+		completion_reward = {
+			add_ideas = DEN_recovery
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_demobilization_defeat
+		icon = GFX_Focus_Soldier_send_abroad_cadets
+		relative_position_id = DEN_focus_humiliating_defeat
+		x = 2
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_humiliating_defeat }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = early_conscription
+				}
+				swap_ideas = {
+					remove_idea = early_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = service_by_requirement
+				}
+				swap_ideas = {
+					remove_idea = service_by_requirement
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = all_adults_serve
+				}
+				swap_ideas = {
+					remove_idea = all_adults_serve
+					add_idea = volunteer_only
+				}
+			}
+			else = {
+				add_manpower = 5000
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_build_esbjerg_port_defeat
+		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = DEN_focus_demobilization_defeat
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+			date > 1865.2.1
+		}
+		ai_will_do = {
+			base = 100
+		}
+
+		prerequisite = { focus = DEN_focus_demobilization_defeat }
+
+		completion_reward = {
+			activate_mission_tooltip = DEN_mission_esbjerg_port
+			hidden_effect = {
+				activate_mission = DEN_mission_esbjerg_port
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_focus_denmark_looks_towards_the_future
+		icon = GFX_focus_denmark_democracy
+		relative_position_id = DEN_focus_recovery_from_the_war
+		x = 0
+		y = 1
+		cost = 30
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		prerequisite = { focus = DEN_focus_a_revised_constitution_defeat }
+		prerequisite = { focus = DEN_focus_recovery_from_the_war }
+		prerequisite = { focus = DEN_focus_build_esbjerg_port_defeat }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = DEN_embarrassingly_trounced1
+				}
+				swap_ideas = {
+					remove_idea = DEN_embarrassingly_trounced1
+					add_idea = DEN_embarrassingly_trounced3
+				}
+			}
+			else = {
+				remove_ideas = DEN_embarrassingly_trounced2
+			}
+		}
+	}
 	### FOREIGN POLICY ###
 	
 	focus = {
@@ -2487,8 +3178,8 @@ focus_tree = {
 		relative_position_id = DEN_focus_foreign_relations
 		x = -3
 		y = 1
-		cost = 70
-		available = { SCH = { is_subject_of = DEN } }
+		cost = 35
+		available = { country_exists = OLD }
 		ai_will_do = {
 			base = 1
 		}
@@ -2496,26 +3187,14 @@ focus_tree = {
 		prerequisite = { focus = DEN_focus_foreign_relations }
 
 		completion_reward = {
-			if = {
-				limit = { 
-					OR = {
-						has_dlc = "Together for Victory"
-						has_dlc = "Waking the Tiger"
-						has_dlc = "Death or Dishonor"
-					} 
-				}
-				SCH = { add_autonomy_score = { value = -100 } }
-			}
-			else = {
-				add_political_power = 35
-			}
+			add_political_power = 25
 			add_opinion_modifier = {
-				target = SCH
-				modifier = large_increase  
+				target = OLD
+				modifier = medium_increase  
 			}
 			reverse_add_opinion_modifier = {
-				target = SCH
-				modifier = large_increase  
+				target = OLD
+				modifier = medium_increase  
 			}
 		}
 	}

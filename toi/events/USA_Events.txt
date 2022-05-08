@@ -25,6 +25,113 @@ add_namespace = usa_worldmapperus
 add_namespace = usa_western_expansion
 add_namespace = usa_worker_events
 
+###############################################
+# Bookmark Introductions to the United States #
+###############################################
+# 1857 — Divided States of America
+country_event = {
+	id = usa_intro.1
+	title = usa_intro.1.t
+	desc = usa_intro.1.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.1.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.2
+	}
+	option = {
+            name = usa_intro.1.b
+            trigger = { is_ai = no }
+            country_event = usa_intro.3
+	}
+	option = {
+             name = usa_intro.1.c
+             trigger = { is_ai = no }
+             country_event = usa_intro.4
+	}
+	option = {
+		name = usa_intro.1.e
+		add_political_power = -5
+		hidden_effect = {
+			360 = { OWNER = { country_event = { id = usa_flavor.2 days = 300 random_days = 100 } } }
+		}
+	}
+}
+country_event = {
+	id = usa_intro.2 # Seminole War
+	title = usa_intro.2.t
+	desc = usa_intro.2.d
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.2.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.1
+	}
+}
+country_event = {
+	id = usa_intro.3 # Slavery Debate
+	title = usa_intro.3.t
+	desc = usa_intro.3.d
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.3.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.1
+	}
+}
+country_event = {
+	id = usa_intro.4 # Mormons
+	title = usa_intro.4.t
+	desc = usa_intro.4.d
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.4.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.1
+	}
+}
+# 1870 — A Nation Rebuilding
+country_event = {
+	id = usa_intro.5
+	title = usa_intro.5.t
+	desc = usa_intro.5.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = usa_intro.1.a
+		add_political_power = -5
+	}
+}
+
+country_event = {
+	id = usa_intro.6
+	title = usa_intro.6.t
+	desc = usa_intro.6.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = usa_intro.6.a
+		add_political_power = -5
+	}
+}
+
+
+
 ####################### Worker Events ##########################
 
 #####################################
@@ -491,110 +598,6 @@ country_event = {
 	}
 }
 
-####################### Bookmark Introductions to the United States ##########################
-# 1857 — Divided States of America
-country_event = {
-	id = usa_intro.1
-	title = usa_intro.1.t
-	desc = usa_intro.1.d
-	picture = GFX_report_event_usa_election_generic
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.1.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.2 # Seminole War
-	}
-	option = {
-            name = usa_intro.1.b
-            trigger = { is_ai = no }
-            country_event = usa_intro.3 # Slavery Debate
-	}
-	option = {
-             name = usa_intro.1.c
-             trigger = { is_ai = no }
-             country_event = usa_intro.4 # Mormons
-	}
-	option = {
-		name = usa_intro.1.e
-		add_political_power = -5
-		hidden_effect = {
-			360 = { OWNER = { country_event = { id = usa_flavor.2 days = 300 random_days = 100 } } }
-		}
-	}
-}
-country_event = {
-	id = usa_intro.2
-	title = usa_intro.2.t
-	desc = usa_intro.2.d
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.2.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.1
-	}
-}
-country_event = {
-	id = usa_intro.3
-	title = usa_intro.3.t
-	desc = usa_intro.3.d
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.3.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.1
-	}
-}
-country_event = {
-	id = usa_intro.4
-	title = usa_intro.4.t
-	desc = usa_intro.4.d
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.4.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.1
-	}
-}
-# 1870 — A Nation Rebuilding
-country_event = {
-	id = usa_intro.2
-	title = usa_intro.2.t
-	desc = usa_intro.2.d
-	picture = GFX_report_event_usa_election_generic
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = usa_intro.1.a
-		add_political_power = -5
-	}
-}
-
-country_event = {
-	id = usa_intro.3
-	title = usa_intro.3.t
-	desc = usa_intro.3.d
-	picture = GFX_report_event_usa_election_generic
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = usa_intro.1.a
-		add_political_power = -5
-	}
-}
-
-
 
 ####################### Panic of 1857 ##########################
 
@@ -1049,16 +1052,17 @@ country_event = {#sets AI behavior
 	option = {
 		name = USA_utah_war_start.1.a
 		hidden_effect = {
+			set_country_flag = USA_mormon_NME
 			if = {
 				limit = {
 					is_historical_focus_on = yes
 				}
-				set_country_flag = AI_USA_mormonWar_historical
+				set_country_flag = AI_USA_mormonWar_peaceful
 			}
 			else = {
 				random_list = {
 					85 = {
-						set_country_flag = AI_USA_mormonWar_historical
+						set_country_flag = AI_USA_mormonWar_peaceful
 					}
 					15 = {
 						set_country_flag = AI_USA_mormonWar_aggressive
@@ -1118,6 +1122,9 @@ country_event = {#Send small military escort
 		add_to_variable = {
 			var = USA_mormon_unrest
     		value = 2
+		}
+		USA = {
+			set_country_flag = USA_mormon_SME
 		}
 	}
 }
@@ -1550,6 +1557,179 @@ country_event = {#Promise to expedite statehood
 	}
 }
 
+country_event = {#parent event for "Send military Escort?"
+	id = USA_utah_war.25
+	title = USA_utah_war.25.t
+	desc = USA_utah_war.25.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {#small
+		name = USA_utah_war.25.a
+		country_event = {
+			id = USA_utah_war.3
+		}
+		add_political_power = 5
+		set_country_flag = USA_mormon_SME
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = AI_USA_mormonWar_peaceful
+				factor = 1.5
+			}
+		}
+	}
+
+	option = {#medium
+		name = USA_utah_war.25.b
+		country_event = {
+			id = USA_utah_war.4
+		}
+		set_country_flag = USA_mormon_MME
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {#large
+		name = USA_utah_war.25.c
+		country_event = {
+			id = USA_utah_war.5
+		}
+		
+		add_political_power = -5
+		set_country_flag = USA_mormon_LME
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = AI_USA_mormonWar_aggressive
+				factor = 1.5
+			}
+		}
+	}
+}
+
+country_event = {#parent event for "adjust military Escort?"
+	id = USA_utah_war.26
+	title = USA_utah_war.26.t
+	desc = USA_utah_war.26.d
+
+	is_triggered_only = yes
+
+	option = {#reduce by 1
+		name = USA_utah_war.26.a
+		trigger = {
+			NOT = {
+				has_country_flag = USA_mormon_NME
+				has_country_flag = USA_mormon_SME
+			}
+		}
+		country_event = {
+			id = USA_utah_war.22
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_mormon_MME
+			}
+			clr_country_flag = USA_mormon_MME
+			set_country_flag = USA_mormon_SME
+		}
+		else = {
+			clr_country_flag = USA_mormon_LME
+			set_country_flag = USA_mormon_MME
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = AI_USA_mormonWar_peaceful
+				factor = 2
+			}
+		}
+	}
+
+	option = {#reduce by 2
+		name = USA_utah_war.26.b
+		trigger = {
+			NOT = {
+				has_country_flag = USA_mormon_MME
+				has_country_flag = USA_mormon_SME
+				has_country_flag = USA_mormon_NME
+			}
+		}
+		country_event = {
+			id = USA_utah_war.23
+		}
+		clr_country_flag = USA_mormon_LME
+		set_country_flag = USA_mormon_SME
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = AI_USA_mormonWar_peaceful
+				factor = 2
+			}
+			modifier = {
+				check_variable = {
+					USA_mormon_unrest > 10
+				}
+				factor = 2
+			}
+		}
+	}
+
+	option = {#increase by 1
+		name = USA_utah_war.26.c
+		trigger = {
+			NOT = {
+				has_country_flag = USA_mormon_LME
+			}
+		}
+		country_event = {
+			id = USA_utah_war.20
+		}
+		if = {
+			limit = {
+				has_country_flag = USA_mormon_SME
+			}
+			clr_country_flag = USA_mormon_SME
+			set_country_flag = USA_mormon_MME
+		}
+		else = {
+			clr_country_flag = USA_mormon_MME
+			set_country_flag = USA_mormon_LME
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = AI_USA_mormonWar_aggressive
+				factor = 2
+			}
+		}
+	}
+
+	option = {#increase by 2
+		name = USA_utah_war.26.e
+		trigger = {
+			NOT = {
+				has_country_flag = USA_mormon_LME
+				has_country_flag = USA_mormon_MME
+			}
+		}
+		country_event = {
+			id = USA_utah_war.21
+		}
+		clr_country_flag = USA_mormon_SME
+		set_country_flag = USA_mormon_LME
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = AI_USA_mormonWar_aggressive
+				factor = 2
+			}
+		}
+	}
+}
+
 country_event = {#US wins border war
 	id = USA_utah_war.93
 	title = USA_utah_war.93.t
@@ -1616,6 +1796,7 @@ country_event = {#war goes hot, US wins
 			transfer_state = 1092
 			transfer_state = 380
 			transfer_state = 379
+			transfer_state = 258
 		}
 		if = {
 			limit = {
@@ -1803,89 +1984,12 @@ country_event = {#ongoing event which adds mormon unrest forcing the player to d
 		}
 	}
 	option = {# failsafe layer 1
-		name = USA_utah_was.98.e
+		name = USA_utah_war.98.e
 		trigger = {
 			USA = {
 				NOT = {
 					has_country_flag = utahWarOngoing
 				}
-			}
-		}
-		if = {
-			limit = {
-				check_variable = {
-					variable = USA_mormon_unrest
-					value = 18
-					compare = greater_than_or_equals
-				}
-			}
-			USA = {
-				declare_war_on = {
-					target = UTA
-					type = annex_everything
-				}
-				activate_mission = utahWar90
-				clr_country_flag = utahWarOngoing
-				remove_mission = utahWar0
-				remove_idea = USA_utahwar
-			}
-			if = {
-				limit = {
-					USA = {
-						has_idea = USA_utahwar
-					}
-				}
-				remove_mission = utahWar0
-				remove_ideas = USA_utahwar
-				declare_war_on = {
-					target = UTA
-					type = annex_everything
-				}
-				activate_mission = utahWar90
-				clr_country_flag = utahWarOngoing
-			}
-		}
-		if = {
-			limit = {
-				check_variable = { USA_mormon_unrest < 18 }
-			}
-			if = {
-				limit = {
-					USA = {
-						has_border_war_with = UTA
-					}
-				}
-				cancel_border_war = {
-					attacker = 1291
-					defender = 380
-				}
-			}
-			USA = {#annex UT
-				annex_country = {
-					target = UTA
-					transfer_troops = no
-				}
-				clr_country_flag = utahWarOngoing
-				remove_mission = utahWar0
-				unlock_national_focus = USA_utah_peace
-				remove_ideas = USA_utahwar
-			}
-			if = {
-				limit = {
-					USA = {
-						has_idea = USA_utahwar
-					}
-				}
-				remove_ideas = USA_utahwar
-				unlock_national_focus = USA_utah_peace
-				clr_country_flag = utahWarOngoing
-				remove_mission = utahWar0
-				USA = {#annex UT
-				annex_country = {
-					target = UTA
-					transfer_troops = no
-				}
-			}
 			}
 		}
 		add_political_power = 75
@@ -1899,7 +2003,7 @@ country_event = {#Utah War Conclusion
 		text = USA_utah_war.99.d1
 		trigger = {
 			check_variable = {
-				variable = USA_mormon_unrest
+				var = USA_mormon_unrest
 				value < 18
 			}
 		}
@@ -1908,7 +2012,7 @@ country_event = {#Utah War Conclusion
 		text = USA_utah_war.99.d2
 		trigger = {
 			check_variable = {
-				variable = USA_mormon_unrest
+				var = USA_mormon_unrest
 				value = 18
 				compare = greater_than_or_equals
 			}
@@ -1918,89 +2022,89 @@ country_event = {#Utah War Conclusion
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	immediate = {
-		if = {
-			limit = {
-				check_variable = {
-					variable = USA_mormon_unrest
-					value = 18
-					compare = greater_than_or_equals
-				}
-			}
-			USA = {
-				declare_war_on = {
-					target = UTA
-					type = annex_everything
-				}
-				activate_mission = utahWar90
-				clr_country_flag = utahWarOngoing
-				remove_mission = utahWar0
-			}
-			if = {
-				limit = {
-					USA = {
-						has_idea = USA_utahwar
-					}
-				}
-				remove_mission = utahWar0
-				remove_ideas = USA_utahwar
-				declare_war_on = {
-					target = UTA
-					type = annex_everything
-				}
-				activate_mission = utahWar90
-				clr_country_flag = utahWarOngoing
-			}
-		}
-		if = {
-			limit = {
-				check_variable = { USA_mormon_unrest < 18 }
-			}
-			if = {
-				limit = {
-					USA = {
-						has_border_war_with = UTA
-					}
-				}
-				cancel_border_war = {
-					attacker = 1291
-					defender = 380
-				}
-			}
-			USA = {#annex UT
-				annex_country = {
-					target = UTA
-					transfer_troops = no
-				}
-				clr_country_flag = utahWarOngoing
-				remove_mission = utahWar0
-				unlock_national_focus = USA_utah_peace
-				remove_ideas = USA_utahwar
-			}
-			if = {
-				limit = {
-					USA = {
-						has_idea = USA_utahwar
-					}
-				}
-				remove_ideas = USA_utahwar
-				unlock_national_focus = USA_utah_peace
-				clr_country_flag = utahWarOngoing
-				remove_mission = utahWar0
-				USA = {#annex UT
-				annex_country = {
-					target = UTA
-					transfer_troops = no
-				}
-			}
-			}
-		}
-	}
+	# immediate = {
+	# 	if = {
+	# 		limit = {
+	# 			check_variable = {
+	# 				var = USA_mormon_unrest
+	# 				value = 18
+	# 				compare = greater_than_or_equals
+	# 			}
+	# 		}
+	# 		USA = {
+	# 			declare_war_on = {
+	# 				target = UTA
+	# 				type = annex_everything
+	# 			}
+	# 			activate_mission = utahWar90
+	# 			clr_country_flag = utahWarOngoing
+	# 			remove_mission = utahWar0
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				USA = {
+	# 					has_idea = USA_utahwar
+	# 				}
+	# 			}
+	# 			remove_mission = utahWar0
+	# 			remove_ideas = USA_utahwar
+	# 			declare_war_on = {
+	# 				target = UTA
+	# 				type = annex_everything
+	# 			}
+	# 			activate_mission = utahWar90
+	# 			clr_country_flag = utahWarOngoing
+	# 		}
+	# 	}
+	# 	if = {
+	# 		limit = {
+	# 			check_variable = { USA_mormon_unrest < 18 }
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				USA = {
+	# 					has_border_war_with = UTA
+	# 				}
+	# 			}
+	# 			cancel_border_war = {
+	# 				attacker = 1291
+	# 				defender = 380
+	# 			}
+	# 		}
+	# 		USA = {#annex UT
+	# 			annex_country = {
+	# 				target = UTA
+	# 				transfer_troops = no
+	# 			}
+	# 			clr_country_flag = utahWarOngoing
+	# 			remove_mission = utahWar0
+	# 			unlock_national_focus = USA_utah_peace
+	# 			remove_ideas = USA_utahwar
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				USA = {
+	# 					has_idea = USA_utahwar
+	# 				}
+	# 			}
+	# 			remove_ideas = USA_utahwar
+	# 			unlock_national_focus = USA_utah_peace
+	# 			clr_country_flag = utahWarOngoing
+	# 			remove_mission = utahWar0
+	# 			USA = {#annex UT
+	# 			annex_country = {
+	# 				target = UTA
+	# 				transfer_troops = no
+	# 			}
+	# 		}
+	# 		}
+	# 	}
+	# }
 
 	option = {
 		trigger = {
 			check_variable = {
-				variable = USA_mormon_unrest
+				var = USA_mormon_unrest
 				value = 18
 				compare = greater_than_or_equals
 			}
@@ -2073,23 +2177,23 @@ country_event = {#Utah War Conclusion
 			unlock_national_focus = USA_utah_peace
 			remove_ideas = USA_utahwar
 		}
-		if = {
-			limit = {
-				USA = {
-					has_idea = USA_utahwar
-				}
-			}
-			remove_ideas = USA_utahwar
-			unlock_national_focus = USA_utah_peace
-			clr_country_flag = utahWarOngoing
-			remove_mission = utahWar0
-			USA = {#annex UT
-			annex_country = {
-				target = UTA
-				transfer_troops = no
-			}
-		}
-		}
+		#if = {
+		#	limit = {
+		#		USA = {
+		#			has_idea = USA_utahwar
+		#		}
+		#	}
+		#	remove_ideas = USA_utahwar
+		#	unlock_national_focus = USA_utah_peace
+		#	clr_country_flag = utahWarOngoing
+		#	remove_mission = utahWar0
+		#	USA = {#annex UT
+		#		annex_country = {
+		#			target = UTA
+		#			transfer_troops = no
+		#		}
+		#	}
+		#}
 		
 		# country_event = {
 		# 	id = usa.
@@ -3901,7 +4005,7 @@ country_event = {
 		create_country_leader = {
 			name = "Hannibal Hamlin"
 			desc = ""
-			picture = ""
+			#picture = ""
 			expire = "1947.1.1"
 			ideology = liberal_social
 		}
@@ -3962,7 +4066,6 @@ country_event = {
 		375 = {	add_manpower = -1000 }
 		368 = {	add_manpower = -1000 }
 		373 = {	add_manpower = -1500 }
-		1410 = { add_manpower = -1500 }
 		369 = {	add_manpower = -1500 }
 		361 = {	add_manpower = -2500 }
 		add_to_variable = {
@@ -3985,7 +4088,6 @@ country_event = {
 		375 = {	add_manpower = -5000 }
 		368 = {	add_manpower = -5000 }
 		373 = {	add_manpower = -3500 }
-		1410 = { add_manpower = -3500 }
 		369 = {	add_manpower = -3500 }
 		361 = {	add_manpower = -3500 }
 
@@ -4007,7 +4109,6 @@ country_event = {
 		375 = {	add_manpower = -10000 }
 		368 = {	add_manpower = -10000 }
 		373 = {	add_manpower = -7500 }
-		1410 = { add_manpower = -7500 }
 		369 = {	add_manpower = -7500 }
 		361 = {	add_manpower = -7500 }
 		subtract_from_variable = {
@@ -6664,12 +6765,6 @@ country_event = {
 			}
 			if = {
 				limit = {
-					CSA = { owns_state = 1287 }
-				}
-				transfer_state = 1287
-			}
-			if = {
-				limit = {
 					CSA = { owns_state = 377 }
 				}
 				transfer_state = 377
@@ -6679,12 +6774,6 @@ country_event = {
 					CSA = { owns_state = 1286 }
 				}
 				transfer_state = 1286
-			}
-			if = {
-				limit = {
-					CSA = { owns_state = 1287 }
-				}
-				transfer_state = 1287
 			}
 		}
 	}
@@ -6704,10 +6793,8 @@ country_event = { #Event check for Sam Houston Elected Governor of Texas
 				USA = {
 					OR = {
 						owns_state = 1306
-						owns_state = 1305
 						owns_state = 375
 						owns_state = 1304
-						owns_state = 1303
 						owns_state = 1281
 						owns_state = 1280
 					}
@@ -7926,9 +8013,9 @@ country_event = {
 	desc = usa.151.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
-		tag = USA
+	trigger = {########### this should be triggered differently
 		has_global_flag = USA_gilded_age_ft
+		tag = USA
 		OR = {
 			check_variable = {
 				var = USA_steel_opinion
@@ -9722,7 +9809,7 @@ country_event = {
 	desc = usa.157.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = USA
 		USA = {
 			OR = {
@@ -9751,6 +9838,9 @@ country_event = {
 		}
 		date > 1898.1.1
 		date < 1900.1.1
+	}
+	immediate={
+		set_global_flag = USS_maine_exploded
 	}
 
 	fire_only_once = yes
@@ -10113,7 +10203,7 @@ country_event = {
 	desc = usa.160.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = USA
 		AND = {
 			controls_state = 1022
@@ -10659,7 +10749,7 @@ country_event = {
 	desc = usa.163.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = SPR
 		date > 1900.1.1
 		surrender_progress < 0.01
@@ -10752,13 +10842,15 @@ country_event = {
 	desc = usa.166.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
-		tag = USA
-		has_elections = yes
-		date > 1885.1.1
-		date < 1895.1.1
-	}
-
+	# trigger = {
+	# 	tag = USA
+	# 	has_elections = yes #######This will never fire as we have diabled elections for the US because code is not dynamic enough
+	#to handle US elections. By dint this event serves only to lag the game and needs fixing. Also this should be a french controlled
+	#event
+	# 	date > 1885.1.1
+	# 	date < 1895.1.1
+	# }
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
@@ -10777,7 +10869,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = USA
 		date > 1869.01.01
 		date < 1872.12.31
@@ -10874,7 +10966,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {############## This should be KDE
 		tag = USA
 		date > 1870.01.01
 		date < 1872.01.01
@@ -10922,7 +11014,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = { #####################Whatever assigns that flag should trigger this event
 		tag = USA
 		date > 1872.3.1
 		date < 1872.12.31
@@ -10950,7 +11042,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {################# This should be triggered differently
 		TAG = ENG
 		date > 1862.1.1
 		if = {
@@ -11005,7 +11097,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
+	trigger = { ##### USA_reconstruction should trigger this
 		if = {
 			limit = { has_completed_focus = USA_reconstruction }
 			NOT = { country_exists = CSA }
@@ -11439,7 +11531,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = { ######win_end_reconstruction should trigger this
 		has_completed_focus = USA_win_end_reconstruction
 		NOT = {
 			has_idea = full_equality
@@ -11590,7 +11682,7 @@ country_event = { # Divided Democratic Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {############focus should trigger event
 		CSA = { exists = yes }
 		has_war_with = CSA
 		has_completed_focus = USA_Focus_American_Civil_War
@@ -11622,7 +11714,7 @@ country_event = { #Creation of the National Union Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########## This should be triggered differently
 		TAG = USA
 		date > 1864.1.1
 		date < 1864.4.1
@@ -11720,7 +11812,7 @@ country_event = { # National Union Convention
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {###### This should be triggered differently
 		tag = USA
 		date > 1864.6.6
 		date < 1864.6.9
@@ -11834,7 +11926,7 @@ country_event =  { # Collapse of the National Union Party (Andrew `John`son)
 
 	is_triggered_only = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1868.11.01
 		date < 1868.11.04
@@ -11894,7 +11986,7 @@ country_event = { # Collapse of the National Union Party (Infighting between the
 
 	is_triggered_only = yes
 
-	trigger = {
+	trigger = {###################### this should be triggered differently
 		TAG = USA
 		date > 1868.05.01
 		date < 1868.10.01
@@ -11956,7 +12048,7 @@ country_event = { # Creation of the Prohibition Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1869.09.01
 	}
@@ -11989,6 +12081,27 @@ country_event = { # Creation of the Prohibition Party
 }
 
 ## WIP Prohibition Party events usa.199-205
+country_event = {
+	id = usa.200
+	title = usa.200.t
+	desc = usa.200.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "manpower: [?manpower]"
+		log = "manpower_k: [?manpower_k]"
+		log = "max_available_manpower: [?max_available_manpower]"
+		log = "max_available_manpower_k: [?max_available_manpower_k]"
+		log = "max_manpower: [?max_manpower]"
+		log = "max_manpower_k: [?max_manpower_k]"
+	}
+
+	option = {
+		name = usa.200.a
+	}
+}
+
 
 country_event = { # The formation of the Greenback Party
 	id = usa.206
@@ -11998,7 +12111,7 @@ country_event = { # The formation of the Greenback Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1874.01.01
 		date < 1874.12.31
@@ -12041,7 +12154,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1892.01.01
 		date < 1892.06.31
@@ -12244,8 +12357,16 @@ country_event = {
 			set_global_flag = cuba_sold_not_by_spain
 		}
 		set_global_flag = USACuba_Purchased
+		if = { 
+			limit = { TAG = SPR }
+			add_stability = -0.10
+		}
 		ai_chance = {
-			factor = 90
+			base = 10
+			modifier = {
+				add = -9
+				TAG = SPR
+			}
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -12257,14 +12378,10 @@ country_event = {
 		add_political_power = -25
 		USA = { country_event = { id = usa.217 hours = 1 } }
 		ai_chance = {
-			factor = 10
+			base = 90
 			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 100
-				is_ai = yes
+				add = 9
+				TAG = SPR
 			}
 		}
 	}
@@ -12743,8 +12860,7 @@ country_event = { #Mexico loses
 			transfer_state = FROM
 		}
 		FROM = {
-			custom_effect_tooltip = AFR_Racial_Tension_plus_3
-				hidden_effect = { state_event = { id = afr_rrp_racial_tension_increase.3 } }
+			state_event = { id = afr_rrp_racial_tension_increase.3 }
 		}
 	}
 }
@@ -12768,6 +12884,25 @@ country_event = { #USA sends support to Mexican Liberals Mid-Civil-War
 	picture = GFX_report_event_chinese_army_training
 
 	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			var = inf_equip_total
+			value = num_equipment@infantry_equipment
+		}
+		set_variable = {
+			var = uni_equip_total
+			value = num_equipment@uniform_equipment
+		}
+		multiply_variable = {
+			var = inf_equip_total
+			value = 0.5
+		}
+		multiply_variable = {
+			var = uni_equip_total
+			value = 0.5
+		}
+	}
 
 	option = {
 		name = usa.226.a
@@ -12856,6 +12991,51 @@ country_event = { #USA sends support to Mexican Liberals Mid-Civil-War
 			factor = 100
 		}
 	}
+	option = {
+		name = usa.226.e
+		trigger = {
+			MEC = {
+				is_subject_of = SPR
+			}
+		}
+		set_country_flag = USA_sends_monroe_support
+		
+		# subtract_from_variable = {
+		# 	var = inf_equip_total
+		# 	value = num_equipment_in_armies@infantry_equipment
+		# }
+		# subtract_from_variable = {
+		# 	var = uni_equip_total
+		# 	value = num_equipment_in_armies@uniform_equipment
+		# }
+		
+		send_equipment = {
+			type = infantry_equipment
+			amount = inf_equip_total
+			target = MEX
+		}
+		send_equipment = {
+			type = uniform_equipment
+			amount = uni_equip_total
+			target = MEX
+		}
+		MEX = {
+			add_opinion_modifier = {
+				target = USA
+				modifier = usa_helped_liberals_4
+			}
+			country_event = {
+				id = usa.227
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
 }
 country_event = {
 	id = usa.227
@@ -12895,6 +13075,16 @@ country_event = {
 		}
 		custom_effect_tooltip = usa.227.c1
 	}
+	option = {
+		name = usa.227.e
+		trigger = {
+			USA = { has_country_flag = USA_send_monroe_support }
+		}
+		USA = {
+			clr_country_flag = USA_send_monroe_support
+		}
+		custom_effect_tooltip = usa.227.e1
+	}
 }
 ##Central park events
 country_event = {
@@ -12926,56 +13116,6 @@ country_event = {
 	}
 }
 
-################# Walker events (USA) #################
-#Walker Buchanan support event
-
-country_event = {
-	id = usa.231
-	title = usa.231.a
-	desc = usa.231.b
-	picture = GFX_report_event_a_republica
-	
-	is_triggered_only = yes
-
-	option = {
-		name = usa.231.c
-		ai_chance = { factor = 75 }
-		set_variable = {
-			var = USA_walker_approved_by_buchanan
-			value = 0
-		}
-		add_political_power = 20
-		set_temp_variable = { USA_Slavery_Debate_Leaning_Change = -1 }	
-	}
-	option = {
-		name = usa.231.d
-		ai_chance = { factor = 25 }
-		set_variable = {
-			var = USA_walker_approved_by_buchanan
-			value = 1 
-		}
-		set_temp_variable = { USA_Slavery_Debate_Leaning_Change = 1 }
-		hidden_effect = {
-			country_event = { id = usa.232 days = 22 }
-		}
-	}
-}
-
-##Walker gets stopped by the navy
-country_event = {
-	id = usa.232
-	title = usa.232.a
-	desc = usa.232.b
-	picture = GFX_report_event_a_republica
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = usa.232.c
-		add_political_power = -10
-	}	
-}
-
 country_event = {#midway atoll #631
 	id = usa_guano_islands.1
 	title = usa_guano_islands.1.t
@@ -12988,6 +13128,13 @@ country_event = {#midway atoll #631
 		name = usa_guano_islands.1.a
 		USA = {
 			transfer_state = 631
+		}
+		631 = {
+			add_state_modifier = {
+				modifier = {
+					required_garrison_factor = -0.9
+				}
+			}
 		}
 	}
 }
@@ -13057,6 +13204,13 @@ country_event = {
 		name = usa_guano_islands.1.a
 		USA = {
 			transfer_state = 630
+		}
+		630 = {
+			add_state_modifier = {
+				modifier = {
+					required_garrison_factor = -0.9
+				}
+			}
 		}
 	}
 }
@@ -13795,7 +13949,7 @@ country_event = { # USA Asks To Buy Cuba Again (Spain Perspective)
 	option = { # We can agree to these terms
 		name = usa_diplomacy.2.a
 		ai_chance = {
-			base = 20
+			base = 1
 			modifier = {
 				strength_ratio = {
 					tag = USA
@@ -13820,7 +13974,7 @@ country_event = { # USA Asks To Buy Cuba Again (Spain Perspective)
 	option = { # Absolutely not
 		name = usa_diplomacy.2.b
 		ai_chance = {
-			base = 80
+			base = 99
 		}
 	}
 }
@@ -13840,7 +13994,7 @@ country_event = { # Spain Accepts Terms! (USA Perspective)
 				transfer_state = 1350
 				add_state_core = 315
 				add_state_core = 1350
-				set_capital = 1350
+				set_capital = { state = 1350 }
 			}
 			USA = {
 				puppet = CUB
@@ -13892,20 +14046,169 @@ news_event = {
 		name = usa_diplomacy.5.a
 	}
 }
+country_event = { #Sardinia Repeal
+	id = usa_diplomacy.6
+	title = usa_diplomacy.6.t
+	desc = usa_diplomacy.6.desc
+
+	picture = placeholder
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_diplomacy.6.a
+		add_political_power = -10
+		unlock_decision_tooltip = USA_sardinia_equipment
+		unlock_decision_tooltip = USA_sardinia_denounce_austria
+		unlock_decision_tooltip = USA_sardinia_invest_textile
+	}
+	option = {
+		name = usa_diplomacy.6.b
+		add_political_power = 50
+	}
+}
+country_event = { #Sardinia Renew
+	id = usa_diplomacy.7
+	title = usa_diplomacy.7.t
+	desc = usa_diplomacy.7.desc
+
+	picture = placeholder
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_diplomacy.7.a
+		add_political_power = 30
+	}
+}
+
+country_event = {#britain accepts clayton-bulwer treaty
+	id = usa_diplomacy.8
+	title = usa_diplomacy.8.t
+	desc = usa_diplomacy.8.d
+
+	#picture
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_diplomacy.8.a
+		add_political_power = 100
+	}
+}
+
+country_event = {#britain refutes clayton-bulwer treaty
+	id = usa_diplomacy.9
+	title = usa_diplomacy.9.t
+	desc = usa_diplomacy.9.d
+
+	#picture
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_diplomacy.9.a
+		add_political_power = -50
+	}
+}
+
+news_event = { #Honduras, Nicuragua, and Guatemala hear about the results
+#of the clayton-bulwer treaty
+	id = usa_diplomacy.10
+	title = {
+		text = usa_diplomacy.10.t1
+		trigger = {
+			ENG = {
+				has_country_flag = clayton_bulwer_treaty_passed
+			}
+		}
+	}
+	title = {
+		text = usa_diplomacy.10.t2
+		trigger = {
+			ENG = {
+				has_country_flag = clayton_bulwer_treaty_failed
+			}
+		}
+	}
+	#desc = {
+	#	text = usa_diplomacy.10.d1
+	#	trigger = {
+	#		tag = GUA
+	#		ENG = {
+	#			has_country_flag = clayton_bulwer_treaty_passed
+	#		}
+	#	}
+	#}
+	#desc = {
+	#	text = usa_diplomacy.10.d2
+	#	trigger = {
+	#		tag = GUA
+	#		ENG = {
+	#			has_country_flag = clayton_bulwer_treaty_failed
+	#		}
+	#	}
+	#}
+	desc = {
+		text = usa_diplomacy.10.d3
+		trigger = {
+			OR = {
+				tag = NIC
+				tag = HON
+			}
+			ENG = {
+				has_country_flag = clayton_bulwer_treaty_passed
+			}
+		}
+	}
+	desc = {
+		text = usa_diplomacy.10.d4
+		trigger = {
+			OR = {
+				tag = NIC
+				tag = HON
+			}
+			ENG = {
+				has_country_flag = clayton_bulwer_treaty_passed
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = { #treaty of managua (UK/Nicuragua),
+		#honduran UK treaty https://www.jstor.org/stable/3020338 why is this so hard to find
+		#the treaty of no name https://en.wikipedia.org/wiki/History_of_Honduras_(1838%E2%80%931932)#Development_of_an_independent_nation_(1838%E2%80%9399)
+		name = usa_diplomacy.10.a
+		trigger = {
+			OR = {
+				tag = NIC
+				tag = HON
+			}
+		}
+	}
+	option = {
+		name = usa_diplomacy.10.b
+		trigger = {
+			tag = GUA
+		}
+	}
+
+
+}
 
 # Independence Day #
 country_event = {
 	id = usa_independence.1
 	title = usa_independence.1.t
-	desc = usa_independence.1
+	desc = usa_independence.1.desc
 	
-	picture = placeholder
+	picture = GFX_report_event_usa_independence_day
 
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
-			USA_check_and_update_stars = yes
 			country_event = {
 				id = usa_independence.1
 				days = 365
@@ -14075,5 +14378,26 @@ news_event = { #The Founding of AT&T
 	fire_only_once = yes
 	option = {
 		name = usa_worldmapperus.3.a
+	}
+}
+
+news_event = { #1906 San Francisco Earthquake
+	id = usa_worldmapperus.4
+	title = usa_worldmapperus.4.t
+	desc = usa_worldmapperus.4.desc
+	#picture = GFX_
+	picture = placeholder
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	option = {
+		name = usa_worldmapperus.4.a
+		1341 = {
+			add_manpower = -2000
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
 	}
 }

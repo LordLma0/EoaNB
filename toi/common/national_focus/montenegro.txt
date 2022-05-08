@@ -23,7 +23,7 @@ focus_tree = {
     
     focus = {
 		id = MNT_Danilo's_Code
-		icon = GFX_goal_focus_enact_law
+		icon = GFX_Focus_Law_Vote_1
 		cost = 15
 		x = 8
 		y = 1
@@ -37,7 +37,7 @@ focus_tree = {
     #left
     focus = {
 		id = MNT_Montenegrin_Clans
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		
         available = { always = no }
         
@@ -94,12 +94,12 @@ focus_tree = {
             add_political_power = 50
             remove_ideas = MNT_Clans_Question2
 		}
-	}
+	} 
     
     #middle
     focus = {
 		id = MNT_Assassination_Of_Knez_Danilo
-		icon = GFX_focus_conspiracy_murder_act
+		icon = GFX_focus_assassination
 		cost = 0
 		x = 8
 		y = 4
@@ -153,7 +153,7 @@ focus_tree = {
     
     focus = {
 		id = MNT_First_Montenegrin_Newspaper
-		icon = GFX_focus_newspapers
+		icon = GFX_Focus_Newspaper_Tax
 		cost = 70
 		x = 7
 		y = 9
@@ -257,7 +257,7 @@ focus_tree = {
     
     focus = {
 		id = MNT_Encourage_Society_Modernization
-		icon = GFX_goal_focus_the_elite
+		icon = GFX_Focus_Elite
 		cost = 70
 		x = 9
 		y = 3
@@ -376,7 +376,7 @@ focus_tree = {
 
     focus = {
 		id = MNT_Promote_Agriculture
-		icon = GFX_focus_ITA_Wheat
+		icon = GFX_Focus_Wheat
 		cost = 35
 		x = 21
 		y = 1
@@ -419,7 +419,7 @@ focus_tree = {
       
     focus = {
 		id = MNT_Improve_Farming_Methods
-		icon = GFX_goal_focus_tomato_farming
+		icon = GFX_Focus_tomato_farming
 		cost = 35
 		x = 22
 		y = 3
@@ -431,7 +431,7 @@ focus_tree = {
       
     focus = {
 		id = MNT_Faster_Modernization
-		icon = GFX_goal_focus_the_workers
+		icon = GFX_Focus_Worker
 		cost = 35
 		x = 18
 		y = 3
@@ -466,7 +466,7 @@ focus_tree = {
     ## Military ##
     focus = {
 		id = MNT_Reorganized_Army
-		icon = GFX_goal_focus_military_reforms
+		icon = GFX_Focus_Army_Reforms
 		cost = 35
 		x = 29
 		y = 0
@@ -491,7 +491,7 @@ focus_tree = {
     
     focus = {
 		id = MNT_Improve_Troops'_Morale
-		icon = GFX_focus_Make_a_Man_Out_Of_You
+		icon = GFX_Focus_Make_a_Man_Out_Of_You
 		cost = 70
 		x = 26
 		y = 2
@@ -512,7 +512,12 @@ focus_tree = {
 		y = 2
         prerequisite = { focus = MNT_Define_Chain_Of_Command }
 		completion_reward = {
-            add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+            add_doctrine_cost_reduction = {
+				name = MNT_land_doctrine
+				category = land_doctrine
+				uses = 1
+				cost_reduction = 0.50
+			}
 		}
 	}
     
@@ -524,7 +529,12 @@ focus_tree = {
 		y = 3
         prerequisite = { focus = MNT_Study_Land_Doctrines }
 		completion_reward = {
-            add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+           add_doctrine_cost_reduction = {
+				name = MNT_nre_strat
+				category = land_doctrine
+				uses = 1
+				cost_reduction = 0.50
+			}
 		}
 	}   
     
@@ -537,7 +547,12 @@ focus_tree = {
         prerequisite = { focus = MNT_New_Strategies }
         prerequisite = { focus = MNT_Train_Our_Brave_Fighters }
 		completion_reward = {
-            add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+            add_doctrine_cost_reduction = {
+				name = MNT_improve_tatics
+				category = land_doctrine
+				uses = 1
+				cost_reduction = 0.25
+			}
 		}
 	}  
     
@@ -664,7 +679,12 @@ focus_tree = {
 		y = 8
         prerequisite = { focus = MNT_1866_Officer_Training focus = MNT_Military_Cooperation_With_Serbia }
 		completion_reward = {
-            add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+           add_doctrine_cost_reduction = {
+				name = MNT_strat_quality
+				category = land_doctrine
+				uses = 1
+				cost_reduction = 0.50
+			}
 		}
 	}
     
@@ -748,7 +768,8 @@ focus_tree = {
         prerequisite = { focus = MNT_Department_Of_Military_Affairs }
         prerequisite = { focus = MNT_Improve_Quality_Of_Strategies }
 		completion_reward = {
-
+			add_command_power = 50
+			add_war_support = 0.05
 		}
 	}
 }

@@ -1551,6 +1551,32 @@ enact_voted_reform = {
 	}
 	
 	# DANISH PARLIAMENT VOTING ACTS
+	if = { # Vote on Moving the Copenhagen Naval Base to Holmen
+		limit = {
+			check_variable = { 
+				var = current_reform_id
+				value = 26.3
+          		compare = equals
+			}
+		}
+		DEN = {
+			37 = { add_extra_state_shared_building_slots = 1 }
+			37 = { add_building_construction = { type = naval_base level = 1 instant_build = yes province = 6287 } }
+			if = {
+				limit = {
+					has_idea = navinfra_low_naval_infrastructure
+				}
+				swap_ideas = { remove_idea = navinfra_low_naval_infrastructure add_idea = navinfra_decent_naval_infrastructure }
+			}
+			else_if = {
+				limit = {
+					has_idea = navinfra_no_naval_infrastructure
+				}
+				swap_ideas = { remove_idea = navinfra_no_naval_infrastructure add_idea = navinfra_low_naval_infrastructure }
+			}
+		}
+	}
+	
 	if = { # Vote on Wartime Infantry Battalion Duplication
 		limit = {
 			check_variable = { 
@@ -1594,7 +1620,7 @@ enact_voted_reform = {
 		}
 	}
 	
-	if = { # Vote on Danish Military Budget Act
+	if = { # Vote on Danish Army Budget Act
 		limit = {
 			check_variable = { 
 				var = current_reform_id
@@ -1620,6 +1646,36 @@ enact_voted_reform = {
 					has_idea = one_percent
 				}
 				swap_ideas = { remove_idea = one_percent add_idea = two_percent }
+			}
+		}
+	}
+	
+	if = { # Vote on Danish Navy Budget Act
+		limit = {
+			check_variable = { 
+				var = current_reform_id
+				value = 26.7
+          		compare = equals
+			}
+		}
+		DEN = {
+			if = {
+				limit = {
+					has_idea = navinfra_decent_naval_infrastructure
+				}
+				swap_ideas = { remove_idea = navinfra_decent_naval_infrastructure add_idea = navinfra_good_naval_infrastructure }
+			}
+			else_if = {
+				limit = {
+					has_idea = navinfra_low_naval_infrastructure
+				}
+				swap_ideas = { remove_idea = navinfra_low_naval_infrastructure add_idea = navinfra_decent_naval_infrastructure }
+			}
+			else_if = {
+				limit = {
+					has_idea = navinfra_no_naval_infrastructure
+				}
+				swap_ideas = { remove_idea = navinfra_no_naval_infrastructure add_idea = navinfra_decent_naval_infrastructure }
 			}
 		}
 	}

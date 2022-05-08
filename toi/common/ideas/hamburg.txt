@@ -30,11 +30,10 @@ ideas = {
 			
 			picture = HAM_hanseatic_legion
 			
-			research_bonus = { land_doctrine = 0.25 }
-			
 			modifier = {
 				army_infantry_attack_factor = -0.15
 				army_infantry_defence_factor = -0.15
+				land_doctrine_cost_factor = 0.25
 			}
 		}
 		HAM_idea_hansa_heritage = {
@@ -98,95 +97,4 @@ ideas = {
 			}
 		}
     }
-
-    political_advisor = {
-
-		HAM_Gustav_Heinrich_Kirchenpauer = {
-
-			allowed = {
-				original_tag = HAM
-			}
-
-			traits = { 
-				ingenious_scientist
-				traditional_conservatism_alignment
-			}
-		}
-
-		HAM_Gustav_Ferdinand_Hertz = {
-
-			allowed = {
-				original_tag = HAM
-			}
-
-			traits = { 
-				administrative_genius
-				traditional_conservatism_alignment
-			}
-		}
-
-		HAM_Gustav_Godeffroy = {
-
-			allowed = {
-				original_tag = HAM
-			}
-
-			traits = { 
-				clever_buisnessman
-				industrial_promoter
-			}
-		}
-
-		HAM_Franz_Ferdinand_Eiffe = {
-
-			allowed = {
-				original_tag = HAM
-			}
-
-			traits = { 
-				tax_collector
-				political_independent
-			}
-		}
-
-		HAM_Joachim_Friedrich_Martens = {
-
-			allowed = {
-				original_tag = HAM
-			}
-
-			traits = { 
-				working_class_figurehead
-				social_egalitarianism_alignment
-			}
-		}
-		
-		HAM_Ernst_Merck = {
-
-			allowed = {
-				original_tag = HAM
-			}
-
-			traits = { 
-				clever_buisnessman
-				eoanb_trait_military_leader
-				
-			}
-		}
-
-	}
-
-#    high_command = {
-#		
-#		HAM_carl_jauch  = {
-#			
-#			picture = HAM_carl_jauch
-#			
-#			allowed = {
-#				original_tag = HAM
-#			}
-#
-#			traits = { army_cavalry_1 }
-#        }
-#    }
-}	
+}

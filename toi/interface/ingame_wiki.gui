@@ -223,7 +223,7 @@ guiTypes = {
 			###Button icon, change "scale", "position" and "spriteType" values accordingly###
 			iconType = {
 				name = "local_ingame_wiki_b_afr_empire_icon"
-				spriteType = "GFX_army_experience"
+				spriteType = "GFX_state_interaction_icon"
 				position = { x = 37 y = 260 }
 				alwaystransparent = yes
 				scale = 1.5
@@ -287,7 +287,7 @@ guiTypes = {
 			###Button icon, change "scale", "position" and "spriteType" values accordingly###
 			iconType = {
 				name = "local_ingame_wiki_b_crisis_icon"
-				spriteType = "GFX_army_experience"
+				spriteType = "GFX_stability_icon_small"
 				position = { x = 37 y = 360 }
 				alwaystransparent = yes
 				scale = 1.5
@@ -319,7 +319,7 @@ guiTypes = {
 			###Button icon, change "scale", "position" and "spriteType" values accordingly###
 			iconType = {
 				name = "local_ingame_wiki_b_pandemics_icon"
-				spriteType = "GFX_army_experience"
+				spriteType = "GFX_biohazard_icon_small"
 				position = { x = 37 y = 410 }
 				alwaystransparent = yes
 				scale = 1.5
@@ -428,7 +428,7 @@ guiTypes = {
 				#maxHeight = 1000
 				#fixedsize = yes
 			}
-
+			
 			iconType = {
 				name = "placeholder13"
 				position = { x = 30 y = 1150 }
@@ -445,8 +445,8 @@ guiTypes = {
 
 		buttonType = {
 			name = "ingame_wiki_button"
-			position = { x = -130 y = 62 }
-			quadTextureSprite = "GFX_help_button"
+			position = { x = -128 y = 8 }
+			quadTextureSprite ="GFX_help_button"
 			buttonText = ""
 			buttonFont = "Main_14_black"
 			clicksound = click_ok

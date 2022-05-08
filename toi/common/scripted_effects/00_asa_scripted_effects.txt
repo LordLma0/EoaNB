@@ -3139,15 +3139,59 @@ ASA_Count_McClellan_Terms = {
     }
     if = {
         limit = {
-            OR = {
-                check_variable = { var = asa_mcclellan_term_count = 3 }
-                check_variable = { var = asa_mcclellan_term_count > 3 }
-            }
+			check_variable = { asa_mcclellan_term_count > 2 }
         }
         complete_national_focus = ASA_McClellan_Third_Term
         mark_focus_tree_layout_dirty = yes
     }
     else = {}
+}
+
+ASA_improve_national_bank = {
+    if = {
+        limit = {
+            NOT = {
+                has_idea = ASA_National_Bank_level_1
+            }
+        }
+        add_ideas = ASA_National_Bank_level_1
+    }
+    else_if = {
+        limit = {
+            has_idea = ASA_National_Bank_level_1
+        }
+        swap_ideas = {
+            remove_idea = ASA_National_Bank_level_1
+            add_idea = ASA_National_Bank_level_2
+        }
+    }
+    else_if = {
+        limit = {
+            has_idea = ASA_National_Bank_level_2
+        }
+        swap_ideas = {
+            remove_idea = ASA_National_Bank_level_2
+            add_idea = ASA_National_Bank_level_3
+        }
+    }
+    else_if = {
+        limit = {
+            has_idea = ASA_National_Bank_level_3
+        }
+        swap_ideas = {
+            remove_idea = ASA_National_Bank_level_3
+            add_idea = ASA_National_Bank_level_4
+        }
+    }
+    else_if = {
+        limit = {
+            has_idea = ASA_National_Bank_level_4
+        }
+        swap_ideas = {
+            remove_idea = ASA_National_Bank_level_4
+            add_idea = ASA_National_Bank_level_5
+        }
+    }
 }
 
 spawn_asian_treaty_port_garrisons = {
@@ -3206,11 +3250,11 @@ spawn_asian_treaty_port_garrisons = {
             if = {
                 limit = {
                     AND = {
-                        owns_state = 1262
-                        controls_state = 1262
+                        owns_state = 531
+                        controls_state = 531
                     }
                 }
-                1262 = {
+                531 = {
                     create_unit = {
                         division = "name = \"Bingo Garrison\" division_template = \"Treaty Port Garrison\" start_experience_factor = 0.0"
                         allow_spawning_on_enemy_provs = yes
@@ -3643,11 +3687,11 @@ spawn_asian_treaty_port_garrisons = {
             if = {
                 limit = {
                     AND = {
-                        owns_state = 1262
-                        controls_state = 1262
+                        owns_state = 531
+                        controls_state = 531
                     }
                 }
-                1262 = {
+                531 = {
                     create_unit = {
                         division = "name = \"Bingo Garrison\" division_template = \"Treaty Port Garrison\" start_experience_factor = 0.0 start_equipment_factor = 0.01"
                         allow_spawning_on_enemy_provs = yes

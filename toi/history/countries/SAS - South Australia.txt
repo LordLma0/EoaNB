@@ -1,4 +1,4 @@
-﻿1857.1.1 = {
+1857.1.1 = {
 	capital = 519
 
 	oob = "SAS_1857"
@@ -65,6 +65,7 @@
 			AST_unexplored_lands
 			AST_Protected_by_the_Royal_Navy_and_Army
 			AST_Murray_darling_basin
+			AST_Squatter_Issue
 	}
 
 
@@ -256,10 +257,6 @@ set_popularities = {
 
 	# POLITICAL LEADERS
 
-create_country_leader = {
-		name = "Boyle Travers Finniss"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_SAS_Boyle_Travers_Finniss.dds"
-		ideology = conserv
-}
+recruit_character = SAS_boyle_travers_finniss
+
 }

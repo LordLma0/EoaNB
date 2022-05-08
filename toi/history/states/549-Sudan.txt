@@ -2,6 +2,8 @@
 state = {
 	id =549
 	name = "STATE_549"
+
+	local_supplies=0.0 
 	manpower = 2194293
 
 	state_category = rural
@@ -31,9 +33,9 @@ state = {
 		add_to_array = { state_culture_array_num = 0.31 }
 		
 		add_to_array = { state_religion_array = 8 }
-		add_to_array = { state_religion_array_num = 0.84 }
+		add_to_array = { state_religion_array_num = 0.81 }
 		add_to_array = { state_religion_array = 4 }
-		add_to_array = { state_religion_array_num = 0.16 }
+		add_to_array = { state_religion_array_num = 0.19 }
 	}
 
 	provinces = {

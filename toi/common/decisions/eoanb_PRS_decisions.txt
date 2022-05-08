@@ -1,42 +1,4 @@
 political_actions = {
-	#Ask Hannover for military access
-	PRS_decision_ask_HAN_access = {
-		icon = generic_decision
-		available = {
-			has_stability > 0.3
-		}
-		visible = {
-			country_exists = HAN
-			NOT = {
-				HAN = {
-					gives_military_access_to = PRS
-				}
-			}
-			NOT = {
-				has_military_access_to = HAN
-			}
-			OR = {
-				owns_state = 57
-				owns_state = 51
-				owns_state = 42
-			}
-		}
-		allowed = {
-			tag = PRS
-		}
-		fire_only_once = yes
-		cost = 5
-		complete_effect = {
-			HAN = {
-				country_event = {
-					id = prussia.10
-				}
-			}
-		}
-		ai_will_do = {
-			base = 1000
-		}
-	}
 	#Offer Guns to the Americans
 	PRS_decision_offer_guns_USA = {
 		icon = ger_military_buildup
@@ -601,7 +563,7 @@ political_actions = {
 				}
 				MCK = {
 					remove_state_core = 61
-					remove_state_core = 1380
+					# remove_state_core = 1380 moved state to sicily
 				}
 			}
 		}
@@ -948,6 +910,54 @@ political_actions = {
 			base = 1000
 		}
 	}
+	#Integrate Nassau
+	eoanb_decision_PRS_annex_NGC_NAS = {
+		icon = generic_form_nation
+		available = {
+			has_stability > 0.25
+		}
+		visible = {
+			has_country_flag = eoanb_flag_PRS_decentralized_ngc
+			NAS = {
+				is_subject_of = PRS
+			}
+			date > 1869.1.1
+		}
+		allowed = {
+			tag = PRS
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 75
+		complete_effect = {
+			add_opinion_modifier = {
+				target = NAS
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+			reverse_add_opinion_modifier = {
+				target = NAS
+				modifier = eoanb_om_PRS_annex_NGC_subject
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_decision_PRS_annex_NAS
+			hidden_effect = {
+				annex_country = {
+					target = NAS
+					transfer_troops = yes
+				}
+				NAS = {
+					remove_state_core = 1035
+				}
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
 	#Integrate Frankfurt
 	eoanb_decision_PRS_annex_NGC_FRK = {
 		icon = generic_form_nation
@@ -1233,7 +1243,7 @@ eoanb_category_economic = {
 				has_full_control_of_state = 64
 			}
 			NOT = {
-				PRS = {
+				64 = {
 					has_resources_amount = {
 						resource = coal
 						amount > 10
@@ -2290,7 +2300,9 @@ PRS_decision_category_projects = {
 			always = no
 		}
 		highlight_states = {
-			state = 1033
+			highlight_state_targets = {
+				state = 1033
+			}
 		}
 		fire_only_once = yes
 		is_good = yes
@@ -2742,25 +2754,60 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		available = {
-			64 = {
-				infrastructure > 6
+			has_railway_level = {
+				state = 64
+				level = 2
 			}
-			owns_state = 64
-			951 = {
-				infrastructure > 8
+			has_railway_level = {
+				state = 951
+				level = 2
 			}
-			owns_state = 951
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_berlin_anhalt_rail_trigger_tt_1
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 6521
+						target_province = 3522
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_berlin_anhalt_rail_trigger_tt_2
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 6521
+						target_province = 9560
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_berlin_anhalt_rail_trigger_tt_3
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 3522
+						target_province = 9560
+					}
+				}
+			}
 		}
 		activation = {
 			always = no
 		}
 		highlight_states = {
-			state = 64
-			state = 951
+			highlight_state_targets = {
+				state = 64
+				state = 951
+			}
 		}
 		fire_only_once = yes
 		is_good = no
 		days_mission_timeout = 1600
+		cancel_trigger = {
+			OR = {
+				NOT = { owns_state = 64 }
+				NOT = { owns_state = 951 }
+			}
+		}
 		timeout_effect = {
 			if = {
 				limit = {
@@ -2829,25 +2876,42 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		available = {
-			66 = {
-				infrastructure > 6
+			has_railway_level = {
+				state = 66
+				level = 2
 			}
-			67 = {
-				infrastructure > 5
+			has_railway_level = {
+				state = 67
+				level = 2
 			}
-			owns_state = 66
-			owns_state = 67
+			custom_trigger_tooltip = { #Glogau-Lissa
+				tooltip = PRS_mission_silesia_rail_trigger_tt_1
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 552
+						target_province = 3510
+					}
+				}
+			}
 		}
 		activation = {
 			always = no
 		}
 		highlight_states = {
-			state = 66
-			state = 67
+			highlight_state_targets = {
+				state = 66
+				state = 67
+			}
 		}
 		fire_only_once = yes
 		is_good = no
 		days_mission_timeout = 1600
+		cancel_trigger = {
+			OR = {
+				NOT = { owns_state = 66 }
+				NOT = { owns_state = 67 }
+			}
+		}
 		timeout_effect = {
 			if = {
 				limit = {
@@ -2916,55 +2980,74 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		available = {
-			5 = {
-				infrastructure > 5
+			has_railway_level = {
+				state = 1003
+				level = 2
 			}
-			63 = {
-				infrastructure > 5
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_ostbahn_rail_trigger_tt_1
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 6236
+						target_province = 9387
+					}
+				}
 			}
-			64 = {
-				infrastructure > 6
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_ostbahn_rail_trigger_tt_2
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 13497
+						target_province = 362
+					}
+				}
 			}
-			68 = {
-				infrastructure > 5
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_ostbahn_rail_trigger_tt_3
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 362
+						target_province = 6332
+					}
+				}
 			}
-			85 = {
-				infrastructure > 5
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_ostbahn_rail_trigger_tt_4
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 6332
+						target_province = 3384
+					}
+				}
 			}
-			86 = {
-				infrastructure > 5
-			}
-			1001 = {
-				infrastructure > 6
-			}
-			1002 = {
-				infrastructure > 6
-			}
-			1003 = {
-				infrastructure > 8
-			}
-			owns_state = 5
-			owns_state = 63
-			owns_state = 64
-			owns_state = 68
-			owns_state = 85
-			owns_state = 86
-			owns_state = 1001
-			owns_state = 1002
-			owns_state = 1003
 		}
 		activation = {
 			always = no
 		}
 		highlight_states = {
-			state = 5
-			state = 85
-			state = 1001
-			state = 1003
+			highlight_state_targets = {
+				state = 5
+				state = 85
+				state = 1001
+				state = 1003
+			}
 		}
 		fire_only_once = yes
 		is_good = no
 		days_mission_timeout = 1600
+		cancel_trigger = {
+			OR = {
+				NOT = { owns_state = 5 }
+				NOT = { owns_state = 63 }
+				NOT = { owns_state = 64 }
+				NOT = { owns_state = 68 }
+				NOT = { owns_state = 85 }
+				NOT = { owns_state = 86 }
+				NOT = { owns_state = 1001 }
+				NOT = { owns_state = 1002 }
+				NOT = { owns_state = 1003 }
+			}
+		}
 		timeout_effect = {
 			if = {
 				limit = {
@@ -3054,30 +3137,79 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		available = {
-			51 = {
-				infrastructure > 7
+			has_railway_level = {
+				state = 51
+				level = 2
 			}
-			57 = {
-				infrastructure > 6
+			has_railway_level = {
+				state = 1009
+				level = 2
 			}
-			1009 = {
-				infrastructure > 7
+			has_railway_level = {
+				state = 57
+				level = 2
 			}
-			owns_state = 51
-			owns_state = 57
-			owns_state = 1009
+			has_railway_level = {
+				state = 984
+				level = 1
+			}
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_rhineland_rail_trigger_tt_1
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 587
+						target_province = 11494
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_rhineland_rail_trigger_tt_2
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 11494
+						target_province = 11560
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_rhineland_rail_trigger_tt_3
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 587
+						target_province = 9575
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PRS_mission_rhineland_rail_trigger_tt_4
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 9575
+						target_province = 11531
+					}
+				}
+			}
 		}
 		activation = {
 			always = no
 		}
 		highlight_states = {
-			state = 51
-			state = 57
-			state = 1009
+			highlight_state_targets = {
+				state = 51
+				state = 57
+				state = 1009
+			}
 		}
 		fire_only_once = yes
 		is_good = no
 		days_mission_timeout = 1600
+		cancel_trigger = {
+			OR = {
+				NOT = { owns_state = 51 }
+				NOT = { owns_state = 57 }
+				NOT = { owns_state = 1009 }
+			}
+		}
 		timeout_effect = {
 			if = {
 				limit = {
@@ -3170,14 +3302,18 @@ PRS_decision_category_industrialisation = {
 		remove_effect = {
 			51 = {
 				add_resource = {
-					type = iron
-					amount = 10
+					type = coal
+					amount = 2
 				}
 			}
 			1009 = {
 				add_resource = {
 					type = iron
-					amount = 10
+					amount = 2
+				}
+				add_resource = {
+					type = coal
+					amount = 2
 				}
 				add_building_construction = {
 					type = steel_mill
@@ -3217,8 +3353,8 @@ PRS_decision_category_industrialisation = {
 		remove_effect = {
 			66 = {
 				add_resource = {
-					type = iron
-					amount = 6
+					type = coal
+					amount = 2
 				}
 				add_building_construction = {
 					type = steel_mill
@@ -3229,7 +3365,11 @@ PRS_decision_category_industrialisation = {
 			67 = {
 				add_resource = {
 					type = iron
-					amount = 6
+					amount = 2
+				}
+				add_resource = {
+					type = coal
+					amount = 2
 				}
 			}
 		}
@@ -3252,7 +3392,9 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 951
+			highlight_state_targets = {
+				state = 951
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3304,9 +3446,22 @@ PRS_decision_category_industrialisation = {
 			951 = {
 				add_extra_state_shared_building_slots = 1
 			}
-			custom_effect_tooltip = PRS_decision_support_borsig_effect_tt
-			hidden_effect = {
-				set_country_flag = PRS_borsig_support_flag
+			PRS_albert_borsig = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = PRS_advisor_albert_borsig
+						allowed = {
+							original_tag = PRS
+						}
+						traits = {
+							PRS_trait_Albert_Borsig
+						}
+						ai_will_do = {
+							factor = 5
+						}
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -3331,7 +3486,9 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 1009
+			highlight_state_targets = {
+				state = 1009
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3386,9 +3543,27 @@ PRS_decision_category_industrialisation = {
 			1009 = {
 				add_extra_state_shared_building_slots = 1
 			}
-			custom_effect_tooltip = PRS_decision_support_krupp_effect_tt
-			hidden_effect = {
-				set_country_flag = PRS_krupp_support_flag
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			PRS_alfred_krupp = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = PRS_advisor_alfred_krupp
+						allowed = {
+							original_tag = PRS
+						}
+						traits = {
+							PRS_trait_Alfred_Krupp
+						}
+						ai_will_do = {
+							factor = 8
+						}
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -3410,7 +3585,9 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 951
+			highlight_state_targets = {
+				state = 951
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3462,9 +3639,22 @@ PRS_decision_category_industrialisation = {
 			951 = {
 				add_extra_state_shared_building_slots = 1
 			}
-			custom_effect_tooltip = PRS_decision_support_siemens_effect_tt
-			hidden_effect = {
-				set_country_flag = PRS_siemens_support_flag
+			PRS_werner_von_siemens = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = PRS_advisor_werner_von_siemens
+						allowed = {
+							original_tag = PRS
+						}
+						traits = {
+							PRS_trait_Werner_Siemens
+						}
+						ai_will_do = {
+							factor = 6
+						}
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -3486,7 +3676,9 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 62
+			highlight_state_targets = {
+				state = 62
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3573,7 +3765,9 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 64
+			highlight_state_targets = {
+				state = 64
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3612,7 +3806,9 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 948
+			highlight_state_targets = {
+				state = 948
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3651,7 +3847,9 @@ PRS_decision_category_industrialisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 64
+			highlight_state_targets = {
+				state = 64
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3677,7 +3875,7 @@ PRS_decision_category_industrialisation = {
 	}
 }
 
-PRS_decision_category_urbanisation = {
+PRS_decision_category_urbanization = {
 	#Hobrecht-Plan
 	PRS_mission_hobrecht_plan = {
 		icon = hol_draw_up_staff_plans
@@ -3698,8 +3896,10 @@ PRS_decision_category_urbanisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 951
-			state = 1003
+			highlight_state_targets = {
+				state = 951
+				state = 1003
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3780,6 +3980,12 @@ PRS_decision_category_urbanisation = {
 				limit = {
 					has_cosmetic_tag = GER_north_confederation
 				}
+				951 = {
+					add_manpower = 17500
+				}
+				1003 = {
+					add_manpower = 17500
+				}
 				60 = {
 					add_manpower = -5000
 				}
@@ -3801,14 +4007,14 @@ PRS_decision_category_urbanisation = {
 				950 = {
 					add_manpower = -2500
 				}
-				951 = {
-					add_manpower = 17500
-				}
-				1003 = {
-					add_manpower = 17500
-				}
 			}
 			else = {
+				951 = {
+					add_manpower = 12500
+				}
+				1003 = {
+					add_manpower = 12500
+				}
 				62 = {
 					add_manpower = -2500
 				}
@@ -3823,12 +4029,6 @@ PRS_decision_category_urbanisation = {
 				}
 				950 = {
 					add_manpower = -2500
-				}
-				951 = {
-					add_manpower = 12500
-				}
-				1003 = {
-					add_manpower = 12500
 				}
 			}
 		}
@@ -3856,8 +4056,10 @@ PRS_decision_category_urbanisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 57
-			state = 1009
+			highlight_state_targets = {
+				state = 57
+				state = 1009
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -3938,6 +4140,12 @@ PRS_decision_category_urbanisation = {
 				limit = {
 					has_cosmetic_tag = GER_north_confederation
 				}
+				57 = {
+					add_manpower = 15000
+				}
+				1009 = {
+					add_manpower = 15000
+				}
 				51 = {
 					add_manpower = -8000
 				}
@@ -3953,14 +4161,14 @@ PRS_decision_category_urbanisation = {
 				1061 = {
 					add_manpower = -5000
 				}
-				57 = {
-					add_manpower = 15000
-				}
-				1009 = {
-					add_manpower = 15000
-				}
 			}
 			else = {
+				57 = {
+					add_manpower = 10000
+				}
+				1009 = {
+					add_manpower = 10000
+				}
 				51 = {
 					add_manpower = -12500
 				}
@@ -3972,12 +4180,6 @@ PRS_decision_category_urbanisation = {
 				}
 				1033 = {
 					add_manpower = -2000
-				}
-				57 = {
-					add_manpower = 10000
-				}
-				1009 = {
-					add_manpower = 10000
 				}
 			}
 		}
@@ -3997,7 +4199,7 @@ PRS_decision_category_urbanisation = {
 				infrastructure > 6
 			}
 			1107 = {
-				state_population > 200000
+				state_population > 175000
 				infrastructure > 5
 			}
 		}
@@ -4005,8 +4207,10 @@ PRS_decision_category_urbanisation = {
 			always = no
 		}
 		highlight_states = {
-			state = 66
-			state = 1107
+			highlight_state_targets = {
+				state = 66
+				state = 1107
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -4072,7 +4276,7 @@ PRS_decision_category_urbanisation = {
 						state_population > 2300000
 					}
 					1107 = {
-						state_population > 200000
+						state_population > 175000
 					}
 				}
 			}
@@ -4083,6 +4287,12 @@ PRS_decision_category_urbanisation = {
 		complete_effect = {
 		}
 		remove_effect = {
+			66 = {
+				add_manpower = 10000
+			}
+			1107 = {
+				add_manpower = 5000
+			}
 			63 = {
 				add_manpower = -3000
 			}
@@ -4097,12 +4307,6 @@ PRS_decision_category_urbanisation = {
 			}
 			86 = {
 				add_manpower = -5000
-			}
-			66 = {
-				add_manpower = 10000
-			}
-			1107 = {
-				add_manpower = 5000
 			}
 		}
 		ai_will_do = {
@@ -4264,13 +4468,13 @@ PRS_decision_category_heeresreform = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			custom_effect_tooltip = PRS_decision_roon_war_minister_effect_tt
 			PRS = {
 				set_temp_variable = {
-					temp_advisor_frame = 12
-				}				#Albrecht von Roon
+					temp_advisor_frame = 12 #Albrecht von Roon
+				}
 				set_temp_variable = {
 					temp_advisor_trait = 36
 				}
@@ -4302,13 +4506,13 @@ PRS_decision_category_heeresreform = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			custom_effect_tooltip = PRS_decision_moltke_army_chief_effect_tt
 			PRS = {
 				set_temp_variable = {
-					temp_advisor_frame = 13
-				}				#Helmuth von Moltke
+					temp_advisor_frame = 13 #Helmuth von Moltke
+				}
 				set_temp_variable = {
 					temp_advisor_trait = 13
 				}
@@ -4355,7 +4559,7 @@ PRS_decision_category_heeresreform = {
 		custom_cost_trigger = {
 			command_power > 99.99
 		}
-		custom_cost_text = PRS_command_power_more_than_99
+		custom_cost_text = eoanb_command_power_100
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4397,7 +4601,7 @@ PRS_decision_category_heeresreform = {
 			command_power > 99.9
 			has_army_experience > 24.9
 		}
-		custom_cost_text = PRS_command_power_more_than_99_army_experience_more_than_25
+		custom_cost_text = eoanb_command_power_100_army_experience_25
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4448,7 +4652,7 @@ PRS_decision_category_heeresreform = {
 			command_power > 99.9
 			has_army_experience > 24.9
 		}
-		custom_cost_text = PRS_command_power_more_than_99_army_experience_more_than_25
+		custom_cost_text = eoanb_command_power_100_army_experience_25
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4495,7 +4699,7 @@ PRS_decision_category_heeresreform = {
 			command_power > 99.9
 			has_army_experience > 24.9
 		}
-		custom_cost_text = PRS_command_power_more_than_99_army_experience_more_than_25
+		custom_cost_text = eoanb_command_power_100_army_experience_25
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4551,7 +4755,7 @@ PRS_decision_category_heeresreform = {
 			command_power > 99.9
 			has_army_experience > 24.9
 		}
-		custom_cost_text = PRS_command_power_more_than_99_army_experience_more_than_25
+		custom_cost_text = eoanb_command_power_100_army_experience_25
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4565,8 +4769,8 @@ PRS_decision_category_heeresreform = {
 		}
 		remove_effect = {
 			PRS = {
-				add_tech_bonus = {
-					bonus = 0.75
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.75
 					uses = 1
 					category = doctrine_victorian_innovative_tech
 				}
@@ -4602,7 +4806,7 @@ PRS_decision_category_heeresreform = {
 			command_power > 99.9
 			has_army_experience > 24.9
 		}
-		custom_cost_text = PRS_command_power_more_than_99_army_experience_more_than_25
+		custom_cost_text = eoanb_command_power_100_army_experience_25
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4615,8 +4819,8 @@ PRS_decision_category_heeresreform = {
 			}
 		}
 		remove_effect = {
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -4648,7 +4852,7 @@ PRS_decision_category_heeresreform = {
 			command_power > 99.9
 			has_army_experience > 24.9
 		}
-		custom_cost_text = PRS_command_power_more_than_99_army_experience_more_than_25
+		custom_cost_text = eoanb_command_power_100_army_experience_25
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4709,7 +4913,7 @@ PRS_decision_category_heeresreform = {
 			command_power > 99.9
 			has_army_experience > 24.9
 		}
-		custom_cost_text = PRS_command_power_more_than_99_army_experience_more_than_25
+		custom_cost_text = eoanb_command_power_100_army_experience_25
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -4814,9 +5018,22 @@ PRS_decision_category_constitutional_crisis = {
 		fire_only_once = yes
 		cost = 50
 		complete_effect = {
-			custom_effect_tooltip = PRS_decision_bismarck_cabinet_effect_tt
-			hidden_effect = {
-				set_country_flag = bismarck_cabinet_enabled
+			PRS_carl_von_bodelschwingh = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = PRS_advisor_finance_carl_von_bodelschwingh
+						allowed = {
+							original_tag = PRS
+						}
+						traits = {
+							PRS_trait_Carl_von_Bodelschwingh
+						}
+						ai_will_do = {
+							factor = 5
+						}
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -5176,20 +5393,37 @@ PRS_decision_category_navy_expansion = {
 		fire_only_once = yes
 		cost = 10
 		complete_effect = {
-			destroy_ships = {
-				type = frigate
-				count = 1
-			}
-			destroy_ships = {
-				type = corvette
-				count = 2
-			}
 			custom_effect_tooltip = PRS_decision_eulenburg_expedition_start_effect_tt
 			hidden_effect = {
 				PRS = {
 					country_event = {
 						id = prussiaforeign.1
 						days = 300
+					}
+				}
+				transfer_ship = {
+					prefer_name = "SMS Thetis"
+					type = frigate
+					target = UCT
+				}
+				transfer_ship = {
+					prefer_name = "SMS Arcona"
+					type = corvette
+					target = UCT
+				}
+				transfer_ship = {
+					prefer_name = "Frauenlob"
+					type = corvette
+					target = UCT
+				}
+				UCT = {
+					destroy_ships = {
+						type = frigate
+						count = 1
+					}
+					destroy_ships = {
+						type = corvette
+						count = 2
 					}
 				}
 			}
@@ -5200,7 +5434,7 @@ PRS_decision_category_navy_expansion = {
 	}
 	#Hagen's Jade Bight Port Expansion Plan
 	PRS_mission_hagens_expansion_plan = {
-		icon = generic_construction
+		icon = naval_base
 		allowed = {
 			always = no
 		}
@@ -5217,7 +5451,9 @@ PRS_decision_category_navy_expansion = {
 			always = no
 		}
 		highlight_states = {
-			state = 1060
+			highlight_state_targets = {
+				state = 1060
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -5410,7 +5646,7 @@ PRS_decision_category_navy_expansion = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			add_command_power = -50
 			PRS = {
@@ -5546,7 +5782,7 @@ PRS_decision_category_navy_expansion = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			add_command_power = -50
 			custom_effect_tooltip = PRS_decision_ask_ENG_for_ships_effect_tt
@@ -5650,7 +5886,7 @@ PRS_decision_category_navy_expansion = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			add_command_power = -50
 			custom_effect_tooltip = PRS_decision_ask_ENG_for_ships_effect_tt
@@ -5754,7 +5990,7 @@ PRS_decision_category_navy_expansion = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			add_command_power = -50
 			custom_effect_tooltip = PRS_decision_ask_FRA_for_ships_effect_tt
@@ -5858,7 +6094,7 @@ PRS_decision_category_navy_expansion = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			add_command_power = -50
 			custom_effect_tooltip = PRS_decision_ask_FRA_for_ships_effect_tt
@@ -5947,7 +6183,7 @@ PRS_decision_category_navy_expansion = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			add_command_power = -50
 			custom_effect_tooltip = PRS_decision_adalbert_navy_chief_effect_tt
@@ -6292,7 +6528,7 @@ PRS_decision_category_navy_expansion = {
 		custom_cost_trigger = {
 			command_power > 49.99
 		}
-		custom_cost_text = PRS_command_power_more_than_49
+		custom_cost_text = eoanb_command_power_50
 		complete_effect = {
 			add_command_power = -50
 			custom_effect_tooltip = PRS_decision_ask_ENG_for_ships_effect_tt
@@ -6368,7 +6604,7 @@ PRS_decision_category_navy_expansion = {
 	}
 	#Establish Wilhelmshaven War Port
 	PRS_decision_establish_wilhelmshaven_war_port = {
-		icon = generic_construction
+		icon = naval_base
 		allowed = {
 			tag = PRS
 		}
@@ -6556,7 +6792,9 @@ PRS_decision_category_navy_expansion = {
 			always = no
 		}
 		highlight_states = {
-			state = 949
+			highlight_state_targets = {
+				state = 949
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -6634,7 +6872,9 @@ PRS_decision_category_navy_expansion = {
 			always = no
 		}
 		highlight_states = {
-			state = 1002
+			highlight_state_targets = {
+				state = 1002
+			}
 		}
 		fire_only_once = yes
 		is_good = no
@@ -7133,7 +7373,7 @@ PRS_decision_category_sh_question = {
 		}
 		fire_only_once = yes
 		cost = 0
-		days_remove = 14
+		days_remove = 16
 		war_with_on_remove = DEN
 		complete_effect = {
 			add_war_support = 0.05
@@ -8308,6 +8548,38 @@ PRS_decision_category_german_war = {
 				PRS = {
 					if = {
 						limit = {
+							has_idea = PRS_war_preparations_1
+						}
+						remove_ideas = PRS_war_preparations_1
+					}
+				}
+				PRS = {
+					if = {
+						limit = {
+							has_idea = PRS_war_preparations_2
+						}
+						remove_ideas = PRS_war_preparations_2
+					}
+				}
+				PRS = {
+					if = {
+						limit = {
+							has_idea = PRS_war_preparations_3
+						}
+						remove_ideas = PRS_war_preparations_3
+					}
+				}
+				PRS = {
+					if = {
+						limit = {
+							has_idea = PRS_war_preparations_4
+						}
+						remove_ideas = PRS_war_preparations_4
+					}
+				}
+				PRS = {
+					if = {
+						limit = {
 							has_idea = PRS_war_preparations_5
 						}
 						remove_ideas = PRS_war_preparations_5
@@ -8540,7 +8812,7 @@ PRS_decision_category_NGC_politics = {
 					owns_state = 55
 					owns_state = 60
 					owns_state = 65
-					owns_state = 1380
+					# owns_state = 1380 moved state to sicily
 					owns_state = 58
 					owns_state = 949
 					owns_state = 1032
@@ -8560,7 +8832,7 @@ PRS_decision_category_NGC_politics = {
 					owns_state = 55
 					owns_state = 60
 					owns_state = 65
-					owns_state = 1380
+					# owns_state = 1380 moved state to sicily
 					owns_state = 58
 					owns_state = 949
 					owns_state = 1032
@@ -8587,7 +8859,7 @@ PRS_decision_category_NGC_politics = {
 				add_state_core = 55
 				add_state_core = 60
 				add_state_core = 65
-				add_state_core = 1380
+				# add_state_core = 1380 moved state to sicily
 				add_state_core = 58
 				add_state_core = 949
 				add_state_core = 1032
@@ -8614,9 +8886,9 @@ PRS_decision_category_NGC_politics = {
 				MCK = {
 					remove_state_core = 61
 				}
-				MCK = {
-					remove_state_core = 1380
-				}
+				# MCK = {
+				# 	remove_state_core = 1380 moved state to sicily
+				# }
 				LCK = {
 					remove_state_core = 938
 				}
@@ -8666,16 +8938,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_mission_draft_constitution_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 21845
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 43690
-						compare = less_than_or_equals
-					}
+					has_country_flag = PRS_constitution_draft_imminent_flag
 				}
 			}
 		}
@@ -8696,9 +8959,10 @@ PRS_decision_category_NGC_politics = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = PRS_mission_draft_constitution_effect_tt
-			add_stability = 0.05
+			add_stability = 0.02
 			hidden_effect = {
 				set_country_flag = PRS_constitution_draft_ready_flag
+				clr_country_flag = PRS_constitution_draft_imminent_flag
 			}
 		}
 		ai_will_do = {
@@ -8720,15 +8984,9 @@ PRS_decision_category_NGC_politics = {
 			}
 		}
 		visible = {
-			check_variable = {
-				var = PRS_NGC_constitution
-				value = 21845
-				compare = greater_than_or_equals
-			}
-			check_variable = {
-				var = PRS_NGC_constitution
-				value = 43690
-				compare = less_than_or_equals
+			OR = {
+				has_active_mission = PRS_mission_draft_constitution
+				has_country_flag = PRS_constitution_draft_ready_flag
 			}
 			NOT = {
 				has_completed_focus = PRS_focus_ngc_constitution
@@ -8740,29 +8998,6 @@ PRS_decision_category_NGC_politics = {
 		complete_effect = {
 		}
 		remove_effect = {
-			if = {
-				limit = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 21845
-						compare = equals
-					}
-				}
-				add_ideas = PRS_idea_ngc_constitution_bismarck
-			}
-			else_if = {
-				limit = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 43690
-						compare = equals
-					}
-				}
-				add_ideas = PRS_idea_ngc_constitution_liberal
-			}
-			else = {
-				add_ideas = PRS_idea_ngc_constitution_other
-			}
 			complete_national_focus = PRS_focus_ngc_constitution
 			hidden_effect = {
 				clr_country_flag = PRS_constitution_draft_ready_flag
@@ -8790,8 +9025,6 @@ PRS_decision_category_NGC_politics = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 14
-		complete_effect = {
-		}
 		remove_effect = {
 			PRS = {
 				country_event = {
@@ -8814,11 +9047,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_decision_commander_in_chief_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 1
-						compare = greater_than_or_equals
-					}
+					has_country_flag = PRS_issue_one_done_flag
 				}
 			}
 		}
@@ -8831,13 +9060,14 @@ PRS_decision_category_NGC_politics = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 14
-		complete_effect = {
-		}
 		remove_effect = {
 			PRS = {
 				country_event = {
 					id = prussiangc.2
 				}
+			}
+			hidden_effect = {
+				clr_country_flag = PRS_issue_one_done_flag
 			}
 		}
 		ai_will_do = {
@@ -8855,16 +9085,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_decision_ministries_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 5
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 10
-						compare = less_than_or_equals
-					}
+					has_country_flag = PRS_issue_two_done_flag
 				}
 			}
 		}
@@ -8877,13 +9098,14 @@ PRS_decision_category_NGC_politics = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 14
-		complete_effect = {
-		}
 		remove_effect = {
 			PRS = {
 				country_event = {
 					id = prussiangc.3
 				}
+			}
+			hidden_effect = {
+				clr_country_flag = PRS_issue_two_done_flag
 			}
 		}
 		ai_will_do = {
@@ -8901,16 +9123,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_decision_personal_union_PRS_NGC_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 21
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 42
-						compare = less_than_or_equals
-					}
+					has_country_flag = PRS_issue_three_done_flag
 				}
 			}
 		}
@@ -8923,13 +9136,14 @@ PRS_decision_category_NGC_politics = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 14
-		complete_effect = {
-		}
 		remove_effect = {
 			PRS = {
 				country_event = {
 					id = prussiangc.4
 				}
+			}
+			hidden_effect = {
+				clr_country_flag = PRS_issue_three_done_flag
 			}
 		}
 		ai_will_do = {
@@ -8947,16 +9161,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_decision_voting_rights_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 85
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 170
-						compare = less_than_or_equals
-					}
+					has_country_flag = PRS_issue_four_done_flag
 				}
 			}
 		}
@@ -8969,13 +9174,14 @@ PRS_decision_category_NGC_politics = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 14
-		complete_effect = {
-		}
 		remove_effect = {
 			PRS = {
 				country_event = {
 					id = prussiangc.5
 				}
+			}
+			hidden_effect = {
+				clr_country_flag = PRS_issue_four_done_flag
 			}
 		}
 		ai_will_do = {
@@ -8993,16 +9199,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_decision_ministerial_responsibility_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 341
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 682
-						compare = less_than_or_equals
-					}
+					has_country_flag = PRS_issue_five_done_flag
 				}
 			}
 		}
@@ -9015,13 +9212,14 @@ PRS_decision_category_NGC_politics = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 14
-		complete_effect = {
-		}
 		remove_effect = {
 			PRS = {
 				country_event = {
 					id = prussiangc.6
 				}
+			}
+			hidden_effect = {
+				clr_country_flag = PRS_issue_five_done_flag
 			}
 		}
 		ai_will_do = {
@@ -9039,16 +9237,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_decision_career_politicians_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 1365
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 2730
-						compare = less_than_or_equals
-					}
+					has_country_flag = PRS_issue_six_done_flag
 				}
 			}
 		}
@@ -9069,6 +9258,9 @@ PRS_decision_category_NGC_politics = {
 					id = prussiangc.7
 				}
 			}
+			hidden_effect = {
+				clr_country_flag = PRS_issue_six_done_flag
+			}
 		}
 		ai_will_do = {
 			base = 1000
@@ -9085,16 +9277,7 @@ PRS_decision_category_NGC_politics = {
 			custom_trigger_tooltip = {
 				tooltip = PRS_decision_budget_and_taxes_trigger_tt
 				hidden_trigger = {
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 5461
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = PRS_NGC_constitution
-						value = 10922
-						compare = less_than_or_equals
-					}
+					has_country_flag = PRS_issue_seven_done_flag
 				}
 			}
 		}
@@ -9114,6 +9297,9 @@ PRS_decision_category_NGC_politics = {
 				country_event = {
 					id = prussiangc.8
 				}
+			}
+			hidden_effect = {
+				clr_country_flag = PRS_issue_seven_done_flag
 			}
 		}
 		ai_will_do = {
@@ -9617,7 +9803,23 @@ PRS_decision_category_NGC_politics = {
 		}
 		remove_effect = {
 			create_intelligence_agency = yes
-			custom_effect_tooltip = PRS_decision_create_intelligence_agency_effect_tt
+			PRS_wilhelm_stieber = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = PRS_advisor_wilhelm_stieber
+						allowed = {
+							original_tag = PRS
+						}
+						traits = {
+							PRS_trait_Wilhelm_Stieber
+						}
+						ai_will_do = {
+							factor = 0
+						}
+					}
+				}
+			}
 			hidden_effect = {
 				PRS = {
 					country_event = {
@@ -9680,7 +9882,7 @@ PRS_decision_category_NGC_politics = {
 		custom_cost_trigger = {
 			command_power > 99.99
 		}
-		custom_cost_text = PRS_command_power_more_than_99
+		custom_cost_text = eoanb_command_power_100
 		complete_effect = {
 			add_command_power = -100
 			BAD = {
@@ -9710,7 +9912,7 @@ PRS_decision_category_NGC_politics = {
 		custom_cost_trigger = {
 			command_power > 99.99
 		}
-		custom_cost_text = PRS_command_power_more_than_99
+		custom_cost_text = eoanb_command_power_100
 		complete_effect = {
 			add_command_power = -100
 			BAV = {
@@ -9740,7 +9942,7 @@ PRS_decision_category_NGC_politics = {
 		custom_cost_trigger = {
 			command_power > 99.99
 		}
-		custom_cost_text = PRS_command_power_more_than_99
+		custom_cost_text = eoanb_command_power_100
 		complete_effect = {
 			add_command_power = -100
 			HSD = {
@@ -9770,7 +9972,7 @@ PRS_decision_category_NGC_politics = {
 		custom_cost_trigger = {
 			command_power > 99.99
 		}
-		custom_cost_text = PRS_command_power_more_than_99
+		custom_cost_text = eoanb_command_power_100
 		complete_effect = {
 			add_command_power = -100
 			WUR = {
@@ -9803,16 +10005,16 @@ PRS_decision_category_NGC_politics = {
 			}
 		}
 		visible = {
-			BAD = { has_idea = GEC_military_convention_with_PRS }
-			BAV = { has_idea = GEC_military_convention_with_PRS }
-			HSD = { has_idea = GEC_military_convention_with_PRS }
-			WUR = { has_idea = GEC_military_convention_with_PRS }
+			BAD = { has_idea = GEC_idea_military_convention_with_PRS }
+			BAV = { has_idea = GEC_idea_military_convention_with_PRS }
+			HSD = { has_idea = GEC_idea_military_convention_with_PRS }
+			WUR = { has_idea = GEC_idea_military_convention_with_PRS }
 		}
 		fire_only_once = yes
 		custom_cost_trigger = {
 			command_power > 99.99
 		}
-		custom_cost_text = PRS_command_power_more_than_99
+		custom_cost_text = eoanb_command_power_100
 		days_remove = 60
 		complete_effect = {
 			add_command_power = -100

@@ -130,81 +130,123 @@
 		#Industry
 	}
 
-	# Political Leaders
-	USA = {
-		create_country_leader = {
-			name = "James Buchanan"
-			desc = "POLITICS_JAMES_BUCHANAN_DESC"
-			picture = "Portrait_USA_James_Buchanan.dds"
-			expire = "1880.1.1"
-			# ideology = federal
-			ideology = reactionary
-			traits = { hawk }
-		}
-		create_country_leader = {
-			name = "Stephen Douglas"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_USA_Stephen_Douglas.dds"
-			expire = "1880.1.1"
-			ideology = conserv
-			traits = { cabinet_crisis }
-		}
-		create_country_leader = {
-			name = "Charles Sumner"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_USA_Charles_Sumner.dds"
-			expire = "1880.1.1"
-			ideology = liberal_social
-			traits = { suffragist }
-		}
-		create_country_leader = {
-			name = "Henry Winter Davis"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_Europe_generic_leader_politician_1.png"
-			expire = "1880.1.1"
-			# ideology = reactionary
-			ideology = national_populism
-			traits = { propaganda_expert }
-		}
-		create_country_leader = {
-			name = "Friedrich Sorge"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_USA_Friedrich_Sorge.dds"
-			expire = "1880.1.1"
-			ideology = owenism
-			traits = { union_man }
-		}
-		create_country_leader = {
-			name = "Joseph Weydemeyer"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_USA_Joseph_Weydemeyer.dds"
-			expire = "1947.1.1"
-			ideology = marxism
-		}
-		create_country_leader = {
-			name = "Joshua Norton"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_USA_Norton_I.png"
-			expire = "1947.1.1"
-			ideology = despotism
-		}
-		create_country_leader = {
-			name = "John C. Frémont"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_USA_John_C_Fremont.dds"
-			expire = "1886.5.2"
-			ideology = conserv_liberal
-			traits = {social_reformer}
-		}
-		create_country_leader = {
-			name = "Josiah Warren"
-			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-			picture = "Portrait_USA_Josiah_Warren.dds"
-			expire = "1886.5.2"
-			ideology = anarchism_sub
-			traits = {}
+	## Political Leaders
+	# Starting
+	recruit_character = USA_character_james_buchanan
+	recruit_character = USA_character_stephen_a_douglas
+	recruit_character = USA_character_charles_sumner
+	recruit_character = USA_character_henry_winter_davis
+	recruit_character = USA_character_friedrich_sorge
+	recruit_character = USA_character_joseph_weydemeyer
+	recruit_character = USA_character_joshua_norton
+	recruit_character = USA_character_john_c_fremont
+	recruit_character = USA_character_josiah_warren
+	##########
+	recruit_character = USA_character_john_breckinridge
+	USA_character_john_breckinridge = {
+		set_character_flag = usa_cabinet_member_flag
+		add_advisor_role = {
+			advisor = {
+				slot = political_advisor
+				idea_token = USA_advisor_john_breckinridge
+				allowed = { original_tag = USA }
+				traits = { hawk determined_expansionist }
+				ai_will_do = { factor = 0 }
+			}
+			activate = yes
 		}
 	}
+	recruit_character = USA_character_abraham_lincoln
+
+	## Advisors
+	# Starting
+	recruit_character = USA_character_roger_taney
+	USA_character_roger_taney = {
+		set_character_flag = usa_cabinet_member_flag
+		add_advisor_role = {
+			advisor = {
+				slot = political_advisor
+				idea_token = USA_advisor_roger_taney
+				allowed = { original_tag = USA }
+				traits = { trait_chief_justice }
+				ai_will_do = { factor = 0 }
+			}
+			activate = yes
+		}
+	}
+	recruit_character = USA_character_lewis_cass
+	USA_character_lewis_cass = {
+		set_character_flag = usa_cabinet_member_flag
+		add_advisor_role = {
+			advisor = {
+				slot = political_advisor
+				idea_token = USA_advisor_lewis_cass
+				allowed = { original_tag = USA }
+				traits = { trait_secretary_of_state }
+				ai_will_do = { factor = 0 }
+			}
+			activate = yes
+		}
+	}
+	recruit_character = USA_character_howell_cobb
+	USA_character_howell_cobb = {
+		set_character_flag = usa_cabinet_member_flag
+		add_advisor_role = {
+			advisor = {
+				slot = political_advisor
+				idea_token = USA_advisor_howell_cobb
+				allowed = { original_tag = USA }
+				traits = { trait_secretary_of_the_treasury }
+				ai_will_do = { factor = 0 }
+			}
+			activate = yes
+		}
+	}
+	recruit_character = USA_character_john_floyd
+	USA_character_john_floyd = {
+		set_character_flag = usa_cabinet_member_flag
+		add_advisor_role = {
+			advisor = {
+				slot = political_advisor
+				idea_token = USA_advisor_john_floyd
+				allowed = { original_tag = USA }
+				traits = { trait_secretary_of_war }
+				ai_will_do = { factor = 0 }
+			}
+			activate = yes
+		}
+	}
+	recruit_character = USA_character_jacob_thompson
+	USA_character_jacob_thompson = {
+		set_character_flag = usa_cabinet_member_flag
+		add_advisor_role = {
+			advisor = {
+				slot = political_advisor
+				idea_token = USA_advisor_jacob_thompson
+				allowed = { original_tag = USA }
+				traits = { trait_secretary_of_the_interior }
+				ai_will_do = { factor = 0 }
+			}
+			activate = yes
+		}
+	}
+	# Lincoln Cabinet
+	recruit_character = USA_character_gideon_welles
+	recruit_character = USA_character_salmon_p_chase
+	recruit_character = USA_character_simon_cameron
+	recruit_character = USA_character_edward_bates
+	recruit_character = USA_character_william_seward
+	recruit_character = USA_character_hannibal_hamlin
+	# Possible Lincoln Cabinet Members
+	recruit_character = USA_character_edwin_m_stanton
+	recruit_character = USA_character_andrew_johnson
+	# Breckinridge Cabinet
+	recruit_character = USA_character_joseph_lane
+	recruit_character = USA_character_robert_hunter
+	recruit_character = USA_character_george_trenholm
+	recruit_character = USA_character_stephen_mallory
+	recruit_character = USA_character_judah_p_benjamin
+	recruit_character = USA_character_jefferson_davis
 
 	# Internal Politics
 	USA = {
@@ -295,7 +337,6 @@
 		give_guarantee = COL
 		give_guarantee = ECU
 		give_guarantee = PRU
-		give_guarantee = PRR
 		give_guarantee = BRA
 		give_guarantee = BOL
 		give_guarantee = CHL
@@ -303,8 +344,11 @@
 		give_guarantee = ARG
 		give_guarantee = URG
 		give_guarantee = BUE
-		give_guarantee = WLL
-		give_guarantee = PUE
+		diplomatic_relation = {
+			country = PIE
+			relation = docking_rights
+			active = yes
+		}
 
 		if = {
 			limit = {
@@ -318,10 +362,34 @@
 				target = UTA
 				autonomous_state = autonomy_organized_unincorporated_territory
 			}
-			# set_autonomy = {
-			# 	target = OKL
-			# 	autonomous_state = autonomy_first_nations_reservation
-			# }
+			set_autonomy = {
+				target = NMX
+				autonomous_state = autonomy_organized_unincorporated_territory
+			}
+			set_autonomy = {
+				target = ORE
+				autonomous_state = autonomy_organized_unincorporated_territory
+			}
+			set_autonomy = {
+				target = DAK
+				autonomous_state = autonomy_organized_unincorporated_territory
+			}
+			set_autonomy = {
+				target = CPA
+				autonomous_state = autonomy_organized_unincorporated_territory
+			}
+			set_autonomy = {
+				target = GRL
+				autonomous_state = autonomy_organized_unincorporated_territory
+			}
+			set_autonomy = {
+				target = KNS
+				autonomous_state = autonomy_organized_unincorporated_territory
+			}
+			set_autonomy = {
+				target = OKL
+				autonomous_state = autonomy_organized_unincorporated_territory
+			}
 		}
 		if = {
 			limit = {
@@ -332,7 +400,13 @@
 				} }
 			}
 			puppet = UTA
-			# puppet = OKL
+			puppet = NMX
+			puppet = ORE
+			puppet = DAK
+			puppet = CPA
+			puppet = GRL
+			puppet = KNS
+			puppet = OKL
 		}
 	}
 
@@ -373,6 +447,7 @@
 		gw_artillery = 1
 
 		#Mechanical (Engineer)ing (Gaming)
+		mass_transit_early = 1
 		iron_railways = 1
 		steel_railways = 1
 		steam_engine = 1
@@ -466,6 +541,9 @@
 		land_doctrine_victorian = 1
 		tech_infantry_special_infantry_corps = 1
 		tech_infantry_colonial_marines = 1
+
+		#Vehicle Techs (Armor Tech File)
+		basic_train = 1
 	}
 
 	# MTG Naval Tech
@@ -506,12 +584,17 @@
 	USA = {
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_rifle_1
-			amount = 1000
+			amount = 9000
 			producer = USA
 		}
 		add_equipment_to_stockpile = {
 			type = uniform_equipment_2
-			amount = 1000
+			amount = 7500
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = train_equipment_1
+			amount = 15
 			producer = USA
 		}
 	}
@@ -566,59 +649,45 @@
 			exporter = USA
 		}
 	}
+	add_ai_strategy = {
+		type = consider_weak
+		id = "SEM"
+		value = 75
+	}
 
 	#How to set up initial debt_level
 	#USA = {
 	#	add_to_variable = {var = debt_level value = 1} #The USA's National Debt amounts to 54,910,777 Dollars (= 11.42m Pound Sterling) as of 1858; income per year 70,273,869 Dollars (= 14.62m Pound Sterling) = 0.78 GDP of debt
 	#}
 
-	# GENERALS
-	USA = {
-		create_field_marshal = {
-			name = "Winfield Scott"
-			picture = "Portrait_USA_Winfield_Scott.dds"
-			traits = { age_aged war_of_1812_veteran aversion_to_offense napoleonic_tactician unyielding_defender trait_cautious war_hero politically_connected career_officer old_guard inflexible_strategist defensive_doctrine }
-			skill = 9
-			id = 5001
-			attack_skill = 4
-			defense_skill = 8
-			planning_skill = 8
-			logistics_skill = 8
-		}
-		create_corps_commander = {
-			name = "John E. Wool"
-			picture = "Portrait_USA_John_E_Wool.dds"
-			traits = { age_aged war_of_1812_veteran aversion_to_offense napoleonic_tactician unyielding_defender trait_cautious war_hero politically_connected career_officer old_guard fast_planner organisational_leader }
-			skill = 9
-			id = 5002
-			attack_skill = 5
-			defense_skill = 7
-			planning_skill = 8
-			logistics_skill = 8
-		}
-	}
+	## GENERALS
+	# Starting
+	recruit_character = USA_character_winfield_scott
+	recruit_character = USA_character_john_e_wool
+	##########
+	recruit_character = USA_character_george_b_mcclellan
+	recruit_character = USA_character_ulysses_s_grant
+	recruit_character = USA_character_william_t_sherman
+	recruit_character = USA_character_george_meade
+	recruit_character = USA_character_henry_halleck
+	recruit_character = USA_character_irvin_mcdowell
+	recruit_character = USA_character_ambrose_e_burnside
+	recruit_character = USA_character_joseph_hooker
+	recruit_character = USA_character_james_birdeye_mcpherson
+	recruit_character = USA_character_john_a_logan
+	recruit_character = USA_character_oliver_o_howard
+	recruit_character = USA_character_benjamin_f_butler
+	recruit_character = USA_character_nathaniel_p_banks
+	recruit_character = USA_character_john_pope
+	recruit_character = USA_character_william_s_rosecrans
+	recruit_character = USA_character_philip_sheridan
+	recruit_character = USA_character_george_h_thomas
+	recruit_character = USA_character_edward_ord
+	recruit_character = USA_character_john_g_parke
 
-	# ADMIRALS
-	USA = {
-		create_navy_leader = {
-			name = "Andrew Hull Foote"
-			picture = "Portrait_USA_Andrew_Hull_Foote.dds"
-			traits = { }
-			skill = 3
-		}
-		create_navy_leader = {
-			name = "David Farragut"
-			picture = "Portrait_USA_David_farragut.dds"
-			traits = {}
-			skill = 3
-		}
-		create_navy_leader = {
-			name = "Josiah Tattnall"
-			picture = "Portrait_USA_Josiah_Tattnall.dds"
-			traits = { }
-			skill = 3
-		}
-	}
+	recruit_character = USA_character_andrew_hull_foote
+	recruit_character = USA_character_david_farragut
+	recruit_character = USA_character_josiah_tattnall
 
 
 	if = {
@@ -748,5 +817,4 @@
 			}
 		}
 	}
-
 }

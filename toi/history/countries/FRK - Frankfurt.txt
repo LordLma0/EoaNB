@@ -55,12 +55,17 @@
 		two_percent
 		sfund_private_ventures_only
 
-				#NATIONAL SPIRITS
+		#NATIONAL SPIRITS
 		GER_general_idea_ger_confed
 		PRS_Zollverein
 		BAD_currency_reform
+		NA_B_small_scale_railways
 	}
-
+	
+	# Diplo
+	
+	give_military_access = HSD	#Strategically Important Railways
+	
 	set_politics = {
 		ruling_party = centrism
 	}
@@ -122,24 +127,6 @@
 
 	# POLITICAL LEADERS
 
-	create_country_leader = {
-		name = "Liberale Fraktion"
-		desc = "POLITICS_GENERIC_EOANB_DESC"
-		picture = "Portrait_FRK_Centrism.dds"
-		expire = "1900.1.1"
-		ideology = parlia_repub
-		traits = {
-		}
-	}
-
-	create_country_leader = {
-		name = "Konservative Fraktion"
-		desc = "POLITICS_GENERIC_EOANB_DESC"
-		picture = "Portrait_FRK_TradCon.dds"
-		expire = "1900.1.1"
-		ideology = conserv
-		traits = {
-		}
-	}
-
+	recruit_character = FRK_liberale_fraktion
+	recruit_character = FRK_konservative_fraktion
 }

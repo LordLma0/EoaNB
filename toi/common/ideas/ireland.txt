@@ -644,20 +644,98 @@ ideas = {
 				stability_factor = -0.15
 			}
 		}
-	}
-	
-	political_advisor = {
-	IRE_political_advisor_Oscar_Wilde = {
-			picture = europe_generic_4
+
+		#########################################################################################################
+ 		############################################### GREAT FAMINE ############################################
+ 		#########################################################################################################
+
+		IRE_great_famine = {
 			allowed = {
 				tag = IRE
 			}
+			
+			removal_cost = -1
 
-			available = {
-				has_completed_focus = IRE_focus_wilde_shaw
+			picture = raj_risk_of_famine
+			modifier = {
+				monthly_population = -0.03
+				production_factory_efficiency_gain_factor = -0.2
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = -0.1
 			}
+		}
+		IRE_great_famine_1 = {
+			allowed = {
+				tag = IRE
+			}
+			
+			removal_cost = -1
 
-			traits = { ingenious_scientist }
+			picture = raj_risk_of_famine
+			modifier = {
+				monthly_population = -0.03
+				production_factory_efficiency_gain_factor = -0.2
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		IRE_great_famine_2 = {
+			allowed = {
+				tag = IRE
+			}
+			
+			removal_cost = -1
+
+			picture = raj_risk_of_famine
+			modifier = {
+				monthly_population = -0.03
+				production_factory_efficiency_gain_factor = -0.2
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		IRE_great_famine_3 = {
+			allowed = {
+				tag = IRE
+			}
+			
+			removal_cost = -1
+
+			picture = raj_risk_of_famine
+			modifier = {
+				monthly_population = -0.01
+				production_factory_efficiency_gain_factor = -0.2
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		IRE_shadow_of_famine = {
+			allowed = {
+				tag = IRE
+			}
+			
+			removal_cost = -1
+
+			picture = generic_agrarian_society
+			modifier = {
+				political_power_cost = 0.5
+				war_support_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		IRE_mass_emigration = {
+			allowed = {
+				tag = IRE
+			}
+			
+			removal_cost = -1
+
+			picture = generic_agrarian_society
+			modifier = {
+				monthly_population = -0.05
+				research_speed_factor = -0.05
+			}
 		}
 	}
 	
@@ -730,7 +808,7 @@ ideas = {
 		}
 		IRE_materiel_manufacturer_royal_arsenal = {
 
-			picture = generic_artillery_manufacturer_2
+			picture = royal_arsenal
 
 			available = {
 				has_completed_focus = IRE_focus_british_equipment 

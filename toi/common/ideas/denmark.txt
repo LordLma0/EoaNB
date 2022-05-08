@@ -72,10 +72,11 @@ ideas = {
 
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.15
 			}
 		}
 		
-		DEN_idea_dense_railway_network = {
+		DEN_idea_danske_statsbaner = {
 			allowed = {
 				original_tag = DEN
 			}
@@ -86,13 +87,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_build_infrastructure
+			picture = DEN_danske_statsbaner
 
 			modifier = {
-				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.1
 				production_speed_buildings_factor = 0.05
 				political_power_factor = 0.05
 				consumer_goods_factor = -0.03
+				local_resources = 0.05
 			}
 		}
 		
@@ -128,7 +130,7 @@ ideas = {
 			picture = SCH_major_danish_population
 
 			modifier = {
-				MONTHLY_POPULATION = 0.04
+				MONTHLY_POPULATION = 0.02
 			}
 			
 			research_bonus = {
@@ -150,7 +152,7 @@ ideas = {
 			picture = SCH_major_danish_population
 
 			modifier = {
-				MONTHLY_POPULATION = 0.08
+				MONTHLY_POPULATION = 0.04
 			}
 			
 			research_bonus = {
@@ -173,6 +175,7 @@ ideas = {
 
 			modifier = {
 				production_speed_buildings_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
 			}
 		}
 		
@@ -187,7 +190,7 @@ ideas = {
 
 			removal_cost = -1
 
-			#picture = man_five_year_plan_industry
+			picture = DEN_hansen_writing_ball
 
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -357,9 +360,9 @@ ideas = {
 
 			modifier = {
 			    mobilization_speed = 0.5
-				conscription = 0.005
+				conscription = 0.003
 				army_infantry_attack_factor = -0.05
-				weekly_manpower = 25
+				weekly_manpower = 15
 			}
 			
 			on_add = {
@@ -399,7 +402,7 @@ ideas = {
 			#picture = DEN_victors_of_the_first_schleswig_war
 
 			modifier = {
-			    conscription = 0.01
+			    conscription = 0.005
 				army_infantry_attack_factor = -0.05
 				experience_gain_army_unit_factor = -0.05
 			}
@@ -567,7 +570,7 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			modifier = {
-				conscription = 0.0025
+				conscription = 0.002
 			}
 		}
 
@@ -581,7 +584,7 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			modifier = {
-				conscription = 0.005
+				conscription = 0.004
 			}
 		}
 		
@@ -836,299 +839,211 @@ ideas = {
 			    conscription = -0.001
 			}
 		}
-	}
-	
-	##### POLITICAL ADVISORS #####
 
-	political_advisor = {
-
-		DEN_Johan_Fridolin_Hassel = {
-
-			picture = DEN_Johan_Fridolin_Hassel
-
+		DEN_unbelievable_triumph = {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Johan_Fridolin_Hassel
-			}
-			
-			visible = {
-				date < 1914.07.28
+			allowed_civil_war = {
+				always = no
 			}
 
-			available = {
-				has_completed_focus = DEN_focus_hassel_teudt
-				date < 1914.07.28
-			}
-			
-			research_bonus = {
-				mechanical_engineering_tech = 0.03
+			removal_cost = -1
+
+			picture = DEN_imperial_control
+
+			modifier = {
+			    stability_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
 			}
 		}
 
-		DEN_Carl_Frederik_Tietgen = {
-
-			picture = DEN_Carl_Frederik_Tietgen
-
+		DEN_ger_will_return = {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Carl_Frederik_Tietgen
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1901.10.19
-			}
-			
-			available = {
-				has_completed_focus = DEN_focus_dfds_company
-				date < 1901.10.19
+			removal_cost = -1
+
+			picture = DEN_imperial_control
+
+			modifier = {
+			    war_support_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
 			}
 		}
 
-		DEN_Johan_Nicolai_Madvig = {
-
+		DEN_defensive_construction = {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Johan_Nicolai_Madvig 
-				centrism_alignment
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1886.12.12
-			}
+			removal_cost = -1
 
-			available = {
-				date < 1886.12.12
+			picture = DEN_imperial_control
+
+			modifier = {
+			    production_speed_bunker_factor = 0.2
 			}
 		}
 
-		DEN_Jacob_Christian_Jacobsen = {
-
+		DEN_perseverance= {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Jacob_Christian_Jacobsen
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1887.04.30
-			}
+			removal_cost = -1
 
-			available = {
-				date < 1887.04.30
+			picture = DEN_imperial_control
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
 			}
 		}
 
-		DEN_Christian_Albrecht_Bluhme = {
-
+		DEN_perseverance2= {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Christian_Albrecht_Bluhme 
-				traditional_conservatism_alignment
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1866.12.16
-				NOT = { has_country_leader = { name = "Christian Albrecht Bluhme" ruling_only = yes } }
-			}
+			removal_cost = -1
 
-			available = {
-				date < 1866.12.16
+			picture = DEN_imperial_control
+
+			modifier = {
+				army_core_defence_factor = 0.02
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
 			}
 		}
 
-		DEN_Adam_Wilhelm_Moltke = {
-
+		DEN_costly_victory = {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Adam_Wilhelm_Moltke
-				traditional_conservatism_alignment
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1864.02.15
-			}
+			removal_cost = -1
 
-			available = {
-				date < 1864.02.15
+			picture = DEN_imperial_control
+
+			modifier = {
+			    stability_factor = 0.05
+				production_speed_industrial_complex_factor = 0.02
+				production_speed_infrastructure_factor = 0.02
 			}
 		}
-		
-		DEN_Steffen_Peder_Anker_Heegaard = {
 
+		DEN_embarrassingly_trounced1= {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Steffen_Peder_Anker_Heegaard
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1893.09.19
-			}
+			removal_cost = -1
 
-			available = {
-				date < 1893.09.19
+			picture = DEN_imperial_control
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.1
+				army_defence_factor = -0.5
 			}
 		}
-		
-		DEN_Ferdinand_Meldahl = {
 
+		DEN_embarrassingly_trounced2= {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Ferdinand_Meldahl
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1908.02.03
-			}
+			removal_cost = -1
 
-			available = {
-				date < 1908.02.03
+			picture = DEN_imperial_control
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
 			}
 		}
-		
-		DEN_Andreas_Frederik_Krieger = {
 
+		DEN_embarrassingly_trounced3= {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Andreas_Frederik_Krieger
-				centrism_alignment
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1893.09.27
-			}
+			removal_cost = -1
 
-			available = {
-				date < 1893.09.27
+			picture = DEN_imperial_control
+
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.1
+				army_defence_factor = -0.5
 			}
 		}
-		
-		DEN_Ludvig_Ferdinand_Holmberg = {
 
+		DEN_recovery = {
 			allowed = {
-				original_tag = DEN
+				always = yes
 			}
 
-			traits = {
-				DEN_trait_Ludvig_Ferdinand_Holmberg
+			allowed_civil_war = {
+				always = no
 			}
 
-			visible = {
-				date < 1897.12.21
+			removal_cost = -1
+
+			picture = DEN_imperial_control
+
+			modifier = {
+				industry_repair_factor = 0.1
+				production_speed_buildings_factor = 0.1
 			}
-
-			available = {
-				date < 1897.12.21
-			}
-			
-			research_bonus = {
-				process_engineering_tech = 0.02
-				mechanical_engineering_tech = 0.02
-			}
-		}
-		
-		DEN_Jens_Andersen_Hansen = {
-
-			allowed = {
-				original_tag = DEN
-			}
-
-			traits = {
-				DEN_trait_Jens_Andersen_Hansen
-				social_egalitarianism_alignment
-			}
-
-			visible = {
-				date < 1877.06.01
-			}
-
-			available = {
-				date < 1877.06.01
-			}
-		}
-		
-		DEN_Anton_Frederik_Tscherning = {
-
-			allowed = {
-				original_tag = DEN
-			}
-
-			traits = {
-				DEN_trait_Anton_Frederik_Tscherning
-			}
-
-			visible = {
-				date < 1874.06.29
-			}
-
-			available = {
-				date < 1874.06.29
-			}
-		}
-    }
-	
-	
-	##### THEORISTS #####
-
-	theorist = {
-		
-		DEN_theorist_army_hans_nikolai_thestrup = {
-
-			picture = DEN_Hans_Nicolai_Thestrup
-			
-			allowed = {
-				original_tag = DEN
-			}
-
-			cost = 150
-
-			research_bonus = {
-				land_doctrine = 0.1
-			}
-
-			traits = { military_theorist }
-		}
-		
-		DEN_theorist_navy_steen_andersen_bille = {
-
-			picture = DEN_Steen_Andersen_Bille
-			
-			allowed = {
-				original_tag = DEN
-			}
-
-			cost = 150
-
-			research_bonus = {
-				naval_doctrine = 0.1
-			}
-
-			traits = { naval_theorist }
 		}
 	}
 	
@@ -1140,8 +1055,6 @@ ideas = {
 		designer = yes
 
 		orlogsvaerftet = {
-
-		    picture = generic_naval_manufacturer_1
 
 			allowed = {
 				original_tag = DEN
@@ -1158,7 +1071,7 @@ ideas = {
 				naval_equipment = 0.1
 			}
 
-			traits = { eoanb_naval_manufacturer_heavy }
+			traits = { eoanb_naval_manufacturer_light }
 		}
 	}
 	
@@ -1167,8 +1080,6 @@ ideas = {
 		designer = yes
 
 		ammunitionsarsenalet = {
-
-			picture = idea_ammunitionsarsenalet
 
 			allowed = {
 				original_tag = DEN
@@ -1182,7 +1093,8 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = 0.05
+				infantry_weapons = 0.03
+				tech_category_uniforms = 0.03
 			}
 
 			traits = { DEN_trait_ammunitionsarsenalet }
@@ -1240,10 +1152,7 @@ ideas = {
 			
 			available = {
 				owns_state = 37
-			}
-			
-			visible = {
-				date > 1868.1.1
+				has_completed_focus = DEN_focus_carlsberg_company
 			}
 
 			research_bonus = {

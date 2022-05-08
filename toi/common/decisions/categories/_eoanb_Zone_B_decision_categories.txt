@@ -278,6 +278,36 @@ OTO_first_consitutional_era = {
 	}
 }
 
+afr_NPP_category = {
+	icon = generic_democracy
+	visible = {
+		OR={
+			tag = ETH
+			tag = ETH
+			tag = TKN
+		}
+		OR={
+			is_in_faction_with = EGY
+			is_faction_leader = yes
+		}
+		has_country_flag = ETH_EGY_Ties
+	}
+}
+# Tunisia Decision Categories
+tunisia_revolt_category = {
+	icon = decision_tun_revolt.dds
+	allowed = { tag = TUN }
+	priority = 20
+}
 
+### NEW SOUTH WALES DECISION CATEGORIES ###
 
+NSW_New_South_Wales_Government_Railway = {
+	icon = decision_generic_civil_support
 
+	allowed = {
+		TAG = NSW
+	}
+
+	priority = 20
+}
