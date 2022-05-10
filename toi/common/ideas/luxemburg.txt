@@ -1,6 +1,9 @@
 ideas = {
     country = {
 		LUX_the_coup = {
+
+                        picture = GFX_idea_LUX_the_coup
+
 			allowed = {
 				always = yes
 			}
@@ -18,6 +21,9 @@ ideas = {
 			}
 		}
 		LUX_bank = {
+
+                        picture = GFX_idea_LUX_bank
+
 			allowed = {
 				always = yes
 			}

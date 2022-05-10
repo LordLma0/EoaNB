@@ -2587,7 +2587,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CZE_planning_bonus"
 		texturefile = "gfx/interface/ideas/idea_CZE_planning_bonus.dds"
-	}	
+	}
+
+        ### Luxemburg Ideas
+
+	spriteType = {
+		name = "GFX_idea_LUX_bank"
+		texturefile = "gfx/interface/ideas/LUX/LUX_bank.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_LUX_the_coup"
+		texturefile = "gfx/interface/ideas/LUX/LUX_the_coup.png"
+	}		
 	
 	### ROMANIA IDEAS
 	

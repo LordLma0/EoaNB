@@ -1,6 +1,13 @@
 ﻿l_english:
- ###Ideas###
- LUX_the_coup: "The coup of 1856"
- LUX_bank: "Banque Internationale à Luxembourg"
+ ###Ideas 
+
+ LUX_the_coup:0"The Luxembourger coup of 1856"
+ LUX_the_coup_desc:0"The Luxembourg Coup of 1856, also called the Putsch of 1856, was a reactionary revision of Luxembourg's constitution on 27 November 1856. Whilst not a true coup d'état or revolution, its detractors dubbed it a 'royal coup', as the reigning Grand Duke of Luxembourg, William III, greatly expanded his powers, and the name has stuck. Aimed at reversing the liberal successes embodied in the 1848 constitution, the major changes enacted by William were undone with the promulgation of a new constitution in 1868, after the Luxembourg Crisis. However, some changes, such as the creation of the Council of State have lasted."
+ LUX_bank:0"The International Bank Of Luxemburg"
+ LUX_bank_desc:0"Founded In 1856 as a private company, owned by the state, the Banque Internationale à Luxembourg has been able to greatly boost our profits, but it has also been able to assist us in our foreign diplomacy and trade relations with the other powers of Europe like France, England and the Netherlands, the bank can also cover us if we ever have to go in debt, the International Bank of Luxemburg is nothing but a symbol of our economic development and progress."
+ LUX_railway_company:0"Société royale grand-ducale des chemins de fer Guillaume-Luxembourg"
  
- LUX_railway_company: "Société royale grand-ducale des chemins de fer Guillaume-Luxembourg"
+ ###Leader descriptions
+  
+ LUX_charles_mathias_simons_desc:0"Charles Mathias Simons was a Luxembourg politician and jurist. He was the third Prime Minister of Luxembourg, serving for seven years, from 1853 until 1860. He received his Doctorate of Laws in 1823 from the University of Liège. The year after, he registered at the bar of the court of first instance of Diekirch."
+ LUX_willem_hendrik_van_oranje_nassau:0"Prince William Frederick Henry of the Netherlands was the third son of King William II of the Netherlands and his wife, Grand Duchess Anna Pavlovna of Russia. He was born at Soestdijk Palace. Prince Henry became Governor of Luxembourg in 1850, in which capacity he served until his death in 1879."
