@@ -107,9 +107,13 @@
  
  ### Ideas ###
  SWI_The_Neuchatel_Crisis:0 "The Neuchatel Crisis"
+ SWI_The_Neuchatel_Crisis_desc:0 "Prussia has claimed the Principality of Neuchatel, which is under our control. This has lead to a diplomatic standoff. Considering most of the European powers support us instead of Prussia, this crisis should be over soon enough."
  SWI_The_Federal_Constitution:0 "The Federal Constitution"
+ SWI_The_Federal_Constitution_desc:0 "In 1848 after the end of the Sonderbund War, Switzerland adopted a federal constitution."
  SWI_Sonderbund_War:0 "Legacy of the Sonderbund War"
+ SWI_Sonderbund_War_desc:0 "In 1847 a civil war broke out in Switzerland, also known as the Sonderbund War. The southern catholic cantons declared war on the northern protestant ones, wanting to defend catholic values and protect their interest against a centralization of power. In the end, the North won against the Sonderbund. However, this war is still remembered among the population and ugly scars are clearly visible."
  SWI_Neutrality:0 "Swiss Neutrality"
+ SWI_Neutrality_desc:0 "Ever since the Sonderbundkrieg, Switzerland hasn't been involved in any war. It follows a strict policy of neutrality in most if not all matters. "
  SWI_fed_army_1:0 "Federative Army"
  SWI_fed_army_2:0 "Swiss Army"
  SWI_militardepartement:0 "Military Departement"
