@@ -12,6 +12,24 @@ focus_tree = {
 	default = no
 	
 	focus = {
+		id = POR_
+		icon = GFX_Focus_Industry_Construction_Support_Budget
+		x = 18
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_tradicional_education }
+		
+		completion_reward = {
+		    swap_ideas = { remove_idea = POR_traditional_schools_1 add_idea = POR_traditional_schools_2 }
+		}
+	}
+
+	focus = {
 		id = POR_focus_consolidate_regeneration
 		icon = GFX_Focus_Diplomatic_Ally_POR
 		x = 22
@@ -35,6 +53,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		cost = 70
+		available = { has_completed_focus = POR_portugese_debts }
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -221,51 +240,41 @@ focus_tree = {
                 idea = POR_civilian_investments
                 days = 1825
 		}
+		custom_effect_tooltip = EGY_afr_increase_debt_1
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 1}
+			}
 	}
 }
-	
-	focus = {
-		id = POR_focus_invicta_fabric_factory
-		icon = GFX_Focus_Production_Fabric
-		x = 10
-		y = 3
-		available = {
-			owns_state = 112
-		}
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_civilian_investments }
-		
-		completion_reward = {
-	        unlock_decision_tooltip = POR_decision_invicta_fabric_factory
-		}
-	}
-	
-	focus = {
-		id = POR_focus_tabacco_processing
-		x = 12
-		y = 3
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_civilian_investments }
-		
-		completion_reward = {
-		    add_tech_bonus = { bonus = 0.1 uses = 2 category = economics_tech }
-		}
-	}
-	
-	focus = {
-		id = POR_focus_new_industries
-		icon = GFX_Focus_stimulate_economy
+	focus = { 
+		id = POR_focus_on_the_nation
+		icon = GFX_Focus_Economy_Prosperity
 		x = 11
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_civilian_investments }
+		
+		completion_reward = { 
+			add_timed_idea =
+			{
+				idea = POR_idea_focus_on_the_nation
+				days = 3650
+			}
+			custom_effect_tooltip = EGY_afr_increase_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 2}
+			}
+		}
+	}
+	focus = {
+		id = POR_expand_spending
+		icon = GFX_Focus_Economy_Prosperity
+		x = 12
 		y = 4
 		cost = 70
 		available_if_capitulated = no
@@ -273,15 +282,25 @@ focus_tree = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_civilian_investments }
-		
-		completion_reward = {
+		prerequisite = { focus = POR_focus_on_the_nation }
+
+		mutually_exclusive = { focus = POR_contain_spending }
+
+		completion_reward = { 
+			add_timed_idea = {
+				idea = POR_expanded_spending
+				days = 730
+			}
+			custom_effect_tooltip = EGY_afr_increase_debt_4
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 4}
+			}
 		}
 	}
-	
 	focus = {
-		id = POR_focus_fertilizers_production
-		x = 9
+		id = POR_extensive_infrastructure_spending
+		icon = GFX_Focus_Economy_Prosperity
+		x = 12
 		y = 5
 		cost = 70
 		available_if_capitulated = no
@@ -289,48 +308,805 @@ focus_tree = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_new_industries }
-		
-		completion_reward = {
-		    add_tech_bonus = { bonus = 0.1 uses = 2 category = farming_tech }
+		prerequisite = { focus = POR_expand_spending }
+
+		completion_reward = { 
+			add_timed_idea = {
+				idea = POR_more_infrastructure_spending
+				days = 730
+			}
+
+			custom_effect_tooltip = EGY_afr_increase_debt_3
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 3}
+			}
 		}
 	}
-	
 	focus = {
-		id = POR_focus_porcelain_factory
-		icon = GFX_Focus_tea_plantation
+		id = POR_spur_economic_growth
+		icon = GFX_Focus_Economy_Prosperity
+		x = 12
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_extensive_infrastructure_spending }
+
+		completion_reward = { 
+			custom_effect_tooltip = EGY_afr_increase_debt_3
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 3}
+			}
+			unlock_decision_category_tooltip = POR_industrialisation_decision_1
+		}
+	}
+
+
+	focus = {
+		id = POR_contain_spending
+		icon = GFX_Focus_Economy_Prosperity
+		x = 10
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_on_the_nation }
+
+		mutually_exclusive = { focus = POR_expand_spending }
+
+		completion_reward = { 
+			add_timed_idea = {
+				idea = POR_contained_spending
+				days = 730
+			}
+			custom_effect_tooltip = EGY_afr_increase_debt_1
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 1}
+			}
+		}
+	}
+	focus = {
+		id = POR_invest_in_railroads
+		icon = GFX_Focus_Economy_Prosperity
+		x = 10
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_contain_spending }
+
+		completion_reward = { 
+			add_timed_idea = {
+				idea = POR_less_infrastructure_spending
+				days = 730
+			}
+			custom_effect_tooltip = EGY_afr_increase_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 2}
+			}
+		}
+	}
+	focus = {
+		id = POR_invest_in_infrastructure
+		icon = GFX_Focus_Economy_Prosperity
+		x = 10
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_invest_in_railroads }
+
+		completion_reward = { 
+			custom_effect_tooltip = EGY_afr_increase_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 2}
+			}
+			completion_reward = {
+			   # unlock_decision_tooltip = POR_decision_vic_small_spending_1
+			  # unlock_decision_tooltip = POR_decision_invicta_fabric_factory
+			}
+		}
+	}
+
+	focus = {
+		id = POR_second_investment_phase
+		icon = GFX_Focus_Economy_Prosperity
 		x = 11
-		y = 5
+		y = 7
+		cost = 140
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = { date > 1867.1.1 }
+		prerequisite = { focus = POR_spur_economic_growth focus = POR_invest_in_infrastructure }
+
+		completion_reward = { 
+			custom_effect_tooltip = EGY_afr_increase_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 2}
+			}
+		}
+	}
+	focus = {
+		id = POR_manage_spending
+		icon = GFX_Focus_Economy_Prosperity
+		x = 10
+		y = 8
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = POR_second_investment_phase }
+		available = {
+			OR = {
+				has_completed_focus = POR_a_conservative_portugal
+				has_completed_focus = POR_a_moderate_portugal
+			}
+		}
+		mutually_exclusive = { focus = POR_continue_borrowing }
+		completion_reward = { 
+			custom_effect_tooltip = EGY_afr_decrease_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -2}
+			}
+		}
+	}
+	focus = {
+		id = POR_stable_growth
+		icon = GFX_Focus_Economy_Prosperity
+		x = 10
+		y = 9
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = POR_manage_spending }
+		completion_reward = { 
+			add_timed_idea = {
+				idea = POR_stable_growth_idea
+				days = 730
+			}
+			add_resource = {
+				type = wood
+				amount = 2
+				state = 181
+			}
+		}
+	}
+	focus = {
+		id = POR_stabilize_expenditure
+		icon = GFX_Focus_Economy_Prosperity
+		x = 10
+		y = 10
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = POR_stable_growth }
+		completion_reward = { 
+			increase_ps_by_one = yes
+			#Add an event here or something to mix it up
+			}
+		}
+	
+	focus = {
+		id = POR_continue_borrowing
+		icon = GFX_Focus_Economy_Prosperity
+		x = 12
+		y = 8
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = POR_second_investment_phase }
+		available = {
+			OR = {
+				has_completed_focus = POR_a_progressive_portugal
+				has_completed_focus = POR_a_moderate_portugal
+			}
+		}
+		mutually_exclusive = { focus = POR_consolidate_the_loans }
+		completion_reward = { 
+			custom_effect_tooltip = EGY_afr_increase_debt_1
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 1}
+			}
+		}
+	}
+	focus = {
+		id = POR_fast_growth
+		icon = GFX_Focus_Economy_Prosperity
+		x = 12
+		y = 9
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = POR_continue_borrowing }
+		completion_reward = { 
+			#add a decision here to build a civ factory
+			add_resource = {
+				type = wood
+				amount = 2
+				state = 179
+			}
+			add_resource = {
+				type = wood
+				amount = 3
+				state = 181
+			}
+			custom_effect_tooltip = EGY_afr_increase_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 2}
+			}
+		}
+	}
+	focus = {
+		id = POR_diversity_the_industry
+		icon = GFX_Focus_Economy_Prosperity
+		x = 12
+		y = 10
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = POR_fast_growth }
+		completion_reward = { 
+
+			#add a decision here to build a civ factory
+			add_timed_idea = {
+				idea = POR_diversifying_economy
+				days = 730
+			}
+			custom_effect_tooltip = EGY_afr_increase_debt_3
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 3}
+			}
+		}
+	}
+	focus = {
+		id = POR_stable_economy
+		icon = GFX_Focus_Economy_Prosperity
+		x = 2
+		y = 6
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_new_industries }
+		prerequisite = { focus = }
+		available = { has_completed_focus = POR_stabilize_expenditure }
+		available = { date > 1877.1.1 }
+		mutually_exclusive = { focus = POR_diversified_economy }
+		completion_reward = { 
+			custom_effect_tooltip = EGY_afr_increase_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 2}
+			}
+			completion_reward = {
+				custom_effect_tooltip = EGY_afr_increase_debt_3
+				hidden_effect = {
+					add_to_variable = {var = debt_level value = 3}
+				}
+			}
+		}
+	}
+	focus = {
+		id = POR_focus_new_agro_laws
+		icon = GFX_Focus_Agriculture_2
+		x = 2
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_stable_economy }
 		
 		completion_reward = {
-		    unlock_decision_tooltip = POR_decision_porcelain_factory
+			add_ideas = POR_New_agroeconomics_law
 		}
 	}
 	
 	focus = {
-		id = POR_focus_cement_production
-		x = 13
-		y = 5
+		id = POR_focus_expand_vineyards
+		x = 1
+		y = 8
+		available = {
+			owns_state = 181
+		}
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_new_industries }
+		prerequisite = { focus = POR_focus_new_agro_laws }
 		
 		completion_reward = {
-		   # add_tech_bonus = { bonus = 0.1 uses = 2 category = construction_tech }  Not a category
+		    unlock_decision_tooltip = POR_decision_portuguese_vineyards
 		}
 	}
 	
+	focus = {
+		id = POR_focus_expand_pork_production
+		x = 3
+		y = 8
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_new_agro_laws }
+		
+		completion_reward = {
+		   add_tech_bonus = { bonus = 0.2 uses = 1 category = farming_tech }
+		   179 = {
+			if = {
+				limit = { is_controlled_by = ROOT }
+				add_building_construction = {
+					type = farm
+					level = 1
+					instant_build = yes
+					}		
+			}		
+		}
+		}
+		}
+		focus = {
+			id = POR_focus_new_fertilizers_1
+			x = 1
+			y = 9
+			cost = 70
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 100
+			}
+			
+			prerequisite = { focus = POR_focus_expand_vineyards }
+			
+			completion_reward = {
+				add_tech_bonus = { bonus = 0.25 uses = 2 category = farming_tech }
+			}
+		}
+		focus = {
+			id = POR_lisbon_cotton
+			x = 1
+			y = 10
+			cost = 70
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 100
+			}
+			
+			prerequisite = { focus = POR_focus_new_fertilizers_1 }
+			
+			completion_reward = {
+				#decision for cotton farm stuff
+			}
+		}
+		focus = {
+			id = POR_logging_initiative
+			x = 1
+			y = 11
+			cost = 70
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 100
+			}
+			
+			prerequisite = { focus = POR_lisbon_cotton }
+			
+			completion_reward = {
+			}
+		}
+		focus = {
+			id = POR_cloth_sector
+			x = 1
+			y = 12
+			cost = 70
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 100
+			}
+			
+			prerequisite = { focus = POR_logging_initiative }
+			
+			completion_reward = {
+				#decision about building cloth factory
+			}
+		}
+		
+		focus = {
+			id = POR_moderate_industrialization
+			x = 3
+			y = 13
+			cost = 70
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 100
+			}
+			
+			prerequisite = { focus = POR_cloth_sector }
+			prerequisite = { focus = POR_global_trade }
+
+			completion_reward = {
+				add_ideas = { POR_modernizing_economy }
+			}
+		}
+		focus = {
+			id = POR_focus_new_tools
+			x = 3
+			y = 9
+			cost = 70
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 100
+			}
+			
+			prerequisite = { focus = POR_focus_expand_pork_production }
+			
+			completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = mechanical_engineering_tech }
+			}
+		}
+			
+	focus = {
+		id = POR_diversified_economy
+		icon = GFX_Focus_Economy_Prosperity
+		x = 6
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = }
+		available = { has_completed_focus = POR_diversity_the_industry }
+		available = { date > 1877.1.1 }
+		mutually_exclusive = { focus = POR_stable_economy }
+		completion_reward = { 
+			custom_effect_tooltip = EGY_afr_increase_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 2}
+			}
+			completion_reward = {
+				custom_effect_tooltip = EGY_afr_increase_debt_3
+				hidden_effect = {
+					add_to_variable = {var = debt_level value = 3}
+				}
+			}
+		}
+	}
+	focus = {
+		id = POR_focus_electrics_investments
+		x = 6
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_diversified_economy }
+		
+		completion_reward = {
+		    set_temp_variable = { EOANBSYS_innovative_change = 0.01 }
+			EOANBSYS_institutions_innovative_change = yes
+			add_tech_bonus = { bonus = 0.2 uses = 1 category = electronics_devices_tech }
+		}
+	}
+	
+	focus = {
+		id = POR_focus_the_telegraph
+		icon = GFX_Focus_Telegraph_Lines
+		x = 5
+		y = 8
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_electrics_investments }
+		
+		completion_reward = {
+		    add_tech_bonus = { bonus = 0.4 uses = 1 category = electronics_devices_tech }
+			#set_technology = electrical_telegraph
+		}
+	}
+	
+	focus = {
+		id = POR_focus_national_post_service
+		x = 7
+		y = 8
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_electrics_investments }
+		
+		completion_reward = {
+				add_timed_idea = {
+					idea = POR_National_post_service_focus
+					days = 365
+				}
+		}
+	}
+	
+	focus = {
+		id = POR_focus_comunication_research
+		x = 6
+		y = 9
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_the_telegraph }
+		prerequisite = { focus = POR_focus_national_post_service }
+		
+		completion_reward = {
+		    set_temp_variable = { EOANBSYS_innovative_change = 0.02 }
+			EOANBSYS_institutions_innovative_change = yes
+			add_ideas = POR_Communications
+		}
+	}
+	
+	focus = {
+		id = POR_manufacturing_economy
+		x = 7
+		y = 10
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_comunication_research }
+	#	mutually_exclusive = { focus = POR_resource_economy }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_lisbon_united_mechanical
+		x = 7
+		y = 11
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_manufacturing_economy }
+		completion_reward = {
+			#decision for mechanical factory
+			#manufacturer "United Mechanical"
+		}
+	}
+	focus = {
+		id = POR_modern_railways
+		x = 7
+		y = 12
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_lisbon_united_mechanical }
+		completion_reward = {
+			#decisions for railways
+		}
+	}
+	focus = {
+		id = POR_significant_industrialization
+		x = 5
+		y = 13
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_cloth_sector }
+		prerequisite = { focus = POR_modern_railways }
+
+		completion_reward = {
+			swap_ideas={
+				add_idea = industrialized
+				remove_idea = industrializing
+			}
+		}
+	}
+
+	focus = {
+		id = POR_resource_economy
+		x = 4
+		y = 10
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_comunication_research focus = POR_focus_new_tools }
+	#	mutually_exclusive = { focus = POR_manufacturing_economy }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_colonial_resources
+		x = 4
+		y = 11
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_resource_economy }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_global_trade
+		x = 4
+		y = 12
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_colonial_resources }
+		completion_reward = {
+		}
+	}
+
+#Below is the part that Im cutting
+		
+#	focus = {
+#		id = POR_focus_invicta_fabric_factory
+#		icon = GFX_Focus_Production_Fabric
+#		x = 10
+#		y = 3
+#		available = {
+#			owns_state = 112
+#		}
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_civilian_investments }
+#		
+#		completion_reward = {
+#	        unlock_decision_tooltip = POR_decision_invicta_fabric_factory
+#		}
+#	}
+#	
+#	focus = {
+#		id = POR_focus_tabacco_processing
+#		x = 12
+#		y = 3
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_civilian_investments }
+#		
+#		completion_reward = {
+#		    add_tech_bonus = { bonus = 0.1 uses = 2 category = economics_tech }
+#		}
+#	}
+#	
+#	focus = {
+#		id = POR_focus_new_industries
+#		icon = GFX_Focus_stimulate_economy
+#		x = 11
+#		y = 4
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_civilian_investments }
+#		
+#		completion_reward = {
+#		}
+#	}
+#	
+#	focus = {
+#		id = POR_focus_fertilizers_production
+#		x = 9
+#		y = 5
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_new_industries }
+#		
+#		completion_reward = {
+#		    add_tech_bonus = { bonus = 0.1 uses = 2 category = farming_tech }
+#		}
+#	}
+#	
+#	focus = {
+#		id = POR_focus_porcelain_factory
+#		icon = GFX_Focus_tea_plantation
+#		x = 11
+#		y = 5
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_new_industries }
+#		
+#		completion_reward = {
+#		    unlock_decision_tooltip = POR_decision_porcelain_factory
+#		}
+#	}
+#	
+#	focus = {
+#		id = POR_focus_cement_production
+#		x = 13
+#		y = 5
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_new_industries }
+#		
+#		completion_reward = {
+#		   # add_tech_bonus = { bonus = 0.1 uses = 2 category = construction_tech }  Not a category
+#		}
+#	}
+
 	###Education 
 	focus = {
 		id = POR_focus_nationalwide_education_debate
@@ -428,56 +1204,56 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = POR_focus_the_rotative_system
-		icon = GFX_Focus_Government_Reform
-		x = 21
-		y = 1
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_consolidate_regeneration }
-		
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = POR_focus_election_law
-		icon = GFX_Focus_Government_Reform_agenda
-		x = 21
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_the_rotative_system }
-		
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = POR_focus_political_stability
-		x = 21
-		y = 3
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_election_law }
-		
-		completion_reward = {
-		    increase_ps_by_one = yes
-		}
-	}
+#	focus = {
+#		id = POR_focus_the_rotative_system
+#		icon = GFX_Focus_Government_Reform
+#		x = 21
+#		y = 1
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_consolidate_regeneration }
+#		
+#		completion_reward = {
+#		}
+#	}
+#	
+#	focus = {
+#		id = POR_focus_election_law
+#		icon = GFX_Focus_Government_Reform_agenda
+#		x = 21
+#		y = 2
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_the_rotative_system }
+#		
+#		completion_reward = {
+#		}
+#	}
+#	
+#	focus = {
+#		id = POR_focus_political_stability
+#		x = 21
+#		y = 3
+#		cost = 70
+#		available_if_capitulated = no
+#		ai_will_do = {
+#			factor = 100
+#		}
+#		
+#		prerequisite = { focus = POR_focus_election_law }
+#		
+#		completion_reward = {
+#		    increase_ps_by_one = yes
+#		}
+#	}
 	
 	focus = {
 		id = POR_focus_continoue_the_reforms
@@ -632,13 +1408,693 @@ focus_tree = {
 		}
 	}
 	
+	##Loans & Debt
+	focus = {
+		id = POR_portugese_debts
+		x = 34
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_focus_consolidate_regeneration }
+		
+		completion_reward = {
+			add_ideas = POR_debt_payments_1
+		}
+	}
+	focus = {
+		id = POR_british_loans
+		x = 33
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_french_loans }
+		prerequisite = { focus = POR_portugese_debts }
+		
+		completion_reward = {
+			add_political_power = -100
+			ENG = { add_political_power = 100 }
+			custom_effect_tooltip = EGY_afr_decrease_debt_4
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -4}
+			}
+		}
+	}
+	focus = {
+		id = POR_consolidate_british_loans
+		x = 33
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_british_loans }
+		available = {
+               NOT = { has_completed_focus = POR_default_on_british_loans }
+            }
+		completion_reward = {
+			custom_effect_tooltip = EGY_afr_decrease_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -2}
+			}
+		}
+	}
+	focus = {
+		id = POR_prevent_third_suspension
+		x = 33
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_consolidate_british_loans }
+		available = {
+			NOT = { has_completed_focus = POR_default_on_british_loans }
+		 }
+		
+		completion_reward = {
+			add_timed_idea = {
+                idea = POR_avoid_third_suspension
+                days = 365
+		}
+			custom_effect_tooltip = EGY_afr_decrease_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -2}
+			}
+		}
+	}
+	focus = {
+		id = POR_negotiate_lower_interest
+		x = 33
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_prevent_third_suspension }
+		available = {
+			NOT = { has_completed_focus = POR_default_on_british_loans }
+		 }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = POR_debt_payments_1 add_idea = POR_debt_payments_2 }
+		}
+	}
+	focus = {
+		id = POR_french_loans
+		x = 35
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_british_loans }
+		prerequisite = { focus = POR_portugese_debts }
+		
+		completion_reward = {
+			add_political_power = -100
+			FRA = { add_political_power = 100 }
+			custom_effect_tooltip = EGY_afr_decrease_debt_4
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -4}
+			}
+		}
+	}
+	focus = {
+		id = POR_default_on_french_loans
+		x = 35
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		available = { has_completed_focus = POR_french_loans }
+		available = {
+			OR = {
+				PRS = {
+					has_offensive_war_with = FRA
+				}
+				FRA = {
+					has_offensive_war_with = PRS
+				}
+				FRA = {
+					exists = no
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = EGY_afr_decrease_debt_10
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -10}
+			}
+		}
+	}
+	focus = {
+		id = POR_default_on_british_loans
+		x = 33
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		available = { has_completed_focus = POR_british_loans }
+		available = {
+			OR = {
+				
+				ENG = {
+					exists = no
+				}
+			}
+		}
 	
+		
+		completion_reward = {
+			custom_effect_tooltip = EGY_afr_decrease_debt_10
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -10}
+			}
+		}
+	}
+	focus = {
+		id = POR_consolidate_french_loans
+		x = 35
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_french_loans }
+		available = {
+			NOT = { has_completed_focus = POR_default_on_french_loans }
+		 }
+		
+		completion_reward = {
+			custom_effect_tooltip = EGY_afr_decrease_debt_2
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -2}
+			}
+		}
+	}
+	focus = {
+		id = POR_foster_banking_relations
+		x = 35
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_consolidate_french_loans }
+		available = {
+			NOT = { has_completed_focus = POR_default_on_french_loans }
+		 }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = POR_debt_payments_1 add_idea = POR_debt_payments_3 }
+		}
+	}
+	focus = {
+		id = POR_direct_french_investment
+		x = 35
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_foster_banking_relations }
+		available = {
+			NOT = { has_completed_focus = POR_default_on_french_loans }
+		 }
+		
+		completion_reward = {
+			179 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = EGY_afr_increase_debt_1
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 1}
+			}
+		}
+	}
+	focus = {
+		id = POR_debt_crisis_resolved
+		x = 40
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+#		custom_effect_tooltip = What goes here?
+		available = { check_variable = { debt_level < 6 } }
+		available = { has_completed_focus = POR_debt_crisis }
+		completion_reward = {
+			remove_ideas = { POR_debt_crisis_idea }
+		}
+	}
+
+	focus = {
+		id = POR_debt_crisis
+		x = 38
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+#		custom_effect_tooltip = What goes here?
+		available = { check_variable = { debt_level > 25 } }
+		prerequisite = { focus = POR_portugese_debts }
+		
+		completion_reward = {
+			add_ideas = POR_debt_crisis_idea
+		}
+	}
+	
+	focus = {
+		id = POR_new_taxes
+		x = 38
+		y = 3
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_debt_crisis }
+		available = { check_variable = { debt_level > 20 } }
+		completion_reward = {
+		#	decrease_ps_by_one = yes
+			custom_effect_tooltip = EGY_afr_decrease_debt_4
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -4}
+			}
+			add_timed_idea = {
+                idea = POR_emergency_taxes
+                days = 720
+		}
+		}
+	}
+	focus = {
+		id = POR_repayment_escalation
+		x = 38
+		y = 4
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_new_taxes }
+		available = { check_variable = { debt_level > 20 } }
+		completion_reward = {
+			decrease_ps_by_one = yes
+			custom_effect_tooltip = EGY_afr_decrease_debt_6
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -6}
+			}
+			add_timed_idea = {
+                idea = POR_repayment_escalation_idea
+                days = 720
+		}
+		}
+	}
+	focus = {
+		id = POR_redirect_the_industry
+		x = 37
+		y = 5
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_new_taxes }
+		available = { check_variable = { debt_level > 20 } }
+		completion_reward = {
+			decrease_ps_by_one = yes
+			add_stability = -0.15
+			custom_effect_tooltip = EGY_afr_decrease_debt_6
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -6}
+			}
+			add_timed_idea = {
+                idea = POR_economy_redirection
+                days = 720
+		}
+		}
+	}
+	focus = {
+		id = POR_sale_of_colonies
+		x = 40
+		y = 3
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_debt_crisis }
+		available = { check_variable = { debt_level > 30 } }
+		completion_reward = {
+			decrease_ps_by_one = yes
+			add_ideas = POR_empire_in_decline_1
+		}
+	}
+	focus = {
+		id = POR_sale_of_timor
+		x = 40
+		y = 4
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_sale_of_colonies }
+		available = { check_variable = { debt_level > 10 } }
+		completion_reward = {
+			add_stability = -0.05
+			custom_effect_tooltip = EGY_afr_decrease_debt_3
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -3}
+			}
+		}
+	}
+	focus = {
+		id = POR_sale_of_goa
+		x = 40
+		y = 5
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_sale_of_timor }
+		available = { check_variable = { debt_level > 10 } }
+		completion_reward = {
+			add_stability = -0.05
+			custom_effect_tooltip = EGY_afr_decrease_debt_3
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -3}
+			}
+		}
+	}
+	focus = {
+		id = POR_sale_of_mozambique
+		x = 40
+		y = 6
+		cost = 14
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_sale_of_goa }
+		available = { check_variable = { debt_level > 10 } }
+		completion_reward = {
+			add_stability = -0.05
+			custom_effect_tooltip = EGY_afr_decrease_debt_4
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = -4}
+			}
+		}
+	}
+	##Political Tree (?)
+
+	focus = {
+		id = POR_Portugese_political_sphere
+		x = 28
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_focus_consolidate_regeneration }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_regenerationist_cabinet
+		x = 26
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_historico_cabinet }
+		prerequisite = { focus = POR_Portugese_political_sphere }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_regenerationist_peace
+		x = 26
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_historico_cabinet }
+		prerequisite = { focus = POR_regenerationist_cabinet }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_parliamentary_monarchy
+		x = 26
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_continue_the_coalition_against_radicalism }
+		prerequisite = { focus = POR_regenerationist_peace }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_weed_out_setembrismos
+		x = 26
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_parliamentary_monarchy }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_restrict_spending
+		x = 26
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_weed_out_setembrismos }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_a_conservative_portugal
+		x = 26
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_restrict_spending }
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = POR_continue_the_coalition_against_radicalism
+		x = 28
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_parliamentary_monarchy }
+		mutually_exclusive = { focus = POR_peoples_movement }
+		prerequisite = { focus = POR_regenerationist_peace focus = POR_appoint_setembrismo_cabinet }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_stability_above_all
+		x = 28
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_continue_the_coalition_against_radicalism }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_public_works_focus
+		x = 28
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_stability_above_all }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_a_moderate_portugal
+		x = 28
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_public_works_focus }
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = POR_historico_cabinet
+		x = 30
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_regenerationist_cabinet }
+		prerequisite = { focus = POR_Portugese_political_sphere }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_appoint_setembrismo_cabinet
+		x = 30
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_historico_cabinet }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_peoples_movement
+		x = 30
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = { focus = POR_continue_the_coalition_against_radicalism }
+		prerequisite = { focus = POR_appoint_setembrismo_cabinet }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_Cabralism
+		x = 30
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_peoples_movement }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_expand_peoples_rights
+		x = 30
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_Cabralism }
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_a_progressive_portugal
+		x = 30
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_expand_peoples_rights }
+		
+		completion_reward = {
+		}
+	}
+
+
 	##Land Reforms
 	
 	focus = {
 		id = POR_focus_land_reforms
 		icon = GFX_Focus_Agriculture
-		x = 27
+		x = 21
 		y = 1
 		cost = 70
 		available_if_capitulated = no
@@ -656,7 +2112,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_ban_morgardios
 		icon = GFX_Focus_health_famine_relief
-		x = 24
+		x = 20
 		y = 2
 		cost = 70
 		available = { date > 1863.5.19 has_idea = POR_Luis }
@@ -675,7 +2131,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_land_confiscation
 		icon = GFX_Focus_Health_Famine
-		x = 26
+		x = 22
 		y = 2
 		cost = 70
 		available_if_capitulated = no
@@ -690,169 +2146,13 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = POR_focus_new_fertilizers_1
-		x = 28
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_land_reforms }
-		
-		completion_reward = {
-		    add_tech_bonus = { bonus = 0.1 uses = 2 category = farming_tech }
-		}
-	}
-	
-	focus = {
-		id = POR_focus_new_tools
-		x = 30
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_land_reforms }
-		
-		completion_reward = {
-		add_tech_bonus = { bonus = 0.1 uses = 2 category = mechanical_engineering_tech }
-		}
-	}
-	
-	focus = {
-		id = POR_focus_new_agro_laws
-		icon = GFX_Focus_Agriculture_2
-		x = 27
-		y = 3
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_new_tools focus = POR_focus_new_fertilizers_1 focus = POR_focus_land_confiscation focus = POR_focus_ban_morgardios }
-		
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = POR_focus_expand_vineyards
-		x = 26
-		y = 4
-		available = {
-			owns_state = 181
-		}
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_new_agro_laws }
-		
-		completion_reward = {
-		    unlock_decision_tooltip = POR_decision_portuguese_vineyards
-		}
-	}
-	
-	focus = {
-		id = POR_focus_expand_pork_production
-		x = 28
-		y = 4
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_new_agro_laws }
-		
-		completion_reward = {
-		    add_tech_bonus = { bonus = 0.1 uses = 2 category = farming_tech }
-		}
-	}
-	
-	focus = {
-		id = POR_focus_comunications
-		x = 34
-		y = 1
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_consolidate_regeneration }
-		
-		completion_reward = {
-		    add_political_power = 50
-		}
-	}
-	
-	focus = {
-		id = POR_focus_the_telegraph
-		icon = GFX_Focus_Telegraph_Lines
-		x = 33
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_comunications }
-		
-		completion_reward = {
-		    add_tech_bonus = { bonus = 0.1 uses = 2 category = electronics_devices_tech }
-		}
-	}
-	
-	focus = {
-		id = POR_focus_national_post_service
-		x = 35
-		y = 2
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_comunications }
-		
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = POR_focus_comunication_research
-		x = 34
-		y = 3
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_the_telegraph }
-		prerequisite = { focus = POR_focus_national_post_service }
-		
-		completion_reward = {
-		    add_tech_bonus = { bonus = 0.1 uses = 2 category = electronics_devices_tech }
-		}
-	}
 	
 	##Janeirinha Coup 
 	focus = {
 		id = POR_focus_janeirinha_coup
 		icon = GFX_Focus_Tactics_Death_or_Dishonor
-		x = 40
-		y = 0
+		x = 20
+		y = 10
 		cost = 70
 		available = { always = no }
 		available_if_capitulated = no
@@ -867,8 +2167,8 @@ focus_tree = {
 	focus = {
 		id = POR_focus_political_discorder
 		icon = GFX_Focus_Electorate_crowd
-		x = 40
-		y = 1
+		x = 20
+		y = 11
 		cost = 70
 		available = { always = no }
 		available_if_capitulated = no
@@ -885,8 +2185,8 @@ focus_tree = {
 	focus = {
 		id = POR_focus_enact_counter_reforms
 		icon = GFX_focus_Generic_Political_Pressure_Blue
-		x = 39
-		y = 2
+		x = 19
+		y = 12
 		cost = 70
 		available = { always = no }
 		available_if_capitulated = no
@@ -903,8 +2203,8 @@ focus_tree = {
 	focus = {
 		id = POR_focus_economical_failure
 		icon = GFX_Focus_economic_crisis
-		x = 41
-		y = 2
+		x = 21
+		y = 12
 		cost = 70
 		available = { always = no }
 		available_if_capitulated = no
@@ -921,8 +2221,8 @@ focus_tree = {
 	focus = {
 		id = POR_focus_bankrupt
 		icon = GFX_Focus_Bankruptcy
-		x = 40
-		y = 3
+		x = 20
+		y = 13
 		cost = 70
 		available = { always = no }
 		available_if_capitulated = no
@@ -940,8 +2240,8 @@ focus_tree = {
 	focus = {
 		id = POR_focus_population_is_discontent
 		icon = GFX_Focus_refugee_management
-		x = 40
-		y = 4
+		x = 20
+		y = 14
 		cost = 70
 		available = { always = no }
 		available_if_capitulated = no
@@ -960,7 +2260,7 @@ focus_tree = {
 		id = POR_focus_remilitarization_national_forces
 		icon = GFX_Focus_Army_Victorian_Traditional
 		x = 12
-		y = 10
+		y = 14
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -978,7 +2278,7 @@ focus_tree = {
 		id = POR_focus_end_british_presence
 		icon = GFX_Focus_Diplomacy_UK
 		x = 12
-		y = 11
+		y = 15
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -996,7 +2296,7 @@ focus_tree = {
 		id = POR_focus_portguese_army
 		icon = GFX_Focus_Army_Reformed
 		x = 7
-		y = 12
+		y = 16
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1013,7 +2313,7 @@ focus_tree = {
 		id = POR_focus_white_and_blue_coats
 		icon = GFX_Focus_anything_will_do
 		x = 3
-		y = 13
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1030,7 +2330,7 @@ focus_tree = {
 		id = POR_focus_british_equipment
 		icon = GFX_Focus_gun_sales_ENG
 		x = 1
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1054,7 +2354,7 @@ focus_tree = {
 		id = POR_focus_prussian_equipment
 		icon = GFX_goal_focus_prussian_guns
 		x = 3
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1078,7 +2378,7 @@ focus_tree = {
 		id = POR_focus_french_equipment
 		icon = GFX_Focus_gun_sales_FRA
 		x = 5
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1101,7 +2401,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_military_recruitment
 		x = 3
-		y = 15
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1119,7 +2419,7 @@ focus_tree = {
 		id = POR_focus_national_army_school
 		icon = GFX_Focus_Army_Reforms
 		x = 10
-		y = 13
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1135,7 +2435,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_reform_army_tactics
 		x = 9
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1153,7 +2453,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_reform_officer_corps
 		x = 11
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1171,7 +2471,7 @@ focus_tree = {
 		id = POR_focus_colonial_training
 		icon = GFX_Focus_Colonial_Troops
 		x = 9
-		y = 15
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1189,7 +2489,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_european_training
 		x = 11
-		y = 15
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1206,8 +2506,8 @@ focus_tree = {
 	focus = {
 		id = POR_focus_colonial_garrisons
 		icon = GFX_Focus_Colonial_Troops
-		x = 5
-		y = 16
+		x = 8
+		y = 20
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1226,7 +2526,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_modern_army
 		x = 10
-		y = 16
+		y = 20
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1245,7 +2545,7 @@ focus_tree = {
 		id = POR_focus_portuguese_navy
 		icon = GFX_Focus_Production_Battleship_Old
 		x = 19
-		y = 12
+		y = 16
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1262,7 +2562,7 @@ focus_tree = {
 		id = POR_focus_late_frigate_models
 		icon = GFX_Goal_frigate_focus
 		x = 15
-		y = 13
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1281,7 +2581,7 @@ focus_tree = {
 		id = POR_focus_steamship_engines
 		icon = GFX_goal_focus_watts_machines
 		x = 15
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1300,7 +2600,7 @@ focus_tree = {
 		id = POR_focus_ironclad
 		icon = GFX_goal_ironclad_focus
 		x = 15
-		y = 15
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1319,7 +2619,7 @@ focus_tree = {
 		id = POR_focus_british_model
 		icon = GFX_goal_focus_british_royal_navy
 		x = 13
-		y = 16
+		y = 20
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1342,7 +2642,7 @@ focus_tree = {
 		id = POR_focus_russian_model
 		icon = GFX_Focus_Diplomatic_Ally_RUS_2
 		x = 15
-		y = 16
+		y = 20
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1364,7 +2664,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_american_model
 		x = 17
-		y = 16
+		y = 20
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1387,7 +2687,7 @@ focus_tree = {
 		id = POR_focus_fontes_naval_reforms
 		icon = GFX_Focus_Navy_Restriction_1
 		x = 19
-		y = 13
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1408,7 +2708,7 @@ focus_tree = {
 		id = POR_focus_naval_battalion
 		icon = GFX_Focus_Navy_Restriction_2
 		x = 19
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1424,7 +2724,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_sailors_corps
 		x = 19
-		y = 15
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1441,7 +2741,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_overseas_council
 		x = 19
-		y = 16
+		y = 20
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1457,7 +2757,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_new_age_navy
 		x = 19
-		y = 17
+		y = 21
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1477,7 +2777,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_sagres_naval_academy
 		x = 23
-		y = 13
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1494,7 +2794,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_new_naval_doctrines
 		x = 23
-		y = 14
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1511,7 +2811,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_home_focus
 		x = 22
-		y = 15
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1528,7 +2828,7 @@ focus_tree = {
     focus = {
 		id = POR_focus_overseas_focus
 		x = 24
-		y = 15
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1545,7 +2845,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_new_military_docks
 		x = 23
-		y = 16
+		y = 20
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1561,7 +2861,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_lisbon_naval_base
 		x = 21
-		y = 17
+		y = 21
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1577,7 +2877,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_macau_naval_base
 		x = 23
-		y = 17
+		y = 21
 		cost = 70
 		available = { has_completed_focus = POR_focus_develop_macau }
 		available_if_capitulated = no
@@ -1594,7 +2894,7 @@ focus_tree = {
 	focus = {
 		id = POR_focus_timor_naval_base
 		x = 25
-		y = 17
+		y = 21
 		cost = 70
 		available = { has_completed_focus = POR_focus_naval_base_timor owns_state = 721 }
 		available_if_capitulated = no
@@ -1608,7 +2908,61 @@ focus_tree = {
 		    unlock_decision_tooltip = POR_decision_timor_naval_base
 		}
 	}
-	
+
+	##Portugal-Brazil Policy
+
+	focus = {
+		id = POR_brazil_policy
+		x = 40
+		y = 10
+		cost = 70
+		available = { has_completed_focus = POR_The_empire_in_america? }
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_a_friend_across_the_sea
+		x = 42
+		y = 11
+		cost = 70
+		available = { has_completed_focus = POR_diplomatic_missions }
+		prerequisite = { focus = POR_brazil_policy }
+		mutually_exclusive = { focus = POR_a_colony_to_be_reconquered }
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_a_colony_to_be_reconquered
+		x = 38
+		y = 11
+		cost = 70
+		available = { has_global_flag = ACW_American_Civil_War_Happened }
+		available = { has_completed_focus = POR_confederate_support }
+		available = { country_exists = CSA }
+		prerequisite = { focus = POR_brazil_policy }
+		mutually_exclusive = { focus = POR_a_friend_across_the_sea }
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	##### Electrions of '68
+	#######################
+	#######################
 	focus = {
 		id = POR_focus_elections_1868
 		icon = GFX_Focus_Vote_generic
@@ -1891,12 +3245,197 @@ focus_tree = {
 		}
 	}
 	
+
+	######### The Empire tree
+	focus = {
+		id = POR_hold_the_empire
+		x = 38
+		y = 15
+		cost = 70
+		available = { has_completed_focus = POR_sale_of_colonies }
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_stabilize_africa
+		x = 37
+		y = 16
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_hold_the_empire }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_stabilize_asia
+		x = 39
+		y = 16
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_hold_the_empire }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_path_to_survival
+		x = 38
+		y = 17
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_stabilize_asia }
+		prerequisite = { focus = POR_stabilize_africa }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_federation_of_equals
+		x = 37
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		available = { has_completed_focus = POR_historico_cabinet }
+		available = { check_variable = { pol_stability > 0 } }
+		mutually_exclusive = { focus = POR_tighten_our_grip }
+		prerequisite = { focus = POR_path_to_survival }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_rights_for_colonial_subjects
+		x = 37
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_federation_of_equals }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_portugese_federation
+		x = 37
+		y = 20
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_rights_for_colonial_subjects }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_tighten_our_grip
+		x = 39
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		available = { has_completed_focus = POR_regenerationist_cabinet }
+		mutually_exclusive = { focus = POR_federation_of_equals }
+		prerequisite = { focus = POR_path_to_survival }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_crack_down_on_colonial_subjects
+		x = 39
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_tighten_our_grip }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_crush_dissent
+		x = 39
+		y = 20
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_crack_down_on_colonial_subjects }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_an_empire_reborn
+		x = 38
+		y = 21
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_portugese_federation focus = POR_crush_dissent }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_forged_on_paper
+		x = 37
+		y = 22
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_portugese_federation }
+		prerequisite = { focus = POR_an_empire_reborn }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_forged_in_blood
+		x = 39
+		y = 22
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = POR_crush_dissent }
+		prerequisite = { focus = POR_an_empire_reborn }
+		completion_reward = {
+		}
+	}
 	focus = {
 		id = POR_focus_the_empire
 		icon = GFX_Focus_Diplomacy_POR
 		x = 46
-		y = 10
+		y = 14
 		cost = 70
+		available = { has_completed_focus = POR_portugese_debts }
+#		avaliable = { has_idea = POR_empire_in_decline_1 }
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
@@ -1905,85 +3444,154 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	
+
 	focus = {
-		id = POR_focus_sao_salvador_fort_question
-		x = 40
-		y = 11
+		id = POR_The_empire_in_asia
+		x = 42
+		y = 15
 		cost = 70
-		available = { has_country_flag = sao_salvador_fort_question }
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
 		prerequisite = { focus = POR_focus_the_empire }
-		
-		completion_reward = {
-		            country_event = {
-                    id = portugalfocustree.7
-                    days = 10
-                }
-            }
-		}
-	
-	focus = {
-		id = POR_focus_send_missionaries
-		x = 40
-		y = 12
-		cost = 70
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 100
-		}
-		
-		prerequisite = { focus = POR_focus_sao_salvador_fort_question }
-		
+		mutually_exclusive = { focus = POR_The_empire_in_america? }
 		completion_reward = {
 		}
 	}
-	
 	focus = {
-		id = POR_focus_develop_mozambique
-		icon = GFX_goal_POR_Develop_Mozambique
+		id = POR_Develop_our_holdings
 		x = 43
-		y = 11
-		available = { owns_state = 823 }
+		y = 16
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_the_empire }
-		
+		prerequisite = { focus = POR_The_empire_in_asia }
+		mutually_exclusive = { focus = POR_Expand_our_holdings }
 		completion_reward = {
 		}
 	}
-	
 	focus = {
-		id = POR_focus_oil_and_rubber
+		id = POR_timor_resource_extraction
 		x = 43
-		y = 12
-		available = { owns_state = 823 }
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_develop_mozambique }
-		
+		prerequisite = { focus = POR_Develop_our_holdings }
 		completion_reward = {
-		    unlock_decision_tooltip = POR_decision_mozambique_coal_depots
-			unlock_decision_tooltip = POR_decision_mozambique_aluminium
 		}
 	}
-	
 	focus = {
-		id = POR_focus_develop_macau
+		id = POR_gateway_to_china
+		x = 43
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_timor_resource_extraction }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_our_piece_of_india
+		x = 43
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_gateway_to_china }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_Expand_our_holdings
+		x = 41
+		y = 16
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_The_empire_in_asia }
+		mutually_exclusive = { focus = POR_Develop_our_holdings }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_purchase_west_timor
+		x = 41
+		y = 17
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Expand_our_holdings }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_papua_expedition
+		x = 41
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_purchase_west_timor }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_claim_the_solomons
+		x = 41
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_papua_expedition }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_christmas_island_exploration
+		x = 41
+		y = 20
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_claim_the_solomons }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_The_empire_in_africa
 		x = 46
-		y = 11
+		y = 16
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1993,32 +3601,126 @@ focus_tree = {
 		prerequisite = { focus = POR_focus_the_empire }
 		
 		completion_reward = {
-		    unlock_decision_tooltip = POR_decision_take_control_coloane_island
 		}
 	}
-	
 	focus = {
-		id = POR_focus_casinos
-		icon = GFX_goal_focus_Macau_Casino
-		x = 46
-		y = 12
+		id = POR_The_empire_in_south_africa
+		x = 47
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_develop_macau }
-		
+		prerequisite = { focus = POR_The_empire_in_africa }
+		mutually_exclusive = { focus = POR_The_empire_in_west_africa }
 		completion_reward = {
-			729 = { add_dynamic_modifier = { modifier = dynmod_POR_macau_casinos } }
 		}
 	}
-	
 	focus = {
-		id = POR_focus_the_islands
-		x = 52
-		y = 11
+		id = POR_Mozambique
+		x = 47
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_The_empire_in_south_africa }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_Angola
+		x = 47
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Mozambique }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_The_empire_in_west_africa
+		x = 45
+		y = 17
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_The_empire_in_africa }
+		mutually_exclusive = { focus = POR_The_empire_in_south_africa }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_Guinea
+		x = 45
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_The_empire_in_west_africa }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_expansion
+		x = 45
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Guinea }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_kaabu_siezed
+		x = 45
+		y = 20
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_expansion }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_greater_gains
+		x = 43
+		y = 20
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_expansion }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_The_empire_in_america?
+		x = 50
+		y = 15
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
@@ -2026,74 +3728,194 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = POR_focus_the_empire }
-		
+		mutually_exclusive = { focus = POR_The_empire_in_asia }
 		completion_reward = {
 		}
 	}
-	
 	focus = {
-		id = POR_focus_develop_cape_verde
-		icon = GFX_goal_POR_Develop_Cap_Verde
+		id = POR_Confederate_policy
 		x = 49
-		y = 12
+		y = 16
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_the_islands }
-		
+		available = {
+			OR = {
+				USA = {
+					has_offensive_war_with = CSA
+				}
+				CSA = {
+					has_offensive_war_with = USA
+				}
+			}
+		}
+		bypass = {
+			USA = {
+				exists = no
+			}
+		}
+		prerequisite = { focus = POR_The_empire_in_america? }
+		mutually_exclusive = { focus = POR_Union_policy }
 		completion_reward = {
 		}
 	}
-	
 	focus = {
-		id = POR_focus_naval_base_timor
-		x = 52
-		y = 12
+		id = POR_confederate_support
+		x = 49
+		y = 17
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_the_islands }
-		
+		prerequisite = { focus = POR_Confederate_policy }
 		completion_reward = {
 		}
 	}
-	
 	focus = {
-		id = POR_focus_deleop_macaronesia
-		x = 55
-		y = 12
+		id = POR_cotton_trade
+		x = 49
+		y = 18
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_the_islands }
-		
+		prerequisite = { focus = POR_confederate_support }
 		completion_reward = {
 		}
 	}
-	
 	focus = {
-		id = POR_focus_reform_colonial_administration
-		icon = GFX_Focus_Colonial_Troops
-		x = 46
-		y = 13
+		id = POR_portguese_volunteers
+		x = 49
+		y = 19
 		cost = 70
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 100
 		}
 		
-		prerequisite = { focus = POR_focus_deleop_macaronesia focus = POR_focus_naval_base_timor focus = POR_focus_develop_cape_verde focus = POR_focus_casinos focus = POR_focus_oil_and_rubber focus = POR_focus_send_missionaries  }
-		
+		prerequisite = { focus = POR_cotton_trade }
 		completion_reward = {
 		}
 	}
-}
+	focus = {
+		id = POR_Union_policy
+		x = 51
+		y = 16
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_The_empire_in_america? }
+		mutually_exclusive = { focus = POR_Confederate_policy }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_Maintain_american_relations
+		x = 51
+		y = 17
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Union_policy }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_Memories_of_barbary_wars
+		x = 51
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Maintain_american_relations }
+		mutually_exclusive = { focus = POR_Brazil }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_american-portugese_cooperation
+		x = 51
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Memories_of_barbary_wars }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_atlantic_trade_agreement
+		x = 51
+		y = 20
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_american-portugese_cooperation }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_Brazil
+		x = 53
+		y = 18
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Maintain_american_relations }
+		mutually_exclusive = { focus = POR_Memories_of_barbary_wars }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_diplomatic_missions
+		x = 53
+		y = 19
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_Brazil }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = POR_trans-atlantic_alliance
+		x = 53
+		y = 20
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 100
+		}
+		
+		prerequisite = { focus = POR_diplomatic_missions }
+		completion_reward = {
+		}
+	}

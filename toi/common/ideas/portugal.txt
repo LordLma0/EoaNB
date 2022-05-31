@@ -15,6 +15,63 @@ ideas = {
 				production_speed_buildings_factor = 0.25
 			}
 		}
+		POR_debt_payments_1 = {
+			allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_deal_with_the_devil2
+			
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.025
+				consumer_goods_factor = 0.10
+			}
+		}
+		POR_debt_payments_2 = {
+			allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_deal_with_the_devil2
+			
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		POR_debt_payments_3 = {
+			allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_deal_with_the_devil2
+			
+			modifier = {
+				political_power_gain = -0.07
+				stability_factor = -0.015
+				consumer_goods_factor = 0.07
+			}
+		}
+		POR_avoid_third_suspension = {
+			allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_deal_with_the_devil2
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
 		POR_Early_Constitution = {
 			allowed = {
 				original_tag = POR
@@ -41,6 +98,33 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+		POR_Communications = {
+			allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.02
+				army_morale_factor = 0.01
+			}
+		}
+		POR_National_post_service_focus = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+                consumer_goods_factor = 0.01
+		political_power_gain = -0.05
+		weekly_stability_factor = 0.02
+			}
+		}
 		POR_Morgardios = {
 			allowed = {
 				original_tag = POR
@@ -58,7 +142,20 @@ ideas = {
                 consumer_goods_factor = -0.05
 			}
 		}
-
+		POR_New_agroeconomics_law = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+                consumer_goods_factor = -0.01
+				production_speed_cotton_farm_factor = 0.05
+				production_speed_logging_camp_factor = 0.05
+				production_speed_farm_factor = 0.1
+			}
+		}
 		POR_bought_equipment = {
 		    allowed = {
 				original_tag = POR
@@ -102,6 +199,115 @@ ideas = {
 				political_power_gain = -0.05
 			}
 		}
+		POR_idea_focus_on_the_nation = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+                production_speed_buildings_factor = 0.1
+			}
+		}
+		POR_expanded_spending = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+			}
+		}
+		POR_contained_spending = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				production_speed_rail_way_factor = 0.04
+				production_speed_supply_node_factor = 0.04
+			}
+		}
+		POR_more_infrastructure_spending = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				production_speed_infrastructure_factor = 0.15
+				production_speed_naval_base_factor = 0.15
+			}
+		}
+		POR_less_infrastructure_spending = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				production_speed_infrastructure_factor = 0.04
+				production_speed_naval_base_factor = 0.04
+			}
+		}
+		POR_stable_growth_idea = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				production_speed_buildings_factor = 0.075
+			}
+		}
+		POR_diversifying_economy = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				production_speed_fabric_weavery_factor = 0.1
+				production_speed_machine_parts_factory_factor = 0.05
+				production_speed_logging_camp_factor = 0.1
+				political_power_gain = -0.15
+		}
+	}
+		POR_modernizing_economy = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				political_power_gain = 0.03
+				consumer_goods_factor = 0.03
+				army_morale_factor = 0.01
+				global_building_slots_factor = 0.08
+				production_speed_buildings_factor = 0.03
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.01
+				fuel_gain_factor = 0.08
+				fuel_gain_factor_from_states = 0.13
+				max_fuel_factor = 0.13
+				production_speed_arms_factory_factor = 0.13
+				production_speed_industrial_complex_factor = 0.13
+				production_speed_dockyard_factor = 0.13
+				production_speed_rail_way_factor = 0.13
+
+		}
+	}
 		POR_ministry_of_public_works = {
 		    allowed = {
 				original_tag = POR
@@ -115,6 +321,75 @@ ideas = {
 				industry_repair_factor = 0.05
                 consumer_goods_factor = -0.05
 				political_power_gain = -0.1
+			}
+		}
+		POR_debt_crisis_idea = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				stability_factor = -0.15
+				political_power_gain = -0.2
+			}
+		}
+		POR_emergency_taxes = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+                production_speed_buildings_factor = -0.25
+				industry_repair_factor = -0.25
+                consumer_goods_factor = 0.15
+				political_power_gain = -0.2
+			}
+		}
+		POR_repayment_escalation_idea = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+                production_speed_buildings_factor = -0.35
+				industry_repair_factor = -0.35
+                consumer_goods_factor = 0.25
+				political_power_gain = -0.4
+			}
+		}
+		POR_economy_redirection = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				political_power_gain = -0.5
+                civilian_factory_use = 5
+				trade_opinion_factor = -1
+			}
+		}
+		POR_empire_in_decline_1 = {
+		    allowed = {
+				original_tag = POR
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+                political_power_gain = -0.1
+				drift_defence_factor = -0.1
+				surrender_limit = -0.1
+				conscription_factor = -0.05
+				compliance_gain = -0.04
+				resistance_growth = 0.02
 			}
 		}
 		POR_colonial_army = {
