@@ -9,11 +9,11 @@ state = {
 	provinces = {
 		1147 1971 1980 4003 4110 4382 7084 14125
 	}
-	
+
 	history = {
 		# End of a New Beginning
+		owner = RAJ
 		1857.1.1 = {
-			owner = RAJ
 			add_core_of = RAJ
 			add_claim_by = SND
 			buildings = {
@@ -30,13 +30,20 @@ state = {
 			add_to_array = { state_culture_array_num = 0.09 }
 			add_to_array = { state_culture_array = 487 } # Marwari
 			add_to_array = { state_culture_array_num = 0.04 }
-	
-			add_to_array = { state_religion_array = 8 } # Sunni	
-			add_to_array = { state_religion_array_num = 0.60 }
+
+			add_to_array = { state_religion_array = 8 } # Sunni
+			add_to_array = { state_religion_array_num = 0.55 }
 			add_to_array = { state_religion_array = 18 } # Hindu
-			add_to_array = { state_religion_array_num = 0.23 }
+			add_to_array = { state_religion_array_num = 0.21 }
 			add_to_array = { state_religion_array = 9 } # Shia
-			add_to_array = { state_religion_array_num = 0.17 }
+			add_to_array = { state_religion_array_num = 0.14 }
+			add_to_array = { state_religion_array = 47 } # Bahai
+			add_to_array = { state_religion_array_num = 0.10 }
+		}
+		# Blood and Iron
+		1870.1.1 = {
+			owner = RAJ
+			remove_core_of = RJP
 		}
 	}
 }

@@ -342,17 +342,17 @@ guiTypes = {
 				format = right
 			}
 
-			#instantTextboxType = {
-			#	name = "manage_exiled_collaborations_governments"
-			#	position = { x = 223 y = 398 }
-			#	font = "hoi_16mbs"
-			#	maxWidth = 130
-			#	maxHeight = 20
-			#	fixedsize = yes
-			#	text = "MANAGE_EXILED_GOVERNMENTS"
-			#	alwaystransparent = yes
-			#	format = center
-			#}
+			instantTextboxType = {
+				name = "manage_exiled_collaborations_governments"
+				position = { x = -723 y = 398 }
+				font = "hoi_16mbs"
+				maxWidth = 130
+				maxHeight = 20
+				fixedsize = yes
+				text = "MANAGE_EXILED_GOVERNMENTS"
+				alwaystransparent = yes
+				format = center
+			}
 
 			buttonType = {
 				name = "show_demographics_button"
@@ -363,6 +363,13 @@ guiTypes = {
 				format = right
 
 				pdx_tooltip = MANAGE_DEMOGRAPHICS
+			}
+
+			iconType = {
+				name = "icon_demographics"
+				spriteType = "GFX_icon_demographics"
+				position = { x = 189 y = 217 }
+				alwaystransparent = yes
 			}
 
 			iconType = {
@@ -382,7 +389,7 @@ guiTypes = {
 		# Autonomy
 			containerWindowType = {
 				name = "autonomy_progress_view"
-				position = { x = 170 y = 242 }
+				position = { x = 170 y = 251 }
 				size = { width = 255 height = 60 }
 				clipping = no
 
@@ -514,7 +521,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "national_spirit"
 				position = { x = -80 y = 312 }
-				size = { width = 360 height = 50 }
+				size = { width = 360 height = 55 }
 				clipping = no
 
 				instantTextboxType = {
@@ -529,8 +536,8 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "national_spirit_container"
-					position = { x = 90 y = 19 }
-					size = { width = 525 height = 90 }
+					position = { x = 90 y = 7 }
+					size = { width = 525 height = 98 }
 
 					clipping = yes
 					horizontalScrollbar = "bottom_horizontal_slider"
@@ -543,16 +550,16 @@ guiTypes = {
 
 					gridboxtype = {
 						name = "spirit_grid"
-						position = { x = 12 y = 0 }
+						position = { x = 4 y = 5 }
 						size = { width = 350 height = 100%% }
-						slotsize = { width = 60 height = 68 }
+						slotsize = { width = 60 height = 72 }
 						max_slots = { x = 100 y = 1 }
 						format = "UPPER_LEFT"
 					}
 					gridboxtype = {
 						name = "spirit_grid_over_defined"
 						size = { width = 350 height = 100%% }
-						slotsize = { width = 60 height = 68 }
+						slotsize = { width = 60 height = 72 }
 						max_slots_horizontal = 10
 						format = "UPPER_LEFT"
 					}
@@ -632,7 +639,6 @@ guiTypes = {
 		}
 	}
 
-
 	containerWindowType = {
 		name = "political_ideas_window"
 		position = { x = -356 y = 120 }
@@ -653,7 +659,7 @@ guiTypes = {
 			position = { x = 0 y = 4 }
 			font = "hoi_20b"
 			text = "Economic Laws"
-			maxWidth = 450
+			maxWidth = 500
 			maxHeight = 20
 			format = center
 		}
@@ -662,7 +668,7 @@ guiTypes = {
 			position = { x = 0 y = 26 }
 			font = "hoi_18b"
 			text = "Switch out Henschel"
-			maxWidth = 450
+			maxWidth = 500
 			maxHeight = 20
 			format = center
 		}
@@ -674,7 +680,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "grid"
 				position = { x = 0 y = 0 }
-				size = { width = 500 height = -4 }
+				size = { width = 500 height = -1 }
 				verticalScrollbar = "right_vertical_slider"
 				margin = { top = 4 bottom = 12 }
 
@@ -712,7 +718,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "close"
-			position = { x = -50 y = 5 }
+			position = { x = -42 y = 8 }
 			quadTextureSprite = "GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
@@ -720,7 +726,6 @@ guiTypes = {
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
 		}
-
 	}
 
 	containerWindowType = {
@@ -796,7 +801,6 @@ guiTypes = {
 			alwaystransparent = yes
 			frame = 1
 		}
-
 	}
 
 	containerWindowType = {
@@ -1079,7 +1083,6 @@ guiTypes = {
 			maxHeight = 20
 			format = left
 		}
-
 	}
 
 	containerWindowType = {
@@ -1110,7 +1113,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "autonomy_country_name"
-			position = { x = 100 y = 40 }
+			position = { x = 48 y = 12 }
 			font = "hoi_18mbs"
 			borderSize = { x = 0 y = 0 }
 			maxWidth = 200
@@ -1121,13 +1124,13 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "autonomy_progress_view"
-			position = { x = 240 y = 20 }
+			position = { x = 240 y = 0 }
 			size = { width = 255 height = 60 }
 			clipping = no
 
 			instantTextboxType = {
 				name = "current_autonomy_name"
-				position = { x = -130 y = -8 }
+				position = { x = 30 y = 50 }
 				font = "hoi_16mbs"
 				text = "autonomy"
 				maxWidth = 158
@@ -1137,13 +1140,13 @@ guiTypes = {
 
 			buttonType = {
 				name = "prev_autonomy_level"
-				position = { x = 72 y = -5 }
+				position = { x = 73 y = 15 }
 				quadTextureSprite = "GFX_occupation_policy_button_selected"
 			}
 
 			iconType = {
 				name = "prev_level_glow"
-				position = { x = 60 y = -12 }
+				position = { x = 73 y = 15 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
 				alwaystransparent = yes
 				scale = 0.5
@@ -1151,7 +1154,7 @@ guiTypes = {
 
 			iconType = {
 				name = "prev_autonomy_level_icon"
-				position = { x = 77 y = 0 }
+				position = { x = 78 y = 18 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 				alwaystransparent = yes
 			}
@@ -1159,19 +1162,19 @@ guiTypes = {
 			iconType = {
 				name = "autonomy_progress"
 				spriteType = "GFX_subject_progressbar"
-				position = { x = 119 y = 9 }
+				position = { x = 119 y = 30 }
 				frame = 100
 			}
 
 			buttonType = {
 				name = "next_autonomy_level"
-				position = { x = 214 y = -5 }
+				position = { x = 214 y = 15 }
 				quadTextureSprite = "GFX_occupation_policy_button_selected"
 			}
 
 			iconType = {
 				name = "next_level_glow"
-				position = { x = 202 y = -12 }
+				position = { x = 202 y = 15 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
 				alwaystransparent = yes
 				scale = 0.5
@@ -1179,13 +1182,13 @@ guiTypes = {
 
 			iconType = {
 				name = "next_autonomy_level_icon"
-				position = { x = 219 y = 0 }
+				position = { x = 217 y = 18 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 			}
 
 			iconType = {
 				name = "current_autonomy_level_icon"
-				position = { x = 31 y = -16 }
+				position = { x = 31 y = 2 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 			}
 		}
@@ -1342,7 +1345,8 @@ guiTypes = {
 			max_slots_vertical = 1
 		}
 	}
-		containerWindowType = {
+
+	containerWindowType = {
 		name = "exile_item"
 		position = { x = 0 y = 0 }
 		size = { width = 494 height = 95 }
@@ -1703,7 +1707,6 @@ guiTypes = {
 			frame = 1
 			alwaystransparent = yes
 		}
-
 	}
 
 	containerWindowType = {

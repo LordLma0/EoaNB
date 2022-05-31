@@ -61,6 +61,8 @@
 	add_opinion_modifier = { target = UTA modifier = first_nations_colonial_encroacher_opinion_modifier }
 	add_opinion_modifier = { target = USA modifier = first_nations_colonial_encroacher_opinion_modifier }
 	give_military_access = USA
+	give_military_access = CPA
+	give_military_access = ORE
 
 	set_politics = {
 		ruling_party = fundamentalism
@@ -84,7 +86,8 @@ set_popularities = {
 	tech_infantry_napoleonic_uniform = 1
 	infantry_weapons = 1
 	tech_infantry_practical_rifling = 1
-	rifle_equipment1 = 1
+	tech_infantry_percussion_cap = 1
+		rifle_equipment1 = 1
 	tribaltech = 1
 	tribal_society = 1
 	tribal_natral_economics = 1
@@ -99,46 +102,48 @@ set_popularities = {
 
 	# POLITICAL LEADERS
 
-	create_country_leader = {
-	name = "Chief Hallalhotsoot"
-	desc = ""
-	picture = ""
-	expire = "1953.3.1"
-	ideology = shamanism
-	traits = {
-	}
-}
+#create_country_leader = {
+#	name = "Chief Hallalhotsoot"
+#	desc = ""
+#	#picture = ""
+#	expire = "1953.3.1"
+#	ideology = shamanism
+#	traits = {
+#	}
+#}
+#create_corps_commander = {
+#	name = "Hallalhotsoot"
+#	picture = "Portrait_NEZ_Hallalhotsoot.dds"
+#	traits = { }
+#	skill = 3
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = NEZ_Hallalhotsoot
 
-create_corps_commander = {
-	name = "Hallalhotsoot"
-	picture = "Portrait_NEZ_Hallalhotsoot.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+#create_corps_commander = {
+#	name = "Old Chief Joseph"
+#	picture = "Portrait_NEZ_Old_Chief_Joseph.dds"
+#	traits = { }
+#	skill = 3
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = NEZ_Old_Chief_Joseph
 
-create_corps_commander = {
-	name = "Old Chief Joseph"
-	picture = "Portrait_NEZ_Old_Chief_Joseph.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "White Bird"
-	picture = "Portrait_NEZ_White_Bird.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+#create_corps_commander = {
+#	name = "White Bird"
+#	picture = "Portrait_NEZ_White_Bird.dds"
+#	traits = { }
+#	skill = 3
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = NEZ_White_Bird
 }

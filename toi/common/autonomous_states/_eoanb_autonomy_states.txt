@@ -72,7 +72,7 @@ autonomy_state = {
 autonomy_state = {
 	id = autonomy_eyalet
 
-	#is_puppet = yes
+	is_puppet = yes
 
 	min_freedom_level = 0.55
 
@@ -476,6 +476,85 @@ autonomy_state = {
 	}
 }
 autonomy_state = {
+	id = autonomy_personal_union_3
+
+	is_puppet = yes
+	
+	use_overlord_color = yes
+
+	min_freedom_level = 0.1
+
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		units_deployed_to_overlord = no
+	}
+
+	modifier = {
+		extra_trade_to_overlord_factor = 1
+		overlord_trade_cost_factor = -0.95
+		can_master_build_for_us = 1
+		cic_to_overlord_factor = 0.75
+		mic_to_overlord_factor = 1
+	}
+
+	ai_subject_wants_higher = {
+		factor = 0
+	}
+
+	ai_overlord_wants_lower = {
+		factor = 0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = yes
+	}
+
+	allowed = {
+		if = { limit = { OVERLORD = { has_variable = has_afr_empire_mechanic_system } always = no } }
+		eoanb_enable_autonomy = yes
+
+		OVERLORD = { tag = DEN }
+		has_country_flag = is_junior_personal_union_member
+	}
+
+	can_take_level = {
+		if = {
+			limit = {
+				original_tag = LUX
+			}
+			#Date is a placeholder, realistically should be when the Union ends by Monarch Death
+			date > 1890.1.1
+
+			else_if = {
+				limit = {
+					tag = SCH
+				}
+
+				hidden_trigger = {
+					NOT = {
+						OVERLORD = { tag = DEN }
+					}
+				}
+			}
+		}
+	}
+
+	can_lose_level = {
+		if = {
+			limit = {
+				tag = SCH
+			}
+
+			hidden_trigger = {
+				NOT = {
+					OVERLORD = { tag = DEN }
+				}
+			}
+		}
+	}
+}
+autonomy_state = {
 	id = autonomy_princely_state
 	
 	use_overlord_color = yes
@@ -620,6 +699,8 @@ autonomy_state = {
 	id = autonomy_daimyo
 	
 	is_puppet = yes
+
+	use_overlord_color = yes
 	
 	min_freedom_level = 0.8
 	
@@ -732,7 +813,7 @@ autonomy_state = {
 				tag = GRL
 				tag = NEG
 				tag = MHC
-
+				tag = CPA
 				tag = FLO
 				tag = USG
 				tag = MIS
@@ -818,6 +899,7 @@ autonomy_state = {
 				tag = GRL
 				tag = NEG
 				tag = MHC
+				tag = CPA
 				tag = FLO
 				tag = USG
 				tag = MIS
@@ -906,6 +988,7 @@ autonomy_state = {
 				tag = GRL
 				tag = NEG
 				tag = MHC
+				tag = CPA
 				tag = FLO
 				tag = USG
 				tag = MIS
@@ -987,6 +1070,7 @@ autonomy_state = {
 				tag = GRL
 				tag = NEG
 				tag = MHC
+				tag = CPA
 				tag = FLO
 				tag = USG
 				tag = MIS
@@ -1078,6 +1162,7 @@ autonomy_state = {
 				tag = GRL
 				tag = NEG
 				tag = MHC
+				tag = CPA
 				tag = FLO
 				tag = USG
 				tag = MIS
@@ -1162,6 +1247,7 @@ autonomy_state = {
 				tag = GRL
 				tag = NEG
 				tag = MHC
+				tag = CPA
 				tag = FLO
 				tag = USG
 				tag = MIS
@@ -1414,5 +1500,58 @@ autonomy_state = {
 
 	can_lose_level = {
 		#trigger here
+	}
+}
+
+autonomy_state = {
+	id = autonomy_hispanic_crown_union
+	
+	use_overlord_color = yes
+
+	is_puppet = no
+
+	min_freedom_level = 0.80
+
+	rule = {
+		can_not_declare_war = no
+		#can_decline_call_to_war = no
+		#can_be_called_to_war = no
+		#game is saying above is not a valid game rule
+	}
+
+	modifier = {
+		extra_trade_to_overlord_factor = 0.1
+		overlord_trade_cost_factor = -0.20
+		can_master_build_for_us = 1
+		cic_to_overlord_factor = 0
+		mic_to_overlord_factor = 0
+		research_sharing_per_country_bonus_factor = -0.25
+	}
+
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		eoanb_enable_autonomy = yes
+		has_country_flag = autonomy_hispanic_crown_union_flag
+	}
+
+	can_take_level = {
+		#trigger here
+		always = no
+	}
+
+	can_lose_level = {
+		#trigger here
+		always = no
 	}
 }

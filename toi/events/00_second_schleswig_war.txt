@@ -170,15 +170,22 @@ country_event = {
 	desc = secschwar.8.d
 	picture = GFX_report_event_europe_funeral
 	
+	immediate = {
+		hidden_effect = {
+			DEN = { country_event = { id = denmark_succession.1 } }
+		}
+	}
+	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = secschwar.8.a
 		ai_chance = { base = 100 }
-		custom_effect_tooltip = eoanb_tt_event_secschwar_8
+		add_political_power = -20
+		add_stability = -0.05
+		decrease_ps_by_one = yes
 		hidden_effect = {
-			swap_ideas = { remove_idea = DEN_Frederick_VII add_idea = DEN_Christian_IX }
 			every_other_country = {
 				limit = {
 					has_idea = GER_general_idea_ger_confed
@@ -531,7 +538,7 @@ country_event = {
 			news_event = news.5
 			HAN = { transfer_state = 949 }
 			HAN = { give_military_access = SAX }
-			THU = { give_military_access = SAX }
+			HES = { give_military_access = SAX }
 			HAN = { give_military_access = PRS }
 			HAN = { give_military_access = AUS }
 			MCK = { give_military_access = PRS }
@@ -549,7 +556,7 @@ country_event = {
 	}
 }
 
-#Denmark - PM Carl Christian Hall Resigns - 31 December 1863
+#Denmark - PM Resigns - 31 December 1863
 country_event = {
 	id = secschwar.21
 	title = secschwar.21.t
@@ -569,14 +576,16 @@ country_event = {
 		add_stability = -0.05
 		add_political_power = -50
 		custom_effect_tooltip = historical_option
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Ditlev Gothard Monrad"
-			desc = "POLITICS_GENERIC_EOANB_DESC"
-			picture = "gfx/leaders/DEN/Portrait_DEN_Ditlev_Gothard_Monrad.dds"
-			expire = "1930.1.1"
-			ideology = market_liberal
-			traits = {}
+		DEN_ditlev_gothard_monrad = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_GENERIC_EOANB_DESC"
+					ideology = market_liberal
+					expire = "1930.1.1"
+					#id = -1
+				}
+			}
 		}
 	}
 	
@@ -589,16 +598,19 @@ country_event = {
 		ai_chance = { base = 100 }
 		add_stability = -0.05
 		add_political_power = -50
-		retire_country_leader = yes
 		set_politics = { ruling_party = traditional_conservatism }
 		hidden_effect = {
-			create_country_leader = {
-				name = "Ditlev Gothard Monrad"
-				desc = "POLITICS_GENERIC_EOANB_DESC"
-				picture = "gfx/leaders/DEN/Portrait_DEN_Ditlev_Gothard_Monrad.dds"
-				expire = "1930.1.1"
-				ideology = market_liberal
-				traits = {}
+			DEN_ditlev_gothard_monrad = {
+				add_country_leader_role = {
+					country_leader = {
+						desc = "POLITICS_GENERIC_EOANB_DESC"
+						ideology = market_liberal
+						expire = "1930.1.1"
+						#id = -1
+					}
+				}
+				promote_character = yes
+				promote_character = market_liberal
 			}
 		}
 	}
@@ -612,25 +624,33 @@ country_event = {
 		ai_chance = { base = 100 }
 		add_stability = -0.05
 		add_political_power = -50
-		retire_country_leader = yes
 		set_politics = { ruling_party = centrism }
-		create_country_leader = {
-			name = "Ditlev Gothard Monrad"
-			desc = "POLITICS_GENERIC_EOANB_DESC"
-			picture = "gfx/leaders/DEN/Portrait_DEN_Ditlev_Gothard_Monrad.dds"
-			expire = "1930.1.1"
-			ideology = market_liberal
-			traits = {}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Christen Andreas Fonnesbech"
-				desc = "POLITICS_GENERIC_EOANB_DESC"
-				picture = "gfx/leaders/DEN/Portrait_DEN_Christen_Andreas_Fonnesbech.dds"
-				expire = "1930.1.1"
-				ideology = conserv
-				traits = {}
+		DEN_ditlev_gothard_monrad = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_GENERIC_EOANB_DESC"
+					ideology = market_liberal
+					expire = "1930.1.1"
+					#id = -1
+				}
 			}
+		}
+		retire_character = DEN_carl_christian_hall
+		hidden_effect = {
+			DEN_christian_andreas_fonnesbach = {
+				add_country_leader_role = {
+					country_leader = {
+						desc = "POLITICS_GENERIC_EOANB_DESC"
+						ideology = conserv
+						expire = "1930.1.1"
+						#id = -1
+					}
+				}
+				promote_character = yes
+				promote_character = conserv
+			}
+			retire_character = DEN_christian_emil_frijs
 		}
 	}
 	
@@ -643,15 +663,18 @@ country_event = {
 		ai_chance = { base = 100 }
 		add_stability = -0.05
 		add_political_power = -50
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Christen Andreas Fonnesbech"
-			desc = "POLITICS_GENERIC_EOANB_DESC"
-			picture = "gfx/leaders/DEN/Portrait_DEN_Christen_Andreas_Fonnesbech.dds"
-			expire = "1930.1.1"
-			ideology = conserv
-			traits = {}
+		DEN_christian_andreas_fonnesbach = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_GENERIC_EOANB_DESC"
+					ideology = conserv
+					expire = "1930.1.1"
+					#id = -1
+				}
+			}
 		}
+		retire_character = DEN_christian_emil_frijs
 	}
 }
 
@@ -669,6 +692,18 @@ country_event = {
 		ai_chance = { base = 100 }
 		add_political_power = 10
 		add_stability = 0.01
+		if = {
+			limit = {
+				OR = {
+					tag = HAN
+					tag = SAX
+				}
+			}
+			set_temp_variable = {
+				eoanb_prestige_change = 2
+			}
+			eoanb_change_prestige_score = yes
+		}
 	}
 }
 
@@ -814,18 +849,24 @@ country_event = {
 			SCH = { transfer_state = 949 }
 			SCH = { transfer_state = 1032 }
 			DEN = { end_puppet = SCH }
-			SCH = { 
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Provisional Administration"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/SCH/Portrait_SCH_Provisional_Administration.dds"
-					expire = "1950.1.1"
-					ideology = despotism
-					traits = { }
-				}
-			}
+			SCH = { set_politics = { ruling_party = autocracy } }
 			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_provisional } }
+			SCH = { 
+				SCH_provisional_administration = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1950.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
+				}
+				#retire_character = SCH_frederick_vii
+			}
 			SCH = { give_military_access = PRS }
 			SCH = { give_military_access = AUS }
 			SCH = { inherit_technology = DEN }
@@ -911,7 +952,7 @@ country_event = {
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_30
 		hidden_effect = {
-			declare_war_on = { target = DEN type = annex_everything }
+			declare_war_on = { target = DEN type = wargoal_second_schleswig_war }
 			add_named_threat = { 
 				threat = 3
 				name = eoanb_threat_ssw_war
@@ -931,7 +972,7 @@ country_event = {
 	id = secschwar.31
 	title = secschwar.31.t
 	desc = secschwar.31.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1221,15 +1262,20 @@ country_event = {
 			DEN = { white_peace = HLS }
 			PRS = { puppet = HLS }
 			HLS = {
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Provisional Administration"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/HLS/Portrait_HLS_Provisional_Administration.dds"
-					expire = "1950.1.1"
-					ideology = despotism
-					traits = { }
+				HLS_provisional_administration = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1950.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
 				}
+				#retire_character = HLS_friedrich_von_augustenburg
 			}
 			clr_global_flag = eoanb_flag_second_schleswig_war
 			PRS = { set_country_flag = eoanb_flag_won_2_schleswig_war }
@@ -1248,7 +1294,7 @@ country_event = {
 			949 = { add_compliance = 80 }
 			DEN = { add_war_support = -0.35 }
 			PRS = { add_war_support = -0.35 }
-			AUS = { add_war_support = -0.35 }
+			AUS = { add_war_support = -0.25 }
 		}
 	}
 }
@@ -1274,16 +1320,23 @@ country_event = {
 			SCH = { transfer_state = 58 }
 			SCH = { transfer_state = 949 }
 			PRS = { puppet = SCH }
+			SCH = { set_politics = { ruling_party = autocracy } }
+			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_prussia } }
 			SCH = { 
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Wilhelm I"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/PRS/Portrait_PRS_Wilhelm_I.dds"
-					expire = "1889.1.1"
-					ideology = despotism
-					traits = { }
+				SCH_wilhelm_i = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1889.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
 				}
+				#retire_character = SCH_frederick_vii
 			}
 			SCH = {
 				add_popularity = {
@@ -1291,8 +1344,6 @@ country_event = {
 					popularity = 0.5
 				}
 			}
-			SCH = { set_politics = { ruling_party = autocracy } }
-			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_prussia } }
 			clr_global_flag = eoanb_flag_second_schleswig_war
 			PRS = { set_country_flag = eoanb_flag_won_2_schleswig_war }
 			PRS = { country_event = { days = 5 id = prussia.16 } }
@@ -1311,7 +1362,7 @@ country_event = {
 			}
 			DEN = { add_war_support = -0.55 }
 			PRS = { add_war_support = -0.35 }
-			AUS = { add_war_support = -0.35 }
+			AUS = { add_war_support = -0.25 }
 		}
 	}
 }
@@ -1338,18 +1389,24 @@ country_event = {
 			SCH = { transfer_state = 58 }
 			SCH = { transfer_state = 949 }
 			SCH = { transfer_state = 1032 }
-			SCH = { 
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Friedrich von Augustenburg"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/HLS/Portrait_HLS_Friedrich_VIII.dds"
-					expire = "1950.1.1"
-					ideology = constit_monarch
-					traits = { }
-				}
-			}
+			SCH = { set_politics = { ruling_party = autocracy } }
 			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_augustenburg } }
+			SCH = { 
+				SCH_friedrich_von_augustenburg = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1950.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
+				}
+				#retire_character = SCH_frederick_vii
+			}
 			SCH = { give_military_access = PRS }
 			SCH = { give_military_access = AUS }
 			SCH = { inherit_technology = DEN }
@@ -1372,7 +1429,7 @@ country_event = {
 			}
 			DEN = { add_war_support = -0.35 }
 			PRS = { add_war_support = -0.35 }
-			AUS = { add_war_support = -0.35 }
+			AUS = { add_war_support = -0.25 }
 		}
 	}
 }
@@ -1455,8 +1512,13 @@ country_event = {
 		name = secschwar.41.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_41
-		complete_national_focus = DEN_focus_danish_defeat
+		complete_national_focus = DEN_focus_humiliating_defeat
+		set_temp_variable = {
+			eoanb_prestige_change = -5
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
+			set_country_flag = DEN_humiliating_defeat_flag
 			white_peace = PRS
 			white_peace = AUS
 			PRS = { set_country_flag = PRS_denmark_sues_for_peace_flag }
@@ -1468,6 +1530,15 @@ country_event = {
 				country_event = { id = secschwar.59 }
 			}
 			remove_mission = PRS_mission_finish_war_with_denmark
+			if = {
+				limit = {
+					DEN = {
+						has_war_with = LUX
+					}
+				}
+				DEN = { white_peace = LUX }
+			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
@@ -1486,24 +1557,34 @@ country_event = {
 		name = secschwar.42.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_42
+		set_temp_variable = {
+			eoanb_prestige_change = 5
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
 			DEN = { end_puppet = SCH }
 			DEN = { white_peace = SCH }
 			SCH = { transfer_state = 58 }
 			SCH = { transfer_state = 949 }
 			SCH = { transfer_state = 1032 }
-			SCH = { 
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Provisional Administration"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/SCH/Portrait_SCH_Provisional_Administration.dds"
-					expire = "1950.1.1"
-					ideology = despotism
-					traits = { }
-				}
-			}
+			SCH = { set_politics = { ruling_party = autocracy } }
 			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_provisional } }
+			SCH = { 
+				SCH_provisional_administration = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1950.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
+				}
+				#retire_character = SCH_frederick_vii
+			}
 			SCH = { give_military_access = PRS }
 			PRS = { give_guarantee = SCH }
 			SCH = { give_military_access = AUS }
@@ -1637,18 +1718,24 @@ country_event = {
 			SCH = { transfer_state = 949 }
 			SCH = { transfer_state = 1032 }
 			DEN = { end_puppet = SCH }
-			SCH = { 
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Friedrich von Augustenburg"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/HLS/Portrait_HLS_Friedrich_VIII.dds"
-					expire = "1950.1.1"
-					ideology = constit_monarch
-					traits = { }
-				}
-			}
+			SCH = { set_politics = { ruling_party = autocracy } }
 			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_augustenburg } }
+			SCH = { 
+				SCH_friedrich_von_augustenburg = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1950.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
+				}
+				#retire_character = SCH_frederick_vii
+			}
 			SCH = { give_military_access = PRS }
 			SCH = { give_military_access = AUS }
 			SCH = { inherit_technology = DEN }
@@ -1802,8 +1889,13 @@ country_event = {
 		name = secschwar.51.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_51
-		complete_national_focus = DEN_focus_danish_defeat
+		complete_national_focus = DEN_focus_humiliating_defeat
+		set_temp_variable = {
+			eoanb_prestige_change = -5
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
+			set_country_flag = DEN_humiliating_defeat_flag
 			white_peace = PRS
 			PRS = { set_country_flag = PRS_denmark_sues_for_peace_flag }
 			PRS = { remove_ideas = DEN_idea_pomerania_blockade }
@@ -1815,6 +1907,15 @@ country_event = {
 			}
 			PRS = { dismantle_faction = yes }
 			remove_mission = PRS_mission_win_war_with_denmark
+			if = {
+				limit = {
+					DEN = {
+						has_war_with = LUX
+					}
+				}
+				DEN = { white_peace = LUX }
+			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
@@ -1834,24 +1935,34 @@ country_event = {
 		ai_chance = { base = 100 }
 		add_political_power = 50
 		custom_effect_tooltip = eoanb_tt_event_secschwar_52
+		set_temp_variable = {
+			eoanb_prestige_change = 3
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
 			DEN = { end_puppet = SCH }
 			DEN = { white_peace = SCH }
 			SCH = { transfer_state = 58 }
 			SCH = { transfer_state = 949 }
 			SCH = { transfer_state = 1032 }
-			SCH = { 
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Friedrich von Augustenburg"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/HLS/Portrait_HLS_Friedrich_VIII.dds"
-					expire = "1950.1.1"
-					ideology = constit_monarch
-					traits = { }
-				}
-			}
+			SCH = { set_politics = { ruling_party = autocracy } }
 			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_augustenburg } }
+			SCH = { 
+				SCH_friedrich_von_augustenburg = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1950.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
+				}
+				#retire_character = SCH_frederick_vii
+			}
 			SCH = { give_military_access = PRS }
 			SCH = { give_military_access = AUS }
 			SCH = { inherit_technology = DEN }
@@ -1908,10 +2019,31 @@ country_event = {
 		name = secschwar.54.a
 		ai_chance = { base = 100 }
 		add_political_power = 100
-		remove_ideas = DEN_idea_london_protocol
-		remove_ideas = SCH_idea_ethnic_conflicts
-		add_ideas = GER_general_idea_ger_confed
-		add_ideas = SCH_idea_ethnic_conflicts_DEN
+		eoanb_danish_unrecognised = yes
+		if = {
+			limit = {
+				has_idea = DEN_idea_london_protocol
+			}
+			remove_ideas = DEN_idea_london_protocol
+		}
+		if = {
+			limit = {
+				has_idea = SCH_idea_ethnic_conflicts
+			}
+			remove_ideas = SCH_idea_ethnic_conflicts
+		}
+		if = {
+			limit = {
+				NOT = { has_idea = GER_general_idea_ger_confed }
+			}
+			add_ideas = GER_general_idea_ger_confed
+		}
+		if = {
+			limit = {
+				NOT = { has_idea = SCH_idea_ethnic_conflicts_DEN }
+			}
+			add_ideas = SCH_idea_ethnic_conflicts_DEN
+		}
 		SCH = {
 			if = {
 				limit = {
@@ -1994,7 +2126,7 @@ country_event = {
 		}
 		add_popularity = {
 			ideology = centrism
-			popularity = 0.4
+			popularity = 0.35
 		}
 		hidden_effect = {
 			every_other_country = {
@@ -2022,6 +2154,26 @@ country_event = {
 					SAX = { has_variable = SAX_bundesreform_positive_votes }
 				}
 				SCH = { country_event = { id = saxonyforeign.4 } }
+			}
+			SCH = {
+				if = {
+					limit = {
+						owns_state = 58
+					}
+					58 = { add_core_of = SCH }
+				}
+				if = {
+					limit = {
+						owns_state = 949
+					}
+					949 = { add_core_of = SCH }
+				}
+				if = {
+					limit = {
+						owns_state = 1032
+					}
+					1032 = { add_core_of = SCH }
+				}
 			}
 		}
 	}
@@ -2066,7 +2218,7 @@ country_event = {
 	option = {
 		name = secschwar.56.a
 		ai_chance = { base = 100 }
-		add_war_support = -0.25
+		add_war_support = -0.3
 		add_political_power = -10
 	}
 }
@@ -2129,7 +2281,26 @@ country_event = {
 			unlock_decision_tooltip = PRS_decision_peace_of_vienna
 		}
 		add_political_power = 25
-		add_war_support = -0.35
+		add_war_support = -0.5
+		if = {
+			limit = {
+				tag = AUS
+			}
+			set_temp_variable = {
+				eoanb_prestige_change = 5
+			}
+			eoanb_change_prestige_score = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					DEN = {
+						has_war_with = LUX
+					}
+				}
+				DEN = { white_peace = LUX }
+			}
+		}
 	}
 }
 
@@ -2159,24 +2330,43 @@ country_event = {
 					active = no
 				}
 			}
-			HLS = {
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Franz Joseph I"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/AUS/Portrait_AUS_Franz_Joseph_I.png"
-					expire = "1917.1.1"
-					ideology = despotism
-					traits = { }
-				}
-			}
-			HLS = {
-				add_popularity = {
-					ideology = autocracy
-					popularity = 0.5
+			HLS = {	set_politics = { ruling_party = autocracy } }
+			HLS = {	
+				set_popularities = {
+					anarchism = 0
+					vanguard_communism = 0
+					collectivist_socialism = 0
+					social_egalitarianism = 0
+					centrism = 0
+					traditional_conservatism = 0
+					radical_democracy = 0
+					chauvinist_populism = 0
+					autocracy = 100
+					fundamentalism = 0
 				}
 			}
 			HLS = { set_party_name = { ideology = autocracy name = HLS_autocracy_party_austria } }
+			HLS = {
+				HLS_franz_joseph_i = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1917.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
+				}
+				#if = {
+				#	limit = {
+				#		has_character = HLS_friedrich_von_augustenburg
+				#	}
+				#}
+				#retire_character = HLS_friedrich_von_augustenburg
+			}
 			HLS = { give_military_access = PRS }
 			every_other_country = {
 				limit = {
@@ -2213,16 +2403,25 @@ country_event = {
 		custom_effect_tooltip = eoanb_tt_event_secschwar_gastein
 		hidden_effect = {
 			PRS = { puppet = SCH }
+			SCH = { set_politics = { ruling_party = autocracy } }
+			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_prussia } }
 			SCH = { 
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Wilhelm I"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/PRS/Portrait_PRS_Wilhelm_I.dds"
-					expire = "1889.1.1"
-					ideology = despotism
-					traits = { }
+				SCH_carl_von_scheel_plessen = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							expire = "1893.1.1"
+							desc = "POLITICS_GENERIC_EOANB_DESC"
+							ideology = constit_monarch
+							traits = {
+								#
+							}
+						}
+					}
 				}
+				#retire_character = SCH_frederick_vii
+				#retire_character = SCH_provisional_administration
+				#retire_character = SCH_friedrich_von_augustenburg
 			}
 			SCH = {
 				add_popularity = {
@@ -2230,8 +2429,6 @@ country_event = {
 					popularity = 0.5
 				}
 			}
-			SCH = { set_politics = { ruling_party = autocracy } }
-			SCH = { set_party_name = { ideology = autocracy name = SCH_autocracy_party_prussia } }
 			SCH = { give_military_access = AUS }
 			every_other_country = {
 				limit = {
@@ -2309,7 +2506,7 @@ country_event = {
 		name = secschwar.64.a
 		ai_chance = { base = 100 }
 		add_political_power = 25
-		add_war_support = -0.05
+		add_war_support = -0.1
 		hidden_effect = {
 			PRS = { country_event = { id = secschwar.65 } }
 			AUS = { country_event = { id = secschwar.65 } }
@@ -2470,22 +2667,17 @@ country_event = {
 		name = secschwar.71.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_71
+		complete_national_focus = DEN_focus_glorious_victory
+		set_temp_variable = {
+			eoanb_prestige_change = 25
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
+			set_country_flag = DEN_glorious_victory_flag
 			HLS = { transfer_state = 949 }
 			DEN = { end_puppet = HLS }
 			DEN = { remove_state_core = 949 }
 			HLS = { add_state_core = 949 }
-			HLS = {
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Friedrich von Augustenburg"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/HLS/Portrait_HLS_Friedrich_VIII.dds"
-					expire = "1950.1.1"
-					ideology = constit_monarch
-					traits = { }
-				}
-			}
 			HLS = { set_politics = { ruling_party = autocracy } }
 			HLS = { set_party_name = { ideology = autocracy name = HLS_autocracy_party_augustenburg } }
 			HLS = { inherit_technology = DEN }
@@ -2502,9 +2694,9 @@ country_event = {
 				}
 				949 = { remove_dynamic_modifier = { modifier = dynmod_PRS_SSW_holstein_supply } }
 			}
-			DEN = { add_war_support = -0.35 }
-			PRS = { add_war_support = -0.45 }
-			AUS = { add_war_support = -0.45 }
+			DEN = { add_war_support = -0.4 }
+			PRS = { add_war_support = -0.5 }
+			AUS = { add_war_support = -0.3 }
 			PRS = { country_event = { id = secschwar.72 } }
 			every_country = {
 				limit = {
@@ -2515,6 +2707,7 @@ country_event = {
 			}
 			HLS = { country_event = { days = 3 id = secschwar.74 } }
 			news_event = news.29
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
@@ -2534,6 +2727,10 @@ country_event = {
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_72
 		add_political_power = -10
+		set_temp_variable = {
+			eoanb_prestige_change = -25
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
 			PRS = { set_country_flag = eoanb_flag_stopgap_2_schleswig_war }
 		}
@@ -2557,7 +2754,16 @@ country_event = {
 				NOT = { tag = AUS }
 			}
 			add_political_power = 25
-			add_war_support = -0.15
+			add_war_support = -0.25
+		}
+		if = {
+			limit = {
+				tag = AUS
+			}
+			set_temp_variable = {
+				eoanb_prestige_change = -25
+			}
+			eoanb_change_prestige_score = yes
 		}
 	}
 }
@@ -2686,6 +2892,20 @@ country_event = {
 				}
 				HLS = { country_event = { id = saxonyforeign.4 } }
 			}
+			HLS = {
+				if = {
+					limit = {
+						owns_state = 58
+					}
+					58 = { add_core_of = HLS }
+				}
+				if = {
+					limit = {
+						owns_state = 949
+					}
+					949 = { add_core_of = HLS }
+				}
+			}
 		}
 	}
 }
@@ -2743,7 +2963,11 @@ country_event = {
 			custom_effect_tooltip = eoanb_tt_event_secschwar_76_gc
 		}
 		add_political_power = -50
-		add_war_support = -0.05
+		add_war_support = -0.15
+		set_temp_variable = {
+			eoanb_prestige_change = -25
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
 			DEN = { country_event = { id = secschwar.79 } }
 			if = {
@@ -2767,7 +2991,7 @@ country_event = {
 	id = secschwar.77
 	title = secschwar.77.t
 	desc = secschwar.77.d
-	picture = GFX_report_event_AUS_wien_1
+	picture = GFX_report_event_vienna_1
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2777,7 +3001,11 @@ country_event = {
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_77
 		add_political_power = -50
-		add_war_support = -0.05
+		add_war_support = -0.15
+		set_temp_variable = {
+			eoanb_prestige_change = -25
+		}
+		eoanb_change_prestige_score = yes
 	}
 }
 
@@ -2795,7 +3023,7 @@ country_event = {
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_78
 		add_political_power = -20
-		add_war_support = -0.1
+		add_war_support = -0.15
 	}
 }
 
@@ -2833,6 +3061,14 @@ country_event = {
 				PRS = { dismantle_faction = yes }
 			}
 			DEN = { country_event = { days = 5 id = secschwar.80 } }
+			if = {
+				limit = {
+					DEN = {
+						has_war_with = LUX
+					}
+				}
+				DEN = { white_peace = LUX }
+			}
 		}
 	}
 }
@@ -2851,7 +3087,7 @@ country_event = {
 		name = secschwar.80.a
 		ai_chance = { base = 100 }
 		add_political_power = 10
-		add_war_support = -0.05
+		add_war_support = -0.1
 		hidden_effect = {
 			if = {
 				limit = {
@@ -2967,22 +3203,17 @@ country_event = {
 		name = secschwar.84.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_71
+		complete_national_focus = DEN_focus_glorious_victory
+		set_temp_variable = {
+			eoanb_prestige_change = 25
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
+			set_country_flag = DEN_glorious_victory_flag
 			HLS = { transfer_state = 949 }
 			DEN = { end_puppet = HLS }
 			DEN = { remove_state_core = 949 }
 			HLS = { add_state_core = 949 }
-			HLS = {
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Friedrich von Augustenburg"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/HLS/Portrait_HLS_Friedrich_VIII.dds"
-					expire = "1950.1.1"
-					ideology = constit_monarch
-					traits = { }
-				}
-			}
 			HLS = { set_politics = { ruling_party = autocracy } }
 			HLS = { set_party_name = { ideology = autocracy name = HLS_autocracy_party_augustenburg } }
 			HLS = { inherit_technology = DEN }
@@ -2998,8 +3229,8 @@ country_event = {
 				}
 				949 = { remove_dynamic_modifier = { modifier = dynmod_PRS_SSW_holstein_supply } }
 			}
-			DEN = { add_war_support = -0.35 }
-			PRS = { add_war_support = -0.35 }
+			DEN = { add_war_support = -0.5 }
+			PRS = { add_war_support = -0.5 }
 			PRS = { country_event = { id = secschwar.85 } }
 			if = {
 				limit = {
@@ -3023,6 +3254,7 @@ country_event = {
 			}
 			HLS = { country_event = { days = 3 id = secschwar.87 } }
 			news_event = news.29
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
@@ -3067,7 +3299,7 @@ country_event = {
 				NOT = { tag = AUS }
 			}
 			add_political_power = 10
-			add_war_support = -0.1
+			add_war_support = -0.25
 		}
 		else_if = {
 			limit = {
@@ -3075,7 +3307,7 @@ country_event = {
 				has_global_flag = eoanb_flag_second_schleswig_war
 			}
 			add_political_power = -10
-			add_war_support = -0.35
+			add_war_support = -0.5
 		}
 		else_if = {
 			limit = {
@@ -3083,7 +3315,7 @@ country_event = {
 				has_global_flag = eoanb_flag_second_schleswig_war_gc
 			}
 			add_political_power = -10
-			add_war_support = -0.1
+			add_war_support = -0.25
 		}
 		hidden_effect = {
 			clr_global_flag = eoanb_flag_second_schleswig_war
@@ -3216,6 +3448,20 @@ country_event = {
 				}
 				HLS = { country_event = { id = saxonyforeign.4 } }
 			}
+			HLS = {
+				if = {
+					limit = {
+						owns_state = 58
+					}
+					58 = { add_core_of = HLS }
+				}
+				if = {
+					limit = {
+						owns_state = 949
+					}
+					949 = { add_core_of = HLS }
+				}
+			}
 		}
 	}
 }
@@ -3235,7 +3481,7 @@ country_event = {
 		name = secschwar.88.a
 		ai_chance = { base = 100 }
 		add_political_power = -50
-		add_war_support = -0.1
+		add_war_support = -0.5
 	}
 }
 
@@ -3331,7 +3577,13 @@ country_event = {
 		name = secschwar.92.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_92
+		complete_national_focus = DEN_focus_a_region_divided
+		set_temp_variable = {
+			eoanb_prestige_change = 10
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
+			set_country_flag = DEN_a_region_divided_flag
 			HLS = { transfer_state = 949 }
 			HLS = { transfer_state = 58 }
 			DEN = { end_puppet = HLS }
@@ -3339,17 +3591,6 @@ country_event = {
 			DEN = { remove_state_core = 58 }
 			HLS = { add_state_core = 949 }
 			HLS = { add_state_core = 58 }
-			HLS = {
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Friedrich von Augustenburg"
-					desc = "POLITICS_GENERIC_EOANB_DESC"
-					picture = "gfx/leaders/HLS/Portrait_HLS_Friedrich_VIII.dds"
-					expire = "1950.1.1"
-					ideology = constit_monarch
-					traits = { }
-				}
-			}
 			HLS = { set_politics = { ruling_party = autocracy } }
 			HLS = { set_party_name = { ideology = autocracy name = HLS_autocracy_party_augustenburg } }
 			HLS = { inherit_technology = DEN }
@@ -3365,8 +3606,8 @@ country_event = {
 				}
 				949 = { remove_dynamic_modifier = { modifier = dynmod_PRS_SSW_holstein_supply } }
 			}
-			DEN = { add_war_support = -0.35 }
-			PRS = { add_war_support = -0.35 }
+			DEN = { add_war_support = -0.5 }
+			PRS = { add_war_support = -0.5 }
 			PRS = { country_event = { id = secschwar.93 } }
 			if = {
 				limit = {
@@ -3390,6 +3631,7 @@ country_event = {
 			}
 			HLS = { country_event = { days = 3 id = secschwar.87 } }
 			news_event = news.30
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
@@ -3408,6 +3650,10 @@ country_event = {
 		name = secschwar.93.a
 		ai_chance = { base = 100 }
 		custom_effect_tooltip = eoanb_tt_event_secschwar_93
+		set_temp_variable = {
+			eoanb_prestige_change = -10
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
 			set_country_flag = eoanb_flag_stopgap_2_schleswig_war
 		}
@@ -3433,7 +3679,7 @@ country_event = {
 				NOT = { tag = AUS }
 			}
 			add_political_power = 10
-			add_war_support = -0.1
+			add_war_support = -0.25
 		}
 		else_if = {
 			limit = {
@@ -3441,7 +3687,11 @@ country_event = {
 				has_global_flag = eoanb_flag_second_schleswig_war
 			}
 			add_political_power = -10
-			add_war_support = -0.35
+			add_war_support = -0.3
+			set_temp_variable = {
+				eoanb_prestige_change = -10
+			}
+			eoanb_change_prestige_score = yes
 		}
 		else_if = {
 			limit = {
@@ -3449,7 +3699,11 @@ country_event = {
 				has_global_flag = eoanb_flag_second_schleswig_war_gc
 			}
 			add_political_power = -10
-			add_war_support = -0.1
+			add_war_support = -0.15
+			set_temp_variable = {
+				eoanb_prestige_change = -5
+			}
+			eoanb_change_prestige_score = yes
 		}
 		hidden_effect = {
 			clr_global_flag = eoanb_flag_second_schleswig_war
@@ -3472,6 +3726,10 @@ country_event = {
 		name = secschwar.95.a
 		ai_chance = { base = 100 }
 		add_popularity = { ideology = centrism popularity = 0.05 }
+		set_temp_variable = {
+			eoanb_prestige_change = -3
+		}
+		eoanb_change_prestige_score = yes
 		hidden_effect = {
 			DEN = { country_event = { days = 2 id = secschwar.96 } }
 		}
@@ -3585,12 +3843,12 @@ country_event = {
 			keep_unit_leaders = {
 				3601 3605 3607
 			}
-			if = {
-				limit = {
-					has_government = centrism
-				}
-				keep_political_leader = yes
-			}
+			#if = {
+			#	limit = {
+			#		has_government = centrism
+			#	}
+			#	keep_political_leader = yes
+			#}
 		}
 		DEN = { country_event = { id = secschwar.101 } }
 	}

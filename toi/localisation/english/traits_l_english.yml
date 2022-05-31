@@ -196,6 +196,7 @@
  seawolf_desc:0 "The Sea Wolf is particularly skilled in Convoy Raiding"
  superior_tactician:0 "Superior Tactician"
  superior_tactician_desc:0 "A master of Fleet Positioning."
+ financial_expert:0 "Financial Expert"
  old_guard:0 "Old Guard"
  old_guard_desc:0 "While not the most brilliant officer, he is unlikely to cause trouble."
  old_guard_navy:0 "Old Guard"
@@ -582,6 +583,25 @@
  naval_lineage_desc:0 "§LIt takes 3 years to build a ship. It takes 300 years to build a tradition.§!"
  navy_media_personality:0 "Media Personality"
  navy_media_personality_desc:0 "§LThis Admiral has a knack for giving the right quote to the right person.§!"
+ trait_vice_president:0 "Vice President"
+ trait_secretary_of_state:0 "Secretary of State"
+ trait_secretary_of_the_treasury:0 "Secretary of the Treasury"
+ trait_secretary_of_war:0 "Secretary of War"
+ trait_secretary_of_war_corrupt:0 "Secretary of War"
+ trait_secretary_of_the_navy:0 "Secretary of the Navy"
+ trait_attorney_general:0 "Attorney General"
+ trait_secretary_of_the_interior:0 "Secretary of the Interior"
+ trait_secretary_of_agriculture:0 "Secretary of Agriculture"
+ trait_secretary_of_commerce:0 "Secretary of Commerce"
+ trait_secretary_of_labor:0 "Secretary of Labor"
+ trait_secretary_of_health_and_human_services:0 "Secretary of Health and Human Services"
+ trait_secretary_of_housing_and_urban_development:0 "Secretary of Housing and Urban Development"
+ trait_secretary_of_transportation:0 "Secretary of Transportation"
+ trait_secretary_of_energy:0 "Secretary of Energy"
+ trait_secretary_of_veterans_affairs:0 "Secretary of Veterans' Affairs"
+ trait_secretary_of_homeland_security:0 "Secretary of Homeland Security"
+ trait_chief_of_staff:0 "Chief of Staff"
+ trait_chief_justice:0 "Chief Justice"
 
  #NSB MISSING LOC
 
@@ -697,6 +717,7 @@
   
  hos_trait_partially_paralyzed:0 "Partially Paralyzed"
  hos_trait_colonial_monarch:0 "Colonial Monarch"
+ hos_trait_unifying_figure:0 "Unifying Figure"
  hawk:0 "Political Hawk"
 
  #HOL General traits
@@ -708,6 +729,8 @@
  #Italian leader traits
  ITA_trait_Iron_Baron:0 "Iron Baron"
  ITA_trait_Iron_Baron_desc:0 "His private life and public career were marked by the utmost integrity, and by a rigid austerity which earned him the name of the Iron Baron. Along with this Ricasoli also created the recipe for Chianti Wine which is produced by a family named firm."
+ ITA_trait_Popular_Leader:0 "Popular Leader"
+ ITA_trait_Popular_Leader_desc:0 "Despite radicalism seeing a turn in public opinion against the autocratic rulers in Italy, Leopold II has long been regarded as a popular leader. A liberal reformer himself, Leopold II allowed the creation of a new constitution before being forced by the Austrians to remove it and return to full autocratic rule."
  
  #Russian Leader traits
  RUS_trait_Staunch_Authoritarian:0 "Staunch Authoritarian"
@@ -722,7 +745,7 @@
  eoanb_french_general:0 "French General"
  eoanb_mexican_general:0 "Mexican General"
 
- cabinet_crisis:0 "Disfunctional Cabinet"
+ cabinet_crisis:0 "Dysfunctional Cabinet"
  unpopular_monarch:0 "Unpopular Monarch"
  socialite_connections:0 "Socialite Connections"
  inexperienced_monarch:0 "Inexperienced Monarch"
@@ -740,6 +763,9 @@
 
  eoanb_trait_ruler_infertile:0 "Infertile\n  §W- Heir Chance:§! §R-85.00%§!"
  eoanb_trait_ruler_sickly:0 "Sickly"
+ eoanb_trait_ruler_autocract_2:0 "Autocratic Ruler"
+ trait_house_yamato:0 "House Yamato"
+ trait_restored_emperor:0 "Restored Emperor"
  trait_hitosubashi_party:0 "Hitosubashi Loyalist"
  trait_hitosubashi_party_desc:0 ""
  trait_kii_party:0 "Kii Loyalist"
@@ -748,7 +774,8 @@
  trait_bakumatsu_party_desc:0 ""
  trait_sonno_joi_party:0 "Sonno Joi Loyalist"
  trait_sonno_joi_party_desc:0 ""
- 
+ trait_chao_oun_kham: "Laotian Nationalist"
+ trait_chao_oun_kham_desc: ""
  age_aged:0 "Aged"
  age_aged_desc:0 ""
  age_experienced:0 "Experienced"
@@ -758,3 +785,6 @@
  age_young:0 "Young"
  age_baby_faced:0 "Baby Faced"
  age_old:0 "Old"
+ army_chief_entrenchment_1:0 "Entrenchment Specialist"
+ army_chief_entrenchment_2:0 "Entrenchment Expert"
+ army_chief_entrenchment_3:0 "Entrenchment Genius"

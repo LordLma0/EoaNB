@@ -93,6 +93,7 @@
 		gw_artillery = 1
 		hand_revolvers = 1
 		socket_bayonet = 1
+		tech_infantry_percussion_cap = 1
 		rifle_equipment1 = 1
 		civil_army_cloth = 1
 		iron_railways = 1
@@ -113,14 +114,14 @@
 	create_country_leader = {
 		name = "Francis Pierpont"
 		desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-		picture = "Portrait_USA_John_Bell.dds"
+		picture = GFX_portrait_USA_john_bell
 		expire = "1947.1.1"
 		ideology = conserv_liberal
 	}
 	create_country_leader = {
 		name = "Waitman Willey"
 		desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-		picture = "Portrait_USA_Charles_Sumner.dds"
+		picture = GFX_portrait_USA_charles_sumner
 		expire = "1947.1.1"
 		ideology = liberal_social
 	}

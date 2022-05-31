@@ -15,11 +15,11 @@ state = {
 	history = {
 		buildings = {
 		}
-		owner = BKM
-		add_core_of = BKM
+		owner = LUB
+		add_core_of = LUB
 
-					add_to_array = { state_culture_array = 331 } 
-		add_to_array = { state_culture_array = 314 } 
+					add_to_array = { state_culture_array = 314 } 
+		add_to_array = { state_culture_array = 331 } 
 		add_to_array = { state_culture_array = 316 } 
 
 					add_to_array = { state_culture_array_num = 0.59 }

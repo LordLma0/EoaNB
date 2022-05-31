@@ -7,7 +7,7 @@
  ETH_gift_por:0 "Abyssinian-Portugese Friendship"
  
  ETH_crush_the_oromo:0 "Oromo Militias"
- ETH_crush_the_oromo_desc:0 "§YAbyssinian-Oromo Tensions:§!\nThe Abyssinian ruler §gTewodros II§! has an ambition to unite the old §gEthiopian Empire§!. This ambition has resulted in tensions between the Abyssinians and Oromo people. Now it is up to Abyssinia to decide how to go about this ambition by conquest or by diplomacy.\n\n§YThe Oromo People:§!\nThe Oromo people live within Abyssinia to the south-west. Tensions have escalated between the oromo people and Abyssinia, any more §RDetrimental Colonial Impacts§! may have lasting effects. The oromo people have been fighting for independance from their Abyssinian overlords."
+ ETH_crush_the_oromo_desc:0 "§YAbyssinian-Oromo Tensions:§!\nThe Abyssinian ruler §gTewodros II§! has an ambition to unite the old §gEthiopian Empire§!. This ambition has resulted in tensions between the Abyssinians and Oromo people. Now it is up to Abyssinia to decide how to go about this ambition by conquest or by diplomacy.\n\n§YThe Oromo People:§!\nThe Oromo people live within Abyssinia to the south-west. Tensions have escalated between the oromo people and Abyssinia, any more §RDetrimental Impacts§! may have lasting effects. The oromo people have been fighting for independance from their Abyssinian overlords."
  
  ETH_push_for_oromo_rights:0 "Oromo Cooperation"
  ETH_push_for_oromo_rights_desc:0 "Maybe conflict can be avoided by pushing for limited rights among the oromo people. The Ethiopian Empire can be integrated more peacefully."
@@ -15,7 +15,7 @@
  
  
  ETH_global_diplomacy_category:0 "Colonial Company Diplomacy"
- ETH_global_diplomacy_category_desc:0 ""§YDetrimental Colonial Impact:§!\n§WIf this gague increases it will lead to§! §RControversial Events§! §Wwith the§! §YNatives§!.\n\n§YColonial Company Partnership:§!\n§WWhile the Colonial Company does not have direct control over us, they exert influnce over our nation and contribute towards§! §RDetrimental Colonial Impact§!. \n\n§YImpact of Colonialism:§!\n§gRacial supremacy and ideas similar to the "White Man's Burden" have plagued the judgement of officials, advisors, companies, or politicians working within colonies or influenced nations. Often this leads to corruption within the local government and the marginalized group being ostracized from their politics or given second class citizenship. In some affected govermnents, acts of violence or discrimination are done against these marginalized groups.\n\nOver the years these actions have sowed deep divides between the ruling and marginalized classes within society. Acts to undo the Detrimental Impacts of Colonialism should be made to prevent further unintended consequences.§!""
+ ETH_global_diplomacy_category_desc:0 "§YDetrimental Impact:§!\n§WIf this gague increases it will lead to§! §RControversial Events§! §Wwith the§! §YNatives§!.\n\n§YColonial Company Partnership:§!\n§WWhile the Colonial Company does not have direct control over us, they exert influnce over our nation and contribute towards§! §RDetrimental Impact§!. \n\n§YImpact of Colonialism:§!\n§gIn a world often defined by strength and power, there are often cases where entire populations may be subject to marginalization, discrimination, or outright persecution. 'Racial Supremacy', 'Civilizing of Peoples,' and ostracization of disadvantaged groups will may often reap short-term gains that secure a region's stability and prosperity for those in charge. However, while actions last days, memories last generations. and §YDetrimental Impact§! may lead to future unrest and other unintended consequences for years to come.§!"
  ETH_open_trading_post_tooltip:0 "§GThis will open our ports to §!§YForeign Merchants§!§G.§!\n\n"
  ETH_PRS_Merchants:0 "Has §YPrussian Merchants§!"
  ETH_ITA_Merchants:0 "Has §YItalian Merchants§!"
@@ -180,6 +180,16 @@
  ETH_unite_ethiopia_eritrea_neighbor_trigger:0 "Any Owned State: neighbors §Y[550.GetName]§!"
  ETH_unite_ethiopia_eritrea_effect:0 "§Y[ROOT.GetName]§! declares war on §Y[550.Owner.GetName]§!"
  
+ ETH_unite_ethiopia_kaffa:0 "Conquer [1302.GetName]"
+ ETH_unite_ethiopia_kaffa_trigger:0 "Has a claim on §Y[1302.GetName]§!"
+ ETH_unite_ethiopia_kaffa_neighbor_trigger:0 "Any Owned State: neighbors §Y[1302.GetName]§!"
+ ETH_unite_ethiopia_kaffa_effect:0 "§Y[ROOT.GetName]§! declares war on §Y[1302.Owner.GetName]§!"
+ 
+ ETH_unite_ethiopia_afder:0 "Conquer [1300.GetName]"
+ ETH_unite_ethiopia_afder_trigger:0 "Has a claim on §Y[1300.GetName]§!"
+ ETH_unite_ethiopia_afder_neighbor_trigger:0 "Any Owned State: neighbors §Y[1300.GetName]§!"
+ ETH_unite_ethiopia_afder_effect:0 "§Y[ROOT.GetName]§! declares war on §Y[1300.Owner.GetName]§!"
+ 
  
  
  ETH_oromo_militia_crushed.1.t:0 "Gondor-Oromo Militias Neutralized!"
@@ -260,10 +270,10 @@
  ETH_raid_damage_mission:0 "Caliphate Raid Damage"
  ETH_raid_damage_mission_desc:0 "As the conflict goes on, the raids will cause higher infrastructure damage to our land."
  
- AFR_detrimental_colonial_impact_greater_10:0 "§YDetrimental Colonial Impact§! greater than §Y10§!"
- AFR_detrimental_colonial_impact_greater_13:0 "§YDetrimental Colonial Impact§! greater than §Y13§!"
- AFR_detrimental_colonial_impact_greater_15:0 "§YDetrimental Colonial Impact§! greater than §Y15§!"
- AFR_detrimental_colonial_impact_greater_16:0 "§YDetrimental Colonial Impact§! greater than §Y16§!"
+ AFR_detrimental_colonial_impact_greater_10:0 "§YDetrimental Impact§! greater than §Y10§!"
+ AFR_detrimental_colonial_impact_greater_13:0 "§YDetrimental Impact§! greater than §Y13§!"
+ AFR_detrimental_colonial_impact_greater_15:0 "§YDetrimental Impact§! greater than §Y15§!"
+ AFR_detrimental_colonial_impact_greater_16:0 "§YDetrimental Impact§! greater than §Y16§!"
  
  ETH_construction_in_progress:0 "Does not have a §YConstruction Project§!"
  
@@ -814,3 +824,40 @@
  ethiopia_islamic_raid_defender.3.a:0 "May the Lord damn them to hell!"
  ethiopia_islamic_raid_defender.4.t:0 "Islamic Raid Ends In Stalemate!"
  ethiopia_islamic_raid_defender.4.a:0 "We must prepare better!"
+ 
+ #ethiopia.1.t:0 "[Root.GetName] adopts Protestantism"
+#ethiopia.1.d:0 ""
+#ethiopia.1.a:0 "Ok"
+#ethiopia.2.t:0 "[Root.GetName] adopts Catholicism"
+#ethiopia.2.d:0 ""
+#ethiopia.2.a:0 "Ok"
+#ethiopia.3.t:0 "[From.GetName] wants to buy §YEritrea§!"
+ ethiopia.6.t:0 "[From.GetName] wants a British Company"
+ ethiopia.6.d:0 "[From.GetName] has approached us asking us to invest a [Root.GetAdjective] company into their nation"
+ ethiopia.6.a:0 "A shipyard company"
+ ethiopia.6.b:0 "A rubber plantation"
+ ethiopia.6.c:0 "A cotton plantation"
+ ethiopia.7.t:0 "[From.GetName] Decides to invest in a Shipyard Company"
+ ethiopia.7.d:0 "[From.GetName] has approached us asking us to invest a [Root.GetAdjective]  company into their nation"
+ ethiopia.7.a:0 "A shipyard company"
+ ethiopia.7.b:0 "A rubber plantation"
+ ethiopia.7.c:0 "A cotton plantation"
+#ETH_anglo_ethiopian_shipyard_company:0 "Anglo-[ETH.GetAdjective] Shipyard Company"
+#ETH_anglo_ethiopian_shipyard_company_profits:0 "Anglo-[ETH.GetAdjective] Shipyard Company Profits"
+#ETH_anglo_ethiopian_rubber_company:0 "Anglo-[ETH.GetAdjective] Rubber Company"
+#ETH_anglo_ethiopian_cotton_company:0 "Anglo-[ETH.GetAdjective] Cotton Company"
+#ETH_portugese_ethiopian_shipyard_company:0 "[POR.GetAdjective]-[ETH.GetAdjective] Shipyard Company"
+#ETH_portugese_ethiopian_shipyard_company_profits:0 "[POR.GetAdjective]-[ETH.GetAdjective] Shipyard Company Profits"
+#ETH_portugese_ethiopian_logging_company:0 "[POR.GetAdjective]-[ETH.GetAdjective] Logging Company"
+#ETH_portugese_ethiopian_cotton_company:0 "[POR.GetAdjective]-[ETH.GetAdjective] Cotton Company"
+#ETH_idea_isolated_villages:0 "Isolated Villages"
+#ETH_idea_isolated_villages_2:0 "Isolated Villages"
+#ETH_idea_tewodros_social_reforms:0 "Tewodros Social Reforms"
+#armed_peasants:0 "Armed Peasants"
+#ETH_EGY_alliance:0 "Abyssinian-Egypt Alliance"
+#ETH_borders_somalia:0 "§YAny Owned State§! borders §YSomalia§!"
+#ETH_idea_internal_unrest:0 "Internal Unrest"
+#ETH_idea_internal_unrest_2:0 "Internal Unrest"
+#ETH_idea_northern_oromo_militias:0 "Northern Oromo Militias"
+#ETH_idea_northern_oromo_militias_2:0 "Northern Oromo Militias"
+#ETH_idea_northern_oromo_militias_3:0 "Northern Oromo Militias"

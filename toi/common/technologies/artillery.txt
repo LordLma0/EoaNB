@@ -14,9 +14,10 @@ technologies = {
 			cannon_artillery
 			cannon_artillery_support
 			cannon_artillery_towed
+			cannon_artillery_towed_support
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1840
 		folder = {
 			name = artillery_folder
@@ -97,12 +98,25 @@ technologies = {
 		enable_equipments = {
 			cannon_equipment_1
 		}
+		enable_subunits = {
+			siege_artillery
+			siege_artillery_support
+			siege_artillery_towed
+		}
 
-		research_cost = 1
-		start_year = 1860
+		research_cost = 0.1
+		start_year = 1850
 		folder = {
 			name = artillery_folder
-			position = { x = 0 y = 4}
+			position = { x = 7 y = 2}
+		}
+		
+		dependencies={
+			dry_puddling_process = 1
+		}
+		path = {
+			leads_to_tech = siege_gun
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -129,13 +143,14 @@ technologies = {
 			howitzer_artillery
 			howitzer_artillery_support
 			howitzer_artillery_towed
+			howitzer_artillery_towed_support
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 2}
+			position = { x = -2 y = 2}
 		}
 
 		path = {
@@ -178,11 +193,11 @@ technologies = {
 			howitzer_equipment_1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 4}
+			position = { x = -2 y = 4}
 		}
 
 		path = {
@@ -206,11 +221,11 @@ technologies = {
 
 	heavier_design = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 6}
+			position = { x = -2 y = 6}
 		}
 
 		category_artillery = {
@@ -238,11 +253,11 @@ technologies = {
 
 	anti_fortification = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 8}
+			position = { x = -2 y = 8}
 		}
 
 		category_artillery = {
@@ -274,11 +289,11 @@ technologies = {
 			howitzer_equipment_2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 12}
+			position = { x = -2 y = 12}
 		}
 
 		path = {
@@ -305,11 +320,11 @@ technologies = {
 			howitzer_equipment_3
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1890
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 16}
+			position = { x = -2 y = 16}
 		}
 
 		path = {
@@ -337,11 +352,11 @@ technologies = {
 			rifled_cannon_equipment_0
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
-			position = { x = 3 y = 2}
+			position = { x = 2 y = 2}
 		}
 
 		path = {
@@ -364,20 +379,15 @@ technologies = {
 			rifled_cannon_equipment_1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = artillery_folder
-			position = { x = 3 y = 4}
+			position = { x = 2 y = 4}
 		}
 
 		path = {
 			leads_to_tech = studded_shells
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = siege_gun
 			research_cost_coeff = 1
 		}
 
@@ -397,11 +407,11 @@ technologies = {
 
 	studded_shells = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = artillery_folder
-			position = { x = 3 y = 6}
+			position = { x = 2 y = 6}
 		}
 
 		path = {
@@ -434,11 +444,11 @@ technologies = {
 			rifled_cannon_equipment_2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = artillery_folder
-			position = { x = 3 y = 8}
+			position = { x = 2 y = 8}
 		}
 
 		path = {
@@ -462,11 +472,11 @@ technologies = {
 
 	breech_blocks = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = artillery_folder
-			position = { x = 3 y = 10}
+			position = { x = 2 y = 10}
 		}
 
 		category_artillery = {
@@ -497,11 +507,11 @@ technologies = {
 	}
 	hydraulic_recoil_mechanism = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1890
 		folder = {
 			name = artillery_folder
-			position = { x = 3 y = 16}
+			position = { x = 2 y = 16}
 		}
 
 		category_artillery = {
@@ -536,11 +546,11 @@ technologies = {
 			rifled_cannon_equipment_3
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1895
 		folder = {
 			name = artillery_folder
-			position = { x = 3 y = 18}
+			position = { x = 2 y = 18}
 		}
 
 		path = {
@@ -563,11 +573,11 @@ technologies = {
 	}
 	lining-plane_sights = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1895
 		folder = {
 			name = artillery_folder
-			position = { x = 0 y = 18}
+			position = { x = -1 y = 18}
 		}
 
 		category_artillery = {
@@ -595,14 +605,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_0
-			howitzer_equipment_4
-		}
-		
-		enable_subunits = {
-			artillery_brigade
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1900
 		folder = {
 			name = artillery_folder
@@ -631,10 +636,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_1
-			howitzer_equipment_5
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1905
 		folder = {
 			name = artillery_folder
@@ -658,10 +662,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_2
-			howitzer_equipment_6
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1910
 		folder = {
 			name = artillery_folder
@@ -683,7 +686,7 @@ technologies = {
 	}
 	predicted_fire_sights = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1915
 		folder = {
 			name = artillery_folder
@@ -703,6 +706,10 @@ technologies = {
 		 	leads_to_tech = anti_air_1
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = anti_tank_0
+			research_cost_coeff = 1
+		}
 
 		categories = {
 			artillery
@@ -716,10 +723,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_3
-			howitzer_equipment_7
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1920
 		folder = {
 			name = artillery_folder
@@ -743,10 +749,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_4
-			howitzer_equipment_8
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1925
 		folder = {
 			name = artillery_folder
@@ -770,10 +775,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_5
-			howitzer_equipment_9
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = artillery_folder
@@ -795,7 +799,7 @@ technologies = {
 	}
 	artillery_muzzle_breaks = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = artillery_folder
@@ -823,10 +827,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_6
-			howitzer_equipment_9
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1942
 		folder = {
 			name = artillery_folder
@@ -850,10 +853,9 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_7
-			howitzer_equipment_10
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = artillery_folder
@@ -872,6 +874,365 @@ technologies = {
 			factor = 20 modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
 		}
 	}
+	
+	anti_tank_0 = {
+
+		enable_equipments = {
+			anti_tank_equipment_0
+		}
+
+		research_cost = 0.1
+		start_year = 1920
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 28}
+		}
+
+		path = {
+			leads_to_tech = anti_tank_1
+			research_cost_coeff = 1
+		}
+		dependencies={
+			tech_infantry_anti_tank_rifle = 1
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+		}
+	}
+	anti_tank_1 = {
+
+		enable_equipments = {
+			anti_tank_equipment_1
+		}
+
+		research_cost = 0.1
+		start_year = 1930
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 32}
+		}
+
+		path = {
+			leads_to_tech = anti_tank_2
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+		}
+	}
+	anti_tank_2 = {
+
+		enable_equipments = {
+			anti_tank_equipment_2
+		}
+
+		research_cost = 0.1
+		start_year = 1935
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 34}
+		}
+
+		path = {
+			leads_to_tech = heat_shells
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+		}
+	}
+	heat_shells = {
+
+		cannon_artillery_support = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		cannon_artillery = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		cannon_artillery_towed = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		mot_anti_tank_brigade = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		light_tank_destroyer_brigade = {
+			hard_attack = 0.15
+			ap_attack = 0.2
+		}
+		medium_tank_destroyer_brigade = {
+			hard_attack = 0.15
+			ap_attack = 0.2
+		}
+		heavy_tank_destroyer_brigade = {
+			hard_attack = 0.15
+			ap_attack = 0.2
+		}
+		super_heavy_tank_destroyer_brigade = {
+			hard_attack = 0.15
+			ap_attack = 0.2
+		}
+		modern_tank_destroyer_brigade = {
+			hard_attack = 0.15
+			ap_attack = 0.2
+		}
+
+		research_cost = 0.1
+		start_year = 1940
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 36}
+		}
+
+		path = {
+			leads_to_tech = anti_tank_3
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+		}
+	}
+	anti_tank_3 = {
+
+		enable_equipments = {
+			anti_tank_equipment_3
+		}
+
+		research_cost = 0.1
+		start_year = 1942
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 38}
+		}
+
+		path = {
+			leads_to_tech = anti_tank_4
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+		}
+	}
+	anti_tank_4 = {
+
+		enable_equipments = {
+			anti_tank_equipment_4
+		}
+
+		research_cost = 0.1
+		start_year = 1945
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 40}
+		}
+
+		path = {
+			leads_to_tech = anti_tank_5
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+		}
+	}
+	anti_tank_5 = {
+
+		enable_equipments = {
+			anti_tank_equipment_5
+		}
+
+		research_cost = 0.1
+		start_year = 1960
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 46}
+		}
+
+		# path = {
+			# leads_to_tech = heat_shells
+			# research_cost_coeff = 1
+		# }
+
+		categories = {
+			artillery
+			cat_anti_tank
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+		}
+	}
 
 	siege_gun = {
 
@@ -882,15 +1243,9 @@ technologies = {
 		dependencies = {
 			horse_artillery = 1
 		}
-		
-		enable_subunits = {
-			siege_artillery
-			siege_artillery_support
-			siege_artillery_towed
-		}
 
-		research_cost = 1
-		start_year = 1865
+		research_cost = 0.1
+		start_year = 1850
 		folder = {
 			name = artillery_folder
 			position = { x = 7 y = 6}
@@ -899,6 +1254,270 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		path = {
+			leads_to_tech = railway_gun
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = siege_gun_2_tech
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes 
+				 
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+			modifier = {
+				factor = 0
+				date < 1860.1.1
+				has_war = no
+			}
+		}
+	}
+	siege_gun_2_tech = {
+
+		enable_equipments = {
+			siege_gun_1
+		}
+
+		research_cost = 0.1
+		start_year = 1880
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 12}
+		}
+
+		categories = {
+			artillery
+		}
+		
+		path = {
+			leads_to_tech = siege_gun_3_tech
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes 
+				 
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+			modifier = {
+				factor = 0
+				date < 1860.1.1
+				has_war = no
+			}
+		}
+	}
+	siege_gun_3_tech = {
+
+		enable_equipments = {
+			siege_gun_2
+		}
+
+		research_cost = 0.1
+		start_year = 1890
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 16}
+		}
+
+		categories = {
+			artillery
+		}
+		
+		path = {
+			leads_to_tech = siege_gun_4_tech
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes 
+				 
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+			modifier = {
+				factor = 0
+				date < 1860.1.1
+				has_war = no
+			}
+		}
+	}
+	siege_gun_4_tech = {
+
+		enable_equipments = {
+			siege_gun_3
+		}
+
+		research_cost = 0.1
+		start_year = 1900
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 20}
+		}
+
+		categories = {
+			artillery
+		}
+		
+		path = {
+			leads_to_tech = siege_gun_5_tech
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes 
+				 
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+			modifier = {
+				factor = 0
+				date < 1860.1.1
+				has_war = no
+			}
+		}
+	}
+	siege_gun_5_tech = {
+
+		enable_equipments = {
+			siege_gun_4
+		}
+
+		research_cost = 0.1
+		start_year = 1910
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 24}
+		}
+
+		categories = {
+			artillery
+		}
+		
+		path = {
+			leads_to_tech = siege_gun_6_tech
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 20 
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes 
+				 
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
+			modifier = {
+				factor = 0
+				date < 1860.1.1
+				has_war = no
+			}
+		}
+	}
+	siege_gun_6_tech = {
+
+		enable_equipments = {
+			siege_gun_5
+		}
+
+		research_cost = 0.1
+		start_year = 1925
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 32}
+		}
+
+		categories = {
+			artillery
+		}
+		
+		# path = {
+			# leads_to_tech = siege_gun_3
+			# research_cost_coeff = 1
+		# }
 
 		ai_will_do = {
 			factor = 20 
@@ -934,14 +1553,14 @@ technologies = {
 			railway_gun_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = artillery_folder
 			position = { x = 10 y = 12 }
 		}
 		dependencies = {
-			1855_train = 1
+			train_1855 = 1
 		}
 		
 		categories = {
@@ -959,7 +1578,7 @@ technologies = {
 
 			modifier = {
 				OR = {
-					TAG = GER
+					TAG = PRS
 					tag = SOV
 				}
 				factor = 1.5
@@ -973,7 +1592,7 @@ technologies = {
 			rocket_artillery_equipment_0
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1840
 		folder = {
 			name = artillery_folder
@@ -991,7 +1610,26 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 } modifier = { factor = 0.5 is_major = yes has_war = no } modifier = { factor = 0.25 is_major = no has_war = no } modifier = { factor = 1.5 has_war = yes }
+			factor = 20
+			modifier = { 
+				factor = 0 
+				afr_is_tribal = yes  
+				date < 1875.1.1 
+			} 
+			modifier = { 
+				factor = 0.5 
+				is_major = yes 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 0.25 
+				is_major = no 
+				has_war = no 
+			} 
+			modifier = { 
+				factor = 1.5 
+				has_war = yes 
+			}
 		}
 	}
 
@@ -1001,7 +1639,7 @@ technologies = {
 			rocket_artillery_equipment_1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = artillery_folder
@@ -1034,7 +1672,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1865
 
@@ -1079,9 +1717,9 @@ technologies = {
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
-		start_year = 1865
+		start_year = 1875
 
 		folder = {
 			name = artillery_folder
@@ -1103,7 +1741,7 @@ technologies = {
 
 			modifier = {
 				factor = 0
-				date < 1865.1.1
+				date < 1875.1.1
 				has_war = no
 			}
 			
@@ -1141,7 +1779,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 0.2
 
 		start_year = 1940
 		
@@ -1183,7 +1821,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1942
 		
@@ -1230,7 +1868,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1945
 		
@@ -1273,7 +1911,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1955
 		
@@ -1319,7 +1957,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1960
 		
@@ -1362,7 +2000,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1965
 		
@@ -1405,7 +2043,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1975
 		
@@ -1448,7 +2086,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1990
 		
@@ -1491,7 +2129,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2000
 		
@@ -1534,7 +2172,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2015
 		
@@ -1577,7 +2215,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2025
 		
@@ -1620,7 +2258,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2035
 		
@@ -1658,7 +2296,7 @@ technologies = {
 		#	soft_attack = 0.15
 		#}
 
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 2050
 		
@@ -1691,8 +2329,12 @@ technologies = {
 			anti_air
 			anti_air_brigade
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 1
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1920
 		folder = {
 			name = artillery_folder
@@ -1737,8 +2379,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_1
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 2
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1930
 		folder = {
 			name = artillery_folder
@@ -1784,7 +2430,7 @@ technologies = {
 			anti_air_equipment_2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1935
 		folder = {
 			name = artillery_folder
@@ -1843,7 +2489,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 0.1
 
 		start_year = 1940
 		
@@ -1878,8 +2524,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_3
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 4
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1942
 		folder = {
 			name = artillery_folder
@@ -1928,7 +2578,7 @@ technologies = {
 			anti_air_equipment_4
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = artillery_folder
@@ -1973,8 +2623,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_5
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 5
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1955
 		folder = {
 			name = artillery_folder
@@ -2019,8 +2673,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_6
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 6
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1965
 		folder = {
 			name = artillery_folder
@@ -2065,8 +2723,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_7
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 7
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1970
 		folder = {
 			name = artillery_folder
@@ -2111,8 +2773,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_8
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 8
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1980
 		folder = {
 			name = artillery_folder
@@ -2157,8 +2823,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_9
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 9
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1995
 		folder = {
 			name = artillery_folder
@@ -2203,8 +2873,12 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_10
 		}
+		enable_building = {
+			building = anti_air_building
+			level = 10
+		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2010
 		folder = {
 			name = artillery_folder
@@ -2250,7 +2924,7 @@ technologies = {
 			anti_air_equipment_11
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2025
 		folder = {
 			name = artillery_folder
@@ -2296,7 +2970,7 @@ technologies = {
 			anti_air_equipment_12
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2040
 		folder = {
 			name = artillery_folder

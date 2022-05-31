@@ -6,7 +6,7 @@ state = {
 	
 	resources = { 
 		iron = 1
-		wood = 3
+		wood = 2
 	}
 
 	provinces = {
@@ -21,7 +21,7 @@ state = {
 			infrastructure = 5
 			industrial_complex = 1
 			6583 = {
-				bunker = 2
+				bunker = 2 #Bundesfestung Luxemburg
 			}
 		}
 		
@@ -29,7 +29,7 @@ state = {
 		
 		add_to_array = { state_culture_array = 8 } # Luxemburgish
 		add_to_array = { state_culture_array_num = 0.88 }
-		add_to_array = { state_culture_array = 32 } # Walloon
+		add_to_array = { state_culture_array = 35 } # Walloon
 		add_to_array = { state_culture_array_num = 0.12 }
 	
 		add_to_array = { state_religion_array = 2 } # Catholic		

@@ -1,109 +1,110 @@
 technologies = {
+	# Years
+		@1700 = -1
+		@1800 = 2
+		@1820 = 5
+		@1840 = 8
+		@1845 = 11
+		@1850 = 14
+		@1855 = 17
+		@1860 =	20
+		@1862 = 22
+		@1864 = 24
+		@1865 = 25
+		@1866 = 27
+		@1868 = 30
+		@1870 = 32
+		@1872 = 34
+		@1874 = 36
+		@1875 = 37
+		@1876 = 38
+		@1878 = 40
+		@1880 = 42
+		@1882 = 44
+		@1885 = 46
+		@1887 = 48
+		@1890 = 50
+		@1892 = 52
+		@1893 = 54
+		@1895 = 56
+		@1898 = 58
+		@1900 = 60
+		@1902 = 62
+		@1905 = 64
+		@1909 = 66
+		@1912 = 68
+		@1914 = 70
+		@1915 = 72
+		@1916 = 74
+		@1917 = 76
+		@1918 = 78
+		@1920 = 80
+		@1924 = 82
+		@1930 = 84
+		@1936 = 86
+		@1938 = 88
+		@1939 = 90
+		@1940 = 92
+		@1941 = 94
+		@1942 = 96
+		@1943 = 98
+		@1944 = 100
+		@1945 = 102
+		@1946 = 104
+		@1947 = 106
+		@1950 = 108
+		@1952 = 110
+		@1955 = 112
+		@1956 = 114
+		@1960 = 116
+		@1966 = 118
+		@1972 = 120
+		@1975 = 122
+		@1981 = 124
+		@1987 = 126
+		@1990 = 128
+		@1993 = 130
+		@1997 = 132
+		@2000 = 134
+		@2006 = 136
+		@2010 = 138
+		@2015 = 140
+		@2020 = 142
+		@2025 = 144
+		@2028 = 146
+		@2030 = 148
+		@2035 = 150
+		@2038 = 152
+		@2040 = 154
+		@2044 = 156
+		@2048 = 158
+		@2050 = 160
+		@2054 = 162
+		@2056 = 164
+		@2060 = 166
 
-	#Years
-	@1840 = 2
-	@1845 = 6
-	@1850 = 10
-	@1855 = 12
-	@1860 =	14
-	@1862 = 16
-	@1864 = 18
-	@1865 = 20
-	@1868 = 22
-	@1870 = 24
-	@1872 = 26
-	@1874 = 28
-	@1875 = 30
-	@1876 = 32
-	@1878 = 34
-	@1880 = 36
-	@1882 = 38
-	@1885 = 40
-	@1887 = 42
-	@1890 = 44
-	@1892 = 46
-	@1893 = 48
-	@1895 = 50
-	@1898 = 52
-	@1900 = 54
-	@1902 = 56
-	@1905 = 58
-	@1909 = 60
-	@1912 = 62
-	@1914 = 64
-	@1915 = 66
-	@1916 = 68
-	@1917 = 70
-	@1918 = 72
-	@1920 = 74
-	@1924 = 76
-	@1930 = 78
-	@1936 = 80
-	@1938 = 82
-	@1939 = 84
-	@1940 = 86
-	@1941 = 88
-	@1942 = 90
-	@1943 = 92
-	@1944 = 94
-	@1945 = 96
-	@1946 = 98
-	@1947 = 100
-	@1950 = 102
-	@1952 = 104
-	@1955 = 106
-	@1956 = 108
-	@1960 = 110
-	@1966 = 112
-	@1972 = 114
-	@1975 = 116
-	@1981 = 118
-	@1987 = 120
-	@1990 = 122
-	@1993 = 124
-	@1997 = 126
-	@2000 = 128
-	@2006 = 130
-	@2010 = 132
-	@2015 = 134
-	@2020 = 136
-	@2025 = 138
-	@2028 = 140
-	@2030 = 142
-	@2035 = 144
-	@2038 = 146
-	@2040 = 148
-	@2044 = 150
-	@2048 = 152
-	@2050 = 154
-	@2054 = 156
-	@2056 = 158
-	@2060 = 160
-	
-	#General Y-Level Labeling
-	#-2   -   Secondary Infantry Weapons
-	#0    -   Rifles Development
-	#2    -   Rifle Technology
-	#4    -   Infantry Armament
-	#6    -   Machine Guns
-	#10   -   Uniforms
-	#12   -   Infantry Protection
-	#14   -   Additional Equipment
-	#16   -   Cavalry
-	#18   -   Special Unit Equipment
-	#20   -   Elite Units
-	#22   -   Marines
-	#24   -   Mountaineers
-	#26   -   Shock Troops
-	
+	# General Y-Level Labeling
+	# -2   -   Secondary Infantry Weapons
+	# 0    -   Rifles Development
+	# 2    -   Rifle Technology
+	# 4    -   Infantry Armament
+	# 6    -   Machine Guns
+	# 10   -   Uniforms
+	# 12   -   Infantry Protection
+	# 14   -   Additional Equipment
+	# 16   -   Cavalry
+	# 18   -   Special Unit Equipment
+	# 20   -   Elite Units
+	# 22   -   Marines
+	# 24   -   Mountaineers
+	# 26   -   Shock Troops
 
 ################################
 	#### Main Equipmentfeudal_infantry
 
 	traditional_mixed_arms = {
-
 		supply_consumption_factor = 0.05
-	
+
 		enable_equipments = {
 			infantry_equipment_pike_and_shot_0
 		}
@@ -111,72 +112,75 @@ technologies = {
 		enable_subunits = {
 			feudal_infantry
 		}
-		
+
 		dependencies = {
 			tribal_gunpowder = 1
 		}
-		
+
 		path = {
 			leads_to_tech = infantry_weapons
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1750
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = -6 }
+			position = { x = 0 y = @1700 }
 		}
 
 		categories = {
 			infantry_weapons
-			#rifle_equipment_techs
+			# rifle_equipment_techs
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			base = 20
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
-				date < "1874.1.1"
+				date < "1870.1.1"
 			}
 			modifier = {
 				factor = 100
-				afr_is_tribal = yes
 				date > "1875.1.1"
 			}
 		}
-		
+
 		ai_research_weights = {
 			infantry_weapons = 1.0
 		}
-		
 	}
-	
-	infantry_weapons = {
 
+	infantry_weapons = {
 		enable_equipments = {
-			infantry_equipment_rifle_0
+			infantry_equipment_rifle_05
 		}
+
 		allow = {
-			if = {
-				limit = { has_idea = pre_industrial_era OR = { afr_is_tribal = yes is_nomadic_nation_state = yes is_first_nations_tribe = yes oceania_is_tribal = yes } }
+			OR = {
+				has_idea = law_victorian_army
+				has_idea = law_trench_infantry
+				has_idea = law_combined_arms
+				has_idea = law_modern_army
+				has_idea = law_digital_army
+				has_idea = law_modern_war_army
+				has_idea = law_futuristic_army
 				custom_trigger_tooltip = {
 					tooltip = has_institution_progress_innovation_40_tt
 					check_variable = { ROOT.innovation_progress > 39 }
 				}
 			}
 		}
+
 		on_research_complete = {
 			custom_effect_tooltip = eoanb_tt_infantry_weapons
 		}
-		
+
 		supply_consumption_factor = 0.05
 
 		enable_subunits = {
@@ -184,15 +188,15 @@ technologies = {
 			light_infantry
 			irregular_infantry
 		}
-		
+
 		enable_building = {
 			building = bunker
-			level = 5
+			level = 3
 		}
-		
+
 		enable_building = {
 			building = coastal_bunker
-			level = 5
+			level = 3
 		}
 
 		path = {
@@ -206,57 +210,50 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = tech_infantry_practical_rifling
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = tech_infantry_infantry_swords
+			leads_to_tech = tech_infantry_percussion_cap
 			research_cost_coeff = 1
 		}
 
-		research_cost = 3
+		path = {
+			leads_to_tech = socket_bayonet
+			research_cost_coeff = 1
+		}
+
+		research_cost = 0.3
 		start_year = 1800
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = -1 }
+			position = { x = 0 y = @1800 }
 		}
 
 		categories = {
 			infantry_weapons
-			#rifle_equipment_techs
+			# rifle_equipment_techs
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
-				date < "1874.1.1"
+				date < "1870.1.1"
 			}
 			modifier = {
 				factor = 100
-				afr_is_tribal = yes
 				date > "1875.1.1"
 			}
 		}
 		ai_research_weights = {
 			infantry_weapons = 3.0
 		}
-		
 	}
 
 	rifle_equipment1 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -267,41 +264,41 @@ technologies = {
 			leads_to_tech = rifle_equipment2
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = hand_revolvers
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_practical_rifling = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1850
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1850}
+			position = { x = 0 y = @1850 }
 		}
 
 		categories = {
 			infantry_weapons
-			#rifle_equipment_techs
+			# rifle_equipment_techs
 		}
 
 		ai_will_do = {
-			factor = 20 
+			factor = 20
 			modifier = {
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			# modifier = {
 				# factor = 0
-				# OR = { 
+				# OR = {
 					# NOT = { has_tech = tribal_tatics }
 					# NOT = { has_tech = tribal_gunpowder }
 					# NOT = { has_tech = tribal_riding }
@@ -318,7 +315,7 @@ technologies = {
 					# NOT = { has_tech = tribal_leching }
 				# }
 				# OR = { has_idea = oral_tradition has_idea = traditional_uluma }
-				# OR = { 
+				# OR = {
 					# afr_is_tribal = yes
 					# is_first_nations_tribe = yes
 					# is_south_american_tribe = yes
@@ -332,7 +329,7 @@ technologies = {
 	}
 
 	rifle_equipment2 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -340,15 +337,15 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = improved_matchlock
+			leads_to_tech = tech_infantry_breech_loading
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
-			tech_infantry_breech_loading = 1
+			improved_matchlock = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1860
 		folder = {
 			name = infantry_folder
@@ -361,33 +358,33 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-			factor = 0.5 
-				is_major = yes 
-				has_war = no 
-			} 
-			modifier = { 
-				factor = 0.25 
-				is_major = no 
-				has_war = no 
-			} 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+			factor = 0.5
+				is_major = yes
+				has_war = no
+			}
+			modifier = {
+				factor = 0.25
+				is_major = no
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < "1875.1.1"
 			}
 			modifier = {
 				factor = 0.2
 				date < "1860.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1865.1.1"
 			}
 		}
@@ -396,7 +393,7 @@ technologies = {
 		}
 	}
 
-	improved_matchlock = {
+	improved_matchlock = {#Improved Percussion Cap
 
 		category_all_infantry = {
 			soft_attack = 0.02
@@ -411,15 +408,15 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = rifle_equipment3
+			leads_to_tech = rifle_equipment2
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.4
-		start_year = 1864
+		research_cost = 0.15
+		start_year = 1855
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1864}
+			position = { x = 2 y = @1855 }
 		}
 
 		categories = {
@@ -429,42 +426,39 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < "1875.1.1"
 			}
 			modifier = {
 				factor = 0.2
 				date < "1864.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1869.1.1"
 			}
-		}
-		ai_research_weights = {
-			infantry_weapons = 1.4
 		}
 	}
 
 	rifle_equipment3 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_3
 		}
-		
+
 		enable_subunits = {
 			guard_infantry
 		}
@@ -474,11 +468,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
-		start_year = 1865
+		research_cost = 0.16
+		start_year = 1866
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1865}
+			position = { x = 0 y = @1866 }
 		}
 
 		categories = {
@@ -488,26 +482,26 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < "1875.1.1"
 			}
 			modifier = {
 				factor = 0.2
 				date < "1865.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1870.1.1"
 			}
 		}
@@ -537,18 +531,18 @@ technologies = {
 			leads_to_tech = rifle_equipment4
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_standardised_revolvers
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_lever_acutators
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1870
 		folder = {
 			name = infantry_folder
@@ -561,27 +555,27 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
 				factor = 1.5
-				has_war = yes 
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < "1875.1.1"
 			}
 			modifier = {
 				factor = 0.2
 				date < "1870.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1875.1.1"
 			}
 		}
@@ -591,7 +585,7 @@ technologies = {
 	}
 
 	rifle_equipment4 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -602,12 +596,12 @@ technologies = {
 			leads_to_tech = enhanced_firearm
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_lever_acutators = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1872
 		folder = {
 			name = infantry_folder
@@ -620,27 +614,27 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < "1875.1.1"
 			}
 			modifier = {
 				factor = 0.2
 				date < "1875.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1880.1.1"
 			}
 		}
@@ -665,7 +659,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1875
 		folder = {
 			name = infantry_folder
@@ -678,14 +672,14 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			# modifier = { 
-				# factor = 0.8 
-				# has_war = no 
-			# }	 
-			# modifier = { 
-				# factor = 1.5 
-				# has_war = yes 
+			factor = 20
+			# modifier = {
+				# factor = 0.8
+				# has_war = no
+			# }
+			# modifier = {
+				# factor = 1.5
+				# has_war = yes
 			# }
 			# modifier = {
 				# factor = 0
@@ -696,8 +690,8 @@ technologies = {
 				# factor = 0.2
 				# date < "1872.1.1"
 			# }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1877.1.1"
 			}
 		}
@@ -723,7 +717,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1878
 		folder = {
 			name = infantry_folder
@@ -737,20 +731,20 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0.2
 				date < "1878.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1883.1.1"
 			}
 		}
@@ -760,7 +754,7 @@ technologies = {
 	}
 
 	rifle_equipment5 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -771,12 +765,12 @@ technologies = {
 			leads_to_tech = reduced_recoil
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_bolt_action = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1882
 		folder = {
 			name = infantry_folder
@@ -789,21 +783,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0.2
 				date < "1882.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1887.1.1"
 			}
 		}
@@ -827,7 +821,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1885
 		folder = {
 			name = infantry_folder
@@ -840,28 +834,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			modifier = {
 				factor = 0.2
 				date < "1885.1.1"
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1890.1.1"
 			}
 		}
 	}
-	
+
 	rifle_equipment6 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -872,12 +866,12 @@ technologies = {
 			leads_to_tech = tech_infantry_early_small_magazines
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_streamlined_bolt_action = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1890
 		folder = {
 			name = infantry_folder
@@ -890,22 +884,22 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > "1895.1.1"
 			}
 		}
 	}
-	
+
 	tech_infantry_early_small_magazines = {
 
 		category_all_infantry = {
@@ -920,23 +914,23 @@ technologies = {
 			leads_to_tech = tech_infantry_semi_auto_c93
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment7
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_improved_magazine_design
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			rifle_equipment6 = 1
 			tech_infantry_mass_produced_clips = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1892
 		folder = {
 			name = infantry_folder
@@ -949,24 +943,24 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > "1897.1.1"
 			}
 		}
 	}
-	
+
 	rifle_equipment7 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -977,12 +971,12 @@ technologies = {
 			leads_to_tech = tech_infantry_adopt_advanced_ammunition
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_improved_magazine_design = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1898
 		folder = {
 			name = infantry_folder
@@ -995,22 +989,22 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > "1903.1.1"
 			}
 		}
 	}
-	
+
 	tech_infantry_adopt_advanced_ammunition = {
 
 		category_all_infantry = {
@@ -1029,8 +1023,8 @@ technologies = {
 			leads_to_tech = rifle_equipment8
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1900
 		folder = {
 			name = infantry_folder
@@ -1043,24 +1037,24 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > "1905.1.1"
 			}
 		}
 	}
-	
+
 	rifle_equipment8 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -1071,12 +1065,12 @@ technologies = {
 			leads_to_tech = tech_infantry_improved_infantry_equipment
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_improved_magazine_design = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1905
 		folder = {
 			name = infantry_folder
@@ -1090,20 +1084,20 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1910.1.1"
 			}
 		}
 	}
-	
+
 	tech_infantry_improved_infantry_equipment = {
 
 		category_all_infantry = {
 			soft_attack = 0.02
 			defense = 0.04
 		}
-		
+
 		enable_building = {
 			building = trench
 			level = 1
@@ -1113,13 +1107,13 @@ technologies = {
 			leads_to_tech = rifle_equipment9
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_early_grenades
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1912
 		folder = {
 			name = infantry_folder
@@ -1133,15 +1127,15 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1917.1.1"
 			}
 		}
 	}
-	
+
 	rifle_equipment9 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
@@ -1153,7 +1147,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1914
 		folder = {
 			name = infantry_folder
@@ -1167,13 +1161,13 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > "1919.1.1"
 			}
 		}
 	}
-	
+
 	tech_infantry_infantry_field_kits = {
 
 		category_all_infantry = {
@@ -1182,7 +1176,7 @@ technologies = {
 			hard_attack = 0.01
 			defense = 0.05
 		}
-		
+
 		enable_building = {
 			building = trench
 			level = 3
@@ -1192,13 +1186,13 @@ technologies = {
 			leads_to_tech = tech_infantry_infantry_pistols
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_specialized_infantry_equipment
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = infantry_folder
@@ -1212,29 +1206,29 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1920.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_specialized_infantry_equipment = {
 
 		category_all_infantry = {
 			soft_attack = 0.04
 			defense = 0.04
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.04
 			defense = 0.04
 		}
-		
+
 		enable_subunits = {
 			great_war_infantry
 		}
-		
+
 		dependencies = {
 			tech_infantry_infantry_helmets = 1
 		}
@@ -1243,28 +1237,28 @@ technologies = {
 			leads_to_tech = tech_infantry_trench_equipment
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_flamethrowers
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_anti_tank_rifle
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_smg_design
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment10
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1916
 		folder = {
 			name = infantry_folder
@@ -1278,22 +1272,22 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1921.1.1
 			}
 		}
 	}
-	
+
 	rifle_equipment10 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_10
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1917
 		folder = {
 			name = infantry_folder
@@ -1311,8 +1305,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1922.1.1
 			}
 		}
@@ -1323,18 +1317,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_improved_infantry_equipment_4
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1920
 		folder = {
 			name = infantry_folder
@@ -1348,8 +1342,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1925.1.1
 			}
 		}
@@ -1360,18 +1354,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment11
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1924
 		folder = {
 			name = infantry_folder
@@ -1385,21 +1379,21 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1929.1.1
 			}
 		}
 	}
 	rifle_equipment11 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_11
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1936
 		folder = {
 			name = infantry_folder
@@ -1417,8 +1411,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1941.1.1
 			}
 		}
@@ -1429,18 +1423,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment12
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1938
 		folder = {
 			name = infantry_folder
@@ -1454,21 +1448,21 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1943.1.1
 			}
 		}
 	}
 	rifle_equipment12 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_12
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1939
 		folder = {
 			name = infantry_folder
@@ -1486,8 +1480,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1944.1.1
 			}
 		}
@@ -1498,12 +1492,12 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment13
 			research_cost_coeff = 1
@@ -1512,8 +1506,8 @@ technologies = {
 			leads_to_tech = tech_infantry_smg_equipment3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1940
 		folder = {
 			name = infantry_folder
@@ -1527,21 +1521,21 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1945.1.1
 			}
 		}
 	}
 	rifle_equipment13 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_13
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1942
 		folder = {
 			name = infantry_folder
@@ -1559,8 +1553,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1947.1.1
 			}
 		}
@@ -1571,18 +1565,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment14
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1944
 		folder = {
 			name = infantry_folder
@@ -1596,21 +1590,21 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1949.1.1
 			}
 		}
 	}
 	rifle_equipment14 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_14
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1945
 		folder = {
 			name = infantry_folder
@@ -1628,8 +1622,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1950.1.1
 			}
 		}
@@ -1640,18 +1634,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment15
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1947
 		folder = {
 			name = infantry_folder
@@ -1665,21 +1659,21 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1952.1.1
 			}
 		}
 	}
 	rifle_equipment15 = {
-	
+
 		supply_consumption_factor = 0.05
 
 		enable_equipments = {
 			infantry_equipment_rifle_15
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1950
 		folder = {
 			name = infantry_folder
@@ -1697,8 +1691,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1955.1.1
 			}
 		}
@@ -1709,12 +1703,12 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_semi_modern_infantry_equipment_2
 			research_cost_coeff = 1
@@ -1722,8 +1716,8 @@ technologies = {
 		enable_subunits={
 			cold_war_infantry
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1952
 		folder = {
 			name = infantry_folder
@@ -1737,8 +1731,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1957.1.1
 			}
 		}
@@ -1749,18 +1743,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment16
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1956
 		folder = {
 			name = infantry_folder
@@ -1774,8 +1768,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1961.1.1
 			}
 		}
@@ -1785,13 +1779,13 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_16
 		}
-		
+
 		path = {
 			leads_to_tech = tech_semi_modern_infantry_equipment_3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1960
 		folder = {
 			name = infantry_folder
@@ -1805,8 +1799,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1965.1.1
 			}
 		}
@@ -1817,18 +1811,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_semi_modern_infantry_equipment_4
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1966
 		folder = {
 			name = infantry_folder
@@ -1842,8 +1836,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1971.1.1
 			}
 		}
@@ -1854,18 +1848,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment17
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1972
 		folder = {
 			name = infantry_folder
@@ -1879,8 +1873,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1977.1.1
 			}
 		}
@@ -1890,13 +1884,13 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_17
 		}
-		
+
 		path = {
 			leads_to_tech = tech_modern_infantry_equipment_1
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1975
 		folder = {
 			name = infantry_folder
@@ -1910,8 +1904,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1980.1.1
 			}
 		}
@@ -1922,18 +1916,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_modern_infantry_equipment_2
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1981
 		folder = {
 			name = infantry_folder
@@ -1947,8 +1941,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1986.1.1
 			}
 		}
@@ -1959,18 +1953,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment18
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1987
 		folder = {
 			name = infantry_folder
@@ -1984,8 +1978,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1992.1.1
 			}
 		}
@@ -1995,13 +1989,13 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_18
 		}
-		
+
 		path = {
 			leads_to_tech = tech_modern_infantry_equipment_3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1990
 		folder = {
 			name = infantry_folder
@@ -2015,8 +2009,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1995.1.1
 			}
 		}
@@ -2027,18 +2021,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment19
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1993
 		folder = {
 			name = infantry_folder
@@ -2052,8 +2046,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1998.1.1
 			}
 		}
@@ -2063,13 +2057,13 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_19
 		}
-		
+
 		path = {
 			leads_to_tech = tech_modern_infantry_equipment_4
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2000
 		folder = {
 			name = infantry_folder
@@ -2083,8 +2077,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2005.1.1
 			}
 		}
@@ -2095,12 +2089,12 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment20
 			research_cost_coeff = 1
@@ -2109,8 +2103,8 @@ technologies = {
 			leads_to_tech = tech_infantry_smg_equipment9
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2006
 		folder = {
 			name = infantry_folder
@@ -2124,8 +2118,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2011.1.1
 			}
 		}
@@ -2135,13 +2129,13 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_20
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment21
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2010
 		folder = {
 			name = infantry_folder
@@ -2155,25 +2149,25 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2015.1.1
 			}
 		}
 	}
-	
+
 	rifle_equipment21 = {
 
 		enable_equipments = {
 			infantry_equipment_rifle_21
 		}
-		
+
 		path = {
 			leads_to_tech = tech_near_future_infantry_equipment_2
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2020
 		folder = {
 			name = infantry_folder
@@ -2187,8 +2181,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2025.1.1
 			}
 		}
@@ -2199,12 +2193,12 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = plasma_rifle_equipment1
 			research_cost_coeff = 1
@@ -2217,8 +2211,8 @@ technologies = {
 			leads_to_tech = rifle_equipment22
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2025
 		folder = {
 			name = infantry_folder
@@ -2232,8 +2226,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2030.1.1
 			}
 		}
@@ -2243,13 +2237,13 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_22
 		}
-		
+
 		path = {
 			leads_to_tech = tech_near_future_infantry_equipment_3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2028
 		folder = {
 			name = infantry_folder
@@ -2263,8 +2257,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2033.1.1
 			}
 		}
@@ -2275,18 +2269,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_near_future_infantry_equipment_4
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2030
 		folder = {
 			name = infantry_folder
@@ -2300,8 +2294,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2035.1.1
 			}
 		}
@@ -2312,18 +2306,18 @@ technologies = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = rifle_equipment23
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2035
 		folder = {
 			name = infantry_folder
@@ -2337,8 +2331,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2040.1.1
 			}
 		}
@@ -2348,8 +2342,8 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_rifle_23
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2040
 		folder = {
 			name = infantry_folder
@@ -2363,26 +2357,26 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2045.1.1
 			}
 		}
 	}
-	
-	
+
+
 	tech_early_plasma_refinements = {
 
 		category_all_infantry = {
 			hard_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			hard_attack = 0.02
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = plasma_rifle_equipment1
 			research_cost_coeff = 1
@@ -2390,8 +2384,8 @@ technologies = {
 		dependencies={
 			early_plasma_projectiles_prototypes = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2025
 		folder = {
 			name = infantry_folder
@@ -2406,8 +2400,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2030.1.1
 			}
 		}
@@ -2417,7 +2411,7 @@ technologies = {
 		enable_equipments = {
 			equipment_plasma_rifle_1
 		}
-		
+
 		path = {
 			leads_to_tech = plasma_rifle_equipment2
 			research_cost_coeff = 1
@@ -2426,8 +2420,8 @@ technologies = {
 			tech_near_future_infantry_equipment_2 = 1
 			tech_early_plasma_refinements = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2030
 		folder = {
 			name = infantry_folder
@@ -2442,8 +2436,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2035.1.1
 			}
 		}
@@ -2453,13 +2447,13 @@ technologies = {
 		enable_equipments = {
 			equipment_plasma_rifle_2
 		}
-		
+
 		path = {
 			leads_to_tech = plasma_rifle_equipment3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2038
 		folder = {
 			name = infantry_folder
@@ -2474,8 +2468,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2043.1.1
 			}
 		}
@@ -2485,13 +2479,13 @@ technologies = {
 		enable_equipments = {
 			equipment_plasma_rifle_3
 		}
-		
+
 		path = {
 			leads_to_tech = plasma_rifle_equipment4
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2044
 		folder = {
 			name = infantry_folder
@@ -2506,8 +2500,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2049.1.1
 			}
 		}
@@ -2517,13 +2511,13 @@ technologies = {
 		enable_equipments = {
 			equipment_plasma_rifle_4
 		}
-		
+
 		path = {
 			leads_to_tech = plasma_rifle_equipment5
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2050
 		folder = {
 			name = infantry_folder
@@ -2538,8 +2532,8 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2055.1.1
 			}
 		}
@@ -2549,8 +2543,8 @@ technologies = {
 		enable_equipments = {
 			equipment_plasma_rifle_5
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2060
 		folder = {
 			name = infantry_folder
@@ -2567,19 +2561,19 @@ technologies = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_railgun_miniaturisation = {
 
 		category_all_infantry = {
 			hard_attack = 0.02
 			soft_attack = 0.02
 		}
-		
+
 		category_ranged_cavalry = {
 			hard_attack = 0.02
 			soft_attack = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = railgun_rifle_equipment1
 			research_cost_coeff = 1
@@ -2587,8 +2581,8 @@ technologies = {
 		dependencies={
 			railgun_theory = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2025
 		folder = {
 			name = infantry_folder
@@ -2618,8 +2612,8 @@ technologies = {
 			tech_railgun_miniaturisation = 1
 			tech_near_future_infantry_equipment_2 = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2028
 		folder = {
 			name = infantry_folder
@@ -2646,8 +2640,8 @@ technologies = {
 			leads_to_tech = railgun_rifle_equipment2
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2030
 		folder = {
 			name = infantry_folder
@@ -2673,8 +2667,8 @@ technologies = {
 			leads_to_tech = railgun_rifle_equipment3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2035
 		folder = {
 			name = infantry_folder
@@ -2700,8 +2694,8 @@ technologies = {
 			leads_to_tech = railgun_equipment_2
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2040
 		folder = {
 			name = infantry_folder
@@ -2727,17 +2721,17 @@ technologies = {
 		category_all_infantry = {
 			hard_attack = 0.05
 		}
-		
+
 		category_ranged_cavalry = {
 			hard_attack = 0.05
 		}
-		
+
 		path = {
 			leads_to_tech = railgun_rifle_equipment4
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2044
 		folder = {
 			name = infantry_folder
@@ -2763,8 +2757,8 @@ technologies = {
 			leads_to_tech = railgun_rifle_equipment5
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2048
 		folder = {
 			name = infantry_folder
@@ -2790,8 +2784,8 @@ technologies = {
 			leads_to_tech = railgun_rifle_equipment6
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2054
 		folder = {
 			name = infantry_folder
@@ -2813,8 +2807,8 @@ technologies = {
 		enable_equipments = {
 			equipment_railgun_rifle_6
 		}
-		
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 2060
 		folder = {
 			name = infantry_folder
@@ -2831,10 +2825,10 @@ technologies = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 
 	#### Handguns
-	
+
 	tech_infantry_flintlock_pistol = {
 
 		category_front_line = {
@@ -2846,11 +2840,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.35
-		start_year = 1840
+		research_cost = 0.135
+		start_year = 1820
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = @1840}
+			position = { x = -2 y = @1820 }
 		}
 
 		categories = {
@@ -2859,15 +2853,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
+			factor = 20
 			modifier = { factor = 0.8 has_war = no }
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 			# modifier = {
 				# factor = 0
-				# OR = { 
+				# OR = {
 					# NOT = { has_tech = tribal_tatics }
 					# NOT = { has_tech = tribal_gunpowder }
 					# NOT = { has_tech = tribal_riding }
@@ -2884,7 +2878,7 @@ technologies = {
 					# NOT = { has_tech = tribal_leching }
 				# }
 				# OR = { has_idea = oral_tradition has_idea = traditional_uluma }
-				# OR = { 
+				# OR = {
 					# afr_is_tribal = yes
 					# is_first_nations_tribe = yes
 					# is_south_american_tribe = yes
@@ -2893,18 +2887,18 @@ technologies = {
 			# }
 		}
 	}
-	
+
 	tech_infantry_caplock_pistol = {
 
 		category_front_line = {
 			soft_attack = 0.02
 		}
 
-		research_cost = 1.35
-		start_year = 1850
+		research_cost = 0.135
+		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = @1850}
+			position = { x = -2 y = @1840 }
 		}
 
 		categories = {
@@ -2917,7 +2911,7 @@ technologies = {
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < 1875.1.1
 			}
 		}
@@ -2934,11 +2928,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
-		start_year = 1855
+		start_year = 1850
+		research_cost = 0.15
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = @1855}
+			position = { x = -2 y = @1850}
 		}
 
 		categories = {
@@ -2951,11 +2945,11 @@ technologies = {
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < 1875.1.1
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1860.1.1
 			}
 		}
@@ -2972,7 +2966,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = infantry_folder
@@ -2989,11 +2983,11 @@ technologies = {
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < 1875.1.1
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1865.1.1
 			}
 		}
@@ -3010,7 +3004,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1872
 		folder = {
 			name = infantry_folder
@@ -3027,11 +3021,11 @@ technologies = {
 			modifier = {
 				factor = 0
 				afr_is_tribal = yes
- 
+
 				date < 1875.1.1
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1877.1.1
 			}
 		}
@@ -3042,13 +3036,13 @@ technologies = {
 		category_front_line = {
 			soft_attack = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_semi_auto_c93
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = infantry_folder
@@ -3062,29 +3056,29 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1885.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_semi_auto_c93 = {
 
 		category_front_line = {
 			soft_attack = 0.05
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_large_capacity_pistol_mags
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_early_small_magazines = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1893
 		folder = {
 			name = infantry_folder
@@ -3098,26 +3092,26 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1898.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_large_capacity_pistol_mags = {
 
 		category_front_line = {
 			soft_attack = 0.02
 			breakthrough = 0.04
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_locked_breech_action
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1898
 		folder = {
 			name = infantry_folder
@@ -3131,25 +3125,25 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1903.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_locked_breech_action = {
 
 		category_front_line = {
 			soft_attack = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_improved_handgun_designs
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1909
 		folder = {
 			name = infantry_folder
@@ -3163,25 +3157,25 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1914.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_improved_handgun_designs = {
 
 		category_front_line = {
 			soft_attack = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_infantry_pistols
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.35
+		research_cost = 0.135
 		start_year = 1914
 		folder = {
 			name = infantry_folder
@@ -3196,25 +3190,25 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1919.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_infantry_pistols = {
 
 		category_front_line = {
 			soft_attack = 0.04
 			breakthrough = 0.02
 		}
-		
+
 		dependencies = {
 			tech_infantry_improved_handgun_designs = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = infantry_folder
@@ -3229,26 +3223,26 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1920.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_trench_equipment = {
 
 		category_front_line = {
 			defense = 0.04
 			soft_attack = 0.01
 		}
-		
+
 		enable_building = {
 			building = trench
 			level = 5
 		}
 
-		research_cost = 1.35
+		research_cost = 0.135
 		start_year = 1916
 		folder = {
 			name = infantry_folder
@@ -3262,21 +3256,21 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1921.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_anti_tank_rifle = {
-		
+
 		category_all_infantry = {
 			hard_attack = 0.05
 			ap_attack = 0.1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1917
 		folder = {
 			name = infantry_folder
@@ -3294,14 +3288,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1912.1.1
 			}
 		}
 	}
 	tech_infantry_high_caliber_anti_tank_rifle = {
-		
+
 		category_all_infantry = {
 			hard_attack = 0.05
 			ap_attack = 0.1
@@ -3311,7 +3305,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1936
 		folder = {
 			name = infantry_folder
@@ -3325,14 +3319,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1941.1.1
 			}
 		}
 	}
 	tech_infantry_early_rpg = {
-		
+
 		category_all_infantry = {
 			hard_attack = 0.05
 			ap_attack = 0.1
@@ -3342,7 +3336,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1942
 		folder = {
 			name = infantry_folder
@@ -3356,14 +3350,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1947.1.1
 			}
 		}
 	}
 	tech_infantry_rpg-2 = {
-		
+
 		category_all_infantry = {
 			hard_attack = 0.05
 			ap_attack = 0.1
@@ -3373,7 +3367,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1946
 		folder = {
 			name = infantry_folder
@@ -3387,14 +3381,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1951.1.1
 			}
 		}
 	}
 	tech_infantry_rpg-7 = {
-		
+
 		category_all_infantry = {
 			hard_attack = 0.05
 			ap_attack = 0.1
@@ -3404,7 +3398,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1956
 		folder = {
 			name = infantry_folder
@@ -3417,14 +3411,14 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 3 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > 1961.1.1
 			}
 		}
@@ -3432,21 +3426,22 @@ technologies = {
 
 
 	#### Infantry Technology
-	
-	tech_infantry_practical_rifling = {
 
-		category_army = {
-			soft_attack = 0.02
-			hard_attack = 0.01
-			breakthrough = 0.01
+	tech_infantry_percussion_cap = {
+
+		# infantry_equipment_rifle_0 = {
+		# 	reliability = 0.15
+		# }
+		enable_equipments = {
+			infantry_equipment_rifle_0
 		}
 
 		path = {
-			leads_to_tech = tech_infantry_breech_loading
-			research_cost_coeff = 1
+			leads_to_tech = tech_infantry_practical_rifling
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
+
 		start_year = 1840
 		folder = {
 			name = infantry_folder
@@ -3460,9 +3455,39 @@ technologies = {
 
 		ai_will_do = {
 			factor = 50
+		}
+	}
+
+	tech_infantry_practical_rifling = {
+
+		category_army = {
+			soft_attack = 0.02
+			hard_attack = 0.01
+			breakthrough = 0.01
+		}
+
+		path = {
+			leads_to_tech = improved_matchlock
+			research_cost_coeff = 1
+		}
+
+		research_cost = 0.15
+		start_year = 1845
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = @1845 }
+		}
+
+		categories = {
+			infantry_weapons
+			rifle_equipment_techs
+		}
+
+		ai_will_do = {
+			factor = 50
 			# modifier = {
 				# factor = 0
-				# OR = { 
+				# OR = {
 					# NOT = { has_tech = tribal_tatics }
 					# NOT = { has_tech = tribal_gunpowder }
 					# NOT = { has_tech = tribal_riding }
@@ -3479,7 +3504,7 @@ technologies = {
 					# NOT = { has_tech = tribal_leching }
 				# }
 				# OR = { has_idea = oral_tradition has_idea = traditional_uluma }
-				# OR = { 
+				# OR = {
 					# afr_is_tribal = yes
 					# is_first_nations_tribe = yes
 					# is_south_american_tribe = yes
@@ -3488,24 +3513,23 @@ technologies = {
 			# }
 		}
 	}
-	
-	tech_infantry_breech_loading = {
 
+	tech_infantry_breech_loading = {
 		category_army = {
 			soft_attack = 0.01
 			defense = 0.04
 		}
 
 		path = {
-			leads_to_tech = tech_infantry_lever_acutators
+			leads_to_tech = rifle_equipment3
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
-		start_year = 1855
+		research_cost = 0.14
+		start_year = 1864
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1855}
+			position = { x = 0 y = @1864}
 		}
 
 		categories = {
@@ -3515,23 +3539,26 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20
-			modifier = { factor = 0.8 has_war = no }			
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 0 
-				afr_is_tribal = yes 
-				date < 1875.1.1 
+			modifier = { factor = 0.8 has_war = no }
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 0
+				afr_is_tribal = yes
+				date < 1875.1.1
+			}
+			modifier = {
+				factor = 3
 				date > 1860.1.1
 			}
 		}
+		ai_research_weights = {
+			infantry_weapons = 1.4
+		}
 	}
-	
+
 	tech_infantry_lever_acutators = {
 
 		category_army = {
@@ -3545,7 +3572,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1872
 		folder = {
 			name = infantry_folder
@@ -3559,13 +3586,13 @@ technologies = {
 
 		ai_will_do = {
 			factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1879.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_bolt_action = {
 
 		category_all_infantry = {
@@ -3578,7 +3605,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1878
 		folder = {
 			name = infantry_folder
@@ -3592,13 +3619,13 @@ technologies = {
 
 		ai_will_do = {
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1883.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_streamlined_bolt_action = {
 
 		category_all_infantry = {
@@ -3606,7 +3633,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			defense = 0.02
 			breakthrough = 0.02
 		}
-		
+
 		category_cavalry = {
 			soft_attack = 0.02
 			defense = 0.02
@@ -3617,13 +3644,13 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_infantry_mass_produced_clips
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_efficient_bolt_casts
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1885
 		folder = {
 			name = infantry_folder
@@ -3636,22 +3663,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > 1890.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_mass_produced_clips = {
 
 		category_army = {
@@ -3664,7 +3691,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = infantry_folder
@@ -3677,22 +3704,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 3 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > 1895.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_improved_magazine_design = {
 
 		category_army = {
@@ -3706,18 +3733,18 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_infantry_early_silencers
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_circular_magazines
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_shotgun_0
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1898
 		folder = {
 			name = infantry_folder
@@ -3730,33 +3757,33 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 3 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > 1903.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_early_silencers = {
 
 		category_all_infantry = {
 			soft_attack = 0.04
 		}
-		
+
 		special_forces_attack_factor = 0.08
-		
+
 		land_night_attack = 0.02
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1909
 		folder = {
 			name = infantry_folder
@@ -3769,22 +3796,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > 1914.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_early_grenades = {
 
 		category_all_infantry = {
@@ -3796,8 +3823,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_infantry_fragmentation_grenades
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.5
+
+		research_cost = 0.15
 		start_year = 1912
 		folder = {
 			name = infantry_folder
@@ -3810,29 +3837,29 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
 				date > 1917.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_fragmentation_grenades = {
 
 		category_all_infantry = {
 			soft_attack = 0.2
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = infantry_folder
@@ -3844,16 +3871,16 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1920.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_smg_design = {
 
 		category_army = {
@@ -3865,12 +3892,12 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_infantry_smg_equipment0
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_lmg_design = 1
 		}
-		
-		research_cost = 1.5
+
+		research_cost = 0.15
 		start_year = 1917
 		folder = {
 			name = infantry_folder
@@ -3882,22 +3909,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
-			modifier = { factor = 1.5 has_war = yes } 
-			modifier = { 
-				factor = 3 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = { factor = 1.5 has_war = yes }
+			modifier = {
+				factor = 3
 				date > 1922.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_smg_equipment0 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_0
 		}
-		
+
 		dependencies = {
 			rifle_equipment10 = 1
 		}
@@ -3905,40 +3932,40 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_infantry_smg_equipment1
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1918
 		folder = {
 			name = infantry_folder
 			position = { x = 2 y = @1918}
 		}
-		
+
 
 		categories = {
 			infantry_weapons
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1923.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment1 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_1
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1920
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = 75}
+			position = { x = 2 y = @1920}
 		}
 		path = {
 			leads_to_tech = tech_infantry_smg_equipment2
@@ -3950,22 +3977,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1925.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment2 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_2
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1938
 		folder = {
 			name = infantry_folder
@@ -3981,22 +4008,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1943.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment3 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_3
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1940
 		folder = {
 			name = infantry_folder
@@ -4012,22 +4039,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1945.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment4 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_4
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1942
 		folder = {
 			name = infantry_folder
@@ -4043,22 +4070,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1947.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment5 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_5
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1945
 		folder = {
 			name = infantry_folder
@@ -4078,22 +4105,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1950.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment6 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_6
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1950
 		folder = {
 			name = infantry_folder
@@ -4109,22 +4136,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1955.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment7 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_7
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1960
 		folder = {
 			name = infantry_folder
@@ -4140,22 +4167,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1965.1.1
 			}
 		}
 	}
 	tech_compact_variants = {
-		
+
 		category_all_infantry = {
 			soft_attack = 0.05
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1972
 		folder = {
 			name = infantry_folder
@@ -4171,22 +4198,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1977.1.1
 			}
 		}
 	}
 	tech_smg_suppressors = {
-		
+
 		category_all_infantry = {
 			soft_attack = 0.05
 		}
 
-		research_cost = 1.8
+		research_cost = 0.18
 		start_year = 1975
 		folder = {
 			name = infantry_folder
@@ -4202,22 +4229,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1980.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment8 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_8
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 1997
 		folder = {
 			name = infantry_folder
@@ -4233,22 +4260,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2002.1.1
 			}
 		}
 	}
 	tech_infantry_smg_equipment9 = {
-		
+
 		enable_equipments = {
 			infantry_equipment_smg_9
 		}
-		
-		research_cost = 1.8
+
+		research_cost = 0.18
 		start_year = 2006
 		folder = {
 			name = infantry_folder
@@ -4260,16 +4287,16 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 2011.1.1
 			}
 		}
 	}
-	
+
 	#### Bayonets
 
 	tech_infantry_infantry_swords = {
@@ -4283,11 +4310,11 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
-		start_year = 1800
+		research_cost = 0.125
+		start_year = 1750
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = -1}
+			position = { x = 4 y = @1700 }
 		}
 
 		categories = {
@@ -4296,23 +4323,23 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 0 
-				afr_is_tribal = yes 
-				date < 1875.1.1 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				afr_is_tribal = yes
+				date < 1875.1.1
 			}
 			# modifier = {
 				# factor = 0
-				# OR = { 
+				# OR = {
 					# NOT = { has_tech = tribal_tatics }
 					# NOT = { has_tech = tribal_gunpowder }
 					# NOT = { has_tech = tribal_riding }
@@ -4329,7 +4356,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 					# NOT = { has_tech = tribal_leching }
 				# }
 				# OR = { has_idea = oral_tradition has_idea = traditional_uluma }
-				# OR = { 
+				# OR = {
 					# afr_is_tribal = yes
 					# is_first_nations_tribe = yes
 					# is_south_american_tribe = yes
@@ -4338,7 +4365,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			# }
 		}
 	}
-	
+
 	socket_bayonet = {
 
 		category_all_infantry = {
@@ -4351,11 +4378,11 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
-		start_year = 1845
+		research_cost = 0.125
+		start_year = 1800
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1845}
+			position = { x = 4 y = @1800 }
 		}
 
 		categories = {
@@ -4364,9 +4391,9 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
-			modifier = { factor = 1.5 has_war = yes } 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = { factor = 1.5 has_war = yes }
 			modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 
 		}
@@ -4384,11 +4411,11 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
-		start_year = 1850
+		research_cost = 0.125
+		start_year = 1845
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1850}
+			position = { x = 4 y = @1845 }
 		}
 
 		categories = {
@@ -4397,22 +4424,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 0 
-				afr_is_tribal = yes 
-				date < 1875.1.1 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				afr_is_tribal = yes
+				date < 1875.1.1
+			}
+			modifier = {
+				factor = 3
 				date > 1860.1.1
 			}
 		}
@@ -4431,7 +4458,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1864
 		folder = {
 			name = infantry_folder
@@ -4444,11 +4471,11 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
-			modifier = { factor = 1.5 has_war = yes } 
-			modifier = { 
-				factor = 3 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = { factor = 1.5 has_war = yes }
+			modifier = {
+				factor = 3
 				date > 1869.1.1
 			}
 		}
@@ -4460,7 +4487,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			soft_attack = 0.05
 		}
 
-		research_cost = 1.25
+		research_cost = 0.125
 		start_year = 1880
 		folder = {
 			name = infantry_folder
@@ -4473,16 +4500,16 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1885.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_efficient_bolt_casts = {
 
 		category_all_infantry = {
@@ -4490,7 +4517,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			hard_attack = 0.01
 		}
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1885
 		folder = {
 			name = infantry_folder
@@ -4502,21 +4529,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
-			modifier = { factor = 1.5 has_war = yes } 
-			modifier = { 
-				factor = 3 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = { factor = 1.5 has_war = yes }
+			modifier = {
+				factor = 3
 				date > 1890.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_circular_magazines = {
 
 		out_of_supply_factor = -0.05
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1914
 		folder = {
 			name = infantry_folder
@@ -4528,32 +4555,32 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
-			modifier = { 
-				factor = 3 
+			modifier = {
+				factor = 3
 				date > 1919.1.1
 			}
 		}
 	}
-	
+
 	tech_infantry_flamethrowers = {
 
 		enable_subunits = {
 			flamethrower_support_company
 		}
-		
+
 		enable_equipments = {
 			flamethrower_equipment_0
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_late_flamethrowers
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1916
 		folder = {
 			name = infantry_folder
@@ -4565,18 +4592,18 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_late_flamethrowers = {
-		
+
 		enable_equipments = {
 			flamethrower_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1916
 		folder = {
 			name = infantry_folder
@@ -4588,17 +4615,17 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	#Shotguns
-	
+
 	tech_infantry_shotgun_0 = {
 
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1900
 		folder = {
 			name = infantry_folder
@@ -4619,15 +4646,15 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
-			modifier = { factor = 1.5 has_war = yes } 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_shotgun_1 = {
 
-		research_cost = 1.2
+		research_cost = 0.12
 		start_year = 1914
 		folder = {
 			name = infantry_folder
@@ -4648,17 +4675,17 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	#### Automatic Weaps.
 
 	gatling_gun = {
 
-		research_cost = 1.2
+		research_cost = 0.12
 		start_year = 1865
 		folder = {
 			name = infantry_folder
@@ -4672,7 +4699,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_subunits = {
 			machine_gun_company
 		}
-		
+
 		dependencies = {
 			tribal_gunpowder = 1
 		}
@@ -4688,17 +4715,17 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 0 
-				afr_is_tribal = yes 
- 
-				date < 1875.1.1 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				afr_is_tribal = yes
+
+				date < 1875.1.1
 			}
 			modifier = {
 				factor = 0.2
@@ -4709,7 +4736,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	lighter_designs = {
 
-		research_cost = 0.9
+		research_cost = 0.12
 		start_year = 1868
 		folder = {
 			name = infantry_folder
@@ -4738,16 +4765,16 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			}
 		}
 	}
-	
+
 	mitrailleuse = {
 
-		research_cost = 1.3
+		research_cost = 0.13
 		start_year = 1870
 		folder = {
 			name = infantry_folder
 			position = { x = 8 y = @1870}
 		}
-		
+
 		path = {
 			leads_to_tech = improved_fire_rate
 			research_cost_coeff = 1
@@ -4773,7 +4800,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	improved_fire_rate = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1874
 		folder = {
 			name = infantry_folder
@@ -4806,7 +4833,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	enhanced_rotary = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1876
 		folder = {
 			name = infantry_folder
@@ -4832,10 +4859,10 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	early_belt_systems = {
 
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1880
 		folder = {
 			name = infantry_folder
@@ -4857,15 +4884,15 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 
 	automatic_arms = {
 
-		research_cost = 1.2
+		research_cost = 0.12
 		start_year = 1885
 		folder = {
 			name = infantry_folder
@@ -4875,7 +4902,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_equipments = {
 			machine_gun_equipment_2
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_improved_belt_systems
 			research_cost_coeff = 1
@@ -4887,25 +4914,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_improved_belt_systems = {
 
 		machine_gun_company = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_water_jacket_cooling
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1892
 		folder = {
 			name = infantry_folder
@@ -4918,25 +4945,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_water_jacket_cooling = {
 
 		machine_gun_company = {
 			defense = 0.04
 			breakthrough = 0.04
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_vickers
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1900
 		folder = {
 			name = infantry_folder
@@ -4949,27 +4976,27 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
 		}
 	}
-	
+
 	tech_infantry_vickers = {
 
 		enable_equipments = {
 			machine_gun_equipment_3
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_mg_equipment0
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1912
 		folder = {
 			name = infantry_folder
@@ -4981,28 +5008,28 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
-			modifier = { factor = 1.5 has_war = yes } 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_mg_equipment0 = {
 
 		enable_equipments = {
 			infantry_equipment_mg_0
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_lmg_design
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tech_infantry_circular_magazines = 1
 		}
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1915
 		folder = {
 			name = infantry_folder
@@ -5014,22 +5041,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_lmg_design = {
 
 		research_speed_factor = 0.01
-		
+
 		path = {
 			leads_to_tech = tech_infantry_mg_equipment1
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.1
+		research_cost = 0.11
 		start_year = 1916
 		folder = {
 			name = infantry_folder
@@ -5041,19 +5068,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_mg_equipment1 = {
 
 		enable_equipments = {
 			infantry_equipment_mg_1
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1918
 		folder = {
 			name = infantry_folder
@@ -5069,19 +5096,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
-			modifier = { factor = 1.5 has_war = yes } 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
+			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_mg_equipment2 = {
 
 		enable_equipments = {
 			infantry_equipment_mg_2
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1938
 		folder = {
 			name = infantry_folder
@@ -5097,8 +5124,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -5108,7 +5135,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			infantry_equipment_mg_3
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1940
 		folder = {
 			name = infantry_folder
@@ -5124,8 +5151,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -5135,7 +5162,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			infantry_equipment_mg_4
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1942
 		folder = {
 			name = infantry_folder
@@ -5151,8 +5178,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -5162,7 +5189,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			infantry_equipment_mg_5
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1955
 		folder = {
 			name = infantry_folder
@@ -5178,8 +5205,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -5189,7 +5216,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			infantry_equipment_mg_6
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1966
 		folder = {
 			name = infantry_folder
@@ -5205,8 +5232,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -5216,7 +5243,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			infantry_equipment_mg_7
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 1997
 		folder = {
 			name = infantry_folder
@@ -5232,8 +5259,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -5243,7 +5270,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			infantry_equipment_mg_8
 		}
 
-		research_cost = 1.6
+		research_cost = 0.16
 		start_year = 2006
 		folder = {
 			name = infantry_folder
@@ -5262,8 +5289,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -5271,18 +5298,18 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 	#### Clothing Equipment
 
 	tech_infantry_napoleonic_uniform = {
-		
-		research_cost = 1
+
+		research_cost = 0.1
 		start_year = 1800
 		folder = {
 			name = infantry_folder
-			position = { x = 10 y = -1}
+			position = { x = 10 y = @1800 }
 		}
-		
+
 		dependencies = {
 			tribal_tatics = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5301,33 +5328,33 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
 			}
-			modifier = { 
-				factor = 0 
-				afr_is_tribal = yes 
- 
-				date < "1865.1.1" 
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				afr_is_tribal = yes
+
+				date < "1865.1.1"
 			}
 		}
 	}
-	
+
 	vic_army_cloth = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1840
 		folder = {
 			name = infantry_folder
-			position = { x = 10 y = @1840}
+			position = { x = 10 y = @1840 }
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5352,13 +5379,13 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	civil_army_cloth = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1850}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5383,13 +5410,13 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	sixfour_army_cloth = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1864
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1864}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5419,7 +5446,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	camo_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1868
 		folder = {
 			name = infantry_folder
@@ -5447,7 +5474,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	solid_camo = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1875
 		folder = {
 			name = infantry_folder
@@ -5458,7 +5485,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			defense = 0.04
 			breakthrough = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_two_color_camo
 			research_cost_coeff = 1
@@ -5469,15 +5496,15 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_two_color_camo = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1880
 		folder = {
 			name = infantry_folder
@@ -5488,7 +5515,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			defense = 0.04
 			breakthrough = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_khaki_camo
 			research_cost_coeff = 1
@@ -5499,15 +5526,15 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_khaki_camo = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1887
 		folder = {
 			name = infantry_folder
@@ -5524,15 +5551,15 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 
 	durable_cloth = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1870
 		folder = {
 			name = infantry_folder
@@ -5554,21 +5581,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 
 	seventwo_army_cloth = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1872
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1872}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5587,21 +5614,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 
 	seveneight_army_cloth = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1878
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1878}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5609,7 +5636,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_equipments = {
 			uniform_equipment_5
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_1887
 			research_cost_coeff = 1
@@ -5620,21 +5647,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_uniform_1887 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1887
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1887}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5642,7 +5669,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_equipments = {
 			uniform_equipment_6
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_1895
 			research_cost_coeff = 1
@@ -5653,21 +5680,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_uniform_1895 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1895
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1895}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5675,12 +5702,12 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_equipments = {
 			uniform_equipment_7
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_early_great_war_uniform
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_pith_helmets
 			research_cost_coeff = 1
@@ -5691,21 +5718,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_early_great_war_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1912
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1912}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5713,12 +5740,12 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_equipments = {
 			uniform_equipment_8
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_improved_great_war_uniform
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_protective_gear
 			research_cost_coeff = 1
@@ -5729,21 +5756,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_improved_great_war_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1915
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1915}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5751,12 +5778,12 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_equipments = {
 			uniform_equipment_9
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_1918
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_infantry_helmets
 			research_cost_coeff = 1
@@ -5767,25 +5794,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_uniform_1918 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1918
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1918}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
-		
+
 		path = {
 			leads_to_tech = tech_interwar_infantry_uniform
 			research_cost_coeff = 1
@@ -5800,21 +5827,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_interwar_infantry_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1936
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1936}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5832,20 +5859,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_ww2_infantry_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1940
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1940}
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5863,20 +5890,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_improved_ww2_infantry_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1942
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1942}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_late_ww2_infantry_uniform
 			research_cost_coeff = 1
@@ -5885,7 +5912,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = night_vision
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5899,25 +5926,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_late_ww2_infantry_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1945
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1945}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_semi_modern_infantry_uniform
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5931,25 +5958,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_semi_modern_infantry_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1950
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1950}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_modern_infantry_uniform
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5963,25 +5990,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_modern_infantry_uniform = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1972
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1972}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_modern_combat_armor
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -5995,25 +6022,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_modern_combat_armor = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1987
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1987}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_ceramic_plates
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -6027,20 +6054,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_ceramic_plates = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1997
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @1997}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_2000
 			research_cost_coeff = 1
@@ -6048,7 +6075,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		dependencies={
 			modern_ceramics = 1
 		}
-		
+
 		category_army = {
 			defense = 0.1
 		}
@@ -6058,25 +6085,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_uniform_2000 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2000
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @2000}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_2010
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -6090,20 +6117,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_uniform_2010 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2010
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @2010}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_2020
 			research_cost_coeff = 1
@@ -6112,7 +6139,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_exoskeleton_prototypes
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -6126,25 +6153,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_uniform_2020 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2020
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @2020}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_2028
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -6158,25 +6185,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_uniform_2028 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2028
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @2028}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_2038
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -6190,25 +6217,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_uniform_2038 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @2038}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_uniform_2050
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -6222,24 +6249,24 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_uniform_2050 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2050
 		folder = {
 			name = infantry_folder
 			position = { x = 10 y = @2050}
 		}
-		
+
 		#path = {
 		#	leads_to_tech = tech_ceramic_plates
 		#}
-		
+
 		category_army = {
 			defense = 0.02
 		}
@@ -6253,25 +6280,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_exoskeleton_prototypes = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2015
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @2015}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_exoskeletal_suits
 			research_cost_coeff = 1
 		}
-		
+
 		category_army = {
 			defense = 0.05
 		}
@@ -6285,25 +6312,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_exoskeletal_suits = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2025
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @2025}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_early_power_armor
 			research_cost_coeff = 1
 		}
-		
+
 		enable_equipments = {
 			power_armor_equipment_0
 		}
@@ -6317,25 +6344,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_early_power_armor = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2030
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @2030}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_power_armor
 			research_cost_coeff = 1
 		}
-		
+
 		enable_equipments = {
 			power_armor_equipment_1
 		}
@@ -6346,25 +6373,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_power_armor = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2038
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @2038}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_power_armor_mk2
 			research_cost_coeff = 1
 		}
-		
+
 		enable_equipments = {
 			power_armor_equipment_2
 		}
@@ -6375,25 +6402,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_power_armor_mk2 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2048
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @2048}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_power_armor_mk3
 			research_cost_coeff = 1
 		}
-		
+
 		enable_equipments = {
 			power_armor_equipment_3
 		}
@@ -6404,20 +6431,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_power_armor_mk3 = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 2056
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @2056}
 		}
-		
+
 		enable_equipments = {
 			power_armor_equipment_4
 		}
@@ -6428,101 +6455,101 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	night_vision = {
 
 		land_night_attack = 0.1
-		
+
 		path = {
 			leads_to_tech = night_vision2
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1943
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1943 }
 		}
-		
+
 		categories = {
 			night_vision
 		}
-		
+
 		ai_will_do = {
 			factor = 4
-			
+
 			modifier = {
 				factor = 2
 				date > "1942.1.9"
 			}
-			
+
 			modifier = {
 				factor = 2
 				date > "1943.1.1"
 			}
-			
+
 			modifier = {
 				factor = 5
 				date > "1943.1.6"
 			}
-			
+
 			modifier = {
 				factor = 5
 				date > "1946.1.1"
 			}
 		}
 	}
-	
+
 	night_vision2 = {
 
-		land_night_attack = 0.15	
+		land_night_attack = 0.15
 
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1946
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1946 }
 		}
-		
+
 		categories = {
 			night_vision
 		}
-		
+
 		ai_will_do = {
 			factor = 4
-			
+
 			modifier = {
 				factor = 2
 				date > "1945.1.9"
 			}
-			
+
 			modifier = {
 				factor = 2
 				date > "1946.1.1"
 			}
-			
+
 			modifier = {
 				factor = 5
 				date > "1946.1.6"
 			}
 		}
 	}
-	
+
 	tech_infantry_pith_helmets = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1895
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1895}
 		}
-		
+
 		category_army = {
 			defense = 0.04
 			breakthrough = 0.04
@@ -6538,21 +6565,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_protective_gear = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1912
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1912}
 		}
-		
+
 		category_army = {
 			defense = 0.05
 			breakthrough = 0.05
@@ -6562,7 +6589,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_infantry_infantry_helmets
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_gas_masks
 			research_cost_coeff = 1
@@ -6573,21 +6600,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_infantry_helmets = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1915
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1915}
 		}
-		
+
 		category_all_infantry = {
 			defense = 0.02
 			breakthrough = 0.02
@@ -6596,7 +6623,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			leads_to_tech = tech_infantry_1930_helmets
 			research_cost_coeff = 1
 		}
-		
+
 		enable_equipments = {
 			helmet_equipment_0
 		}
@@ -6606,25 +6633,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_1930_helmets = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1930
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1930}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_1941_helmets
 			research_cost_coeff = 1
 		}
-		
+
 		enable_equipments = {
 			helmet_equipment_1
 		}
@@ -6634,20 +6661,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 	tech_infantry_1941_helmets = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1941
 		folder = {
 			name = infantry_folder
 			position = { x = 12 y = @1941}
 		}
-		
+
 		enable_equipments = {
 			helmet_equipment_2
 		}
@@ -6657,21 +6684,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_gas_masks = {
 
-		research_cost = 1.4
+		research_cost = 0.14
 		start_year = 1914
 		folder = {
 			name = infantry_folder
 			position = { x = 14 y = @1914}
 		}
-		
+
 		category_army = {
 			defense = 0.05
 		}
@@ -6681,28 +6708,28 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 
 	#### Cavalry
-	
+
 	tech_camel_cavalry = {
 
 		enable_equipments = {
 			camel_equipment_0
 		}
-		
+
 		enable_subunits = {
 			camel_cavalry
 		}
-		
+
 		dependencies = {
 			tribal_riding = 1
 		}
-		
+
 		allow = {
 		 	OR = {
 				AND = {
@@ -6720,7 +6747,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			}
         }
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1845
 		folder = {
 			name = infantry_folder
@@ -6732,8 +6759,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 			modifier = {
 				factor = 0
@@ -6741,7 +6768,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 					afr_is_tribal = yes
 					is_south_american_tribe = yes
 				}
- 
+
 				date < "1860.1.1"
 			}
 			modifier = {
@@ -6765,7 +6792,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			tribal_riding = 1
 		}
 
-		research_cost = 1.2
+		research_cost = 0.12
 		start_year = 1845
 		folder = {
 			name = infantry_folder
@@ -6798,8 +6825,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 			modifier = {
 				factor = 0
@@ -6807,7 +6834,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 					afr_is_tribal = yes
 					is_south_american_tribe = yes
 				}
- 
+
 				date < "1860.1.1"
 			}
 			modifier = {
@@ -6823,7 +6850,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 	horse_transport = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = infantry_folder
@@ -6846,27 +6873,27 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { 
-				factor = 0.8 
-				has_war = no 
-			}	 
-			modifier = { 
-				factor = 1.5 
-				has_war = yes 
-			} 
-			modifier = { 
-				factor = 0 
-				afr_is_tribal = yes 
- 
-				date < 1875.1.1 
+			factor = 20
+			modifier = {
+				factor = 0.8
+				has_war = no
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				afr_is_tribal = yes
+
+				date < 1875.1.1
 			}
 		}
 	}
 
 	horse_artillery = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = infantry_folder
@@ -6882,15 +6909,15 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
 
 	mounted_infantry = {
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1850
 		folder = {
 			name = infantry_folder
@@ -6915,8 +6942,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -6928,13 +6955,13 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			max_organisation = 0.03
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1862
 		folder = {
 			name = infantry_folder
 			position = { x = 18 y = @1862}
 		}
-		
+
 		path = {
 			leads_to_tech = improved_dragoon_equipment
 			research_cost_coeff = 1
@@ -6945,19 +6972,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	improved_dragoon_equipment = {
 
 		category_ranged_cavalry = {
 			soft_attack = 0.1
 		}
 
-		research_cost = 0.8
+		research_cost = 0.08
 		start_year = 1870
 		folder = {
 			name = infantry_folder
@@ -6969,8 +6996,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -6982,7 +7009,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			max_organisation = 2
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1860
 		folder = {
 			name = infantry_folder
@@ -6999,8 +7026,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -7013,7 +7040,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			max_organisation = 3
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1862
 		folder = {
 			name = infantry_folder
@@ -7030,8 +7057,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -7042,7 +7069,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			recon = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1864
 		folder = {
 			name = infantry_folder
@@ -7059,8 +7086,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -7072,7 +7099,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			soft_attack = 0.04
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1865
 		folder = {
 			name = infantry_folder
@@ -7089,8 +7116,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -7102,7 +7129,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1872
 		folder = {
 			name = infantry_folder
@@ -7119,8 +7146,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
@@ -7131,13 +7158,13 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			recon = 0.1
 			soft_attack = 0.05
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_colonial_cavalry
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1
+
+		research_cost = 0.1
 		start_year = 1876
 		folder = {
 			name = infantry_folder
@@ -7149,30 +7176,30 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_colonial_cavalry = {
 
 		category_cavalry = {
 			soft_attack = 0.02
 			breakthrough = 0.05
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_improved_modern_cavalry_equipment
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_colonial_service_equipment
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1885
 		folder = {
 			name = infantry_folder
@@ -7184,25 +7211,25 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		}
 
 		ai_will_do = {
-			factor = 20 
-			modifier = { factor = 0.8 has_war = no }	 
+			factor = 20
+			modifier = { factor = 0.8 has_war = no }
 			modifier = { factor = 1.5 has_war = yes }
 		}
 	}
-	
+
 	tech_infantry_improved_modern_cavalry_equipment = {
 
 		category_cavalry = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_specialized_cavalry_weapons
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.2
+
+		research_cost = 0.12
 		start_year = 1895
 		folder = {
 			name = infantry_folder
@@ -7217,20 +7244,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_specialized_cavalry_weapons = {
 
 		category_cavalry = {
 			soft_attack = 0.1
 			hard_attack = 0.05
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_great_war_cavalry
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.2
+
+		research_cost = 0.12
 		start_year = 1905
 		folder = {
 			name = infantry_folder
@@ -7245,14 +7272,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_great_war_cavalry = {
 
 		enable_subunits = {
 			great_war_cavalry
 		}
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1912
 		folder = {
 			name = infantry_folder
@@ -7267,27 +7294,27 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_special_infantry_corps = {
 
 		special_forces_min = 3
 		special_forces_cap = 0.02
-	
+
 		path = {
 			leads_to_tech = tech_infantry_colonial_marines
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_terrain_adaptability
 			research_cost_coeff = 1
 		}
-		
+
 		dependencies = {
 			tribal_tatics = 1
 		}
-	
-		research_cost = 1.25
+
+		research_cost = 0.125
 		start_year = 1840
 		folder = {
 			name = infantry_folder
@@ -7302,24 +7329,24 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_colonial_marines = {
 
 		enable_subunits = {
 			early_marine
 		}
-	
+
 		path = {
 			leads_to_tech = tech_infantry_improved_landing_gear
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_navy_revolver
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.25
+
+		research_cost = 0.125
 		start_year = 1850
 		folder = {
 			name = infantry_folder
@@ -7335,18 +7362,18 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_navy_revolver = {
 
 		special_forces_attack_factor = 0.04
 		special_forces_defence_factor = 0.04
-	
+
 		path = {
 			leads_to_tech = tech_infantry_standardised_navy_revolver
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1850
 		folder = {
 			name = infantry_folder
@@ -7362,12 +7389,12 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_standardised_navy_revolver = {
 
 		special_forces_cap = 0.01
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1862
 		folder = {
 			name = infantry_folder
@@ -7383,17 +7410,17 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_improved_landing_gear = {
 
 		invasion_preparation = -0.1
-	
+
 		path = {
 			leads_to_tech = tech_infantry_improved_field_equipment
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.25
+
+		research_cost = 0.125
 		start_year = 1862
 		folder = {
 			name = infantry_folder
@@ -7409,14 +7436,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_improved_field_equipment = {
 
 		amphibious_invasion  = 0.05
 		heat_attrition_factor = -0.05
 		winter_attrition_factor = -0.05
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1870
 		folder = {
 			name = infantry_folder
@@ -7431,23 +7458,23 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_terrain_adaptability = {
 
 		attrition = -0.04
 		supply_consumption_factor = -0.06
-		
+
 		path = {
 			leads_to_tech = tech_infantry_specialized_training
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_climate_training
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.3
+
+		research_cost = 0.13
 		start_year = 1850
 		folder = {
 			name = infantry_folder
@@ -7462,17 +7489,17 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_specialized_training = {
 
 		special_forces_min = 2
-		
+
 		path = {
 			leads_to_tech = tech_infantry_special_service_branches
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.2
+
+		research_cost = 0.12
 		start_year = 1850
 		folder = {
 			name = infantry_folder
@@ -7487,23 +7514,23 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_climate_training = {
 
 		heat_attrition_factor = -0.05
 		winter_attrition_factor = -0.05
-		
+
 		path = {
 			leads_to_tech = tech_infantry_quinine
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_special_service_branches
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1876
 		folder = {
 			name = infantry_folder
@@ -7518,7 +7545,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			factor = 20 modifier = { factor = 0.8 has_war = no }	modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_quinine = {
 
 		supply_consumption_factor = 0.02
@@ -7531,8 +7558,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		dependencies = {
 			early_medicine = 1
 		}
-	
-		research_cost = 1.4
+
+		research_cost = 0.14
 		start_year = 1876
 		folder = {
 			name = infantry_folder
@@ -7551,33 +7578,33 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_special_service_branches = {
 
 		special_forces_min = 3
 		special_forces_cap = 0.02
-		
+
 		path = {
 			leads_to_tech = tech_infantry_colonial_service_equipment
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_marines_1
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_mountaineers_1
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_shocktroops_1
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.25
+
+		research_cost = 0.125
 		start_year = 1885
 		folder = {
 			name = infantry_folder
@@ -7592,22 +7619,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_colonial_service_equipment = {
 
 		category_all_infantry = {
 			defense = 0.05
 		}
-		
+
 		attrition = -0.02
 		out_of_supply_factor = -0.02
-		
+
 		path = {
 			leads_to_tech = tech_infantry_modern_service_equipment
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1895
 		folder = {
 			name = infantry_folder
@@ -7622,20 +7649,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_modern_service_equipment = {
 
 		category_all_infantry = {
 			defense = 0.04
 			breakthrough = 0.04
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_infantry_specialization
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1905
 		folder = {
 			name = infantry_folder
@@ -7650,22 +7677,22 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_infantry_specialization = {
 
 		special_forces_min = 2
-		
+
 		path = {
 			leads_to_tech = tech_infantry_early_sniper_team
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_two_inch_medium_mortar
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.2
+
+		research_cost = 0.12
 		start_year = 1912
 		folder = {
 			name = infantry_folder
@@ -7680,23 +7707,23 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_early_sniper_team = {
 
 		enable_subunits = {
 			sniper_team_support
 		}
-		
+
 		enable_equipments = {
 			sniper_equipment_0
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_sniper_team
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.2
+
+		research_cost = 0.12
 		start_year = 1915
 		folder = {
 			name = infantry_folder
@@ -7711,7 +7738,7 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_sniper_team = {
 
 		sniper_team_support = {
@@ -7719,8 +7746,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			defense = 0.04
 			breakthrough = 0.02
 		}
-	
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1918
 		folder = {
 			name = infantry_folder
@@ -7735,20 +7762,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_two_inch_medium_mortar = {
 
 		category_army = {
 			soft_attack = 0.08
 			hard_attack = 0.03
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_stokes_mortar
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 1.2
+
+		research_cost = 0.12
 		start_year = 1915
 		folder = {
 			name = infantry_folder
@@ -7763,21 +7790,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_stokes_mortar = {
 
 		category_army = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-	
-		research_cost = 1.3
+
+		research_cost = 0.13
 		start_year = 1917
 		folder = {
 			name = infantry_folder
 			position = { x = 20 y = @1917}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_mortar_3
 			research_cost_coeff = 1
@@ -7791,21 +7818,21 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_mortar_3 = {
 
 		category_army = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-	
-		research_cost = 1.3
+
+		research_cost = 0.13
 		start_year = 1920
 		folder = {
 			name = infantry_folder
 			position = { x = 20 y = @1920}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_mortar_4
 			research_cost_coeff = 1
@@ -7825,8 +7852,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-	
-		research_cost = 1.3
+
+		research_cost = 0.13
 		start_year = 1936
 		folder = {
 			name = infantry_folder
@@ -7841,19 +7868,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_marines_1 = {
 
-		enable_subunits = {	
+		enable_subunits = {
 			marine
 		}
-	
+
 		path = {
 			leads_to_tech = tech_infantry_marines_2
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1890
 		folder = {
 			name = infantry_folder
@@ -7869,19 +7896,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_marines_2 = {
 
 		marine = {
 			soft_attack = 0.05
 		}
-	
+
 		path = {
 			leads_to_tech = tech_infantry_marines_3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.15
+
+		research_cost = 0.115
 		start_year = 1900
 		folder = {
 			name = infantry_folder
@@ -7897,14 +7924,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_marines_3 = {
 
 		marine = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1914
 		folder = {
 			name = infantry_folder
@@ -7929,8 +7956,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		marine = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1920
 		folder = {
 			name = infantry_folder
@@ -7955,8 +7982,8 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		marine = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1936
 		folder = {
 			name = infantry_folder
@@ -7976,19 +8003,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_mountaineers_1 = {
 
-		enable_subunits = {	
+		enable_subunits = {
 			mountaineers
 		}
-	
+
 		path = {
 			leads_to_tech = tech_infantry_mountaineers_2
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1890
 		folder = {
 			name = infantry_folder
@@ -8004,19 +8031,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_mountaineers_2 = {
 
 		mountaineers = {
 			soft_attack = 0.05
 		}
-	
+
 		path = {
 			leads_to_tech = tech_infantry_mountaineers_3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.15
+
+		research_cost = 0.115
 		start_year = 1900
 		folder = {
 			name = infantry_folder
@@ -8032,20 +8059,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_mountaineers_3 = {
 
 		mountaineers = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1914
 		folder = {
 			name = infantry_folder
 			position = { x = 24 y = @1914}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_mountaineers_4
 			research_cost_coeff = 1
@@ -8065,14 +8092,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		mountaineers = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1920
 		folder = {
 			name = infantry_folder
 			position = { x = 24 y = @1920}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_mountaineers_5
 			research_cost_coeff = 1
@@ -8092,14 +8119,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		mountaineers = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1936
 		folder = {
 			name = infantry_folder
 			position = { x = 24 y = @1936}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_special_forces_combined
 			research_cost_coeff = 1
@@ -8114,19 +8141,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_shocktroops_1 = {
 
-		enable_subunits = {	
+		enable_subunits = {
 			shock_troops
 		}
-	
+
 		path = {
 			leads_to_tech = tech_infantry_shocktroops_2
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1890
 		folder = {
 			name = infantry_folder
@@ -8141,19 +8168,19 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_shocktroops_2 = {
 
 		shock_troops = {
 			soft_attack = 0.05
 		}
-	
+
 		path = {
 			leads_to_tech = tech_infantry_shocktroops_3
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.15
+
+		research_cost = 0.115
 		start_year = 1900
 		folder = {
 			name = infantry_folder
@@ -8168,20 +8195,20 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_shocktroops_3 = {
 
 		shock_troops = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1914
 		folder = {
 			name = infantry_folder
 			position = { x = 26 y = @1914}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_shocktroops_4
 			research_cost_coeff = 1
@@ -8200,14 +8227,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		shock_troops = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1920
 		folder = {
 			name = infantry_folder
 			position = { x = 26 y = @1920}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_shocktroops_5
 			research_cost_coeff = 1
@@ -8226,14 +8253,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		shock_troops = {
 			max_organisation = 5
 		}
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1936
 		folder = {
 			name = infantry_folder
 			position = { x = 26 y = @1936}
 		}
-		
+
 		path = {
 			leads_to_tech = tech_infantry_special_forces_combined
 			research_cost_coeff = 1
@@ -8247,14 +8274,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	tech_infantry_special_forces_combined = {
 
 		supply_consumption_factor = 0.02
 		attrition = -0.05
 		out_of_supply_factor = -0.1
-		
-		research_cost = 1.1
+
+		research_cost = 0.11
 		start_year = 1938
 		folder = {
 			name = infantry_folder
@@ -8270,17 +8297,17 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 has_war = yes } modifier = { factor = 0 afr_is_tribal = yes  date < 1875.1.1 }
 		}
 	}
-	
+
 	#### HIDDEN
 
 	tech_infantry_raj_oriental_uniforms = {
 
 		heat_attrition_factor = -0.1
 		acclimatization_hot_climate_gain_factor = 0.25
-		
-		research_cost = 1
+
+		research_cost = 0.1
 		start_year = 1857
-		
+
 		allow = {
 			always = no
 		}
@@ -8289,16 +8316,16 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			factor = 0
 		}
 	}
-	
+
 	tech_infantry_british_redcoats = {
-	
+
 		enable_subunits = {
 			redcoat_infantry
 		}
-		
-		research_cost = 1
+
+		research_cost = 0.1
 		start_year = 1857
-		
+
 		allow = {
 			always = no
 		}
@@ -8307,11 +8334,11 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			factor = 0
 		}
 	}
-	
-	#Custom for the Swedish FT	
-	
+
+	#Custom for the Swedish FT
+
 	tech_kustjagare = {
-		
+
 		allow = {
 			always = no
 		}
@@ -8319,14 +8346,14 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		enable_subunits = {
 			kustjagare_battalion
 		}
-		
-		research_cost = 1
+
+		research_cost = 0.1
 		start_year = 1857
-		
+
 	}
 
 	tech_carolean_cav = {
-		
+
 		allow = {
 			always = no
 		}
@@ -8335,13 +8362,13 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 			breakthrough = 0.15
 		}
 
-		research_cost = 1
+		research_cost = 0.1
 		start_year = 1857
-		
+
 	}
 
 	tech_carolean_speed = {
-		
+
 		allow = {
 			always = no
 		}
@@ -8353,15 +8380,15 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 
 		category_army = {
 			breakthrough = 0.10
-		}		
-		
-		research_cost = 1
+		}
+
+		research_cost = 0.1
 		start_year = 1857
-		
+
 	}
 
 	tech_carolean_shock = {
-		
+
 		allow = {
 			always = no
 		}
@@ -8369,11 +8396,11 @@ factor = 20 modifier = { factor = 0.8 has_war = no }	 modifier = { factor = 1.5 
 		category_army = {
 			soft_attack = 0.1
 		}
-		
+
 		enable_tactic = tactic_breakthrough
-		
-		research_cost = 1
+
+		research_cost = 0.1
 		start_year = 1857
-		
+
 	}
 }

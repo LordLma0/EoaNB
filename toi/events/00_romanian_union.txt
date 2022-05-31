@@ -452,6 +452,8 @@ country_event = { # MOL - 1858 election
 	option = { # Alexandru Ioan Cuza
 		name = walalchian_union.8.a
 		ai_chance = { factor = 100 }
+                remove_ideas = { ROM_ghika_hos }
+                add_ideas = { ROM_cuza_hos }
 		create_country_leader = {
 			name = "Alexandru Ioan Cuza"
 			desc = "ALEXANDRU_IOAN_CUZA_DESC"
@@ -474,6 +476,8 @@ country_event = { # ROM - 1858 election
 	option = { # Alexandru Ioan Cuza
 		name = walalchian_union.9.a
 		ai_chance = { factor = 100 }
+                remove_ideas = { ROM_ghika_hos }
+                add_ideas = { ROM_cuza_hos }
 		create_country_leader = {
 			name = "Alexandru Ioan Cuza"
 			desc = "ALEXANDRU_IOAN_CUZA_DESC"
@@ -555,6 +559,8 @@ country_event = { # romaninan unifaction news,
 	option = { # Alexandru Ioan Cuza
 		name = walalchian_union.8.a
 		ai_chance = { factor = 100 }
+                remove_ideas = { ROM_ghika_hos }
+                add_ideas = { ROM_cuza_hos }
 		create_country_leader = {
 			name = "Alexandru Ioan Cuza"
 			desc = "ALEXANDRU_IOAN_CUZA_DESC"
@@ -572,8 +578,8 @@ country_event = {
 	id = walalchian_union.12
 	title = walalchian_union.12.t
 	desc = walalchian_union.12.d
-	#picture = GFX_grigore_ghica2
-
+	picture = GFX_report_event_romanul
+	
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -584,6 +590,12 @@ country_event = {
 				add_ideas = ROM_romanul_newspaper
 				EOANBSYS_institutions_nationalism_add_five = yes
 		}
+	}
+	
+	option = { 
+		name = walalchian_union.12.b
+		ai_chance = { factor = 100 }
+
 	}
 }
 
@@ -605,6 +617,23 @@ country_event = {
 				EOANBSYS_institutions_nationalism_add_five = yes
 				add_stability = 0.05
 		}
+	}
+}
+
+###Anti Bulgarian Violence in the Bolgrad area 
+country_event = { 
+	id = walalchian_union.14
+	title = walalchian_union.14.t
+	desc = walalchian_union.14.d
+	#picture = GFX_grigore_ghica2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = walalchian_union.14.a
+		ai_chance = { factor = 100 }
+			add_stability = -0.05
 	}
 }
 
@@ -694,7 +723,7 @@ country_event = {
 	id = wallachia_focustree.6
 	title = wallachia_focustree.6.t
 	desc = wallachia_focustree.6.d
-	#picture = GFX_grigore_ghica2
+	picture = GFX_ROM_political_situation_pic
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -709,7 +738,7 @@ country_event = {
 	id = wallachia_focustree.7
 	title = wallachia_focustree.7.t
 	desc = wallachia_focustree.7.d
-	#picture = GFX_grigore_ghica2
+	picture = GFX_ROM_unification_woes_pic
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -735,13 +764,28 @@ country_event = {
 	id = wallachia_focustree.8
 	title = wallachia_focustree.8.t
 	desc = wallachia_focustree.8.d
-	#picture = GFX_grigore_ghica2
+	picture = GFX_ROM_rallies_unification_pic
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = wallachia_focustree.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	id = wallachia_focustree.9
+	title = wallachia_focustree.9.t
+	desc = wallachia_focustree.9.d
+	#picture = GFX_grigore_ghica2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = wallachia_focustree.9.a
 		ai_chance = { factor = 100 }
 	}
 }

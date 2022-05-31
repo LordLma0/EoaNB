@@ -161,7 +161,11 @@ SAX_decision_category_trias_policy = {
 				limit = {
 					SCH = { 
 						exists = yes
-						is_subject = no 
+						is_subject = no
+						has_country_leader = {
+							name = "Friedrich von Augustenburg"
+							ruling_only = yes
+						}
 					}
 					NOT = {
 						HLS = { 
@@ -194,7 +198,11 @@ SAX_decision_category_trias_policy = {
 						AND = {
 							SCH = { 
 								exists = yes
-								is_subject = no 
+								is_subject = no
+								has_country_leader = {
+									name = "Friedrich von Augustenburg"
+									ruling_only = yes
+								}
 							}
 							NOT = {
 								HLS = { 
@@ -718,7 +726,11 @@ SAX_decision_category_trias_policy = {
 			SCH = { 
 				has_opinion_modifier = SAX_GC_BUNDESREFORM_POSITIVE_REL
 				exists = yes
-				is_subject = no 
+				is_subject = no
+				has_country_leader = {
+					name = "Friedrich von Augustenburg"
+					ruling_only = yes
+				}
 			}
 		}
 
@@ -1222,7 +1234,11 @@ SAX_decision_category_trias_policy = {
 			SCH = { 
 				has_opinion_modifier = SAX_GC_BUNDESREFORM_CAUTIOUS_REL
 				exists = yes
-				is_subject = no 
+				is_subject = no
+				has_country_leader = {
+					name = "Friedrich von Augustenburg"
+					ruling_only = yes
+				}
 			}
 		}
 
@@ -1726,7 +1742,11 @@ SAX_decision_category_trias_policy = {
 			SCH = { 
 				has_opinion_modifier = SAX_GC_BUNDESREFORM_NEGATIVE_REL
 				exists = yes
-				is_subject = no 
+				is_subject = no
+				has_country_leader = {
+					name = "Friedrich von Augustenburg"
+					ruling_only = yes
+				}
 			}
 		}
 
@@ -1922,7 +1942,11 @@ SAX_decision_category_trias_policy = {
 						limit = {
 							SCH = { 
 								exists = yes
-								is_subject = no 
+								is_subject = no
+								has_country_leader = {
+									name = "Friedrich von Augustenburg"
+									ruling_only = yes
+								}
 							}
 							NOT = {
 								HLS = { 
@@ -2023,7 +2047,7 @@ SAX_decision_category_obtain_foreign_equipment = {
 
 		visible = {
 			country_exists = BEL
-			BEL = { owns_state = 977 }
+			BEL = { owns_state = 34 }
 			BEL = { has_war = no }
 		}
 
@@ -2353,14 +2377,36 @@ SAX_decision_category_economy = {
         allowed = { always = no }
 
         available = {
-			owns_state = 65
-			65 = { infrastructure > 6 }
+			has_railway_level = {
+				state = 65
+				level = 2
+			}
+			custom_trigger_tooltip = { #Chemnitz-Zwickau
+				tooltip = SAX_mission_railway_expansion_trigger_tt_1
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 11481
+						target_province = 9471
+					}
+				}
+			}
+			custom_trigger_tooltip = { #Dresden-Freiberg
+				tooltip = SAX_mission_railway_expansion_trigger_tt_2
+				hidden_trigger = {
+					has_railway_connection = {
+						start_province = 514
+						target_province = 6559
+					}
+				}
+			}
         }
 		
         activation = { always = no }
 
         highlight_states = {
-			state = 65
+			highlight_state_targets = {
+				state = 65
+			}
 		}
 
         fire_only_once = yes
@@ -2368,6 +2414,10 @@ SAX_decision_category_economy = {
         is_good = no
 		
         days_mission_timeout = 1200
+		
+		cancel_trigger = {
+			NOT = { owns_state = 65 }
+		}
 		
         timeout_effect = {
             if = {
@@ -2398,15 +2448,24 @@ SAX_decision_category_economy = {
 
 		available = {
 			has_completed_focus = SAX_focus_railway_gaps
-			65 = { infrastructure > 7 }
+			65 = { infrastructure > 4 }
+			has_railway_level = {
+				state = 65
+				level = 2
+			}
 			if = {
 				limit = {
 					owns_state = 950
 				}
-				950 = { infrastructure > 6 }
+				950 = { infrastructure > 3 }
+				has_railway_level = {
+					state = 950
+					level = 2
+				}
 			}
 		    has_tech = steam_locomotive_3
 		    has_tech = standardized_gauge
+			has_tech = train_1855
 		}
 
 		visible = {
@@ -2472,14 +2531,14 @@ SAX_decision_category_economy = {
 		visible = {
 			has_full_control_of_state = 65
 			NOT = { 
-				SAX = {
+				65 = {
 					has_resources_amount = {
 						resource = coal
 						amount > 16
 						state = 65
 					}
 				}
-				SAX = {
+				65 = {
 					has_resources_amount = {
 						resource = iron
 						amount > 16
@@ -3041,7 +3100,7 @@ SAX_decision_category_economy = {
 	#Support the ADCA
 	SAX_decision_support_adca = {
 
-		icon = money
+		icon = gre_investment_decisions
 
 		allowed = { tag = SAX }
 		

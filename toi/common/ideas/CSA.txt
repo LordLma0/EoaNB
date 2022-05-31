@@ -191,7 +191,7 @@ ideas = {
 			picture = generic_infantry_bonus
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.08
 			}
 		}
 		CSA_Civil_War_Total_War = {
@@ -224,6 +224,10 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				has_global_flag = ACW_American_Civil_War
 			}
 
 			removal_cost = -1
@@ -304,7 +308,7 @@ ideas = {
 				min_export = 0.05
 				political_power_gain = 0.05
 			}
-	}
+		}
 		CSA_confederate_government = {
 
 			allowed = {
@@ -324,7 +328,7 @@ ideas = {
 				political_power_factor = -0.1
 				generate_wargoal_tension = 0.2
 			}
-	}
+		}
 		CSA_federal_government = {
 
 			allowed = {
@@ -344,7 +348,7 @@ ideas = {
 				political_power_factor = -0.05
 				generate_wargoal_tension = 0.1
 			}
-	}
+		}
 		CSA_aristocrats_discouraged = {
 
 			allowed = {

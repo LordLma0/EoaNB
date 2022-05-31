@@ -14,7 +14,7 @@
 
   non_afr_empire_politics_legitimacy_tooltip:0 "§HLegitimacy§!\n \nYou have [GetLegitimacyState] Legitimacy.\n \n§YEffects:§! \nDaily Legislative Power: [?ROOT.legitimacy_ppg|+=]\nWar Support: [?ROOT.legitimacy_wsf|0%+=]\nPolitical Advisor Cost: [?ROOT.legitimacy_pacf|%0-=]\n \nCurrently drifting [?political_legitimacy_drift|%0+=] per month towards Equilibrium: [?Root.political_legitimacy_equilibrium|%0+]\n \n§YCurrently Affected By:§!\n Base Value: §G68%§!\n Adjusted Legitimacy: [?ROOT.political_legitimacy_equilibrium_custom|%+=0][political_legitimacy_power_rank][political_legitimacy_is_subject][political_legitimacy_has_offensive_war][political_legitimacy_has_defensive_war][political_legitimacy_leader_of_religion][political_legitimacy_anarchist_government][political_legitimacy_autocracy_heir][political_legitimacy_government_net_popularity][political_legitimacy_government_constitution][political_legitimacy_political_stability][political_legitimacy_unpopular_rulers][political_legitimacy_debt_concern][political_legitimacy_debt_level]"
 
-  legitimacy_dynamic_modifier:0 "£pol_power_20x20 Legitimacy"
+  legitimacy_dynamic_modifier:0 "£pol_power Legitimacy"
 
   legitimacy_state_0:0 "§RCatastrophic§!"
   legitimacy_state_1:0 "§OVery Bad§!"
@@ -167,15 +167,15 @@
 
  court:0 "Court Laws"
  kangaroo_court:0 "Kangaroo Court"
- kangaroo_court_desc:0 "This country have disorganised and very injust courts. It results in much innocents being executed, jailed or even tortured."
+ kangaroo_court_desc:0 "This country has disorganised and very injust courts. It results in much innocents being executed, jailed or even tortured."
  biased_courtroom:0 "Biased Courtroom"
- biased_courtroom_desc:0 "This country have well-running courts but the law can be interpreted very widely. It results in an injustice, when elites can't be accused of anything because of their highly-qualified solicitors, but lower class can't have any lawyers."
+ biased_courtroom_desc:0 "This country has well-running courts but the law can be interpreted very widely. It results in an injustice, when elites can't be accused of anything because of their highly-qualified solicitors, but lower class can't have any lawyers."
  high_judge_courtroom:0 "High Judge Courtroom"
- high_judge_courtroom_desc:0 "This country have the High Judges who are completely honest people. They can judge any kind of proceeding, however, they are very busy with it and a person can wait for their hearing for a long time."
+ high_judge_courtroom_desc:0 "This country has high judges who are usually upright people. They can judge any kind of proceeding, however, they are very busy with it and a person can wait for their hearing for a long time."
  quasi_jury_court:0 "Quasi-Jury Court"
- quasi_jury_court_desc:0 "This country have the juries who are lawyers elected for a court job. They can give the verdict about guilt is the defendant or not, but punishment or deliverance still depends on a decision of the primary judge."
+ quasi_jury_court_desc:0 "This country has juries who are lawyers elected for a court job. They can give a verdict on whether the defendant is guilty or not, but punishment or deliverance still depends on a decision of the primary judge."
  jury_court:0 "Jury Court"
- jury_court_desc:0 "This country have juries who are lawyers elected for a court job. They can give the verdict about guilt is the defendant or not and punishment or deliverance fully depends on their decision."
+ jury_court_desc:0 "This country has juries who are lawyers elected for a court job. They can give a verdict on whether the defendant is guilty or not, and punishment or deliverance fully depends on their decision."
 
  political_parties:0 "Political Parties Laws"
  pp_open_politics:0 "Open Politics"
@@ -523,7 +523,7 @@
   reform_name_25_8:0 "The Prussian Trade and Tariffs Act of [GetYear]"
   
   #Danish Custom Votes
-  reform_name_26_3:0 "The Holmen Naval Base Act of [GetYear]"
+  reform_name_26_3:0 "The Holmen Naval Port Act of [GetYear]"
   reform_name_26_4:0 "The Wartime Infantry Battalion Duplication Act of [GetYear]"
   reform_name_26_5:0 "The Danish Conscription Act of [GetYear]"
   reform_name_26_6:0 "The Danish Army Budget Act of [GetYear]"
@@ -605,3 +605,5 @@
 
   eoanb_decision_legitimize_military_austerity_victorian:0 "Prove Military Prowess"
   eoanb_decision_gather_legitimacy_victorian:0 "Gather Political Legitimacy"
+
+  reform_screen_disabled_for_government_flag: " §b[THIS.GetNameDef]§! has government interested in dynamic reform"

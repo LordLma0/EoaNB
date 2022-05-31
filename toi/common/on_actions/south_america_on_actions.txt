@@ -1,7 +1,11 @@
 on_actions = {
 	on_annex = {
 		effect = {
-			MEX = { country_event = { id = mexico.12 } }
+			if = {
+				limit = { has_global_flag = MEX_MEC_CIVIL_WAR }
+				MEX = { country_event = { id = mexico.12 } }
+				MEC = { country_event = { id = mexico.20 } }
+			}
 			if = {
 				limit = { 
 					FROM = { TAG = BUE } 
@@ -59,9 +63,10 @@ on_actions = {
 	on_civil_war_end = {
 		effect = {
 			COL = { country_event = { id = colombia.4 } }
-			DOM = { 
+			ROOT = { 
 				if = { 
 					limit = {
+						TAG = DOM
 						has_global_flag = DOM_1857_tobacco_coup_flag
 					}
 					clr_global_flag = DOM_1857_tobacco_coup_flag
@@ -89,7 +94,7 @@ on_actions = {
 	on_civil_war_end_before_annexation = {
 		effect = {
 			if = {
-				limit = { ROOT = { TAG = DOM } }
+				limit = { FROM = { TAG = DOM } }
 				DOM = {
 					if = {
 						limit = { 
@@ -131,13 +136,13 @@ on_actions = {
 				limit = { FROM = { TAG = BOL } }
 				if = {
 					limit = { FROM = { has_country_flag = BOL_coup_is_original_tag } }
-					#ROOT = { white_peace = FROM }
-					if = {
-						limit = { FROM = { is_ai = no } }
-						FROM = { ROOT = { change_tag_from = PREV } }
-					}
+					ROOT = { white_peace = FROM }
+					#if = {
+					#	limit = { FROM = { is_ai = no } }
+					#	FROM = { ROOT = { change_tag_from = PREV } }
+					#}
 					FROM = {
-						country_event = { id = bolivia_civil_war.2 } 
+						country_event = { id = bolivia_civil_war.2 hours = 2} 
 						annex_country = {
 							target = ROOT
 							transfer_troops = yes
@@ -146,10 +151,37 @@ on_actions = {
 				}
 				else = { ROOT = { clr_country_flag = BOL_coup_is_original_tag } }
 			}
+			if = {
+				limit = { FROM = { TAG = PRU } }
+				if = {
+					limit = { FROM = { has_country_flag = PRU_coup_is_original_tag } }
+					ROOT = { white_peace = FROM }
+					#if = {
+					#	limit = { FROM = { is_ai = no } }
+					#	FROM = { ROOT = { change_tag_from = PREV } }
+					#}
+					FROM = {
+						country_event = { id = bolivia_civil_war.2 hours = 2} 
+						annex_country = {
+							target = ROOT
+							transfer_troops = yes
+						}
+					}
+				}
+				else = { ROOT = { clr_country_flag = PRU_coup_is_original_tag } }
+			}
 		}
 	}
 	on_capitulation = {
 		effect = {
+			if = {
+				limit = { 
+					ROOT = { TAG = MEC }
+					has_global_flag = MEX_MEC_CIVIL_WAR 
+					MEC = { has_country_flag = autonomy_hispanic_crown_union_flag }
+				}
+				SPR = { country_event = { id = mexico_civil_war.36 days = 1 } }
+			}
 			ROOT = {
 				if = {
 					limit = { 
@@ -175,7 +207,7 @@ on_actions = {
 					MXE = {
 						annex_country = {
 							target = MEX
-							transfer_troops = no
+							transfer_troops = yes
 						}
 					}
 				}
@@ -189,7 +221,7 @@ on_actions = {
 				#	MEX = {
 				#		annex_country = {
 				#			target = MXE
-				#			transfer_troops = no
+				#			transfer_troops = yes
 				#		}
 				#	}
 				#}
@@ -243,7 +275,35 @@ on_actions = {
 				limit = {
 					has_start_date < 1858.1.1
 				}
-				SPR = { set_variable = { var = SPR_debt_repayment_profits value = 0.85 } }
+				PRU = {
+					start_civil_war = {
+						ruling_party = centrism
+						ideology = traditional_conservatism
+						#size = 0
+						#only_own_territory = yes
+						capital = 492
+						states = { 
+							492 923 1131 1085
+						}
+						keep_political_leader = yes
+						keep_political_party_members = yes
+					}
+					country_event = { id = peru_civil_war.3 }
+					set_popularities = {
+						anarchism = 0
+						vanguard_communism = 0
+						collectivist_socialism = 0
+						social_egalitarianism = 0
+						centrism = 80
+						traditional_conservatism = 18
+						radical_democracy = 0
+						chauvinist_populism = 2
+						autocracy = 0
+						fundamentalism = 0
+					}
+				}
+				492 = { state_event = { id = peru_civil_war.1 trigger_for = controller } }
+				SPR = { add_to_variable = { var = SPR_debt_repayment_profits value = 0.85 } }
 				DOM = { country_event = { id = DOM_1857_tobacco_coup.1 days = 10 } }
 				DOM = { country_event = { id = hispaniola_debt.1 days = 5 } }
 				

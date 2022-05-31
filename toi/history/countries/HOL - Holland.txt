@@ -40,8 +40,8 @@
 
 		 hc_no_healthcare
 		law_police_force
-		inframain_no_subsidies_infrastructure
-		navinfra_no_naval_infrastructure
+		inframain_basic_maintenance_infrastructure
+		navinfra_decent_naval_infrastructure
 		sfund_private_ventures_only
 
 				#NATIONAL SPIRITS
@@ -74,37 +74,70 @@ set_popularities = {
 }
 
 	set_technology = {
-	infantry_weapons = 1 traditional_mixed_arms = 1
-	tribal_carrier_birds = 1 tribal_electrical_theory = 1
-	tribal_steel_tools = 1
-	tribal_tatics = 1
-	tribal_gunpowder = 1
-	tribal_riding = 1
-	tribal_steam_experiments = 1
-	tribal_forging = 1
-	tribal_artisan = 1
-	tribal_chemistry = 1
-	tribal_guilds_trade = 1
-	tribal_crop_planting = 1
-	tribal_irrigation = 1
-	tribal_crop_rotation = 1
-	tribal_salted_smoked_goods = 1
-	tribal_leching = 1
-	tech_infantry_napoleonic_uniform = 1
-	vic_army_cloth = 1
-	tech_naval_mtg_simple_corvette_hull = 1
+		infantry_weapons = 1
+		traditional_mixed_arms = 1
+		tribal_carrier_birds = 1
+		tribal_electrical_theory = 1
+		tribal_steel_tools = 1
+		tribal_tatics = 1
+		tribal_gunpowder = 1
+		tribal_riding = 1
+		tribal_steam_experiments = 1
+		tribal_forging = 1
+		tribal_artisan = 1
+		tribal_chemistry = 1
+		tribal_guilds_trade = 1
+		tribal_crop_planting = 1
+		tribal_irrigation = 1
+		tribal_crop_rotation = 1
+		tribal_salted_smoked_goods = 1
+		tribal_leching = 1
+		tech_infantry_napoleonic_uniform = 1
+		tech_infantry_infantry_swords = 1
+		tech_infantry_flintlock_pistol = 1
+		hand_revolvers = 1
+		vic_army_cloth = 1
+		tech_infantry_breech_loading = 1
+		tech_naval_mtg_simple_corvette_hull = 1
 		tech_naval_mtg_24_pounder_battery = 1
 		tech_naval_mtg_sails = 1
 		tech_naval_mtg_crows_nest = 1
-	gw_artillery = 1
-	iron_railways = 1
-	steam_engine = 1
-	start_build_tech = 1
-	manufactories = 1
-	hot_blast_furnaces = 1
-	food_preserving_icebox = 1
-	early_artificial_fertilizer = 1
-	electrical_engineering = 1
+		tech_naval_mtg_early_gunboat = 1
+		tech_naval_mtg_1857_corvette_hull = 1
+		tech_naval_mtg_early_frigate = 1
+		tech_naval_mtg_1850_frigate = 1
+		tech_naval_mtg_lineship_hull = 1
+		tech_naval_mtg_1850_gunboat = 1
+		tech_naval_mtg_1857_lineship = 1
+		tech_naval_mtg_paddle_wheels = 1
+		gw_artillery = 1
+		rml_field_gun = 1
+		mass_transit_early = 1
+		tech_humanities_roadworks = 1
+		tech_humanities_metropolitan = 1
+		iron_railways = 1
+		steam_engine = 1
+		steam_locomotive = 1
+		manufactories = 1
+		hot_blast_furnaces = 1
+		food_preserving_icebox = 1
+		start_build_tech = 1
+		early_artificial_fertilizer = 1
+		electrical_engineering = 1
+		basic_cavalry = 1
+		socket_bayonet = 1
+		mounted_infantry = 1
+		civil_army_cloth = 1
+		tech_infantry_practical_rifling = 1
+		tech_infantry_caplock_pistol = 1
+		tech_infantry_percussion_cap = 1
+		rifle_equipment1 = 1
+		corliss_steam_engine = 1
+		mongolfiere = 1
+		ornithopter = 1
+		screw_propeller = 1
+		basic_train = 1
+		train_1855 = 1
 	}
 
 	if = {
@@ -150,234 +183,39 @@ add_opinion_modifier = {
 
 	# POLITICAL LEADERS
 
-create_country_leader = {
-		name = "Justinus van der Brugghen"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_HOL_Justinus_van_der_Brugghen.dds"
-		expire = 1900.1.1
-		ideology = conserv
-}
+	recruit_character = HOL_William_III
+	recruit_character = HOL_justinus_van_der_brugghen
+	
+	#Centrism
+	#HOL_johan_rudolph_thorbecke (see advisors)
+	
+	#SocEgal
+	#HOL_pieter_philip_van_bosse (see advisors)
+	
+	#Peripheral
+	#HOL_hendrik_forstner_van_dambenoy (see advisors)
+	
+	recruit_character = HOL_johan_d.c.c.w._dablaing_van_giessenburg
+	
+	# Generals
+	recruit_character = HOL_hendrik_frederik_karel_duycker
+	recruit_character = HOL_sébastien_trudo_adrien_hubar
+	recruit_character = HOL_willem_jan_knoop
+	recruit_character = HOL_johan_kraijenhoff
+	recruit_character = HOL_frederik_carel_list
+	recruit_character = HOL_charles_pierre_schimpf
+	recruit_character = HOL_françois_vincent_henri_antoine_de_stuers
+	recruit_character = HOL_willem_vincent_reinier_karel_baud
+	recruit_character = HOL_johan_wilhelm_blanken
+	recruit_character = HOL_adriaan_willem_anne_gevers_deynoot
 
-create_country_leader = {
-		name = "William III"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_HOL_William_III.dds"
-		expire = 1900.1.1
-		ideology = absolutism
-}
-
-create_country_leader = {
-		name = "Johan Rudolph Thorbecke"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_HOL_Johan_Thorbecke.dds"
-		expire = 1900.1.1
-		ideology = radical_liberal
-}
-
-create_country_leader = {
-		name = "Pieter Philip van Bosse"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "pieter_philip_van_bosse.dds"
-		expire = 1900.1.1
-		ideology = liberal_social
-}
-
-create_country_leader = {
-		name = "H.F.Ch. baron Forstner van Dambenoy"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_HOL_William_III.dds"
-		expire = 1900.1.1
-		ideology = reactionary
-}
-
-create_corps_commander = {
-	name = "Johan D.C.C.W. d'Ablaing van Giessenburg"
-	picture = "unit_leaders/Portrait_HOL_Johan_Daniel_Cornelis_Carel_Willem_Ablaing_van_Giessenburg.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Hendrik Frederik Karel Duycker"
-	picture = "Portrait_HOL_h_f_k_duycker.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Adriaan Engelvaart"
-	picture = "unit_leaders/Portrait_HOL_Adriaan_Engelvaart.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Sébastien Trudo Adrien Hubar"
-	picture = "unit_leaders/Portrait_HOL_Sebastien_Trudo_Adrien_Hubar.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Willem Jan Knoop"
-	picture = "unit_leaders/Portrait_HOL_Willem_Jan_Knoop.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Johan Kraijenhoff"
-	picture = "unit_leaders/Portrait_HOL_Johan_Kraijenhoff.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Frederik Carel List"
-	picture = "unit_leaders/Portrait_HOL_Frederik_Carel_List.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Bernard van Merlen"
-	picture = "unit_leaders/Portrait_HOL_Bernard_van_Merlen.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Charles Pierre Schimpf"
-	picture = "unit_leaders/Portrait_HOL_Charles_Pierre_Schimpf.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "François Vincent Henri Antoine de Stuers"
-	picture = "unit_leaders/Portrait_HOL_Francois_Vincent_Henri_Antoine_de_Stuers.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Hendrik Rudolph Trip"
-	picture = "unit_leaders/Portrait_HOL_Hendrik_Rudolph_Trip.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "H.F.Ch. baron Forstner van Dambenoy"
-	picture = "Portrait_HOL_h.f.ch_baron_forstner_van_dambenoy.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Abraham Jacobus Frederik Egter van Wissekerke"
-	picture = "unit_leaders/abraham_jacobus_frederik_egter_van_wissekerke.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_field_marshal = {
-	name = "Willem Vincent Reinier Karel Baud"
-	picture = "unit_leaders/willem_vincent_reinier_karel_baud.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Johannes Willem Bergansius"
-	picture = "unit_leaders/johannes_willem_bergansius.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 18151
-}
-
-create_corps_commander = {
-	name = "Johan Wilhelm Blanken"
-	picture = "Portrait_HOL_j_w_blanken.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 18152
-}
-
-create_corps_commander = {
-	name = "Adriaan Willem Anne Gevers Deynoot"
-	picture = ""
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
+	#advisors
+	recruit_character = HOL_abraham_jacobus_van_wissekerke
+	recruit_character = HOL_agnites_vrolik
+	recruit_character = HOL_hendrik_forstner_van_dambenoy				#also general
+	recruit_character = HOL_johan_rudolph_thorbecke
+	recruit_character = HOL_johannes_willem_bergansius					#also general
+	recruit_character = HOL_michel_henry_godefroi
+	recruit_character = HOL_pieter_philip_van_bosse
 }
 

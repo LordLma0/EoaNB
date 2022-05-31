@@ -6,9 +6,7 @@
 	set_convoys = 0
 
 	set_research_slots = 2
-			add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = HON }
-	add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = HON }
-
+	
 	add_ideas = {
 		#POLITICS
 
@@ -88,35 +86,40 @@ set_popularities = {
 		tech_naval_mtg_sails = 1
 		tech_naval_mtg_crows_nest = 1
 	}
+	add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 200 producer = HON }
+	add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 200 producer = HON }
+
 
 	# POLITICAL LEADERS
 
-	create_country_leader = {
-		name = "José Santos Guardiola"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_HON_Jose_Guardiola.dds"
-		expire = 1862.1.11
-		ideology = conserv
-}
+	#create_country_leader = {
+	#	name = "José Santos Guardiola"
+	#	desc = "POLITICS_TEMP_DESC"
+	#	picture = "Portrait_HON_Jose_Guardiola.dds"
+	#	expire = 1862.1.11
+	#	ideology = conserv
+	#}
+	recruit_character = HON_Jose_Guardiola
 
-	create_country_leader = {
-		name = "William Walker"
-		desc = "POLITICS_TEMP_DESC"
-		picture = "Portrait_HON_William_Walker.dds"
-		expire = 1862.1.11
-		ideology = national_populism
-}
+	#create_country_leader = {
+	#	name = "William Walker"
+	#	desc = "POLITICS_TEMP_DESC"
+	#	picture = "Portrait_HON_William_Walker.dds"
+	#	expire = 1862.1.11
+	#	ideology = national_populism
+	#}
+	#recruit_character = USA_william_walker #invisible until he fillibusters
 
-create_corps_commander = {
-	name = "José Trinidad Cabañas"
-	picture = "Portrait_HON_Jose_Cabanas.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
+#create_corps_commander = {
+#	name = "José Trinidad Cabañas"
+#	picture = "Portrait_HON_Jose_Cabanas.dds"
+#	traits = { }
+#	skill = 2
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+recruit_character = HON_Jose_Cabanas
 
 }

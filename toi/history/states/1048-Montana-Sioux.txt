@@ -12,8 +12,14 @@ state = {
 
 	history = {
 		owner = SIX
+		1870.1.1= {
+			owner = DAK
+		}
 		buildings = {
 			infrastructure = 1
+		}
+		victory_points = {
+			1767 1
 		}
 		add_core_of = SIX
 		#add_claim_by = USA
@@ -29,6 +35,6 @@ state = {
 	}
 
 	provinces = {
-		7760 10587
+		1767 7760 10587
 	}
 }

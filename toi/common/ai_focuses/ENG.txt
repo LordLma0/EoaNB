@@ -10,7 +10,7 @@ ai_historical_focus_list_ENG = {
 		ENG_focus_repeal_gse_act
 		ENG_focus_prepare_negotiations
 		ENG_focus_repeal_regulatory_act
-		ENG_focus_stop_lapse_doctrine
+		ENG_focus_continue_annex_policy
 		ENG_focus_preliminary_suppression
 		ENG_focus_Inclosure_act_1857
 		ENG_focus_Obscene_publications_act
@@ -111,7 +111,6 @@ ai_historical_focus_list_ENG = {
 		ENG_focus_wolseley_plan
 		ENG_focus_command_structure_organization
 		ENG_focus_address_political_economic_matters
-		ENG_focus_the_isle_of_man_question
 		ENG_focus_the_calais_question
 		ENG_focus_imperialist_economic_interests
 		ENG_focus_demand_japanese_trade_port
@@ -121,16 +120,9 @@ ai_historical_focus_list_ENG = {
 		ENG_focus_business_regulation
 		ENG_focus_strengthen_the_south
 		ENG_focus_address_workforce_issues
-		#ENG_focus_productivity_first
-		#ENG_focus_strike_breaking
 		ENG_focus_weaken_trade_unions
-		#ENG_focus_lower_taxes_on_businesses
 		ENG_focus_pro_employer_legislation
-		#ENG_focus_debate_political_issues_in_economy
-		#ENG_focus_the_child_labour_debate
 		ENG_focus_legislation_on_pensions
-		#ENG_focus_age_of_retirement_debate
-		#ENG_focus_stance_on_workplace_safety_laws
 		ENG_focus_initial_military_reforms
 		ENG_focus_abolition_of_flogging
 		ENG_focus_new_military_colonial_policy
@@ -150,8 +142,8 @@ ai_historical_focus_list_ENG = {
 		ENG_focus_war_office_act
 		ENG_focus_centralized_sections
 		ENG_focus_create_new_military_offices
-		ENG_focus_army_enlistment_act
-		ENG_focus_overseas_service
+		ENG_focus_army_enlistment_act_focus
+		ENG_focus_overseas_service_focus
 		ENG_focus_minor_structural_reforms
 		ENG_focus_end_purchase_of_ranks
 		ENG_focus_new_service_weapons

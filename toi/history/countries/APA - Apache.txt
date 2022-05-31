@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
 	capital = 1286
 
-	oob = "APA_1857"
+	#oob = "APA_1857"
 
 	set_convoys = 0
 
@@ -57,7 +57,8 @@
 	 add_opinion_modifier = { target = UTA modifier = first_nations_colonial_encroacher_opinion_modifier }
 	 add_opinion_modifier = { target = USA modifier = first_nations_colonial_encroacher_opinion_modifier }
 	 give_military_access = USA
-
+	 give_military_access = NMX
+	 
 	set_politics = {
 		ruling_party = fundamentalism
 }
@@ -80,7 +81,8 @@ set_popularities = {
 	tech_infantry_napoleonic_uniform = 1
 	infantry_weapons = 1
 	tech_infantry_practical_rifling = 1
-	rifle_equipment1 = 1
+	tech_infantry_percussion_cap = 1
+		rifle_equipment1 = 1
 	tribaltech = 1
 	tribal_society = 1
 	tribal_natral_economics = 1
@@ -92,15 +94,5 @@ set_popularities = {
 	start_build_tech = 1
 	}
 
-	# POLITICAL LEADERS
-
-create_country_leader = {
-	name = "Cochise"
-	desc = ""
-	picture = "Portrait_APA_Cochise.png"
-	expire = "1953.3.1"
-	ideology = shamanism
-	traits = {
-	}
-}
+	recruit_character = APA_Cochise
 }

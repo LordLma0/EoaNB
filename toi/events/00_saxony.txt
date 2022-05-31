@@ -38,6 +38,11 @@ country_event = {
 		add_stability = -0.03
 		decrease_ps_by_one = yes
 		set_politics = { ruling_party = centrism }
+		SAX_friedrich_ferdinand_von_beust = {
+			remove_advisor_role = {
+				slot = political_advisor
+			}
+		}
 		hidden_effect = {
 			SAX = { country_event = { id = saxony.3 days = 3 } }
 		}
@@ -59,15 +64,36 @@ country_event = {
 		ai_chance = { base = 100 }
 		add_political_power = -25
 		add_stability = -0.02
-		kill_ideology_leader = traditional_conservatism
-		create_country_leader = {
-			name = "Johann Paul von Falkenstein"
-			desc = "POLITICS_GENERIC_EOANB_DESC"
-			picture = "Portrait_SAX_Johann_Paul_von_Falkenstein.dds"
-			expire = "1900.1.1"
-			ideology = conserv
-			traits = { }
+		SAX_johann_paul_von_falkenstein = {
+			add_country_leader_role = {
+				country_leader = {
+					desc = "POLITICS_GENERIC_EOANB_DESC"
+					ideology = conserv
+					expire = "1900.1.1.1"
+					id = -1
+				}
+			}
+			promote_character = yes
+			promote_character = conserv
 		}
+		retire_character = SAX_ferdinand_von_zschinsky
+	}
+}
+
+#Death of Ferdinand Lassalle
+country_event = {
+	id = saxony.4
+	title = saxony.4.t
+	desc = saxony.4.d
+	picture = GFX_event_lassalle
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = saxony.4.a
+		ai_chance = { base = 100 }
+		retire_character = SAX_ferdinand_lassalle
 	}
 }
 
@@ -379,8 +405,8 @@ country_event = {
 	option = {
 		name = saxonymilitary.1.b
 		ai_chance = { base = 0 }
-		add_opinion_modifier = { target = SAX modifier = SAX_PRS_CONVENTION_NO_REL }
-		reverse_add_opinion_modifier = { target = SAX modifier = SAX_PRS_CONVENTION_NO_REL }
+		add_opinion_modifier = { target = SAX modifier = SAX_MILITARY_CONVENTION_REJECTED_REL }
+		reverse_add_opinion_modifier = { target = SAX modifier = SAX_MILITARY_CONVENTION_REJECTED_REL }
 		SAX = { country_event = { id = saxonymilitary.3 } }
 	}
 }

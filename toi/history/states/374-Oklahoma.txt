@@ -10,7 +10,7 @@ state = {
 	}
 
 	history = {
-		owner = USA
+		owner = OKL
 
 		buildings = {
 			infrastructure = 4

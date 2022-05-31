@@ -51,7 +51,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_berlin_anhalt_rail
-		icon = GFX_goal_focus_berlin_anhalt_rail
+		icon = GFX_Focus_transport_railroad_development
 		x = 0
 		y = 2
 		cost = 70
@@ -93,7 +93,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_silesia_rail
-		icon = GFX_goal_focus_berlin_anhalt_rail
+		icon = GFX_Focus_transport_railroad_development
 		x = 0
 		y = 3
 		cost = 70
@@ -137,7 +137,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_ostbahn_rail
-		icon = GFX_goal_focus_berlin_anhalt_rail
+		icon = GFX_Focus_transport_railroad_development
 		x = 0
 		y = 4
 		cost = 70
@@ -200,7 +200,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_rhineland_rail
-		icon = GFX_goal_focus_berlin_anhalt_rail
+		icon = GFX_Focus_transport_railroad_development
 		x = 0
 		y = 5
 		cost = 70
@@ -251,7 +251,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_trade_and_commerce
-		icon = GFX_goal_focus_handelsgesetz_law
+		icon = GFX_Focus_banks
 		x = 2
 		y = 1
 		cost = 70
@@ -328,6 +328,7 @@ focus_tree = {
 		available_if_capitulated = no
 		available = {
 			controls_state = 951
+			has_completed_focus = PRS_focus_borsenordnung
 		}
 		ai_will_do = { base = 80 }
 		
@@ -380,7 +381,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_handelsgesetz_law
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		x = 4
 		y = 2
 		cost = 70
@@ -399,7 +400,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_borsenordnung
-		icon = GFX_goal_focus_banks2
+		icon = GFX_Focus_banks2
 		x = 4
 		y = 3
 		cost = 70
@@ -498,7 +499,23 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_prussian_urbanization }
 
 		completion_reward = {
-			custom_effect_tooltip = PRS_focus_execute_hobrecht_plan_effect_tt
+			PRS_james_hobrecht = {
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = PRS_advisor_james_hobrecht
+						allowed = {
+							original_tag = PRS
+						}
+						traits = {
+							PRS_trait_James_Hobrecht
+						}
+						ai_will_do = {
+							factor = 3
+						}
+					}
+				}
+			}
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = mechanical_engineering_tech }
 			activate_mission_tooltip = PRS_mission_hobrecht_plan
 			hidden_effect = {
@@ -582,7 +599,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_prussian_industrialization
-		icon = GFX_Focus_Industry_Revolution
+		icon = GFX_Focus_industrial_revolution
 		x = 8
 		y = 1
 		cost = 70
@@ -630,7 +647,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_krupp_cooperation
-		icon = GFX_focus_prussian_guns
+		icon = GFX_goal_focus_prussian_guns
 		x = 8
 		y = 3
 		cost = 70
@@ -880,6 +897,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			army_experience = 10
 		}
 	}
 
@@ -900,24 +918,37 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_army_with_state }
 
 		completion_reward = {
+			add_political_power = 50
+			army_experience = 5
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
 			custom_effect_tooltip = PRS_focus_king_army_prs_moltke_effect_tt
 			unlock_decision_tooltip = PRS_decision_roon_war_minister
 			unlock_decision_tooltip = PRS_decision_moltke_army_chief
 			hidden_effect = {
-				create_corps_commander = {
-					name = "Helmuth von Moltke"
-					picture = "Portrait_PRS_Helmuth_Karl_Bernhard_von_Moltke.dds"
-					traits = { PRS_prussian_general organizer skilled_staffer }
-					skill = 5
-						attack_skill = 4
-						defense_skill = 3
-						planning_skill = 6
-						logistics_skill = 3
-					id = 1977
+				PRS_helmuth_von_moltke = {
+					add_corps_commander_role = {
+						traits = { PRS_prussian_general organizer skilled_staffer }
+						skill = 5
+							attack_skill = 4
+							defense_skill = 3
+							planning_skill = 6
+							logistics_skill = 3
+						legacy_id = 1977
+					}
+					add_advisor_role = {
+						advisor = {
+							slot = army_chief
+							idea_token = PRS_army_commander_helmuth_von_moltke
+							allowed = {
+								original_tag = PRS
+							}
+							traits = {
+								PRS_trait_army_tactical_command_moltke
+							}
+						}
+					}
 				}
 			}
-			add_political_power = 50
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
 		}
 	}
 
@@ -1097,7 +1128,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_demote_landwehr
-		icon = GFX_goal_focus_traditional_army
+		icon = GFX_Focus_Army_Victorian_Traditional
 		x = 14
 		y = 4
 		cost = 70
@@ -1133,7 +1164,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_adjust_draft
-		icon = GFX_goal_focus_conscription
+		icon = GFX_Focus_conscription
 		x = 16
 		y = 4
 		cost = 70
@@ -1214,7 +1245,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_push_liberal_reform
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		x = 13
 		y = 5
 		cost = 35
@@ -1435,7 +1466,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_build_high_fleet
-		icon = GFX_focus_battleship_production
+		icon = GFX_Focus_Production_Battleship_Old
 		x = 22
 		y = 1
 		cost = 70
@@ -1483,6 +1514,22 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 50
 			custom_effect_tooltip = PRS_focus_navy_ministry_effect_tt
+			hidden_effect = {
+				PRS_adalbert_von_preußen = {
+					add_advisor_role = {
+						advisor = {
+							slot = navy_chief
+							idea_token = PRS_navy_commander_adalbert_von_preussen
+							allowed = {
+								original_tag = PRS
+							}
+							traits = {
+								navy_chief_decisive_battle_1
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1630,7 +1677,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_military_supremacy
-		icon = GFX_goal_focus_contain_prussia
+		icon = GFX_Focus_contain_prussia
 		x = 17
 		y = 7
 		cost = 140
@@ -1688,6 +1735,25 @@ focus_tree = {
 				add_country_leader_trait = PRS_trait_Bismarck_Iron_Chancellor
 			}
 			country_event = { id = prussiaelection.7 }
+			hidden_effect = {
+				PRS_gustav_freytag = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = PRS_advisor_gustav_freytag
+							allowed = {
+								original_tag = PRS
+							}
+							traits = {
+								PRS_trait_Gustav_Freytag
+							}
+							ai_will_do = {
+								factor = 0
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1727,7 +1793,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_ngc_bundesprasidium
-		icon = GFX_focus_Usurp_Throne
+		icon = GFX_Focus_Monarchy_Usurp_Throne
 		x = 29
 		y = 2
 		cost = 35
@@ -1773,7 +1839,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_ngc_reichstag
-		icon = GFX_goal_focus_government_icon
+		icon = GFX_Focus_Government
 		x = 31
 		y = 2
 		cost = 35
@@ -1796,7 +1862,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_ngc_bundesrath
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		x = 31
 		y = 3
 		cost = 35
@@ -1990,7 +2056,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_ngc_trade_and_commerce
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		x = 29
 		y = 6
 		cost = 70
@@ -2032,7 +2098,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_ngc_reform_zollverein
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		x = 31
 		y = 6
 		cost = 70
@@ -2068,7 +2134,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_ngc_reapproach_austria
-		icon = GFX_goal_focus_ally_AUS
+		icon = GFX_Focus_Diplomatic_Ally_AUS
 		x = 33
 		y = 6
 		cost = 70
@@ -2161,7 +2227,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_dissolve_parliament
-		icon = GFX_goal_focus_suppress_liberalism
+		icon = GFX_Focus_Partisans_Suppress_Liberalism
 		x = 39
 		y = 1
 		cost = 35
@@ -2191,7 +2257,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_king_deposed
-		icon = GFX_focus_violent_revolution
+		icon = GFX_Focus_Monarchy_Violent_Revolution
 		x = 37
 		y = 2
 		cost = 140
@@ -2243,7 +2309,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_king_abdicates
-		icon = GFX_focus_Usurp_Throne
+		icon = GFX_Focus_Monarchy_Usurp_Throne
 		x = 39
 		y = 2
 		cost = 140
@@ -2324,9 +2390,8 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		available = {
-			has_country_leader = {
-				name = "König Friedrich III"
-				ruling_only = yes
+			PRS_friedrich_iii_young = {
+				is_country_leader = yes
 			}
 		}
 		ai_will_do = { base = 1000 }
@@ -2428,7 +2493,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_embrace_liberal_monarchy
-		icon = GFX_Focus_Freedom_Association
+		icon = GFX_Focus_freedom_association
 		x = 39
 		y = 7
 		cost = 35
@@ -2671,7 +2736,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_prussian_way
-		icon = GFX_goal_focus_ally_PRS
+		icon = GFX_Focus_Diplomatic_Ally_PRS
 		x = 43
 		y = 8
 		cost = 35
@@ -2822,7 +2887,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_prolong_legislators_term
-		icon = GFX_goal_focus_working_hours
+		icon = GFX_Focus_Working_Hours
 		x = 46
 		y = 10
 		cost = 70
@@ -2861,7 +2926,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_revive_coburger_plan
-		icon = GFX_Focus_Partisans_Popularize
+		icon = GFX_goal_focus_hre_legacy
 		x = 39
 		y = 11
 		cost = 70
@@ -3007,7 +3072,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_realpolitik
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		x = 37
 		y = 4
 		cost = 70
@@ -3034,7 +3099,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_befriend_russia
-		icon = GFX_goal_focus_ally_RUS
+		icon = GFX_Focus_Diplomatic_Ally_RUS
 		x = 36
 		y = 5
 		cost = 70
@@ -3111,7 +3176,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_pressordonanz
-		icon = GFX_goal_focus_newspapers
+		icon = GFX_Focus_Freedom_Press_newspapers
 		x = 40
 		y = 5
 		cost = 70
@@ -3239,7 +3304,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_convenient_alliance
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		x = 41
 		y = 6
 		cost = 70
@@ -3323,7 +3388,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_foreign_politics_branch
-		icon = GFX_goal_focus_reform_administration
+		icon = GFX_Focus_Government_Reform_Administration
 		x = 51
 		y = 0
 		cost = 70
@@ -3362,7 +3427,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_like_ENG
-		icon = GFX_goal_focus_merchants_british
+		icon = GFX_Focus_Diplomacy_UK
 		x = 46
 		y = 2
 		cost = 70
@@ -3381,7 +3446,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_like_ENG_2
-		icon = GFX_goal_focus_banks
+		icon = GFX_Focus_banks
 		x = 46
 		y = 3
 		cost = 70
@@ -3398,7 +3463,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_like_ENG_3
-		icon = GFX_goal_focus_colonial_empire_uk
+		icon = GFX_Focus_colonial_empire_ENG
 		x = 46
 		y = 4
 		cost = 70
@@ -3433,7 +3498,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_dislike_ENG_2
-		icon = GFX_goal_focus_popularize
+		icon = GFX_Focus_Partisans_Popularize
 		x = 48
 		y = 3
 		cost = 70
@@ -3449,7 +3514,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_dislike_ENG_3
-		icon = GFX_goal_focus_generic_navy_ironclad
+		icon = GFX_Goal_ironclad_focus
 		x = 48
 		y = 4
 		cost = 70
@@ -3459,13 +3524,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_fp_dislike_ENG_2 }
 
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = naval_doctrine }
 		}
 	}
 
 	focus = {
 		id = PRS_focus_foreign_politics_europe
-		icon = GFX_goal_focus_continent_west_europe
+		icon = GFX_Focus_Continent_West_Europe
 		x = 51
 		y = 1
 		cost = 70
@@ -3482,7 +3547,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fpe_towards_aus
-		icon = GFX_goal_focus_ally_AUS
+		icon = GFX_Focus_Diplomatic_Ally_AUS
 		x = 50
 		y = 2
 		cost = 70
@@ -3502,7 +3567,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fpe_towards_swi
-		icon = GFX_goal_focus_ally_SWI
+		icon = GFX_Focus_Diplomatic_Ally_SWI
 		x = 52
 		y = 2
 		cost = 70
@@ -3522,7 +3587,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fpe_european_embassies
-		icon = GFX_goal_focus_decentralisation_power
+		icon = GFX_Focus_Government_Decentralized
 		x = 51
 		y = 3
 		cost = 70
@@ -3539,7 +3604,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fpe_prussian_ambitions
-		icon = GFX_goal_focus_gerrymandering
+		icon = GFX_Focus_Map_Gerrymandering
 		x = 51
 		y = 4
 		cost = 70
@@ -3561,7 +3626,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_foreign_politics_FRA
-		icon = GFX_goal_focus_ally_FRA
+		icon = GFX_Focus_Diplomatic_Ally_FRA
 		x = 55
 		y = 1
 		cost = 70
@@ -3578,7 +3643,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_like_FRA
-		icon = GFX_goal_focus_merchants_french
+		icon = GFX_Focus_Diplomacy_FRA
 		x = 54
 		y = 2
 		cost = 70
@@ -3597,7 +3662,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_like_FRA_2
-		icon = GFX_goal_focus_colonial_empire_france
+		icon = GFX_Focus_colonial_empire_FRA
 		x = 54
 		y = 3
 		cost = 70
@@ -3607,7 +3672,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_focus_fp_like_FRA }
 
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = naval_doctrine }
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_equipment }
 		}
 	}
@@ -3631,7 +3696,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_dislike_FRA
-		icon = GFX_goal_focus_franco_prussian_war
+		icon = GFX_Focus_franco_prussian_war
 		x = 56
 		y = 2
 		cost = 70
@@ -3650,7 +3715,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_dislike_FRA_2
-		icon = GFX_goal_focus_fund_partisans
+		icon = GFX_Focus_Partisans_Fund
 		x = 56
 		y = 3
 		cost = 70
@@ -3669,7 +3734,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_fp_dislike_FRA_3
-		icon = GFX_goal_focus_leave_continent_alone
+		icon = GFX_Focus_leave_continent_alone
 		x = 56
 		y = 4
 		cost = 70
@@ -3692,7 +3757,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_colonial_politics_branch
-		icon = GFX_goal_focus_international_investments
+		icon = GFX_Focus_Trade_International
 		x = 60
 		y = 0
 		cost = 70
@@ -3720,13 +3785,13 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = PRS_focus_foreign_politics_branch_effect_tt
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 		}
 	}
 
 	focus = {
 		id = PRS_focus_cpb_colonial_navy
-		icon = GFX_goal_focus_mass_produce_ships
+		icon = GFX_Focus_Production_Mass
 		x = 60
 		y = 1
 		cost = 70
@@ -3743,7 +3808,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_focus_cpb_brandenburg_colonies
-		icon = GFX_goal_focus_ally_PRS
+		icon = GFX_Focus_Diplomatic_Ally_PRS
 		x = 59
 		y = 2
 		cost = 70
@@ -3793,7 +3858,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_focus_cpb_purchase_curacao
-		icon = GFX_goal_focus_increase_wages
+		icon = GFX_Focus_Economy_Increase_Wages
 		x = 61
 		y = 2
 		cost = 70

@@ -50,37 +50,11 @@
 		CHO_four_whites
 		CHO_vic_anti_buddhist
 		TSH_spirit_vic_tozama_domain
-		TSH_spirit_vic_han_sankin_kotai_obligations
+
 	}
 
 	# Technology
-	set_technology = {
-		vic_army_cloth = 1
-		infantry_weapons = 1
-		traditional_mixed_arms = 1
-		tribal_carrier_birds = 1
-		tribal_electrical_theory = 1
-		tribal_steel_tools = 1
-		tribal_tatics = 1
-		tribal_gunpowder = 1
-		tribal_riding = 1
-		tribal_steam_experiments = 1
-		tribal_forging = 1
-		tribal_artisan = 1
-		tribal_chemistry = 1
-		tribal_guilds_trade = 1
-		tribal_crop_planting = 1
-		tribal_irrigation = 1
-		tribal_crop_rotation = 1
-		tribal_salted_smoked_goods = 1
-		tribal_leching = 1
-		tech_infantry_napoleonic_uniform = 1
-		start_build_tech = 1
-		basic_cavalry = 1
-		hot_blast_furnaces = 1
-		industrial_blast_furnace = 1
-		industrial_finery_forge = 1
-	}
+	eoanbsys_technology_setup_developed_asia_1857 = yes
 
 	# Army & Equipment
 	CHO = {
@@ -92,16 +66,7 @@
 
 		if = {
 			limit = { has_dlc = "Man the Guns" }
-				set_technology = {
-					tech_naval_early_frigate = 1
-					tech_naval_1850_frigate = 1
-					tech_naval_mtg_early_frigate = 1
-					tech_naval_mtg_simple_corvette_hull = 1
-					tech_naval_mtg_24_pounder_battery = 1
-					tech_naval_mtg_sails = 1
-					tech_naval_mtg_crows_nest = 1
-				}
-				create_equipment_variant = {
+			create_equipment_variant = {
 				name = "Early Gunboat Class"
 				type = ship_hull_gunboat_0
 				name_group = GER_CA_HISTORICAL
@@ -114,6 +79,10 @@
 					mid_1_custom_slot = ship_cannon_battery_0
 					mid_2_custom_slot = ship_cannon_battery_1
 				}
+			}
+			set_naval_oob = "CHO_1857_naval_mtg"
+			else = {
+				set_naval_oob = "CHO_1857_naval_legacy"
 			}
 		}
 	}
@@ -130,9 +99,9 @@
 			social_egalitarianism = 0
 			centrism = 0
 			traditional_conservatism = 0
-			radical_democracy = 0
+			radical_democracy = 42
 			chauvinist_populism = 0
-			autocracy = 100
+			autocracy = 58
 			fundamentalism = 0
 		}
 
@@ -147,13 +116,21 @@
 			long_name = TSH_han_domain_choshu_party_long
 		}
 
-		create_country_leader = {
-			name = "Mōri Takachika"
-			desc = "POLITICS_TEMP_DESC"
-			picture = "Portrait_CHO_Mori_Takachika.png"
-			expire = "1900.1.1"
-			ideology = despotism
-		}
+    # Country Leaders
+  		recruit_character = CHO_character_mori_takachika
+  		recruit_character = CHO_character_mori_takachika_daimyo
+  		recruit_character = CHO_character_mori_motonori
+  		recruit_character = CHO_character_mori_motonori_daimyo
+		# Advisors
+  		recruit_character = CHO_character_murata_seifu
+  		recruit_character = CHO_character_tsuboi_kuemon
+  		recruit_character = CHO_character_sufu_masanosuke
+  		recruit_character = CHO_character_yoshida_shoin
+  		recruit_character = CHO_character_kido_takayoshi
+  	# Commanders
+  		recruit_character = CHO_character_takasugi_shinsaku
+  		recruit_character = CHO_character_masahisa
+  		recruit_character = CHO_character_kunishi_shinano
 	}
 
 	# Economy

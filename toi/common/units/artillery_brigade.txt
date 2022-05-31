@@ -9,6 +9,7 @@ sub_units = {
 		
 		type = {
 			infantry
+			anti_tank
 			artillery
 		}
 
@@ -86,6 +87,7 @@ sub_units = {
 		
 		type = {
 			infantry
+			anti_tank
 			artillery
 		}
 
@@ -528,7 +530,7 @@ sub_units = {
 
 		manpower = 500
 		need = {
-			artillery_equipment = 36
+			howitzer_equipment = 36
 			horse_artillery_equipment = 48
 		}
 		
@@ -605,7 +607,7 @@ sub_units = {
 		transport = motorized_equipment
 		manpower = 500
 		need = {
-			artillery_equipment = 36
+			howitzer_equipment = 36
 			motorized_equipment = 50
 		}
 		

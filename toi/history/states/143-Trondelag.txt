@@ -15,7 +15,7 @@ state = {
 	history = {
 		owner = NOR
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			industrial_complex = 1
 			3022 = {
 				naval_base = 1
@@ -35,7 +35,7 @@ state = {
 
 		add_to_array = { state_religion_array = 3 } # Protestant
 		add_to_array = { state_religion_array_num = 0.96 }
-		add_to_array = { state_religion_array = 22 } # Shamanism
+		add_to_array = { state_religion_array = 53 } # Ukonusko
 		add_to_array = { state_religion_array_num = 0.04 }
 	}
 

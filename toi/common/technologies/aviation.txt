@@ -13,7 +13,7 @@ technologies = {
 			level = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -56,7 +56,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -96,7 +96,7 @@ technologies = {
 			level = 3
 		}
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1860
 		folder = {
 			name = aviation_folder
@@ -136,7 +136,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1870
 		folder = {
 			name = aviation_folder
@@ -175,7 +175,7 @@ technologies = {
 			level = 5
 		}
 		
-		research_cost = 2.5
+		research_cost = 0.25
 		start_year = 1875
 		folder = {
 			name = aviation_folder
@@ -210,7 +210,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.02
 		
-		research_cost = 2
+		research_cost = 0.2
 		start_year = 1885
 		folder = {
 			name = aviation_folder
@@ -235,7 +235,7 @@ technologies = {
 		
 		air_night_penalty = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -252,7 +252,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = screw_propeller
+			leads_to_tech = screw_propeller_adaption
 			research_cost_coeff = 1
 		}
 		
@@ -280,7 +280,7 @@ technologies = {
 		
 		air_accidents_factor = -0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
@@ -312,25 +312,24 @@ technologies = {
 		}
 	}
 	
-	screw_propeller = {
+	screw_propeller_adaption = {
 		
 		navy_max_range_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1850
 		folder = {
 			name = aviation_folder
 			position = { x = 4 y = 0 }
 		}
 		
-		folder = {
-			name = mtgnavalfolder
-			position = { x = 6 y = 62 }
-		}
-		
 		path = {
 			leads_to_tech = early_aerodynamics
 			research_cost_coeff = 1
+		}
+		
+		dependencies={
+			screw_propeller_adaption = 1
 		}
 		
 		ai_will_do = { 
@@ -356,7 +355,7 @@ technologies = {
 		
 		enemy_army_bonus_air_superiority_factor = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = aviation_folder
@@ -407,7 +406,7 @@ technologies = {
 		air_close_air_support_agility_factor = 0.03
 		air_strategic_bomber_agility_factor = 0.03
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = aviation_folder
@@ -445,7 +444,7 @@ technologies = {
 		naval_strike_agility_factor = 0.05
 		army_bonus_air_superiority_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1865
 		folder = {
 			name = aviation_folder
@@ -482,7 +481,7 @@ technologies = {
 		
 		experience_gain_air = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1875
 		folder = {
 			name = aviation_folder
@@ -524,7 +523,7 @@ technologies = {
 		
 		experience_gain_air = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1880
 		folder = {
 			name = aviation_folder
@@ -562,7 +561,7 @@ technologies = {
 		
 		air_ace_generation_chance_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = aviation_folder
@@ -590,7 +589,7 @@ technologies = {
 		
 		experience_gain_air = 0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1890
 		folder = {
 			name = aviation_folder
@@ -619,7 +618,7 @@ technologies = {
 		
 		research_speed_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1895
 		folder = {
 			name = aviation_folder
@@ -648,7 +647,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = aviation_folder
@@ -669,6 +668,8 @@ technologies = {
 		
 		on_research_complete ={
 			country_event = {id = worldnewsfl.63}
+			set_temp_variable = { eoanb_tech_score_change = 5 }
+			eoanb_change_tech_score = yes
 		}
 		
 		categories = {
@@ -680,7 +681,7 @@ technologies = {
 		army_bonus_air_superiority_factor = 0.04
 		air_range_factor = 0.01
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1905
 		folder = {
 			name = aviation_folder
@@ -715,7 +716,7 @@ technologies = {
 		
 		air_range_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = aviation_folder
@@ -745,7 +746,7 @@ technologies = {
 		
 		air_accidents_factor = -0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = aviation_folder
@@ -775,7 +776,7 @@ technologies = {
 		air_close_air_support_agility_factor = 0.03
 		air_strategic_bomber_agility_factor = 0.03
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = aviation_folder
@@ -806,7 +807,7 @@ technologies = {
 		
 		air_air_superiority_attack_factor = 0.06
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1915
 		folder = {
 			name = aviation_folder
@@ -833,7 +834,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1910
 		folder = {
 			name = aviation_folder
@@ -860,7 +861,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1917
 		folder = {
 			name = aviation_folder
@@ -893,7 +894,7 @@ technologies = {
 		
 		air_weather_penalty = -0.1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1925
 		folder = {
 			name = aviation_folder
@@ -920,7 +921,7 @@ technologies = {
 		
 		air_range_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = aviation_folder
@@ -945,7 +946,7 @@ technologies = {
 	}
 	jet_engines = {
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = aviation_folder
@@ -978,7 +979,7 @@ technologies = {
 		
 		experience_gain_air_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1945
 		folder = {
 			name = aviation_folder
@@ -1009,7 +1010,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = aviation_folder
@@ -1037,7 +1038,7 @@ technologies = {
 		air_air_superiority_agility_factor = 0.02
 		air_interception_agility_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1950
 		folder = {
 			name = aviation_folder
@@ -1064,7 +1065,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.02
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = aviation_folder
@@ -1091,7 +1092,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = aviation_folder
@@ -1118,7 +1119,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = aviation_folder
@@ -1145,7 +1146,7 @@ technologies = {
 		
 		air_air_superiority_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1955
 		folder = {
 			name = aviation_folder
@@ -1172,7 +1173,7 @@ technologies = {
 		
 		air_range_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1960
 		folder = {
 			name = aviation_folder
@@ -1199,7 +1200,7 @@ technologies = {
 		
 		air_range_factor = 0.025
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1970
 		folder = {
 			name = aviation_folder
@@ -1226,7 +1227,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.075
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1975
 		folder = {
 			name = aviation_folder
@@ -1256,7 +1257,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1980
 		folder = {
 			name = aviation_folder
@@ -1283,7 +1284,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1990
 		folder = {
 			name = aviation_folder
@@ -1314,7 +1315,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = aviation_folder
@@ -1341,7 +1342,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2000
 		folder = {
 			name = aviation_folder
@@ -1368,7 +1369,7 @@ technologies = {
 		
 		encryption = 1
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2005
 		folder = {
 			name = aviation_folder
@@ -1399,7 +1400,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = aviation_folder
@@ -1426,7 +1427,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = aviation_folder
@@ -1453,7 +1454,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2010
 		folder = {
 			name = aviation_folder
@@ -1480,7 +1481,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2015
 		folder = {
 			name = aviation_folder
@@ -1507,7 +1508,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2020
 		folder = {
 			name = aviation_folder
@@ -1534,7 +1535,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2025
 		folder = {
 			name = aviation_folder
@@ -1562,7 +1563,7 @@ technologies = {
 		
 		army_bonus_air_superiority_factor = 0.04
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2030
 		folder = {
 			name = aviation_folder
@@ -1593,7 +1594,7 @@ technologies = {
 		
 		air_defence_factor = 0.05
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2035
 		folder = {
 			name = aviation_folder
@@ -1623,7 +1624,7 @@ technologies = {
 		
 		encryption = 0.5
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2040
 		folder = {
 			name = aviation_folder
@@ -1653,7 +1654,7 @@ technologies = {
 		
 		air_defence_factor = 0.10
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 2045
 		folder = {
 			name = aviation_folder
@@ -1677,7 +1678,7 @@ technologies = {
 		
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1920
 		folder = {
 			name = aviation_folder
@@ -1705,7 +1706,7 @@ technologies = {
 		
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1930
 		folder = {
 			name = aviation_folder
@@ -1732,7 +1733,7 @@ technologies = {
 		
 		
 		
-		research_cost = 1.5
+		research_cost = 0.15
 		start_year = 1940
 		folder = {
 			name = aviation_folder

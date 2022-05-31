@@ -122,9 +122,9 @@ idea_categories = {
 		character_slot = army_chief 
 		character_slot = navy_chief 
 		character_slot = air_chief
-		character_slot = high_command
-		character_slot = high_command
-		character_slot = high_command
+		#character_slot = high_command
+		#character_slot = high_command
+		#character_slot = high_command
 		
 		ledger = invalid # must be overridden
 		
@@ -238,6 +238,23 @@ idea_categories = {
 		
 		ledger = hidden
 		slot = air_force_command_spirit
+	}
+
+	parties = {
+		type = hidden
+		politics_tab = no
+		cost = 0
+		removal_cost = 0
+
+		ledger = hidden
+	}
+	ideologies = {
+		type = hidden
+		politics_tab = no
+		cost = 0
+		removal_cost = 0
+
+		ledger = hidden
 	}
 }
 	

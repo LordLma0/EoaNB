@@ -2,13 +2,7 @@ state = {
 	id = 978
 	name = "STATE_978" # Eupen
 	manpower = 54699 # 10% of RB Aachen
-
-	local_supplies=0.0 
 	state_category = pastoral
-	
-	resources = {
-		wood = 1
-	}
 	
 	provinces = {
 		13448 
@@ -16,8 +10,8 @@ state = {
 
 	history = {
 		# End of a New Beginning
+		owner = PRS
 		1857.1.1 = {
-			owner =PRS
 			add_core_of = PRS
 			add_core_of = BEL
 			
@@ -38,4 +32,5 @@ state = {
 			add_to_array = { state_religion_array_num = 0.19 }
 		}
 	}
+	local_supplies=0.0
 }

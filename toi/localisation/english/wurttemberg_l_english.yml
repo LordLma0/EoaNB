@@ -83,7 +83,7 @@
 #WUR_shifting_flow:0 "Shifting Flow"
  WUR_shifting_flow_desc:0 "The theory of the Shifting Flow, as it is sometimes called, describes the changing of one's allies depending on the current situation. For a small nation like ours, this might be the best option we have."
  WUR_alexander_ii:0 "Alexander II"
- WUR_alexander_ii_desc:0 "Seeing how things have been quite rough in Europe the past few years, it might be a good idea to try to spread a little bit of peace. Planning on appeasing the two big powers in the east and west, being the Russian and French Empires, Wilhelm I wants to send out invitation letters for a meeting between the two countries in Württemberg, neutral grounds. As such, the Tsar of the Russian Empire, Alexander II, will receive such a letter."
+ WUR_alexander_ii_desc:0 "Seeing how things have been quite rough in Europe the past few years, it might be a good idea to try to spread a little bit of peace. Planning on appeasing the two big powers in the east and west, being the Russian and French Empires, Wilhelm I wants to send out invitation letters for a meeting between the two countries in Württemberg, neutral grounds. As such, the Czar of the Russian Empire, Alexander II, will receive such a letter."
  WUR_napoleon_iii:0 "Napoléon III"
  WUR_napoleon_iii_desc:0 "Seeing how things have been quite rough in Europe the past few years, it might be a good idea to try to spread a little bit of peace. Planning on appeasing the two big powers in the east and west, being the Russian and French Empires, Wilhelm I wants to send out invitation letters for a meeting between the two countries in Württemberg, neutral grounds. As such, the leader of the French Empire, Napoleon III, will receive such a letter."
  WUR_zweikaisertreffen:0 "Zweikaisertreffen"
@@ -228,10 +228,7 @@
  WUR_victorian_emigration_recover:0 "§YWürttemberg§! recovers from the emigration."
  WUR_traditional_army_replace_tooltip:0 "Replace current §YMilitary Structure & Tactics§! law with §YTraditional Army§!.\n"
  WUR_traditional_army_replace_victorian_tooltip:0 "Replace current §YMilitary Structure & Tactics§! law with §YVictorian Army§!.\n"
- WUR_customeffect_friedrich_roemer:0 "§Y[WUR.GetName]§!: unlocks §YFriedrich von Römer§! as advisor."
- WUR_customeffect_joseph_linden:0 "§Y[WUR.GetName]§!: unlocks §YJoseph von Linden§! as advisor."
  WUR_customeffect_schultheisswesen:0 "§Y[WUR.GetNameDef]§! decides on how to handle the §YSchultheißwesen§!."
- WUR_customeffect_rumpf_aftermath_advisors:0 "§Y[WUR.GetName]§!: unlocks advisor(s) from the §YRumpfparlament§!."
  WUR_customeffect_shifting_flow:0 "§Y[WUR.GetName]§! decides on how to handle foreign policy."
  WUR_customeffect_allow_shitftin_flow:0 "§Y[WUR.GetNameDef]§!: unlocks decisions regarding §Yforeign policy§!."
  WUR_customeffect_deny_shitftin_flow:0 "§Y[WUR.GetNameDef]§!: pursues further §Yforeign policy§!."
@@ -250,7 +247,6 @@
  WUR_customeffect_karl_i_focus:0 "Karl I ascends to the throne.\n"
  WUR_customeffect_start_liberalizing:0 "§Y[WUR.GetNameDef]§! starts to §Yliberalize§!!\n"
  WUR_customeffect_finish_liberalizing:0 "§Y[WUR.GetNameDef]§! finishes the §Yliberalization§!!\n"
- WUR_customeffect_karl_von_varnbueler_unlock:0 "§Y[WUR.GetName]§!: unlocks §YKarl von Varnbüler§! as advisor.\n"
  WUR_customeffect_start_suppression:0 "§Y[WUR.GetNameDef]§! starts the §Ysuppression§!!\n"
  WUR_customeffect_finish_suppression:0 "§Y[WUR.GetNameDef]§! finishes the §Ysuppression§!!\n"
  WUR_customeffect_rally_neighbours:0 "§Y[WUR.GetNameDef]§! tries to rally their neighbours against Liberalism.\n"
@@ -273,25 +269,12 @@
  WUR_customtrigger_construction_bonus_one:0 "§Y1x§! §G70%§! Construction speed bonus for: §YInfrastructure§!"
  WUR_customtrigger_construction_bonus_two:0 "§Y2x§! §G70%§! Construction speed bonus for: §YInfrastructure§!"
 
- ###Advisors###
- WUR_advisor_friedrich_von_roemer:0 "Friedrich von Römer"
- WUR_advisor_joseph_von_linden:0 "Joseph von Linden"
- WUR_advisor_johannes_von_kuhn:0 "Johannes von Kuhn"
- WUR_advisor_theodor_von_gessler:0 "Theodor von Gessler"
- WUR_advisor_fidel_von_baur_breitenfeld:0 "Fidel von Baur-Breitenfeld"
- WUR_advisor_adolph_gottlieb_ferdinand_schoder:0 "Adolph Gottlieb Ferdinand Schoder"
- WUR_advisor_gottlob_tafel:0 "Gottlob Tafel"
- WUR_advisor_karl_von_varnbueler:0 "Karl von Varnbüler"
-
- ###Military Theorist###
- WUR_theodor_von_wundt:0 "Theodor von Wundt"
-
  ###Misc###
  WUR_victorian_centrism_liberal_struggle_long:0 "Deutsche Partei"
  WUR_victorian_centrism_liberal_struggle:0 "DP"
  WUR_victorian_traditional_conservatism_liberal_struggle_long:0 "Demokratische Volkspartei"
  WUR_victorian_traditional_conservatism_liberal_struggle:0 "DV"
- WUR_victorian_wilhelm_dead:0 "Wilhelm I is Dead"
+ WUR_victorian_wilhelm_dead:0 " §YWilhelm I§! is Dead"
  WUR_pursue_shifting_flow:0 "Württemberg Pursues Shifting Flow"
  WUR_pursue_foreign_policy:0 "Württemberg Pursues Foreign Policy"
  WUR_RUS_accepted_invite:0 "Russian Empire Accepted the Invite"
@@ -311,6 +294,10 @@
  eoanb_decision_WUR_shifting_flow_austria:0 "Foreign Policy with Austria"
  eoanb_decision_WUR_shifting_flow_france:0 "Foreign Policy with France"
  eoanb_decision_WUR_shifting_flow_russia:0 "Foreign Policy with Russia"
+ 
+ WUR_mission_industrializing:0 "Industrializing"
+ WUR_decision_railway_upgrade:0 "Railway Upgrade"
+ WUR_decision_railway_upgrade_desc:0 "Our railway network is not up to the task of supporting let alone encouraging a modern industry anymore. Upgrading and expanding it would not only fix this problem, it would also grant our industry important contracts and the possibility for trade expansion."
 
  ###Events###
  wurttem.0.t:0 "Wilhelm I Dead!"
@@ -506,8 +493,9 @@
  wurttem.53.a:0 "Finally!"
 
  ###Companies##
- WUR_gewehrfabrik:0 "Königlich Württembergische Gewehrfabrik"
+ wurttembergische_gewehrfabrik:0 "Königlich Württembergische Gewehrfabrik"
+ WUR_maschinenfabrik_esslingen:0 "Maschinenfabrik Esslingen"
  WUR_wurttembergische_cattunmanufaktur:0 "Württembergische Cattunmanufaktur"
  WUR_c_deffner:0 "C. Deffner"
- WUR_konigliche_huttenwerk_wasseralfingen:0 "Königliche Hüttenwerk Wasseralfingen"
+ WUR_konigliche_huttenwerk_wasseralfingen:0 "Königliches Hüttenwerk Wasseralfingen"
  WUR_tiefer_stollen_bergwerk:0 "Tiefer Stollen Bergwerk"
