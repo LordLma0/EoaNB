@@ -2596,7 +2596,7 @@ continuous_focus_position = { x = 400 y = 1250 }
 		available_if_capitulated = yes
 
 		completion_reward = {
-			country_event = japindustrialrevolution.23
+			country_event = japindustrialrevolution.24
 		}
 	}
 		
@@ -2936,7 +2936,7 @@ continuous_focus_position = { x = 400 y = 1250 }
 		available_if_capitulated = yes
 
 		completion_reward = {
-			country_event = japindustrialrevolution.24
+			country_event = japindustrialrevolution.23
 		}
 	}
 	
@@ -3572,9 +3572,9 @@ continuous_focus_position = { x = 400 y = 1250 }
 		cost = 70
 		
 		ai_will_do = {
-            factor = 60
+            factor = 90
 			modifier = {
-				factor = 100
+				factor = 0
 				is_historical_focus_on = yes
        	 	}
 		}
@@ -3764,7 +3764,7 @@ continuous_focus_position = { x = 400 y = 1250 }
 		cost = 70
 		
 		ai_will_do = {
-            factor = 90
+            factor = 80
         }
 
         available = {
@@ -5154,9 +5154,7 @@ continuous_focus_position = { x = 400 y = 1250 }
 	focus = {
 		id = JAP_found_new_banks
 		icon = GFX_Focus_SER_Improve_Credit_Organisation
-		prerequisite = { focus = JAP_devise_our_own_monetary_system }
-		prerequisite = { focus = JAP_uk_banking_system }
-		prerequisite = { focus = JAP_us_banking_system }
+		prerequisite = { focus = JAP_us_banking_system focus = JAP_devise_our_own_monetary_system focus = JAP_uk_banking_system }
 		x = 0
 		y = 1
 		relative_position_id = JAP_devise_our_own_monetary_system

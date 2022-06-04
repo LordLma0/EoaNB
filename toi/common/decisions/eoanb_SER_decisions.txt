@@ -1473,6 +1473,7 @@ SER_decision_category_banking = {
 		}
 	}
 }
+
 SER_decision_category_purchase_steamship = {#	will actually give you steamship and tech, gives target country civs, no civ penalty for serbia
 	SER_decision_purchase_steamship_french = {
 		icon = generic_construction
@@ -1765,6 +1766,7 @@ SER_decision_category_foreign_geologists = {
 		}
 	}
 }
+
 SER_decision_category_lyumbomir_kleric = {
 	SER_decision_examine_african_iron = {
 		icon = iron
@@ -2758,6 +2760,7 @@ SER_decision_category_lyumbomir_kleric = {
 		}
 	}
 }
+
 SER_decision_category_macedonia_propaganda = {
 	SER_decision_build_churches = {
 		icon = generic_construction
@@ -2808,6 +2811,7 @@ SER_decision_category_macedonia_propaganda = {
 		}
 	}
 }
+
 SER_decision_category_albanian_cooperation = {
 	SER_decision_send_cpt_ljubomir_ivanovic = {
 		icon = generic_construction
@@ -2875,6 +2879,7 @@ SER_decision_category_albanian_cooperation = {
 		}
 	}
 }
+
 SER_decision_category_propaganda_newspaper = {
 	SER_decision_propaganda_newspaper = {
 		icon = generic_construction
@@ -2899,6 +2904,7 @@ SER_decision_category_propaganda_newspaper = {
 		}
 	}
 }
+
 SER_decision_category_coup_category = {
 	SER_forced_resignation_decision = {
 
@@ -2945,7 +2951,9 @@ SER_decision_category_coup_category = {
 		}
 	}
 }
+
 SER_decision_category_cukur_category = {
+
 	SER_begin_operation = {
 		icon = GFX_decision_icon_default
 
@@ -2953,20 +2961,37 @@ SER_decision_category_cukur_category = {
 			tag = SER
 		}
 		visible = {
-			has_country_flag = SER_operation
+			has_country_flag = SER_begin_operation
+		}
+		available = {
+			always = no
 		}
 
-	   fire_only_once = yes
+		days_remove = 400
+	    fire_only_once = yes
 
+		targeted_modifier = {
+			tag = OTO
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.05
+		}
 
 		complete_effect = {
-			add_timed_idea = { idea = SER_idea_military_operation days = 120 }
+			### Not Necessary to do this with ideas ###
+			#add_timed_idea = { idea = SER_idea_military_operation days = 120 }
+			hidden_effect = {
+				country_event = {
+					id = SER_cukur_fountain_incident.4
+					days = 7
+				}
+			}
 		}
 
 		ai_will_do = {
 			base = 100
 		}
 	}
+
 	SER_declare_belgrade_siege = {
 		icon = GFX_decision_icon_default
 
@@ -2974,46 +2999,230 @@ SER_decision_category_cukur_category = {
 			tag = SER
 		}
 		visible = {
-			has_country_flag = SER_siege
+			has_country_flag = SER_declare_belgrade_siege
+		}
+		available = {
+			always = no
 		}
 
 		fire_only_once = yes
 
+		days_remove = 384
+
+		targeted_modifier = {
+			tag = OTO
+			defense_bonus_against = 0.05
+		}
+	
 
 		complete_effect = {
 			army_experience = 20
-			add_timed_idea = { idea = SER_idea_belgrade_operation days = 50 }
-		}
-
-		ai_will_do = {
-			base = 100
-		}
-	}
- 
-	SER_send_filip = {
-		icon = GFX_decision_icon_default
-
-		allowed = {
-			tag = SER
-		}
-		visible = {
-			tag = SER
-			has_country_flag = SER_siege
-		}
-
-		fire_only_once = yes
-
-		cost = 10
-
-		complete_effect = {
-			ENG = {
+			set_country_flag = SER_siege
+			#add_timed_idea = { idea = SER_idea_belgrade_operation days = 50 }
+			hidden_effect = {
 				country_event = {
-					id = SER_filipengland.1
+					id = SER_cukur_fountain_incident.6
+					days = 7
 				}
 			}
 		}
+
 		ai_will_do = {
 			base = 100
 		}
 	}
+
+	SER_ottoman_withdrawal = {
+		icon = GFX_decision_icon_default
+
+		allowed = {
+			tag = OTO
+		}
+
+		visible = {
+			has_country_flag = SER_ottoman_withdrawal
+		}
+
+		activation = {
+			has_country_flag = SER_ottoman_withdrawal
+		}
+
+		is_good = no
+		selectable_mission = yes              
+        days_mission_timeout = 30 
+		fire_only_once = yes
+
+		timeout_effect = {     
+			SER = {
+				hidden_effect = {
+					country_event = {
+						id = SER_cukur_fountain_incident.10
+						days = 2
+					}
+				}
+				if = {
+					limit = {
+						FRA = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					FRA = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+
+				if = {
+					limit = {
+						ENG = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					ENG = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+
+				if = {
+					limit = {
+						RUS = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					RUS = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+
+				if = {
+					limit = {
+						AUS = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					AUS = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+			}
+        } 
+
+		complete_effect = {
+			add_political_power = -25
+			decrease_ps_by_one = yes
+			add_war_support = 0.025
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = SER
+					modifier = small_decrease
+				}
+				SER = {
+					country_event = {
+						id = SER_cukur_fountain_incident.9
+						days = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+	}
+
+	Serbian_War_Independence_Peace_Treaty_Mission_Serbia = {
+		allowed = { always = no }
+		activation = { always = no }
+
+		available = {
+			SER = {
+				NOT = {
+					controls_province = 11586
+				}
+			}
+		}
+
+		is_good = yes
+		days_mission_timeout = 365
+
+		timeout_effect = {
+			if = {
+				limit = {
+					SER = {
+						controls_state = 107
+						controls_province = 11586
+						NOT = {
+							is_puppet_of = OTO
+						}
+					}
+				}
+				OTO = {
+					white_peace = SER
+					if = {
+						limit = {
+							has_war_with = AUS
+						}
+						white_peace = AUS
+					}
+
+					if = {
+						limit = {
+							has_war_with = RUS
+						}
+						white_peace = RUS
+					}
+
+					if = {
+						limit = {
+							has_war_with = FRA
+						}
+						white_peace = FRA
+					}
+
+					if = {
+						limit = {
+							has_war_with = ENG
+						}
+						white_peace = ENG
+					}
+				}
+				SER = {
+					add_war_support = -0.25
+					white_peace = OTO
+					set_state_owner = 966
+					set_state_owner = 105
+					set_state_owner = 108
+				}
+			}
+		}
+	}
 }
+
+ 
+#	SER_send_filip = {
+#		icon = GFX_decision_icon_default
+#
+#		allowed = {
+#			tag = SER
+#		}
+#		visible = {
+#			has_country_flag = SER_siege
+#		}
+#
+#		fire_only_once = yes
+#
+#		cost = 25
+#
+#		complete_effect = {
+#			ENG = {
+#				country_event = {
+#					id = SER_filipengland.1
+#					days = 7
+#				}
+#			}
+#		}
+#
+#		ai_will_do = {
+#			base = 100
+#		}
+#	}
