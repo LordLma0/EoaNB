@@ -71,7 +71,7 @@ SER_french_mission  = {
 	
 	SER_decision_kragujevac_fortress_renovation = {
 
-		icon = generic_construction
+		icon = fort
 
 		allowed = {
 			tag = SER
@@ -374,7 +374,8 @@ SER_french_mission  = {
 	}
 	
 	SER_decision_zajecar_fortification = {
-		icon = generic_construction
+	
+		icon = fort
 
 		highlight_states = {
 			state = 941
@@ -454,7 +455,8 @@ SER_french_mission  = {
 	}
 	
 	SER_decision_danube_forts = {
-		icon = generic_construction
+	
+		icon = fort
 
 		highlight_states = {
 			state = 107
@@ -536,7 +538,7 @@ SER_french_mission  = {
 	
 	SER_decision_belgrad_fortification = { 
 
-		icon = generic_construction
+		icon = fort
 
 		highlight_states = {
 			state = 107
@@ -616,6 +618,7 @@ SER_french_mission  = {
 	}
 	
 	SER_decision_increase_army_budget = {
+	
 		icon = money
 
 		allowed = { tag = SER }
@@ -673,6 +676,10 @@ SER_french_mission  = {
 			}
 		}
 		
+		visible = {
+			has_completed_focus = SER_blaznavac_war_minister
+		}
+		
 		fire_only_once = no
 
 		cost = 50
@@ -711,6 +718,10 @@ SER_french_mission  = {
 				size > 0
 				state = 107
 			}
+		}
+		
+		visible = {
+			has_completed_focus = SER_blaznavac_war_minister
 		}
 		
 		fire_only_once = no
@@ -754,7 +765,7 @@ SER_french_mission  = {
 		}
 				
 		visible = {
-			
+			has_completed_focus = SER_blaznavac_war_minister
 		}
 		
 		fire_only_once = no
@@ -786,6 +797,7 @@ SER_french_mission  = {
 		}
 		
 		visible = {
+			has_completed_focus = SER_blaznavac_war_minister
 		}
 		
 		available = {
@@ -1193,37 +1205,9 @@ eoanb_category_economic = {
 			base = 1000
 		}
 	}
-}
 
-#	SER_decision_ = {
-#		icon = generic_construction
-#	
-#		allowed = {
-#			tag = SER
-#		}
-#		available = {
-#			
-#		}
-#		visible = {
-#			has_completed_focus = SER_
-#		}
-#	
-#		fire_only_once = yes
-#		cost = 10
-#		days_remove = 60
-#	
-#		remove_effect = { 
-#			
-#		}
-#	
-#		ai_will_do = {
-#			base = 1000
-#		}
-#	}
-
-SER_decision_category_plant_tree = {
 	SER_decision_plant_tree = {
-		icon = generic_construction
+		icon = wood
 	
 		allowed = {
 			tag = SER
@@ -1250,7 +1234,7 @@ SER_decision_category_plant_tree = {
 	}
 
 	SER_decision_reduce_wood_use = {
-		icon = generic_construction
+		icon = wood
 	
 		allowed = {
 			tag = SER
@@ -1276,7 +1260,140 @@ SER_decision_category_plant_tree = {
 		}
 	}
 }
+
 SER_decision_category_banking = {
+
+	###Finance Reform
+	SER_mission_financy_reform = {
+
+		icon = money
+
+		allowed = {
+			tag = SER
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SER_mission_currency_reform_trigger_tt
+				hidden_trigger = {
+					has_tech = tech_humanities_continental_neoclassical_economics
+					OR = {
+						has_idea = FRA_monetary_union_unilateral_agreement
+						has_idea = SER_idea_first_serbian_bank
+					}
+					has_completed_focus = SER_develop_serbia_banking
+					SER_konstantin_cukic = {
+						is_character_slot = political_advisor
+					}
+				}
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		fire_only_once = yes
+
+		is_good = no
+
+		days_mission_timeout = 160
+
+		timeout_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				add_political_power = -100
+				add_stability = -0.05
+				set_temp_variable = { eoanb_prestige_change = -10 }
+				eoanb_change_prestige_score = yes
+				decrease_ps_by_one = yes
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 100
+			add_stability = 0.05
+			set_temp_variable = { eoanb_prestige_change = 10 }
+			eoanb_change_prestige_score = yes
+			increase_ps_by_one = yes
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	SER_decision_increase_taxes = {
+		icon = generic_construction
+	
+		allowed = {
+			tag = SER
+		}
+		available = {
+			has_completed_focus = SER_fund_administration
+		}
+		visible = {
+			#has_completed_focus = SER_fund_administration
+		}
+	
+		fire_only_once = yes
+		cost = 50
+		days_remove = 40
+	
+		remove_effect = {
+			effect_increase_tax_rates = yes
+			add_stability = -0.1
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.03
+			political_power_gain = -0.15
+		}
+	
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	SER_decision_law_on_minting_coinage = {
+		icon = generic_construction
+	
+		allowed = {
+			tag = SER
+		}
+		available = {
+			has_completed_focus = SER_develop_serbia_banking
+		}
+		visible = {
+			#has_completed_focus = SER_develop_serbia_banking
+		}
+	
+		fire_only_once = yes
+		cost = 50
+		days_remove = 160
+	
+		remove_effect = {
+			set_temp_variable = { eoanb_prestige_change = 3 }
+			eoanb_change_prestige_score = yes
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.50
+				category = economics_tech
+				category = humanities_tech
+			}
+		}
+		modifier = {
+			consumer_goods_factor = 0.03
+			political_power_gain = -0.15
+		}
+	
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
 	SER_decision_belgrade_credit_house = {
 		icon = generic_construction
 	
@@ -1284,22 +1401,31 @@ SER_decision_category_banking = {
 			tag = SER
 		}
 		available = {
-			date > 1871.1.1
+			has_completed_focus = SER_develop_serbia_banking
+			has_tech = tech_humanities_capitalism
 		}
 		visible = {
-			has_completed_focus = SER_develop_serbia_banking
+			#has_completed_focus = SER_develop_serbia_banking
 		}
 	
 		fire_only_once = yes
 		cost = 50
 		days_remove = 160
 	
-		remove_effect = { 
+		remove_effect = {
+			set_temp_variable = { eoanb_prestige_change = 3 }
+			eoanb_change_prestige_score = yes
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.50
+				category = economics_tech
+				category = humanities_tech
+			}
 			add_stability = 0.03
 		}
 		modifier = {
-			consumer_goods_factor = -0.03
-			production_speed_buildings_factor = 0.05
+			consumer_goods_factor = 0.03
+			political_power_gain = -0.15
 		}
 	
 		ai_will_do = {
@@ -1314,22 +1440,32 @@ SER_decision_category_banking = {
 			tag = SER
 		}
 		available = {
-			date > 1873.1.1
+			has_completed_focus = SER_develop_serbia_banking
+			has_tech = tech_humanities_capitalism
 		}
 		visible = {
-			has_completed_focus = SER_develop_serbia_banking
+			#has_completed_focus = SER_develop_serbia_banking
 		}
 	
 		fire_only_once = yes
 		cost = 50
 		days_remove = 200
 	
-		remove_effect = { 
+		remove_effect = {
+			set_temp_variable = { eoanb_prestige_change = 3 }
+			eoanb_change_prestige_score = yes
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.50
+				category = economics_tech
+				category = humanities_tech
+			}
 			add_stability = 0.03
 		}
+		
 		modifier = {
-			consumer_goods_factor = -0.03
-			production_factory_max_efficiency_factor = 0.05
+			consumer_goods_factor = 0.03
+			political_power_gain = -0.15
 		}
 	
 		ai_will_do = {
@@ -1337,6 +1473,7 @@ SER_decision_category_banking = {
 		}
 	}
 }
+
 SER_decision_category_purchase_steamship = {#	will actually give you steamship and tech, gives target country civs, no civ penalty for serbia
 	SER_decision_purchase_steamship_french = {
 		icon = generic_construction
@@ -1629,15 +1766,16 @@ SER_decision_category_foreign_geologists = {
 		}
 	}
 }
+
 SER_decision_category_lyumbomir_kleric = {
 	SER_decision_examine_african_iron = {
-		icon = generic_construction
+		icon = iron
 	
 		allowed = {
 			tag = SER
 		}
 		available = {
-			
+			NOT = { has_country_flag = SER_lyumbomir_projects_ongoing_flag }
 		}
 		visible = {
 			has_completed_focus = SER_lyubomir_state_service_job
@@ -1646,6 +1784,12 @@ SER_decision_category_lyumbomir_kleric = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 80
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
+		}
 	
 		remove_effect = { 
 			if = {
@@ -1696,6 +1840,9 @@ SER_decision_category_lyumbomir_kleric = {
 			else = {
 				add_ideas = SER_idea_lyubomir_0a
 			}
+			hidden_effect = {
+				clr_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
 		}
 	
 		ai_will_do = {
@@ -1704,11 +1851,16 @@ SER_decision_category_lyumbomir_kleric = {
 	}
 	
 	SER_decision_explore_awala_deposit = {
-		icon = generic_construction
+		icon = iron
 	
 		allowed = {
 			tag = SER
 		}
+		
+		available = {
+			NOT = { has_country_flag = SER_lyumbomir_projects_ongoing_flag }
+		}
+		
 		visible = {
 			has_completed_focus = SER_lyubomir_state_service_job
 			OR = {
@@ -1724,6 +1876,12 @@ SER_decision_category_lyumbomir_kleric = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 80
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
+		}
 	
 		remove_effect = { 
 			if = {
@@ -1774,6 +1932,9 @@ SER_decision_category_lyumbomir_kleric = {
 			else = {
 				add_ideas = SER_idea_lyubomir_0b
 			}
+			hidden_effect = {
+				clr_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
 		}
 	
 		ai_will_do = {
@@ -1787,9 +1948,12 @@ SER_decision_category_lyumbomir_kleric = {
 		allowed = {
 			tag = SER
 		}
+		
 		available = {
 			date > 1875.1.1
+			NOT = { has_country_flag = SER_lyumbomir_projects_ongoing_flag }
 		}
+		
 		visible = {
 			has_completed_focus = SER_lyubomir_state_service_job
 		}
@@ -1797,6 +1961,12 @@ SER_decision_category_lyumbomir_kleric = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 30
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
+		}
 	
 		remove_effect = { 
 			if = {
@@ -1927,6 +2097,9 @@ SER_decision_category_lyumbomir_kleric = {
 			}
 			else = {
 				add_ideas = SER_idea_lyubomir_1
+			}
+			hidden_effect = {
+				clr_country_flag = SER_lyumbomir_projects_ongoing_flag
 			}
 		}
 	
@@ -1942,7 +2115,7 @@ SER_decision_category_lyumbomir_kleric = {
 			tag = SER
 		}
 		available = {
-			
+			NOT = { has_country_flag = SER_lyumbomir_projects_ongoing_flag }
 		}
 		visible = {
 			has_completed_focus = SER_lyubomir_state_service_job
@@ -1951,6 +2124,12 @@ SER_decision_category_lyumbomir_kleric = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 30
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
+		}
 	
 		remove_effect = { 
 			if = {
@@ -2081,6 +2260,9 @@ SER_decision_category_lyumbomir_kleric = {
 			}
 			else = {
 				add_ideas = SER_idea_lyubomir_1
+			}
+			hidden_effect = {
+				clr_country_flag = SER_lyumbomir_projects_ongoing_flag
 			}
 		}
 	
@@ -2096,7 +2278,7 @@ SER_decision_category_lyumbomir_kleric = {
 			tag = SER
 		}
 		available = {
-			
+			NOT = { has_country_flag = SER_lyumbomir_projects_ongoing_flag }
 		}
 		visible = {
 			has_completed_focus = SER_lyubomir_state_service_job
@@ -2105,6 +2287,12 @@ SER_decision_category_lyumbomir_kleric = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 30
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
+		}
 	
 		remove_effect = { 
 			if = {
@@ -2235,7 +2423,10 @@ SER_decision_category_lyumbomir_kleric = {
 			}
 			else = {
 				add_ideas = SER_idea_lyubomir_1
-			}	
+			}
+			hidden_effect = {
+				clr_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
 		}
 	
 		ai_will_do = {
@@ -2250,7 +2441,7 @@ SER_decision_category_lyumbomir_kleric = {
 			tag = SER
 		}
 		available = {
-			
+			NOT = { has_country_flag = SER_lyumbomir_projects_ongoing_flag }
 		}
 		visible = {
 			has_completed_focus = SER_lyubomir_state_service_job
@@ -2259,6 +2450,12 @@ SER_decision_category_lyumbomir_kleric = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 60
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
+		}
 	
 		remove_effect = { 
 			if = {
@@ -2389,6 +2586,9 @@ SER_decision_category_lyumbomir_kleric = {
 			}
 			else = {
 				add_ideas = SER_idea_lyubomir_1
+			}
+			hidden_effect = {
+				clr_country_flag = SER_lyumbomir_projects_ongoing_flag
 			}
 		}
 	
@@ -2404,7 +2604,7 @@ SER_decision_category_lyumbomir_kleric = {
 			tag = SER
 		}
 		available = {
-			
+			NOT = { has_country_flag = SER_lyumbomir_projects_ongoing_flag }
 		}
 		visible = {
 			has_completed_focus = SER_lyubomir_state_service_job
@@ -2413,6 +2613,12 @@ SER_decision_category_lyumbomir_kleric = {
 		fire_only_once = yes
 		cost = 25
 		days_remove = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
+		}
 	
 		remove_effect = { 
 			if = {
@@ -2544,6 +2750,9 @@ SER_decision_category_lyumbomir_kleric = {
 			else = {
 				add_ideas = SER_idea_lyubomir_1
 			}
+				hidden_effect = {
+				clr_country_flag = SER_lyumbomir_projects_ongoing_flag
+			}
 		}
 	
 		ai_will_do = {
@@ -2551,6 +2760,7 @@ SER_decision_category_lyumbomir_kleric = {
 		}
 	}
 }
+
 SER_decision_category_macedonia_propaganda = {
 	SER_decision_build_churches = {
 		icon = generic_construction
@@ -2601,6 +2811,7 @@ SER_decision_category_macedonia_propaganda = {
 		}
 	}
 }
+
 SER_decision_category_albanian_cooperation = {
 	SER_decision_send_cpt_ljubomir_ivanovic = {
 		icon = generic_construction
@@ -2668,6 +2879,7 @@ SER_decision_category_albanian_cooperation = {
 		}
 	}
 }
+
 SER_decision_category_propaganda_newspaper = {
 	SER_decision_propaganda_newspaper = {
 		icon = generic_construction
@@ -2692,6 +2904,7 @@ SER_decision_category_propaganda_newspaper = {
 		}
 	}
 }
+
 SER_decision_category_coup_category = {
 	SER_forced_resignation_decision = {
 
@@ -2738,7 +2951,9 @@ SER_decision_category_coup_category = {
 		}
 	}
 }
+
 SER_decision_category_cukur_category = {
+
 	SER_begin_operation = {
 		icon = GFX_decision_icon_default
 
@@ -2746,20 +2961,37 @@ SER_decision_category_cukur_category = {
 			tag = SER
 		}
 		visible = {
-			has_country_flag = SER_operation
+			has_country_flag = SER_begin_operation
+		}
+		available = {
+			always = no
 		}
 
-	   fire_only_once = yes
+		days_remove = 400
+	    fire_only_once = yes
 
+		targeted_modifier = {
+			tag = OTO
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.05
+		}
 
 		complete_effect = {
-			add_timed_idea = { idea = SER_idea_military_operation days = 120 }
+			### Not Necessary to do this with ideas ###
+			#add_timed_idea = { idea = SER_idea_military_operation days = 120 }
+			hidden_effect = {
+				country_event = {
+					id = SER_cukur_fountain_incident.4
+					days = 7
+				}
+			}
 		}
 
 		ai_will_do = {
 			base = 100
 		}
 	}
+
 	SER_declare_belgrade_siege = {
 		icon = GFX_decision_icon_default
 
@@ -2767,46 +2999,230 @@ SER_decision_category_cukur_category = {
 			tag = SER
 		}
 		visible = {
-			has_country_flag = SER_siege
+			has_country_flag = SER_declare_belgrade_siege
+		}
+		available = {
+			always = no
 		}
 
 		fire_only_once = yes
 
+		days_remove = 384
+
+		targeted_modifier = {
+			tag = OTO
+			defense_bonus_against = 0.05
+		}
+	
 
 		complete_effect = {
 			army_experience = 20
-			add_timed_idea = { idea = SER_idea_belgrade_operation days = 50 }
-		}
-
-		ai_will_do = {
-			base = 100
-		}
-	}
- 
-	SER_send_filip = {
-		icon = GFX_decision_icon_default
-
-		allowed = {
-			tag = SER
-		}
-		visible = {
-			tag = SER
-			has_country_flag = SER_siege
-		}
-
-		fire_only_once = yes
-
-		cost = 10
-
-		complete_effect = {
-			ENG = {
+			set_country_flag = SER_siege
+			#add_timed_idea = { idea = SER_idea_belgrade_operation days = 50 }
+			hidden_effect = {
 				country_event = {
-					id = SER_filipengland.1
+					id = SER_cukur_fountain_incident.6
+					days = 7
 				}
 			}
 		}
+
 		ai_will_do = {
 			base = 100
 		}
 	}
+
+	SER_ottoman_withdrawal = {
+		icon = GFX_decision_icon_default
+
+		allowed = {
+			tag = OTO
+		}
+
+		visible = {
+			has_country_flag = SER_ottoman_withdrawal
+		}
+
+		activation = {
+			has_country_flag = SER_ottoman_withdrawal
+		}
+
+		is_good = no
+		selectable_mission = yes              
+        days_mission_timeout = 30 
+		fire_only_once = yes
+
+		timeout_effect = {     
+			SER = {
+				hidden_effect = {
+					country_event = {
+						id = SER_cukur_fountain_incident.10
+						days = 2
+					}
+				}
+				if = {
+					limit = {
+						FRA = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					FRA = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+
+				if = {
+					limit = {
+						ENG = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					ENG = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+
+				if = {
+					limit = {
+						RUS = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					RUS = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+
+				if = {
+					limit = {
+						AUS = {
+							has_country_flag = cukur_fountain_incident_intervention
+						}
+					}
+					AUS = {
+						custom_effect_tooltip = SER_Great_power_intervention_tt
+					}
+				}
+			}
+        } 
+
+		complete_effect = {
+			add_political_power = -25
+			decrease_ps_by_one = yes
+			add_war_support = 0.025
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = SER
+					modifier = small_decrease
+				}
+				SER = {
+					country_event = {
+						id = SER_cukur_fountain_incident.9
+						days = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+	}
+
+	Serbian_War_Independence_Peace_Treaty_Mission_Serbia = {
+		allowed = { always = no }
+		activation = { always = no }
+
+		available = {
+			SER = {
+				NOT = {
+					controls_province = 11586
+				}
+			}
+		}
+
+		is_good = yes
+		days_mission_timeout = 365
+
+		timeout_effect = {
+			if = {
+				limit = {
+					SER = {
+						controls_state = 107
+						controls_province = 11586
+						NOT = {
+							is_puppet_of = OTO
+						}
+					}
+				}
+				OTO = {
+					white_peace = SER
+					if = {
+						limit = {
+							has_war_with = AUS
+						}
+						white_peace = AUS
+					}
+
+					if = {
+						limit = {
+							has_war_with = RUS
+						}
+						white_peace = RUS
+					}
+
+					if = {
+						limit = {
+							has_war_with = FRA
+						}
+						white_peace = FRA
+					}
+
+					if = {
+						limit = {
+							has_war_with = ENG
+						}
+						white_peace = ENG
+					}
+				}
+				SER = {
+					add_war_support = -0.25
+					white_peace = OTO
+					set_state_owner = 966
+					set_state_owner = 105
+					set_state_owner = 108
+				}
+			}
+		}
+	}
 }
+
+ 
+#	SER_send_filip = {
+#		icon = GFX_decision_icon_default
+#
+#		allowed = {
+#			tag = SER
+#		}
+#		visible = {
+#			has_country_flag = SER_siege
+#		}
+#
+#		fire_only_once = yes
+#
+#		cost = 25
+#
+#		complete_effect = {
+#			ENG = {
+#				country_event = {
+#					id = SER_filipengland.1
+#					days = 7
+#				}
+#			}
+#		}
+#
+#		ai_will_do = {
+#			base = 100
+#		}
+#	}

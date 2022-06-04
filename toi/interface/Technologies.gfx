@@ -282,6 +282,15 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_anti_air_7_medium"
+		texturefile = "gfx/interface/technologies/artillery/sam_II.png"
+	}
+	SpriteType = {
+		name = "GFX_anti_air_6_medium"
+		texturefile = "gfx/interface/technologies/artillery/sam.png"
+	}
+	
+	SpriteType = {
 		name = "GFX_anti_air_4_medium"
 		texturefile = "gfx/interface/technologies/AA_3_allies.dds"
 	}	
@@ -2112,30 +2121,30 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_tech_naval_mtg_early_frigate_medium"
-		texturefile = "gfx/interface/technologies/ships/frigate_0.dds"
+		texturefile = "gfx/interface/technologies/ships/frigate_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_tech_naval_early_frigate_medium"
-		texturefile = "gfx/interface/technologies/ships/frigate_0.dds"
+		texturefile = "gfx/interface/technologies/ships/frigate_1.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ship_hull_frigate_0_medium"
-		texturefile = "gfx/interface/technologies/ships/frigate_0.dds"
+		texturefile = "gfx/interface/technologies/ships/frigate_1.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_tech_naval_mtg_1850_frigate_medium"
-		texturefile = "gfx/interface/technologies/ships/frigate_1.dds"
+		texturefile = "gfx/interface/technologies/ships/frigate_0.dds"
 	}
 	SpriteType = {
 		name = "GFX_tech_naval_1850_frigate_medium"
-		texturefile = "gfx/interface/technologies/ships/frigate_1.dds"
+		texturefile = "gfx/interface/technologies/ships/frigate_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ship_hull_frigate_1_medium"
-		texturefile = "gfx/interface/technologies/ships/frigate_1.dds"
+		texturefile = "gfx/interface/technologies/ships/frigate_0.dds"
 	}
 	
 	SpriteType = {
@@ -7148,10 +7157,10 @@ spriteTypes = {
 		name = "GFX_rifle_equipment11_medium"
 		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_rifle_11.dds"
 	}
-	SpriteType = {
-		name = "GFX_rifle_equipment12_medium"
-		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_rifle_12.dds"
-	}
+	# SpriteType = { #need GFX for Johnson Rifle
+	# 	name = "GFX_rifle_equipment12_medium"
+	# 	texturefile = "gfx/interface/technologies/infantry/infantry_equipment_rifle_12.dds"
+	# }
 	SpriteType = {
 		name = "GFX_rifle_equipment13_medium"
 		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_rifle_13.dds"
@@ -7172,7 +7181,10 @@ spriteTypes = {
 		name = "GFX_rifle_equipment17_medium"
 		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_rifle_17.dds"
 	}
-	
+	SpriteType = {
+		name = "GFX_railgun_rifle_equipment1_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_railgun_1.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_infantry_equipment_smg_0_medium"
@@ -7183,6 +7195,12 @@ spriteTypes = {
 		name = "GFX_tech_infantry_smg_equipment0_medium"
 		texturefile = "gfx/interface/technologies/infantry/PRS_infantry_equipment_smg_0.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_infantry_equipment_smg_1_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_rifle_12.dds"
+	}
+	
 	SpriteType = {
 		name = "GFX_tech_infantry_smg_equipment1_medium"
 		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_rifle_12.dds"
@@ -7191,6 +7209,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_flamethrower_equipment_0_medium"
 		texturefile = "gfx/interface/technologies/infantry/flamethrower_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_infantry_late_flamethrowers_medium"
+		texturefile = "gfx/interface/technologies/infantry/flamethrower_equipment_1.dds"
 	}
 	
 	SpriteType = {
@@ -7762,6 +7784,19 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_rml_field_gun_medium"
 		texturefile = "gfx/interface/technologies/artillery/rifled_cannon_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_anti_tank_1_medium"
+		texturefile = "gfx/interface/technologies/artillery/AT_1_allies.dds"
+	}
+	SpriteType = {
+		name = "GFX_anti_tank_2_medium"
+		texturefile = "gfx/interface/technologies/artillery/anti_tank_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_anti_tank_3_medium"
+		texturefile = "gfx/interface/technologies/artillery/AT_3_allies.dds"
 	}
 	
 	SpriteType = {

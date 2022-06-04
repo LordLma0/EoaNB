@@ -588,6 +588,10 @@ focus_tree = {
 
                 custom_effect_tooltip = ROM_custom_effect_focus_wip
 
+		    swap_ideas = {
+			    remove_idea = ROM_ghika_hos
+			    add_idea = ROM_cuza_hos
+			}
 		}
 	}
 	
@@ -615,6 +619,10 @@ focus_tree = {
 
                 custom_effect_tooltip = ROM_custom_effect_focus_wip
 
+		    swap_ideas = {
+			    remove_idea = ROM_ghika_hos
+			    add_idea = ROM_bibescu_hos
+			}
 		}
 	}
 
@@ -658,6 +666,7 @@ focus_tree = {
 		completion_reward = {
                         #add_ideas = { ROM_failed_to_fix_agriculture }
 			custom_effect_tooltip = ROM_custom_effect_agriculture
+                        unlock_decision_tooltip = ROM_decision_repair_countryside 
 			hidden_effect = {
 				ROM_ruined_agriculture_effect = yes
 			}
@@ -678,6 +687,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		completion_reward = {
 			custom_effect_tooltip = ROM_custom_effect_agriculture
+                        unlock_decision_tooltip = ROM_decision_mobilize_the_peasantry
 			hidden_effect = {
 				ROM_ruined_agriculture_effect = yes
 			}
@@ -697,6 +707,7 @@ focus_tree = {
 		cost = 35
 		available_if_capitulated = no  
 		completion_reward = {
+                        unlock_decision_tooltip = ROM_decision_contiunue_reparation_efforts
 			ROM_ruined_agriculture_effect = yes
 		}
 	}
@@ -715,6 +726,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		completion_reward = {
 			custom_effect_tooltip = ROM_custom_effect_agriculture
+                        unlock_decision_tooltip = ROM_decision_finishing_touches
 			hidden_effect = {
 				ROM_ruined_agriculture_effect = yes
 			}
@@ -735,7 +747,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		completion_reward = {
 			custom_effect_tooltip = ROM_custom_effect_agriculture
-                        #unlock_decision_tooltip = ROM_decision_secularize_land
+                        unlock_decision_tooltip = ROM_decision_seek_chruch_assistance
 			hidden_effect = {
 				ROM_ruined_agriculture_effect = yes
 			}
@@ -756,6 +768,7 @@ focus_tree = {
 		available_if_capitulated = no  
 		completion_reward = {
 			custom_effect_tooltip = ROM_custom_effect_agriculture
+                        unlock_decision_tooltip = ROM_decision_speak_with_the_landowners
 			hidden_effect = {
 				ROM_ruined_agriculture_effect = yes
 			}
@@ -775,6 +788,7 @@ focus_tree = {
 		cost = 35
 		available_if_capitulated = no  
 		completion_reward = {
+                        unlock_decision_tooltip = ROM_decision_bribe_politicians
 			add_stability = 0.05
 		}
 	}

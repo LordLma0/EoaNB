@@ -11,10 +11,11 @@ state = {
 	local_supplies = 0.0 
 
 	history = {
-		owner = USA
-		remove_core_of = USA
+		owner = NMX
+		
 		# owner = NMX
 		1870.1.1 = {
+			controller = USA
 			add_core_of = USA
 		}
 
@@ -22,10 +23,10 @@ state = {
 			infrastructure = 3
 		}
 
-		victory_points = {
+		victory_points = { #Albuquerque
 			3883 4
 		}
-		victory_points = {
+		victory_points = { #Santa Fe
 			4975 6
 		}
 

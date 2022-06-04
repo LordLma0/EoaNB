@@ -39,8 +39,6 @@
  VICTORY_POINTS_11548: "Calais"
  VICTORY_POINTS_11563: "Rouen"
  VICTORY_POINTS_13011: "Reims"
- VICTORY_POINTS_9620: "Berne"
- VICTORY_POINTS_663: "Zürich"
  VICTORY_POINTS_11586: "Belgrade"
  VICTORY_POINTS_3882: "Scupi"
  VICTORY_POINTS_13876: "Sarajevo"
@@ -384,6 +382,13 @@
  # Trentino - South Tyrol
  VICTORY_POINTS_6675: "Bozen"
  VICTORY_POINTS_11598: "Trento"
+
+ ### SWITZERLAND ###
+ VICTORY_POINTS_663: "Zürich"
+ VICTORY_POINTS_6666: "Geneva"
+ VICTORY_POINTS_9620: "Bern"
+ VICTORY_POINTS_9638: "Basel"
+ VICTORY_POINTS_11623: "St. Gallen"
 
  ### RUSSIAN EMPIRE ###
  # Belarus
@@ -792,7 +797,7 @@
  VICTORY_POINTS_1601: "Tahoe"
  VICTORY_POINTS_3677: "San Jose"
  VICTORY_POINTS_3678: "Mission San Jose"
- VICTORY_POINTS_4518: "Fresno"
+ VICTORY_POINTS_4518: "Millerton"
  VICTORY_POINTS_6665: "Poverty Flats"
  VICTORY_POINTS_6694: "Unnamed Settlement"
  VICTORY_POINTS_6757: "Santa Rosa"
@@ -811,9 +816,12 @@
  VICTORY_POINTS_1658: "Montrose"
  VICTORY_POINTS_6887: "Grand Junction"
 
- ### Utah ###
- VICTORY_POINTS_4865: "Salt Lake City"
- VICTORY_POINTS_10662: "Fillmore"
+ ### Louisiana ###
+ VICTORY_POINTS_1643: "Ville du Pont des Breaux"
+ VICTORY_POINTS_4535: "Thibodeaux"
+ VICTORY_POINTS_7552: "La Nouvelle-Orléans"
+ VICTORY_POINTS_7555: "Alexandria"
+ VICTORY_POINTS_14297: "Bâton-Rouge"
 
  ### Nevada ###
  VICTORY_POINTS_4607: "Reno"
@@ -824,6 +832,10 @@
  VICTORY_POINTS_3883: "Albuquerque"
  VICTORY_POINTS_4975: "Santa Fe"
  VICTORY_POINTS_5044: "Las Cruces"
+
+ ### Utah ###
+ VICTORY_POINTS_4865: "Salt Lake City"
+ VICTORY_POINTS_10662: "Fillmore"
 
  ### Wyoming ###
  VICTORY_POINTS_12633: "Rock Spring"
@@ -933,9 +945,6 @@
  VICTORY_POINTS_7607: "Columbia"
  VICTORY_POINTS_10717: "Kansas City"
  VICTORY_POINTS_12489: "Little Rock"
- VICTORY_POINTS_1453: "Baton Rouge"
- VICTORY_POINTS_7555: "Shreveport"
- VICTORY_POINTS_7552: "New Orleans"
 
  VICTORY_POINTS_9920: "Fort Worth"
  VICTORY_POINTS_3960: "Dallas"
@@ -1283,12 +1292,9 @@
  VICTORY_POINTS_10758: "Zinder"
  VICTORY_POINTS_10805: "Mashena"
  VICTORY_POINTS_10780: "Birni"
- VICTORY_POINTS_9638: "Basel"
- VICTORY_POINTS_11623: "St. Gallen"
  VICTORY_POINTS_11699: "Pau"
  VICTORY_POINTS_11720: "Bergerac"
  VICTORY_POINTS_590: "Clermont-Ferrand"
- VICTORY_POINTS_6666: "Geneva"
  VICTORY_POINTS_11869: "Poitiers"
  VICTORY_POINTS_485: "Dieppe"
  VICTORY_POINTS_9561: "Compiegne"

@@ -872,7 +872,7 @@ ITA_decisions_category_wars_and_conflicts = {
 		# MEANS NO ONE SEES IT AT GAMESTART
 		icon = generic_political_actions
 		is_good = no		# AI is smarter with conditions/achieving them if it is no, trust me.
-		days_mission_timeout = 250		# Arbitrary number, but I recommend a time of 1.5x expected time to finish war, max 1000
+		days_mission_timeout = 300		# Arbitrary number, but I recommend a time of 1.5x expected time to finish war, max 1000
 		activation = {
 			always = no
 		}
@@ -1390,6 +1390,12 @@ ITA_decisions_category_wars_and_conflicts = {
 							white_peace = FRA
 						}
 						RUS = {
+							if = {
+								limit = {
+									has_war_with = AUS
+								}
+								dismantle_faction = yes
+							}
 							white_peace = AUS
 						}
 						RUS = {
@@ -1413,6 +1419,15 @@ ITA_decisions_category_wars_and_conflicts = {
 						ABK = {
 							white_peace = LVN
 						}
+					}
+					if = {
+						limit = {
+							has_war_with = FRA
+						}
+						FRA = {
+							dismantle_faction = yes
+						}
+						white_peace = FRA
 					}
 					country_event = { id = austria.1601 } #Event enabling Austrian post-war victory content
 					country_event = { id = sardinia.48 } #House of Savoy Flees
@@ -1478,10 +1493,10 @@ ITA_decisions_category_wars_and_conflicts = {
 			}
 		}
 		timeout_effect = {
-			if = {
-				limit = {
-					date > 1860.5.1
-				}
+			#if = {
+			#	limit = {
+			#		date > 1860.5.1
+			#	}
 				# Optional Trigger in case war lasting too long
 				if = {
 					limit = {
@@ -1848,6 +1863,12 @@ ITA_decisions_category_wars_and_conflicts = {
 									white_peace = FRA
 								}
 								RUS = {
+									if = {
+										limit = {
+											has_war_with = AUS
+										}
+										dismantle_faction = yes
+									}
 									white_peace = AUS
 								}
 								RUS = {
@@ -1871,6 +1892,15 @@ ITA_decisions_category_wars_and_conflicts = {
 								ABK = {
 									white_peace = LVN
 								}
+							}
+							if = {
+								limit = {
+									has_war_with = FRA
+								}
+								FRA = {
+									dismantle_faction = yes
+								}
+								white_peace = FRA
 							}
 							country_event = { id = austria.1601 } #Event enabling Austrian post-war victory content
 							country_event = { id = sardinia.48 } #House of Savoy Flees
@@ -1928,18 +1958,42 @@ ITA_decisions_category_wars_and_conflicts = {
 								white_peace = TUS
 							}
 						}
+						MOD = {
+							transfer_state = 813
+							add_state_core = 813
+							PRM = {
+								remove_state_core = 813
+							}
+							add_popularity = {
+								ideology = autocracy
+								popularity = 0.2
+							}
+							set_politics = {
+								ruling_party = autocracy
+							}
+						}
+						PRM = {
+							drop_cosmetic_tag = yes
+							add_popularity = {
+								ideology = autocracy
+								popularity = 0.2
+							}
+							set_politics = {
+								ruling_party = autocracy
+							}
+						}
 					}
 				}
-			}
-			else_if = {
-				limit = {
-					AUS = {
-						has_war_with = PIE
-					}
-				}
-				# Check if they are still at war
-				activate_mission = ITA_Mission_AUS_PIE_Peace_Treaty_1860				# Loops the mission if they are still at war.
-			}
+			#}
+			#else_if = {
+			#	limit = {
+			#		AUS = {
+			#			has_war_with = PIE
+			#		}
+			#	}
+			#	# Check if they are still at war
+			#	activate_mission = ITA_Mission_AUS_PIE_Peace_Treaty_1860				# Loops the mission if they are still at war.
+			#}
 		}
 	}
 	ITA_War_Mission_TUS_2IP = {
@@ -2837,7 +2891,7 @@ ITA_decisions_category_wars_and_conflicts = {
 						country_event = {
 							id = sardinia.229
 						}
-						activate_mission = ITA_decision_ROM_troops_2IP
+						activate_mission = AUS_mission_romanian_troops_transylvanian_border
 						hidden_effect = {
 							add_ai_strategy = {
 								type = prepare_for_war
@@ -3054,10 +3108,10 @@ ITA_brigindage_category_decisions = {
 		cost = 50
 		fire_only_once = yes
 		complete_effect = {
-			country_event = {
-				id = ita.39
-				days = 1
-			}
+			#country_event = {
+			#	id = ita.39
+			#	days = 1
+			#}
 		}
 	}
 	ITA_Increase_Military_Presence = {

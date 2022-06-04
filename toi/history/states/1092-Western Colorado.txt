@@ -13,10 +13,10 @@ state = {
 	history = {
 		owner = UTA
 		add_claim_by = USA
-		set_state_flag = NA_B_Disregardable_State
 		1870.1.1= {
-			owner = USA
+			owner = DAK
 		}
+		set_state_flag = NA_B_Disregardable_State
 
 		buildings = {
 			infrastructure = 1

@@ -34,7 +34,6 @@ state = {
 		add_to_array = { state_religion_array_num = 0.305}
 		add_to_array = { state_religion_array = 8 } 
 		add_to_array = { state_religion_array_num = 0.185}
-
 	}
 	manpower =9273
 	

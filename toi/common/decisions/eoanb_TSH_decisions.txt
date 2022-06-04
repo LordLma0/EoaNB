@@ -20,9 +20,11 @@ EOANBSYS_national_crisis_decision_category = {
 	TSH_decision_sonno_joi_reconcilliation = {
 		icon = tur_the_constitutional_arrows_category
 
-		allowed = { always = no }
+		allowed = { tag = TSH }
 
-		target_trigger = { tag = ROOT }
+		visible = {
+			has_completed_focus = JAP_vic_conciliate_the_courts
+		}			
 
 		fire_only_once = yes
 
@@ -153,7 +155,7 @@ eoanb_category_war_measures = {
 		activation = { always = no }
 		available = {
 			OR = {
-				JAP = { surrender_progress > 0.70 }
+				JAP = { surrender_progress > 0.64 }
 				JAP = { NOT = { has_war_with = TSH } }
 			}
 		}
@@ -188,7 +190,7 @@ eoanb_category_war_measures = {
 		activation = { always = no }
 		available = {
 			OR = {
-				TSH = { surrender_progress > 0.70 }
+				TSH = { surrender_progress > 0.64 }
 				TSH = { NOT = { has_war_with = JAP } }
 			}
 		}

@@ -136,10 +136,18 @@ spriteTypes = {
 			texturefile = "gfx/interface/ideas/AUS/AUS_advisor_Victor_von_Andrian_Werburg.png"
 		}
 		
-	# Theorists
+	# Theorists/Chiefs
 		spriteType = {
-			name = "GFX_idea_AUS_theorist_Henrich_von_Hess"
-			texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Henrich_von_Hess.png"
+			name = "GFX_idea_AUS_theorist_Archduke_Maximillian"
+			texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Archduke_Maximillian.png"
+		}
+		spriteType = {
+			name = "GFX_idea_AUS_theorist_August_von_Degenfeld"
+			texturefile = "gfx/interface/ideas/AUS/AUS_theorist_August_von_Degenfeld.png"
+		}
+		spriteType = {
+			name = "GFX_idea_AUS_theorist_Ludwig_von_Benedek"
+			texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Ludwig_von_Benedek.png"
 		}
 		spriteType = {
 			name = "GFX_idea_AUS_theorist_Ludwig_von_Fautz"
@@ -152,36 +160,28 @@ spriteTypes = {
 		
 	# MHC Army
 		spriteType = {
-			name = "GFX_idea_AUS_mhc_army_Franz_von_Schlick"
-			texturefile = "gfx/interface/ideas/AUS/AUS_mhc_army_Franz_von_Schlick.png"
+			name = "GFX_idea_AUS_mhc_army_Albrecht_von_Teschen"
+			texturefile = "gfx/interface/ideas/AUS/AUS_mhc_army_Albrecht_von_Teschen.png"
 		}
 		spriteType = {
-			name = "GFX_idea_AUS_vic_Ludwig_von_Gablenz"
-			texturefile = "gfx/interface/ideas/AUS/AUS_vic_Ludwig_von_Gablenz.dds"
+			name = "GFX_idea_AUS_mhc_army_Franz_Emil_Lorenz_Wimpffen"
+			texturefile = "gfx/interface/ideas/AUS/AUS_mhc_army_Franz_Emil_Lorenz_Wimpffen.png"
 		}
 		spriteType = {
-			name = "GFX_idea_AUS_vic_Ludwig_von_Benedek"
-			texturefile = "gfx/interface/ideas/AUS/AUS_vic_Ludwig_von_Benedek.dds"
+			name = "GFX_idea_AUS_mhc_army_Franz_von_Hauslab"
+			texturefile = "gfx/interface/ideas/AUS/AUS_mhc_army_Franz_von_Hauslab.png"
 		}
 		spriteType = {
-			name = "GFX_idea_AUS_vic_August_von_Degenfeld"
-			texturefile = "gfx/interface/ideas/AUS/AUS_vic_August_von_Degenfeld.png"
+			name = "GFX_idea_AUS_mhc_army_Franz_von_Schlik"
+			texturefile = "gfx/interface/ideas/AUS/AUS_mhc_army_Franz_von_Schlik.png"
 		}
 		spriteType = {
-			name = "GFX_idea_AUS_theorist_Albrecht_von_Teschen"
-			texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Albrecht_von_Teschen.dds"
+			name = "GFX_idea_AUS_mhc_army_Henrich_von_Hess"
+			texturefile = "gfx/interface/ideas/AUS/AUS_mhc_army_Henrich_von_Hess.png"
 		}
 		spriteType = {
-			name = "GFX_idea_AUS_theorist_Archduke_Maximillian"
-			texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Archduke_Maximillian.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_AUS_Romako"
-			texturefile = "gfx/interface/ideas/AUS/AUS_Romako.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_AUS_Jilek"
-			texturefile = "gfx/interface/ideas/AUS/AUS_Jilek.dds"
+			name = "GFX_idea_AUS_mhc_army_Ludwig_von_Gablenz"
+			texturefile = "gfx/interface/ideas/AUS/AUS_mhc_army_Ludwig_von_Gablenz.png"
 		}
 		
 	# MHC Navy
@@ -200,6 +200,14 @@ spriteTypes = {
 		spriteType = {
 			name = "GFX_idea_AUS_vic_Heinrich_von_Littrow"
 			texturefile = "gfx/interface/ideas/AUS/AUS_vic_Littrow.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_AUS_Romako"
+			texturefile = "gfx/interface/ideas/AUS/AUS_Romako.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_AUS_Jilek"
+			texturefile = "gfx/interface/ideas/AUS/AUS_Jilek.dds"
 		}
 		
 	# Companies
@@ -1305,80 +1313,103 @@ spriteTypes = {
 }
 spriteTypes = {
 	# (GRE) Greece
+
+	# Succession Ideas
+	spriteType = {
+		name = "GFX_idea_GRE_Otto_I"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Otto_I.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GRE_George_I"
+		texturefile = "gfx/interface/ideas/GRE/GRE_George_I.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GRE_Luitpold_I"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Luitpold_I.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GRE_Alfred_I"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Alfred_I.png"
+	}
+
 	# Spirits
-		spriteType = {
-			name = "GFX_idea_GRE_occupation_athens"
-			texturefile = "gfx/interface/ideas/GRE/GRE_occupation_athens.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Piracy"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Piracy.png"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Combat_Piracy"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Combat_Piracy.png"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_International_Economic_Comittee"
-			texturefile = "gfx/interface/ideas/GRE/GRE_International_Economic_Comittee.png"
-		}
+	spriteType = {
+		name = "GFX_idea_GRE_occupation_athens"
+		texturefile = "gfx/interface/ideas/GRE/GRE_occupation_athens.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Piracy"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Piracy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Combat_Piracy"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Combat_Piracy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_International_Economic_Comittee"
+		texturefile = "gfx/interface/ideas/GRE/GRE_International_Economic_Comittee.png"
+	}
 	# Advisors
-		spriteType = {
-			name = "GFX_idea_GRE_Advisor_Queen_Amalia"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Advisor_Queen_Amalia.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Advisor_Dimitrios_Kallergis"
-			texturefile = "gfx/interface/ideas/GRE/GRE_advisor_Dimitrios_Kallergis.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Advisor_Epaminondas_Deligiorgis"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Advisor_Epaminondas_Deligiorgis.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_theorist_Panos_Koronaios"
-			texturefile = "gfx/interface/ideas/GRE/GRE_theorist_Panos_Koronaios.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Anastasios_Polyzoidis"
-			texturefile = "gfx/interface/ideas/GRE/GRE_advisor_anastasios_polyzoidis.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Ioannis_Papafis"
-			texturefile = "gfx/interface/ideas/GRE/GRE_advisor_ioannis_papafis.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Evangelinos_Apostolides_Sophocles"
-			texturefile = "gfx/interface/ideas/GRE/GRE_advisor_evangelinos_a_sophocles.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Amadeus_Emmanuel_Han"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Amadeus_Emmanuel_Han.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Efstratios_Pissas"
-			texturefile = "gfx/interface/ideas/GRE/GRE_efstratios_pissas.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Aristotelis_Valaoritis"
-			texturefile = "gfx/interface/ideas/GRE/GRE_advisor_aristotelis_valaoritis.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Antonios_Mavromichalis"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Mavromichalis.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Leonidas_Palaskas"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Palaskas.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Antonios_Kriezis"
-			texturefile = "gfx/interface/ideas/GRE/GRE_Kriezis.dds"
-		}
-		spriteType = {
-			name = "GFX_idea_GRE_Aristeidis_Dosios"
-			texturefile = "gfx/interface/ideas/GRE/GRE_advisor_aristeidis_dosios.dds"
-		}
+
+	spriteType = {
+		name = "GFX_idea_GRE_Advisor_Queen_Amalia"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Advisor_Queen_Amalia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Advisor_Dimitrios_Kallergis"
+		texturefile = "gfx/interface/ideas/GRE/GRE_advisor_Dimitrios_Kallergis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Advisor_Epaminondas_Deligiorgis"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Advisor_Epaminondas_Deligiorgis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_theorist_Panos_Koronaios"
+		texturefile = "gfx/interface/ideas/GRE/GRE_theorist_Panos_Koronaios.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Anastasios_Polyzoidis"
+		texturefile = "gfx/interface/ideas/GRE/GRE_advisor_anastasios_polyzoidis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Ioannis_Papafis"
+		texturefile = "gfx/interface/ideas/GRE/GRE_advisor_ioannis_papafis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Evangelinos_Apostolides_Sophocles"
+		texturefile = "gfx/interface/ideas/GRE/GRE_advisor_evangelinos_a_sophocles.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Amadeus_Emmanuel_Han"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Amadeus_Emmanuel_Han.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Efstratios_Pissas"
+		texturefile = "gfx/interface/ideas/GRE/GRE_efstratios_pissas.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Aristotelis_Valaoritis"
+		texturefile = "gfx/interface/ideas/GRE/GRE_advisor_aristotelis_valaoritis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Antonios_Mavromichalis"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Mavromichalis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Leonidas_Palaskas"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Palaskas.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Antonios_Kriezis"
+		texturefile = "gfx/interface/ideas/GRE/GRE_Kriezis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_Aristeidis_Dosios"
+		texturefile = "gfx/interface/ideas/GRE/GRE_advisor_aristeidis_dosios.png"
+	}
 }
 spriteTypes = {
 	# (HAM) Hamburg

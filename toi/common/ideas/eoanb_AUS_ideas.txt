@@ -130,7 +130,7 @@ ideas = {
 			picture = AUS_hungarian_nationalism
 
 			modifier = {
-				conscription_factor = -0.2
+				conscription_factor = -0.1
 				army_org_factor = -0.05
 				stability_factor = -0.2
 			}
@@ -388,10 +388,9 @@ ideas = {
 			modifier = {
 				army_morale_factor = -0.05
 				conscription = -0.005
-				conscription_factor = -0.1
+				conscription_factor = -0.15
 				command_power_gain = -0.05
 				mobilization_speed = -0.1
-				supply_consumption_factor = 0.2
 				production_speed_arms_factory_factor = -0.2
 				industrial_capacity_factory = -0.1
 			}
@@ -409,7 +408,7 @@ ideas = {
 
 			removal_cost = -1
 
-			#picture = 
+			picture = generic_build_infrastructure
 
 			modifier = {
 				mobilization_speed = 0.2
@@ -430,7 +429,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_modern_army
 
 			modifier = {
 				land_reinforce_rate = 0.02
@@ -451,7 +450,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_manpower_bonus
 
 			modifier = {
 				army_morale_factor = 0.02
@@ -470,7 +469,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_manpower_bonus
 
 			modifier = {
 				army_morale_factor = 0.02
@@ -491,7 +490,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_manpower_bonus
 
 			modifier = {
 				breakthrough_factor = 0.025
@@ -511,7 +510,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_manpower_bonus
 
 			modifier = {
 				breakthrough_factor = 0.025
@@ -533,7 +532,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_modern_army
 
 			modifier = {
 				max_planning_factor = 0.05
@@ -555,7 +554,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_modern_army
 
 			modifier = {
 				max_planning_factor = 0.05
@@ -579,10 +578,11 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_war_plans
 
 			modifier = {
 				max_command_power = 25
+				command_power_gain = 0.1
 				planning_speed = -0.05
 				supply_consumption_factor = 0.05
 				political_power_factor = 0.05
@@ -601,10 +601,11 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_war_plans
 
 			modifier = {
 				max_command_power = 25
+				command_power_gain = 0.2
 				planning_speed = -0.1
 				supply_consumption_factor = 0.1
 				political_power_factor = 0.1
@@ -625,7 +626,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_infantry_bonus
 
 			modifier = {
 				army_morale_factor = 0.02
@@ -645,7 +646,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = generic_infantry_bonus
 
 			modifier = {
 				army_morale_factor = 0.03
@@ -685,7 +686,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			#picture = 
+			picture = CZE_planning_bonus
 
 			modifier = {
 				army_infantry_attack_factor = 0.05
@@ -1122,8 +1123,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.02
-				political_power_gain = 0.15
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.05
 			}
 		}
 		

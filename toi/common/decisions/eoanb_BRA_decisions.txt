@@ -293,7 +293,7 @@ political_actions = {
 		cost = 0
 		fire_only_once = yes
 		complete_effect = {
-			country_event = { id = brazil_votes.7 days = 1}
+			country_event = { id = brazil_votes.7 days = 1 }
 		}
 		ai_will_do = {
 			base = 1000
@@ -468,6 +468,86 @@ political_actions = {
 			country_event = { id = brazil_votes.14 days = 1 }
 		}
 	}
+	BRA_decision_gold_mines_1857 = {
+		allowed = {
+			original_tag = BRA
+		}
+		available = {
+			BRA = {
+				has_completed_focus = BRA_1857_minning_gold
+				NOT = { has_idea = BRA_1857_minas_gerais_gold }
+				has_idea = BRA_marques_de_olinda
+			}
+			check_variable = { current_reform_id = 0 }
+		}
+		visible = {
+			BRA = {
+				has_completed_focus = BRA_1857_minning_gold
+				NOT = { has_idea = BRA_1857_minas_gerais_gold }
+				has_idea = BRA_marques_de_olinda
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			country_event = { id = brazil_votes.15 days = 1 }
+		}
+	}
+	BRA_decision_acquire_gold_from_mines = {
+		available = {
+			has_completed_focus = BRA_1857_minning_gold
+			#NOT = { has_country_flag = trading_gold }
+		}
+		visible = {
+			has_completed_focus = BRA_1857_minning_gold
+		}
+		allowed = {
+			original_tag = BRA
+		}
+		fire_only_once = yes
+		days_remove = 70
+		cost = 50
+		modifier = {
+			civilian_factory_use = 2
+			weekly_manpower = -1001
+		}
+		remove_effect = {
+			1038 = {
+				add_resource = {
+					type = rare_earth_metals
+					amount = 5
+				}
+				add_manpower = 10010
+				set_state_flag = minning_gold
+			}
+			add_ideas = BRA_1857_minas_gerais_gold
+		}
+	}
+	BRA_decision_national_bank_monopoly_1857 = {
+		allowed = {
+			original_tag = BRA
+		}
+		available = {
+			BRA = {
+				has_completed_focus = BRA_1857_national_bank_monopoly
+				NOT = { has_idea = BRA_1857_monopoly_on_issuing_money }
+				has_idea = BRA_marques_de_olinda
+			}
+			check_variable = { current_reform_id = 0 }
+		}
+		visible = {
+			BRA = {
+				has_completed_focus = BRA_1857_national_bank_monopoly
+				NOT = { has_idea = BRA_1857_monopoly_on_issuing_money }
+				has_idea = BRA_marques_de_olinda
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			country_event = { id = brazil_votes.16 days = 1 }
+		}
+	}
 }
 
 eoanb_category_economic = {
@@ -515,6 +595,7 @@ eoanb_category_economic = {
 			#consumer_goods = 0.05
 			civilian_factory_use = 5
 		}
+		fixed_random_seed = no
 		remove_effect = {
 			random_list={
 				50={
@@ -970,6 +1051,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			1037 = { 
 				add_extra_state_shared_building_slots = 2
@@ -1690,6 +1772,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			500 = {
 				add_extra_state_shared_building_slots = 2
@@ -2430,6 +2513,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			501 = { 
 				add_extra_state_shared_building_slots = 2
@@ -3233,6 +3317,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			1036 = { 
 				add_extra_state_shared_building_slots = 2
@@ -3966,6 +4051,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			1038 = { 
 				add_extra_state_shared_building_slots = 2
@@ -4830,6 +4916,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			499 = { 
 				add_extra_state_shared_building_slots = 2
@@ -5694,6 +5781,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			1039 = { 
 				add_extra_state_shared_building_slots = 2
@@ -6406,6 +6494,7 @@ BRA_decision_category_coffee_economy={
 			add_political_power= -100
 			add_stability = -0.02
 		}
+		fixed_random_seed = no
 		complete_effect={
 			301 = { 
 				add_extra_state_shared_building_slots = 2
@@ -6946,33 +7035,43 @@ BRA_decision_category_modernize_the_empire = {
 			has_completed_focus = BRA_factories_ponta_da_areia
 		}
 		fire_only_once = yes
-		cost = 0
+		days_remove = 360
+		cost = 50
+		highlight_states = {
+			state = 500
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
 		allowed = { original_tag = BRA }
 		complete_effect = {
 			500 = {	
-				add_extra_state_shared_building_slots = 2
-				set_state_flag = maua_factory
+				add_extra_state_shared_building_slots = 1
 			}
-			unlock_decision_tooltip = BRA_decision_the_ponta_da_areia_factories
+		}
+		remove_effect = {
+			500 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
 	BRA_decision_the_ponta_da_areia_factories = {
 		icon = generic_industry
 		fire_only_once = yes
-		days_remove = 1080
+		days_remove = 720
 		allowed = { original_tag = BRA }
-		visible={
-			500 = {
-				has_state_flag = maua_factory
-			}
-			owns_state = 500
-		}
 		available = {
-			500 = {
-				has_state_flag = maua_factory
-			}
 			owns_state = 500
+			has_completed_focus = BRA_factories_ponta_da_areia
+		}
+		visible = {
+			owns_state = 500
+			has_completed_focus = BRA_factories_ponta_da_areia
 		}
 		highlight_states = {
 			state = 500
@@ -6982,6 +7081,11 @@ BRA_decision_category_modernize_the_empire = {
 		modifier = {
 			civilian_factory_use = 1
 		}
+		complete_effect = {
+			500 = {	
+				add_extra_state_shared_building_slots = 1
+			}
+		}
 		remove_effect = {
 			500 = {
 				add_building_construction = {
@@ -6989,8 +7093,41 @@ BRA_decision_category_modernize_the_empire = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+	}
+	
+	BRA_decision_the_ponta_da_areia_machinary = {
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 180
+		allowed = { original_tag = BRA }
+		available = {
+			owns_state = 500
+			has_completed_focus = BRA_factories_ponta_da_areia
+			has_tech = machine_tools_1
+		}
+		visible = {
+			owns_state = 500
+			has_completed_focus = BRA_factories_ponta_da_areia
+		}
+		highlight_states = {
+			state = 500
+		}
+		is_good = yes
+		cost = 50
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			500 = {	
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		remove_effect = {
+			500 = {
 				add_building_construction = {
-					type = industrial_complex
+					type = machine_parts_factory
 					level = 1
 					instant_build = yes
 				}
@@ -9118,8 +9255,14 @@ BRA_decision_category_modernize_the_empire = {
 			}
 			build_railway = {
 				level = 1
-				path = { 12466 14019 10980 13983 5172 13964 12334 }
+				path = { 12466 14019 10980 13983 5172 13964 }
 				start_state = 1037
+				target_state = 500
+			}
+			build_railway = {
+				level = 1
+				path = { 13964 12334 }
+				start_state = 500
 				target_state = 1038
 			}
 		}
