@@ -11,6 +11,8 @@ ideas = {
 				original_tag = JAP
 			}
 
+			picture = JAP_imperial_seal
+
 			modifier = {
 				army_org_factor = 0.1
 			}
@@ -20,6 +22,8 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 			}
+
+			picture = JAP_imperial_seal
 
 			modifier = {
 				army_org_factor = 0.1
@@ -31,6 +35,8 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 			}
+
+			picture = JAP_imperial_seal
 
 			modifier = {
 				army_org_factor = 0.1
@@ -49,6 +55,8 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 			}
+
+			picture = JAP_imperial_seal
 
 			modifier = {
 				army_org_factor = 0.1
@@ -71,8 +79,10 @@ ideas = {
 
 			targeted_modifier = {
 				tag = TSH
-				army_attack_factor = -0.05
+				army_attack_factor = 0.085
 			}
+
+			picture = JAP_imperial_seal
 
 			modifier = {
 				army_org_factor = 0.1

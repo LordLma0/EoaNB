@@ -178,7 +178,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#add_ideas = 
+			add_timed_idea = {
+				idea = TCS_idea_build_up_army
+				days = 365
+			}
 		}
 	}
 
@@ -405,7 +408,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#add_ideas =
+			add_ideas = TCS_idea_take_over_uk_ops
 		}
 	}
 
@@ -426,7 +429,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#add_ideas =
+			add_timed_idea = {
+				idea = TCS_idea_foreign_invest
+				days = 365
+			}
 		}
 	}
 
@@ -447,7 +453,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#add_ideas =
+			add_timed_idea = {
+				idea = TCS_idea_uk_invest
+				days = 365
+			}
 		}
 	}
 
@@ -492,7 +501,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#add_ideas =
+			add_timed_idea = {
+				idea = TCS_idea_education
+				days = 730
+			}
 		}
 	}
 
@@ -516,7 +528,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#add_ideas =
+			add_timed_idea = {
+				idea = TCS_idea_uk_training
+				days = 365
+			}
 		}
 	}
 
@@ -614,6 +629,31 @@ focus_tree = {
 
 		completion_reward = {
 			#country_event =
+			set_cosmetic_tag = TCS_UK_D
+			hidden_effect = {
+				ENG = {
+					if = {
+						limit = {
+							OR = {
+								has_dlc = "Together for Victory"
+								has_dlc = "Waking the Tiger"
+								has_dlc = "Death or Dishonor"
+							}
+						}
+						set_autonomy = {
+							target = TCS
+							autonomy_state = autonomy_afr_dominion
+						}
+					}
+					else = {
+						puppet = TCS
+					}
+				}
+				swap_ideas = {
+					remove_idea = AFR_british_protectorate
+					add_idea = AFR_british_colony
+				}
+			}
 		}
 	}
 
@@ -880,7 +920,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			unlock_decision_tooltip = TCS_focus_decision_militia_expansion
+			unlock_decision_tooltip = TCS_decision_militia_expansion
 		}
 	}
 

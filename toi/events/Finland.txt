@@ -372,15 +372,15 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		TAG = FIN
-		date > 1858.10.1
-	}
-
 	option = {
 		name = finland.15.a
 		ai_chance = { factor = 40 }
-		add_political_power = 10
+		set_temp_variable = { EOANBSYS_humanitive_change = 0.05 }
+		EOANBSYS_institutions_humanitive_change = yes
+		set_temp_variable = { eoanb_prestige_change = 2 }
+		eoanb_change_prestige_score = yes
+		add_political_power = 50
+		add_stability = 0.05
 	}
 }
 
@@ -394,84 +394,92 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		TAG = FIN
-		date > 1858.5.1
-	}
-
 	option = {
 		name = finland.16.a
-		add_political_power = 10
+		add_political_power = 30
+		set_temp_variable = { EOANBSYS_humanitive_change = 0.05 }
+		EOANBSYS_institutions_humanitive_change = yes
+		add_tech_bonus = { bonus = 0.25 uses = 1 category = humanities_tech }
 	}
 }
 
-#New Flag? FENNOMAN
+#Finnish Party
 country_event = {
-	id = finlandfocus.22
-	title = finlandfocus.22.t
-	desc = finlandfocus.22.d
+	id = finland.17
+	title = finland.17.t
+	desc = finland.17.d
 	#picture = GFX_france_kepi_general
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
-option = { #No Change
-        name = finlandfocus.22.a
-        ai_chance = { 
-            base = 100
-            modifier = {
-                add = -25
-                is_historical_focus_on = no
-            }
-        }
-    }
-     #Change to Fennoman
-    option = {
-        name = finlandfocus.22.b
-        set_cosmetic_tag = FIN_Fennoman
-        ai_chance = { 
-            base = 0
-            modifier = {
-                add = 25
-                is_historical_focus_on = no
-            }
-        }
-    }
-}
-#New Flag? SVECOMAN
+	option = {
+		name = finland.17.a
+			add_political_power = 75
+			set_party_name = { 
+				ideology = traditional_conservatism 
+				long_name = FIN_1862_Finnish_Party 
+				name = FIN_1862_Finnish_Party 
+			}
+			if = {
+				limit = {
+					has_completed_focus = FIN_support_fennomans
+				}
+				increase_legitimacy_by_ten = yes
+				EOANBSYS_institutions_nationalism_add_five = yes
+				FIN_Agathon_Meurman = {
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = FIN_Agathon_Meurman
+							allowed = {
+								original_tag = FIN
+							}
+							traits = {
+								
+							}
+							ai_will_do = {
+								factor = 5
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+#Julius Krohn's Works
 country_event = {
-	id = finlandfocus.23
-	title = finlandfocus.23.t
-	desc = finlandfocus.23.d
+	id = finland.18
+	title = finland.18.t
+	desc = finland.18.d
 	#picture = GFX_france_kepi_general
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
-option = { #No Change
-        name = finlandfocus.23.a
-        ai_chance = { 
-            base = 100
-            modifier = {
-                add = -25
-                is_historical_focus_on = no
-            }
-        }
-    }
-     #Change to Fennoman
-    option = {
-        name = finlandfocus.23.b
-        set_cosmetic_tag = FIN_Fennoman
-        ai_chance = { 
-            base = 0
-            modifier = {
-                add = 25
-                is_historical_focus_on = no
-            }
-        }
-    }
-}
+	option = {
+		name = finland.18.a
+			add_political_power = 50
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = humanities_tech
+			}
+			if = {
+				limit = {
+					has_completed_focus = FIN_support_fennomans
+				}
+				EOANBSYS_institutions_nationalism_add_five = yes
+				add_autonomy_score = {
+					value = 10
+					localization = FIN_karelianism_folklore
+				}
+			}
+		}
+	}	
 
+###Focus Tree Events
 country_event = {  #Status of finnish economy
 		id = finlandfocus.1
 		title = finlandfocus.1.t
@@ -903,6 +911,76 @@ country_event = {  #Status of finnish economy
 		}
 	}
 	
+	#New Flag? FENNOMAN
+	country_event = {
+		id = finlandfocus.22
+		title = finlandfocus.22.t
+		desc = finlandfocus.22.d
+		#picture = GFX_france_kepi_general
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = { #No Change
+			name = finlandfocus.22.a
+			ai_chance = { 
+				base = 100
+				modifier = {
+					add = -25
+					is_historical_focus_on = no
+				}
+			}
+		}
+		
+		#Change to Fennoman
+		option = {
+			name = finlandfocus.22.b
+			set_cosmetic_tag = FIN_Fennoman
+			ai_chance = { 
+				base = 0
+				modifier = {
+					add = 25
+					is_historical_focus_on = no
+				}
+			}
+		}
+	}
+	
+	#New Flag? SVECOMAN
+	country_event = {
+		id = finlandfocus.23
+		title = finlandfocus.23.t
+		desc = finlandfocus.23.d
+		#picture = GFX_france_kepi_general
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = { #No Change
+			name = finlandfocus.23.a
+			ai_chance = { 
+				base = 100
+				modifier = {
+					add = -25
+					is_historical_focus_on = no
+				}
+			}
+		}
+		
+		#Change to Fennoman
+		option = {
+			name = finlandfocus.23.b
+			set_cosmetic_tag = FIN_Fennoman
+			ai_chance = { 
+				base = 0
+				modifier = {
+					add = 25
+					is_historical_focus_on = no
+				}
+			}
+		}
+	}
+	
 	country_event = {  #Inspecting Economy
 		id = finlandfocus.24
 		title = finlandfocus.24.t
@@ -953,7 +1031,6 @@ country_event = {  #Status of finnish economy
 		}
 	}
 	
-
 ### Finnish famine
 ## Famine warning
 country_event = {

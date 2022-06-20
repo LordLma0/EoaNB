@@ -5250,6 +5250,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/italy/focus_ITA_Queen_Victoria.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_ITA_Unification_Symbolism"
+		texturefile = "gfx/interface/goals/italy/focus_ITA_Unification_Symbolism.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_TUS_Tuscan_COA"
 		texturefile = "gfx/interface/goals/italy/focus_TUS_Tuscan_COA.png"
 	}
@@ -8360,6 +8364,39 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/japan/goals_JAP_imperial_restoration.png"
 	}
 	SpriteType = {
+		name = "GFX_jap_naval_construction_1"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_1.png"
+	}
+	SpriteType = {
+		name = "GFX_jap_naval_construction_2"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_2.png"
+	}
+	SpriteType = {
+		name = "GFX_jap_naval_construction_3"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_3.png"
+	}
+	SpriteType = {
+		name = "GFX_jap_naval_construction_4"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_4.png"
+	}
+	SpriteType = {
+		name = "GFX_jap_naval_construction_5"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_5.png"
+	}
+	SpriteType = {
+		name = "GFX_jap_naval_construction_6"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_6.png"
+	}
+	SpriteType = {
+		name = "GFX_jap_naval_construction_7"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_7.png"
+	}
+	SpriteType = {
+		name = "GFX_jap_naval_construction_8"
+		texturefile = "gfx/interface/goals/japan/jap_naval_construction_8.png"
+	}
+	### Defenitly not Japan stuff below
+	SpriteType = {
 		name = "GFX_focus_SPR_tropical_expedition"
 		texturefile = "gfx/interface/goals/spain/focus_SPR_tropical_expedition.dds"
 	}
@@ -9306,15 +9343,83 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_focus_na_n_the_fall"
-		texturefile = "gfx/interface/goals/na_n/focus_na_n_the_fall.dds"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_the_fall.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_na_n_welcome_new_immigrants"
-		texturefile = "gfx/interface/goals/na_n/focus_na_n_welcome_new_immigrants.dds"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_welcome_new_immigrants.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_na_n_take_direct_control"
-		texturefile = "gfx/interface/goals/na_n/focus_na_n_take_direct_control.dds"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_take_direct_control.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_close_the_borders"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_close_the_borders.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_lassez_faire"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_lassez_faire.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_anti_immigration_stance"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_anti_immigration_stance.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_ellis_island_policies"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_ellis_island_policies.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_introduce_temporary_measures"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_introduce_temporary_measures.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_incentivise_business"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_incentivise_business.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_nobody_enters_nobody_leaves"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_nobody_enters_nobody_leaves.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_dealing_with_mass_migration"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_dealing_with_mass_migration.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_embrace_the_invisible_hand"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_embrace_the_invisible_hand.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_full_intervention"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_full_intervention.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_the_atlantic_panic"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_the_atlantic_panic.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_coming_to_terms"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_coming_to_terms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_try_to_avert_further_economic_issues"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_try_to_avert_further_economic_issues.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_attempt_quasi_integration"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_attempt_quasi_integration.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_debt_and_taxes"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_debt_and_taxes.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_how_hard_can_this_be"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_how_hard_can_this_be.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_na_n_the_panic_attack_ceases"
+		texturefile = "gfx/interface/goals/na_n/focus_na_n_the_panic_attack_ceases.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_na_n_japan_policy"
@@ -9497,4 +9602,87 @@ spriteTypes = {
 		name = "GFX_focus_JAP_yamato_crest_red"
 		texturefile = "gfx/interface/goals/japan/focus_JAP_yamato_crest_red.dds"
 	}
-}
+	
+	
+	spriteType = {
+		name = "GFX_goal_focus_tribal_hut"
+		texturefile = "gfx/interface/goals/edc_african/focus_tribal_hut.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_focus_tribal_shield"
+		texturefile = "gfx/interface/goals/edc_african/focus_tribal_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_focus_even_more_docks"
+		texturefile = "gfx/interface/goals/edc_african/focus_even_more_docks.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_focus_AUS_industry"
+		texturefile = "gfx/interface/goals/austria/focus_AUS_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_focus_AUS_rail_1"
+		texturefile = "gfx/interface/goals/austria/focus_AUS_rail_1.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_build_tribal_army"
+		texturefile = "gfx/interface/goals/edc_african/goal_generic_build_tribal_army.dds"
+	}
+
+### VENEZUELA
+	SpriteType = {
+		name = "GFX_goal_VEN_ciudad_bolivar_urbanization"
+		texturefile = "gfx/interface/goals/venezuela/VEN_cbolivar_urbanization.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_caracas_urbanization"
+		texturefile = "gfx/interface/goals/venezuela/VEN_caracas_urbanization.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_maracaibo_urbanization"
+		texturefile = "gfx/interface/goals/venezuela/VEN_maracaibo_urbanization.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_san_fernando_urbanization"
+		texturefile = "gfx/interface/goals/venezuela/VEN_sf_apure_urbanization.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_paez"
+		texturefile = "gfx/interface/goals/venezuela/VEN_paez.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_USVflag"
+		texturefile = "gfx/interface/goals/venezuela/VEN_USVflag.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_end_jtm"
+		texturefile = "gfx/interface/goals/venezuela/VEN_end_jtm.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_infrastructure"
+		texturefile = "gfx/interface/goals/venezuela/railway_VEN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_puerto_cabello_develop"
+		texturefile = "gfx/interface/goals/venezuela/VEN_puerto_cabello_development.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_UCV_expand"
+		texturefile = "gfx/interface/goals/venezuela/VEN_UCV_expand.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_great_reconstruction"
+		texturefile = "gfx/interface/goals/venezuela/great_reconstruction_VEN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_caudillo_rebellion"
+		texturefile = "gfx/interface/goals/venezuela/caudillo_rebellion_VEN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_handshake_britain"
+		texturefile = "gfx/interface/goals/venezuela/handshake_ENG_VEN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_VEN_a_reformed_venezuela"
+		texturefile = "gfx/interface/goals/venezuela/reformed_venezuela_VEN.dds"
+	}

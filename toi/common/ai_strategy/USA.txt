@@ -26,17 +26,17 @@ USA_starter_unit_production = {
 	# 	value = 80
 	# }
 	
-	ai_strategy = {
-		type = role_ratio
-		id = light_infantry
-		value = 30
-	}
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = light_infantry
+	# 	value = 30
+	# }
 
-	ai_strategy = {
-		type = role_ratio
-		id = line_infantry
-		value = 70
-	}
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = line_infantry
+	# 	value = 70
+	# }
 	
 	ai_strategy = {
 		type = equipment_production_factor
@@ -61,6 +61,22 @@ USA_starter_unit_production = {
 		id = garrison
 		value = 0
 	}
+
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = artillery
+	# 	value = 80
+	# }
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = cannon_artillery
+	# 	value = 80
+	# }
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = howitzer_artillery
+	# 	value = 80
+	# }
 
 }
 
@@ -353,5 +369,46 @@ USA_invade_spanish_american_war = {
 		type = antagonize
 		id = SPR
 		value = 200
+	}
+}
+
+USA_must_kill_sem = {
+
+	allowed = {
+		tag = USA
+	}
+	
+	enable = {
+		USA = { has_war_with = SEM }
+	}
+
+	abort = { USA = { NOT = { has_war_with = SEM } } }
+
+	ai_strategy = {
+		type = garrison
+		value = -6000
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "SEM"
+		value = 6000
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = "SEM"
+		value = 6000
+	}
+
+	# ai_strategy = {
+	# 	type = consider_weak
+	# 	id = "SEM"
+	# 	value = -200
+	# }
+
+	ai_strategy = {
+		type = spare_unit_factor
+		value = 6000
 	}
 }

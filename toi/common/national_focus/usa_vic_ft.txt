@@ -105,7 +105,7 @@ focus_tree = {
 			focus = USA_inclusive_cabinet
 		}
 		ai_will_do = {
-			base = 100
+			base = 75
 		}
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
@@ -126,7 +126,7 @@ focus_tree = {
 			focus = USA_doughface_cabinet
 		}
 		ai_will_do = {
-			base = 100
+			base = 25
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -3605,6 +3605,7 @@ focus_tree = {
 			ACW_Draft_Count_Get = yes
 			set_temp_variable = { acw_weapons_count_change = 4 }
 			ACW_Weapons_Count_Get = yes
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {

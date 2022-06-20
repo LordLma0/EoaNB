@@ -809,12 +809,12 @@ add_namespace = feudal_tokugawa_daimyos
 				name = feudal_tokugawa_shogunate.25.a
 				EOANBSYS_institutions_innovative_add_five = yes
 				EOANBSYS_institutions_humanitive_add_ten = yes
-				EOANBSYS_national_crisis_progress_minus_one = yes
+				EOANBSYS_national_crisis_progress_add_one = yes
 			}
 			option = {
 				name = feudal_tokugawa_shogunate.25.b
-				EOANBSYS_institutions_innovative_add_five = yes
-				EOANBSYS_institutions_humanitive_add_ten = yes
+				EOANBSYS_institutions_innovative_add_three = yes
+				EOANBSYS_institutions_humanitive_add_five = yes
 				EOANBSYS_national_crisis_progress_minus_one = yes
 			}
 		}
@@ -1335,7 +1335,7 @@ add_namespace = feudal_tokugawa_daimyos
 				FROM = { country_event = feudal_tokugawa_shogunate.43 }
 			}
 			option = {
-				name = feudal_tokugawa_shogunate.37.b
+				name = feudal_tokugawa_shogunate.40.a
 				ai_chance = { base = 0 modifier = { add = 100 tag = PRS } }
 				navy_experience = -5
 				add_equipment_to_stockpile = {
@@ -1348,7 +1348,7 @@ add_namespace = feudal_tokugawa_daimyos
 				FROM = { country_event = feudal_tokugawa_shogunate.42 }
 			}
 			option = {
-				name = feudal_tokugawa_shogunate.40.c
+				name = feudal_tokugawa_shogunate.37.b
 				ai_chance = { base = 0 }
 				FROM = { country_event = feudal_tokugawa_shogunate.41 }
 				reverse_add_opinion_modifier = { target = FROM modifier = small_decrease }
@@ -2056,13 +2056,7 @@ add_namespace = feudal_tokugawa_daimyos
 		news_event = {
 			id = feudal_tokugawa_shogunate.62
 			title = feudal_tokugawa_shogunate.62.t
-			desc = {
-				trigger = { TSH = { has_country_flag = TSH_IESADA_SUCESSION_HITO} }
-				text = feudal_tokugawa_shogunate.62.d_hito
-			}
-			desc = {
-				text = feudal_tokugawa_shogunate.62.d_kii
-			}
+			desc = feudal_tokugawa_shogunate.62.d
 			picture = GFX_news_event_flavor_funeral
 
 			is_triggered_only = yes
@@ -6276,9 +6270,14 @@ add_namespace = feudal_tokugawa_daimyos
 
 			option = {
 				name = feudal_tokugawa_shogunate.156.a
-				declare_war_on = {
-					target = SAT
-					type = wargoal_diplomatic_humiliation
+				# declare_war_on = {
+				# 	target = SAT
+				# 	type = wargoal_diplomatic_humiliation
+				# }
+				SAT = {
+					capital_scope = {
+						set_demilitarized_zone = yes
+					}
 				}
 				news_event = feudal_tokugawa_shogunate.157
 			}
@@ -6408,9 +6407,8 @@ add_namespace = feudal_tokugawa_daimyos
 						limit = { is_japanese_country = yes }
 						country_event = { id = feudal_tokugawa_shogunate.158 days = 2 }
 					}
-					every_country = {
-						limit = { has_war_with = SAT }
-						white_peace = SAT
+					capital_scope = {
+						set_demilitarized_zone = no
 					}
 				}
 			}
@@ -6442,7 +6440,6 @@ add_namespace = feudal_tokugawa_daimyos
 				trigger = { NOT = { tag = SAT tag = ENG } }
 			}
 		}
-	
 	# Hard Balances 
 		country_event = {
 			id = feudal_tokugawa_shogunate.196
@@ -6465,6 +6462,75 @@ add_namespace = feudal_tokugawa_daimyos
 				EOANBSYS_national_crisis_progress_minus_three = yes
 			}
 		}
+	# Flavor Events
+		# Lift of Philip Franz von Siebold's banishment
+		country_event = {
+			id = feudal_tokugawa_shogunate.160
+			title = feudal_tokugawa_shogunate.160.t
+			desc = feudal_tokugawa_shogunate.160.d
+			picture = GFX_report_event_jap_japan_map
+
+			is_triggered_only = yes
+
+			option = {
+				name = feudal_tokugawa_shogunate.160.a
+				ai_chance = { base = 0 }
+			}
+			option = {
+				name = feudal_tokugawa_shogunate.160.b
+				ai_chance = { base = 100 }
+
+				add_advisor_role = {
+					character = TSH_character_philip_franz_von_siebold
+					advisor = {
+						slot = political_advisor
+						cost = 25
+						idea_token = TSH_character_philip_franz_von_siebold
+
+						ai_will_do = { base = 10 }
+
+						cost = 75
+						removal_cost = -10
+
+						research_bonus = {
+							humanities_tech = 0.15
+						}
+
+						modifier = {
+							political_power_cost = -0.05
+						}
+					}
+					reverse_add_opinion_modifier = {
+						target = HOL
+						modifier = large_decrease
+					}
+				}
+
+				hidden_effect = {
+					country_event = {
+						id = feudal_tokugawa_shogunate.161
+						days = 1900
+					}
+				}
+			}
+		}
+		# Death of Siebold
+		country_event = {
+			id = feudal_tokugawa_shogunate.161
+			title = feudal_tokugawa_shogunate.161.d
+			desc = feudal_tokugawa_shogunate.161.t
+
+			picture = GFX_report_event_flavor_funeral
+
+			is_triggered_only = yes
+
+			option = {
+				name = feudal_tokugawa_shogunate.161.a
+				retire_character = TSH_character_philip_franz_von_siebold
+			}
+		}
+		#
+
 
 # Boshin War
 	# Debug 1
@@ -6927,7 +6993,7 @@ add_namespace = feudal_tokugawa_daimyos
 							var:TSH_boshin_war_han_ranks_tag^boshin_war_han_switch_tag = { country_event = feudal_tokugawa_shogunate.209 }
 						}
 					}
-					country_event = { id = feudal_tokugawa_shogunate days = 7 }
+					country_event = { id = feudal_tokugawa_shogunate.210 days = 7 }
 				}
 				JAP = { change_tag_from = ROOT }
 			}
@@ -7620,6 +7686,10 @@ add_namespace = feudal_tokugawa_daimyos
 						retire_character = TSH_character_tokugawa_iemochi
 						set_country_flag = TSH_character_tokugawa_iemochi_flag
 					}
+				}
+				hidden_effect = {
+					remove_ideas = TSH_spirit_vic_bakufu_shogunate_unconfidence
+					remove_ideas = TSH_spirit_vic_bakufu_shogunate_divided
 				}
 			}
 

@@ -3447,8 +3447,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = sardinia.123.a
-		country_event = {
-			id = sardinia.126
+		if = {
+			limit = {
+				has_completed_focus = PIE_The_Russian_Alliance
+			}
+			country_event = {
+				id = sardinia.126
+			}
 		}
 		PRM = {
 			country_event = {
@@ -7294,6 +7299,49 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = sardinia.261.a
+	}
+}
+
+# South Annexed into SP
+country_event = {
+	id = sardinia.262
+	title = sardinia.262.t
+	desc = sardinia.262.d
+	picture = GFX_event_ITA_nsc_plebiscite
+	is_triggered_only = yes
+	option = {
+		name = sardinia.262.a
+		add_stability = 0.01
+	}
+}
+
+# Procession to the Parliament
+country_event = {
+	id = sardinia.263
+	title = sardinia.263.t
+	desc = sardinia.263.d
+	picture = GFX_event_ITA_unification_procession
+	is_triggered_only = yes
+	option = {
+		name = sardinia.263.a
+		add_stability = 0.01
+	}
+}
+
+# Italian National Exhibition of 1861
+country_event = {
+	id = sardinia.264
+	title = sardinia.264.t
+	desc = sardinia.264.d
+	picture = GFX_event_ITA_florence_expedition
+	is_triggered_only = yes
+	option = {
+		name = sardinia.264.a
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = farming_tech
+		}
 	}
 }
 

@@ -11,17 +11,21 @@
 		}
 	}
 	
-	create_import = {
-		resource = cotton
-		amount = 8
-		exporter = BRA
-	}
+	#create_import = {
+	#	resource = cotton
+	#	amount = 8
+	#	exporter = BRA
+	#}
 	
 	set_convoys = 65
 	
 	set_research_slots = 3
 	
 	add_to_variable = { prestige_score = 3 }
+	
+	#Foreign Influence
+	set_variable = { influenced_by = BEL.id }
+	set_variable = { influenced_by2 = BEL.id }
 	
 	add_ideas = {
 		#POLITICS
@@ -74,10 +78,10 @@
 		collectivist_socialism = 0
 		social_egalitarianism = 0
 		centrism = 40
-		traditional_conservatism = 50
+		traditional_conservatism = 52
 		radical_democracy = 0
 		chauvinist_populism = 0
-		autocracy = 10
+		autocracy = 8
 		fundamentalism = 0
 	}
 	
@@ -138,6 +142,7 @@
 		civil_army_cloth = 1
 		tech_infantry_practical_rifling = 1
 		tech_infantry_caplock_pistol = 1
+		tech_infantry_percussion_cap = 1
 		rifle_equipment1 = 1
 		corliss_steam_engine = 1
 		mongolfiere = 1

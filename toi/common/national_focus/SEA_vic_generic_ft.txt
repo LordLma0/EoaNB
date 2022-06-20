@@ -80,7 +80,7 @@ focus_tree = {
 			}
 
 			mutually_exclusive = {
-				focus = east_asia_vic_regional_coooperation
+				focus = east_asia_vic_regional_cooperation
 			}
 			mutually_exclusive = {
 				focus = east_asia_vic_steadfast_isolation
@@ -181,7 +181,7 @@ focus_tree = {
 					add = 10
 				}
 				modifier = {
-					has_country_leader_with_trait = eoanb_trait_ruler_westernizing_oppponent
+					has_country_leader_with_trait = eoanb_trait_ruler_westernizing_opponent
 					add = 5
 				}
 			}
