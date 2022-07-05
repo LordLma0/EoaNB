@@ -479,7 +479,7 @@ country_event = {
 			name = eoanbsys_institutions.21.a
 		}
 	}
-	# Green Revolution
+# Green Revolution
 	news_event = {
 		id = eoanbsys_institutions.30
 		title = eoanbsys_institutions.30.t
@@ -626,7 +626,7 @@ country_event = {
 			name = eoanbsys_institutions.21.a
 		}
 	}
-# Mass Production
+# Automatization
 	news_event = {
 		id = eoanbsys_institutions.36
 		title = eoanbsys_institutions.36.t
@@ -643,7 +643,7 @@ country_event = {
 				}
 				add_to_array = {
 					array = global.discovered_innovative_institutions_token_array
-					value = token:institution_innovative_mass_media
+					value = token:institution_innovative_automatization
 				}
 				add_to_array = {
 					array = global.discovered_innovative_institutions_founded_array
