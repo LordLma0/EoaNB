@@ -170,7 +170,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_event_ITA_Carvour_Death"
-		texturefile = "gfx/event_pictures/italy/event_ITA_Carvour_Death.dds"
+		texturefile = "gfx/event_pictures/italy/event_ITA_cavour_death.png"
 	}
 	spriteType = {
 		name = "GFX_event_ITA_Generic_General_Meeting"
@@ -469,6 +469,18 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/italy/event_ITA_revolutions_1848.png"
 	}
 	spriteType = {
+		name = "GFX_event_ITA_nsc_plebiscite"
+		texturefile = "gfx/event_pictures/italy/event_ITA_nsc_plebiscite.png"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_unification_procession"
+		texturefile = "gfx/event_pictures/italy/event_ITA_unification_procession.png"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_florence_expedition"
+		texturefile = "gfx/event_pictures/italy/event_ITA_florence_expedition.png"
+	}
+	spriteType = {
 		name = "GFX_event_ITA_SP_map"
 		texturefile = "gfx/event_pictures/italy/event_ITA_SP_map.png"
 	}
@@ -499,6 +511,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_ITA_quadrilatero"
 		texturefile = "gfx/event_pictures/italy/event_ITA_quadrilatero.png"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_crowd_gathering"
+		texturefile = "gfx/event_pictures/italy/event_ITA_crowd_gathering.png"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_de_Larderel"
+		texturefile = "gfx/event_pictures/italy/event_ITA_de_Larderel.png"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_casati_law"
+		texturefile = "gfx/event_pictures/italy/event_ITA_casati_law.png"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_Botanical_Garden_Catania"
+		texturefile = "gfx/event_pictures/italy/event_ITA_Botanical_Garden_Catania.png"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_king_victor_emmanuel"
+		texturefile = "gfx/event_pictures/italy/event_ITA_king_victor_emmanuel.png"
 	}
 	spriteType = {
 		name = "GFX_event_ITA_Victor_Emanuel"

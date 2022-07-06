@@ -60,7 +60,11 @@ scripted_gui = {
 		}
 		ai_enabled = {
 			always = no
+<<<<<<<< HEAD:toi/common/scripted_guis/eoanbsys_ledger.txt
 		}
+========
+		}	
+>>>>>>>> (0.3)-Ars-Bellica:toi/common/scripted_guis/ledger_scripted_gui.txt
 	}
 	show_list = {
 		context_type = player_context
@@ -92,7 +96,11 @@ scripted_gui = {
 			}
 		}
 		ai_enabled = {
+<<<<<<<< HEAD:toi/common/scripted_guis/eoanbsys_ledger.txt
 			always = no
+========
+			always = no 
+>>>>>>>> (0.3)-Ars-Bellica:toi/common/scripted_guis/ledger_scripted_gui.txt
 		}
 	}
 }

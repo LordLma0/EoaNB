@@ -1006,6 +1006,14 @@ spriteTypes = {
 			texturefile = "gfx/interface/ideas/FRA/FRA_authoritarian_empire2.dds"
 		}
 		spriteType = {
+			name = "GFX_idea_FRA_liberal_empire2"
+			texturefile = "gfx/interface/ideas/FRA/FRA_liberal_empire2.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_FRA_uncertain_empire"
+			texturefile = "gfx/interface/ideas/FRA/FRA_uncertain_empire.dds"
+		}
+		spriteType = {
 			name = "GFX_idea_FRA_french_army_1"
 			texturefile = "gfx/interface/ideas/FRA/FRA_french_army_1.dds"
 		}
@@ -1612,6 +1620,11 @@ spriteTypes = {
 			name = "GFX_idea_ITA_Baby_Boom"
 			texturefile = "gfx/interface/ideas/ITA/idea_ITA_Baby_Boom.png"
 		}
+		spriteType = {
+			name = "GFX_idea_ITA_botanico_university"
+			texturefile = "gfx/interface/ideas/ITA/idea_ITA_botanico_university.png"
+		}
+		
 		
 	# Companies
 		spriteType = {
