@@ -9,10 +9,6 @@ scripted_gui = {
 		}
 		
 		triggers = {
-			# topbar_page_bg_visible = {
-				# check_variable = { show_local_topbar_page > 1 }
-			# }
-		
 			#custom button triggers go here
 			mhc_button_click_enabled = {
 				mhc_system_active_trigger = yes
@@ -28,31 +24,7 @@ scripted_gui = {
 			}
 		}
 		
-		# properties = {
-			# page_button = {
-				# frame = show_local_topbar_page
-			# }
-		# }
-		
 		effects = {
-			# page_button_click = {
-				# if = {
-					# limit = {
-						# NOT = {
-							# has_variable = show_local_topbar_page
-						# }
-					# }
-					# set_variable = { show_local_topbar_page = 1 }
-				# }
-				# add_to_variable = { show_local_topbar_page = 1 }
-				# #max amount of pages, increase if in need
-				# if = {
-					# limit = {
-						# check_variable = { show_local_topbar_page > 2 }
-					# }
-					# set_variable = { show_local_topbar_page = 1 }
-				# }
-			# }
 			
 			mhc_button_click = {
 				if = {

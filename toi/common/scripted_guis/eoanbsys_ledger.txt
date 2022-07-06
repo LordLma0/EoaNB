@@ -7,7 +7,7 @@ scripted_gui = {
 		parent_window_name = "estimated_enemy_force_info"
 		
 		visible = {
-		#is_ai = no  
+		#is_ai = no
 		}
 		 
 		effects = {
@@ -19,8 +19,8 @@ scripted_gui = {
 		ai_weights = {
 		}
 		ai_enabled = {
-		    always = no 
-		}	
+			always = no
+		}
 	}
 	
 	power_status = {
@@ -42,8 +42,8 @@ scripted_gui = {
 		ai_weights = {
 		}
 		ai_enabled = {
-		    always = no 
-		}	
+			always = no
+		}
 	}
 	
 	show_button = {
@@ -52,15 +52,15 @@ scripted_gui = {
 
 		effects = {
 			button_click = {
-                set_temp_variable = { show = 1 }
-                subtract_from_temp_variable = { show = show_overview_info }
-                set_variable = { show_overview_info = show }
+				set_temp_variable = { show = 1 }
+				subtract_from_temp_variable = { show = show_overview_info }
+				set_variable = { show_overview_info = show }
 				eoanb_ledger_system_calc = yes 
 			}
 		}
 		ai_enabled = {
-		    always = no 
-		}	
+			always = no
+		}
 	}
 	show_list = {
 		context_type = player_context
@@ -69,9 +69,9 @@ scripted_gui = {
 
 		visible = {
 			check_variable = {
-			    show_overview_info > 0 
+				show_overview_info > 0
 			}
-			is_ai = no  			
+			is_ai = no
 		}
 		triggers = {
 		}
@@ -86,13 +86,13 @@ scripted_gui = {
 		}
 		effects = {
 			closebutton_click = {
-          			set_temp_variable = { show = 1 }
-       				subtract_from_temp_variable = { show = show_overview_info }
-  				set_variable = { show_overview_info = show }
+				set_temp_variable = { show = 1 }
+				subtract_from_temp_variable = { show = show_overview_info }
+				set_variable = { show_overview_info = show }
 			}
 		}
 		ai_enabled = {
-			always = no 
-		}	
-	}	
+			always = no
+		}
+	}
 }
