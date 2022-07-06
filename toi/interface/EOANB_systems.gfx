@@ -719,4 +719,8 @@ spriteTypes = {
 		name = "GFX_riot_of_rights_unrest_icon"
 		textureFile = "gfx/interface/decisions/scripted_gui/japan/riot_of_rights_unrest_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_institution_view_frame_bg"
+		texturefile = "gfx/interface/country_interface/research/institution_view_frame_bg.dds"
+	}
 }
