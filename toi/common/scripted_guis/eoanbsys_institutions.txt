@@ -11,7 +11,7 @@ scripted_gui = {
 				check_variable = {
 					var = innovative_progress
 					value = 100
-					compare = greater_than_or_equals_to
+					compare = greater_than_or_equals
 				}
 			}
 			embrace_innovative_institutions_button_visible = {
@@ -21,7 +21,7 @@ scripted_gui = {
 				check_variable = {
 					var = humanitive_progress
 					value = 100
-					compare = greater_than_or_equals_to
+					compare = greater_than_or_equals
 				}
 			}
 			embrace_humanitive_institutions_button_visible = {
@@ -59,7 +59,7 @@ scripted_gui = {
 					limit = { has_idea = institution_innovative_mass_transit }
 					add_ideas = institution_innovative_mass_media
 				}
-				else_if {
+				else_if = {
 					limit ={ has_idea = institution_innovative_electrificiation }
 					add_ideas = institution_innovative_mass_transit
 				}
