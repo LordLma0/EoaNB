@@ -10,41 +10,41 @@ country_event = {
 	immediate = {
 		# Industrialization
 			add_to_array = {
-				array = global.discovered_innovative_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_innovative_industrialization
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Enlightenment
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_enlightenment
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Nationalism
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_nationalism
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1848
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = FRA.id
 			}
 	}
@@ -58,54 +58,54 @@ country_event = {
 	immediate = {
 		# Industrialization
 			add_to_array = {
-				array = global.discovered_innovative_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_innovative_industrialization
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Enlightenment
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_enlightenment
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Nationalism
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_nationalism
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1848
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = FRA.id
 			}
 		# Mechanization
 			add_to_array = {
-				array = global.discovered_innovative_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_innovative_mechanization
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1869
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = USA.id
 			}
 	}
@@ -119,54 +119,54 @@ country_event = {
 	immediate = {
 		# Industrialization
 			add_to_array = {
-				array = global.discovered_innovative_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_innovative_industrialization
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Enlightenment
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_enlightenment
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Nationalism
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_nationalism
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1848
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = FRA.id
 			}
 		# Mechanization
 			add_to_array = {
-				array = global.discovered_innovative_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_innovative_mechanization
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1869
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = USA.id
 			}
 	}
@@ -180,54 +180,54 @@ country_event = {
 	immediate = {
 		# Industrialization
 			add_to_array = {
-				array = global.discovered_innovative_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_innovative_industrialization
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Enlightenment
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_enlightenment
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1700
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = ENG.id
 			}
 		# Nationalism
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_humanitive_nationalism
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1848
 			}
 			add_to_array = {
-				array = global.discovered_humanitive_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = FRA.id
 			}
 		# Mechanization
 			add_to_array = {
-				array = global.discovered_innovative_institutions_token_array
+				array = global.discovered_institutions_token_array
 				value = token:institution_innovative_mechanization
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founded_array
+				array = global.discovered_institutions_founded_array
 				value = 1869
 			}
 			add_to_array = {
-				array = global.discovered_innovative_institutions_founder_array
+				array = global.discovered_institutions_founder_array
 				value = USA.id
 			}
 	}
@@ -250,15 +250,15 @@ country_event = {
 					news_event = eoanbsys_institutions.21
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_mechanization
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -299,15 +299,15 @@ country_event = {
 					news_event = eoanbsys_institutions.23
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_electrification
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -348,15 +348,15 @@ country_event = {
 					news_event = eoanbsys_institutions.25
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_mass_transit
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -397,15 +397,15 @@ country_event = {
 					news_event = eoanbsys_institutions.27
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_mass_media
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -446,15 +446,15 @@ country_event = {
 					news_event = eoanbsys_institutions.29
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_mass_media
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -495,15 +495,15 @@ country_event = {
 					news_event = eoanbsys_institutions.31
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_green_revolution
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -544,15 +544,15 @@ country_event = {
 					news_event = eoanbsys_institutions.33
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_mass_media
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -593,15 +593,15 @@ country_event = {
 					news_event = eoanbsys_institutions.35
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_mass_media
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -642,15 +642,15 @@ country_event = {
 					news_event = eoanbsys_institutions.37
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_innovative_automatization
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_innovative_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -691,15 +691,15 @@ country_event = {
 					news_event = eoanbsys_institutions.39
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_imperialism
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -740,15 +740,15 @@ country_event = {
 					news_event = eoanbsys_institutions.41
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_mass_marketization
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -789,15 +789,15 @@ country_event = {
 					news_event = eoanbsys_institutions.43
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_feminism
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -838,15 +838,15 @@ country_event = {
 					news_event = eoanbsys_institutions.45
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_dogmatism
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -887,15 +887,15 @@ country_event = {
 					news_event = eoanbsys_institutions.47
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_globalization
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -936,15 +936,15 @@ country_event = {
 					news_event = eoanbsys_institutions.49
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_environmentalism
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -985,15 +985,15 @@ country_event = {
 					news_event = eoanbsys_institutions.51
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_social_media
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}
@@ -1034,15 +1034,15 @@ country_event = {
 					news_event = eoanbsys_institutions.53
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_token_array
+					array = global.discovered_institutions_token_array
 					value = token:institution_humanitive_interplanetary_commercialization
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founded_array
+					array = global.discovered_institutions_founded_array
 					value = global.year
 				}
 				add_to_array = {
-					array = global.discovered_humanitive_institutions_founder_array
+					array = global.discovered_institutions_founder_array
 					value = THIS.id
 				}
 			}

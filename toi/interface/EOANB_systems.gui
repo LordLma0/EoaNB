@@ -5,6 +5,7 @@ guiTypes = {
 		position = { x = 4 y = 400 }
 
 		background = {
+			name = "background"
 			spriteType = "GFX_institution_view_frame_bg"
 		}
 	}

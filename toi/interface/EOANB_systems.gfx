@@ -735,4 +735,8 @@ spriteTypes = {
 		name = "GFX_institution_view_frame_bg"
 		texturefile = "gfx/interface/country_interface/research/institution_view_frame_bg.dds"
 	}
+	spriteType = {
+		name = "GFX_goverment_window_assembly_icon"
+		textureFile = "gfx/interface/country_interface/parliament/goverment_window_assembly_icon.dds"
+	}
 }

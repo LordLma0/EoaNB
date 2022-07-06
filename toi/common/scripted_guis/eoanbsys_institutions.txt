@@ -130,6 +130,58 @@ scripted_gui = {
 		}
 	}
 
+	institutions_intel_gui = {
+		window_name = "institutions_intel_container"
+
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_info
+
+		ai_enabled = { always = no }
+
+		triggers = {
+
+		}
+
+		dynamic_lists = {
+			embraced_innovative_institutions_intel_list = {
+				array = THIS.embraced_innovative_institutions_array
+				entry_container = embraced_institutions_intel_entry
+			}
+			embraced_humanitive_institutions_intel_list = {
+				array = THIS.embraced_humanitive_institutions_array
+				entry_container = embraced_institutions_intel_entry
+			}
+		}
+	}
+
+	institutions_discovered_gui = {
+		window_name = "institutions_discovered_container"
+
+		context_type = player_context
+		parent_window_token = top_bar
+
+		ai_enabled = { always = no }
+
+		visible = {
+			has_country_flag = institutions_discovered_list_view_flag
+		}
+
+		dynamic_lists = {
+			discovered_institutions_token_list = {
+				array = global.discovered_institutions_token_array
+				entry_container = discovered_institutions_token_entry
+			}
+			discovered_institutions_founded_list = {
+				array = global.discovered_institutions_founded_array
+				entry_container = discovered_institutions_detail_entry
+			}
+			discovered_institutions_founder_list = {
+				array = global.discovered_institutions_founder_array
+				entry_container = discovered_institutions_detail_entry
+			}
+		}
+	}
+
 
 	innovation_progress = {
 		window_name = "innovation_progress_container"
