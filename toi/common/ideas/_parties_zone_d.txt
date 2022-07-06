@@ -93,7 +93,7 @@ ideas = {
 
 			picture = JAP_party_green
 		}
-		JAP_party_midori
+		JAP_party_midori = {
 			allowed = { always = no }
 		
 			picture = JAP_party_midori
