@@ -1,11 +1,4 @@
 #### Generic Decisions Categories ####
-	eoanb_category_suez_canal = {
-		icon = border_war
-
-		visible = {
-			has_country_flag = FRA_suez_company
-		}
-	}
 
 	eoanb_category_war_measures = {
 		icon = usa_intervention_mandate
@@ -70,9 +63,15 @@
 	political_actions = {
 		icon = generic_political_actions
 	}
-
 	eoanb_category_diplomatic_actions = {
 		icon = generic_political_actions
+	}
+	eoanb_category_foreign_influence_actions = {
+		icon = generic_political_actions
+
+		visible = {
+			is_great_power = yes
+		}
 	}
 	eoanb_category_traditions_celebrations = {
 		icon = generic_democracy

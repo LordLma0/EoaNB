@@ -311,29 +311,29 @@ on_actions = {
 	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
-			if = {
-				limit = {
-					FROM = { has_country_flag = containment_target } #containment target defeated
-					FROM = {
-						NOT = {
-							has_country_flag = containment_reperations
-						}
-					}
-				}
-				FROM = { set_country_flag = containment_reperations }
-				FROM = { country_event = { id = contain.1 days = 0 } }
-				ROOT = { clr_country_flag = containment_starter }
-			}
-			if = {
-				limit = {
-					ROOT = { has_country_flag = containment_target } #containment defeated
-					ROOT = { has_defensive_war = no }
-				}
-				ROOT = { set_country_flag = containment_target_won }
-				FROM = { clr_country_flag = containment_starter }
-				ROOT = { country_event = { id = contain.3 days = 0 } }
-				ROOT = { clr_country_flag = containment_target }
-			}
+			#if = {
+			#	limit = {
+			#		FROM = { has_country_flag = containment_target } #containment target defeated
+			#		FROM = {
+			#			NOT = {
+			#				has_country_flag = containment_reperations
+			#			}
+			#		}
+			#	}
+			#	FROM = { set_country_flag = containment_reperations }
+			#	FROM = { country_event = { id = contain.1 days = 0 } }
+			#	ROOT = { clr_country_flag = containment_starter }
+			#}
+			#if = {
+			#	limit = {
+			#		ROOT = { has_country_flag = containment_target } #containment defeated
+			#		ROOT = { has_defensive_war = no }
+			#	}
+			#	ROOT = { set_country_flag = containment_target_won }
+			#	FROM = { clr_country_flag = containment_starter }
+			#	ROOT = { country_event = { id = contain.3 days = 0 } }
+			#	ROOT = { clr_country_flag = containment_target }
+			#}
 			if = {
 				limit = {
 					tag = NEG
@@ -534,15 +534,15 @@ on_actions = {
 				}
 				MEX = {
 					white_peace = ROOT
-		            annex_country = {
-		           		target = MEC
-		           	}
+					annex_country = {
+						target = MEC
+					}
 					increase_ps_by_one = yes
 					country_event = { days = 1 id = mexico.12 }
 					delete_unit_template_and_units = { division_template = "Local Militia" }
 					set_capital = { state = 277 }
 					set_global_flag = MEX_reform_war_end
-					load_focus_tree = mexico_liberal_tree
+					load_focus_tree = mexico_vic_liberal_ft
 				}
 			}
 			if = { # conservitive mexico victory

@@ -1870,6 +1870,15 @@ spriteTypes = {
 		name = "GFX_event_flavor_japan_PD_2"
 		texturefile = "gfx/event_pictures/flavor/event_flavor_japan_PD_2.png"  
 	}
+	spriteType = {
+		name = "GFX_event_flavor_french_perrier"
+		texturefile = "gfx/event_pictures/flavor/event_flavor_FRA_perrier.png"  
+	}
+	spriteType = {
+		name = "GFX_event_flavor_french_roche_de_solutre"
+		texturefile = "gfx/event_pictures/flavor/event_flavor_french_roche_de_solutre.png"  
+	}
+	
 	
 	#### FRENCH EVENTS ####
 	
@@ -2241,6 +2250,11 @@ spriteTypes = {
 		name = "GFX_news_event_battle_of_koniggratz"
 		texturefile = "gfx/event_pictures/prussia/news_event_battle_of_koniggratz.dds"
 	}
+
+	spriteType = {
+		name = "GFX_news_event_luxembourg_crisis"
+		texturefile = "gfx/event_pictures/prussia/news_event_luxembourg_crisis.png"
+	}
 	
 	spriteType = {
 		name = "GFX_event_north_german_confederation_gathering"
@@ -2440,6 +2454,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_krupp_streik"
 		texturefile = "gfx/event_pictures/prussia/event_krupp_streik.png"
+	}
+	
+	spriteType = {
+		name = "GFX_event_biarritz_meeting"
+		texturefile = "gfx/event_pictures/prussia/event_biarritz_meeting.png"
 	}
 	
 	spriteType = {

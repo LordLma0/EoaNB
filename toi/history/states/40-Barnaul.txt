@@ -1,7 +1,7 @@
 state = {
 	id = 40
 	name = "STATE_40" # Barnaul
-	manpower = 1290918
+	manpower = 360000
 	state_category = large_town
 
 	resources = {
@@ -19,7 +19,6 @@ state = {
 
 			buildings = {
 				infrastructure = 3
-				industrial_complex = 1
 			}
 		}
 		

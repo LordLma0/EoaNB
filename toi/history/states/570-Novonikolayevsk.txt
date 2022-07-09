@@ -4,7 +4,7 @@ state = {
 	name = "STATE_570" # Novosibirsk
 
 	local_supplies=0.0 
-	manpower = 765369
+	manpower = 290000
 
 	state_category = town
 
@@ -15,7 +15,6 @@ state = {
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
 		}
 		add_core_of = RUS
 		

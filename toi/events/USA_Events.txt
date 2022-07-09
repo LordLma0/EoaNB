@@ -25,6 +25,113 @@ add_namespace = usa_worldmapperus
 add_namespace = usa_western_expansion
 add_namespace = usa_worker_events
 
+###############################################
+# Bookmark Introductions to the United States #
+###############################################
+# 1857 — Divided States of America
+country_event = {
+	id = usa_intro.1
+	title = usa_intro.1.t
+	desc = usa_intro.1.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.1.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.2
+	}
+	option = {
+            name = usa_intro.1.b
+            trigger = { is_ai = no }
+            country_event = usa_intro.3
+	}
+	option = {
+             name = usa_intro.1.c
+             trigger = { is_ai = no }
+             country_event = usa_intro.4
+	}
+	option = {
+		name = usa_intro.1.e
+		add_political_power = -5
+		hidden_effect = {
+			360 = { OWNER = { country_event = { id = usa_flavor.2 days = 300 random_days = 100 } } }
+		}
+	}
+}
+country_event = {
+	id = usa_intro.2 # Seminole War
+	title = usa_intro.2.t
+	desc = usa_intro.2.d
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.2.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.1
+	}
+}
+country_event = {
+	id = usa_intro.3 # Slavery Debate
+	title = usa_intro.3.t
+	desc = usa_intro.3.d
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.3.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.1
+	}
+}
+country_event = {
+	id = usa_intro.4 # Mormons
+	title = usa_intro.4.t
+	desc = usa_intro.4.d
+
+	is_triggered_only = yes
+	
+	option = {
+            name = usa_intro.4.a
+            trigger = { is_ai = no }
+            country_event = usa_intro.1
+	}
+}
+# 1870 — A Nation Rebuilding
+country_event = {
+	id = usa_intro.5
+	title = usa_intro.5.t
+	desc = usa_intro.5.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = usa_intro.1.a
+		add_political_power = -5
+	}
+}
+
+country_event = {
+	id = usa_intro.6
+	title = usa_intro.6.t
+	desc = usa_intro.6.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = usa_intro.6.a
+		add_political_power = -5
+	}
+}
+
+
+
 ####################### Worker Events ##########################
 
 #####################################
@@ -490,110 +597,6 @@ country_event = {
 		trigger = { TAG = NEZ }
 	}
 }
-
-####################### Bookmark Introductions to the United States ##########################
-# 1857 — Divided States of America
-country_event = {
-	id = usa_intro.1
-	title = usa_intro.1.t
-	desc = usa_intro.1.d
-	picture = GFX_report_event_usa_election_generic
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.1.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.2 # Seminole War
-	}
-	option = {
-            name = usa_intro.1.b
-            trigger = { is_ai = no }
-            country_event = usa_intro.3 # Slavery Debate
-	}
-	option = {
-             name = usa_intro.1.c
-             trigger = { is_ai = no }
-             country_event = usa_intro.4 # Mormons
-	}
-	option = {
-		name = usa_intro.1.e
-		add_political_power = -5
-		hidden_effect = {
-			360 = { OWNER = { country_event = { id = usa_flavor.2 days = 300 random_days = 100 } } }
-		}
-	}
-}
-country_event = {
-	id = usa_intro.2
-	title = usa_intro.2.t
-	desc = usa_intro.2.d
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.2.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.1
-	}
-}
-country_event = {
-	id = usa_intro.3
-	title = usa_intro.3.t
-	desc = usa_intro.3.d
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.3.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.1
-	}
-}
-country_event = {
-	id = usa_intro.4
-	title = usa_intro.4.t
-	desc = usa_intro.4.d
-
-	is_triggered_only = yes
-	
-	option = {
-            name = usa_intro.4.a
-            trigger = { is_ai = no }
-            country_event = usa_intro.1
-	}
-}
-# 1870 — A Nation Rebuilding
-country_event = {
-	id = usa_intro.5
-	title = usa_intro.5.t
-	desc = usa_intro.5.d
-	picture = GFX_report_event_usa_election_generic
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = usa_intro.1.a
-		add_political_power = -5
-	}
-}
-
-country_event = {
-	id = usa_intro.6
-	title = usa_intro.6.t
-	desc = usa_intro.6.d
-	picture = GFX_report_event_usa_election_generic
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = usa_intro.6.a
-		add_political_power = -5
-	}
-}
-
 
 
 ####################### Panic of 1857 ##########################
@@ -4063,7 +4066,6 @@ country_event = {
 		375 = {	add_manpower = -1000 }
 		368 = {	add_manpower = -1000 }
 		373 = {	add_manpower = -1500 }
-		1410 = { add_manpower = -1500 }
 		369 = {	add_manpower = -1500 }
 		361 = {	add_manpower = -2500 }
 		add_to_variable = {
@@ -4086,7 +4088,6 @@ country_event = {
 		375 = {	add_manpower = -5000 }
 		368 = {	add_manpower = -5000 }
 		373 = {	add_manpower = -3500 }
-		1410 = { add_manpower = -3500 }
 		369 = {	add_manpower = -3500 }
 		361 = {	add_manpower = -3500 }
 
@@ -4108,7 +4109,6 @@ country_event = {
 		375 = {	add_manpower = -10000 }
 		368 = {	add_manpower = -10000 }
 		373 = {	add_manpower = -7500 }
-		1410 = { add_manpower = -7500 }
 		369 = {	add_manpower = -7500 }
 		361 = {	add_manpower = -7500 }
 		subtract_from_variable = {
@@ -6765,12 +6765,6 @@ country_event = {
 			}
 			if = {
 				limit = {
-					CSA = { owns_state = 1287 }
-				}
-				transfer_state = 1287
-			}
-			if = {
-				limit = {
 					CSA = { owns_state = 377 }
 				}
 				transfer_state = 377
@@ -6780,12 +6774,6 @@ country_event = {
 					CSA = { owns_state = 1286 }
 				}
 				transfer_state = 1286
-			}
-			if = {
-				limit = {
-					CSA = { owns_state = 1287 }
-				}
-				transfer_state = 1287
 			}
 		}
 	}
@@ -8025,9 +8013,9 @@ country_event = {
 	desc = usa.151.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
-		tag = USA
+	trigger = {########### this should be triggered differently
 		has_global_flag = USA_gilded_age_ft
+		tag = USA
 		OR = {
 			check_variable = {
 				var = USA_steel_opinion
@@ -9821,7 +9809,7 @@ country_event = {
 	desc = usa.157.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = USA
 		USA = {
 			OR = {
@@ -10215,7 +10203,7 @@ country_event = {
 	desc = usa.160.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = USA
 		AND = {
 			controls_state = 1022
@@ -10761,7 +10749,7 @@ country_event = {
 	desc = usa.163.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = SPR
 		date > 1900.1.1
 		surrender_progress < 0.01
@@ -10854,13 +10842,15 @@ country_event = {
 	desc = usa.166.d
 	picture = GFX_report_event_german_reichstag_gathering
 
-	trigger = {
-		tag = USA
-		has_elections = yes
-		date > 1885.1.1
-		date < 1895.1.1
-	}
-
+	# trigger = {
+	# 	tag = USA
+	# 	has_elections = yes #######This will never fire as we have diabled elections for the US because code is not dynamic enough
+	#to handle US elections. By dint this event serves only to lag the game and needs fixing. Also this should be a french controlled
+	#event
+	# 	date > 1885.1.1
+	# 	date < 1895.1.1
+	# }
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
@@ -10879,7 +10869,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		tag = USA
 		date > 1869.01.01
 		date < 1872.12.31
@@ -10976,7 +10966,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {############## This should be KDE
 		tag = USA
 		date > 1870.01.01
 		date < 1872.01.01
@@ -10992,7 +10982,7 @@ country_event = {
 		}
 		hidden_effect = {
 			create_country_leader = {
-				name = "Horace Greely"
+				name = "Horace Greeley"
 				desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 				picture = "Portrait_Europe_generic_leader_politician_17.png"
 				expire = "1947.1.1"
@@ -11024,7 +11014,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = { #####################Whatever assigns that flag should trigger this event
 		tag = USA
 		date > 1872.3.1
 		date < 1872.12.31
@@ -11052,7 +11042,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {################# This should be triggered differently
 		TAG = ENG
 		date > 1862.1.1
 		if = {
@@ -11107,7 +11097,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
+	trigger = { ##### USA_reconstruction should trigger this
 		if = {
 			limit = { has_completed_focus = USA_reconstruction }
 			NOT = { country_exists = CSA }
@@ -11541,7 +11531,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = { ######win_end_reconstruction should trigger this
 		has_completed_focus = USA_win_end_reconstruction
 		NOT = {
 			has_idea = full_equality
@@ -11692,7 +11682,7 @@ country_event = { # Divided Democratic Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {############focus should trigger event
 		CSA = { exists = yes }
 		has_war_with = CSA
 		has_completed_focus = USA_Focus_American_Civil_War
@@ -11724,7 +11714,7 @@ country_event = { #Creation of the National Union Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########## This should be triggered differently
 		TAG = USA
 		date > 1864.1.1
 		date < 1864.4.1
@@ -11822,7 +11812,7 @@ country_event = { # National Union Convention
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {###### This should be triggered differently
 		tag = USA
 		date > 1864.6.6
 		date < 1864.6.9
@@ -11936,7 +11926,7 @@ country_event =  { # Collapse of the National Union Party (Andrew `John`son)
 
 	is_triggered_only = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1868.11.01
 		date < 1868.11.04
@@ -11996,7 +11986,7 @@ country_event = { # Collapse of the National Union Party (Infighting between the
 
 	is_triggered_only = yes
 
-	trigger = {
+	trigger = {###################### this should be triggered differently
 		TAG = USA
 		date > 1868.05.01
 		date < 1868.10.01
@@ -12058,7 +12048,7 @@ country_event = { # Creation of the Prohibition Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1869.09.01
 	}
@@ -12091,6 +12081,181 @@ country_event = { # Creation of the Prohibition Party
 }
 
 ## WIP Prohibition Party events usa.199-205
+country_event = {
+	id = usa.200
+	title = usa.200.t
+	desc = usa.200.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		# log = "manpower: [?manpower]"
+		# log = "manpower_k: [?manpower_k]"
+		# log = "max_available_manpower: [?max_available_manpower]"
+		# log = "max_available_manpower_k: [?max_available_manpower_k]"
+		# log = "max_manpower: [?max_manpower]"
+		# log = "max_manpower_k: [?max_manpower_k]"
+		if = {
+			limit = {always = yes}
+		set_temp_variable = {
+			lower_limit = num_of_naval_factories
+		}
+		if = {
+			limit = {
+				num_of_naval_factories < 2
+			}
+			set_temp_variable = {
+				lower_limit = 5
+			}
+		}
+		if = {
+			limit = {
+				has_war = yes
+			}
+			if = {
+				limit = {
+					is_insignificant_power = yes
+					has_war = yes
+				}
+				multiply_temp_variable = {
+					lower_limit = 5.0
+				}
+			}
+			else_if = {
+				limit = {
+					is_minor_power = yes
+					has_war = yes
+				}
+				multiply_temp_variable = {
+					lower_limit = 2.75
+				}
+			}
+			else_if = {
+				limit = {
+					is_secondary_power = yes
+					has_war = yes
+				}
+				multiply_temp_variable = {
+					lower_limit = 2.0
+				}
+			}
+			if = {
+				limit = {
+					manpower_per_military_factory < 1000
+				}
+				multiply_temp_variable = {
+					lower_limit = 0.5
+				}
+			}
+			else_if = {
+				limit = {
+					has_manpower < 2500
+				}
+				multiply_temp_variable = {
+					lower_limit = 0.0
+				}
+			}
+			if = {
+				limit = {
+					alliance_naval_strength_ratio > 5.0
+				}
+				multiply_temp_variable = {
+					lower_limit = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					alliance_naval_strength_ratio > 2.0
+				}
+				multiply_temp_variable = {
+					lower_limit = 0.33
+				}
+			}
+			else_if = {
+				limit = {
+					enemies_naval_strength_ratio > 5.0
+				}
+				multiply_temp_variable = {
+					lower_limit = 5.0
+				}
+			}
+			else_if = {
+				limit = {
+					enemies_naval_strength_ratio > 2.0
+				}
+				multiply_temp_variable = {
+					lower_limit = 3.0
+				}
+			}
+			# if = {
+			# 	limit = {
+			# 		ai_wants_divisions > lower_limit
+			# 	}
+			# 	multiply_temp_variable = {
+			# 		lower_limit = 2.0
+			# 	}
+			# }
+		}
+		else = {
+
+		}
+		set_temp_variable = {
+			lineship_var = lower_limit
+		}
+		set_temp_variable = {
+			frigate_var = lower_limit
+		}
+		set_temp_variable = {
+			gunboat_var = lower_limit
+		}
+		set_temp_variable = {
+			corvette_var = lower_limit
+		}
+
+		multiply_temp_variable = {
+			frigate_var = 2.0
+		}
+		multiply_temp_variable = {
+			gunboat_var = 4.0
+		}
+		multiply_temp_variable = {
+			corvette_var = 8.0
+		}
+		if = {
+			limit = {
+		OR = {
+			
+			check_variable = {
+				num_ships_with_type@lineship < lineship_var
+			}
+			check_variable = {
+				num_ships_with_type@frigate < frigate_var
+			}
+			check_variable = {
+				num_ships_with_type@gunboat < gunboat_var
+			}
+			check_variable = {
+				num_ships_with_type@corvette < corvette_var
+			}
+		}}
+		log = "lineship_var: [?lineship_var]"
+		log = "frigate_var: [?frigate_var]"
+		log = "gunboat_var: [?gunboat_var]"
+		log = "corvette_var: [?corvette_var]"
+	}
+	
+	}
+log = "lineship_var: [?lineship_var]"
+		log = "frigate_var: [?frigate_var]"
+		log = "gunboat_var: [?gunboat_var]"
+		log = "corvette_var: [?corvette_var]"
+	}
+
+	option = {
+		name = usa.200.a
+	}
+}
+
 
 country_event = { # The formation of the Greenback Party
 	id = usa.206
@@ -12100,7 +12265,7 @@ country_event = { # The formation of the Greenback Party
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1874.01.01
 		date < 1874.12.31
@@ -12143,7 +12308,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
+	trigger = {########### this should be triggered differently
 		TAG = USA
 		date > 1892.01.01
 		date < 1892.06.31
@@ -12987,7 +13152,7 @@ country_event = { #USA sends support to Mexican Liberals Mid-Civil-War
 				is_subject_of = SPR
 			}
 		}
-		set_country_flag = USA_sends_monroe_support
+		set_country_flag = USA_send_monroe_support
 		
 		# subtract_from_variable = {
 		# 	var = inf_equip_total
@@ -13119,9 +13284,12 @@ country_event = {#midway atoll #631
 			transfer_state = 631
 		}
 		631 = {
-			add_state_modifier = {
-				modifier = {
-					required_garrison_factor = -0.9
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_state_modifier = {
+					modifier = {
+						required_garrison_factor = -0.9
+					}
 				}
 			}
 		}
@@ -13195,9 +13363,12 @@ country_event = {
 			transfer_state = 630
 		}
 		630 = {
-			add_state_modifier = {
-				modifier = {
-					required_garrison_factor = -0.9
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_state_modifier = {
+					modifier = {
+						required_garrison_factor = -0.9
+					}
 				}
 			}
 		}

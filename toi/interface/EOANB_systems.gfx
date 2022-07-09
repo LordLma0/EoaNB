@@ -143,6 +143,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/autonomy/autonomy_personal_union_icon.dds"
 	}
 	spriteType = {
+		name = "GFX_autonomy_personal_union_3_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_personal_union_icon.dds"
+	}
+	spriteType = {
 		name = "GFX_autonomy_imperial_protectorate_icon"
 		texturefile = "gfx/interface/autonomy/autonomy_imperial_protectorate_icon.dds"
 	}
@@ -484,6 +488,18 @@ spriteTypes = {
 		name = "GFX_autonomy_afr_protectorate_icon"
 		texturefile = "gfx/interface/autonomy/autonomy_imperial_protectorate_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_autonomy_british_self_gov_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_british_self_gov_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_british_dominion_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_british_dominion_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_british_crown_colony_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_british_crown_colony_icon.dds"
+	}
 
 	# Boshin War
 	spriteType = {
@@ -690,4 +706,42 @@ spriteTypes = {
 		texturefile = "gfx/interface/internal_politics_party_colors.dds"
 		noOfFrames = 31
 	}
+
+	spriteType = {
+		name = "GFX_riot_of_rights_background"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/riot_of_rights_background.dds"
+	}
+	spriteType = {
+		name = "GFX_riot_of_rights_japan_map"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/riot_of_rights_japan_map.dds"
+	}
+	spriteType = {
+		name = "GFX_riot_of_rights_state_background"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/riot_of_rights_state_background.dds"
+	}
+	spriteType = {
+		name = "GFX_riot_of_rights_title"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/riot_of_rights_title.dds"
+	}
+	spriteType = {
+		name = "GFX_riot_of_rights_unrest_frame"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/riot_of_rights_unrest_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_riot_of_rights_unrest_icon"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/riot_of_rights_unrest_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_formosa_campaign_formosa_icon"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/formosa_campaign_formosa_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_formosa_campaign_formosa_enlarged_icon"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/formosa_campaign_formosa_enlarged_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_formosa_inlet_overlay"
+		textureFile = "gfx/interface/decisions/scripted_gui/japan/formosa_inlet_overlay.dds"
+	}
+
 }

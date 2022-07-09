@@ -6,7 +6,7 @@ state = {
 	local_supplies=0.0 
 	state_category = rural
 	resources = {
-                iron = 3
+		iron = 3
 	}
 	
 	
@@ -17,33 +17,38 @@ state = {
 	manpower = 1180650
 	
 	history = {
-		buildings = {
-		}
-		victory_points = {
-			13893 1
-		}
-				victory_points = {
-			12731 3
-				}
+		# End of a New Beginning
 		owner = OYO
-		add_core_of = OYO
+		1857.1.1 = {
+			buildings = {
+			}
+			victory_points = {
+				13893 1
+			}
+			victory_points = {
+				12731 3
+			}
+			add_core_of = OYO
 
-								add_to_array = { state_culture_array = 347 } 
-		add_to_array = { state_culture_array = 350 } 
-		add_to_array = { state_culture_array = 457 } 
-		add_to_array = { state_culture_array = 456 } 
-				
-					add_to_array = { state_culture_array_num = 0.97 }
-		add_to_array = { state_culture_array_num = 0.01 }
-		add_to_array = { state_culture_array_num = 0.01 }
-		add_to_array = { state_culture_array_num = 0.01 }
-	
-								add_to_array = { state_religion_array = 20 } 
+			add_to_array = { state_culture_array = 347 } 
+			add_to_array = { state_culture_array = 350 } 
+			add_to_array = { state_culture_array = 457 } 
+			add_to_array = { state_culture_array = 456 } 
+					
+			add_to_array = { state_culture_array_num = 0.97 }
+			add_to_array = { state_culture_array_num = 0.01 }
+			add_to_array = { state_culture_array_num = 0.01 }
+			add_to_array = { state_culture_array_num = 0.01 }
+		
+			add_to_array = { state_religion_array = 20 } 
+			add_to_array = { state_religion_array_num = 1.00}
 
-					add_to_array = { state_religion_array_num = 1.00}
+			afr_state_setup_scripted_effect = yes
+		}
 
-
-
-		afr_state_setup_scripted_effect = yes
+		1870.1.1 = {
+			owner = ENG
+			add_core_of = OYO
+		}
 	}
 }

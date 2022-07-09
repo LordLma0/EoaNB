@@ -19,7 +19,6 @@ technologies = {
 		dependencies = {
 			tribal_chemistry = 1
 		}
-		
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -1462,6 +1461,7 @@ technologies = {
 	low_qubit_quantum_computers = {
 	
 		research_speed_factor = 0.03
+		decryption = 0.5
 		
 		research_cost = 0.15
 		start_year = 2015
@@ -1497,6 +1497,7 @@ technologies = {
 	quantum_computing = {
 	
 		research_speed_factor = 0.05
+		decryption = 0.5
 		
 		research_cost = 0.15
 		start_year = 2025
@@ -1529,7 +1530,7 @@ technologies = {
 	quantum_entangled_communication = {
 	
 		encryption = 2
-		decryption = 2
+		#decryption = 2
 		
 		research_cost = 0.15
 		start_year = 2035
@@ -1558,6 +1559,7 @@ technologies = {
 	improved_quantum_computers = {
 	
 		research_speed_factor = 0.03
+		decryption = 0.5
 		
 		research_cost = 0.15
 		start_year = 2035
@@ -1586,6 +1588,7 @@ technologies = {
 	advanced_quantum_computers = {
 	
 		research_speed_factor = 0.03
+		decryption = 0.5
 		
 		research_cost = 0.15
 		start_year = 2045
@@ -4368,7 +4371,8 @@ technologies = {
 		start_year = 1885
 		folder = {
 			name = electronics_devices_folder
-			position = { x = -2 y = 18 }
+			position = { x = -2 y = 20
+		 }
 		}
 		
 		path = {
@@ -4400,7 +4404,7 @@ technologies = {
 		start_year = 1885
 		folder = {
 			name = electronics_devices_folder
-			position = { x = 0 y = 18 }
+			position = { x = 0 y = 20 }
 		}
 		
 		path = {
@@ -4752,7 +4756,7 @@ technologies = {
 		start_year = 1890
 		folder = {
 			name = electronics_devices_folder
-			position = { x = -2 y = 20 }
+			position = { x = -2 y = 22 }
 		}
 		
 		ai_will_do = {
@@ -4783,7 +4787,7 @@ technologies = {
 		start_year = 1890
 		folder = {
 			name = electronics_devices_folder
-			position = { x = 2 y = 20 }
+			position = { x = 2 y = 22 }
 		}
 		
 		ai_will_do = {
@@ -4810,7 +4814,7 @@ technologies = {
 		start_year = 1895
 		folder = {
 			name = electronics_devices_folder
-			position = { x = 0 y = 22 }
+			position = { x = 0 y = 24 }
 		}
 		path = {
 			leads_to_tech = power_station_3

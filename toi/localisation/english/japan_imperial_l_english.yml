@@ -1,7 +1,7 @@
 ﻿l_english:
 
  ## Focus Name ##
- japan_focus: "Meiji Restoration Focus Tree"
+ jap_mac_imperial_ft: "Meiji Restoration Focus Tree"
 
  ## Politics ##
  JAP_imperalist_victory: "Imperialist Victory"
@@ -135,6 +135,31 @@
  JAP_imperial.10.d: "The Ministry of Public Works is centered around the concept of a unified Industrial Ministry to overlook the many expenses and expansive plans correlating with the inevitable Industrial Revolution our nation must proceed through. While the fine details and overall reach of this idea remain private, hidden by closed curtains between ministers and the expected chief of it all, British engineer Edmund Morel, it will operate over a series of departments centered around core aspects of industrial growth and societal advancement."
  JAP_imperial.10.a: "Let it be so"
 
+ ### THE RIOTS OF RIGHTS
+ JAP_shoot_to_kill_tt: "[GetCurrentIssueLoc] have greater than §R10%§! Disorder!"
+ disorder_increase_5_tt: "the rioters unrest in [GetCurrentIssueLoc] will increase by §R5%§!"
+ disorder_increase_10_tt: "the rioters unrest in [GetCurrentIssueLoc] will increase by §R10%§!"
+ disorder_increase_15_tt: "the rioters unrest in [GetCurrentIssueLoc] will increase by §R15%§!"
+ disorder_increase_20_tt: "the rioters unrest in [GetCurrentIssueLoc] will increase by §R20%§!"
+ #JAP_monthly_report_on_riots: "Monthly reports on the rioting arrive in..."
+ JAP_riots_in_tottori_mission: "Monthly reports on the rioting arrive in..."
+ JAP_riots_in_okayama_mission: "Monthly reports on the rioting arrive in..."
+ JAP_riots_in_kyoto_mission: "Monthly reports on the rioting arrive in..."
+ JAP_riots_in_kochi_mission: "Monthly reports on the rioting arrive in..."
+ JAP_riots_in_kagawa_mission: "Monthly reports on the rioting arrive in..."
+ JAP_riots_in_fukai_mission: "Monthly reports on the rioting arrive in..."
+ JAP_imperial.21.t: "Monthly Riot Report"
+ JAP_imperial.21.d: ""
+ JAP_imperial.21.a: "Until the next report..."
+ variable_is_less_than_tt: "[GetCurrentIssueLoc] have dwindled down to §Y0%§! disorder and §Y2000§! political power has been saved."
+
+ ### Taiwan Expedition
+ JAP_taiwan_expedition_decisions: "The Taiwan Expedition"
+ JAP_taiwan_expedition_decisions_desc: "In December 1871, a §YRyukyuan vessel shipwrecked near the southern tip of Taiwan§!. Fifty-four members out of a crew of sixty-six were §Rbeheaded§! by the §YPaiwan aborigines§! after the abush. The remaining §Ytwelve crewmen§! that had escaped during the raid were rescued by Han Chinese fishermen and transported to Tainan in southern Taiwan. The local Qingdao government officials transferred the survivors to Fujian province in mainland China, from where they promised their safe return back to Japan. §YTo forget without compensation would be treason to the honour of those who died; many options are presented to us, but which will we act on?§!.\n\n\n§Y[?JAP.JAP_japanese_deaths|-0]§!' §WJapanese Deaths§!\n§Y[?JAP.JAP_paiwan_deaths|-0]§!' §WPaiwanese Deaths§!"
+ PAW_taiwan_expedition_decisions: "The Taiwan Expedition"
+ PAW_taiwan_expedition_decisions_desc: "In December 1871, a §YRyukyuan vessel shipwrecked near the southern tip of Taiwan§!. Fifty-four members out of a crew of sixty-six were §Rbeheaded§! by the §YPaiwan aborigines§! after the abush. The remaining §Ytwelve crewmen§! that had escaped during the raid were rescued by Han Chinese fishermen and transported to Tainan in southern Taiwan. The local Qingdao government officials transferred the survivors to Fujian province in mainland China, from where they promised their safe return back to Japan. §YTo forget without compensation would be treason to the honour of those who died; many options are presented to us, but which will we act on?§!.\n\n\n§R[?JAP.JAP_japanese_deaths|-0]§! §PJapanese Deaths§!\n§Y[?JAP.JAP_paiwan_deaths|-0]§! §RPaiwanese Deaths§!"
+
+
  ### POLITICAL IDEAS ###
  imperial_universities: "Teikoku Daigaku"
  imperial_universities_desc: ""
@@ -200,6 +225,8 @@
  ### POLITICAL DECISIONS ###
  JAP_imperial_decisions: "Construction of the Imperial Universities of Japan"
  JAP_imperial_decisions_desc: ""
+ JAP_riot_of_rights_decisions: "Riot of Rights — Unrest: [?JAP.JAP_riot_of_rights_unrest_level|-0]"
+ JAP_riot_of_rights_decisions_desc: "Riots against our new way of life and the rights of the people within it, dubbed collectively as the "Riots of Rights" by many, have erupted across our many prefectures, posing a significant challenge to the newly formed government; §Ywhat will calm these meddling citizens?§!\nThe protests had started targeting symbols and agents of the Meiji reforms that were disrupting their previous way of life: §Rvandalizing and raiding government offices, police stations, newly established public schools, and the homes of government officials§! and newly emancipated Burakumin. Our government is not a democracy and the Meiji oligarchs have made all decisions without any consultation with our general public, §Renraging farmers and low-ranking rural samurai§!, who felt that they had no outlet to air their grievances other than through violent protest.\nThese riots have been idealized in our most prominent prefectures, the likes of §YFukui, Kagawa, Kochi, Kyoto, Okayama, and Tottori§!, with the level of destruction there already tallying up. The government believes that these riots will not go away easily and has taken new measures to deal with them and bring Japan into the light of new."
  JAP_construct_tokyo_university: "Construction of the Tokyo University"
  JAP_construct_tokyo_university_desc: "At the city center stood amalgamations of older government buildings, schools for medicine, various traditional scholars, and modern learnings. Only days prior has the charter for the creation of the school been approved by the Meiji Government, and only now will it open its doors of knowledge to the new."
  JAP_construct_kyoto_university: "Construction of the Kyoto University"
@@ -209,17 +236,29 @@
  JAP_founding_new_banks_descions: "The Founding of Central Banks"
  JAP_founding_new_banks_descions_desc: "It is only reasonable that sustainable and government-owned banks be built across the country following the subsequent Bank Act and subsequent reforms by legislation. During the construction period, money will be shifted away from our industrial production lines and toward construction workers. While the majority of these locations exhibit their rightful location and fitting, many of them are located on the fringes of our country's rural areas, reinforcing the notion of perpetual surveillance. While officials have mandated the establishment of one bank at a time due to technological and logistical concerns, as the formation of many at once could result in the creation of a huge economic bubble centered around these banks, the process of construction is due to be swift."
  JAP_mutsubishi_bank: "Establish Mitsubishi Bank"
+ JAP_mutsubishi_bank_desc: "Founded in Tokyo as the Mitsubishi Exhange House by the industrialist behind the Mitsubishi Group, Iwasaki Yatarō, this bank is known to be quite a conservative lender, not willing to rush after any potential financial bubbles."
  JAP_mitsui_bank: "Establish Mitsui Bank"
+ JAP_mitsui_bank_desc: "Following its tradition with banking operations since Mitsui Takatoshi was granted to work as money changer by the shogunate in 1683, the Mitsui opened the Mitsui bank in July 1876 as a private company with a starting capital of 2 million yen."
  JAP_dai_ichi_kokuritsu_bank: "Establish Dai-Ichi Kokuritsu Bank"
+ JAP_dai_ichi_kokuritsu_bank_desc: "Established by 'The father of Japanese capitalism,' Shibusawa Eiichi, this was the first-ever bank and stock company in Japan. It was initially empowered to issue banknotes until the Bank of Japan took over the issue in 1883."
  JAP_daishi_bank: "Establish The Daishi Bank"
+ JAP_daishi_bank_desc: "Established by 'The father of Japanese capitalism,' Shibusawa Eiichi, this bank became the leading financial institute in the Niigata prefecture and the city of Niigata where it has its main office."
  JAP_77_bank: "Establish The 77 Bank"
+ JAP_77_bank_desc: "Worried that the Miyagi prefecture would lag behind economically, a group led by former samurai Ujiie Atsutoki, established a local bank on December 9th, 1878  in Sendai after receiving permission from the Ministry of Finance."
  JAP_eighteenth_bank: "Establish The Eighteenth Bank"
+ JAP_eighteenth_bank_desc: "Founded and located in Nagasaki city, this is a regional bank with the motto 'Valuing heart to heart'."
  JAP_juroku_bank: "Establish The Juroku Bank"
+ JAP_juroku_bank_desc: "The leading bank of Gifu prefecture was founded this year in the city of Gifu under the name “The 16th National Bank” under the leadership of the local trades in the prefecture. It was renamed to Juroku Bank in 1896."
  JAP_hyakujusi_bank: "Establish The Hyakujushi Bank"
+ JAP_hyakujusi_bank_desc: "Established on November 1st, 1878 it is a regional bank with its main office in the Kagawa prefecture."
  JAP_hyakugo_bank: "Establish The Hyakugo Bank"
+ JAP_hyakugo_bank_desc: "Established on December 4th, 1878 as the 105th national bank by warriors of the Tsu-clan. The bank is the main financial institute for the Mie Prefecture."
  JAP_kakegawa_bank: "Establish Kakegawa Shinkin Bank"
+ JAP_kakegawa_bank_desc: "Established on November 24th, 1879 by Ryoichiro Okada in order to develop the region, the bank has its main office in the city of Kakegawa, Shizuoka prefecture."
  JAP_fukui_bank: "Establish Fukui Bank"
+ JAP_fukui_bank_desc: "This bank was established on December 19th, 1899 by local textile businessmen in the city of Fukui who contributed a starting capital of 300,000 yen each, the aim was to continue developing the textile industry in Fukui Prefecture."
  JAP_awa_bank: "Establish the Awa Bank"
+ JAP_awa_bank_desc: "Located in Tokushima City in the Tokushima Prefecture, this bank was established by Kenshiro Nishino and Giichiro Mima on June 19th, 1896 by building up the remnants of Kujime bank after its bankruptcy."
 
  ### STATE RENAMING ###
  hokkaido: "Hokkaido"
@@ -573,7 +612,7 @@ historical_path_tt: "§C(Historical Path)§!"
 liberal_path_tt: "Will Set Us On A Liberal Path §O(Ahistorical Path)§!"
 conservative_path_tt: "Will Set Us On A Conservative Path §C(Historical Path)§!"
 found_banks_tt: "Unlocks Decisions: §YThe Founding of Central Banks§!"
-limited_time_tech_tt: "§RTo Complete Educate The Nation, You Must Have Completed This Entire Branch And All Focuses Regarding It. The Ideas Are Timed, So Complete These All Together.§!"
+limited_time_tech_tt: "§RTo succesfully complete educate the nation, the player will need to complete the §YIwakura Mission§! and the §YGakusei Mission§! in ample time before the ideas time out!§!"
 
 ### INDUSTRIALIZATION DECISIONS ###
 JAP_industrialization_category: "The Japanese Industrial Revolution"
@@ -940,8 +979,11 @@ preparation_extended5_desc: "The Ministry of Public Works, better known as Kobu 
 
 ### FLAGS ###
 US_system: "The American System"
-UK_system: "The United Kingdoms System""
+UK_system: "The United Kingdoms System"
 our_system: "Our Own System"
+
+### CHARACTERS
+JAP_character_emperor_meiji_desc: "Prince Mutsuhito was born on November 3rd, 1852, in a small house on his maternal grandfather's property at the north end of the Gosho. In our time, birth is culturally believed to be a source of pollution, so the imperial prince was not born in the palace. Instead, it is common for members of the Imperial Family to be born near the pregnant woman's father's house. In the case of the titled young Prince Sachi, his mother, Nakayama Yoshiko, was the daughter of acting major counselor Nakayama Tadayasu and a concubine to Emperor Kōmei.\n \nDue to the imperial lifestyle being so obscured behind closed doors, his youthful personality is contested. Sometimes he was seen as healthy and strong, somewhat of a bully, and he was exceptionally talented at sumo. Others describe him as delicate and often ill. But at his age now, he has matured and grown and is considered a proper leader of the people.\n \nThe young prince was born into an era of great change in Japan. This change was symbolized dramatically in July 1853, when Commodore Matthew Perry and his "Black Ships" sailed into the harbor at Edo. Their smog piling high up, covering the horizon over the capital. For the first time in at least 250 years, the shogunate took the highly unusual step of consulting with the Imperial Court due to the crisis brought on by Perry's arrival. The talk of "unequal treaties," giving up tariff authority and the right to try foreigners in their own courts, spread throughout the country. After the shōguns' willingness to accept these treaties, Emperor Kōmei was so incensed that he threatened to abdicate—though even this action would have required the consent of the shōgun."
 
 ### STARTING IDEAS ###
 JAP_zaibatsu: "The Zaibatsu"
@@ -950,3 +992,5 @@ JAP_samurai_spirit_western_weapons: "Wakon Yōsai"
 JAP_samurai_spirit_western_weapons_desc: "'Wakon yōsai' (Japanese spirit with Western learning) entails adopting Western arts while honoring and developing Japanese traditional spirituality. Deriving from the expression 'Wakon kansai,' which has been used throughout our history, meaning the Japanese spirit imbued with Chinese learning."
 JAP_recovering_from_boshin_war: "Aftermath of the Boshin War"
 JAP_recovering_from_boshin_war_desc: "The aftermath of the Boshin War has shed light on how the state of our standing army can withstand the notion of war: poorly. Our troops continue to be inexperienced in more modern stratagems; military schools lack proper teaching and educators; our logistical planning cannot withstand a drawn-out conflict; and political leaders are concerned about the army's performance. We may stand on the edge of utter destruction, but reforms promise rehabilitation."
+JAP_riots_of_rights: "The Riots of Rights"
+JAP_riots_of_rights_desc: "Riots against our new way of life and the rights of the people within it, dubbed collectively as the "Riots of Rights" by many, have erupted across our many prefectures, posing a significant challenge to the newly formed government; what will calm these meddling citizens?\nThe protests had started targeting symbols and agents of the Meiji reforms that were disrupting their previous way of life: vandalizing and raiding government offices, police stations, newly established public schools, and the homes of government officials and newly emancipated Burakumin. Our government is not a democracy and the Meiji oligarchs have made all decisions without any consultation with our general public, enraging farmers and low-ranking rural samurai, who felt that they had no outlet to air their grievances other than through violent protest."

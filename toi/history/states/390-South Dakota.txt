@@ -11,6 +11,7 @@ state = {
 	}
 
 	history = {
+		#owner = GRL
 		controller = USA
 		buildings = {
 			infrastructure = 1

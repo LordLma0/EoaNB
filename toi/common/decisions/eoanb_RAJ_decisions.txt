@@ -2171,17 +2171,19 @@ eoanb_category_sepoy_rebellion = {
 
 		complete_effect = {
 			add_stability = -0.1
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Together for Victory"
-						has_dlc = "Waking the Tiger"
-						has_dlc = "Death or Dishonor"
+			RAJ={
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Together for Victory"
+							has_dlc = "Waking the Tiger"
+							has_dlc = "Death or Dishonor"
+						}
 					}
-				}
-				set_autonomy = {
-					target = ROOT
-					autonomy_state = autonomy_free
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
 				}
 			}
 			else = {
@@ -2304,7 +2306,7 @@ eoanb_category_politics_foreign = {
 		cost = 50
 
 		complete_effect = {
-			ENG = { country_event = { id = britainindia.6 days = 1 } }
+			ENG = { country_event = { id = britishindia.16 days = 1 } }
 			hidden_effect = {
 				set_country_flag = eoanb_flag_RAJ_draw_away_from_ENG
 			}
